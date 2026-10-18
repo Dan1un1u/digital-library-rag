@@ -8,7 +8,9 @@
 
 按用户明确的“结合 LLM 的数字图书馆”范围，元数据问题以增强识别开启并成功返回的结果为对象。**MQ-001/MQ-002 本机观察不列项目缺陷；当前为 MQ-003 出版年误判（确认缺陷）与 MQ-004 缺字段补全（改进项）**，详见 [当前台账与历史观察](metadata-findings.md)。本机候选、应用增强候选和应用外 AI 辅助修订继续分别保存。用户已确认指定三项人工抽查未发现问题，具体正文页码未报告；其余逐篇复核为 pending，见 [人工反馈](batches/COL-001-20261018-P01/human-review.md)。
 
-范围调整前，在干净提交 `13922af27c1a582c2a425e0047f6a7e72925e259` 上运行的回归为 **356 passed，2 xfailed**，共 358 项。[该历史摘要](post-accession-all-summary.json) 原样保留。MQ-001 新增失败用例现移出项目测试统计，MQ-003 的 strict xfail 保留；新范围结果另行归档，失败数减少不代表程序修复。离线测试不调用真实模型，真实模型调用仍以批次证据另记。
+新范围回归基于干净提交 `5d496816e2e803078614c5b5598177b40b72b7f5`：**356 passed，1 xfailed，共 357 项**，其中 330 既有用例、26 前期新增且通过的入库用例、1 项 MQ-003 增强识别已知失败。[当前摘要](llm-scope-all-summary.json) 记录执行前后工作区干净；[增强范围证据](enhanced-scope-assessment.json) 保留 11 次原增强任务 completed 状态与 MQ-003 的年份字段出处。
+
+范围调整前的 `13922af` 回归为 356 passed/2 xfailed，共 358 项，[历史摘要](post-accession-all-summary.json) 原样保留。移出 MQ-001 的新增失败用例导致总数与预期失败数各减少一项，**不是程序修复，也不能据此声称识别准确率提高**。离线测试不调用真实模型，真实模型调用仍以批次证据另记。
 
 ## 已归档执行结果
 
@@ -51,7 +53,7 @@
 
 源码：`app/tests/integration/test_ingestion_recovery.py` 与 `test_catalog_batch.py`。既有 330 项测试按复用记录，不计为本次新写。
 
-此前在 `app/tests/ingestion/test_metadata_known_issues.py` 中补充两项 strict xfail；按用户最新范围，MQ-001 本机观察移出该文件，只保留增强识别的 MQ-003。`--scope new` 预期收集 27 项（26 入库用例 + 1 增强识别已知失败），全套预期 357 项。之前的 26/28 项摘要保留为各自当时的执行证据，MQ-001 最小观察和范围调整原因保留在台账中。
+此前在 `app/tests/ingestion/test_metadata_known_issues.py` 中补充两项 strict xfail；按用户最新范围，MQ-001 本机观察移出该文件，只保留增强识别的 MQ-003。当前全套运行确认新增用例集合为 27 项（26 通过 + 1 预期失败），复用 330 项，总计 357 项。之前的 26/28 项摘要保留为各自当时的执行证据，MQ-001 最小观察和范围调整原因保留在台账中。
 
 ## 复现
 
