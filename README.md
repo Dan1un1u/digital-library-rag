@@ -104,7 +104,7 @@ METADATA_API_TIMEOUT_SECONDS=90
 .\Run-Tests.ps1
 ```
 
-`scripts/verify_local_integration.py` 会调用真实 Luna 并使用订阅额度，当前馆藏断言对应上述 14 篇、935 个片段；扩大或更换馆藏后需要更新该检查。
+`scripts/verify_local_integration.py` 会调用真实 Luna 并使用订阅额度。它将索引文献数与实际馆藏列表核对；需要固定批次基线时，传入 `--expected-documents` 与 `--expected-chunks`。可通过 `--env-file` 指定独立部署的本机配置文件，避免将旧的 14 篇/935 片段写死在检查中。历史 16 项真实联调结果仍对应当时基线，不能算作扩充后已重新执行。
 
 ## 数据与本机部署
 
