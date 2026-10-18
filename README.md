@@ -104,6 +104,8 @@ METADATA_API_TIMEOUT_SECONDS=90
 
 MQ-003 年份误判已有修复候选：增强输出需有出版语境及页面证据，缺少依据时留空待核对。基于干净提交 `1979f7d` 的离线回归为 **389 passed、0 xfailed**；真实 Luna 三篇只读影子预览及原错误输出回放通过，馆藏和索引未变。详见 [修复原因、验证及限制](docs/validation/COL-001/mq003-fix.md)。候选尚未合并部署，正式实例的 MQ-003 保持开放。此前 `5d49681` 的 356 passed/1 xfailed 作为历史证据保留。
 
+MQ-004 补全候选已接入预览：可选择“联网补全出版资料”，默认关闭，只向 Crossref 发送题名和前两位作者姓名，匹配唯一且作者吻合时补缺失年份及 DOI 来源，并保存出处；已有值和冲突供人工核对。基于干净提交 `bbcbe98` 的最新完整回归 **440 passed、0 xfailed**；三篇原增强候选回放及真实 Luna + Crossref 均达到预设结果，首次真实超时记录一并保留。详见 [MQ-004 分析、结果与限制](docs/validation/COL-001/mq004-enrichment.md)。此功能尚未合并部署，正式馆藏仍为 25/1821。
+
 ```powershell
 .\Run-Tests.ps1
 ```

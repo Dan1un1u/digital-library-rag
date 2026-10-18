@@ -15,6 +15,8 @@
 
 `POST /documents/metadata/jobs` 仅识别候选；通过 `GET /document-jobs/{job_id}` 查看进度。它不写入正式馆藏、不建立索引。
 
+分支候选另提供“联网补全出版资料”，默认关闭。开启增强识别后可选择；修改选项后点击“重新识别文献信息”。同步及异步元数据接口均接受 `use_lookup=true`，缺省为 false。增强识别成功后，仅将题名和前两位作者姓名发送至 Crossref 查询期刊/会议注册记录，不发送 PDF；匹配唯一且题名、作者吻合时补缺失年份和 DOI 来源，已有值保留，差异显示待核对。来源区可打开各补全字段的出版记录。无匹配、歧义或查询失败时保留已有结果，缺项继续留空。管理员可用 `METADATA_LOOKUP_ENABLED=false` 关闭、`METADATA_LOOKUP_TIMEOUT_SECONDS` 设置超时。实现与验证见 [MQ-004](../validation/COL-001/mq004-enrichment.md)；目前尚未合并部署。
+
 逐项对照 PDF 首页、出版信息及可核验的来源记录：
 
 | 字段 | 核对要点 | 留痕 |

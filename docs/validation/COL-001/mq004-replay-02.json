@@ -1,0 +1,2174 @@
+{
+  "code": {
+    "commit": "bbcbe98bbbd5107f4b3ba867568e1e27370ce9ec",
+    "branch": "feat/catalog-ingestion-audit",
+    "dirty": false
+  },
+  "mode": "replay",
+  "network": "live Crossref",
+  "model": null,
+  "production_code_deployed": false,
+  "before_manifest": {
+    "index_version": "idx_20261018T153334_20ed96d8ced7",
+    "contract_version": "1.0",
+    "built_at": "2026-10-18T15:33:34.670944+00:00",
+    "embedding_model": "BAAI/bge-m3",
+    "embedding_revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "dimension": 1024,
+    "normalized": true,
+    "chunking_config": {
+      "count_mode": "character",
+      "tokenizer_name": null,
+      "tokenizer_revision": null,
+      "max_tokens": 400,
+      "overlap_tokens": 50,
+      "max_chars": 1200,
+      "overlap_chars": 150
+    },
+    "tokenizer": null,
+    "document_count": 25,
+    "chunk_count": 1821,
+    "corpus_hash": "124a3610097b0f8ad8f0e70c35a871c9a1f8a415957d413b286c729e87a4ad44",
+    "embedding_backend": {
+      "base_url": "http://127.0.0.1:18080/v1",
+      "dimension": 1024,
+      "encoding_format": "float",
+      "input_preprocessing": "original-text-v1;fp16;cls;l2-float32",
+      "model": "BAAI/bge-m3",
+      "provider": "local-bge-fp16",
+      "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+      "revision_pinned": true
+    },
+    "lexical_tokenizer": "nfkc-casefold-cjk-bigram-v1",
+    "retrieval_config": {
+      "candidate_k": 20,
+      "rrf_k": 60,
+      "normalize_embeddings": true,
+      "bm25_k1": 1.5,
+      "bm25_b": 0.75
+    },
+    "artifacts": {
+      "chunks.json": "124a3610097b0f8ad8f0e70c35a871c9a1f8a415957d413b286c729e87a4ad44",
+      "lexical.json": "db4f2ba71f70601dcf1a6c98169b1f7b17225d47b13ed595f9e5346ba756931f",
+      "vectors.npy": "32fae2e309103ec7d2db7656fcb79feeff59f9259de0c5abb2874b8c13488044"
+    }
+  },
+  "cases": [
+    {
+      "case_id": "paper-003",
+      "sha256": "604fcbd71b570f13ec0ed832c7c083728cf9b42170704f7fddd966530db96bee",
+      "before_enrichment": {
+        "title": "ENEC: A Lossless AI Model Compression Method Enabling Fast Inference on Ascend NPUs",
+        "authors": [
+          "Jinwu Yang",
+          "Jiaan Wu",
+          "Zedong Liu",
+          "Xinyang Ma",
+          "Hairui Zhao",
+          "Yida Gu",
+          "Yuanhong Huang",
+          "Xingchen Liu",
+          "Wenjing Huang",
+          "Zheng Wei",
+          "Jing Xing",
+          "Yili Ma",
+          "Qingyi Zhang",
+          "Baoyi An",
+          "Zhongzhe Hu",
+          "Shaoteng Liu",
+          "Xia Zhu",
+          "Jiaxun Lu",
+          "Guangming Tan",
+          "Dingwen Tao"
+        ],
+        "year": null,
+        "language": "en",
+        "source_url": "https://arxiv.org/abs/2604.03298"
+      },
+      "metadata": {
+        "title": "ENEC: A Lossless AI Model Compression Method Enabling Fast Inference on Ascend NPUs",
+        "authors": [
+          "Jinwu Yang",
+          "Jiaan Wu",
+          "Zedong Liu",
+          "Xinyang Ma",
+          "Hairui Zhao",
+          "Yida Gu",
+          "Yuanhong Huang",
+          "Xingchen Liu",
+          "Wenjing Huang",
+          "Zheng Wei",
+          "Jing Xing",
+          "Yili Ma",
+          "Qingyi Zhang",
+          "Baoyi An",
+          "Zhongzhe Hu",
+          "Shaoteng Liu",
+          "Xia Zhu",
+          "Jiaxun Lu",
+          "Guangming Tan",
+          "Dingwen Tao"
+        ],
+        "year": 2026,
+        "language": "en",
+        "source_url": "https://arxiv.org/abs/2604.03298"
+      },
+      "api_assistance": {
+        "status": "historical_completed_candidates_replayed"
+      },
+      "bibliographic_enrichment": {
+        "policy": "crossref-title-authors-v1",
+        "provider": "crossref",
+        "status": "completed",
+        "missing_before": [
+          "year"
+        ],
+        "filled_fields": [
+          "year"
+        ],
+        "conflicts": [],
+        "candidates": [
+          {
+            "title": "ENEC: A Lossless AI Model Compression Method Enabling Fast Inference on Ascend NPUs",
+            "authors": [
+              "Jinwu Yang",
+              "Jiaan Wu",
+              "Zedong Liu",
+              "Xinyang Ma",
+              "Hairui Zhao",
+              "Yida Gu",
+              "Yuanhong Huang",
+              "Xingchen Liu",
+              "Wenjing Huang",
+              "Zheng Wei",
+              "Jing Xing",
+              "Yili Ma",
+              "Qingyi Zhang",
+              "Baoyi An",
+              "Zhongzhe Hu",
+              "Shaoteng Liu",
+              "Xia Zhu",
+              "Jiaxun Lu",
+              "Guangming Tan",
+              "Dingwen Tao"
+            ],
+            "doi": "10.1109/isca66397.2026.00100",
+            "source_url": "https://doi.org/10.1109/isca66397.2026.00100",
+            "record_url": "https://api.crossref.org/works/10.1109%2Fisca66397.2026.00100",
+            "type": "proceedings-article",
+            "dates": [
+              {
+                "kind": "published-print",
+                "date_parts": [
+                  2026,
+                  6
+                ],
+                "year": 2026
+              },
+              {
+                "kind": "published",
+                "date_parts": [
+                  2026,
+                  6
+                ],
+                "year": 2026
+              }
+            ],
+            "selected_date": {
+              "kind": "published-print",
+              "date_parts": [
+                2026,
+                6
+              ],
+              "year": 2026
+            },
+            "match": {
+              "title": "normalized_exact",
+              "first_author": "exact",
+              "author_overlap": 20,
+              "required_overlap": 16
+            }
+          }
+        ],
+        "queried_at": "2026-10-18T16:32:10.927391+00:00"
+      },
+      "field_sources": {
+        "year": {
+          "method": "bibliographic_lookup",
+          "provider": "crossref",
+          "record_url": "https://api.crossref.org/works/10.1109%2Fisca66397.2026.00100",
+          "retrieved_at": "2026-10-18T16:32:10.927391+00:00",
+          "date_type": "published-print",
+          "excerpt": "published-print: 2026-6"
+        }
+      },
+      "year_review": {
+        "policy": "crossref-title-authors-v1",
+        "status": "candidate_supported",
+        "source": "crossref",
+        "grounding": "registry_record",
+        "date_type": "published-print"
+      },
+      "warnings": [
+        "已依据题名和作者吻合的 Crossref 出版记录补全候选字段；请核对来源与日期类型后导入。"
+      ],
+      "crossref_records": [
+        {
+          "DOI": "10.1109/isca66397.2026.00100",
+          "title": [
+            "ENEC: A Lossless AI Model Compression Method Enabling Fast Inference on Ascend NPUs"
+          ],
+          "author": [
+            {
+              "given": "Jinwu",
+              "family": "Yang",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Institute of Computing Technology, Chinese Academy of Sciences",
+                  "place": [
+                    "Beijing, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Jiaan",
+              "family": "Wu",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "University of Chinese Academy of Sciences",
+                  "place": [
+                    "Beijing, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Zedong",
+              "family": "Liu",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Institute of Computing Technology, Chinese Academy of Sciences",
+                  "place": [
+                    "Beijing, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Xinyang",
+              "family": "Ma",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Institute of Computing Technology, Chinese Academy of Sciences",
+                  "place": [
+                    "Beijing, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Hairui",
+              "family": "Zhao",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Institute of Computing Technology, Chinese Academy of Sciences",
+                  "place": [
+                    "Beijing, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Yida",
+              "family": "Gu",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Institute of Computing Technology, Chinese Academy of Sciences",
+                  "place": [
+                    "Beijing, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Yuanhong",
+              "family": "Huang",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Institute of Computing Technology, Chinese Academy of Sciences",
+                  "place": [
+                    "Beijing, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Xingchen",
+              "family": "Liu",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Institute of Computing Technology, Chinese Academy of Sciences",
+                  "place": [
+                    "Beijing, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Wenjing",
+              "family": "Huang",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Institute of Computing Technology, Chinese Academy of Sciences",
+                  "place": [
+                    "Beijing, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Zheng",
+              "family": "Wei",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Institute of Computing Technology, Chinese Academy of Sciences",
+                  "place": [
+                    "Beijing, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Jing",
+              "family": "Xing",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Institute of Computing Technology, Chinese Academy of Sciences",
+                  "place": [
+                    "Beijing, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Yili",
+              "family": "Ma",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Institute of Computing Technology, Chinese Academy of Sciences",
+                  "place": [
+                    "Beijing, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Qingyi",
+              "family": "Zhang",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Huawei Technologies Co., Ltd.",
+                  "place": [
+                    "Shenzhen, Guangdong, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Baoyi",
+              "family": "An",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Huawei Technologies Co., Ltd.",
+                  "place": [
+                    "Shenzhen, Guangdong, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Zhongzhe",
+              "family": "Hu",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Huawei Technologies Co., Ltd.",
+                  "place": [
+                    "Shenzhen, Guangdong, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Shaoteng",
+              "family": "Liu",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Huawei Technologies Co., Ltd.",
+                  "place": [
+                    "Shenzhen, Guangdong, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Xia",
+              "family": "Zhu",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Huawei Technologies Co., Ltd.",
+                  "place": [
+                    "Shenzhen, Guangdong, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Jiaxun",
+              "family": "Lu",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Huawei Technologies Co., Ltd.",
+                  "place": [
+                    "Shenzhen, Guangdong, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Guangming",
+              "family": "Tan",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Institute of Computing Technology, Chinese Academy of Sciences",
+                  "place": [
+                    "Beijing, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Dingwen",
+              "family": "Tao",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Institute of Computing Technology, Chinese Academy of Sciences",
+                  "place": [
+                    "Beijing, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "type": "proceedings-article",
+          "published-print": {
+            "date-parts": [
+              [
+                2026,
+                6
+              ]
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2026,
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "DOI": "10.1101/127464",
+          "title": [
+            "ChIPWig: A Random Access-Enabling Lossless and Lossy Compression Method for ChIP-seq Data"
+          ],
+          "author": [
+            {
+              "given": "Vida",
+              "family": "Ravanmehr",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Minji",
+              "family": "Kim",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Zhiying",
+              "family": "Wang",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Olgica",
+              "family": "Milenković",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "type": "posted-content",
+          "published": {
+            "date-parts": [
+              [
+                2017,
+                4,
+                14
+              ]
+            ]
+          }
+        },
+        {
+          "DOI": "10.53941/aieng.2026.100010",
+          "title": [
+            "A Review of AI Computing Hardware for Enabling 6G Wireless Networks: Neuromorphic Chips, NPUs, and TPUs"
+          ],
+          "author": [
+            {
+              "given": "Jason",
+              "family": "Lee",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Yu-Dong",
+              "family": "Yao",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "type": "journal-article",
+          "published-online": {
+            "date-parts": [
+              [
+                2026,
+                7,
+                16
+              ]
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2026,
+                7,
+                16
+              ]
+            ]
+          }
+        },
+        {
+          "DOI": "10.1016/j.sysarc.2026.103936",
+          "title": [
+            "Efficient operator implementation of simulated quantized GEMM for the decoupled execution model of Ascend NPUs"
+          ],
+          "author": [
+            {
+              "given": "Dongxian",
+              "family": "Chen",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0001-6372-7088",
+              "authenticated-orcid": false,
+              "given": "Lu",
+              "family": "Lu",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Haibiao",
+              "family": "Yang",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Yu",
+              "family": "Zhang",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Hao",
+              "family": "Jiang",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Hongzhe",
+              "family": "Zhou",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "type": "journal-article",
+          "published-print": {
+            "date-parts": [
+              [
+                2026,
+                11
+              ]
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2026,
+                11
+              ]
+            ]
+          }
+        },
+        {
+          "DOI": "10.1109/dcc.2004.1281551",
+          "title": [
+            "Fast near-lossless or lossless compression of large 3D neuro-anatomical images"
+          ],
+          "author": [
+            {
+              "family": "Rongkai Zhao",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "M.",
+              "family": "Gabriel",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "G.G.",
+              "family": "Belford",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "type": "proceedings-article"
+        }
+      ],
+      "expected": {
+        "expected_year": 2026,
+        "expected_source_url": "https://arxiv.org/abs/2604.03298",
+        "expected_doi": "10.1109/isca66397.2026.00100"
+      },
+      "passed": true
+    },
+    {
+      "case_id": "paper-004",
+      "sha256": "959d1cd83e6e32b2433b478269635e0982267998da370a2653bb0d87f444ad6d",
+      "before_enrichment": {
+        "title": "EQ-ViT: Algorithm-Hardware Co-Design for End-to-End Acceleration of Real-Time Vision Transformer Inference on Versal ACAP Architecture",
+        "authors": [
+          "Peiyan Dong",
+          "Jinming Zhuang",
+          "Zhuoping Yang",
+          "Shixin Ji",
+          "Yanyu Li",
+          "Dongkuan Xu",
+          "Heng Huang",
+          "Jingtong Hu",
+          "Alex K. Jones",
+          "Yiyu Shi",
+          "Yanzhi Wang",
+          "Peipei Zhou"
+        ],
+        "year": null,
+        "language": "en",
+        "source_url": null
+      },
+      "metadata": {
+        "title": "EQ-ViT: Algorithm-Hardware Co-Design for End-to-End Acceleration of Real-Time Vision Transformer Inference on Versal ACAP Architecture",
+        "authors": [
+          "Peiyan Dong",
+          "Jinming Zhuang",
+          "Zhuoping Yang",
+          "Shixin Ji",
+          "Yanyu Li",
+          "Dongkuan Xu",
+          "Heng Huang",
+          "Jingtong Hu",
+          "Alex K. Jones",
+          "Yiyu Shi",
+          "Yanzhi Wang",
+          "Peipei Zhou"
+        ],
+        "year": 2024,
+        "language": "en",
+        "source_url": "https://doi.org/10.1109/tcad.2024.3443692"
+      },
+      "api_assistance": {
+        "status": "historical_completed_candidates_replayed"
+      },
+      "bibliographic_enrichment": {
+        "policy": "crossref-title-authors-v1",
+        "provider": "crossref",
+        "status": "completed",
+        "missing_before": [
+          "year",
+          "source_url"
+        ],
+        "filled_fields": [
+          "source_url",
+          "year"
+        ],
+        "conflicts": [],
+        "candidates": [
+          {
+            "title": "EQ-ViT: Algorithm-Hardware Co-Design for End-to-End Acceleration of Real-Time Vision Transformer Inference on Versal ACAP Architecture",
+            "authors": [
+              "Peiyan Dong",
+              "Jinming Zhuang",
+              "Zhuoping Yang",
+              "Shixin Ji",
+              "Yanyu Li",
+              "Dongkuan Xu",
+              "Heng Huang",
+              "Jingtong Hu",
+              "Alex K. Jones",
+              "Yiyu Shi",
+              "Yanzhi Wang",
+              "Peipei Zhou"
+            ],
+            "doi": "10.1109/tcad.2024.3443692",
+            "source_url": "https://doi.org/10.1109/tcad.2024.3443692",
+            "record_url": "https://api.crossref.org/works/10.1109%2Ftcad.2024.3443692",
+            "type": "journal-article",
+            "dates": [
+              {
+                "kind": "published-print",
+                "date_parts": [
+                  2024,
+                  11
+                ],
+                "year": 2024
+              },
+              {
+                "kind": "published",
+                "date_parts": [
+                  2024,
+                  11
+                ],
+                "year": 2024
+              }
+            ],
+            "selected_date": {
+              "kind": "published-print",
+              "date_parts": [
+                2024,
+                11
+              ],
+              "year": 2024
+            },
+            "match": {
+              "title": "normalized_exact",
+              "first_author": "exact",
+              "author_overlap": 12,
+              "required_overlap": 10
+            }
+          }
+        ],
+        "queried_at": "2026-10-18T16:32:14.184771+00:00"
+      },
+      "field_sources": {
+        "source_url": {
+          "method": "bibliographic_lookup",
+          "provider": "crossref",
+          "record_url": "https://api.crossref.org/works/10.1109%2Ftcad.2024.3443692",
+          "retrieved_at": "2026-10-18T16:32:14.184771+00:00",
+          "date_type": null,
+          "excerpt": "10.1109/tcad.2024.3443692"
+        },
+        "year": {
+          "method": "bibliographic_lookup",
+          "provider": "crossref",
+          "record_url": "https://api.crossref.org/works/10.1109%2Ftcad.2024.3443692",
+          "retrieved_at": "2026-10-18T16:32:14.184771+00:00",
+          "date_type": "published-print",
+          "excerpt": "published-print: 2024-11"
+        }
+      },
+      "year_review": {
+        "policy": "crossref-title-authors-v1",
+        "status": "candidate_supported",
+        "source": "crossref",
+        "grounding": "registry_record",
+        "date_type": "published-print"
+      },
+      "warnings": [
+        "已依据题名和作者吻合的 Crossref 出版记录补全候选字段；请核对来源与日期类型后导入。"
+      ],
+      "crossref_records": [
+        {
+          "DOI": "10.1109/tcad.2024.3443692",
+          "title": [
+            "EQ-ViT: Algorithm-Hardware Co-Design for End-to-End Acceleration of Real-Time Vision Transformer Inference on Versal ACAP Architecture"
+          ],
+          "author": [
+            {
+              "ORCID": "https://orcid.org/0000-0001-5287-5149",
+              "authenticated-orcid": false,
+              "given": "Peiyan",
+              "family": "Dong",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Department of Electrical and Computer Engineering, Northeastern University, Boston, MA, USA"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0003-3659-339X",
+              "authenticated-orcid": false,
+              "given": "Jinming",
+              "family": "Zhuang",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "School of Engineering, Brown University, Providence, RI, USA"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0002-7655-4080",
+              "authenticated-orcid": false,
+              "given": "Zhuoping",
+              "family": "Yang",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "School of Engineering, Brown University, Providence, RI, USA"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0009-0003-3429-4692",
+              "authenticated-orcid": false,
+              "given": "Shixin",
+              "family": "Ji",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "School of Engineering, Brown University, Providence, RI, USA"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0003-1240-4785",
+              "authenticated-orcid": false,
+              "given": "Yanyu",
+              "family": "Li",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Electrical and Computer Engineering, Northeastern University, Boston, MA, USA"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0002-1456-9658",
+              "authenticated-orcid": false,
+              "given": "Dongkuan",
+              "family": "Xu",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Computer Science, North Carolina State University, Raleigh, NC, USA"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0002-3483-8333",
+              "authenticated-orcid": false,
+              "given": "Heng",
+              "family": "Huang",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Computer Science, University of Maryland, College Park, MD, USA"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0003-4029-4034",
+              "authenticated-orcid": false,
+              "given": "Jingtong",
+              "family": "Hu",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Electrical and Computer Engineering, University of Pittsburgh, Pittsburgh, PA, USA"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0001-7498-0206",
+              "authenticated-orcid": false,
+              "given": "Alex K.",
+              "family": "Jones",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Electrical Engineering and Computer Science, Syracuse University, Syracuse, NY, USA"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0002-6788-9823",
+              "authenticated-orcid": false,
+              "given": "Yiyu",
+              "family": "Shi",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Computer Science and Engineering, University of Notre Dame, Notre Dame, IN, USA"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0002-3024-7990",
+              "authenticated-orcid": false,
+              "given": "Yanzhi",
+              "family": "Wang",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Electrical and Computer Engineering, Northeastern University, Boston, MA, USA"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0002-0493-1844",
+              "authenticated-orcid": false,
+              "given": "Peipei",
+              "family": "Zhou",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "School of Engineering, Brown University, Providence, RI, USA"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "type": "journal-article",
+          "published-print": {
+            "date-parts": [
+              [
+                2024,
+                11
+              ]
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2024,
+                11
+              ]
+            ]
+          }
+        },
+        {
+          "DOI": "10.1145/3649329.3655955",
+          "title": [
+            "ViT-slice: End-to-end Vision Transformer Accelerator with Bit-slice Algorithm"
+          ],
+          "author": [
+            {
+              "ORCID": "https://orcid.org/0009-0005-7120-518X",
+              "authenticated-orcid": false,
+              "given": "Dongjin",
+              "family": "Shin",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Department of Electrical and Electronic Engineering, Yonsei University, Seoul, Seoul, Republic of Korea"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0009-0009-2016-6714",
+              "authenticated-orcid": false,
+              "given": "Insu",
+              "family": "Choi",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Electrical and Electronic Engineering, Yonsei University, Seoul, Seoul, Republic of Korea"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0002-1502-5353",
+              "authenticated-orcid": false,
+              "given": "Joon-Sung",
+              "family": "Yang",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Systems Semiconductor Engineering, Yonsei University, Seoul, Seoul, Republic of Korea"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "type": "proceedings-article",
+          "published-print": {
+            "date-parts": [
+              [
+                2024,
+                6,
+                23
+              ]
+            ]
+          },
+          "published-online": {
+            "date-parts": [
+              [
+                2024,
+                11,
+                7
+              ]
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2024,
+                6,
+                23
+              ]
+            ]
+          }
+        },
+        {
+          "DOI": "10.1109/dac63849.2025.11132878",
+          "title": [
+            "HeteroSVD: Efficient SVD Accelerator on Versal ACAP with Algorithm-Hardware Co-Design"
+          ],
+          "author": [
+            {
+              "given": "Xinya",
+              "family": "Luan",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Beijing University of Posts and Telecommunications"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Zhe",
+              "family": "Lin",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Sun Yat-sen University"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Kai",
+              "family": "Shi",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Beijing University of Posts and Telecommunications"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Jianwang",
+              "family": "Zhai",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Beijing University of Posts and Telecommunications"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Kang",
+              "family": "Zhao",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Beijing University of Posts and Telecommunications"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "type": "proceedings-article",
+          "published-print": {
+            "date-parts": [
+              [
+                2025,
+                6,
+                22
+              ]
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2025,
+                6,
+                22
+              ]
+            ]
+          }
+        },
+        {
+          "DOI": "10.1109/dsd67783.2025.00081",
+          "title": [
+            "SoC-SLAM: FPGA-Based Hardware/Software Co-Design for Real-Time Visual SLAM Front-End and Back-End Acceleration"
+          ],
+          "author": [
+            {
+              "given": "Bhavay",
+              "family": "Arora",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "TU Dresden Chair of Adaptive Dynamic Systems,Germany"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Paul",
+              "family": "Gottschaldt",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "TU Dresden Chair of Adaptive Dynamic Systems,Germany"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Ariel",
+              "family": "Podlubne",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "TU Dresden Chair of Adaptive Dynamic Systems,Germany"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Sergio",
+              "family": "Pertuz",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "TU Dresden Chair of Adaptive Dynamic Systems,Germany"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Diana",
+              "family": "Goehringer",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "TU Dresden Chair of Adaptive Dynamic Systems,Germany"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "type": "proceedings-article",
+          "published-print": {
+            "date-parts": [
+              [
+                2025,
+                9,
+                10
+              ]
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2025,
+                9,
+                10
+              ]
+            ]
+          }
+        },
+        {
+          "DOI": "10.1109/iccea65460.2025.11103379",
+          "title": [
+            "ViT-CatNet: An End-to-End Vision Transformer Architecture for Instance-Level Feline Identification"
+          ],
+          "author": [
+            {
+              "given": "Kaikun",
+              "family": "Hu",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "School of Information Science, University of Illinois at Urbana-Champaign,Illinois,America"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "type": "proceedings-article",
+          "published-print": {
+            "date-parts": [
+              [
+                2025,
+                4,
+                25
+              ]
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2025,
+                4,
+                25
+              ]
+            ]
+          }
+        }
+      ],
+      "expected": {
+        "expected_year": 2024,
+        "expected_source_url": "https://doi.org/10.1109/tcad.2024.3443692",
+        "expected_doi": "10.1109/tcad.2024.3443692"
+      },
+      "passed": true
+    },
+    {
+      "case_id": "paper-009",
+      "sha256": "bbfd0e6e5573959a3fc78ce26824f9943fbadcd45375885aa67b1a9588bc3392",
+      "before_enrichment": {
+        "title": "PackQViT: Faster Sub-8-bit Vision Transformers via Full and Packed Quantization on the Mobile",
+        "authors": [
+          "Peiyan Dong",
+          "Lei Lu",
+          "Chao Wu",
+          "Cheng Lyu",
+          "Geng Yuan",
+          "Hao Tang",
+          "Yanzhi Wang"
+        ],
+        "year": 2023,
+        "language": "en",
+        "source_url": null
+      },
+      "metadata": {
+        "title": "PackQViT: Faster Sub-8-bit Vision Transformers via Full and Packed Quantization on the Mobile",
+        "authors": [
+          "Peiyan Dong",
+          "Lei Lu",
+          "Chao Wu",
+          "Cheng Lyu",
+          "Geng Yuan",
+          "Hao Tang",
+          "Yanzhi Wang"
+        ],
+        "year": 2023,
+        "language": "en",
+        "source_url": "https://doi.org/10.52202/075280-0396"
+      },
+      "api_assistance": {
+        "status": "historical_completed_candidates_replayed"
+      },
+      "bibliographic_enrichment": {
+        "policy": "crossref-title-authors-v1",
+        "provider": "crossref",
+        "status": "completed",
+        "missing_before": [
+          "source_url"
+        ],
+        "filled_fields": [
+          "source_url"
+        ],
+        "conflicts": [],
+        "candidates": [
+          {
+            "title": "PackQViT: Faster Sub-8-bit Vision Transformers via Full and Packed Quantization on the Mobile",
+            "authors": [
+              "Peiyan Dong",
+              "Lei Lu",
+              "Chao Wu",
+              "Cheng Lyu",
+              "Geng Yuan",
+              "Hao Tang",
+              "Yanzhi Wang"
+            ],
+            "doi": "10.52202/075280-0396",
+            "source_url": "https://doi.org/10.52202/075280-0396",
+            "record_url": "https://api.crossref.org/works/10.52202%2F075280-0396",
+            "type": "proceedings-article",
+            "dates": [
+              {
+                "kind": "published-print",
+                "date_parts": [
+                  2023
+                ],
+                "year": 2023
+              },
+              {
+                "kind": "published",
+                "date_parts": [
+                  2023
+                ],
+                "year": 2023
+              }
+            ],
+            "selected_date": {
+              "kind": "published-print",
+              "date_parts": [
+                2023
+              ],
+              "year": 2023
+            },
+            "match": {
+              "title": "normalized_exact",
+              "first_author": "exact",
+              "author_overlap": 7,
+              "required_overlap": 6
+            }
+          }
+        ],
+        "queried_at": "2026-10-18T16:32:15.848319+00:00"
+      },
+      "field_sources": {
+        "source_url": {
+          "method": "bibliographic_lookup",
+          "provider": "crossref",
+          "record_url": "https://api.crossref.org/works/10.52202%2F075280-0396",
+          "retrieved_at": "2026-10-18T16:32:15.848319+00:00",
+          "date_type": null,
+          "excerpt": "10.52202/075280-0396"
+        }
+      },
+      "year_review": null,
+      "warnings": [
+        "已依据题名和作者吻合的 Crossref 出版记录补全候选字段；请核对来源与日期类型后导入。"
+      ],
+      "crossref_records": [
+        {
+          "DOI": "10.52202/075280-0396",
+          "title": [
+            "PackQViT: Faster Sub-8-bit Vision Transformers via Full and Packed Quantization on the Mobile"
+          ],
+          "author": [
+            {
+              "given": "Peiyan",
+              "family": "Dong",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Lei",
+              "family": "Lu",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Chao",
+              "family": "Wu",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Cheng",
+              "family": "Lyu",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Geng",
+              "family": "Yuan",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Hao",
+              "family": "Tang",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Yanzhi",
+              "family": "Wang",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "type": "proceedings-article",
+          "published-print": {
+            "date-parts": [
+              [
+                2023
+              ]
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2023
+              ]
+            ]
+          }
+        },
+        {
+          "DOI": "10.1109/icassp49357.2023.10096798",
+          "title": [
+            "Finding Optimal Numerical Format for Sub-8-Bit Post-Training Quantization of Vision Transformers"
+          ],
+          "author": [
+            {
+              "given": "Janghwan",
+              "family": "Lee",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Hanyang University,Department of Electronic Engineering,Korea"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Youngdeok",
+              "family": "Hwang",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "CUNY,Baruch College,Department of Information Systems and Statistics,United States"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Jungwook",
+              "family": "Choi",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Hanyang University,Department of Electronic Engineering,Korea"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "type": "proceedings-article",
+          "published-print": {
+            "date-parts": [
+              [
+                2023,
+                6,
+                4
+              ]
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2023,
+                6,
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "DOI": "10.2139/ssrn.5319357",
+          "title": [
+            "EdgeViT ++: Efficient Vision Transformers for Edge Devices via Dynamic Token Pruning and Hybrid Quantization"
+          ],
+          "author": [
+            {
+              "given": "Safwan",
+              "family": "Nasir",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "type": "posted-content",
+          "published": {
+            "date-parts": [
+              [
+                2025
+              ]
+            ]
+          }
+        },
+        {
+          "DOI": "10.1109/access.2026.3706454",
+          "title": [
+            "Collapse-Aware Clipping for Low-Bit Quantization of Post-Softmax Activations in Vision Transformers"
+          ],
+          "author": [
+            {
+              "ORCID": "https://orcid.org/0009-0005-0028-2604",
+              "authenticated-orcid": false,
+              "given": "Seong Min",
+              "family": "Kim",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Department of Electrical and Computer Engineering, Inha University, Incheon, Republic of Korea"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0001-8742-3433",
+              "authenticated-orcid": false,
+              "given": "Byung Cheol",
+              "family": "Song",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Electrical and Computer Engineering, Inha University, Incheon, Republic of Korea"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "type": "journal-article",
+          "published-print": {
+            "date-parts": [
+              [
+                2026
+              ]
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2026
+              ]
+            ]
+          }
+        },
+        {
+          "DOI": "10.1109/wacv61042.2026.00043",
+          "title": [
+            "A Universal Self-Attention Enhancement for Bridging Low-bit Quantization and Vision Transformers"
+          ],
+          "author": [
+            {
+              "given": "Jiahe",
+              "family": "Qian",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "C2DL, Institute of Automation,Chinese Academy of Sciences"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Peisong",
+              "family": "Wang",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "C2DL, Institute of Automation,Chinese Academy of Sciences"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Zhengyang",
+              "family": "Zhuge",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "C2DL, Institute of Automation,Chinese Academy of Sciences"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Qinghao",
+              "family": "Hu",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "C2DL, Institute of Automation,Chinese Academy of Sciences"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Jian",
+              "family": "Cheng",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "C2DL, Institute of Automation,Chinese Academy of Sciences"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "type": "proceedings-article",
+          "published-print": {
+            "date-parts": [
+              [
+                2026,
+                3,
+                6
+              ]
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2026,
+                3,
+                6
+              ]
+            ]
+          }
+        }
+      ],
+      "expected": {
+        "expected_year": 2023,
+        "expected_source_url": "https://doi.org/10.52202/075280-0396",
+        "expected_doi": "10.52202/075280-0396"
+      },
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "human_review": "pending",
+  "after_manifest": {
+    "index_version": "idx_20261018T153334_20ed96d8ced7",
+    "contract_version": "1.0",
+    "built_at": "2026-10-18T15:33:34.670944+00:00",
+    "embedding_model": "BAAI/bge-m3",
+    "embedding_revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "dimension": 1024,
+    "normalized": true,
+    "chunking_config": {
+      "count_mode": "character",
+      "tokenizer_name": null,
+      "tokenizer_revision": null,
+      "max_tokens": 400,
+      "overlap_tokens": 50,
+      "max_chars": 1200,
+      "overlap_chars": 150
+    },
+    "tokenizer": null,
+    "document_count": 25,
+    "chunk_count": 1821,
+    "corpus_hash": "124a3610097b0f8ad8f0e70c35a871c9a1f8a415957d413b286c729e87a4ad44",
+    "embedding_backend": {
+      "base_url": "http://127.0.0.1:18080/v1",
+      "dimension": 1024,
+      "encoding_format": "float",
+      "input_preprocessing": "original-text-v1;fp16;cls;l2-float32",
+      "model": "BAAI/bge-m3",
+      "provider": "local-bge-fp16",
+      "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+      "revision_pinned": true
+    },
+    "lexical_tokenizer": "nfkc-casefold-cjk-bigram-v1",
+    "retrieval_config": {
+      "candidate_k": 20,
+      "rrf_k": 60,
+      "normalize_embeddings": true,
+      "bm25_k1": 1.5,
+      "bm25_b": 0.75
+    },
+    "artifacts": {
+      "chunks.json": "124a3610097b0f8ad8f0e70c35a871c9a1f8a415957d413b286c729e87a4ad44",
+      "lexical.json": "db4f2ba71f70601dcf1a6c98169b1f7b17225d47b13ed595f9e5346ba756931f",
+      "vectors.npy": "32fae2e309103ec7d2db7656fcb79feeff59f9259de0c5abb2874b8c13488044"
+    }
+  },
+  "production_index_unchanged": true
+}
