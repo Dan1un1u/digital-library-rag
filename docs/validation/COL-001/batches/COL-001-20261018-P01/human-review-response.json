@@ -1,0 +1,42 @@
+{
+  "review_id": "COL-001-20261018-P01-HR01",
+  "batch_id": "COL-001-20261018-P01",
+  "reported_on": "2026-10-18",
+  "timezone": "Asia/Hong_Kong",
+  "reviewer": "user",
+  "reported_via": "chat asynchronous question reply",
+  "question_reference": "call_a503c7a2001d47f38be2f4b99496b134",
+  "user_reply": "已完成上述抽查，未发现问题",
+  "scope": [
+    {
+      "item_id": "paper-005",
+      "sha256": "f459188e745318a07d8aebb6b685f785125e8ae1d936e0fe250789a86afcc7f9",
+      "checks": [
+        "five authors",
+        "formal publication year and PDF revision-date distinction"
+      ],
+      "result": "no issue reported"
+    },
+    {
+      "item_id": "paper-001",
+      "sha256": "69c573c123ffd1538d432ab31040072dec01a375a4a5b7c2960a7667cb970dda",
+      "checks": [
+        "eighteen authors and ordering"
+      ],
+      "result": "no issue reported"
+    },
+    {
+      "checks": [
+        "one double-column body page: reading order, interleaving and omissions"
+      ],
+      "document": null,
+      "pdf_page": null,
+      "scope_detail": "exact document and page not provided",
+      "result": "no issue reported"
+    }
+  ],
+  "remaining_scope": "other documents and pages not reported as independently reviewed",
+  "recognition_defects": "remain open; data review is not a program fix",
+  "merge_approval": false,
+  "historical_evidence": "pre-import review and execution snapshots unchanged"
+}
