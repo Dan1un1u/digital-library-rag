@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "batch_id": "COL-001-YYYYMMDD-01",
+  "items": [
+    {
+      "item_id": "paper-001",
+      "pdf_path": "../pdfs/your-paper.pdf",
+      "sha256": "REPLACE_WITH_THE_ACTUAL_64_CHARACTER_SHA256",
+      "metadata": {
+        "title": "填写实际文献标题",
+        "authors": [],
+        "year": null,
+        "topics": ["元数据质量评价"],
+        "language": "unknown",
+        "source_url": null,
+        "rights_note": "待核对来源与权利信息"
+      },
+      "review": {
+        "status": "pending",
+        "method": null,
+        "evidence": null
+      }
+    }
+  ]
+}

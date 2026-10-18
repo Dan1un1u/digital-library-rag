@@ -33,6 +33,23 @@
 
 界面操作为核对字段后点击“导入并建立索引”；对应 `POST /documents/jobs`。批次工具的输入清单保存在本机，仓库只提交清单模板和去除本地路径的审计结果。
 
+工具使用示例（在仓库根目录执行）：
+
+```powershell
+.venv/Scripts/python.exe tools/catalog_batch.py plan runtime/COL-001/input.json --output runtime/COL-001/plan-v1.json
+.venv/Scripts/python.exe tools/catalog_batch.py apply runtime/COL-001/input.json --plan runtime/COL-001/plan-v1.json --output runtime/COL-001/run-01 --backup-ref COL-001-backup-01
+```
+
+将 [catalog-batch.example.json](catalog-batch.example.json) 复制到本机忽略目录并填写；`pdf_path` 相对清单文件解析，也可填写绝对路径。先使用 `Get-FileHash -Algorithm SHA256` 固定文件哈希（JSON 中使用小写值）。`plan` 不发起网络请求，只检查文件头，不代替完整 PDF 解析。文件或元数据改变后必须生成新版计划，`apply --plan` 会拒绝与保存计划不一致的输入。
+
+核对尚未完成时保留 `review.status=pending`。完成 PDF 自动核对可填 `ready/automated_pdf_check`，人工核对才填 `ready/human_pdf_check`，并登记页码或记录 ID 作为 evidence。工具只校验声明格式，不能证明核对实际发生。`metadata_before` 可保存识别候选，工具据此输出字段改动；候选缺失时不虚构改动。
+
+`--backup-ref` 是已完成备份的记录 ID；工具不会代替数据库备份。对运行中的 SQLite 使用 SQLite backup API，不能只复制可能带 WAL 的主数据库文件。当前索引快照保留在本机。每次 `apply` 必须使用新的输出目录，包含 `plan.json/before.json/events.jsonl/after.json/receipt.json`。断线或超时可能意味着后台任务仍在运行，应先按 job_id 检查，不自动重投或覆盖证据。批次不是整体数据库事务，前面成功的文件不会因后面的失败自动撤销。
+
+默认只接受可信本机 HTTP 服务、每份不超过 25 MiB 的 PDF；整个批次先校验再上传。一次只由一个操作人执行，期间避免其他入库或重建操作；馆藏集合出现额外变化时工具会将结果标记为 incomplete。回执不自动包含 PDF 路径，但元数据与核对备注仍需检查后再提交。
+
+事件使用 `event_sha256` 和 `previous_sha256` 串联，PDF 内容哈希独立使用 `sha256`。末端哈希须随 PR 等独立记录保存才能帮助发现后续修改；哈希链不具备数字签名的身份认证作用。
+
 ## 4. 观察内部处理路径
 
 | 阶段 | 代码入口 | 应观察的结果 |
@@ -65,3 +82,5 @@
 贡献按实际新增的工具、用例、已检查的文献及发现的问题记录。既有 330 项测试是基线，不能算成本次新写的 330 项测试；不以拆分提交数量代替工作量。
 
 一个 PR 应形成可独立复核的完整工作单元：流程说明、可复现工具、测试与结果、数据批次记录、未解决问题。先保留 Draft 状态；满足工作项中的完成条件、核对数据后再申请合并。本次不自动合并。
+
+用例与执行口径见 [COL-001 白盒测试说明](../validation/COL-001/README.md)。证据汇总放在 `docs/validation/`；`runtime/`、`reports/`、实际 PDF 和数据库始终在 Git 忽略范围内。

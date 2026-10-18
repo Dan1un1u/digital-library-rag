@@ -115,3 +115,5 @@ METADATA_API_TIMEOUT_SECONDS=90
 `D:/llm_exp/digital-library/workspace/deployments/lib_management_v1_20261018/`
 
 进一步操作见[本地模型使用说明](本地模型使用说明.txt)、[BGE 部署说明](services/bge-m3/README.txt)和[CLIProxyAPI 部署说明](services/cliproxyapi/README.txt)。`app/README.md` 与 `app/docs/` 保留原项目的接口、模块交接和历史版本说明。
+
+馆藏扩充使用[入库与白盒验证流程](docs/workflow/catalog-ingestion.md)和[COL-001 工作项](docs/work-items/COL-001.md)，通过独立分支、Draft PR 和提交绑定的执行证据记录贡献。实际文献批次完成并复核后再决定合并。
