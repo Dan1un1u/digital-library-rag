@@ -1,0 +1,153 @@
+{
+  "backup_ref": "COL-001-20261018-P01-backup-01",
+  "sqlite_integrity": "ok",
+  "document_count": 14,
+  "chunk_count": 935,
+  "manifest": {
+    "index_version": "idx_20261018T135302_0689591350db",
+    "contract_version": "1.0",
+    "built_at": "2026-10-18T13:53:02.899104+00:00",
+    "embedding_model": "BAAI/bge-m3",
+    "embedding_revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "dimension": 1024,
+    "normalized": true,
+    "chunking_config": {
+      "count_mode": "character",
+      "tokenizer_name": null,
+      "tokenizer_revision": null,
+      "max_tokens": 400,
+      "overlap_tokens": 50,
+      "max_chars": 1200,
+      "overlap_chars": 150
+    },
+    "tokenizer": null,
+    "document_count": 14,
+    "chunk_count": 935,
+    "corpus_hash": "7f424358c9bcd5ed7406a9e7d49e9a7692d36d6915d13df1cfe39e3b39cd9ef8",
+    "artifacts": {
+      "chunks.json": "7f424358c9bcd5ed7406a9e7d49e9a7692d36d6915d13df1cfe39e3b39cd9ef8",
+      "lexical.json": "71259bc1fbcbc39fdada2a5f6139cdabaab7866d49d224cdc6ad073a18a64f36",
+      "vectors.npy": "be2f7edfa482e63773baebc4c49a8e7ba284e8c5ca3147a92e5172f7cf6ece5d"
+    },
+    "embedding_backend": {
+      "base_url": "http://127.0.0.1:18080/v1",
+      "dimension": 1024,
+      "encoding_format": "float",
+      "input_preprocessing": "original-text-v1;fp16;cls;l2-float32",
+      "model": "BAAI/bge-m3",
+      "provider": "local-bge-fp16",
+      "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+      "revision_pinned": true
+    },
+    "lexical_tokenizer": "nfkc-casefold-cjk-bigram-v1",
+    "retrieval_config": {
+      "bm25_b": 0.75,
+      "bm25_k1": 1.5,
+      "candidate_k": 20,
+      "normalize_embeddings": true,
+      "rrf_k": 60
+    }
+  },
+  "files": [
+    {
+      "path": "indexes/current.json",
+      "bytes": 52,
+      "sha256": "b7a9344a500b9c44d1777f1d8fc74e1965354ca1c7e6ae86ce70d31129424daf"
+    },
+    {
+      "path": "indexes/idx_20261018T135302_0689591350db/chunks.json",
+      "bytes": 1493584,
+      "sha256": "7f424358c9bcd5ed7406a9e7d49e9a7692d36d6915d13df1cfe39e3b39cd9ef8"
+    },
+    {
+      "path": "indexes/idx_20261018T135302_0689591350db/lexical.json",
+      "bytes": 1475496,
+      "sha256": "71259bc1fbcbc39fdada2a5f6139cdabaab7866d49d224cdc6ad073a18a64f36"
+    },
+    {
+      "path": "indexes/idx_20261018T135302_0689591350db/manifest.json",
+      "bytes": 1262,
+      "sha256": "cbba742bdfc8f7656df3ae640de81feaa25ff884e500e7b8e24b09d0b78ad52b"
+    },
+    {
+      "path": "indexes/idx_20261018T135302_0689591350db/vectors.npy",
+      "bytes": 3829888,
+      "sha256": "be2f7edfa482e63773baebc4c49a8e7ba284e8c5ca3147a92e5172f7cf6ece5d"
+    },
+    {
+      "path": "library.sqlite",
+      "bytes": 4030464,
+      "sha256": "60ad188a07157ecc162ce077991d9553f32172cb43bccf3465d504abc4e17a48"
+    },
+    {
+      "path": "raw/d_053756b54e2d3462d4690b3aed489c962f17df7c3531865e47374c4a651f526c.pdf",
+      "bytes": 539211,
+      "sha256": "053756b54e2d3462d4690b3aed489c962f17df7c3531865e47374c4a651f526c"
+    },
+    {
+      "path": "raw/d_1925755aeb627123d1a63c66f02e5aa2432f7e92751a02bea7c8c3b6bbb6ec33.pdf",
+      "bytes": 2094824,
+      "sha256": "1925755aeb627123d1a63c66f02e5aa2432f7e92751a02bea7c8c3b6bbb6ec33"
+    },
+    {
+      "path": "raw/d_1a99079778b2174feda37473878bc82da1ed0699c77a2cbeb11de408844189c9.pdf",
+      "bytes": 2114105,
+      "sha256": "1a99079778b2174feda37473878bc82da1ed0699c77a2cbeb11de408844189c9"
+    },
+    {
+      "path": "raw/d_23e3249e9a1e75418d82efecab0ea8c4d033b89c93742f63208d47ce01f21233.pdf",
+      "bytes": 885323,
+      "sha256": "23e3249e9a1e75418d82efecab0ea8c4d033b89c93742f63208d47ce01f21233"
+    },
+    {
+      "path": "raw/d_2e487d9b96e3c2e5e286d843e98a066adc0442faa3a6e8ddbd1771221bf9ae14.pdf",
+      "bytes": 4918165,
+      "sha256": "2e487d9b96e3c2e5e286d843e98a066adc0442faa3a6e8ddbd1771221bf9ae14"
+    },
+    {
+      "path": "raw/d_3e67fc1a9977715acf722d85f0b7d124b03715e975f6310a4d6c12094190912f.pdf",
+      "bytes": 383508,
+      "sha256": "3e67fc1a9977715acf722d85f0b7d124b03715e975f6310a4d6c12094190912f"
+    },
+    {
+      "path": "raw/d_61c834540be91dd009398499ac91097bc15697c3b766e3c14f57155438cd4aa7.pdf",
+      "bytes": 2367470,
+      "sha256": "61c834540be91dd009398499ac91097bc15697c3b766e3c14f57155438cd4aa7"
+    },
+    {
+      "path": "raw/d_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1.pdf",
+      "bytes": 747542,
+      "sha256": "653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1"
+    },
+    {
+      "path": "raw/d_7407131fd633561d8eab8701e43ca81061960b6642ae180eb86a3f367b2b8408.pdf",
+      "bytes": 686136,
+      "sha256": "7407131fd633561d8eab8701e43ca81061960b6642ae180eb86a3f367b2b8408"
+    },
+    {
+      "path": "raw/d_92366d22fc0521350d6cbe0ad72bcee754f90e88181d7b4a8e2adb1e7e594fec.pdf",
+      "bytes": 548961,
+      "sha256": "92366d22fc0521350d6cbe0ad72bcee754f90e88181d7b4a8e2adb1e7e594fec"
+    },
+    {
+      "path": "raw/d_bdfaa68d8984f0dc02beaca527b76f207d99b666d31d1da728ee0728182df697.pdf",
+      "bytes": 2215244,
+      "sha256": "bdfaa68d8984f0dc02beaca527b76f207d99b666d31d1da728ee0728182df697"
+    },
+    {
+      "path": "raw/d_bfd15786180a6546e5bf1361fe42356a884517a6497c27ef6994f444be75e91f.pdf",
+      "bytes": 769075,
+      "sha256": "bfd15786180a6546e5bf1361fe42356a884517a6497c27ef6994f444be75e91f"
+    },
+    {
+      "path": "raw/d_dc0ae3c5584ed146beee122e6a9ad9c48547dde048d53e9be8435d8f1d354531.pdf",
+      "bytes": 424964,
+      "sha256": "dc0ae3c5584ed146beee122e6a9ad9c48547dde048d53e9be8435d8f1d354531"
+    },
+    {
+      "path": "raw/d_e791451960e47e69b0241d7656c6c61ce40b7c3beff92c944e163e5c3bc54c1a.pdf",
+      "bytes": 658461,
+      "sha256": "e791451960e47e69b0241d7656c6c61ce40b7c3beff92c944e163e5c3bc54c1a"
+    }
+  ]
+}

@@ -11,7 +11,8 @@ import time
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
-NEW_TESTS = ["app/tests/integration/test_ingestion_recovery.py", "app/tests/integration/test_catalog_batch.py"]
+NEW_TESTS = ["app/tests/integration/test_ingestion_recovery.py", "app/tests/integration/test_catalog_batch.py",
+             "app/tests/ingestion/test_metadata_known_issues.py"]
 FOCUS = ["app/src/dlrag/api/services.py", "app/src/dlrag/ingestion/library.py",
          "app/src/dlrag/ingestion/parser.py", "app/src/dlrag/ingestion/chunker.py",
          "app/src/dlrag/retrieval/retriever.py", "tools/catalog_batch.py"]
@@ -62,8 +63,10 @@ def main():
     coverage = json.loads((output / "coverage.json").read_text(encoding="utf-8"))
     suites = ET.parse(output / "junit.xml").getroot().findall("testsuite")
     cases = [case for suite in suites for case in suite.findall("testcase")]
-    new_count = sum(case.attrib.get("classname", "").split(".")[-1] in
-                    {"test_ingestion_recovery", "test_catalog_batch"} for case in cases)
+    new_names = {Path(path).stem for path in NEW_TESTS}
+    new_count = sum(case.attrib.get("classname", "").split(".")[-1] in new_names for case in cases)
+    expected_failures = sum(case.find("skipped") is not None and
+                            case.find("skipped").attrib.get("type") == "pytest.xfail" for case in cases)
     summary = {"work_item": "COL-001", "scope": args.scope, "tested_code": before,
                "created_at": datetime.now(timezone.utc).isoformat(),
                "python": sys.version.split()[0], "platform": sys.platform,
@@ -73,6 +76,7 @@ def main():
                "tests": {k: sum(int(s.attrib.get(k, 0)) for s in suites)
                          for k in ["tests", "failures", "errors", "skipped"]},
                "new_cases": new_count, "reused_cases": len(cases) - new_count,
+               "expected_failures": expected_failures,
                "coverage": {}, "uncovered_focus": {}, "manual_review": "pending", "real_pdf_batch": "pending"}
     for name, row in coverage["files"].items():
         name = name.replace("\\", "/")

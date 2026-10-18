@@ -1,0 +1,975 @@
+{
+  "batch_id": "COL-001-20261018-P01",
+  "created_at": "2026-10-18T15:29:53.768329+00:00",
+  "method": "external AI assisted review by coding assistant; not application autonomous recognition; no human sign-off",
+  "year_policy": "formal publication year when verified; otherwise supplied preprint version date",
+  "metadata_provider": "cliproxyapi",
+  "metadata_model": "gpt-6-luna",
+  "plan_sha256": "ce52c4a10481d54f3b56afc87edcb3b80f2f639d732060b817fc5125ca66c521",
+  "items": [
+    {
+      "item_id": "paper-001",
+      "filename": "Ascend.pdf",
+      "sha256": "69c573c123ffd1538d432ab31040072dec01a375a4a5b7c2960a7667cb970dda",
+      "bytes": 3915605,
+      "page_count": 16,
+      "predicted_chunks": 101,
+      "preview_job_id": "abb48828d6c84108b833421eb50cfd56",
+      "local_candidates": {
+        "title": "Squeezing Operator Performance Potential for the Ascend Architecture",
+        "authors": [
+          "Yuhang Zhou"
+        ],
+        "year": 2025,
+        "language": "en",
+        "source_url": "https://doi.org/10.1145/3676641.3716243"
+      },
+      "api_candidates": {
+        "title": "Squeezing Operator Performance Potential for the Ascend Architecture",
+        "authors": [
+          "Yuhang Zhou",
+          "Zhibin Wang",
+          "Guyue Liu",
+          "Shipeng Li",
+          "Xi Lin",
+          "Zibo Wang",
+          "Yongzhong Wang",
+          "Fuchun Wei",
+          "Jingyi Zhang",
+          "Zhiheng Hu",
+          "Yanlin Liu",
+          "Chunsheng Li",
+          "Ziyang Zhang",
+          "Yaoyuan Wang",
+          "Bin Zhou",
+          "Wanchun Dou",
+          "Guihai Chen",
+          "Chen Tian"
+        ],
+        "year": 2025,
+        "language": "en",
+        "source_url": "https://doi.org/10.1145/3676641.3716243"
+      },
+      "final_metadata": {
+        "title": "Squeezing Operator Performance Potential for the Ascend Architecture",
+        "authors": [
+          "Yuhang Zhou",
+          "Zhibin Wang",
+          "Guyue Liu",
+          "Shipeng Li",
+          "Xi Lin",
+          "Zibo Wang",
+          "Yongzhong Wang",
+          "Fuchun Wei",
+          "Jingyi Zhang",
+          "Zhiheng Hu",
+          "Yanlin Liu",
+          "Chunsheng Li",
+          "Ziyang Zhang",
+          "Yaoyuan Wang",
+          "Bin Zhou",
+          "Wanchun Dou",
+          "Guihai Chen",
+          "Chen Tian"
+        ],
+        "year": 2025,
+        "language": "en",
+        "source_url": "https://doi.org/10.1145/3676641.3716243",
+        "topics": [
+          "AI accelerators",
+          "Ascend NPU",
+          "Performance modeling"
+        ],
+        "rights_note": "用户指定本地 PDF，用于本机课程项目和研究测试；保留原权利声明，开放再分发许可未作推断，待人工核对。"
+      },
+      "api_to_final_changes": {},
+      "local_to_final_changes": {
+        "authors": {
+          "before": [
+            "Yuhang Zhou"
+          ],
+          "after": [
+            "Yuhang Zhou",
+            "Zhibin Wang",
+            "Guyue Liu",
+            "Shipeng Li",
+            "Xi Lin",
+            "Zibo Wang",
+            "Yongzhong Wang",
+            "Fuchun Wei",
+            "Jingyi Zhang",
+            "Zhiheng Hu",
+            "Yanlin Liu",
+            "Chunsheng Li",
+            "Ziyang Zhang",
+            "Yaoyuan Wang",
+            "Bin Zhou",
+            "Wanchun Dou",
+            "Guihai Chen",
+            "Chen Tian"
+          ]
+        }
+      },
+      "review_method": "external_ai_assisted_review by coding assistant, with text assertions and page-1 rendering; not an application feature; not human review",
+      "author_text_support": "all names supported in first-page text",
+      "year_basis": "PDF p1: ASPLOS 2025/copyright 2025",
+      "external_reference": null,
+      "human_review": "pending"
+    },
+    {
+      "item_id": "paper-002",
+      "filename": "CSB-RNN.pdf",
+      "sha256": "b9cae993bbd44a679c75aae59ae802845d0321c9e4ee163a1c77b00417371f3b",
+      "bytes": 1504857,
+      "page_count": 12,
+      "predicted_chunks": 79,
+      "preview_job_id": "d7c9ed834857421c86471cc9d7b8ed24",
+      "local_candidates": {
+        "title": "CSB-RNN: A Faster-than-Realtime RNN Acceleration Framework with Compressed Structured Blocks",
+        "authors": [
+          "Runbin Shi",
+          "Peiyan Dong",
+          "Tong Geng",
+          "Yuhao Ding",
+          "Xiaolong Ma",
+          "Hayden K.-H. So",
+          "Martin Herbordt",
+          "Ang Li",
+          "Yanzhi Wang"
+        ],
+        "year": 2020,
+        "language": "en",
+        "source_url": "https://doi.org/10.1145/3392717.3392749"
+      },
+      "api_candidates": {
+        "title": "CSB-RNN: A Faster-than-Realtime RNN Acceleration Framework with Compressed Structured Blocks",
+        "authors": [
+          "Runbin Shi",
+          "Peiyan Dong",
+          "Tong Geng",
+          "Yuhao Ding",
+          "Xiaolong Ma",
+          "Hayden K.-H. So",
+          "Martin Herbordt",
+          "Ang Li",
+          "Yanzhi Wang"
+        ],
+        "year": 2020,
+        "language": "en",
+        "source_url": "https://doi.org/10.1145/3392717.3392749"
+      },
+      "final_metadata": {
+        "title": "CSB-RNN: A Faster-than-Realtime RNN Acceleration Framework with Compressed Structured Blocks",
+        "authors": [
+          "Runbin Shi",
+          "Peiyan Dong",
+          "Tong Geng",
+          "Yuhao Ding",
+          "Xiaolong Ma",
+          "Hayden K.-H. So",
+          "Martin Herbordt",
+          "Ang Li",
+          "Yanzhi Wang"
+        ],
+        "year": 2020,
+        "language": "en",
+        "source_url": "https://doi.org/10.1145/3392717.3392749",
+        "topics": [
+          "FPGA",
+          "RNN acceleration",
+          "Structured pruning"
+        ],
+        "rights_note": "用户指定本地 PDF，用于本机课程项目和研究测试；保留原权利声明，开放再分发许可未作推断，待人工核对。"
+      },
+      "api_to_final_changes": {},
+      "local_to_final_changes": {},
+      "review_method": "external_ai_assisted_review by coding assistant, with text assertions and page-1 rendering; not an application feature; not human review",
+      "author_text_support": "all names supported in first-page text",
+      "year_basis": "PDF p1: ICS 2020/copyright 2020",
+      "external_reference": null,
+      "human_review": "pending"
+    },
+    {
+      "item_id": "paper-003",
+      "filename": "ENEC.pdf",
+      "sha256": "604fcbd71b570f13ec0ed832c7c083728cf9b42170704f7fddd966530db96bee",
+      "bytes": 2154629,
+      "page_count": 17,
+      "predicted_chunks": 102,
+      "preview_job_id": "9767490425094e64803abb6fee1043dd",
+      "local_candidates": {
+        "title": "ENEC: A Lossless AI Model Compression Method Enabling Fast Inference on Ascend NPUs",
+        "authors": [
+          "Jinwu Yang",
+          "Jiaan Wu",
+          "Zedong Liu",
+          "Xinyang Ma",
+          "Hairui Zhao",
+          "Yida Gu",
+          "Yuanhong Huang",
+          "Xingchen Liu",
+          "Wenjing Huang",
+          "Zheng Wei",
+          "Jing Xing",
+          "Yili Ma",
+          "Qingyi Zhang",
+          "Baoyi An",
+          "Zhongzhe Hu",
+          "Shaoteng Liu",
+          "Xia Zhu",
+          "Jiaxun Lu",
+          "Guangming Tan",
+          "Dingwen Tao"
+        ],
+        "year": null,
+        "language": "en",
+        "source_url": "https://arxiv.org/abs/2604.03298"
+      },
+      "api_candidates": {
+        "title": "ENEC: A Lossless AI Model Compression Method Enabling Fast Inference on Ascend NPUs",
+        "authors": [
+          "Jinwu Yang",
+          "Jiaan Wu",
+          "Zedong Liu",
+          "Xinyang Ma",
+          "Hairui Zhao",
+          "Yida Gu",
+          "Yuanhong Huang",
+          "Xingchen Liu",
+          "Wenjing Huang",
+          "Zheng Wei",
+          "Jing Xing",
+          "Yili Ma",
+          "Qingyi Zhang",
+          "Baoyi An",
+          "Zhongzhe Hu",
+          "Shaoteng Liu",
+          "Xia Zhu",
+          "Jiaxun Lu",
+          "Guangming Tan",
+          "Dingwen Tao"
+        ],
+        "year": null,
+        "language": "en",
+        "source_url": "https://arxiv.org/abs/2604.03298"
+      },
+      "final_metadata": {
+        "title": "ENEC: A Lossless AI Model Compression Method Enabling Fast Inference on Ascend NPUs",
+        "authors": [
+          "Jinwu Yang",
+          "Jiaan Wu",
+          "Zedong Liu",
+          "Xinyang Ma",
+          "Hairui Zhao",
+          "Yida Gu",
+          "Yuanhong Huang",
+          "Xingchen Liu",
+          "Wenjing Huang",
+          "Zheng Wei",
+          "Jing Xing",
+          "Yili Ma",
+          "Qingyi Zhang",
+          "Baoyi An",
+          "Zhongzhe Hu",
+          "Shaoteng Liu",
+          "Xia Zhu",
+          "Jiaxun Lu",
+          "Guangming Tan",
+          "Dingwen Tao"
+        ],
+        "year": 2026,
+        "language": "en",
+        "source_url": "https://arxiv.org/abs/2604.03298",
+        "topics": [
+          "Ascend NPU",
+          "LLM inference",
+          "Lossless compression"
+        ],
+        "rights_note": "用户指定本地 PDF，用于本机课程项目和研究测试；保留原权利声明，开放再分发许可未作推断，待人工核对。"
+      },
+      "api_to_final_changes": {
+        "year": {
+          "before": null,
+          "after": 2026
+        }
+      },
+      "local_to_final_changes": {
+        "year": {
+          "before": null,
+          "after": 2026
+        }
+      },
+      "review_method": "external_ai_assisted_review by coding assistant, with text assertions and page-1 rendering; not an application feature; not human review",
+      "author_text_support": "all names supported in first-page text",
+      "year_basis": "PDF p1 margin: arXiv:2604.03298v2, 7 Apr 2026; preprint version date",
+      "external_reference": null,
+      "human_review": "pending"
+    },
+    {
+      "item_id": "paper-004",
+      "filename": "EQ-ViT.pdf",
+      "sha256": "959d1cd83e6e32b2433b478269635e0982267998da370a2653bb0d87f444ad6d",
+      "bytes": 3868271,
+      "page_count": 12,
+      "predicted_chunks": 85,
+      "preview_job_id": "1bde0a19a6624257a17ddc032eb1a4f2",
+      "local_candidates": {
+        "title": "EQ-ViT: Algorithm-Hardware Co-Design for End-to-End Acceleration of Real-Time Vision Transformer Inference on Versal ACAP Architecture",
+        "authors": [
+          "Peiyan Dong",
+          "Jinming Zhuang"
+        ],
+        "year": null,
+        "language": "en",
+        "source_url": null
+      },
+      "api_candidates": {
+        "title": "EQ-ViT: Algorithm-Hardware Co-Design for End-to-End Acceleration of Real-Time Vision Transformer Inference on Versal ACAP Architecture",
+        "authors": [
+          "Peiyan Dong",
+          "Jinming Zhuang",
+          "Zhuoping Yang",
+          "Shixin Ji",
+          "Yanyu Li",
+          "Dongkuan Xu",
+          "Heng Huang",
+          "Jingtong Hu",
+          "Alex K. Jones",
+          "Yiyu Shi",
+          "Yanzhi Wang",
+          "Peipei Zhou"
+        ],
+        "year": null,
+        "language": "en",
+        "source_url": null
+      },
+      "final_metadata": {
+        "title": "EQ-ViT: Algorithm-Hardware Co-Design for End-to-End Acceleration of Real-Time Vision Transformer Inference on Versal ACAP Architecture",
+        "authors": [
+          "Peiyan Dong",
+          "Jinming Zhuang",
+          "Zhuoping Yang",
+          "Shixin Ji",
+          "Yanyu Li",
+          "Dongkuan Xu",
+          "Heng Huang",
+          "Jingtong Hu",
+          "Alex K. Jones",
+          "Yiyu Shi",
+          "Yanzhi Wang",
+          "Peipei Zhou"
+        ],
+        "year": 2024,
+        "language": "en",
+        "source_url": "https://doi.org/10.1109/TCAD.2024.3443692",
+        "topics": [
+          "FPGA",
+          "Integer quantization",
+          "Vision Transformers"
+        ],
+        "rights_note": "用户指定本地 PDF，用于本机课程项目和研究测试；保留原权利声明，开放再分发许可未作推断，待人工核对。"
+      },
+      "api_to_final_changes": {
+        "year": {
+          "before": null,
+          "after": 2024
+        },
+        "source_url": {
+          "before": null,
+          "after": "https://doi.org/10.1109/TCAD.2024.3443692"
+        }
+      },
+      "local_to_final_changes": {
+        "authors": {
+          "before": [
+            "Peiyan Dong",
+            "Jinming Zhuang"
+          ],
+          "after": [
+            "Peiyan Dong",
+            "Jinming Zhuang",
+            "Zhuoping Yang",
+            "Shixin Ji",
+            "Yanyu Li",
+            "Dongkuan Xu",
+            "Heng Huang",
+            "Jingtong Hu",
+            "Alex K. Jones",
+            "Yiyu Shi",
+            "Yanzhi Wang",
+            "Peipei Zhou"
+          ]
+        },
+        "year": {
+          "before": null,
+          "after": 2024
+        },
+        "source_url": {
+          "before": null,
+          "after": "https://doi.org/10.1109/TCAD.2024.3443692"
+        }
+      },
+      "review_method": "external_ai_assisted_review by coding assistant, with text assertions and page-1 rendering; not an application feature; not human review",
+      "author_text_support": "all names supported in first-page text",
+      "year_basis": "Crossref publisher DOI record: published-print 2024-11",
+      "external_reference": "https://api.crossref.org/works/10.1109/TCAD.2024.3443692",
+      "human_review": "pending"
+    },
+    {
+      "item_id": "paper-005",
+      "filename": "FQ-ViT.pdf",
+      "sha256": "f459188e745318a07d8aebb6b685f785125e8ae1d936e0fe250789a86afcc7f9",
+      "bytes": 3082351,
+      "page_count": 10,
+      "predicted_chunks": 46,
+      "preview_job_id": "c8bedaf42d164c47a262a0ece09a8014",
+      "local_candidates": {
+        "title": "FQ-ViT: Post-Training Quantization for Fully Quantized Vision Transformer",
+        "authors": [
+          "MEGVII Technology"
+        ],
+        "year": null,
+        "language": "en",
+        "source_url": "https://arxiv.org/abs/2111.13824"
+      },
+      "api_candidates": {
+        "title": "FQ-ViT: Post-Training Quantization for Fully Quantized Vision Transformer",
+        "authors": [
+          "Yang Lin",
+          "Tianyu Zhang",
+          "Peiqin Sun",
+          "Zheng Li",
+          "Shuchang Zhou"
+        ],
+        "year": 2023,
+        "language": "en",
+        "source_url": "https://arxiv.org/abs/2111.13824"
+      },
+      "final_metadata": {
+        "title": "FQ-ViT: Post-Training Quantization for Fully Quantized Vision Transformer",
+        "authors": [
+          "Yang Lin",
+          "Tianyu Zhang",
+          "Peiqin Sun",
+          "Zheng Li",
+          "Shuchang Zhou"
+        ],
+        "year": 2022,
+        "language": "en",
+        "source_url": "https://doi.org/10.24963/ijcai.2022/164",
+        "topics": [
+          "Integer quantization",
+          "Post-training quantization",
+          "Vision Transformers"
+        ],
+        "rights_note": "用户指定本地 PDF，用于本机课程项目和研究测试；保留原权利声明，开放再分发许可未作推断，待人工核对。"
+      },
+      "api_to_final_changes": {
+        "year": {
+          "before": 2023,
+          "after": 2022
+        },
+        "source_url": {
+          "before": "https://arxiv.org/abs/2111.13824",
+          "after": "https://doi.org/10.24963/ijcai.2022/164"
+        }
+      },
+      "local_to_final_changes": {
+        "authors": {
+          "before": [
+            "MEGVII Technology"
+          ],
+          "after": [
+            "Yang Lin",
+            "Tianyu Zhang",
+            "Peiqin Sun",
+            "Zheng Li",
+            "Shuchang Zhou"
+          ]
+        },
+        "year": {
+          "before": null,
+          "after": 2022
+        },
+        "source_url": {
+          "before": "https://arxiv.org/abs/2111.13824",
+          "after": "https://doi.org/10.24963/ijcai.2022/164"
+        }
+      },
+      "review_method": "external_ai_assisted_review by coding assistant, with text assertions and page-1 rendering; not an application feature; not human review",
+      "author_text_support": "all names supported in first-page text",
+      "year_basis": "IJCAI official BibTeX: year=2022; supplied PDF arXiv v4 date=2023-02-17 is a version date",
+      "external_reference": "https://www.ijcai.org/proceedings/2022/bibtex/164",
+      "human_review": "pending"
+    },
+    {
+      "item_id": "paper-006",
+      "filename": "I-BERT.pdf",
+      "sha256": "f6009b06362bbcf30b543118761f00b9b6893787d8f94a9ecfc2e589aa777b60",
+      "bytes": 881206,
+      "page_count": 15,
+      "predicted_chunks": 69,
+      "preview_job_id": "112303a0fc594a6e92716bf45a2c5ae2",
+      "local_candidates": {
+        "title": "I-BERT: Integer-only BERT Quantization",
+        "authors": [
+          "Sehoon Kim",
+          "Amir Gholami",
+          "Zhewei Yao",
+          "Michael W. Mahoney",
+          "Kurt Keutzer"
+        ],
+        "year": 2021,
+        "language": "en",
+        "source_url": "https://arxiv.org/abs/2101.01321"
+      },
+      "api_candidates": {
+        "title": "I-BERT: Integer-only BERT Quantization",
+        "authors": [
+          "Sehoon Kim",
+          "Amir Gholami",
+          "Zhewei Yao",
+          "Michael W. Mahoney",
+          "Kurt Keutzer"
+        ],
+        "year": 2021,
+        "language": "en",
+        "source_url": "https://arxiv.org/abs/2101.01321"
+      },
+      "final_metadata": {
+        "title": "I-BERT: Integer-only BERT Quantization",
+        "authors": [
+          "Sehoon Kim",
+          "Amir Gholami",
+          "Zhewei Yao",
+          "Michael W. Mahoney",
+          "Kurt Keutzer"
+        ],
+        "year": 2021,
+        "language": "en",
+        "source_url": "https://arxiv.org/abs/2101.01321",
+        "topics": [
+          "BERT",
+          "Integer quantization",
+          "Transformer inference"
+        ],
+        "rights_note": "用户指定本地 PDF，用于本机课程项目和研究测试；保留原权利声明，开放再分发许可未作推断，待人工核对。"
+      },
+      "api_to_final_changes": {},
+      "local_to_final_changes": {},
+      "review_method": "external_ai_assisted_review by coding assistant, with text assertions and page-1 rendering; not an application feature; not human review",
+      "author_text_support": "all names supported in first-page text",
+      "year_basis": "PDF p1: Proceedings ICML/PMLR 139, 2021",
+      "external_reference": null,
+      "human_review": "pending"
+    },
+    {
+      "item_id": "paper-007",
+      "filename": "I-LLM.pdf",
+      "sha256": "3ce49518cec441989d8ad594e8dc8d8094507e0f5b0096d77926a2daf5d9c0b6",
+      "bytes": 8687710,
+      "page_count": 15,
+      "predicted_chunks": 61,
+      "preview_job_id": "9537e57fa0dc46dc8570e611bf66a6a2",
+      "local_candidates": {
+        "title": "I-LLM: Efficient Integer-Only Inference for Fully-Quantized Low-Bit Large Language Models",
+        "authors": [
+          "Xing Hu",
+          "Yuan Cheng"
+        ],
+        "year": null,
+        "language": "en",
+        "source_url": "https://arxiv.org/abs/2405.17849"
+      },
+      "api_candidates": {
+        "title": "I-LLM: Efficient Integer-Only Inference for Fully-Quantized Low-Bit Large Language Models",
+        "authors": [
+          "Xing Hu",
+          "Yuan Cheng",
+          "Dawei Yang",
+          "Zhihang Yuan",
+          "Jiangyong Yu",
+          "Chen Xu",
+          "Sifan Zhou"
+        ],
+        "year": 2024,
+        "language": "en",
+        "source_url": "https://arxiv.org/abs/2405.17849"
+      },
+      "final_metadata": {
+        "title": "I-LLM: Efficient Integer-Only Inference for Fully-Quantized Low-Bit Large Language Models",
+        "authors": [
+          "Xing Hu",
+          "Yuan Cheng",
+          "Dawei Yang",
+          "Zhihang Yuan",
+          "Jiangyong Yu",
+          "Chen Xu",
+          "Sifan Zhou"
+        ],
+        "year": 2024,
+        "language": "en",
+        "source_url": "https://arxiv.org/abs/2405.17849",
+        "topics": [
+          "Integer quantization",
+          "LLM inference",
+          "Post-training quantization"
+        ],
+        "rights_note": "用户指定本地 PDF，用于本机课程项目和研究测试；保留原权利声明，开放再分发许可未作推断，待人工核对。"
+      },
+      "api_to_final_changes": {},
+      "local_to_final_changes": {
+        "authors": {
+          "before": [
+            "Xing Hu",
+            "Yuan Cheng"
+          ],
+          "after": [
+            "Xing Hu",
+            "Yuan Cheng",
+            "Dawei Yang",
+            "Zhihang Yuan",
+            "Jiangyong Yu",
+            "Chen Xu",
+            "Sifan Zhou"
+          ]
+        },
+        "year": {
+          "before": null,
+          "after": 2024
+        }
+      },
+      "review_method": "external_ai_assisted_review by coding assistant, with text assertions and page-1 rendering; not an application feature; not human review",
+      "author_text_support": "all names supported in first-page text",
+      "year_basis": "PDF p1 margin: arXiv:2405.17849v2, 5 Jun 2024; preprint version date",
+      "external_reference": null,
+      "human_review": "pending"
+    },
+    {
+      "item_id": "paper-008",
+      "filename": "important.pdf",
+      "sha256": "a1dfa622dabb6a58261c9eb6367ffd4a4d51dffbf9f74e9741c1d18ad3aba967",
+      "bytes": 1578272,
+      "page_count": 15,
+      "predicted_chunks": 92,
+      "preview_job_id": "249367b969dd47d9ae6cb8d377ae070c",
+      "local_candidates": {
+        "title": "Is Your NPU Ready for LLMs? Dissecting the Hidden Efficiency Bottlenecks in Mobile LLM Inference",
+        "authors": [
+          "Guanyu Cai",
+          "Ruiming Tian",
+          "Lang Yang",
+          "Zhouhong Ren",
+          "Jinliang Yuan",
+          "Lingkun Li",
+          "Jiliang Wang"
+        ],
+        "year": null,
+        "language": "en",
+        "source_url": "https://arxiv.org/abs/2607.05475"
+      },
+      "api_candidates": {
+        "title": "Is Your NPU Ready for LLMs? Dissecting the Hidden Efficiency Bottlenecks in Mobile LLM Inference",
+        "authors": [
+          "Guanyu Cai",
+          "Ruiming Tian",
+          "Lang Yang",
+          "Zhouhong Ren",
+          "Jinliang Yuan",
+          "Lingkun Li",
+          "Jiliang Wang"
+        ],
+        "year": 2026,
+        "language": "en",
+        "source_url": "https://arxiv.org/abs/2607.05475"
+      },
+      "final_metadata": {
+        "title": "Is Your NPU Ready for LLMs? Dissecting the Hidden Efficiency Bottlenecks in Mobile LLM Inference",
+        "authors": [
+          "Guanyu Cai",
+          "Ruiming Tian",
+          "Lang Yang",
+          "Zhouhong Ren",
+          "Jinliang Yuan",
+          "Lingkun Li",
+          "Jiliang Wang"
+        ],
+        "year": 2026,
+        "language": "en",
+        "source_url": "https://arxiv.org/abs/2607.05475",
+        "topics": [
+          "Mobile LLM",
+          "NPU",
+          "Performance measurement"
+        ],
+        "rights_note": "用户指定本地 PDF，用于本机课程项目和研究测试；保留原权利声明，开放再分发许可未作推断，待人工核对。"
+      },
+      "api_to_final_changes": {},
+      "local_to_final_changes": {
+        "year": {
+          "before": null,
+          "after": 2026
+        }
+      },
+      "review_method": "external_ai_assisted_review by coding assistant, with text assertions and page-1 rendering; not an application feature; not human review",
+      "author_text_support": "all names supported in first-page text",
+      "year_basis": "PDF p1 margin: arXiv:2607.05475v1, 6 Jul 2026; preprint version date",
+      "external_reference": null,
+      "human_review": "pending"
+    },
+    {
+      "item_id": "paper-009",
+      "filename": "packQVit.pdf",
+      "sha256": "bbfd0e6e5573959a3fc78ce26824f9943fbadcd45375885aa67b1a9588bc3392",
+      "bytes": 2312015,
+      "page_count": 14,
+      "predicted_chunks": 61,
+      "preview_job_id": "ccaf8686ee834effb1671a1b2e2fc9fb",
+      "local_candidates": {
+        "title": "PackQViT: Faster Sub-8-bit Vision Transformers via Full and Packed Quantization on the Mobile",
+        "authors": [],
+        "year": null,
+        "language": "en",
+        "source_url": null
+      },
+      "api_candidates": {
+        "title": "PackQViT: Faster Sub-8-bit Vision Transformers via Full and Packed Quantization on the Mobile",
+        "authors": [
+          "Peiyan Dong",
+          "Lei Lu",
+          "Chao Wu",
+          "Cheng Lyu",
+          "Geng Yuan",
+          "Hao Tang",
+          "Yanzhi Wang"
+        ],
+        "year": 2023,
+        "language": "en",
+        "source_url": null
+      },
+      "final_metadata": {
+        "title": "PackQViT: Faster Sub-8-bit Vision Transformers via Full and Packed Quantization on the Mobile",
+        "authors": [
+          "Peiyan Dong",
+          "Lei Lu",
+          "Chao Wu",
+          "Cheng Lyu",
+          "Geng Yuan",
+          "Hao Tang",
+          "Yanzhi Wang"
+        ],
+        "year": 2023,
+        "language": "en",
+        "source_url": "https://papers.neurips.cc/paper_files/paper/2023/hash/1c92edb990a05f2269f0cc3afbb4c952-Abstract-Conference.html",
+        "topics": [
+          "Mobile inference",
+          "Sub-8-bit quantization",
+          "Vision Transformers"
+        ],
+        "rights_note": "用户指定本地 PDF，用于本机课程项目和研究测试；保留原权利声明，开放再分发许可未作推断，待人工核对。"
+      },
+      "api_to_final_changes": {
+        "source_url": {
+          "before": null,
+          "after": "https://papers.neurips.cc/paper_files/paper/2023/hash/1c92edb990a05f2269f0cc3afbb4c952-Abstract-Conference.html"
+        }
+      },
+      "local_to_final_changes": {
+        "authors": {
+          "before": [],
+          "after": [
+            "Peiyan Dong",
+            "Lei Lu",
+            "Chao Wu",
+            "Cheng Lyu",
+            "Geng Yuan",
+            "Hao Tang",
+            "Yanzhi Wang"
+          ]
+        },
+        "year": {
+          "before": null,
+          "after": 2023
+        },
+        "source_url": {
+          "before": null,
+          "after": "https://papers.neurips.cc/paper_files/paper/2023/hash/1c92edb990a05f2269f0cc3afbb4c952-Abstract-Conference.html"
+        }
+      },
+      "review_method": "external_ai_assisted_review by coding assistant, with text assertions and page-1 rendering; not an application feature; not human review",
+      "author_text_support": "all names supported in first-page text",
+      "year_basis": "PDF p1 footer: NeurIPS 2023; official proceedings record",
+      "external_reference": "https://papers.neurips.cc/paper_files/paper/2023/hash/1c92edb990a05f2269f0cc3afbb4c952-Abstract-Conference.html",
+      "human_review": "pending"
+    },
+    {
+      "item_id": "paper-010",
+      "filename": "spinquant.pdf",
+      "sha256": "fe437770d7c981eae9e028eacaa5c772ed0add900ed9dec54c10cfce6dfd86c3",
+      "bytes": 10207972,
+      "page_count": 24,
+      "predicted_chunks": 89,
+      "preview_job_id": "12737eec87614d8bb6a46cc41bf431aa",
+      "local_candidates": {
+        "title": "S PIN Q UANT : LLM Q UANTIZATION WITH L EARNED R OTATIONS",
+        "authors": [
+          "Zechun Liu",
+          "Changsheng Zhao",
+          "Igor Fedorov",
+          "Bilge Soran",
+          "Dhruv Choudhary",
+          "Raghuraman Krishnamoorthi",
+          "Vikas Chandra",
+          "Yuandong Tian",
+          "Tijmen Blankevoort"
+        ],
+        "year": 2025,
+        "language": "en",
+        "source_url": "https://arxiv.org/abs/2405.16406"
+      },
+      "api_candidates": {
+        "title": "SpinQuant: LLM Quantization with Learned Rotations",
+        "authors": [
+          "Zechun Liu",
+          "Changsheng Zhao",
+          "Igor Fedorov",
+          "Bilge Soran",
+          "Dhruv Choudhary",
+          "Raghuraman Krishnamoorthi",
+          "Vikas Chandra",
+          "Yuandong Tian",
+          "Tijmen Blankevoort"
+        ],
+        "year": 2025,
+        "language": "en",
+        "source_url": "https://arxiv.org/abs/2405.16406"
+      },
+      "final_metadata": {
+        "title": "SpinQuant: LLM Quantization with Learned Rotations",
+        "authors": [
+          "Zechun Liu",
+          "Changsheng Zhao",
+          "Igor Fedorov",
+          "Bilge Soran",
+          "Dhruv Choudhary",
+          "Raghuraman Krishnamoorthi",
+          "Vikas Chandra",
+          "Yuandong Tian",
+          "Tijmen Blankevoort"
+        ],
+        "year": 2025,
+        "language": "en",
+        "source_url": "https://arxiv.org/abs/2405.16406",
+        "topics": [
+          "LLM inference",
+          "Learned rotations",
+          "Post-training quantization"
+        ],
+        "rights_note": "用户指定本地 PDF，用于本机课程项目和研究测试；保留原权利声明，开放再分发许可未作推断，待人工核对。"
+      },
+      "api_to_final_changes": {},
+      "local_to_final_changes": {
+        "title": {
+          "before": "S PIN Q UANT : LLM Q UANTIZATION WITH L EARNED R OTATIONS",
+          "after": "SpinQuant: LLM Quantization with Learned Rotations"
+        }
+      },
+      "review_method": "external_ai_assisted_review by coding assistant, with text assertions and page-1 rendering; not an application feature; not human review",
+      "author_text_support": "all names supported in first-page text",
+      "year_basis": "PDF p1 header: Published as a conference paper at ICLR 2025",
+      "external_reference": null,
+      "human_review": "pending"
+    },
+    {
+      "item_id": "paper-011",
+      "filename": "XY-Serve.pdf",
+      "sha256": "c4eb5fe23e480decfa6f08afda0fdb0bea4d0fe5ee7fafc65f2a2d34a397ddf0",
+      "bytes": 3805652,
+      "page_count": 16,
+      "predicted_chunks": 101,
+      "preview_job_id": "0a37477b781d41728f077e82b01c0b9e",
+      "local_candidates": {
+        "title": "XY-Serve: End-to-End Versatile Production Serving for Dynamic LLM Workloads",
+        "authors": [
+          "Mingcong Song"
+        ],
+        "year": 2026,
+        "language": "en",
+        "source_url": "https://doi.org/10.1145/3760250.3762228"
+      },
+      "api_candidates": {
+        "title": "XY-Serve: End-to-End Versatile Production Serving for Dynamic LLM Workloads",
+        "authors": [
+          "Mingcong Song",
+          "Xinru Tang",
+          "Fengfan Hou",
+          "Jing Li",
+          "Wei Wei",
+          "Yipeng Ma",
+          "Runqiu Xiao",
+          "Hongjie Si",
+          "Dingcheng Jiang",
+          "Shouyi Yin",
+          "Yang Hu",
+          "Guoping Long"
+        ],
+        "year": 2026,
+        "language": "en",
+        "source_url": "https://doi.org/10.1145/3760250.3762228"
+      },
+      "final_metadata": {
+        "title": "XY-Serve: End-to-End Versatile Production Serving for Dynamic LLM Workloads",
+        "authors": [
+          "Mingcong Song",
+          "Xinru Tang",
+          "Fengfan Hou",
+          "Jing Li",
+          "Wei Wei",
+          "Yipeng Ma",
+          "Runqiu Xiao",
+          "Hongjie Si",
+          "Dingcheng Jiang",
+          "Shouyi Yin",
+          "Yang Hu",
+          "Guoping Long"
+        ],
+        "year": 2026,
+        "language": "en",
+        "source_url": "https://doi.org/10.1145/3760250.3762228",
+        "topics": [
+          "Ascend NPU",
+          "Dynamic workloads",
+          "LLM serving"
+        ],
+        "rights_note": "用户提供本地 PDF；PDF 第1页明确标注 Creative Commons Attribution 4.0 International License (CC BY 4.0)。"
+      },
+      "api_to_final_changes": {},
+      "local_to_final_changes": {
+        "authors": {
+          "before": [
+            "Mingcong Song"
+          ],
+          "after": [
+            "Mingcong Song",
+            "Xinru Tang",
+            "Fengfan Hou",
+            "Jing Li",
+            "Wei Wei",
+            "Yipeng Ma",
+            "Runqiu Xiao",
+            "Hongjie Si",
+            "Dingcheng Jiang",
+            "Shouyi Yin",
+            "Yang Hu",
+            "Guoping Long"
+          ]
+        }
+      },
+      "review_method": "external_ai_assisted_review by coding assistant, with text assertions and page-1 rendering; not an application feature; not human review",
+      "author_text_support": "all names supported in first-page text",
+      "year_basis": "PDF p1: ASPLOS 2026/copyright 2026",
+      "external_reference": null,
+      "human_review": "pending"
+    }
+  ]
+}
