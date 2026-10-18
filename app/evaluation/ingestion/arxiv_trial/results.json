@@ -1,0 +1,155 @@
+[
+  {
+    "file": "2005.11401.pdf",
+    "doc_id": "d_23e3249e9a1e75418d82efecab0ea8c4d033b89c93742f63208d47ce01f21233",
+    "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+    "source_url": "https://arxiv.org/abs/2005.11401",
+    "status": "indexing",
+    "pages": 19,
+    "chunks": 78,
+    "diagnostics": {
+      "MULTI_COLUMN_REVIEW_REQUIRED": 19,
+      "REPEATED_MARGIN_REMOVED": 18
+    },
+    "offset_check": "pass",
+    "duplicate_check": "pass",
+    "max_chunk_chars": 1200
+  },
+  {
+    "file": "2004.04906.pdf",
+    "doc_id": "d_3e67fc1a9977715acf722d85f0b7d124b03715e975f6310a4d6c12094190912f",
+    "title": "Dense Passage Retrieval for Open-Domain Question Answering",
+    "source_url": "https://arxiv.org/abs/2004.04906",
+    "status": "indexing",
+    "pages": 13,
+    "chunks": 61,
+    "diagnostics": {
+      "MULTI_COLUMN_REVIEW_REQUIRED": 13
+    },
+    "offset_check": "pass",
+    "duplicate_check": "pass",
+    "max_chunk_chars": 1200
+  },
+  {
+    "file": "2104.08663.pdf",
+    "doc_id": "d_1925755aeb627123d1a63c66f02e5aa2432f7e92751a02bea7c8c3b6bbb6ec33",
+    "title": "BEIR: A Heterogenous Benchmark for Zero-shot Evaluation of Information Retrieval Models",
+    "source_url": "https://arxiv.org/abs/2104.08663",
+    "status": "indexing",
+    "pages": 24,
+    "chunks": 105,
+    "diagnostics": {
+      "MULTI_COLUMN_REVIEW_REQUIRED": 24,
+      "REPEATED_MARGIN_REMOVED": 23
+    },
+    "offset_check": "pass",
+    "duplicate_check": "pass",
+    "max_chunk_chars": 1198
+  },
+  {
+    "file": "2004.12832.pdf",
+    "doc_id": "d_2e487d9b96e3c2e5e286d843e98a066adc0442faa3a6e8ddbd1771221bf9ae14",
+    "title": "ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT",
+    "source_url": "https://arxiv.org/abs/2004.12832",
+    "status": "indexing",
+    "pages": 10,
+    "chunks": 70,
+    "diagnostics": {
+      "MULTI_COLUMN_REVIEW_REQUIRED": 10
+    },
+    "offset_check": "pass",
+    "duplicate_check": "pass",
+    "max_chunk_chars": 1200
+  },
+  {
+    "file": "2107.05720.pdf",
+    "doc_id": "d_e791451960e47e69b0241d7656c6c61ce40b7c3beff92c944e163e5c3bc54c1a",
+    "title": "SPLADE: Sparse Lexical and Expansion Model for First Stage Ranking",
+    "source_url": "https://arxiv.org/abs/2107.05720",
+    "status": "indexing",
+    "pages": 5,
+    "chunks": 34,
+    "diagnostics": {
+      "MULTI_COLUMN_REVIEW_REQUIRED": 5
+    },
+    "offset_check": "pass",
+    "duplicate_check": "pass",
+    "max_chunk_chars": 1197
+  },
+  {
+    "file": "2112.09118.pdf",
+    "doc_id": "d_7407131fd633561d8eab8701e43ca81061960b6642ae180eb86a3f367b2b8408",
+    "title": "Unsupervised Dense Information Retrieval with Contrastive Learning",
+    "source_url": "https://arxiv.org/abs/2112.09118",
+    "status": "indexing",
+    "pages": 21,
+    "chunks": 83,
+    "diagnostics": {
+      "MULTI_COLUMN_REVIEW_REQUIRED": 21,
+      "REPEATED_MARGIN_REMOVED": 21
+    },
+    "offset_check": "pass",
+    "duplicate_check": "pass",
+    "max_chunk_chars": 1200
+  },
+  {
+    "file": "1908.10084.pdf",
+    "doc_id": "d_92366d22fc0521350d6cbe0ad72bcee754f90e88181d7b4a8e2adb1e7e594fec",
+    "title": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks",
+    "source_url": "https://arxiv.org/abs/1908.10084",
+    "status": "indexing",
+    "pages": 11,
+    "chunks": 49,
+    "diagnostics": {
+      "MULTI_COLUMN_REVIEW_REQUIRED": 10
+    },
+    "offset_check": "pass",
+    "duplicate_check": "pass",
+    "max_chunk_chars": 1199
+  },
+  {
+    "file": "2210.07316.pdf",
+    "doc_id": "d_bfd15786180a6546e5bf1361fe42356a884517a6497c27ef6994f444be75e91f",
+    "title": "MTEB: Massive Text Embedding Benchmark",
+    "source_url": "https://arxiv.org/abs/2210.07316",
+    "status": "indexing",
+    "pages": 24,
+    "chunks": 130,
+    "diagnostics": {
+      "MULTI_COLUMN_REVIEW_REQUIRED": 21
+    },
+    "offset_check": "pass",
+    "duplicate_check": "pass",
+    "max_chunk_chars": 1200
+  },
+  {
+    "file": "2212.10496.pdf",
+    "doc_id": "d_dc0ae3c5584ed146beee122e6a9ad9c48547dde048d53e9be8435d8f1d354531",
+    "title": "Precise Zero-Shot Dense Retrieval without Relevance Labels",
+    "source_url": "https://arxiv.org/abs/2212.10496",
+    "status": "indexing",
+    "pages": 11,
+    "chunks": 48,
+    "diagnostics": {
+      "MULTI_COLUMN_REVIEW_REQUIRED": 9
+    },
+    "offset_check": "pass",
+    "duplicate_check": "pass",
+    "max_chunk_chars": 1200
+  },
+  {
+    "file": "2307.03172.pdf",
+    "doc_id": "d_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1",
+    "title": "Lost in the Middle: How Language Models Use Long Contexts",
+    "source_url": "https://arxiv.org/abs/2307.03172",
+    "status": "indexing",
+    "pages": 18,
+    "chunks": 74,
+    "diagnostics": {
+      "MULTI_COLUMN_REVIEW_REQUIRED": 16
+    },
+    "offset_check": "pass",
+    "duplicate_check": "pass",
+    "max_chunk_chars": 1199
+  }
+]

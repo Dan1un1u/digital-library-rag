@@ -1,0 +1,5 @@
+﻿question_id,split,variant,request_id,claim_id,evidence_id,claim_text,quote,support,point_score,point_max,coverage,factual_issue,reviewer,notes
+smoke_B001,dev,full,q_7a833c236b134fe5919b448fffdc1d87,,,,,,,,,,,
+smoke_B002,dev,full,q_d6b6e95235ec4a4b870f0f9914bf2ef1,,,,,,,,,,,
+C001,dev,full,q_ca217531431749de9b4d39022392d0aa,,,,,,,,,,,
+C011,dev,full,q_0a031c83f868400ea9b5a885fbf657e9,,,,,,,,,,,

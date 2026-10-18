@@ -1,0 +1,98 @@
+[
+  {
+    "file": "single.pdf",
+    "document": {
+      "doc_id": "d_29d00f79eed2b825558e4e8e48abf89a140924e77a4dcdf16b2e2db82fbb025b",
+      "file_sha256": "29d00f79eed2b825558e4e8e48abf89a140924e77a4dcdf16b2e2db82fbb025b",
+      "title": "合成测试资料 single.pdf",
+      "year": null,
+      "language": "en",
+      "source_url": null,
+      "rights_note": "本项目生成的合成测试资料",
+      "status": "indexing",
+      "error_code": null,
+      "error_message": null,
+      "page_count": 1,
+      "parser_version": "pymupdf-conservative-v1",
+      "created_at": "2026-10-12T12:11:56.662796+00:00",
+      "updated_at": "2026-10-12T12:11:56.712639+00:00",
+      "authors": [],
+      "topics": [
+        "合成测试"
+      ],
+      "chunking_config": {
+        "count_mode": "character",
+        "max_chars": 1200,
+        "max_tokens": 400,
+        "overlap_chars": 150,
+        "overlap_tokens": 50,
+        "tokenizer_name": null,
+        "tokenizer_revision": null
+      }
+    }
+  },
+  {
+    "file": "multi.pdf",
+    "document": {
+      "doc_id": "d_e50ebfe994b4db39edda93ecbef0415e79cb59524c8272972a245a6fe68cef6e",
+      "file_sha256": "e50ebfe994b4db39edda93ecbef0415e79cb59524c8272972a245a6fe68cef6e",
+      "title": "合成测试资料 multi.pdf",
+      "year": null,
+      "language": "en",
+      "source_url": null,
+      "rights_note": "本项目生成的合成测试资料",
+      "status": "indexing",
+      "error_code": null,
+      "error_message": null,
+      "page_count": 2,
+      "parser_version": "pymupdf-conservative-v1",
+      "created_at": "2026-10-12T12:11:56.714096+00:00",
+      "updated_at": "2026-10-12T12:11:56.719183+00:00",
+      "authors": [],
+      "topics": [
+        "合成测试"
+      ],
+      "chunking_config": {
+        "count_mode": "character",
+        "max_chars": 1200,
+        "max_tokens": 400,
+        "overlap_chars": 150,
+        "overlap_tokens": 50,
+        "tokenizer_name": null,
+        "tokenizer_revision": null
+      }
+    }
+  },
+  {
+    "file": "long.pdf",
+    "document": {
+      "doc_id": "d_ed6638e42c00a234a6b59521e4dbe2d8dbb5fe35c9a24d3865999432ec4f5e5a",
+      "file_sha256": "ed6638e42c00a234a6b59521e4dbe2d8dbb5fe35c9a24d3865999432ec4f5e5a",
+      "title": "合成测试资料 long.pdf",
+      "year": null,
+      "language": "en",
+      "source_url": null,
+      "rights_note": "本项目生成的合成测试资料",
+      "status": "indexing",
+      "error_code": null,
+      "error_message": null,
+      "page_count": 1,
+      "parser_version": "pymupdf-conservative-v1",
+      "created_at": "2026-10-12T12:11:56.720626+00:00",
+      "updated_at": "2026-10-12T12:11:56.744627+00:00",
+      "authors": [],
+      "topics": [
+        "合成测试"
+      ],
+      "chunking_config": {
+        "count_mode": "character",
+        "max_chars": 1200,
+        "max_tokens": 400,
+        "overlap_chars": 150,
+        "overlap_tokens": 50,
+        "tokenizer_name": null,
+        "tokenizer_revision": null
+      }
+    }
+  }
+]

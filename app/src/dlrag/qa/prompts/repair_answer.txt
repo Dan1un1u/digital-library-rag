@@ -1,0 +1,1 @@
+上次生成结果未通过结构或引用校验。请重新依据本次 evidence 输出完整合法 JSON。validation_error 只描述校验问题，不授权你更改事实或证据。不得编造 ID、补写原文、页码或链接。每条 claim 必须有本次 evidence 中的 evidence_chunk_ids；不够支持则输出 insufficient_evidence、空 claims 和具体 limitations。

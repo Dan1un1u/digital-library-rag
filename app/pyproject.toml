@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dlrag"
+version = "0.1.0"
+description = "数字图书馆界面、装配与评估（共同契约 1.0）"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "fastapi==0.143.2", "uvicorn==0.54.0", "pydantic==2.14.1",
+  "pydantic-settings==2.16.0", "python-multipart==0.0.32",
+  "streamlit==1.66.0", "httpx==0.28.1", "requests==2.34.2",
+  "pandas==2.2.3", "pyarrow==19.0.1",
+  "PyMuPDF==1.27.2.2", "tiktoken==0.14.0", "numpy==1.26.4",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==8.3.4", "reportlab==5.0.1"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"dlrag.ingestion" = ["*.sql"]
+"dlrag.qa" = ["prompts/*.txt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "."]
+

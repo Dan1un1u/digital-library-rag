@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "model": "BAAI/bge-m3",
+  "dimension": 1024,
+  "texts": 3,
+  "elapsed_ms": 299.72,
+  "chinese_english_similarity": 0.7861156463623047,
+  "chinese_unrelated_similarity": 0.41384169459342957,
+  "stats": {
+    "requests": 1,
+    "retries": 0,
+    "input_texts": 3,
+    "total_tokens": 34
+  },
+  "revision": null
+}

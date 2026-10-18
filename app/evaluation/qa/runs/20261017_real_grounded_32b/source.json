@@ -1,0 +1,44 @@
+{
+  "mode": "real_llm_fixed_recorded_supporting_chunk",
+  "live_retrieval": false,
+  "source": "evaluation\\retrieval\\arxiv_trial\\runs.jsonl",
+  "source_sha256": "0fd1e6484e09b71fdd1356210e8931b600e58b33069cf746faeddd4092287e25",
+  "hit": {
+    "rank": 19,
+    "chunk": {
+      "char_count": 810,
+      "chunk_id": "c_92366d22fc0521350d6cbe0ad72bcee754f90e88181d7b4a8e2adb1e7e594fec_p0001_0001",
+      "chunk_order": 1,
+      "doc_id": "d_92366d22fc0521350d6cbe0ad72bcee754f90e88181d7b4a8e2adb1e7e594fec",
+      "document": {
+        "authors": [
+          "Reimers, Nils",
+          "Gurevych, Iryna"
+        ],
+        "language": "en",
+        "title": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks",
+        "topics": [
+          "arXiv实验"
+        ],
+        "year": 2019
+      },
+      "page_char_end": 810,
+      "page_char_start": 0,
+      "pdf_page": 1,
+      "printed_page": null,
+      "section": null,
+      "text": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks\n\nNils Reimers and Iryna Gurevych Ubiquitous Knowledge Processing Lab (UKP-TUDA) Department of Computer Science, Technische Universit¨at Darmstadt\n\nwww.ukp.tu-darmstadt.de\n\nAbstract\n\nBERT (Devlin et al., 2018) and RoBERTa (Liu et al., 2019) has set a new state-of-the-art performance on sentence-pair regression tasks like semantic textual similarity (STS). How- ever, it requires that both sentences are fed into the network, which causes a massive com- putational overhead: Finding the most sim- ilar pair in a collection of 10,000 sentences requires about 50 million inference computa- tions (~65 hours) with BERT. The construction of BERT makes it unsuitable for semantic sim- ilarity search as well as for unsupervised tasks like clustering.\n\n",
+      "token_count": null
+    },
+    "scores": {
+      "bm25": 2.676890260014265,
+      "cosine": null,
+      "rrf": null,
+      "rerank": null
+    },
+    "matched_by": [
+      "keyword"
+    ],
+    "index_version": "idx_20261013T091440_23f3ebf728f9"
+  }
+}

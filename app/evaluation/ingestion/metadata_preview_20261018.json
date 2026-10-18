@@ -1,0 +1,666 @@
+{
+  "mode": "local_rules_no_network",
+  "requires_human_confirmation": true,
+  "results": [
+    {
+      "file": "2005.11401.pdf",
+      "expected_metadata": {
+        "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+        "authors": [
+          "Lewis, Patrick",
+          "Perez, Ethan",
+          "Piktus, Aleksandra",
+          "Petroni, Fabio",
+          "Karpukhin, Vladimir",
+          "Goyal, Naman",
+          "Küttler, Heinrich",
+          "Lewis, Mike",
+          "Yih, Wen-tau",
+          "Rocktäschel, Tim",
+          "Riedel, Sebastian",
+          "Kiela, Douwe"
+        ],
+        "year": 2020,
+        "topics": [
+          "arXiv实验"
+        ],
+        "language": "en",
+        "source_url": "https://arxiv.org/abs/2005.11401",
+        "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+      },
+      "preview": {
+        "metadata": {
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "authors": [
+            "Patrick Lewis",
+            "Ethan Perez",
+            "Aleksandra Piktus",
+            "Fabio Petroni",
+            "Vladimir Karpukhin",
+            "Naman Goyal",
+            "Heinrich Küttler",
+            "Mike Lewis",
+            "Wen-tau Yih",
+            "Tim Rocktäschel",
+            "Sebastian Riedel",
+            "Douwe Kiela"
+          ],
+          "year": null,
+          "language": "en",
+          "source_url": "https://arxiv.org/abs/2005.11401"
+        },
+        "field_sources": {
+          "title": {
+            "method": "first_page_layout",
+            "pdf_page": 1,
+            "excerpt": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"
+          },
+          "authors": {
+            "method": "first_page_text",
+            "pdf_page": 1,
+            "excerpt": "Patrick Lewis †‡ , Ethan Perez ⋆ , Aleksandra Piktus † , Fabio Petroni † , Vladimir Karpukhin † , Naman Goyal † , Heinrich Küttler † , Mike Lewis † , Wen-tau Yih † , Tim Rocktäschel †‡ , Sebastian Riedel †‡ , Douwe Kiela †"
+          },
+          "source_url": {
+            "method": "document_identifier",
+            "pdf_page": null,
+            "excerpt": "arXiv:2005.11401v4"
+          },
+          "language": {
+            "method": "text_language_heuristic",
+            "pdf_page": null,
+            "excerpt": "前两页文字的中英文字符分布"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 19,
+        "method": "local_pdf_metadata_and_text"
+      }
+    },
+    {
+      "file": "2004.04906.pdf",
+      "expected_metadata": {
+        "title": "Dense Passage Retrieval for Open-Domain Question Answering",
+        "authors": [
+          "Karpukhin, Vladimir",
+          "Oğuz, Barlas",
+          "Min, Sewon",
+          "Lewis, Patrick",
+          "Wu, Ledell",
+          "Edunov, Sergey",
+          "Chen, Danqi",
+          "Yih, Wen-tau"
+        ],
+        "year": 2020,
+        "topics": [
+          "arXiv实验"
+        ],
+        "language": "en",
+        "source_url": "https://arxiv.org/abs/2004.04906",
+        "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+      },
+      "preview": {
+        "metadata": {
+          "title": "Dense Passage Retrieval for Open-Domain Question Answering",
+          "authors": [
+            "Vladimir Karpukhin",
+            "Barlas O˘guz",
+            "Sewon Min",
+            "Patrick Lewis",
+            "Ledell Wu",
+            "Sergey Edunov",
+            "Danqi Chen",
+            "Wen-tau Yih"
+          ],
+          "year": null,
+          "language": "en",
+          "source_url": "https://arxiv.org/abs/2004.04906"
+        },
+        "field_sources": {
+          "title": {
+            "method": "first_page_layout",
+            "pdf_page": 1,
+            "excerpt": "Dense Passage Retrieval for Open-Domain Question Answering"
+          },
+          "authors": {
+            "method": "first_page_text",
+            "pdf_page": 1,
+            "excerpt": "Vladimir Karpukhin ∗ , Barlas O˘guz ∗ , Sewon Min † , Patrick Lewis, Ledell Wu, Sergey Edunov, Danqi Chen ‡ , Wen-tau Yih"
+          },
+          "source_url": {
+            "method": "document_identifier",
+            "pdf_page": null,
+            "excerpt": "arXiv:2004.04906v3"
+          },
+          "language": {
+            "method": "text_language_heuristic",
+            "pdf_page": null,
+            "excerpt": "前两页文字的中英文字符分布"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 13,
+        "method": "local_pdf_metadata_and_text"
+      }
+    },
+    {
+      "file": "2104.08663.pdf",
+      "expected_metadata": {
+        "title": "BEIR: A Heterogenous Benchmark for Zero-shot Evaluation of Information Retrieval Models",
+        "authors": [
+          "Thakur, Nandan",
+          "Reimers, Nils",
+          "Rücklé, Andreas",
+          "Srivastava, Abhishek",
+          "Gurevych, Iryna"
+        ],
+        "year": 2021,
+        "topics": [
+          "arXiv实验"
+        ],
+        "language": "en",
+        "source_url": "https://arxiv.org/abs/2104.08663",
+        "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "preview": {
+        "metadata": {
+          "title": "BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models",
+          "authors": [
+            "Nandan Thakur",
+            "Nils Reimers",
+            "Andreas Rücklé",
+            "Abhishek Srivastava",
+            "Iryna Gurevych"
+          ],
+          "year": null,
+          "language": "en",
+          "source_url": "https://arxiv.org/abs/2104.08663"
+        },
+        "field_sources": {
+          "title": {
+            "method": "first_page_layout",
+            "pdf_page": 1,
+            "excerpt": "BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models"
+          },
+          "authors": {
+            "method": "first_page_text",
+            "pdf_page": 1,
+            "excerpt": "Nandan Thakur, Nils Reimers, Andreas Rücklé ∗ , Abhishek Srivastava, Iryna Gurevych"
+          },
+          "source_url": {
+            "method": "document_identifier",
+            "pdf_page": null,
+            "excerpt": "arXiv:2104.08663v4"
+          },
+          "language": {
+            "method": "text_language_heuristic",
+            "pdf_page": null,
+            "excerpt": "前两页文字的中英文字符分布"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 24,
+        "method": "local_pdf_metadata_and_text"
+      }
+    },
+    {
+      "file": "2004.12832.pdf",
+      "expected_metadata": {
+        "title": "ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT",
+        "authors": [
+          "Khattab, Omar",
+          "Zaharia, Matei"
+        ],
+        "year": 2020,
+        "topics": [
+          "arXiv实验"
+        ],
+        "language": "en",
+        "source_url": "https://arxiv.org/abs/2004.12832",
+        "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+      },
+      "preview": {
+        "metadata": {
+          "title": "ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT",
+          "authors": [
+            "Omar Khattab",
+            "Matei Zaharia"
+          ],
+          "year": 2020,
+          "language": "en",
+          "source_url": "https://arxiv.org/abs/2004.12832"
+        },
+        "field_sources": {
+          "title": {
+            "method": "pdf_metadata",
+            "pdf_page": null,
+            "excerpt": "ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT"
+          },
+          "authors": {
+            "method": "pdf_metadata",
+            "pdf_page": null,
+            "excerpt": "Omar Khattab and Matei Zaharia"
+          },
+          "year": {
+            "method": "document_date_candidate",
+            "pdf_page": 1,
+            "excerpt": "© 2020"
+          },
+          "source_url": {
+            "method": "document_identifier",
+            "pdf_page": null,
+            "excerpt": "arXiv:2004.12832v2"
+          },
+          "language": {
+            "method": "text_language_heuristic",
+            "pdf_page": null,
+            "excerpt": "前两页文字的中英文字符分布"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+          "年份为正文日期候选，请确认是否为正式出版年份。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 10,
+        "method": "local_pdf_metadata_and_text"
+      }
+    },
+    {
+      "file": "2107.05720.pdf",
+      "expected_metadata": {
+        "title": "SPLADE: Sparse Lexical and Expansion Model for First Stage Ranking",
+        "authors": [
+          "Formal, Thibault",
+          "Piwowarski, Benjamin",
+          "Clinchant, Stéphane"
+        ],
+        "year": 2021,
+        "topics": [
+          "arXiv实验"
+        ],
+        "language": "en",
+        "source_url": "https://arxiv.org/abs/2107.05720",
+        "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://creativecommons.org/licenses/by-nc-sa/4.0/"
+      },
+      "preview": {
+        "metadata": {
+          "title": "SPLADE: Sparse Lexical and Expansion Model for First Stage Ranking",
+          "authors": [
+            "Thibault Formal",
+            "Benjamin Piwowarski",
+            "Stéphane Clinchant"
+          ],
+          "year": 2021,
+          "language": "en",
+          "source_url": "https://arxiv.org/abs/2107.05720"
+        },
+        "field_sources": {
+          "title": {
+            "method": "pdf_metadata",
+            "pdf_page": null,
+            "excerpt": "SPLADE: Sparse Lexical and Expansion Model for First Stage Ranking"
+          },
+          "authors": {
+            "method": "first_page_text",
+            "pdf_page": 1,
+            "excerpt": "Thibault Formal Benjamin Piwowarski Stéphane Clinchant"
+          },
+          "year": {
+            "method": "document_date_candidate",
+            "pdf_page": 1,
+            "excerpt": "© 2021"
+          },
+          "source_url": {
+            "method": "document_identifier",
+            "pdf_page": null,
+            "excerpt": "arXiv:2107.05720v1"
+          },
+          "language": {
+            "method": "text_language_heuristic",
+            "pdf_page": null,
+            "excerpt": "前两页文字的中英文字符分布"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+          "年份为正文日期候选，请确认是否为正式出版年份。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 5,
+        "method": "local_pdf_metadata_and_text"
+      }
+    },
+    {
+      "file": "2112.09118.pdf",
+      "expected_metadata": {
+        "title": "Unsupervised Dense Information Retrieval with Contrastive Learning",
+        "authors": [
+          "Izacard, Gautier",
+          "Caron, Mathilde",
+          "Hosseini, Lucas",
+          "Riedel, Sebastian",
+          "Bojanowski, Piotr",
+          "Joulin, Armand",
+          "Grave, Edouard"
+        ],
+        "year": 2021,
+        "topics": [
+          "arXiv实验"
+        ],
+        "language": "en",
+        "source_url": "https://arxiv.org/abs/2112.09118",
+        "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://creativecommons.org/licenses/by/4.0/"
+      },
+      "preview": {
+        "metadata": {
+          "title": "Unsupervised Dense Information Retrieval with Contrastive Learning",
+          "authors": [
+            "Gautier Izacard",
+            "Mathilde Caron",
+            "Lucas Hosseini",
+            "Sebastian Riedel",
+            "Piotr Bojanowski",
+            "Armand Joulin",
+            "Edouard Grave"
+          ],
+          "year": null,
+          "language": "en",
+          "source_url": "https://arxiv.org/abs/2112.09118"
+        },
+        "field_sources": {
+          "title": {
+            "method": "first_page_layout",
+            "pdf_page": 1,
+            "excerpt": "Unsupervised Dense Information Retrieval with Contrastive Learning"
+          },
+          "authors": {
+            "method": "first_page_text",
+            "pdf_page": 1,
+            "excerpt": "Gautier Izacard ♦ , ♣ , ♥ Mathilde Caron ♦ , ♥ , ♠ Lucas Hosseini ♦ Sebastian Riedel ♦ , △ Piotr Bojanowski ♦ Armand Joulin ♦ Edouard Grave ♦"
+          },
+          "source_url": {
+            "method": "document_identifier",
+            "pdf_page": null,
+            "excerpt": "arXiv:2112.09118v4"
+          },
+          "language": {
+            "method": "text_language_heuristic",
+            "pdf_page": null,
+            "excerpt": "前两页文字的中英文字符分布"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 21,
+        "method": "local_pdf_metadata_and_text"
+      }
+    },
+    {
+      "file": "1908.10084.pdf",
+      "expected_metadata": {
+        "title": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks",
+        "authors": [
+          "Reimers, Nils",
+          "Gurevych, Iryna"
+        ],
+        "year": 2019,
+        "topics": [
+          "arXiv实验"
+        ],
+        "language": "en",
+        "source_url": "https://arxiv.org/abs/1908.10084",
+        "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "preview": {
+        "metadata": {
+          "title": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks",
+          "authors": [
+            "Nils Reimers",
+            "Iryna Gurevych"
+          ],
+          "year": null,
+          "language": "en",
+          "source_url": "https://arxiv.org/abs/1908.10084"
+        },
+        "field_sources": {
+          "title": {
+            "method": "first_page_layout",
+            "pdf_page": 1,
+            "excerpt": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks"
+          },
+          "authors": {
+            "method": "first_page_text",
+            "pdf_page": 1,
+            "excerpt": "Nils Reimers and Iryna Gurevych"
+          },
+          "source_url": {
+            "method": "document_identifier",
+            "pdf_page": null,
+            "excerpt": "arXiv:1908.10084v1"
+          },
+          "language": {
+            "method": "text_language_heuristic",
+            "pdf_page": null,
+            "excerpt": "前两页文字的中英文字符分布"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 11,
+        "method": "local_pdf_metadata_and_text"
+      }
+    },
+    {
+      "file": "2210.07316.pdf",
+      "expected_metadata": {
+        "title": "MTEB: Massive Text Embedding Benchmark",
+        "authors": [
+          "Muennighoff, Niklas",
+          "Tazi, Nouamane",
+          "Magne, Loïc",
+          "Reimers, Nils"
+        ],
+        "year": 2022,
+        "topics": [
+          "arXiv实验"
+        ],
+        "language": "en",
+        "source_url": "https://arxiv.org/abs/2210.07316",
+        "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+      },
+      "preview": {
+        "metadata": {
+          "title": "MTEB: Massive Text Embedding Benchmark",
+          "authors": [
+            "Niklas Muennighoff",
+            "Nouamane Tazi",
+            "Loïc Magne",
+            "Nils Reimers"
+          ],
+          "year": null,
+          "language": "en",
+          "source_url": "https://arxiv.org/abs/2210.07316"
+        },
+        "field_sources": {
+          "title": {
+            "method": "first_page_layout",
+            "pdf_page": 1,
+            "excerpt": "MTEB: Massive Text Embedding Benchmark"
+          },
+          "authors": {
+            "method": "first_page_text",
+            "pdf_page": 1,
+            "excerpt": "Niklas Muennighoff 1 , Nouamane Tazi 1 , Loïc Magne 1 , Nils Reimers 2 *"
+          },
+          "source_url": {
+            "method": "document_identifier",
+            "pdf_page": null,
+            "excerpt": "arXiv:2210.07316v3"
+          },
+          "language": {
+            "method": "text_language_heuristic",
+            "pdf_page": null,
+            "excerpt": "前两页文字的中英文字符分布"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 24,
+        "method": "local_pdf_metadata_and_text"
+      }
+    },
+    {
+      "file": "2212.10496.pdf",
+      "expected_metadata": {
+        "title": "Precise Zero-Shot Dense Retrieval without Relevance Labels",
+        "authors": [
+          "Gao, Luyu",
+          "Ma, Xueguang",
+          "Lin, Jimmy",
+          "Callan, Jamie"
+        ],
+        "year": 2022,
+        "topics": [
+          "arXiv实验"
+        ],
+        "language": "en",
+        "source_url": "https://arxiv.org/abs/2212.10496",
+        "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+      },
+      "preview": {
+        "metadata": {
+          "title": "Precise Zero-Shot Dense Retrieval without Relevance Labels",
+          "authors": [
+            "Luyu Gao",
+            "Xueguang Ma",
+            "Jimmy Lin",
+            "Jamie Callan"
+          ],
+          "year": null,
+          "language": "en",
+          "source_url": "https://arxiv.org/abs/2212.10496"
+        },
+        "field_sources": {
+          "title": {
+            "method": "first_page_layout",
+            "pdf_page": 1,
+            "excerpt": "Precise Zero-Shot Dense Retrieval without Relevance Labels"
+          },
+          "authors": {
+            "method": "first_page_text",
+            "pdf_page": 1,
+            "excerpt": "Luyu Gao ∗ † Xueguang Ma ∗‡ Jimmy Lin ‡ Jamie Callan †"
+          },
+          "source_url": {
+            "method": "document_identifier",
+            "pdf_page": null,
+            "excerpt": "arXiv:2212.10496v1"
+          },
+          "language": {
+            "method": "text_language_heuristic",
+            "pdf_page": null,
+            "excerpt": "前两页文字的中英文字符分布"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 11,
+        "method": "local_pdf_metadata_and_text"
+      }
+    },
+    {
+      "file": "2307.03172.pdf",
+      "expected_metadata": {
+        "title": "Lost in the Middle: How Language Models Use Long Contexts",
+        "authors": [
+          "Liu, Nelson F.",
+          "Lin, Kevin",
+          "Hewitt, John",
+          "Paranjape, Ashwin",
+          "Bevilacqua, Michele",
+          "Petroni, Fabio",
+          "Liang, Percy"
+        ],
+        "year": 2023,
+        "topics": [
+          "arXiv实验"
+        ],
+        "language": "en",
+        "source_url": "https://arxiv.org/abs/2307.03172",
+        "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+      },
+      "preview": {
+        "metadata": {
+          "title": "Lost in the Middle: How Language Models Use Long Contexts",
+          "authors": [
+            "Nelson F. Liu",
+            "Kevin Lin",
+            "John Hewitt",
+            "Ashwin Paranjape",
+            "Michele Bevilacqua",
+            "Fabio Petroni",
+            "Percy Liang"
+          ],
+          "year": null,
+          "language": "en",
+          "source_url": "https://arxiv.org/abs/2307.03172"
+        },
+        "field_sources": {
+          "title": {
+            "method": "first_page_layout",
+            "pdf_page": 1,
+            "excerpt": "Lost in the Middle: How Language Models Use Long Contexts"
+          },
+          "authors": {
+            "method": "first_page_text",
+            "pdf_page": 1,
+            "excerpt": "Nelson F. Liu 1 ∗ Kevin Lin 2 John Hewitt 1 Ashwin Paranjape 3 Michele Bevilacqua 3 Fabio Petroni 3 Percy Liang 1"
+          },
+          "source_url": {
+            "method": "document_identifier",
+            "pdf_page": null,
+            "excerpt": "arXiv:2307.03172v3"
+          },
+          "language": {
+            "method": "text_language_heuristic",
+            "pdf_page": null,
+            "excerpt": "前两页文字的中英文字符分布"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 18,
+        "method": "local_pdf_metadata_and_text"
+      }
+    }
+  ]
+}

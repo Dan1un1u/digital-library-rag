@@ -1,0 +1,278 @@
+[
+  {
+    "scenario": "answered",
+    "exit_code": 0,
+    "result": {
+      "mode": "mock",
+      "synthetic": true,
+      "response": {
+        "request_id": "q_8fe9cac61c67491596a97ae925cdc53f",
+        "status": "answered",
+        "query_plan": {
+          "original_query": "BM25 是什么？",
+          "intent": "explain",
+          "rewritten_query": "BM25 是什么？",
+          "keywords": [],
+          "needs_clarification": false,
+          "clarification_question": null,
+          "clarification_options": []
+        },
+        "claims": [
+          {
+            "claim_id": "cl_1",
+            "text": "演示资料将 BM25 描述为词法检索评分函数。",
+            "evidence_ids": [
+              "ev_1"
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "evidence_id": "ev_1",
+            "chunk_id": "c_demo_p0001_0001",
+            "doc_id": "d_demo",
+            "title": "Synthetic demo only",
+            "authors": [],
+            "year": null,
+            "pdf_page": 1,
+            "printed_page": null,
+            "quote": "Synthetic demo: BM25 is a lexical retrieval scoring function.",
+            "file_url": "/documents/d_demo/file#page=1"
+          }
+        ],
+        "related_documents": [
+          {
+            "doc_id": "d_demo",
+            "title": "Synthetic demo only"
+          }
+        ],
+        "limitations": [
+          "合成测试资料，不能用于语义效果成绩"
+        ],
+        "clarification_question": null,
+        "clarification_options": [],
+        "index_version": "idx_synthetic_demo",
+        "timings_ms": {
+          "planning": 0.071,
+          "retrieval": 0.055,
+          "generation": 0.045,
+          "total": 0.339
+        },
+        "error": null,
+        "diagnostics": {
+          "planning_enabled": true,
+          "multi_query": false,
+          "model_calls": 2,
+          "retrieval_calls": 1,
+          "selected_chunk_ids": [
+            "c_demo_p0001_0001"
+          ],
+          "selected_evidence": [
+            {
+              "chunk_id": "c_demo_p0001_0001",
+              "doc_id": "d_demo",
+              "pdf_page": 1,
+              "printed_page": null,
+              "section": null,
+              "text": "Synthetic demo: BM25 is a lexical retrieval scoring function.",
+              "page_char_start": 0,
+              "page_char_end": 61,
+              "token_count": null,
+              "char_count": 61,
+              "document": {
+                "title": "Synthetic demo only",
+                "authors": [],
+                "year": null,
+                "topics": [
+                  "IR"
+                ],
+                "language": "en"
+              }
+            }
+          ],
+          "planning_fallback": null,
+          "retrieval_fallback": false,
+          "budget_count_mode": "utf8_byte_upper_bound"
+        }
+      }
+    }
+  },
+  {
+    "scenario": "clarify",
+    "exit_code": 0,
+    "result": {
+      "mode": "mock",
+      "synthetic": true,
+      "response": {
+        "request_id": "q_011aedcc1be94a85b643da2b0fb148c2",
+        "status": "needs_clarification",
+        "query_plan": {
+          "original_query": "BM25 是什么？",
+          "intent": "clarify",
+          "rewritten_query": "BM25 是什么？",
+          "keywords": [],
+          "needs_clarification": true,
+          "clarification_question": "你希望了解检索方法，还是文献整理方法？",
+          "clarification_options": [
+            "检索方法",
+            "文献整理方法"
+          ]
+        },
+        "claims": [],
+        "evidence": [],
+        "related_documents": [],
+        "limitations": [],
+        "clarification_question": "你希望了解检索方法，还是文献整理方法？",
+        "clarification_options": [
+          "检索方法",
+          "文献整理方法"
+        ],
+        "index_version": null,
+        "timings_ms": {
+          "planning": 0.071,
+          "retrieval": 0,
+          "generation": 0,
+          "total": 0.124
+        },
+        "error": null,
+        "diagnostics": {
+          "planning_enabled": true,
+          "multi_query": false,
+          "model_calls": 1,
+          "retrieval_calls": 0,
+          "selected_chunk_ids": [],
+          "selected_evidence": [],
+          "planning_fallback": null,
+          "retrieval_fallback": false,
+          "budget_count_mode": "utf8_byte_upper_bound"
+        }
+      }
+    }
+  },
+  {
+    "scenario": "empty",
+    "exit_code": 0,
+    "result": {
+      "mode": "mock",
+      "synthetic": true,
+      "response": {
+        "request_id": "q_d4f0658f3e074db9bf8e0850c7016d10",
+        "status": "insufficient_evidence",
+        "query_plan": {
+          "original_query": "BM25 是什么？",
+          "intent": "explain",
+          "rewritten_query": "BM25 是什么？",
+          "keywords": [],
+          "needs_clarification": false,
+          "clarification_question": null,
+          "clarification_options": []
+        },
+        "claims": [],
+        "evidence": [],
+        "related_documents": [],
+        "limitations": [
+          "未检索到证据"
+        ],
+        "clarification_question": null,
+        "clarification_options": [],
+        "index_version": "idx_synthetic_demo",
+        "timings_ms": {
+          "planning": 0.067,
+          "retrieval": 0.013,
+          "generation": 0,
+          "total": 0.142
+        },
+        "error": null,
+        "diagnostics": {
+          "planning_enabled": true,
+          "multi_query": false,
+          "model_calls": 1,
+          "retrieval_calls": 1,
+          "selected_chunk_ids": [],
+          "selected_evidence": [],
+          "planning_fallback": null,
+          "retrieval_fallback": false,
+          "budget_count_mode": "utf8_byte_upper_bound"
+        }
+      }
+    }
+  },
+  {
+    "scenario": "invalid",
+    "exit_code": 1,
+    "result": {
+      "mode": "mock",
+      "synthetic": true,
+      "response": {
+        "request_id": "q_e80d3efda96d4617af5e5e786b205bcd",
+        "status": "error",
+        "query_plan": {
+          "original_query": "BM25 是什么？",
+          "intent": "explain",
+          "rewritten_query": "BM25 是什么？",
+          "keywords": [],
+          "needs_clarification": false,
+          "clarification_question": null,
+          "clarification_options": []
+        },
+        "claims": [],
+        "evidence": [],
+        "related_documents": [
+          {
+            "doc_id": "d_demo",
+            "title": "Synthetic demo only"
+          }
+        ],
+        "limitations": [],
+        "clarification_question": null,
+        "clarification_options": [],
+        "index_version": "idx_synthetic_demo",
+        "timings_ms": {
+          "planning": 0.064,
+          "retrieval": 0.047,
+          "generation": 0.09,
+          "total": 0.342
+        },
+        "error": {
+          "code": "OUTPUT_VALIDATION_FAILED",
+          "message": "生成输出在有限修复后仍不合规"
+        },
+        "diagnostics": {
+          "planning_enabled": true,
+          "multi_query": false,
+          "model_calls": 3,
+          "retrieval_calls": 1,
+          "selected_chunk_ids": [
+            "c_demo_p0001_0001"
+          ],
+          "selected_evidence": [
+            {
+              "chunk_id": "c_demo_p0001_0001",
+              "doc_id": "d_demo",
+              "pdf_page": 1,
+              "printed_page": null,
+              "section": null,
+              "text": "Synthetic demo: BM25 is a lexical retrieval scoring function.",
+              "page_char_start": 0,
+              "page_char_end": 61,
+              "token_count": null,
+              "char_count": 61,
+              "document": {
+                "title": "Synthetic demo only",
+                "authors": [],
+                "year": null,
+                "topics": [
+                  "IR"
+                ],
+                "language": "en"
+              }
+            }
+          ],
+          "planning_fallback": null,
+          "retrieval_fallback": false,
+          "budget_count_mode": "utf8_byte_upper_bound"
+        }
+      }
+    }
+  }
+]

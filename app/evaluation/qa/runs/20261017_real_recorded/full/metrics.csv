@@ -1,0 +1,2 @@
+﻿split,variant,count,reviewed_eligible_count,answered,errors,mean_total_ms,answer_point_score,citation_support_accuracy,citation_coverage,clarification_hit_rate,unanswerable_handling_rate,semantic_metrics_status
+dev,full,4,0,0,0,3334.505,,,,,,pending_human_review

@@ -1,0 +1,22 @@
+[
+  {
+    "model": "Qwen/Qwen2.5-32B-Instruct",
+    "status": "ok",
+    "elapsed_ms": 3367.66,
+    "usage": {
+      "prompt_tokens": 688,
+      "completion_tokens": 126,
+      "total_tokens": 814
+    }
+  },
+  {
+    "model": "Qwen/Qwen2.5-32B-Instruct",
+    "status": "ok",
+    "elapsed_ms": 5041.094,
+    "usage": {
+      "prompt_tokens": 644,
+      "completion_tokens": 209,
+      "total_tokens": 853
+    }
+  }
+]

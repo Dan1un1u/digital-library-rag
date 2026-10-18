@@ -1,0 +1,71 @@
+[
+  {
+    "run_dir": "evaluation\\qa\\runs\\20261017_real_grounded_32b",
+    "mode": "real",
+    "questions": 1,
+    "statuses": {
+      "answered": 1
+    },
+    "api_requests": 2,
+    "api_ok": 2,
+    "mean_ms": 8409.29
+  },
+  {
+    "run_dir": "evaluation\\qa\\runs\\20261017_real_recorded\\baseline",
+    "mode": "real",
+    "questions": 4,
+    "statuses": {
+      "insufficient_evidence": 4
+    },
+    "api_requests": 4,
+    "api_ok": 4,
+    "mean_ms": 975.238
+  },
+  {
+    "run_dir": "evaluation\\qa\\runs\\20261017_real_recorded\\full",
+    "mode": "real",
+    "questions": 4,
+    "statuses": {
+      "insufficient_evidence": 2,
+      "needs_clarification": 2
+    },
+    "api_requests": 6,
+    "api_ok": 6,
+    "mean_ms": 3334.505
+  },
+  {
+    "run_dir": "evaluation\\qa\\runs\\20261017_real_recorded_32b\\baseline",
+    "mode": "real",
+    "questions": 4,
+    "statuses": {
+      "answered": 1,
+      "insufficient_evidence": 3
+    },
+    "api_requests": 4,
+    "api_ok": 4,
+    "mean_ms": 2080.58
+  },
+  {
+    "run_dir": "evaluation\\qa\\runs\\20261017_real_recorded_32b\\full",
+    "mode": "real",
+    "questions": 4,
+    "statuses": {
+      "answered": 1,
+      "insufficient_evidence": 3
+    },
+    "api_requests": 8,
+    "api_ok": 8,
+    "mean_ms": 4752.305
+  },
+  {
+    "run_dir": "evaluation\\qa\\runs\\mock_contract",
+    "mode": "mock",
+    "questions": 1,
+    "statuses": {
+      "answered": 1
+    },
+    "api_requests": 0,
+    "api_ok": 0,
+    "mean_ms": 0.38
+  }
+]

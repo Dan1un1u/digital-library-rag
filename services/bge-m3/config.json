@@ -1,0 +1,13 @@
+{
+  "model_name": "BAAI/bge-m3",
+  "model_dir": "models/bge-m3-fp16",
+  "host": "127.0.0.1",
+  "port": 18080,
+  "device": "cuda:0",
+  "dtype": "float16",
+  "batch_size": 4,
+  "max_batch_tokens": 4096,
+  "max_input_tokens": 8192,
+  "max_inputs": 64,
+  "normalize_embeddings": true
+}

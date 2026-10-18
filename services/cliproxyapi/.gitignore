@@ -1,0 +1,7 @@
+/auth/
+/config.yaml
+/logs/
+/runtime/
+/cache/
+/bin/
+/evidence/oauth-consent.png

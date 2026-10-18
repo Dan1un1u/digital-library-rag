@@ -1,0 +1,2 @@
+﻿question_id,split,variant,request_id,claim_id,evidence_id,claim_text,quote,support,point_score,point_max,coverage,factual_issue,reviewer,notes
+mock_contract_001,dev,full,q_93540502fb5c487987d7d060771b65c8,cl_1,ev_1,演示资料将 BM25 描述为词法检索评分函数。,Synthetic demo: BM25 is a lexical retrieval scoring function.,,,,,,,

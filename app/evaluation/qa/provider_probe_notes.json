@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-17",
+  "scope": "Additional debugging probes, excluded from saved evaluation quality metrics",
+  "observations": [
+    {"model": "Qwen/Qwen2.5-7B-Instruct", "operation": "query_planning", "result": "JSON returned; intent=find with needs_clarification=true contradicted the schema; correctly rejected"},
+    {"model": "Qwen/Qwen2.5-32B-Instruct", "operation": "query_planning", "result": "MODEL_UNAVAILABLE; probe terminated without mock fallback", "http_status": null}
+  ],
+  "note": "No credentials, upstream error body or invented latency recorded. HTTP status was not retained by the adapter."
+}

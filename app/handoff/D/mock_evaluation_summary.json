@@ -1,0 +1,75 @@
+{
+  "mode": "mock",
+  "real_experiment": false,
+  "by_split": {
+    "dev": {
+      "total": 36,
+      "failures": 0,
+      "timings": {
+        "sample_count": 36,
+        "median_ms": 0.7003500068094581,
+        "p95_ms": 1.1826999834738672
+      },
+      "missing_reference_evidence": 21,
+      "metrics": {
+        "hit_at_5": {
+          "value": null,
+          "denominator": 0
+        },
+        "recall_at_5": {
+          "value": null,
+          "denominator": 0
+        },
+        "recall_at_10": {
+          "value": null,
+          "denominator": 0
+        },
+        "evidence_group_coverage": {
+          "value": null,
+          "denominator": 0
+        }
+      },
+      "expected_status_match": {
+        "value": null,
+        "denominator": 0
+      },
+      "human_semantic_metrics": null
+    },
+    "test": {
+      "total": 9,
+      "failures": 0,
+      "timings": {
+        "sample_count": 9,
+        "median_ms": 0.6791999912820756,
+        "p95_ms": 0.7479999912902713
+      },
+      "missing_reference_evidence": 9,
+      "metrics": {
+        "hit_at_5": {
+          "value": null,
+          "denominator": 0
+        },
+        "recall_at_5": {
+          "value": null,
+          "denominator": 0
+        },
+        "recall_at_10": {
+          "value": null,
+          "denominator": 0
+        },
+        "evidence_group_coverage": {
+          "value": null,
+          "denominator": 0
+        }
+      },
+      "expected_status_match": {
+        "value": null,
+        "denominator": 0
+      },
+      "human_semantic_metrics": null
+    }
+  },
+  "empty_dataset": false,
+  "human_metrics_status": "未评估",
+  "mock_scores_excluded": true
+}

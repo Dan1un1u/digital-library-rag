@@ -1,0 +1,12 @@
+{
+  "python": "3.12.3",
+  "dependencies": {
+    "numpy": "1.26.4",
+    "requests": "2.34.2",
+    "pytest": "8.3.4"
+  },
+  "command": "PYTHONPATH=src:../lib_management_A/src PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 ../.venv-a-review/bin/python -m pytest tests/retrieval ../lib_management_A/tests/ingestion -q -p no:cacheprovider",
+  "exit_code": 0,
+  "stdout": "........................................................................ [ 67%]\n...................................                                      [100%]\n107 passed in 2.51s\n",
+  "stderr": ""
+}

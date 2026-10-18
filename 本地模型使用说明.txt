@@ -1,0 +1,58 @@
+图书馆本地模型接入
+
+界面：http://127.0.0.1:18501/
+后端：http://127.0.0.1:18000/
+当前配置：real 真实模式。
+
+功能与模型：
+1. 文献向量与查询向量：本机 BGE-M3 FP16，1024 维。
+2. 根据馆藏证据生成回答：gpt-6-luna，通过本机 CLIProxyAPI。
+3. 相关性重排、支持句定位、要点关联：gpt-6-luna 的结构化相关性判断。
+4. PDF 前两页的标题、作者、年份等候选识别：gpt-6-luna 图像与文字输入。
+Luna 是云端推理；代理和 BGE 在本机运行。
+
+启动：
+PowerShell 进入本目录，运行 ./Start-Library.ps1 -Mode real。
+它会依次确认 CLIProxyAPI、本地 BGE 和图书馆后端、界面就绪。
+重启 Windows 或终止 WSL 后，请重新运行该脚本；未设置开机自启。
+状态：./Status-Library.ps1 -Mode real。
+停止图书馆：./Stop-Library.ps1 -Mode real。
+独立代理与 BGE 可分别使用以下脚本停止：
+D:/cliproxyapi-local/Stop-CLIProxyAPI.ps1
+D:/bge-m3-local/Stop-BGE.ps1
+
+文献索引：
+已用本机 BGE 为现有 14 篇文献、935 个片段统一重建索引。
+索引身份记录模型修订、FP16、CLS 及归一化口径；与旧云端/模拟向量不混用。
+重建为原子切换，原有索引快照保留。修改前源码、配置和数据库另有备份：
+evidence/before_local_models_20261018/。
+原始 D:/lib_management_v1/ 项目未修改。
+
+验证：
+./Run-Tests.ps1：离线自动测试，不调用真实 Luna。
+本次完整自动测试 330 项通过。
+真实接入检查：scripts/verify_local_integration.py，需本目录 .venv 的 Python。
+本次真实检查 16 项通过，包含 BGE 向量/混合检索、Luna JSON 生成、
+LLM 重排、无内嵌文字的扫描 PDF 识别、异步问答、双语检索、
+句子引用、要点覆盖、原文页面访问及公开响应的密钥泄漏检查。
+该真实检查会使用订阅额度，并将合成扫描 PDF 写入 evidence/，不会入库。
+
+测试记录：
+reports/pytest_summary.json
+reports/local_bge_index.json
+reports/local_models_integration.json
+reports/本地模型接入报告.txt
+
+重排说明：
+这里使用 Luna 生成逐候选相关性分数，属于 LLM 重排，分数不是校准概率。
+它提供重排功能，但不能直接视为专用 Qwen Reranker 的等价性能。
+支持批量判断和有界缓存，减少回答中的句子定位、要点关联调用次数。
+报告将额外重排调用数单独记录为 rerank_model_calls。
+本次检查是接入验证，不代替正式检索质量、准确率和响应时间评测。
+
+凭证：
+本机代理口令保存在 app/.env 与 D:/cliproxyapi-local/config.yaml。
+OAuth 凭证仅在 D:/cliproxyapi-local/auth/；没有将其写入图书馆配置。
+配置和凭证不要公开、提交版本库或录入演示视频。
+登录失效时运行 D:/cliproxyapi-local/Login-CLIProxyAPI.ps1。
+上游网络或服务临时失败时，界面会显示真实错误或已有的明确降级提示。

@@ -1,0 +1,20 @@
+{
+  "source": "evaluation\\retrieval\\arxiv_trial\\runs.jsonl",
+  "source_sha256": "0fd1e6484e09b71fdd1356210e8931b600e58b33069cf746faeddd4092287e25",
+  "mode": "real_llm_recorded_retrieval",
+  "live_retrieval": false,
+  "uploaded_content": "each question and selected recorded text chunks only",
+  "quality_metrics": "not_scored_pending_human_review",
+  "model_config": {
+    "mode": "real",
+    "provider": "siliconflow",
+    "model": "Qwen/Qwen2.5-7B-Instruct",
+    "base_url": "https://api.siliconflow.cn/v1",
+    "timeout_seconds": 60.0,
+    "max_output_tokens": 1000,
+    "context_window_tokens": 32768,
+    "retries": 0,
+    "budget_count_mode": "utf8_byte_upper_bound",
+    "revision_pinned": false
+  }
+}

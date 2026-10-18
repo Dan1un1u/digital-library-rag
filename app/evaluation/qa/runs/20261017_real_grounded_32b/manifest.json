@@ -1,0 +1,30 @@
+{
+  "created_at": "2026-10-16T16:41:12.180145+00:00",
+  "count": 1,
+  "variant": "full",
+  "model_config": {
+    "mode": "real",
+    "provider": "siliconflow",
+    "model": "Qwen/Qwen2.5-32B-Instruct",
+    "base_url": "https://api.siliconflow.cn/v1",
+    "timeout_seconds": 60.0,
+    "max_output_tokens": 1000,
+    "context_window_tokens": 32768,
+    "retries": 0,
+    "budget_count_mode": "utf8_byte_upper_bound",
+    "revision_pinned": false
+  },
+  "settings": {
+    "planning_enabled": true,
+    "retrieval_mode": "hybrid",
+    "retrieval_top_k": 20,
+    "max_evidence_chunks": 6,
+    "context_budget_tokens": 6000,
+    "max_output_tokens": 1000,
+    "max_answer_repairs": 1,
+    "context_window_tokens": 32768,
+    "corpus_scope": "数字图书馆、信息检索与知识组织主题馆藏；具体资料以检索证据为准"
+  },
+  "dataset_sha256": "0217270fbc7fcdfa09eeae92fc8c25476bbabb62e7ffec0c9ab1a1af86379549",
+  "semantic_metrics_status": "pending_human_review"
+}

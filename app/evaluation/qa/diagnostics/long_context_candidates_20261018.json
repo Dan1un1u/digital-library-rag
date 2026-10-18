@@ -1,0 +1,971 @@
+{
+  "hits": [
+    {
+      "rank": 1,
+      "chunk": {
+        "chunk_id": "c_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1_p0012_0001",
+        "doc_id": "d_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1",
+        "pdf_page": 12,
+        "printed_page": null,
+        "section": null,
+        "text": "for open domain question answering. In Proc. of EACL.\n\nBennet B. Murdock Jr. 1962. The serial position effect of free recall. Journal of experimental psychology, 64(5):482.\n\nNikhil Kandpal, Haikang Deng, Adam Roberts, Eric Wallace, and Colin Raffel. 2022. Large lan- guage models struggle to learn long-tail knowl- edge. ArXiv:2211.08411.\n\nJoe O’Connor and Jacob Andreas. 2021. What con- text features can Transformer language models use? In Proc. of ACL.\n\nUrvashi Khandelwal, He He, Peng Qi, and Dan Jurafsky. 2018. Sharp nearby, fuzzy far away: How neural language models use context. In Proc. of ACL.\n\nDimitris Papailiopoulos, Kangwook Lee, and Jy- yong Sohn. 2023. A little retrieval test for large language models. https://github.com/ anadim/the-little-retrieval-test.\n\nBo Peng. 2023. RWKV-LM. https://github. com/BlinkDL/RWKV-LM.\n\nKalpesh Krishna, Yapei Chang, John Wieting, and Mohit Iyyer. 2022. RankGen: Improving text generation with large ranking models. In Proc. of EMNLP.\n\nHao Peng, Nikolaos Pappas, Dani Yogatama, Roy Schwartz, Noah Smith, and Lingpeng Kong. 2021. Random feature attention. In Proc. of ICLR.\n\n",
+        "page_char_start": 0,
+        "page_char_end": 1124,
+        "token_count": null,
+        "char_count": 1124,
+        "document": {
+          "title": "Lost in the Middle: How Language Models Use Long Contexts",
+          "authors": [
+            "Liu, Nelson F.",
+            "Lin, Kevin",
+            "Hewitt, John",
+            "Paranjape, Ashwin",
+            "Bevilacqua, Michele",
+            "Petroni, Fabio",
+            "Liang, Percy"
+          ],
+          "year": 2023,
+          "topics": [
+            "arXiv实验"
+          ],
+          "language": "en"
+        },
+        "chunk_order": 1
+      },
+      "scores": {
+        "bm25": null,
+        "cosine": 0.6180531557131158,
+        "rrf": 0.01639344262295082,
+        "rerank": null
+      },
+      "matched_by": [
+        "vector"
+      ],
+      "index_version": "idx_20261018T031210_902fa85488c3"
+    },
+    {
+      "rank": 2,
+      "chunk": {
+        "chunk_id": "c_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1_p0010_0001",
+        "doc_id": "d_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1",
+        "pdf_page": 10,
+        "printed_page": null,
+        "section": null,
+        "text": "90\n\n80\n\n70\n\nMetric\n\n60\n\n50\n\n5 10 20 30 40 50 Number of Retrieved Docs\n\ncrafted IO-aware CUDA kernel. Separately, there are attempts to do away with attention entirely to remove quadratic sequence length complexity, of- ten through convolution and/or linear RNNs, e.g., in RWKV (Peng, 2023), S4 (Gu et al., 2022), or Hyena (Poli et al., 2023). Many prior efforts evalu- ate perplexity on a diverse web corpus as a proxy for the ability to process long contexts; this work shows that precise knowledge access on long con- texts may be an added challenge.\n\n6.2 How Do Language Models Use Context?\n\nmpt-30b-instruct longchat-13b-16k contriever recall\n\nclaude-1.3 claude-1.3-100k gpt-3.5-turbo-0613 gpt-3.5-turbo-16k-0613\n\nFigure 11: Retriever recall and model performance as a function of the number of retrieved documents. Model performance saturates long before retriever recall, indi- cating that the models have difficulty making use of the extra retrieved documents.\n\n",
+        "page_char_start": 0,
+        "page_char_end": 969,
+        "token_count": null,
+        "char_count": 969,
+        "document": {
+          "title": "Lost in the Middle: How Language Models Use Long Contexts",
+          "authors": [
+            "Liu, Nelson F.",
+            "Lin, Kevin",
+            "Hewitt, John",
+            "Paranjape, Ashwin",
+            "Bevilacqua, Michele",
+            "Petroni, Fabio",
+            "Liang, Percy"
+          ],
+          "year": 2023,
+          "topics": [
+            "arXiv实验"
+          ],
+          "language": "en"
+        },
+        "chunk_order": 1
+      },
+      "scores": {
+        "bm25": null,
+        "cosine": 0.6154302771820184,
+        "rrf": 0.016129032258064516,
+        "rerank": null
+      },
+      "matched_by": [
+        "vector"
+      ],
+      "index_version": "idx_20261018T031210_902fa85488c3"
+    },
+    {
+      "rank": 3,
+      "chunk": {
+        "chunk_id": "c_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1_p0012_0003",
+        "doc_id": "d_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1",
+        "pdf_page": 12,
+        "printed_page": null,
+        "section": null,
+        "text": "Mina Lee, Percy Liang, and Qian Yang. 2022. CoAuthor: Designing a human-AI collaborative writing dataset for exploring language model ca- pabilities. In Proc. of CHI.\n\nOfir Press, Noah A. Smith, and Mike Lewis. 2022. Train short, test long: Attention with linear bi- ases enables input length extrapolation. In Proc. of ICLR.\n\nDacheng Li, Rulin Shao, Anze Xie, Ying Sheng, Lianmin Zheng, Joseph E. Gonzalez, Ion Stoica, Xuezhe Ma, , and Hao Zhang. 2023. How long can open-source LLMs truly promise on context length?\n\nGuanghui Qin, Yukun Feng, and Benjamin Van Durme. 2023. The NLP task effectiveness of long-range transformers. In Proc. of EACL.\n\nAlex Mallen, Akari Asai, Victor Zhong, Rajarshi Das, Daniel Khashabi, and Hannaneh Hajishirzi. 2023. When not to trust language models: In- vestigating effectiveness of parametric and non- parametric memories. In Proc. of ACL.\n\nSewon Min, Julian Michael, Hannaneh Hajishirzi, and Luke Zettlemoyer. 2020. AmbigQA: An- swering ambiguous open-domain questions. In Proc. of EMNLP.\n\n",
+        "page_char_start": 2263,
+        "page_char_end": 3289,
+        "token_count": null,
+        "char_count": 1026,
+        "document": {
+          "title": "Lost in the Middle: How Language Models Use Long Contexts",
+          "authors": [
+            "Liu, Nelson F.",
+            "Lin, Kevin",
+            "Hewitt, John",
+            "Paranjape, Ashwin",
+            "Bevilacqua, Michele",
+            "Petroni, Fabio",
+            "Liang, Percy"
+          ],
+          "year": 2023,
+          "topics": [
+            "arXiv实验"
+          ],
+          "language": "en"
+        },
+        "chunk_order": 3
+      },
+      "scores": {
+        "bm25": null,
+        "cosine": 0.6112812999912385,
+        "rrf": 0.015873015873015872,
+        "rerank": null
+      },
+      "matched_by": [
+        "vector"
+      ],
+      "index_version": "idx_20261018T031210_902fa85488c3"
+    },
+    {
+      "rank": 4,
+      "chunk": {
+        "chunk_id": "c_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1_p0001_0005",
+        "doc_id": "d_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1",
+        "pdf_page": 1,
+        "printed_page": null,
+        "section": null,
+        "text": "Handling these use-cases requires language mod- els to successfully operate over long sequences. Ex- isting language models are generally implemented with Transformers (Vaswani et al., 2017), which re- quire memory and compute that increases quadrat- ically in sequence length. As a result, Trans- former language models were often trained with relatively small context windows (between 512- 2048 tokens). Recent improvements in hardware (e.g., faster GPUs with more memory) and algo- rithms (Dai et al., 2019; Dao et al., 2022; Poli et al.,",
+        "page_char_start": 3001,
+        "page_char_end": 3542,
+        "token_count": null,
+        "char_count": 541,
+        "document": {
+          "title": "Lost in the Middle: How Language Models Use Long Contexts",
+          "authors": [
+            "Liu, Nelson F.",
+            "Lin, Kevin",
+            "Hewitt, John",
+            "Paranjape, Ashwin",
+            "Bevilacqua, Michele",
+            "Petroni, Fabio",
+            "Liang, Percy"
+          ],
+          "year": 2023,
+          "topics": [
+            "arXiv实验"
+          ],
+          "language": "en"
+        },
+        "chunk_order": 5
+      },
+      "scores": {
+        "bm25": null,
+        "cosine": 0.610773545585229,
+        "rrf": 0.015625,
+        "rerank": null
+      },
+      "matched_by": [
+        "vector"
+      ],
+      "index_version": "idx_20261018T031210_902fa85488c3"
+    },
+    {
+      "rank": 5,
+      "chunk": {
+        "chunk_id": "c_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1_p0002_0001",
+        "doc_id": "d_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1",
+        "pdf_page": 2,
+        "printed_page": null,
+        "section": null,
+        "text": "2023; Rubin and Berant, 2023, inter alia) have resulted in language models with larger context windows (e.g., 4096, 32K, and even 100K tokens), but it remains unclear how these extended-context language models make use of their input contexts when performing downstream tasks.\n\nWe empirically investigate this question via controlled experiments with a variety of state-of- the-art open (MPT-30B-Instruct, LongChat-13B (16K)) and closed (OpenAI’s GPT-3.5-Turbo and Anthropic’s Claude-1.3) language models in set- tings that require accessing and using information within an input context. In particular, our experi- ments make controlled changes to the input context size and the position of the relevant information within the input context and study their effects on language model performance. If language models can robustly use information within long input con- texts, then their performance should be minimally affected by the position of the relevant information in the input context.\n\n",
+        "page_char_start": 0,
+        "page_char_end": 994,
+        "token_count": null,
+        "char_count": 994,
+        "document": {
+          "title": "Lost in the Middle: How Language Models Use Long Contexts",
+          "authors": [
+            "Liu, Nelson F.",
+            "Lin, Kevin",
+            "Hewitt, John",
+            "Paranjape, Ashwin",
+            "Bevilacqua, Michele",
+            "Petroni, Fabio",
+            "Liang, Percy"
+          ],
+          "year": 2023,
+          "topics": [
+            "arXiv实验"
+          ],
+          "language": "en"
+        },
+        "chunk_order": 1
+      },
+      "scores": {
+        "bm25": null,
+        "cosine": 0.609792923060739,
+        "rrf": 0.015384615384615385,
+        "rerank": null
+      },
+      "matched_by": [
+        "vector"
+      ],
+      "index_version": "idx_20261018T031210_902fa85488c3"
+    },
+    {
+      "rank": 6,
+      "chunk": {
+        "chunk_id": "c_dc0ae3c5584ed146beee122e6a9ad9c48547dde048d53e9be8435d8f1d354531_p0001_0005",
+        "doc_id": "d_dc0ae3c5584ed146beee122e6a9ad9c48547dde048d53e9be8435d8f1d354531",
+        "pdf_page": 1,
+        "printed_page": null,
+        "section": null,
+        "text": "At the token level, generative large language models (LLM) pre- trained on large corpus have demonstrated strong natural language understanding (NLU) and gen- eration (NLG) capabilities (Brown et al., 2020; Chen et al., 2021; Rae et al., 2021; Hoffmann et al., 2022; Thoppilan et al., 2022; Chowdhery et al., 2022). At the document level, text (chunk) encoders pre-trained with contrastive objectives learn to encode document-document similarity into inner-product (Izacard et al., 2021; Gao and Callan, 2022). On top of these, one extra insight into LLM is borrowed: the LLMs further trained to follow instructions can zero-shot generalize to diverse un- seen instructions (Ouyang et al., 2022; Sanh et al., 2022; Min et al., 2022; Wei et al., 2022). Ouyang et al. (2022) show that with a small amount of data, GPT-3 (Brown et al., 2020) models can be aligned",
+        "page_char_start": 3413,
+        "page_char_end": 4273,
+        "token_count": null,
+        "char_count": 860,
+        "document": {
+          "title": "Precise Zero-Shot Dense Retrieval without Relevance Labels",
+          "authors": [
+            "Gao, Luyu",
+            "Ma, Xueguang",
+            "Lin, Jimmy",
+            "Callan, Jamie"
+          ],
+          "year": 2022,
+          "topics": [
+            "arXiv实验"
+          ],
+          "language": "en"
+        },
+        "chunk_order": 5
+      },
+      "scores": {
+        "bm25": null,
+        "cosine": 0.6004031205442759,
+        "rrf": 0.015151515151515152,
+        "rerank": null
+      },
+      "matched_by": [
+        "vector"
+      ],
+      "index_version": "idx_20261018T031210_902fa85488c3"
+    },
+    {
+      "rank": 7,
+      "chunk": {
+        "chunk_id": "c_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1_p0004_0004",
+        "doc_id": "d_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1",
+        "pdf_page": 4,
+        "printed_page": null,
+        "section": null,
+        "text": "Open models. We experiment with MPT-30B- Instruct, which has a maximum context length of 8192 tokens. The model was initially pre-trained on 1 trillion tokens using 2048-token sequences, followed by an additional sequence length adapta- tion pre-training phase on 50 billion tokens using 8192-token sequences. MPT-30B-Instruct uses AL- iBi (Press et al., 2022) to represent positional infor- mation. We also evaluate LongChat-13B (16K) (Li et al., 2023), which extends the LLaMA-13B (Tou- vron et al., 2023a) context window from 2048 to 16384 tokens by using condensed rotary positional embeddings before fine-tuning with 16384-token sequences.\n\nWe analyze several state-of-the-art open and closed language models. We use greedy decoding when generating outputs and leave exploration of other decoding methods to future work. We use a stan- dard set of prompts for each model (Figure 2).\n\nClosed models. We use the OpenAI API to ex- periment with GPT-3.5-Turbo and GPT-3.5-Turbo",
+        "page_char_start": 2850,
+        "page_char_end": 3828,
+        "token_count": null,
+        "char_count": 978,
+        "document": {
+          "title": "Lost in the Middle: How Language Models Use Long Contexts",
+          "authors": [
+            "Liu, Nelson F.",
+            "Lin, Kevin",
+            "Hewitt, John",
+            "Paranjape, Ashwin",
+            "Bevilacqua, Michele",
+            "Petroni, Fabio",
+            "Liang, Percy"
+          ],
+          "year": 2023,
+          "topics": [
+            "arXiv实验"
+          ],
+          "language": "en"
+        },
+        "chunk_order": 4
+      },
+      "scores": {
+        "bm25": null,
+        "cosine": 0.5985171156662119,
+        "rrf": 0.014925373134328358,
+        "rerank": null
+      },
+      "matched_by": [
+        "vector"
+      ],
+      "index_version": "idx_20261018T031210_902fa85488c3"
+    },
+    {
+      "rank": 8,
+      "chunk": {
+        "chunk_id": "c_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1_p0011_0002",
+        "doc_id": "d_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1",
+        "pdf_page": 11,
+        "printed_page": null,
+        "section": null,
+        "text": "Michał Daniluk, Tim Rocktäschel, Johannes Welbl, and Sebastian Riedel. 2017. Frustratingly short attention spans in neural language modeling. In Proc. of ICLR.\n\nWe empirically study how language models use long input contexts via a series of controlled ex- periments. We show that language model perfor- mance degrades significantly when changing the position of relevant information, indicating that models struggle to robustly access and use infor- mation in long input contexts. In particular, per- formance is often lowest when models must use information in the middle of long input contexts. We conduct a preliminary investigation of the role of (i) model architecture, (ii) query-aware contextu- alization, and (iii) instruction fine-tuning to better understand how they affect how language models use context. Finally, we conclude with a practi- cal case study of open-domain question answering, finding that the performance of language model readers saturates far before retriever recall. Our results and analysis provide a better understanding of how language models use their input context and provides new evaluation protocols for future long-context models.\n\nAcknowledgments\n\n",
+        "page_char_start": 1131,
+        "page_char_end": 2320,
+        "token_count": null,
+        "char_count": 1189,
+        "document": {
+          "title": "Lost in the Middle: How Language Models Use Long Contexts",
+          "authors": [
+            "Liu, Nelson F.",
+            "Lin, Kevin",
+            "Hewitt, John",
+            "Paranjape, Ashwin",
+            "Bevilacqua, Michele",
+            "Petroni, Fabio",
+            "Liang, Percy"
+          ],
+          "year": 2023,
+          "topics": [
+            "arXiv实验"
+          ],
+          "language": "en"
+        },
+        "chunk_order": 2
+      },
+      "scores": {
+        "bm25": null,
+        "cosine": 0.5877615910284336,
+        "rrf": 0.014705882352941176,
+        "rerank": null
+      },
+      "matched_by": [
+        "vector"
+      ],
+      "index_version": "idx_20261018T031210_902fa85488c3"
+    },
+    {
+      "rank": 9,
+      "chunk": {
+        "chunk_id": "c_1925755aeb627123d1a63c66f02e5aa2432f7e92751a02bea7c8c3b6bbb6ec33_p0003_0002",
+        "doc_id": "d_1925755aeb627123d1a63c66f02e5aa2432f7e92751a02bea7c8c3b6bbb6ec33",
+        "pdf_page": 3,
+        "printed_page": null,
+        "section": null,
+        "text": "Retriever-based Lexical approaches suffer from the lexical gap [5]. To overcome this, earlier techniques proposed to improve lexical retrieval systems with neural networks. Sparse methods such as docT5query [48] identiﬁed document expansion terms using a sequence-to-sequence model that generated possible queries for which the given document would be relevant. DeepCT [11] on the other hand used a BERT [13] model to learn relevant term weights in a document and generated a pseudo-document representation. Both methods still rely on BM25 for the remaining parts. Similarly, SPARTA [79] learned token-level contextualized representations with BERT and converted the document into an efﬁcient inverse index. More recently, dense retrieval approaches were proposed. They are capable of capturing semantic matches and try to overcome the (potential) lexical gap. Dense retrievers map queries and documents in a shared, dense vector space [18]. This allowed the document representation to be pre-computed and indexed. A bi-encoder neural architecture based on pre-trained Transformers has shown strong performance for various open-domain question-answering tasks [19, 31, 35, 43]. ",
+        "page_char_start": 844,
+        "page_char_end": 2022,
+        "token_count": null,
+        "char_count": 1178,
+        "document": {
+          "title": "BEIR: A Heterogenous Benchmark for Zero-shot Evaluation of Information Retrieval Models",
+          "authors": [
+            "Thakur, Nandan",
+            "Reimers, Nils",
+            "Rücklé, Andreas",
+            "Srivastava, Abhishek",
+            "Gurevych, Iryna"
+          ],
+          "year": 2021,
+          "topics": [
+            "arXiv实验"
+          ],
+          "language": "en"
+        },
+        "chunk_order": 2
+      },
+      "scores": {
+        "bm25": null,
+        "cosine": 0.5862114670171663,
+        "rrf": 0.014492753623188406,
+        "rerank": null
+      },
+      "matched_by": [
+        "vector"
+      ],
+      "index_version": "idx_20261018T031210_902fa85488c3"
+    },
+    {
+      "rank": 10,
+      "chunk": {
+        "chunk_id": "c_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1_p0001_0001",
+        "doc_id": "d_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1",
+        "pdf_page": 1,
+        "printed_page": null,
+        "section": null,
+        "text": "Lost in the Middle: How Language Models Use Long Contexts\n\nNelson F. Liu1∗ Kevin Lin2 John Hewitt1 Ashwin Paranjape3\n\nMichele Bevilacqua3 Fabio Petroni3 Percy Liang1\n\n1Stanford University 2University of California, Berkeley 3Samaya AI nfliu@cs.stanford.edu\n\nAbstract\n\n20 Total Retrieved Documents (~4K tokens)\n\n75\n\n70\n\n65\n\nAccuracy\n\n60\n\n55\n\n1st 5th 10th 15th 20th Position of Document with the Answer\n\ngpt-3.5-turbo-0613 gpt-3.5-turbo-0613 (closed-book)\n\n",
+        "page_char_start": 0,
+        "page_char_end": 455,
+        "token_count": null,
+        "char_count": 455,
+        "document": {
+          "title": "Lost in the Middle: How Language Models Use Long Contexts",
+          "authors": [
+            "Liu, Nelson F.",
+            "Lin, Kevin",
+            "Hewitt, John",
+            "Paranjape, Ashwin",
+            "Bevilacqua, Michele",
+            "Petroni, Fabio",
+            "Liang, Percy"
+          ],
+          "year": 2023,
+          "topics": [
+            "arXiv实验"
+          ],
+          "language": "en"
+        },
+        "chunk_order": 1
+      },
+      "scores": {
+        "bm25": null,
+        "cosine": 0.5859689184770352,
+        "rrf": 0.014285714285714285,
+        "rerank": null
+      },
+      "matched_by": [
+        "vector"
+      ],
+      "index_version": "idx_20261018T031210_902fa85488c3"
+    },
+    {
+      "rank": 11,
+      "chunk": {
+        "chunk_id": "c_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1_p0001_0002",
+        "doc_id": "d_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1",
+        "pdf_page": 1,
+        "printed_page": null,
+        "section": null,
+        "text": "While recent language models have the abil- ity to take long contexts as input, relatively little is known about how well they use longer context. We analyze the performance of language models on two tasks that require identifying relevant information in their in- put contexts: multi-document question an- swering and key-value retrieval. We find that performance can degrade significantly when changing the position of relevant informa- tion, indicating that current language models do not robustly make use of information in long input contexts. In particular, we observe that performance is often highest when rele- vant information occurs at the beginning or end of the input context, and significantly degrades when models must access relevant information in the middle of long contexts, even for explicitly long-context models. Our analysis provides a better understanding of how language models use their input context and provides new evaluation protocols for future long-context language models.\n\n",
+        "page_char_start": 455,
+        "page_char_end": 1462,
+        "token_count": null,
+        "char_count": 1007,
+        "document": {
+          "title": "Lost in the Middle: How Language Models Use Long Contexts",
+          "authors": [
+            "Liu, Nelson F.",
+            "Lin, Kevin",
+            "Hewitt, John",
+            "Paranjape, Ashwin",
+            "Bevilacqua, Michele",
+            "Petroni, Fabio",
+            "Liang, Percy"
+          ],
+          "year": 2023,
+          "topics": [
+            "arXiv实验"
+          ],
+          "language": "en"
+        },
+        "chunk_order": 2
+      },
+      "scores": {
+        "bm25": null,
+        "cosine": 0.5853050575392986,
+        "rrf": 0.014084507042253521,
+        "rerank": null
+      },
+      "matched_by": [
+        "vector"
+      ],
+      "index_version": "idx_20261018T031210_902fa85488c3"
+    },
+    {
+      "rank": 12,
+      "chunk": {
+        "chunk_id": "c_7407131fd633561d8eab8701e43ca81061960b6642ae180eb86a3f367b2b8408_p0016_0001",
+        "doc_id": "d_7407131fd633561d8eab8701e43ca81061960b6642ae180eb86a3f367b2b8408",
+        "pdf_page": 16,
+        "printed_page": null,
+        "section": null,
+        "text": "Xueguang Ma, Kai Sun, Ronak Pradeep, and Jimmy Lin. A replication study of dense passage retriever, 2021. 7\n\nChristopher D Manning, Hinrich Schütze, and Prabhakar Raghavan. Introduction to information retrieval. Cambridge university press, 2008. 2\n\nYu Meng, Chenyan Xiong, Payal Bajaj, Saurabh Tiwary, Paul Bennett, Jiawei Han, and Xia Song. Coco-lm: Correcting and contrasting text sequences for language model pretraining. arXiv preprint arXiv:2102.08473, 2021. 3\n\nTomas Mikolov, Ilya Sutskever, Kai Chen, Greg S Corrado, and JeﬀDean. Distributed representations of words and phrases and their compositionality. In Advances in neural information processing systems, pp. 3111–3119, 2013. 3\n\nBhaskar Mitra, Nick Craswell, et al. An introduction to neural information retrieval. Foundations and Trends® in Information Retrieval, 13(1):1–126, 2018. 2\n\nTri Nguyen, Mir Rosenberg, Xia Song, Jianfeng Gao, Saurabh Tiwary, Rangan Majumder, and Li Deng. Ms marco: A human generated machine reading comprehension dataset. In CoCo@ NIPS, 2016. 1\n\nRodrigo Nogueira and Kyunghyun Cho. Passage re-ranking with bert. arXiv preprint arXiv:1901.04085, 2019. 2, 4\n\n",
+        "page_char_start": 0,
+        "page_char_end": 1149,
+        "token_count": null,
+        "char_count": 1149,
+        "document": {
+          "title": "Unsupervised Dense Information Retrieval with Contrastive Learning",
+          "authors": [
+            "Izacard, Gautier",
+            "Caron, Mathilde",
+            "Hosseini, Lucas",
+            "Riedel, Sebastian",
+            "Bojanowski, Piotr",
+            "Joulin, Armand",
+            "Grave, Edouard"
+          ],
+          "year": 2021,
+          "topics": [
+            "arXiv实验"
+          ],
+          "language": "en"
+        },
+        "chunk_order": 1
+      },
+      "scores": {
+        "bm25": null,
+        "cosine": 0.5825308023306337,
+        "rrf": 0.013888888888888888,
+        "rerank": null
+      },
+      "matched_by": [
+        "vector"
+      ],
+      "index_version": "idx_20261018T031210_902fa85488c3"
+    },
+    {
+      "rank": 13,
+      "chunk": {
+        "chunk_id": "c_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1_p0013_0003",
+        "doc_id": "d_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1",
+        "pdf_page": 13,
+        "printed_page": null,
+        "section": null,
+        "text": "Weijia Shi, Sewon Min, Michihiro Yasunaga, Min- joon Seo, Rich James, Mike Lewis, Luke Zettle- moyer, and Wen tau Yih. 2023. REPLUG: Retrieval-augmented black-box language mod- els. ArXiv:2301.12652.\n\nHugo Touvron, Thibaut Lavril, Gautier Izac- ard, Xavier Martinet, Marie-Anne Lachaux, Timothée Lacroix, Baptiste Rozière, Naman Goyal, Eric Hambro, Faisal Azhar, Aurelien Rodriguez, Armand Joulin, Edouard Grave, and Guillaume Lample. 2023a. LLaMA: Open and efficient foundation language models. ArXiv:2302.13971.\n\nKurt Shuster, Jing Xu, Mojtaba Komeili, Da Ju, Eric Michael Smith, Stephen Roller, Megan Ung, Moya Chen, Kushal Arora, Joshua Lane, Morteza Behrooz, William Ngan, Spencer Poff, Naman Goyal, Arthur Szlam, Y-Lan Boureau, Melanie Kambadur, and Jason Weston. 2022. BlenderBot 3: a deployed conversational agent that continually learns to responsibly engage. ArXiv:2208.03188.\n\nSimeng Sun, Kalpesh Krishna, Andrew Mattarella- Micke, and Mohit Iyyer. 2021. Do long-range language models actually use long-range con- text? In Proc. of EMNLP.\n\n",
+        "page_char_start": 2108,
+        "page_char_end": 3159,
+        "token_count": null,
+        "char_count": 1051,
+        "document": {
+          "title": "Lost in the Middle: How Language Models Use Long Contexts",
+          "authors": [
+            "Liu, Nelson F.",
+            "Lin, Kevin",
+            "Hewitt, John",
+            "Paranjape, Ashwin",
+            "Bevilacqua, Michele",
+            "Petroni, Fabio",
+            "Liang, Percy"
+          ],
+          "year": 2023,
+          "topics": [
+            "arXiv实验"
+          ],
+          "language": "en"
+        },
+        "chunk_order": 3
+      },
+      "scores": {
+        "bm25": null,
+        "cosine": 0.5800235048883668,
+        "rrf": 0.0136986301369863,
+        "rerank": null
+      },
+      "matched_by": [
+        "vector"
+      ],
+      "index_version": "idx_20261018T031210_902fa85488c3"
+    },
+    {
+      "rank": 14,
+      "chunk": {
+        "chunk_id": "c_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1_p0009_0004",
+        "doc_id": "d_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1",
+        "pdf_page": 9,
+        "printed_page": null,
+        "section": null,
+        "text": "We hypothesize that non-instruction fine-tuned language models learn to use these long contexts from similarly- formatted data that may occur in Internet text seen during pre-training, e.g., StackOverflow questions\n\n",
+        "page_char_start": 2699,
+        "page_char_end": 2915,
+        "token_count": null,
+        "char_count": 216,
+        "document": {
+          "title": "Lost in the Middle: How Language Models Use Long Contexts",
+          "authors": [
+            "Liu, Nelson F.",
+            "Lin, Kevin",
+            "Hewitt, John",
+            "Paranjape, Ashwin",
+            "Bevilacqua, Michele",
+            "Petroni, Fabio",
+            "Liang, Percy"
+          ],
+          "year": 2023,
+          "topics": [
+            "arXiv实验"
+          ],
+          "language": "en"
+        },
+        "chunk_order": 4
+      },
+      "scores": {
+        "bm25": null,
+        "cosine": 0.5795659052294599,
+        "rrf": 0.013513513513513514,
+        "rerank": null
+      },
+      "matched_by": [
+        "vector"
+      ],
+      "index_version": "idx_20261018T031210_902fa85488c3"
+    },
+    {
+      "rank": 15,
+      "chunk": {
+        "chunk_id": "c_23e3249e9a1e75418d82efecab0ea8c4d033b89c93742f63208d47ce01f21233_p0001_0002",
+        "doc_id": "d_23e3249e9a1e75418d82efecab0ea8c4d033b89c93742f63208d47ce01f21233",
+        "pdf_page": 1,
+        "printed_page": null,
+        "section": null,
+        "text": "Large pre-trained language models have been shown to store factual knowledge in their parameters, and achieve state-of-the-art results when ﬁne-tuned on down- stream NLP tasks. However, their ability to access and precisely manipulate knowl- edge is still limited, and hence on knowledge-intensive tasks, their performance lags behind task-speciﬁc architectures. Additionally, providing provenance for their decisions and updating their world knowledge remain open research problems. Pre- trained models with a differentiable access mechanism to explicit non-parametric memory have so far been only investigated for extractive downstream tasks. We explore a general-purpose ﬁne-tuning recipe for retrieval-augmented generation (RAG) — models which combine pre-trained parametric and non-parametric mem- ory for language generation. We introduce RAG models where the parametric memory is a pre-trained seq2seq model and the non-parametric memory is a dense vector index of Wikipedia, accessed with a pre-trained neural retriever. ",
+        "page_char_start": 407,
+        "page_char_end": 1436,
+        "token_count": null,
+        "char_count": 1029,
+        "document": {
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "authors": [
+            "Lewis, Patrick",
+            "Perez, Ethan",
+            "Piktus, Aleksandra",
+            "Petroni, Fabio",
+            "Karpukhin, Vladimir",
+            "Goyal, Naman",
+            "Küttler, Heinrich",
+            "Lewis, Mike",
+            "Yih, Wen-tau",
+            "Rocktäschel, Tim",
+            "Riedel, Sebastian",
+            "Kiela, Douwe"
+          ],
+          "year": 2020,
+          "topics": [
+            "arXiv实验"
+          ],
+          "language": "en"
+        },
+        "chunk_order": 2
+      },
+      "scores": {
+        "bm25": null,
+        "cosine": 0.5784708104358073,
+        "rrf": 0.013333333333333334,
+        "rerank": null
+      },
+      "matched_by": [
+        "vector"
+      ],
+      "index_version": "idx_20261018T031210_902fa85488c3"
+    },
+    {
+      "rank": 16,
+      "chunk": {
+        "chunk_id": "c_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1_p0001_0004",
+        "doc_id": "d_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1",
+        "pdf_page": 1,
+        "printed_page": null,
+        "section": null,
+        "text": "Language models have become an important and flexible building block in a variety of user-facing language technologies, including conversational interfaces, search and summarization, and collabo- rative writing (Shuster et al., 2022; Thoppilan et al., 2022; Lee et al., 2022, inter alia). These models perform downstream tasks primarily via prompting: all relevant task specification and data to process is formatted as a textual input context, and the model returns a generated text completion. These input contexts can contain thousands of tokens, espe- cially when language models are used to process long documents (e.g., legal or scientific documents, conversation histories, etc.) or when language mod- els are augmented with external information (e.g.,\n\n*Work partially completed as an intern at Samaya AI.\n\n",
+        "page_char_start": 2186,
+        "page_char_end": 3001,
+        "token_count": null,
+        "char_count": 815,
+        "document": {
+          "title": "Lost in the Middle: How Language Models Use Long Contexts",
+          "authors": [
+            "Liu, Nelson F.",
+            "Lin, Kevin",
+            "Hewitt, John",
+            "Paranjape, Ashwin",
+            "Bevilacqua, Michele",
+            "Petroni, Fabio",
+            "Liang, Percy"
+          ],
+          "year": 2023,
+          "topics": [
+            "arXiv实验"
+          ],
+          "language": "en"
+        },
+        "chunk_order": 4
+      },
+      "scores": {
+        "bm25": null,
+        "cosine": 0.5745799247726571,
+        "rrf": 0.013157894736842105,
+        "rerank": null
+      },
+      "matched_by": [
+        "vector"
+      ],
+      "index_version": "idx_20261018T031210_902fa85488c3"
+    },
+    {
+      "rank": 17,
+      "chunk": {
+        "chunk_id": "c_2e487d9b96e3c2e5e286d843e98a066adc0442faa3a6e8ddbd1771221bf9ae14_p0001_0001",
+        "doc_id": "d_2e487d9b96e3c2e5e286d843e98a066adc0442faa3a6e8ddbd1771221bf9ae14",
+        "pdf_page": 1,
+        "printed_page": null,
+        "section": null,
+        "text": "ColBERT: Eﬀicient and Eﬀective Passage Search via Contextualized Late Interaction over BERT\n\nOmar Khatab Stanford University okhatab@stanford.edu\n\nMatei Zaharia Stanford University matei@cs.stanford.edu\n\nABSTRACT\n\n105\n\nBERT-large\n\n104\n\nBERT-base\n\nBag-of-Words (BoW) Model BoW Model with NLU Augmentation Neural Matching Model Deep Language Model ColBERT (ours)\n\n103\n\nColBERT (full retrieval)\n\nfT+ConvKNRM\n\nDuet\n\n102\n\nQuery Latency (ms)\n\nColBERT (re-rank)\n\ndocTTTTTquery\n\nBM25 doc2query KNRM\n\nDeepCT\n\n101\n\n0.15 0.20 0.25 0.30 0.35 0.40\n\nMRR@10\n\nFigure 1: Eﬀectiveness (MRR@10) versus Mean Qery La- tency (log-scale) for a number of representative ranking models on MS MARCO Ranking [24]. Te ﬁgure also shows ColBERT. Neural re-rankers run on top of the oﬃcial BM25 top-1000 results and use a Tesla V100 GPU. Methodology and detailed results are in §4.\n\n",
+        "page_char_start": 0,
+        "page_char_end": 852,
+        "token_count": null,
+        "char_count": 852,
+        "document": {
+          "title": "ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT",
+          "authors": [
+            "Khattab, Omar",
+            "Zaharia, Matei"
+          ],
+          "year": 2020,
+          "topics": [
+            "arXiv实验"
+          ],
+          "language": "en"
+        },
+        "chunk_order": 1
+      },
+      "scores": {
+        "bm25": null,
+        "cosine": 0.5719708252563187,
+        "rrf": 0.012987012987012988,
+        "rerank": null
+      },
+      "matched_by": [
+        "vector"
+      ],
+      "index_version": "idx_20261018T031210_902fa85488c3"
+    },
+    {
+      "rank": 18,
+      "chunk": {
+        "chunk_id": "c_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1_p0010_0002",
+        "doc_id": "d_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1",
+        "pdf_page": 10,
+        "printed_page": null,
+        "section": null,
+        "text": "domain QA results. We see that reader model performance saturates long before retriever per- formance saturates, indicating that readers are not effectively using the extra context. Using more than 20 retrieved documents only marginally im- proves reader performance (∼1.5% for GPT-3.5- Turbo and ∼1% for Claude-1.3), while significantly increasing the input context length (and thus la- tency and cost). These results, coupled with the observation that models are often better at retriev- ing and using information at the start or end of the input contexts, suggest that effective rerank- ing of retrieved documents (pushing relevant infor- mation closer to the start of the input context) or ranked list truncation (retrieving fewer documents when appropriate; Arampatzis et al., 2009) may be promising directions for improving how language- model-based readers use retrieved context.\n\n6 Related Work\n\n6.1 Long-Context Language Models\n\n",
+        "page_char_start": 969,
+        "page_char_end": 1907,
+        "token_count": null,
+        "char_count": 938,
+        "document": {
+          "title": "Lost in the Middle: How Language Models Use Long Contexts",
+          "authors": [
+            "Liu, Nelson F.",
+            "Lin, Kevin",
+            "Hewitt, John",
+            "Paranjape, Ashwin",
+            "Bevilacqua, Michele",
+            "Petroni, Fabio",
+            "Liang, Percy"
+          ],
+          "year": 2023,
+          "topics": [
+            "arXiv实验"
+          ],
+          "language": "en"
+        },
+        "chunk_order": 2
+      },
+      "scores": {
+        "bm25": null,
+        "cosine": 0.5705135011297411,
+        "rrf": 0.01282051282051282,
+        "rerank": null
+      },
+      "matched_by": [
+        "vector"
+      ],
+      "index_version": "idx_20261018T031210_902fa85488c3"
+    },
+    {
+      "rank": 19,
+      "chunk": {
+        "chunk_id": "c_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1_p0002_0004",
+        "doc_id": "d_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1",
+        "pdf_page": 2,
+        "printed_page": null,
+        "section": null,
+        "text": "We first experiment with multi-document ques- tion answering, which requires models to reason over provided documents to find relevant informa- tion and use it to answer a given question; this task mimics the retrieval-augmented generation setup underlying many commercial generative search and question answering applications (e.g., Bing Chat). In this setting, we control (i) the input context length by changing the number of documents in the input context (akin to retrieving more or less documents in retrieval-augmented generation), and (ii) control the position of the relevant information within the input context by changing the order of the documents to place the relevant document at the beginning, middle or end of the context.\n\n• Encoder-decoder models are relatively robust to changes in the position of relevant informa- tion within their input context, but only when evaluated on sequences within its training- time sequence length. When evaluated on sequences longer than those seen during train- ing, we observe a U-shaped performance curve (§4.1).\n\n",
+        "page_char_start": 2571,
+        "page_char_end": 3639,
+        "token_count": null,
+        "char_count": 1068,
+        "document": {
+          "title": "Lost in the Middle: How Language Models Use Long Contexts",
+          "authors": [
+            "Liu, Nelson F.",
+            "Lin, Kevin",
+            "Hewitt, John",
+            "Paranjape, Ashwin",
+            "Bevilacqua, Michele",
+            "Petroni, Fabio",
+            "Liang, Percy"
+          ],
+          "year": 2023,
+          "topics": [
+            "arXiv实验"
+          ],
+          "language": "en"
+        },
+        "chunk_order": 4
+      },
+      "scores": {
+        "bm25": null,
+        "cosine": 0.5697443159457367,
+        "rrf": 0.012658227848101266,
+        "rerank": null
+      },
+      "matched_by": [
+        "vector"
+      ],
+      "index_version": "idx_20261018T031210_902fa85488c3"
+    },
+    {
+      "rank": 20,
+      "chunk": {
+        "chunk_id": "c_3e67fc1a9977715acf722d85f0b7d124b03715e975f6310a4d6c12094190912f_p0002_0001",
+        "doc_id": "d_3e67fc1a9977715acf722d85f0b7d124b03715e975f6310a4d6c12094190912f",
+        "pdf_page": 2,
+        "printed_page": null,
+        "section": null,
+        "text": "the extractive QA setting, in which the answer is restricted to a span appearing in one or more pas- sages in the corpus. Assume that our collection contains D documents, d1, d2, · · · , dD. We ﬁrst split each of the documents into text passages of equal lengths as the basic retrieval units3 and get M total passages in our corpus C = {p1, p2, . . . , pM}, where each passage pi can be viewed as a sequence of tokens w(i) 1 , w(i) 2 , · · · , w(i) |pi|. Given a question q,\n\nthe task is to ﬁnd a span w(i) s , w(i) s+1, · · · , w(i) e from one of the passages pi that can answer the question. Notice that to cover a wide variety of domains, the corpus size can easily range from millions of docu- ments (e.g., Wikipedia) to billions (e.g., the Web). As a result, any open-domain QA system needs to include an efﬁcient retriever component that can se- lect a small set of relevant texts, before applying the reader to extract the answer (Chen et al., 2017).4\n\n",
+        "page_char_start": 0,
+        "page_char_end": 960,
+        "token_count": null,
+        "char_count": 960,
+        "document": {
+          "title": "Dense Passage Retrieval for Open-Domain Question Answering",
+          "authors": [
+            "Karpukhin, Vladimir",
+            "Oğuz, Barlas",
+            "Min, Sewon",
+            "Lewis, Patrick",
+            "Wu, Ledell",
+            "Edunov, Sergey",
+            "Chen, Danqi",
+            "Yih, Wen-tau"
+          ],
+          "year": 2020,
+          "topics": [
+            "arXiv实验"
+          ],
+          "language": "en"
+        },
+        "chunk_order": 1
+      },
+      "scores": {
+        "bm25": null,
+        "cosine": 0.5690561972827914,
+        "rrf": 0.0125,
+        "rerank": null
+      },
+      "matched_by": [
+        "vector"
+      ],
+      "index_version": "idx_20261018T031210_902fa85488c3"
+    }
+  ],
+  "documents": [
+    {
+      "doc_id": "d_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1",
+      "title": "Lost in the Middle: How Language Models Use Long Contexts",
+      "authors": [
+        "Liu, Nelson F.",
+        "Lin, Kevin",
+        "Hewitt, John",
+        "Paranjape, Ashwin",
+        "Bevilacqua, Michele",
+        "Petroni, Fabio",
+        "Liang, Percy"
+      ],
+      "year": 2023,
+      "best_rank": 1,
+      "preview": "for open domain question answering. In Proc. of EACL.\n\nBennet B. Murdock Jr. 1962. The serial position effect of free recall. Journal of experimental psychology, 64(5):482.\n\nNikhil Kandpal, Haikang Deng, Adam Roberts, Eric Wallace, and Colin Raffel. 2022. Large lan- guage models struggle to learn lo"
+    },
+    {
+      "doc_id": "d_dc0ae3c5584ed146beee122e6a9ad9c48547dde048d53e9be8435d8f1d354531",
+      "title": "Precise Zero-Shot Dense Retrieval without Relevance Labels",
+      "authors": [
+        "Gao, Luyu",
+        "Ma, Xueguang",
+        "Lin, Jimmy",
+        "Callan, Jamie"
+      ],
+      "year": 2022,
+      "best_rank": 6,
+      "preview": "At the token level, generative large language models (LLM) pre- trained on large corpus have demonstrated strong natural language understanding (NLU) and gen- eration (NLG) capabilities (Brown et al., 2020; Chen et al., 2021; Rae et al., 2021; Hoffmann et al., 2022; Thoppilan et al., 2022; Chowdhery"
+    },
+    {
+      "doc_id": "d_1925755aeb627123d1a63c66f02e5aa2432f7e92751a02bea7c8c3b6bbb6ec33",
+      "title": "BEIR: A Heterogenous Benchmark for Zero-shot Evaluation of Information Retrieval Models",
+      "authors": [
+        "Thakur, Nandan",
+        "Reimers, Nils",
+        "Rücklé, Andreas",
+        "Srivastava, Abhishek",
+        "Gurevych, Iryna"
+      ],
+      "year": 2021,
+      "best_rank": 9,
+      "preview": "Retriever-based Lexical approaches suffer from the lexical gap [5]. To overcome this, earlier techniques proposed to improve lexical retrieval systems with neural networks. Sparse methods such as docT5query [48] identiﬁed document expansion terms using a sequence-to-sequence model that generated pos"
+    },
+    {
+      "doc_id": "d_7407131fd633561d8eab8701e43ca81061960b6642ae180eb86a3f367b2b8408",
+      "title": "Unsupervised Dense Information Retrieval with Contrastive Learning",
+      "authors": [
+        "Izacard, Gautier",
+        "Caron, Mathilde",
+        "Hosseini, Lucas",
+        "Riedel, Sebastian",
+        "Bojanowski, Piotr",
+        "Joulin, Armand",
+        "Grave, Edouard"
+      ],
+      "year": 2021,
+      "best_rank": 12,
+      "preview": "Xueguang Ma, Kai Sun, Ronak Pradeep, and Jimmy Lin. A replication study of dense passage retriever, 2021. 7\n\nChristopher D Manning, Hinrich Schütze, and Prabhakar Raghavan. Introduction to information retrieval. Cambridge university press, 2008. 2\n\nYu Meng, Chenyan Xiong, Payal Bajaj, Saurabh Tiwary"
+    },
+    {
+      "doc_id": "d_23e3249e9a1e75418d82efecab0ea8c4d033b89c93742f63208d47ce01f21233",
+      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "authors": [
+        "Lewis, Patrick",
+        "Perez, Ethan",
+        "Piktus, Aleksandra",
+        "Petroni, Fabio",
+        "Karpukhin, Vladimir",
+        "Goyal, Naman",
+        "Küttler, Heinrich",
+        "Lewis, Mike",
+        "Yih, Wen-tau",
+        "Rocktäschel, Tim",
+        "Riedel, Sebastian",
+        "Kiela, Douwe"
+      ],
+      "year": 2020,
+      "best_rank": 15,
+      "preview": "Large pre-trained language models have been shown to store factual knowledge in their parameters, and achieve state-of-the-art results when ﬁne-tuned on down- stream NLP tasks. However, their ability to access and precisely manipulate knowl- edge is still limited, and hence on knowledge-intensive ta"
+    },
+    {
+      "doc_id": "d_2e487d9b96e3c2e5e286d843e98a066adc0442faa3a6e8ddbd1771221bf9ae14",
+      "title": "ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT",
+      "authors": [
+        "Khattab, Omar",
+        "Zaharia, Matei"
+      ],
+      "year": 2020,
+      "best_rank": 17,
+      "preview": "ColBERT: Eﬀicient and Eﬀective Passage Search via Contextualized Late Interaction over BERT\n\nOmar Khatab Stanford University okhatab@stanford.edu\n\nMatei Zaharia Stanford University matei@cs.stanford.edu\n\nABSTRACT\n\n105\n\nBERT-large\n\n104\n\nBERT-base\n\nBag-of-Words (BoW) Model BoW Model with NLU Augmentat"
+    },
+    {
+      "doc_id": "d_3e67fc1a9977715acf722d85f0b7d124b03715e975f6310a4d6c12094190912f",
+      "title": "Dense Passage Retrieval for Open-Domain Question Answering",
+      "authors": [
+        "Karpukhin, Vladimir",
+        "Oğuz, Barlas",
+        "Min, Sewon",
+        "Lewis, Patrick",
+        "Wu, Ledell",
+        "Edunov, Sergey",
+        "Chen, Danqi",
+        "Yih, Wen-tau"
+      ],
+      "year": 2020,
+      "best_rank": 20,
+      "preview": "the extractive QA setting, in which the answer is restricted to a span appearing in one or more pas- sages in the corpus. Assume that our collection contains D documents, d1, d2, · · · , dD. We ﬁrst split each of the documents into text passages of equal lengths as the basic retrieval units3 and get"
+    }
+  ],
+  "index_version": "idx_20261018T031210_902fa85488c3"
+}

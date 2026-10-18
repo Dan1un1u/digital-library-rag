@@ -1,0 +1,47 @@
+{
+  "http_status": 200,
+  "mode": "mock",
+  "preview": {
+    "metadata": {
+      "title": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks",
+      "authors": [
+        "Nils Reimers",
+        "Iryna Gurevych"
+      ],
+      "year": null,
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/1908.10084"
+    },
+    "field_sources": {
+      "title": {
+        "method": "first_page_layout",
+        "pdf_page": 1,
+        "excerpt": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks"
+      },
+      "authors": {
+        "method": "first_page_text",
+        "pdf_page": 1,
+        "excerpt": "Nils Reimers and Iryna Gurevych"
+      },
+      "source_url": {
+        "method": "document_identifier",
+        "pdf_page": null,
+        "excerpt": "arXiv:1908.10084v1"
+      },
+      "language": {
+        "method": "text_language_heuristic",
+        "pdf_page": null,
+        "excerpt": "前两页文字的中英文字符分布"
+      }
+    },
+    "warnings": [
+      "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+      "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。"
+    ],
+    "requires_confirmation": true,
+    "page_count": 11,
+    "method": "local_pdf_metadata_and_text"
+  },
+  "library_unchanged": true,
+  "ui_health": 200
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "model": "Qwen/Qwen2.5-32B-Instruct",
+    "status": "ok",
+    "elapsed_ms": 2741.339,
+    "usage": {
+      "prompt_tokens": 673,
+      "completion_tokens": 88,
+      "total_tokens": 761
+    }
+  },
+  {
+    "model": "Qwen/Qwen2.5-32B-Instruct",
+    "status": "ok",
+    "elapsed_ms": 5700.356,
+    "usage": {
+      "prompt_tokens": 1637,
+      "completion_tokens": 202,
+      "total_tokens": 1839
+    }
+  },
+  {
+    "model": "Qwen/Qwen2.5-32B-Instruct",
+    "status": "ok",
+    "elapsed_ms": 2207.007,
+    "usage": {
+      "prompt_tokens": 678,
+      "completion_tokens": 94,
+      "total_tokens": 772
+    }
+  },
+  {
+    "model": "Qwen/Qwen2.5-32B-Instruct",
+    "status": "ok",
+    "elapsed_ms": 1368.759,
+    "usage": {
+      "prompt_tokens": 1971,
+      "completion_tokens": 37,
+      "total_tokens": 2008
+    }
+  },
+  {
+    "model": "Qwen/Qwen2.5-32B-Instruct",
+    "status": "ok",
+    "elapsed_ms": 1997.633,
+    "usage": {
+      "prompt_tokens": 665,
+      "completion_tokens": 79,
+      "total_tokens": 744
+    }
+  },
+  {
+    "model": "Qwen/Qwen2.5-32B-Instruct",
+    "status": "ok",
+    "elapsed_ms": 1159.081,
+    "usage": {
+      "prompt_tokens": 1629,
+      "completion_tokens": 26,
+      "total_tokens": 1655
+    }
+  },
+  {
+    "model": "Qwen/Qwen2.5-32B-Instruct",
+    "status": "ok",
+    "elapsed_ms": 2629.177,
+    "usage": {
+      "prompt_tokens": 677,
+      "completion_tokens": 105,
+      "total_tokens": 782
+    }
+  },
+  {
+    "model": "Qwen/Qwen2.5-32B-Instruct",
+    "status": "ok",
+    "elapsed_ms": 1193.462,
+    "usage": {
+      "prompt_tokens": 1641,
+      "completion_tokens": 36,
+      "total_tokens": 1677
+    }
+  }
+]

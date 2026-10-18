@@ -1,0 +1,14 @@
+﻿question_id,split,variant,request_id,claim_id,evidence_id,claim_text,quote,support,point_score,point_max,coverage,factual_issue,reviewer,notes
+smoke_B001,dev,full,q_2d01c57440ce4a0d81a8ac159d5f7754,cl_1,ev_1,存在不依赖逐字匹配关键词的方法来检索相关资料。,"tasks including a total of eleven datasets. The tasks involve retrieval, but it is not the primary task. Further, KILT retrieves documents only from Wikipedia.
+
+2.1 Neural Retrieval Information retrieval is the process of searching and returning relevant documents for a query from a collection. In our paper, we focus on text retrieval and use document as a cover term for text of any length in the given collection and query for the user input, which can be of any length as well. Traditionally, lexical approaches like TF-IDF and BM25 [55] have dominated textual information retrieval. Recently, there is a strong interest in using neural networks to improve or replace these lexical approaches. In this section, we highlight a few neural-based approaches and we refer the reader to Lin et al. [37] for a recent survey in neural retrieval.
+
+",,,,,,,
+smoke_B001,dev,full,q_2d01c57440ce4a0d81a8ac159d5f7754,cl_2,ev_1,神经网络方法被用来改进或替代传统的基于词汇的方法，以提高信息检索的效果。,"tasks including a total of eleven datasets. The tasks involve retrieval, but it is not the primary task. Further, KILT retrieves documents only from Wikipedia.
+
+2.1 Neural Retrieval Information retrieval is the process of searching and returning relevant documents for a query from a collection. In our paper, we focus on text retrieval and use document as a cover term for text of any length in the given collection and query for the user input, which can be of any length as well. Traditionally, lexical approaches like TF-IDF and BM25 [55] have dominated textual information retrieval. Recently, there is a strong interest in using neural networks to improve or replace these lexical approaches. In this section, we highlight a few neural-based approaches and we refer the reader to Lin et al. [37] for a recent survey in neural retrieval.
+
+",,,,,,,
+smoke_B002,dev,full,q_78b0de6101da4dffa563e7fc2a5a7a76,,,,,,,,,,,
+C001,dev,full,q_ae318f5aba82485b81f4cb62f8bb0d1a,,,,,,,,,,,
+C011,dev,full,q_4c02be61ddc54599897dfcc6cfb354ee,,,,,,,,,,,

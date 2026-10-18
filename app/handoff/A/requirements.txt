@@ -1,0 +1,4 @@
+# Verified on Python 3.13.5. D merges these dependencies into project packaging.
+PyMuPDF==1.27.2.2
+tiktoken==0.14.0
+pytest==8.3.4

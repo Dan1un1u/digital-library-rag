@@ -1,0 +1,4 @@
+﻿split,mode,questions,scored_questions,hit_at_5,recall_at_5,recall_at_10,evidence_group_coverage_at_10,median_ms,p95_ms
+dev,keyword,15,0,,,,,2.797,3.489599999999999
+dev,vector,15,0,,,,,118.775,189.22929999999994
+dev,hybrid,15,0,,,,,145.424,168.3348

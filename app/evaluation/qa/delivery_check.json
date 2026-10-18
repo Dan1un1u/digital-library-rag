@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-17",
+  "candidate_questions": 15,
+  "categories": {
+    "clarify": 10,
+    "unanswerable": 5
+  },
+  "checked_saved_responses": 18,
+  "all_real_citations_match_B_recorded_snapshot": true,
+  "configured_model_call_limit_per_request": 3,
+  "observed_max_model_calls_per_saved_run_request": 2,
+  "credential_scan": "no key-shaped credential found outside ignored runtime directories",
+  "pytest_tests": 140,
+  "pytest_failures": 0,
+  "pytest_errors": 0
+}

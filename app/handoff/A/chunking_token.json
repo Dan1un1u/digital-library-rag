@@ -1,0 +1,1 @@
+{"count_mode":"token","tokenizer_name":"tiktoken:cl100k_base","tokenizer_revision":"0.14.0","max_tokens":400,"overlap_tokens":50,"max_chars":1200,"overlap_chars":150}

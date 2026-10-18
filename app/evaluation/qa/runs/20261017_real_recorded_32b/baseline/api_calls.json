@@ -1,0 +1,42 @@
+[
+  {
+    "model": "Qwen/Qwen2.5-32B-Instruct",
+    "status": "ok",
+    "elapsed_ms": 4863.197,
+    "usage": {
+      "prompt_tokens": 1637,
+      "completion_tokens": 202,
+      "total_tokens": 1839
+    }
+  },
+  {
+    "model": "Qwen/Qwen2.5-32B-Instruct",
+    "status": "ok",
+    "elapsed_ms": 1271.111,
+    "usage": {
+      "prompt_tokens": 1971,
+      "completion_tokens": 37,
+      "total_tokens": 2008
+    }
+  },
+  {
+    "model": "Qwen/Qwen2.5-32B-Instruct",
+    "status": "ok",
+    "elapsed_ms": 989.392,
+    "usage": {
+      "prompt_tokens": 1629,
+      "completion_tokens": 26,
+      "total_tokens": 1655
+    }
+  },
+  {
+    "model": "Qwen/Qwen2.5-32B-Instruct",
+    "status": "ok",
+    "elapsed_ms": 1186.54,
+    "usage": {
+      "prompt_tokens": 1641,
+      "completion_tokens": 36,
+      "total_tokens": 1677
+    }
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "fresh_repository": true,
+  "local_exclude_used": false,
+  "git_add_A_files": [
+    ".env.example",
+    ".gitignore"
+  ],
+  "runtime_and_secret_files_excluded": true,
+  "env_example_preserved": true
+}

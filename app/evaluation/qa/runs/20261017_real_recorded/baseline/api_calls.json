@@ -1,0 +1,42 @@
+[
+  {
+    "model": "Qwen/Qwen2.5-7B-Instruct",
+    "status": "ok",
+    "elapsed_ms": 1045.207,
+    "usage": {
+      "prompt_tokens": 1637,
+      "completion_tokens": 30,
+      "total_tokens": 1667
+    }
+  },
+  {
+    "model": "Qwen/Qwen2.5-7B-Instruct",
+    "status": "ok",
+    "elapsed_ms": 921.047,
+    "usage": {
+      "prompt_tokens": 1971,
+      "completion_tokens": 27,
+      "total_tokens": 1998
+    }
+  },
+  {
+    "model": "Qwen/Qwen2.5-7B-Instruct",
+    "status": "ok",
+    "elapsed_ms": 1082.063,
+    "usage": {
+      "prompt_tokens": 1629,
+      "completion_tokens": 37,
+      "total_tokens": 1666
+    }
+  },
+  {
+    "model": "Qwen/Qwen2.5-7B-Instruct",
+    "status": "ok",
+    "elapsed_ms": 841.54,
+    "usage": {
+      "prompt_tokens": 1641,
+      "completion_tokens": 39,
+      "total_tokens": 1680
+    }
+  }
+]

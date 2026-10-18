@@ -1,0 +1,1606 @@
+{
+  "manifest": {
+    "artifacts": {
+      "chunks.json": "34df0d65f75c8157c4bb253f255b7e60064fdc035c871aa1d5be4456f6fecf9f",
+      "lexical.json": "8ae8856209957230290ffe7a1a4f91d018ede46c00a535153dc505476cf92ce3",
+      "vectors.npy": "b63e9b0ed9793ce533fb0b756da350ec036e2a9414af827ba48b8e2dff3d6d37"
+    },
+    "built_at": "2026-10-13T09:14:40.753152+00:00",
+    "chunk_count": 732,
+    "chunking_config": {
+      "count_mode": "character",
+      "max_chars": 1200,
+      "max_tokens": 400,
+      "overlap_chars": 150,
+      "overlap_tokens": 50,
+      "tokenizer_name": null,
+      "tokenizer_revision": null
+    },
+    "contract_version": "1.0",
+    "corpus_hash": "34df0d65f75c8157c4bb253f255b7e60064fdc035c871aa1d5be4456f6fecf9f",
+    "dimension": 1024,
+    "document_count": 10,
+    "embedding_backend": {
+      "base_url": "https://api.siliconflow.cn/v1",
+      "dimension": 1024,
+      "encoding_format": "float",
+      "input_preprocessing": "original-text-v1",
+      "model": "BAAI/bge-m3",
+      "provider": "siliconflow",
+      "revision": null,
+      "revision_pinned": false
+    },
+    "embedding_model": "BAAI/bge-m3",
+    "embedding_revision": null,
+    "index_version": "idx_20261013T091440_23f3ebf728f9",
+    "lexical_tokenizer": "nfkc-casefold-cjk-bigram-v1",
+    "normalized": true,
+    "retrieval_config": {
+      "bm25_b": 0.75,
+      "bm25_k1": 1.5,
+      "candidate_k": 20,
+      "normalize_embeddings": true,
+      "rrf_k": 60
+    },
+    "tokenizer": null
+  },
+  "results": [
+    {
+      "query": "有没有不用准确关键词就能找到论文的方法？",
+      "mode": "keyword",
+      "elapsed_ms": 2.28,
+      "hits": []
+    },
+    {
+      "query": "有没有不用准确关键词就能找到论文的方法？",
+      "mode": "vector",
+      "elapsed_ms": 243.58,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk": {
+            "char_count": 836,
+            "chunk_id": "c_1925755aeb627123d1a63c66f02e5aa2432f7e92751a02bea7c8c3b6bbb6ec33_p0002_0006",
+            "chunk_order": 6,
+            "doc_id": "d_1925755aeb627123d1a63c66f02e5aa2432f7e92751a02bea7c8c3b6bbb6ec33",
+            "document": {
+              "authors": [
+                "Thakur, Nandan",
+                "Reimers, Nils",
+                "Rücklé, Andreas",
+                "Srivastava, Abhishek",
+                "Gurevych, Iryna"
+              ],
+              "language": "en",
+              "title": "BEIR: A Heterogenous Benchmark for Zero-shot Evaluation of Information Retrieval Models",
+              "topics": [
+                "arXiv实验"
+              ],
+              "year": 2021
+            },
+            "page_char_end": 5616,
+            "page_char_start": 4780,
+            "pdf_page": 2,
+            "printed_page": null,
+            "section": null,
+            "text": "2 Related Work and Background\n\nTo our knowledge, BEIR is the ﬁrst broad, zero-shot information retrieval benchmark. Existing works [19, 50] do not evaluate retrieval in a zero-shot setting in depth, they either focus over a single task, small corpora or on a certain domain. This setting hinders for investigation of model generalization across diverse set of domains and task types. MultiReQA [19] consists of eight Question-Answering (QA) datasets and evaluates sentence-level answer retrieval given a question. It only tests a single task and ﬁve out of eight datasets are from Wikipedia. Further, MultiReQA evaluates retrieval over rather small corpora: six out of eight tasks have less than 100k candidate sentences, which beneﬁts dense retrieval over lexical as previously shown [54]. KILT [50] consists of ﬁve knowledge-intensive",
+            "token_count": null
+          },
+          "scores": {
+            "bm25": null,
+            "cosine": 0.6053863731587388,
+            "rrf": null,
+            "rerank": null
+          },
+          "matched_by": [
+            "vector"
+          ],
+          "index_version": "idx_20261013T091440_23f3ebf728f9"
+        },
+        {
+          "rank": 2,
+          "chunk": {
+            "char_count": 516,
+            "chunk_id": "c_dc0ae3c5584ed146beee122e6a9ad9c48547dde048d53e9be8435d8f1d354531_p0001_0001",
+            "chunk_order": 1,
+            "doc_id": "d_dc0ae3c5584ed146beee122e6a9ad9c48547dde048d53e9be8435d8f1d354531",
+            "document": {
+              "authors": [
+                "Gao, Luyu",
+                "Ma, Xueguang",
+                "Lin, Jimmy",
+                "Callan, Jamie"
+              ],
+              "language": "en",
+              "title": "Precise Zero-Shot Dense Retrieval without Relevance Labels",
+              "topics": [
+                "arXiv实验"
+              ],
+              "year": 2022
+            },
+            "page_char_end": 516,
+            "page_char_start": 0,
+            "pdf_page": 1,
+            "printed_page": null,
+            "section": null,
+            "text": "Precise Zero-Shot Dense Retrieval without Relevance Labels\n\nLuyu Gao∗† Xueguang Ma∗‡ Jimmy Lin‡ Jamie Callan†\n\n†Language Technologies Institute, Carnegie Mellon University ‡David R. Cheriton School of Computer Science, University of Waterloo {luyug, callan}@cs.cmu.edu, {x93ma, jimmylin}@uwaterloo.ca\n\nAbstract\n\npre-training (Izacard et al., 2021; Gao and Callan, 2021; Lu et al., 2021; Gao and Callan, 2022; Liu and Shao, 2022) have been proposed to improve the effectiveness of supervised dense retrieval models.\n\n",
+            "token_count": null
+          },
+          "scores": {
+            "bm25": null,
+            "cosine": 0.6039342888107568,
+            "rrf": null,
+            "rerank": null
+          },
+          "matched_by": [
+            "vector"
+          ],
+          "index_version": "idx_20261013T091440_23f3ebf728f9"
+        },
+        {
+          "rank": 3,
+          "chunk": {
+            "char_count": 1197,
+            "chunk_id": "c_e791451960e47e69b0241d7656c6c61ce40b7c3beff92c944e163e5c3bc54c1a_p0005_0005",
+            "chunk_order": 5,
+            "doc_id": "d_e791451960e47e69b0241d7656c6c61ce40b7c3beff92c944e163e5c3bc54c1a",
+            "document": {
+              "authors": [
+                "Formal, Thibault",
+                "Piwowarski, Benjamin",
+                "Clinchant, Stéphane"
+              ],
+              "language": "en",
+              "title": "SPLADE: Sparse Lexical and Expansion Model for First Stage Ranking",
+              "topics": [
+                "arXiv实验"
+              ],
+              "year": 2021
+            },
+            "page_char_end": 4590,
+            "page_char_start": 3393,
+            "pdf_page": 5,
+            "printed_page": null,
+            "section": null,
+            "text": "[1] Yang Bai, Xiaoguang Li, Gang Wang, Chaoliang Zhang, Lifeng Shang, Jun Xu, Zhaowei Wang, Fangshan Wang, and Qun Liu. 2020. SparTerm: Learning Term- based Sparse Representation for Fast Text Retrieval. arXiv:2010.00768 [cs.IR] [2] Leonid Boytsov. 2018. Efficient and Accurate Non-Metric k-NN Search with Appli- cations to Text Matching. Ph.D. Dissertation. Carnegie Mellon University. [3] Nick Craswell, Bhaskar Mitra, Emine Yilmaz, Daniel Campos, and Ellen M Voorhees. 2020. Overview of the trec 2019 deep learning track. arXiv preprint arXiv:2003.07820 (2020). [4] Zhuyun Dai and Jamie Callan. 2019. Context-Aware Sentence/Passage Term Importance Estimation For First Stage Retrieval. arXiv:1910.10687 [cs.IR] [5] Zhuyun Dai and Jamie Callan. 2020. Context-Aware Document Term Weighting for Ad-Hoc Search. Association for Computing Machinery, New York, NY, USA, 1897–1907. https://doi.org/10.1145/3366423.3380258 [6] Zhuyun Dai and Jamie Callan. 2020. Context-Aware Term Weighting For First Stage Passage Retrieval. Association for Computing Machinery, New York, NY, USA, 1533–1536. https://doi.org/10.1145/3397271.3401204 [7] Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. ",
+            "token_count": null
+          },
+          "scores": {
+            "bm25": null,
+            "cosine": 0.5950174952827032,
+            "rrf": null,
+            "rerank": null
+          },
+          "matched_by": [
+            "vector"
+          ],
+          "index_version": "idx_20261013T091440_23f3ebf728f9"
+        },
+        {
+          "rank": 4,
+          "chunk": {
+            "char_count": 853,
+            "chunk_id": "c_1925755aeb627123d1a63c66f02e5aa2432f7e92751a02bea7c8c3b6bbb6ec33_p0002_0004",
+            "chunk_order": 4,
+            "doc_id": "d_1925755aeb627123d1a63c66f02e5aa2432f7e92751a02bea7c8c3b6bbb6ec33",
+            "document": {
+              "authors": [
+                "Thakur, Nandan",
+                "Reimers, Nils",
+                "Rücklé, Andreas",
+                "Srivastava, Abhishek",
+                "Gurevych, Iryna"
+              ],
+              "language": "en",
+              "title": "BEIR: A Heterogenous Benchmark for Zero-shot Evaluation of Information Retrieval Models",
+              "topics": [
+                "arXiv实验"
+              ],
+              "year": 2021
+            },
+            "page_char_end": 3600,
+            "page_char_start": 2747,
+            "pdf_page": 2,
+            "printed_page": null,
+            "section": null,
+            "text": "We use BEIR to evaluate ten diverse retrieval methods from ﬁve broad architectures: lexical, sparse, dense, late interaction, and re-ranking. From our analysis, we ﬁnd that no single approach consistently outperforms other approaches on all datasets. Further, we notice that the in-domain performance of a model does not correlate well with its generalization capabilities: models ﬁne-tuned with identical training data might generalize differently. In terms of efﬁciency, we ﬁnd a trade-off between the performances and the computational cost: computationally expensive models, like re-ranking models and late interaction model perform the best. More efﬁcient approaches e.g. based on dense or sparse embeddings can substantially underperform traditional lexical models like BM25. Overall, BM25 remains a strong baseline for zero-shot text retrieval.\n\n",
+            "token_count": null
+          },
+          "scores": {
+            "bm25": null,
+            "cosine": 0.5916246591847019,
+            "rrf": null,
+            "rerank": null
+          },
+          "matched_by": [
+            "vector"
+          ],
+          "index_version": "idx_20261013T091440_23f3ebf728f9"
+        },
+        {
+          "rank": 5,
+          "chunk": {
+            "char_count": 1178,
+            "chunk_id": "c_1925755aeb627123d1a63c66f02e5aa2432f7e92751a02bea7c8c3b6bbb6ec33_p0003_0002",
+            "chunk_order": 2,
+            "doc_id": "d_1925755aeb627123d1a63c66f02e5aa2432f7e92751a02bea7c8c3b6bbb6ec33",
+            "document": {
+              "authors": [
+                "Thakur, Nandan",
+                "Reimers, Nils",
+                "Rücklé, Andreas",
+                "Srivastava, Abhishek",
+                "Gurevych, Iryna"
+              ],
+              "language": "en",
+              "title": "BEIR: A Heterogenous Benchmark for Zero-shot Evaluation of Information Retrieval Models",
+              "topics": [
+                "arXiv实验"
+              ],
+              "year": 2021
+            },
+            "page_char_end": 2022,
+            "page_char_start": 844,
+            "pdf_page": 3,
+            "printed_page": null,
+            "section": null,
+            "text": "Retriever-based Lexical approaches suffer from the lexical gap [5]. To overcome this, earlier techniques proposed to improve lexical retrieval systems with neural networks. Sparse methods such as docT5query [48] identiﬁed document expansion terms using a sequence-to-sequence model that generated possible queries for which the given document would be relevant. DeepCT [11] on the other hand used a BERT [13] model to learn relevant term weights in a document and generated a pseudo-document representation. Both methods still rely on BM25 for the remaining parts. Similarly, SPARTA [79] learned token-level contextualized representations with BERT and converted the document into an efﬁcient inverse index. More recently, dense retrieval approaches were proposed. They are capable of capturing semantic matches and try to overcome the (potential) lexical gap. Dense retrievers map queries and documents in a shared, dense vector space [18]. This allowed the document representation to be pre-computed and indexed. A bi-encoder neural architecture based on pre-trained Transformers has shown strong performance for various open-domain question-answering tasks [19, 31, 35, 43]. ",
+            "token_count": null
+          },
+          "scores": {
+            "bm25": null,
+            "cosine": 0.5912018742126459,
+            "rrf": null,
+            "rerank": null
+          },
+          "matched_by": [
+            "vector"
+          ],
+          "index_version": "idx_20261013T091440_23f3ebf728f9"
+        }
+      ]
+    },
+    {
+      "query": "有没有不用准确关键词就能找到论文的方法？",
+      "mode": "hybrid",
+      "elapsed_ms": 182.01,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk": {
+            "char_count": 836,
+            "chunk_id": "c_1925755aeb627123d1a63c66f02e5aa2432f7e92751a02bea7c8c3b6bbb6ec33_p0002_0006",
+            "chunk_order": 6,
+            "doc_id": "d_1925755aeb627123d1a63c66f02e5aa2432f7e92751a02bea7c8c3b6bbb6ec33",
+            "document": {
+              "authors": [
+                "Thakur, Nandan",
+                "Reimers, Nils",
+                "Rücklé, Andreas",
+                "Srivastava, Abhishek",
+                "Gurevych, Iryna"
+              ],
+              "language": "en",
+              "title": "BEIR: A Heterogenous Benchmark for Zero-shot Evaluation of Information Retrieval Models",
+              "topics": [
+                "arXiv实验"
+              ],
+              "year": 2021
+            },
+            "page_char_end": 5616,
+            "page_char_start": 4780,
+            "pdf_page": 2,
+            "printed_page": null,
+            "section": null,
+            "text": "2 Related Work and Background\n\nTo our knowledge, BEIR is the ﬁrst broad, zero-shot information retrieval benchmark. Existing works [19, 50] do not evaluate retrieval in a zero-shot setting in depth, they either focus over a single task, small corpora or on a certain domain. This setting hinders for investigation of model generalization across diverse set of domains and task types. MultiReQA [19] consists of eight Question-Answering (QA) datasets and evaluates sentence-level answer retrieval given a question. It only tests a single task and ﬁve out of eight datasets are from Wikipedia. Further, MultiReQA evaluates retrieval over rather small corpora: six out of eight tasks have less than 100k candidate sentences, which beneﬁts dense retrieval over lexical as previously shown [54]. KILT [50] consists of ﬁve knowledge-intensive",
+            "token_count": null
+          },
+          "scores": {
+            "bm25": null,
+            "cosine": 0.6053863731587388,
+            "rrf": 0.01639344262295082,
+            "rerank": null
+          },
+          "matched_by": [
+            "vector"
+          ],
+          "index_version": "idx_20261013T091440_23f3ebf728f9"
+        },
+        {
+          "rank": 2,
+          "chunk": {
+            "char_count": 516,
+            "chunk_id": "c_dc0ae3c5584ed146beee122e6a9ad9c48547dde048d53e9be8435d8f1d354531_p0001_0001",
+            "chunk_order": 1,
+            "doc_id": "d_dc0ae3c5584ed146beee122e6a9ad9c48547dde048d53e9be8435d8f1d354531",
+            "document": {
+              "authors": [
+                "Gao, Luyu",
+                "Ma, Xueguang",
+                "Lin, Jimmy",
+                "Callan, Jamie"
+              ],
+              "language": "en",
+              "title": "Precise Zero-Shot Dense Retrieval without Relevance Labels",
+              "topics": [
+                "arXiv实验"
+              ],
+              "year": 2022
+            },
+            "page_char_end": 516,
+            "page_char_start": 0,
+            "pdf_page": 1,
+            "printed_page": null,
+            "section": null,
+            "text": "Precise Zero-Shot Dense Retrieval without Relevance Labels\n\nLuyu Gao∗† Xueguang Ma∗‡ Jimmy Lin‡ Jamie Callan†\n\n†Language Technologies Institute, Carnegie Mellon University ‡David R. Cheriton School of Computer Science, University of Waterloo {luyug, callan}@cs.cmu.edu, {x93ma, jimmylin}@uwaterloo.ca\n\nAbstract\n\npre-training (Izacard et al., 2021; Gao and Callan, 2021; Lu et al., 2021; Gao and Callan, 2022; Liu and Shao, 2022) have been proposed to improve the effectiveness of supervised dense retrieval models.\n\n",
+            "token_count": null
+          },
+          "scores": {
+            "bm25": null,
+            "cosine": 0.6039342888107568,
+            "rrf": 0.016129032258064516,
+            "rerank": null
+          },
+          "matched_by": [
+            "vector"
+          ],
+          "index_version": "idx_20261013T091440_23f3ebf728f9"
+        },
+        {
+          "rank": 3,
+          "chunk": {
+            "char_count": 1197,
+            "chunk_id": "c_e791451960e47e69b0241d7656c6c61ce40b7c3beff92c944e163e5c3bc54c1a_p0005_0005",
+            "chunk_order": 5,
+            "doc_id": "d_e791451960e47e69b0241d7656c6c61ce40b7c3beff92c944e163e5c3bc54c1a",
+            "document": {
+              "authors": [
+                "Formal, Thibault",
+                "Piwowarski, Benjamin",
+                "Clinchant, Stéphane"
+              ],
+              "language": "en",
+              "title": "SPLADE: Sparse Lexical and Expansion Model for First Stage Ranking",
+              "topics": [
+                "arXiv实验"
+              ],
+              "year": 2021
+            },
+            "page_char_end": 4590,
+            "page_char_start": 3393,
+            "pdf_page": 5,
+            "printed_page": null,
+            "section": null,
+            "text": "[1] Yang Bai, Xiaoguang Li, Gang Wang, Chaoliang Zhang, Lifeng Shang, Jun Xu, Zhaowei Wang, Fangshan Wang, and Qun Liu. 2020. SparTerm: Learning Term- based Sparse Representation for Fast Text Retrieval. arXiv:2010.00768 [cs.IR] [2] Leonid Boytsov. 2018. Efficient and Accurate Non-Metric k-NN Search with Appli- cations to Text Matching. Ph.D. Dissertation. Carnegie Mellon University. [3] Nick Craswell, Bhaskar Mitra, Emine Yilmaz, Daniel Campos, and Ellen M Voorhees. 2020. Overview of the trec 2019 deep learning track. arXiv preprint arXiv:2003.07820 (2020). [4] Zhuyun Dai and Jamie Callan. 2019. Context-Aware Sentence/Passage Term Importance Estimation For First Stage Retrieval. arXiv:1910.10687 [cs.IR] [5] Zhuyun Dai and Jamie Callan. 2020. Context-Aware Document Term Weighting for Ad-Hoc Search. Association for Computing Machinery, New York, NY, USA, 1897–1907. https://doi.org/10.1145/3366423.3380258 [6] Zhuyun Dai and Jamie Callan. 2020. Context-Aware Term Weighting For First Stage Passage Retrieval. Association for Computing Machinery, New York, NY, USA, 1533–1536. https://doi.org/10.1145/3397271.3401204 [7] Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. ",
+            "token_count": null
+          },
+          "scores": {
+            "bm25": null,
+            "cosine": 0.5950174952827032,
+            "rrf": 0.015873015873015872,
+            "rerank": null
+          },
+          "matched_by": [
+            "vector"
+          ],
+          "index_version": "idx_20261013T091440_23f3ebf728f9"
+        },
+        {
+          "rank": 4,
+          "chunk": {
+            "char_count": 853,
+            "chunk_id": "c_1925755aeb627123d1a63c66f02e5aa2432f7e92751a02bea7c8c3b6bbb6ec33_p0002_0004",
+            "chunk_order": 4,
+            "doc_id": "d_1925755aeb627123d1a63c66f02e5aa2432f7e92751a02bea7c8c3b6bbb6ec33",
+            "document": {
+              "authors": [
+                "Thakur, Nandan",
+                "Reimers, Nils",
+                "Rücklé, Andreas",
+                "Srivastava, Abhishek",
+                "Gurevych, Iryna"
+              ],
+              "language": "en",
+              "title": "BEIR: A Heterogenous Benchmark for Zero-shot Evaluation of Information Retrieval Models",
+              "topics": [
+                "arXiv实验"
+              ],
+              "year": 2021
+            },
+            "page_char_end": 3600,
+            "page_char_start": 2747,
+            "pdf_page": 2,
+            "printed_page": null,
+            "section": null,
+            "text": "We use BEIR to evaluate ten diverse retrieval methods from ﬁve broad architectures: lexical, sparse, dense, late interaction, and re-ranking. From our analysis, we ﬁnd that no single approach consistently outperforms other approaches on all datasets. Further, we notice that the in-domain performance of a model does not correlate well with its generalization capabilities: models ﬁne-tuned with identical training data might generalize differently. In terms of efﬁciency, we ﬁnd a trade-off between the performances and the computational cost: computationally expensive models, like re-ranking models and late interaction model perform the best. More efﬁcient approaches e.g. based on dense or sparse embeddings can substantially underperform traditional lexical models like BM25. Overall, BM25 remains a strong baseline for zero-shot text retrieval.\n\n",
+            "token_count": null
+          },
+          "scores": {
+            "bm25": null,
+            "cosine": 0.5916246591847019,
+            "rrf": 0.015625,
+            "rerank": null
+          },
+          "matched_by": [
+            "vector"
+          ],
+          "index_version": "idx_20261013T091440_23f3ebf728f9"
+        },
+        {
+          "rank": 5,
+          "chunk": {
+            "char_count": 1178,
+            "chunk_id": "c_1925755aeb627123d1a63c66f02e5aa2432f7e92751a02bea7c8c3b6bbb6ec33_p0003_0002",
+            "chunk_order": 2,
+            "doc_id": "d_1925755aeb627123d1a63c66f02e5aa2432f7e92751a02bea7c8c3b6bbb6ec33",
+            "document": {
+              "authors": [
+                "Thakur, Nandan",
+                "Reimers, Nils",
+                "Rücklé, Andreas",
+                "Srivastava, Abhishek",
+                "Gurevych, Iryna"
+              ],
+              "language": "en",
+              "title": "BEIR: A Heterogenous Benchmark for Zero-shot Evaluation of Information Retrieval Models",
+              "topics": [
+                "arXiv实验"
+              ],
+              "year": 2021
+            },
+            "page_char_end": 2022,
+            "page_char_start": 844,
+            "pdf_page": 3,
+            "printed_page": null,
+            "section": null,
+            "text": "Retriever-based Lexical approaches suffer from the lexical gap [5]. To overcome this, earlier techniques proposed to improve lexical retrieval systems with neural networks. Sparse methods such as docT5query [48] identiﬁed document expansion terms using a sequence-to-sequence model that generated possible queries for which the given document would be relevant. DeepCT [11] on the other hand used a BERT [13] model to learn relevant term weights in a document and generated a pseudo-document representation. Both methods still rely on BM25 for the remaining parts. Similarly, SPARTA [79] learned token-level contextualized representations with BERT and converted the document into an efﬁcient inverse index. More recently, dense retrieval approaches were proposed. They are capable of capturing semantic matches and try to overcome the (potential) lexical gap. Dense retrievers map queries and documents in a shared, dense vector space [18]. This allowed the document representation to be pre-computed and indexed. A bi-encoder neural architecture based on pre-trained Transformers has shown strong performance for various open-domain question-answering tasks [19, 31, 35, 43]. ",
+            "token_count": null
+          },
+          "scores": {
+            "bm25": null,
+            "cosine": 0.5912018742126459,
+            "rrf": 0.015384615384615385,
+            "rerank": null
+          },
+          "matched_by": [
+            "vector"
+          ],
+          "index_version": "idx_20261013T091440_23f3ebf728f9"
+        }
+      ]
+    },
+    {
+      "query": "How does dense passage retrieval use a dual encoder?",
+      "mode": "keyword",
+      "elapsed_ms": 6.64,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk": {
+            "char_count": 1122,
+            "chunk_id": "c_3e67fc1a9977715acf722d85f0b7d124b03715e975f6310a4d6c12094190912f_p0001_0001",
+            "chunk_order": 1,
+            "doc_id": "d_3e67fc1a9977715acf722d85f0b7d124b03715e975f6310a4d6c12094190912f",
+            "document": {
+              "authors": [
+                "Karpukhin, Vladimir",
+                "Oğuz, Barlas",
+                "Min, Sewon",
+                "Lewis, Patrick",
+                "Wu, Ledell",
+                "Edunov, Sergey",
+                "Chen, Danqi",
+                "Yih, Wen-tau"
+              ],
+              "language": "en",
+              "title": "Dense Passage Retrieval for Open-Domain Question Answering",
+              "topics": [
+                "arXiv实验"
+              ],
+              "year": 2020
+            },
+            "page_char_end": 1122,
+            "page_char_start": 0,
+            "pdf_page": 1,
+            "printed_page": null,
+            "section": null,
+            "text": "Dense Passage Retrieval for Open-Domain Question Answering\n\nVladimir Karpukhin∗, Barlas O˘guz∗, Sewon Min†, Patrick Lewis, Ledell Wu, Sergey Edunov, Danqi Chen‡, Wen-tau Yih Facebook AI †University of Washington ‡Princeton University {vladk, barlaso, plewis, ledell, edunov, scottyih}@fb.com sewon@cs.washington.edu danqic@cs.princeton.edu\n\nAbstract\n\nOpen-domain question answering relies on ef- ﬁcient passage retrieval to select candidate contexts, where traditional sparse vector space models, such as TF-IDF or BM25, are the de facto method. In this work, we show that retrieval can be practically implemented us- ing dense representations alone, where em- beddings are learned from a small number of questions and passages by a simple dual- encoder framework. When evaluated on a wide range of open-domain QA datasets, our dense retriever outperforms a strong Lucene- BM25 system greatly by 9%-19% absolute in terms of top-20 passage retrieval accuracy, and helps our end-to-end QA system establish new state-of-the-art on multiple open-domain QA benchmarks.1\n\n1 Introduction\n\narXiv:2004.04906v3 [cs.CL] 30 Sep 2020\n\n",
+            "token_count": null
+          },
+          "scores": {
+            "bm25": 13.078706692098802,
+            "cosine": null,
+            "rrf": null,
+            "rerank": null
+          },
+          "matched_by": [
+            "keyword"
+          ],
+          "index_version": "idx_20261013T091440_23f3ebf728f9"
+        },
+        {
+          "rank": 2,
+          "chunk": {
+            "char_count": 522,
+            "chunk_id": "c_3e67fc1a9977715acf722d85f0b7d124b03715e975f6310a4d6c12094190912f_p0013_0003",
+            "chunk_order": 3,
+            "doc_id": "d_3e67fc1a9977715acf722d85f0b7d124b03715e975f6310a4d6c12094190912f",
+            "document": {
+              "authors": [
+                "Karpukhin, Vladimir",
+                "Oğuz, Barlas",
+                "Min, Sewon",
+                "Lewis, Patrick",
+                "Wu, Ledell",
+                "Edunov, Sergey",
+                "Chen, Danqi",
+                "Yih, Wen-tau"
+              ],
+              "language": "en",
+              "title": "Dense Passage Retrieval for Open-Domain Question Answering",
+              "topics": [
+                "arXiv实验"
+              ],
+              "year": 2020
+            },
+            "page_char_end": 2704,
+            "page_char_start": 2182,
+            "pdf_page": 13,
+            "printed_page": null,
+            "section": null,
+            "text": "from the top 5 positive and top 30 negative passages (from the set of top 100 passages retrieved from the same question). The question encoder’s initial state is taken from a DPR model previously trained on the NQ dataset. The reader’s initial state is a BERT-base model. In terms of the end-to-end QA results, our joint-training scheme does not provide better results compared to the usual retriever/reader training pipeline, resulting in the same 39.8 exact match score on NQ dev as in our regular reader model training.",
+            "token_count": null
+          },
+          "scores": {
+            "bm25": 10.29066162077255,
+            "cosine": null,
+            "rrf": null,
+            "rerank": null
+          },
+          "matched_by": [
+            "keyword"
+          ],
+          "index_version": "idx_20261013T091440_23f3ebf728f9"
+        },
+        {
+          "rank": 3,
+          "chunk": {
+            "char_count": 1125,
+            "chunk_id": "c_dc0ae3c5584ed146beee122e6a9ad9c48547dde048d53e9be8435d8f1d354531_p0002_0001",
+            "chunk_order": 1,
+            "doc_id": "d_dc0ae3c5584ed146beee122e6a9ad9c48547dde048d53e9be8435d8f1d354531",
+            "document": {
+              "authors": [
+                "Gao, Luyu",
+                "Ma, Xueguang",
+                "Lin, Jimmy",
+                "Callan, Jamie"
+              ],
+              "language": "en",
+              "title": "Precise Zero-Shot Dense Retrieval without Relevance Labels",
+              "topics": [
+                "arXiv实验"
+              ],
+              "year": 2022
+            },
+            "page_char_end": 1125,
+            "page_char_start": 0,
+            "pdf_page": 2,
+            "printed_page": null,
+            "section": null,
+            "text": "write a passage to answer the question\n\nHyDE\n\nHow wisdom teeth are removed... Some ... a few minutes, whereas others can take 20 minutes or longer....\n\nhow long does it take to remove wisdom tooth It usually takes between 30 minutes and two hours to remove a wisdom tooth...\n\nwrite a scientific paper passage to answer the question\n\nContriever\n\nHow has the COVID-19 pandemic impacted mental health?\n\n...depression and anxiety had increased by 20% since the start of the pandemic...\n\n... two studies investigating COVID-19 patients ... significantly higher level of depressive ...\n\nGPT\n\nwrite a passage in Korean to answer the question in detail\n\n인간은 언제 불을 사용했는가?\n\n인간이 불을 사용한 기록은 약 800만년 전부터 나타난다... ... 불을 처음 사용한 시기는 호모 에렉투스가 살았던 142만 년 전으 로 거슬러간다...\n\ninstruction query generated document real document\n\nFigure 1: An illustration of the HyDE model. Documents snippets are shown. HyDE serves all types of queries without changing the underlying GPT-3 and Contriever/mContriever models.\n\nsets, covering tasks like Web Search, Question Answering, Fact Veriﬁcation and languages like Swahili, Korean, Japanese.\n\n2 Related Works\n\n",
+            "token_count": null
+          },
+          "scores": {
+            "bm25": 10.183629135251977,
+            "cosine": null,
+            "rrf": null,
+            "rerank": null
+          },
+          "matched_by": [
+            "keyword"
+          ],
+          "index_version": "idx_20261013T091440_23f3ebf728f9"
+        },
+        {
+          "rank": 4,
+          "chunk": {
+            "char_count": 950,
+            "chunk_id": "c_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1_p0008_0003",
+            "chunk_order": 3,
+            "doc_id": "d_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1",
+            "document": {
+              "authors": [
+                "Liu, Nelson F.",
+                "Lin, Kevin",
+                "Hewitt, John",
+                "Paranjape, Ashwin",
+                "Bevilacqua, Michele",
+                "Petroni, Fabio",
+                "Liang, Percy"
+              ],
+              "language": "en",
+              "title": "Lost in the Middle: How Language Models Use Long Contexts",
+              "topics": [
+                "arXiv实验"
+              ],
+              "year": 2023
+            },
+            "page_char_end": 3024,
+            "page_char_start": 2074,
+            "pdf_page": 8,
+            "printed_page": null,
+            "section": null,
+            "text": "Figure 9: Query-aware contextualization (placing the query before and after the documents) does not sub- stantially improve robustness of language models to changing the position of relevant information in multi- document QA; performance slightly increases when relevant information occurs at the very beginning, but otherwise slightly decreases.\n\nof the prompt and decoder-only models can only attend to prior tokens at each timestep. In contrast, encoder-decoder models (which seem more robust to changes in the position of relevant information; §4.1) use a bidirectional encoder to contextualize input contexts—can we use this observation to im- prove decoder-only models by placing the query be- fore and after the data, enabling query-aware con- textualization of documents (or key-value pairs)? We find that query-aware contextualization dra- matically improves performance on the key-value retrieval task—all models achieve near-perfect per-\n\n",
+            "token_count": null
+          },
+          "scores": {
+            "bm25": 10.066468155977546,
+            "cosine": null,
+            "rrf": null,
+            "rerank": null
+          },
+          "matched_by": [
+            "keyword"
+          ],
+          "index_version": "idx_20261013T091440_23f3ebf728f9"
+        },
+        {
+          "rank": 5,
+          "chunk": {
+            "char_count": 1067,
+            "chunk_id": "c_3e67fc1a9977715acf722d85f0b7d124b03715e975f6310a4d6c12094190912f_p0012_0004",
+            "chunk_order": 4,
+            "doc_id": "d_3e67fc1a9977715acf722d85f0b7d124b03715e975f6310a4d6c12094190912f",
+            "document": {
+              "authors": [
+                "Karpukhin, Vladimir",
+                "Oğuz, Barlas",
+                "Min, Sewon",
+                "Lewis, Patrick",
+                "Wu, Ledell",
+                "Edunov, Sergey",
+                "Chen, Danqi",
+                "Yih, Wen-tau"
+              ],
+              "language": "en",
+              "title": "Dense Passage Retrieval for Open-Domain Question Answering",
+              "topics": [
+                "arXiv实验"
+              ],
+              "year": 2020
+            },
+            "page_char_end": 3565,
+            "page_char_start": 2498,
+            "pdf_page": 12,
+            "printed_page": null,
+            "section": null,
+            "text": "We ﬁx the passage encoder in our joint-training scheme while allowing only the question encoder to receive backpropagation signal from the com- bined (retriever + reader) loss function. This allows us to leverage the HNSW-based FAISS index for efﬁcient low-latency retrieving, without reindexing the passages during model updates. Our loss func- tion largely follows ORQA’s approach, which uses log probabilities of positive passages selected from the retriever model, and correct spans and passages selected from the reader model. Since the passage encoder is ﬁxed, we could use larger amount of retrieved passages when calculating the retriever loss. Speciﬁcally, we get top 100 passages for each question in a mini-batch and use the method similar to in-batch negative training: all retrieved passages’ vectors participate in the loss calculation for all questions in a batch. Our training batch size is set to 16, which effectively gives 1,600 passages per question to calculate retriever loss. The reader still uses 24 passages per question, which are selected\n\n",
+            "token_count": null
+          },
+          "scores": {
+            "bm25": 9.759456848290984,
+            "cosine": null,
+            "rrf": null,
+            "rerank": null
+          },
+          "matched_by": [
+            "keyword"
+          ],
+          "index_version": "idx_20261013T091440_23f3ebf728f9"
+        }
+      ]
+    },
+    {
+      "query": "How does dense passage retrieval use a dual encoder?",
+      "mode": "vector",
+      "elapsed_ms": 124.41,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk": {
+            "char_count": 1112,
+            "chunk_id": "c_3e67fc1a9977715acf722d85f0b7d124b03715e975f6310a4d6c12094190912f_p0002_0004",
+            "chunk_order": 4,
+            "doc_id": "d_3e67fc1a9977715acf722d85f0b7d124b03715e975f6310a4d6c12094190912f",
+            "document": {
+              "authors": [
+                "Karpukhin, Vladimir",
+                "Oğuz, Barlas",
+                "Min, Sewon",
+                "Lewis, Patrick",
+                "Wu, Ledell",
+                "Edunov, Sergey",
+                "Chen, Danqi",
+                "Yih, Wen-tau"
+              ],
+              "language": "en",
+              "title": "Dense Passage Retrieval for Open-Domain Question Answering",
+              "topics": [
+                "arXiv实验"
+              ],
+              "year": 2020
+            },
+            "page_char_end": 4161,
+            "page_char_start": 3049,
+            "pdf_page": 2,
+            "printed_page": null,
+            "section": null,
+            "text": "42.9% in Top-5 accuracy), but also results in a substantial improvement on the end-to-end QA accuracy compared to ORQA (41.5% vs. 33.3%) in the open Natural Questions setting (Lee et al., 2019; Kwiatkowski et al., 2019). Our contributions are twofold. First, we demon- strate that with the proper training setup, sim- ply ﬁne-tuning the question and passage encoders on existing question-passage pairs is sufﬁcient to greatly outperform BM25. Our empirical results also suggest that additional pretraining may not be needed. Second, we verify that, in the context of open-domain question answering, a higher retrieval precision indeed translates to a higher end-to-end QA accuracy. By applying a modern reader model to the top retrieved passages, we achieve compara- ble or better results on multiple QA datasets in the open-retrieval setting, compared to several, much complicated systems.\n\n2 Background\n\nOur dense passage retriever (DPR) uses a dense encoder EP (·) which maps any text passage to a d- dimensional real-valued vectors and builds an index for all the M passages that we will use for retrieval.\n\n",
+            "token_count": null
+          },
+          "scores": {
+            "bm25": null,
+            "cosine": 0.6643270811536506,
+            "rrf": null,
+            "rerank": null
+          },
+          "matched_by": [
+            "vector"
+          ],
+          "index_version": "idx_20261013T091440_23f3ebf728f9"
+        },
+        {
+          "rank": 2,
+          "chunk": {
+            "char_count": 1122,
+            "chunk_id": "c_3e67fc1a9977715acf722d85f0b7d124b03715e975f6310a4d6c12094190912f_p0001_0001",
+            "chunk_order": 1,
+            "doc_id": "d_3e67fc1a9977715acf722d85f0b7d124b03715e975f6310a4d6c12094190912f",
+            "document": {
+              "authors": [
+                "Karpukhin, Vladimir",
+                "Oğuz, Barlas",
+                "Min, Sewon",
+                "Lewis, Patrick",
+                "Wu, Ledell",
+                "Edunov, Sergey",
+                "Chen, Danqi",
+                "Yih, Wen-tau"
+              ],
+              "language": "en",
+              "title": "Dense Passage Retrieval for Open-Domain Question Answering",
+              "topics": [
+                "arXiv实验"
+              ],
+              "year": 2020
+            },
+            "page_char_end": 1122,
+            "page_char_start": 0,
+            "pdf_page": 1,
+            "printed_page": null,
+            "section": null,
+            "text": "Dense Passage Retrieval for Open-Domain Question Answering\n\nVladimir Karpukhin∗, Barlas O˘guz∗, Sewon Min†, Patrick Lewis, Ledell Wu, Sergey Edunov, Danqi Chen‡, Wen-tau Yih Facebook AI †University of Washington ‡Princeton University {vladk, barlaso, plewis, ledell, edunov, scottyih}@fb.com sewon@cs.washington.edu danqic@cs.princeton.edu\n\nAbstract\n\nOpen-domain question answering relies on ef- ﬁcient passage retrieval to select candidate contexts, where traditional sparse vector space models, such as TF-IDF or BM25, are the de facto method. In this work, we show that retrieval can be practically implemented us- ing dense representations alone, where em- beddings are learned from a small number of questions and passages by a simple dual- encoder framework. When evaluated on a wide range of open-domain QA datasets, our dense retriever outperforms a strong Lucene- BM25 system greatly by 9%-19% absolute in terms of top-20 passage retrieval accuracy, and helps our end-to-end QA system establish new state-of-the-art on multiple open-domain QA benchmarks.1\n\n1 Introduction\n\narXiv:2004.04906v3 [cs.CL] 30 Sep 2020\n\n",
+            "token_count": null
+          },
+          "scores": {
+            "bm25": null,
+            "cosine": 0.6592075615063239,
+            "rrf": null,
+            "rerank": null
+          },
+          "matched_by": [
+            "vector"
+          ],
+          "index_version": "idx_20261013T091440_23f3ebf728f9"
+        },
+        {
+          "rank": 3,
+          "chunk": {
+            "char_count": 1067,
+            "chunk_id": "c_3e67fc1a9977715acf722d85f0b7d124b03715e975f6310a4d6c12094190912f_p0012_0004",
+            "chunk_order": 4,
+            "doc_id": "d_3e67fc1a9977715acf722d85f0b7d124b03715e975f6310a4d6c12094190912f",
+            "document": {
+              "authors": [
+                "Karpukhin, Vladimir",
+                "Oğuz, Barlas",
+                "Min, Sewon",
+                "Lewis, Patrick",
+                "Wu, Ledell",
+                "Edunov, Sergey",
+                "Chen, Danqi",
+                "Yih, Wen-tau"
+              ],
+              "language": "en",
+              "title": "Dense Passage Retrieval for Open-Domain Question Answering",
+              "topics": [
+                "arXiv实验"
+              ],
+              "year": 2020
+            },
+            "page_char_end": 3565,
+            "page_char_start": 2498,
+            "pdf_page": 12,
+            "printed_page": null,
+            "section": null,
+            "text": "We ﬁx the passage encoder in our joint-training scheme while allowing only the question encoder to receive backpropagation signal from the com- bined (retriever + reader) loss function. This allows us to leverage the HNSW-based FAISS index for efﬁcient low-latency retrieving, without reindexing the passages during model updates. Our loss func- tion largely follows ORQA’s approach, which uses log probabilities of positive passages selected from the retriever model, and correct spans and passages selected from the reader model. Since the passage encoder is ﬁxed, we could use larger amount of retrieved passages when calculating the retriever loss. Speciﬁcally, we get top 100 passages for each question in a mini-batch and use the method similar to in-batch negative training: all retrieved passages’ vectors participate in the loss calculation for all questions in a batch. Our training batch size is set to 16, which effectively gives 1,600 passages per question to calculate retriever loss. The reader still uses 24 passages per question, which are selected\n\n",
+            "token_count": null
+          },
+          "scores": {
+            "bm25": null,
+            "cosine": 0.6487404262351804,
+            "rrf": null,
+            "rerank": null
+          },
+          "matched_by": [
+            "vector"
+          ],
+          "index_version": "idx_20261013T091440_23f3ebf728f9"
+        },
+        {
+          "rank": 4,
+          "chunk": {
+            "char_count": 1170,
+            "chunk_id": "c_1925755aeb627123d1a63c66f02e5aa2432f7e92751a02bea7c8c3b6bbb6ec33_p0006_0003",
+            "chunk_order": 3,
+            "doc_id": "d_1925755aeb627123d1a63c66f02e5aa2432f7e92751a02bea7c8c3b6bbb6ec33",
+            "document": {
+              "authors": [
+                "Thakur, Nandan",
+                "Reimers, Nils",
+                "Rücklé, Andreas",
+                "Srivastava, Abhishek",
+                "Gurevych, Iryna"
+              ],
+              "language": "en",
+              "title": "BEIR: A Heterogenous Benchmark for Zero-shot Evaluation of Information Retrieval Models",
+              "topics": [
+                "arXiv实验"
+              ],
+              "year": 2021
+            },
+            "page_char_end": 2374,
+            "page_char_start": 1204,
+            "pdf_page": 6,
+            "printed_page": null,
+            "section": null,
+            "text": "(iii) Dense Retrieval: (a) DPR [31] is a two-tower bi-encoder trained with a single BM25 hard negative and in-batch negatives. We found the open-sourced Multi model to perform better over the single NQ model in our setting. The Multi-DPR model is a bert-base-uncased model trained on four QA datasets (including titles): NQ [34], TriviaQA [30], WebQuestions [4] and CuratedTREC [3]. (b) ANCE [73] is a bi-encoder constructing hard negatives from an Approximate Nearest Neighbor (ANN) index of the corpus, which in parallel updates to select hard negative training instances during ﬁne-tuning of the model. We use the publicly available RoBERTa [41] model trained on MS MARCO [45] for 600K steps for our experiments. (c) TAS-B [23] is a bi-encoder trained with Balanced Topic Aware Sampling using dual supervision from a cross-encoder and a ColBERT model. The model was trained with a combination of both a pairwise Margin-MSE [24] loss and an in-batch negative loss function. (d) GenQ: is an unsupervised domain-adaption approach for dense retrieval models by training on synthetically generated data. First, we ﬁne-tune a T5 (base) [52] model on MS MARCO for 2 epochs. ",
+            "token_count": null
+          },
+          "scores": {
+            "bm25": null,
+            "cosine": 0.6440365072638153,
+            "rrf": null,
+            "rerank": null
+          },
+          "matched_by": [
+            "vector"
+          ],
+          "index_version": "idx_20261013T091440_23f3ebf728f9"
+        },
+        {
+          "rank": 5,
+          "chunk": {
+            "char_count": 1095,
+            "chunk_id": "c_7407131fd633561d8eab8701e43ca81061960b6642ae180eb86a3f367b2b8408_p0003_0002",
+            "chunk_order": 2,
+            "doc_id": "d_7407131fd633561d8eab8701e43ca81061960b6642ae180eb86a3f367b2b8408",
+            "document": {
+              "authors": [
+                "Izacard, Gautier",
+                "Caron, Mathilde",
+                "Hosseini, Lucas",
+                "Riedel, Sebastian",
+                "Bojanowski, Piotr",
+                "Joulin, Armand",
+                "Grave, Edouard"
+              ],
+              "language": "en",
+              "title": "Unsupervised Dense Information Retrieval with Contrastive Learning",
+              "topics": [
+                "arXiv实验"
+              ],
+              "year": 2021
+            },
+            "page_char_end": 1397,
+            "page_char_start": 302,
+            "pdf_page": 3,
+            "printed_page": null,
+            "section": null,
+            "text": "The methods described in the previous paragraph were applied to re-rank documents, which were retrieved with a traditional IR system such as BM25. Gillick et al. (2018) ﬁrst studied whether continuous retrievers, based on bi-encoder neural models, could be viable alternative to re-ranking. In the context of question answering, Karpukhin et al. (2020) introduced a dense passage retriever (DPR) based on the bi-encoder architecture. This model is initialized with a BERT network, and trained discriminatively using pairs of queries and relevant documents, with hard negatives from BM25. Xiong et al. (2020) further extended this work by mining hard negatives with the model itself during optimization, and trained on the MS MARCO dataset. Once a collection of documents, such as Wikipedia articles, is encoded, retrieval is performed with a fast k-nearest neighbors library such as FAISS Johnson et al. (2019). To alleviate the limitations of bi-encoders, Humeau et al. (2019) introduces the poly-encoder architecture, where documents are encoded by multiple vectors. Similarly, Khattab et al. ",
+            "token_count": null
+          },
+          "scores": {
+            "bm25": null,
+            "cosine": 0.6395889844871228,
+            "rrf": null,
+            "rerank": null
+          },
+          "matched_by": [
+            "vector"
+          ],
+          "index_version": "idx_20261013T091440_23f3ebf728f9"
+        }
+      ]
+    },
+    {
+      "query": "How does dense passage retrieval use a dual encoder?",
+      "mode": "hybrid",
+      "elapsed_ms": 124.61,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk": {
+            "char_count": 1122,
+            "chunk_id": "c_3e67fc1a9977715acf722d85f0b7d124b03715e975f6310a4d6c12094190912f_p0001_0001",
+            "chunk_order": 1,
+            "doc_id": "d_3e67fc1a9977715acf722d85f0b7d124b03715e975f6310a4d6c12094190912f",
+            "document": {
+              "authors": [
+                "Karpukhin, Vladimir",
+                "Oğuz, Barlas",
+                "Min, Sewon",
+                "Lewis, Patrick",
+                "Wu, Ledell",
+                "Edunov, Sergey",
+                "Chen, Danqi",
+                "Yih, Wen-tau"
+              ],
+              "language": "en",
+              "title": "Dense Passage Retrieval for Open-Domain Question Answering",
+              "topics": [
+                "arXiv实验"
+              ],
+              "year": 2020
+            },
+            "page_char_end": 1122,
+            "page_char_start": 0,
+            "pdf_page": 1,
+            "printed_page": null,
+            "section": null,
+            "text": "Dense Passage Retrieval for Open-Domain Question Answering\n\nVladimir Karpukhin∗, Barlas O˘guz∗, Sewon Min†, Patrick Lewis, Ledell Wu, Sergey Edunov, Danqi Chen‡, Wen-tau Yih Facebook AI †University of Washington ‡Princeton University {vladk, barlaso, plewis, ledell, edunov, scottyih}@fb.com sewon@cs.washington.edu danqic@cs.princeton.edu\n\nAbstract\n\nOpen-domain question answering relies on ef- ﬁcient passage retrieval to select candidate contexts, where traditional sparse vector space models, such as TF-IDF or BM25, are the de facto method. In this work, we show that retrieval can be practically implemented us- ing dense representations alone, where em- beddings are learned from a small number of questions and passages by a simple dual- encoder framework. When evaluated on a wide range of open-domain QA datasets, our dense retriever outperforms a strong Lucene- BM25 system greatly by 9%-19% absolute in terms of top-20 passage retrieval accuracy, and helps our end-to-end QA system establish new state-of-the-art on multiple open-domain QA benchmarks.1\n\n1 Introduction\n\narXiv:2004.04906v3 [cs.CL] 30 Sep 2020\n\n",
+            "token_count": null
+          },
+          "scores": {
+            "bm25": 13.078706692098802,
+            "cosine": 0.6592075615063239,
+            "rrf": 0.03252247488101534,
+            "rerank": null
+          },
+          "matched_by": [
+            "keyword",
+            "vector"
+          ],
+          "index_version": "idx_20261013T091440_23f3ebf728f9"
+        },
+        {
+          "rank": 2,
+          "chunk": {
+            "char_count": 1067,
+            "chunk_id": "c_3e67fc1a9977715acf722d85f0b7d124b03715e975f6310a4d6c12094190912f_p0012_0004",
+            "chunk_order": 4,
+            "doc_id": "d_3e67fc1a9977715acf722d85f0b7d124b03715e975f6310a4d6c12094190912f",
+            "document": {
+              "authors": [
+                "Karpukhin, Vladimir",
+                "Oğuz, Barlas",
+                "Min, Sewon",
+                "Lewis, Patrick",
+                "Wu, Ledell",
+                "Edunov, Sergey",
+                "Chen, Danqi",
+                "Yih, Wen-tau"
+              ],
+              "language": "en",
+              "title": "Dense Passage Retrieval for Open-Domain Question Answering",
+              "topics": [
+                "arXiv实验"
+              ],
+              "year": 2020
+            },
+            "page_char_end": 3565,
+            "page_char_start": 2498,
+            "pdf_page": 12,
+            "printed_page": null,
+            "section": null,
+            "text": "We ﬁx the passage encoder in our joint-training scheme while allowing only the question encoder to receive backpropagation signal from the com- bined (retriever + reader) loss function. This allows us to leverage the HNSW-based FAISS index for efﬁcient low-latency retrieving, without reindexing the passages during model updates. Our loss func- tion largely follows ORQA’s approach, which uses log probabilities of positive passages selected from the retriever model, and correct spans and passages selected from the reader model. Since the passage encoder is ﬁxed, we could use larger amount of retrieved passages when calculating the retriever loss. Speciﬁcally, we get top 100 passages for each question in a mini-batch and use the method similar to in-batch negative training: all retrieved passages’ vectors participate in the loss calculation for all questions in a batch. Our training batch size is set to 16, which effectively gives 1,600 passages per question to calculate retriever loss. The reader still uses 24 passages per question, which are selected\n\n",
+            "token_count": null
+          },
+          "scores": {
+            "bm25": 9.759456848290984,
+            "cosine": 0.6487404262351804,
+            "rrf": 0.03125763125763126,
+            "rerank": null
+          },
+          "matched_by": [
+            "keyword",
+            "vector"
+          ],
+          "index_version": "idx_20261013T091440_23f3ebf728f9"
+        },
+        {
+          "rank": 3,
+          "chunk": {
+            "char_count": 1112,
+            "chunk_id": "c_3e67fc1a9977715acf722d85f0b7d124b03715e975f6310a4d6c12094190912f_p0002_0004",
+            "chunk_order": 4,
+            "doc_id": "d_3e67fc1a9977715acf722d85f0b7d124b03715e975f6310a4d6c12094190912f",
+            "document": {
+              "authors": [
+                "Karpukhin, Vladimir",
+                "Oğuz, Barlas",
+                "Min, Sewon",
+                "Lewis, Patrick",
+                "Wu, Ledell",
+                "Edunov, Sergey",
+                "Chen, Danqi",
+                "Yih, Wen-tau"
+              ],
+              "language": "en",
+              "title": "Dense Passage Retrieval for Open-Domain Question Answering",
+              "topics": [
+                "arXiv实验"
+              ],
+              "year": 2020
+            },
+            "page_char_end": 4161,
+            "page_char_start": 3049,
+            "pdf_page": 2,
+            "printed_page": null,
+            "section": null,
+            "text": "42.9% in Top-5 accuracy), but also results in a substantial improvement on the end-to-end QA accuracy compared to ORQA (41.5% vs. 33.3%) in the open Natural Questions setting (Lee et al., 2019; Kwiatkowski et al., 2019). Our contributions are twofold. First, we demon- strate that with the proper training setup, sim- ply ﬁne-tuning the question and passage encoders on existing question-passage pairs is sufﬁcient to greatly outperform BM25. Our empirical results also suggest that additional pretraining may not be needed. Second, we verify that, in the context of open-domain question answering, a higher retrieval precision indeed translates to a higher end-to-end QA accuracy. By applying a modern reader model to the top retrieved passages, we achieve compara- ble or better results on multiple QA datasets in the open-retrieval setting, compared to several, much complicated systems.\n\n2 Background\n\nOur dense passage retriever (DPR) uses a dense encoder EP (·) which maps any text passage to a d- dimensional real-valued vectors and builds an index for all the M passages that we will use for retrieval.\n\n",
+            "token_count": null
+          },
+          "scores": {
+            "bm25": 9.0035804698677,
+            "cosine": 0.6643270811536506,
+            "rrf": 0.030886196246139225,
+            "rerank": null
+          },
+          "matched_by": [
+            "keyword",
+            "vector"
+          ],
+          "index_version": "idx_20261013T091440_23f3ebf728f9"
+        },
+        {
+          "rank": 4,
+          "chunk": {
+            "char_count": 1170,
+            "chunk_id": "c_1925755aeb627123d1a63c66f02e5aa2432f7e92751a02bea7c8c3b6bbb6ec33_p0006_0003",
+            "chunk_order": 3,
+            "doc_id": "d_1925755aeb627123d1a63c66f02e5aa2432f7e92751a02bea7c8c3b6bbb6ec33",
+            "document": {
+              "authors": [
+                "Thakur, Nandan",
+                "Reimers, Nils",
+                "Rücklé, Andreas",
+                "Srivastava, Abhishek",
+                "Gurevych, Iryna"
+              ],
+              "language": "en",
+              "title": "BEIR: A Heterogenous Benchmark for Zero-shot Evaluation of Information Retrieval Models",
+              "topics": [
+                "arXiv实验"
+              ],
+              "year": 2021
+            },
+            "page_char_end": 2374,
+            "page_char_start": 1204,
+            "pdf_page": 6,
+            "printed_page": null,
+            "section": null,
+            "text": "(iii) Dense Retrieval: (a) DPR [31] is a two-tower bi-encoder trained with a single BM25 hard negative and in-batch negatives. We found the open-sourced Multi model to perform better over the single NQ model in our setting. The Multi-DPR model is a bert-base-uncased model trained on four QA datasets (including titles): NQ [34], TriviaQA [30], WebQuestions [4] and CuratedTREC [3]. (b) ANCE [73] is a bi-encoder constructing hard negatives from an Approximate Nearest Neighbor (ANN) index of the corpus, which in parallel updates to select hard negative training instances during ﬁne-tuning of the model. We use the publicly available RoBERTa [41] model trained on MS MARCO [45] for 600K steps for our experiments. (c) TAS-B [23] is a bi-encoder trained with Balanced Topic Aware Sampling using dual supervision from a cross-encoder and a ColBERT model. The model was trained with a combination of both a pairwise Margin-MSE [24] loss and an in-batch negative loss function. (d) GenQ: is an unsupervised domain-adaption approach for dense retrieval models by training on synthetically generated data. First, we ﬁne-tune a T5 (base) [52] model on MS MARCO for 2 epochs. ",
+            "token_count": null
+          },
+          "scores": {
+            "bm25": 8.441910746627308,
+            "cosine": 0.6440365072638153,
+            "rrf": 0.0293236301369863,
+            "rerank": null
+          },
+          "matched_by": [
+            "keyword",
+            "vector"
+          ],
+          "index_version": "idx_20261013T091440_23f3ebf728f9"
+        },
+        {
+          "rank": 5,
+          "chunk": {
+            "char_count": 942,
+            "chunk_id": "c_3e67fc1a9977715acf722d85f0b7d124b03715e975f6310a4d6c12094190912f_p0009_0005",
+            "chunk_order": 5,
+            "doc_id": "d_3e67fc1a9977715acf722d85f0b7d124b03715e975f6310a4d6c12094190912f",
+            "document": {
+              "authors": [
+                "Karpukhin, Vladimir",
+                "Oğuz, Barlas",
+                "Min, Sewon",
+                "Lewis, Patrick",
+                "Wu, Ledell",
+                "Edunov, Sergey",
+                "Chen, Danqi",
+                "Yih, Wen-tau"
+              ],
+              "language": "en",
+              "title": "Dense Passage Retrieval for Open-Domain Question Answering",
+              "topics": [
+                "arXiv实验"
+              ],
+              "year": 2020
+            },
+            "page_char_end": 4656,
+            "page_char_start": 3714,
+            "pdf_page": 9,
+            "printed_page": null,
+            "section": null,
+            "text": "Dense retrieval for open-domain QA has been explored by Das et al. (2019), who propose to re- trieve relevant passages iteratively using reformu- lated question vectors. As an alternative approach that skips passage retrieval, Seo et al. (2019) pro- pose to encode candidate answer phrases as vectors and directly retrieve the answers to the input ques- tions efﬁciently. Using additional pretraining with the objective that matches surrogates of questions and relevant passages, Lee et al. (2019) jointly train the question encoder and reader. Their approach outperforms the BM25 plus reader paradigm on multiple open-domain QA datasets in QA accuracy, and is further extended by REALM (Guu et al., 2020), which includes tuning the passage encoder asynchronously by re-indexing the passages dur- ing training. The pretraining objective has also recently been improved by Xiong et al. (2020b). In contrast, our model provides a simple and yet",
+            "token_count": null
+          },
+          "scores": {
+            "bm25": 8.46613163214617,
+            "cosine": 0.6258894767611733,
+            "rrf": 0.028814262023217248,
+            "rerank": null
+          },
+          "matched_by": [
+            "keyword",
+            "vector"
+          ],
+          "index_version": "idx_20261013T091440_23f3ebf728f9"
+        }
+      ]
+    },
+    {
+      "query": "把有答案的材料放到长上下文中间，会有什么影响？",
+      "mode": "keyword",
+      "elapsed_ms": 6.25,
+      "hits": []
+    },
+    {
+      "query": "把有答案的材料放到长上下文中间，会有什么影响？",
+      "mode": "vector",
+      "elapsed_ms": 129.65,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk": {
+            "char_count": 756,
+            "chunk_id": "c_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1_p0004_0003",
+            "chunk_order": 3,
+            "doc_id": "d_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1",
+            "document": {
+              "authors": [
+                "Liu, Nelson F.",
+                "Lin, Kevin",
+                "Hewitt, John",
+                "Paranjape, Ashwin",
+                "Bevilacqua, Michele",
+                "Petroni, Fabio",
+                "Liang, Percy"
+              ],
+              "language": "en",
+              "title": "Lost in the Middle: How Language Models Use Long Contexts",
+              "topics": [
+                "arXiv实验"
+              ],
+              "year": 2023
+            },
+            "page_char_end": 2850,
+            "page_char_start": 2094,
+            "pdf_page": 4,
+            "printed_page": null,
+            "section": null,
+            "text": "Figure 4: Modulating the input context length of the multi-document question answering example presented in Figure 2. Adding documents that do not contain the answer increases the length of the input context, but does not affect the desired output.\n\nOur experimental setup is similar to the needle- in-a-haystack experiments of Ivgi et al. (2023), who compare question answering performance when the relevant paragraph is placed (i) at the beginning of the input or (ii) a random position within the in- put. They find that encoder-decoder models have significantly higher performance when relevant in- formation is placed at the start of the input context. In contrast, we study finer-grained changes in the position of relevant information.\n\n2.2 Models\n\n",
+            "token_count": null
+          },
+          "scores": {
+            "bm25": null,
+            "cosine": 0.646922149093184,
+            "rrf": null,
+            "rerank": null
+          },
+          "matched_by": [
+            "vector"
+          ],
+          "index_version": "idx_20261013T091440_23f3ebf728f9"
+        },
+        {
+          "rank": 2,
+          "chunk": {
+            "char_count": 861,
+            "chunk_id": "c_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1_p0003_0006",
+            "chunk_order": 6,
+            "doc_id": "d_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1",
+            "document": {
+              "authors": [
+                "Liu, Nelson F.",
+                "Lin, Kevin",
+                "Hewitt, John",
+                "Paranjape, Ashwin",
+                "Bevilacqua, Michele",
+                "Petroni, Fabio",
+                "Liang, Percy"
+              ],
+              "language": "en",
+              "title": "Lost in the Middle: How Language Models Use Long Contexts",
+              "topics": [
+                "arXiv实验"
+              ],
+              "year": 2023
+            },
+            "page_char_end": 4909,
+            "page_char_start": 4048,
+            "pdf_page": 3,
+            "printed_page": null,
+            "section": null,
+            "text": "In the multi-document question answering task, the model inputs are (i) a question to answer and (ii) k documents (e.g., passages from Wikipedia), where exactly one of the documents contains the answer\n\n1nelsonliu.me/papers/lost-in-the-middle\n\n2Ambiguity in NaturalQuestions-Open means that a small number of distractor passages may contain a reasonable an- swer. We additionally run experiments on subset of unam- biguous questions, finding similar results and conclusions; see Appendix A. 3We also explored using random documents as distractors, see Appendix B for more details. 4Since there might be a prior over “search results” appear- ing in ranked order, we explored randomly ordering the k −1 distractor documents and mentioning that the documents are randomly ordered in the task description, but found the same trends. See Appendix C for more details.",
+            "token_count": null
+          },
+          "scores": {
+            "bm25": null,
+            "cosine": 0.6050940622209047,
+            "rrf": null,
+            "rerank": null
+          },
+          "matched_by": [
+            "vector"
+          ],
+          "index_version": "idx_20261013T091440_23f3ebf728f9"
+        },
+        {
+          "rank": 3,
+          "chunk": {
+            "char_count": 623,
+            "chunk_id": "c_1925755aeb627123d1a63c66f02e5aa2432f7e92751a02bea7c8c3b6bbb6ec33_p0021_0004",
+            "chunk_order": 4,
+            "doc_id": "d_1925755aeb627123d1a63c66f02e5aa2432f7e92751a02bea7c8c3b6bbb6ec33",
+            "document": {
+              "authors": [
+                "Thakur, Nandan",
+                "Reimers, Nils",
+                "Rücklé, Andreas",
+                "Srivastava, Abhishek",
+                "Gurevych, Iryna"
+              ],
+              "language": "en",
+              "title": "BEIR: A Heterogenous Benchmark for Zero-shot Evaluation of Information Retrieval Models",
+              "topics": [
+                "arXiv实验"
+              ],
+              "year": 2021
+            },
+            "page_char_end": 3598,
+            "page_char_start": 2975,
+            "pdf_page": 21,
+            "printed_page": null,
+            "section": null,
+            "text": "Further, as we observe in Figure 5, relevance judgement scores are not uniformly distributed over document lengths: for some datasets, longer documents are annotated with higher relevancy scores, while in others, shorter documents are. This can be either due to the annotation process, e.g., the candidate selection method prefers short or long documents, or due to the task itself, where shorter or longer documents could be more relevant to the user information need. Hence, it can be more advantageous to train a model with either cosine-similarity or dot-product depending upon the nature and needs of the speciﬁc task.",
+            "token_count": null
+          },
+          "scores": {
+            "bm25": null,
+            "cosine": 0.6004060723489941,
+            "rrf": null,
+            "rerank": null
+          },
+          "matched_by": [
+            "vector"
+          ],
+          "index_version": "idx_20261013T091440_23f3ebf728f9"
+        },
+        {
+          "rank": 4,
+          "chunk": {
+            "char_count": 996,
+            "chunk_id": "c_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1_p0014_0002",
+            "chunk_order": 2,
+            "doc_id": "d_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1",
+            "document": {
+              "authors": [
+                "Liu, Nelson F.",
+                "Lin, Kevin",
+                "Hewitt, John",
+                "Paranjape, Ashwin",
+                "Bevilacqua, Michele",
+                "Petroni, Fabio",
+                "Liang, Percy"
+              ],
+              "language": "en",
+              "title": "Lost in the Middle: How Language Models Use Long Contexts",
+              "topics": [
+                "arXiv实验"
+              ],
+              "year": 2023
+            },
+            "page_char_end": 2161,
+            "page_char_start": 1165,
+            "pdf_page": 14,
+            "printed_page": null,
+            "section": null,
+            "text": "Manzil Zaheer, Guru Guruganesh, Kumar Avinava Dubey, Joshua Ainslie, Chris Alberti, Santiago Ontanon, Philip Pham, Anirudh Ravula, Qifan Wang, Li Yang, and Amr Ahmed. 2020. Big Bird: Transformers for longer sequences. In Proc. of NeurIPS.\n\nA Ambiguity in Multi-Document QA Distractor Documents\n\nWe also run multi-document question answering experiments with random Wikipedia documents as distractors, which allows us to ablate the impact of retrieved distractors (hard negatives). Note that in this setting, the the document containing the an- swer can often be identified with simple heuristics (e.g., lexical overlap with the query). Figure 13 presents the results of this experiment. Although all models have higher absolute accuracy in this setting, they surprisingly still struggle to reason over their entire input context, indicating that their performance degradation is not solely due to an inability to identify relevant documents.\n\nC Randomizing Distractor Order in Multi-Document QA\n\n",
+            "token_count": null
+          },
+          "scores": {
+            "bm25": null,
+            "cosine": 0.5904753937219732,
+            "rrf": null,
+            "rerank": null
+          },
+          "matched_by": [
+            "vector"
+          ],
+          "index_version": "idx_20261013T091440_23f3ebf728f9"
+        },
+        {
+          "rank": 5,
+          "chunk": {
+            "char_count": 724,
+            "chunk_id": "c_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1_p0001_0003",
+            "chunk_order": 3,
+            "doc_id": "d_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1",
+            "document": {
+              "authors": [
+                "Liu, Nelson F.",
+                "Lin, Kevin",
+                "Hewitt, John",
+                "Paranjape, Ashwin",
+                "Bevilacqua, Michele",
+                "Petroni, Fabio",
+                "Liang, Percy"
+              ],
+              "language": "en",
+              "title": "Lost in the Middle: How Language Models Use Long Contexts",
+              "topics": [
+                "arXiv实验"
+              ],
+              "year": 2023
+            },
+            "page_char_end": 2186,
+            "page_char_start": 1462,
+            "pdf_page": 1,
+            "printed_page": null,
+            "section": null,
+            "text": "Figure 1: Changing the location of relevant information (in this case, the position of the passage that answers an input question) within the language model’s input con- text results in a U-shaped performance curve—models are better at using relevant information that occurs at the very beginning (primacy bias) or end of its input context (recency bias), and performance degrades significantly when models must access and use information located in the middle of its input context.\n\n1 Introduction\n\narXiv:2307.03172v3 [cs.CL] 20 Nov 2023\n\nrelevant documents from a search engine, database query results, etc; Petroni et al., 2020; Ram et al., 2023; Shi et al., 2023; Mallen et al., 2023; Schick et al., 2023, inter alia).\n\n",
+            "token_count": null
+          },
+          "scores": {
+            "bm25": null,
+            "cosine": 0.5889586008867693,
+            "rrf": null,
+            "rerank": null
+          },
+          "matched_by": [
+            "vector"
+          ],
+          "index_version": "idx_20261013T091440_23f3ebf728f9"
+        }
+      ]
+    },
+    {
+      "query": "把有答案的材料放到长上下文中间，会有什么影响？",
+      "mode": "hybrid",
+      "elapsed_ms": 158.84,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk": {
+            "char_count": 756,
+            "chunk_id": "c_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1_p0004_0003",
+            "chunk_order": 3,
+            "doc_id": "d_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1",
+            "document": {
+              "authors": [
+                "Liu, Nelson F.",
+                "Lin, Kevin",
+                "Hewitt, John",
+                "Paranjape, Ashwin",
+                "Bevilacqua, Michele",
+                "Petroni, Fabio",
+                "Liang, Percy"
+              ],
+              "language": "en",
+              "title": "Lost in the Middle: How Language Models Use Long Contexts",
+              "topics": [
+                "arXiv实验"
+              ],
+              "year": 2023
+            },
+            "page_char_end": 2850,
+            "page_char_start": 2094,
+            "pdf_page": 4,
+            "printed_page": null,
+            "section": null,
+            "text": "Figure 4: Modulating the input context length of the multi-document question answering example presented in Figure 2. Adding documents that do not contain the answer increases the length of the input context, but does not affect the desired output.\n\nOur experimental setup is similar to the needle- in-a-haystack experiments of Ivgi et al. (2023), who compare question answering performance when the relevant paragraph is placed (i) at the beginning of the input or (ii) a random position within the in- put. They find that encoder-decoder models have significantly higher performance when relevant in- formation is placed at the start of the input context. In contrast, we study finer-grained changes in the position of relevant information.\n\n2.2 Models\n\n",
+            "token_count": null
+          },
+          "scores": {
+            "bm25": null,
+            "cosine": 0.646922149093184,
+            "rrf": 0.01639344262295082,
+            "rerank": null
+          },
+          "matched_by": [
+            "vector"
+          ],
+          "index_version": "idx_20261013T091440_23f3ebf728f9"
+        },
+        {
+          "rank": 2,
+          "chunk": {
+            "char_count": 861,
+            "chunk_id": "c_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1_p0003_0006",
+            "chunk_order": 6,
+            "doc_id": "d_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1",
+            "document": {
+              "authors": [
+                "Liu, Nelson F.",
+                "Lin, Kevin",
+                "Hewitt, John",
+                "Paranjape, Ashwin",
+                "Bevilacqua, Michele",
+                "Petroni, Fabio",
+                "Liang, Percy"
+              ],
+              "language": "en",
+              "title": "Lost in the Middle: How Language Models Use Long Contexts",
+              "topics": [
+                "arXiv实验"
+              ],
+              "year": 2023
+            },
+            "page_char_end": 4909,
+            "page_char_start": 4048,
+            "pdf_page": 3,
+            "printed_page": null,
+            "section": null,
+            "text": "In the multi-document question answering task, the model inputs are (i) a question to answer and (ii) k documents (e.g., passages from Wikipedia), where exactly one of the documents contains the answer\n\n1nelsonliu.me/papers/lost-in-the-middle\n\n2Ambiguity in NaturalQuestions-Open means that a small number of distractor passages may contain a reasonable an- swer. We additionally run experiments on subset of unam- biguous questions, finding similar results and conclusions; see Appendix A. 3We also explored using random documents as distractors, see Appendix B for more details. 4Since there might be a prior over “search results” appear- ing in ranked order, we explored randomly ordering the k −1 distractor documents and mentioning that the documents are randomly ordered in the task description, but found the same trends. See Appendix C for more details.",
+            "token_count": null
+          },
+          "scores": {
+            "bm25": null,
+            "cosine": 0.6050940622209047,
+            "rrf": 0.016129032258064516,
+            "rerank": null
+          },
+          "matched_by": [
+            "vector"
+          ],
+          "index_version": "idx_20261013T091440_23f3ebf728f9"
+        },
+        {
+          "rank": 3,
+          "chunk": {
+            "char_count": 623,
+            "chunk_id": "c_1925755aeb627123d1a63c66f02e5aa2432f7e92751a02bea7c8c3b6bbb6ec33_p0021_0004",
+            "chunk_order": 4,
+            "doc_id": "d_1925755aeb627123d1a63c66f02e5aa2432f7e92751a02bea7c8c3b6bbb6ec33",
+            "document": {
+              "authors": [
+                "Thakur, Nandan",
+                "Reimers, Nils",
+                "Rücklé, Andreas",
+                "Srivastava, Abhishek",
+                "Gurevych, Iryna"
+              ],
+              "language": "en",
+              "title": "BEIR: A Heterogenous Benchmark for Zero-shot Evaluation of Information Retrieval Models",
+              "topics": [
+                "arXiv实验"
+              ],
+              "year": 2021
+            },
+            "page_char_end": 3598,
+            "page_char_start": 2975,
+            "pdf_page": 21,
+            "printed_page": null,
+            "section": null,
+            "text": "Further, as we observe in Figure 5, relevance judgement scores are not uniformly distributed over document lengths: for some datasets, longer documents are annotated with higher relevancy scores, while in others, shorter documents are. This can be either due to the annotation process, e.g., the candidate selection method prefers short or long documents, or due to the task itself, where shorter or longer documents could be more relevant to the user information need. Hence, it can be more advantageous to train a model with either cosine-similarity or dot-product depending upon the nature and needs of the speciﬁc task.",
+            "token_count": null
+          },
+          "scores": {
+            "bm25": null,
+            "cosine": 0.6004060723489941,
+            "rrf": 0.015873015873015872,
+            "rerank": null
+          },
+          "matched_by": [
+            "vector"
+          ],
+          "index_version": "idx_20261013T091440_23f3ebf728f9"
+        },
+        {
+          "rank": 4,
+          "chunk": {
+            "char_count": 996,
+            "chunk_id": "c_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1_p0014_0002",
+            "chunk_order": 2,
+            "doc_id": "d_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1",
+            "document": {
+              "authors": [
+                "Liu, Nelson F.",
+                "Lin, Kevin",
+                "Hewitt, John",
+                "Paranjape, Ashwin",
+                "Bevilacqua, Michele",
+                "Petroni, Fabio",
+                "Liang, Percy"
+              ],
+              "language": "en",
+              "title": "Lost in the Middle: How Language Models Use Long Contexts",
+              "topics": [
+                "arXiv实验"
+              ],
+              "year": 2023
+            },
+            "page_char_end": 2161,
+            "page_char_start": 1165,
+            "pdf_page": 14,
+            "printed_page": null,
+            "section": null,
+            "text": "Manzil Zaheer, Guru Guruganesh, Kumar Avinava Dubey, Joshua Ainslie, Chris Alberti, Santiago Ontanon, Philip Pham, Anirudh Ravula, Qifan Wang, Li Yang, and Amr Ahmed. 2020. Big Bird: Transformers for longer sequences. In Proc. of NeurIPS.\n\nA Ambiguity in Multi-Document QA Distractor Documents\n\nWe also run multi-document question answering experiments with random Wikipedia documents as distractors, which allows us to ablate the impact of retrieved distractors (hard negatives). Note that in this setting, the the document containing the an- swer can often be identified with simple heuristics (e.g., lexical overlap with the query). Figure 13 presents the results of this experiment. Although all models have higher absolute accuracy in this setting, they surprisingly still struggle to reason over their entire input context, indicating that their performance degradation is not solely due to an inability to identify relevant documents.\n\nC Randomizing Distractor Order in Multi-Document QA\n\n",
+            "token_count": null
+          },
+          "scores": {
+            "bm25": null,
+            "cosine": 0.5904753937219732,
+            "rrf": 0.015625,
+            "rerank": null
+          },
+          "matched_by": [
+            "vector"
+          ],
+          "index_version": "idx_20261013T091440_23f3ebf728f9"
+        },
+        {
+          "rank": 5,
+          "chunk": {
+            "char_count": 724,
+            "chunk_id": "c_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1_p0001_0003",
+            "chunk_order": 3,
+            "doc_id": "d_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1",
+            "document": {
+              "authors": [
+                "Liu, Nelson F.",
+                "Lin, Kevin",
+                "Hewitt, John",
+                "Paranjape, Ashwin",
+                "Bevilacqua, Michele",
+                "Petroni, Fabio",
+                "Liang, Percy"
+              ],
+              "language": "en",
+              "title": "Lost in the Middle: How Language Models Use Long Contexts",
+              "topics": [
+                "arXiv实验"
+              ],
+              "year": 2023
+            },
+            "page_char_end": 2186,
+            "page_char_start": 1462,
+            "pdf_page": 1,
+            "printed_page": null,
+            "section": null,
+            "text": "Figure 1: Changing the location of relevant information (in this case, the position of the passage that answers an input question) within the language model’s input con- text results in a U-shaped performance curve—models are better at using relevant information that occurs at the very beginning (primacy bias) or end of its input context (recency bias), and performance degrades significantly when models must access and use information located in the middle of its input context.\n\n1 Introduction\n\narXiv:2307.03172v3 [cs.CL] 20 Nov 2023\n\nrelevant documents from a search engine, database query results, etc; Petroni et al., 2020; Ram et al., 2023; Shi et al., 2023; Mallen et al., 2023; Schick et al., 2023, inter alia).\n\n",
+            "token_count": null
+          },
+          "scores": {
+            "bm25": null,
+            "cosine": 0.5889586008867693,
+            "rrf": 0.015384615384615385,
+            "rerank": null
+          },
+          "matched_by": [
+            "vector"
+          ],
+          "index_version": "idx_20261013T091440_23f3ebf728f9"
+        }
+      ]
+    }
+  ],
+  "api_stats": {
+    "requests": 10,
+    "retries": 0,
+    "input_texts": 10,
+    "total_tokens": 136
+  },
+  "checks": {
+    "real_restart_same_ranking": "passed",
+    "three_mode_year_topic_filter": "passed",
+    "empty_filter_skips_api": "passed",
+    "simulated_failure_keeps_real_index": "passed",
+    "document_status_changed": false
+  }
+}

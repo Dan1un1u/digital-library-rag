@@ -1,0 +1,44 @@
+[
+  {
+    "file": "single.pdf",
+    "metadata": {
+      "title": "合成测试资料 single.pdf",
+      "authors": [],
+      "year": null,
+      "topics": [
+        "合成测试"
+      ],
+      "language": "en",
+      "source_url": null,
+      "rights_note": "本项目生成的合成测试资料"
+    }
+  },
+  {
+    "file": "multi.pdf",
+    "metadata": {
+      "title": "合成测试资料 multi.pdf",
+      "authors": [],
+      "year": null,
+      "topics": [
+        "合成测试"
+      ],
+      "language": "en",
+      "source_url": null,
+      "rights_note": "本项目生成的合成测试资料"
+    }
+  },
+  {
+    "file": "long.pdf",
+    "metadata": {
+      "title": "合成测试资料 long.pdf",
+      "authors": [],
+      "year": null,
+      "topics": [
+        "合成测试"
+      ],
+      "language": "en",
+      "source_url": null,
+      "rights_note": "本项目生成的合成测试资料"
+    }
+  }
+]

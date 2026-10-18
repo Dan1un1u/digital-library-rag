@@ -1,0 +1,6 @@
+# Verified on Windows / Python 3.13.9 in handoff/C/.venv.
+# C runtime; uses no provider SDK and no local model download.
+requests==2.34.2
+# Tests and B integration (B's NumPy 1.26.4 has no Python 3.13 wheel).
+pytest==8.3.4
+numpy==2.2.6

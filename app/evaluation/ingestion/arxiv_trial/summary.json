@@ -1,0 +1,11 @@
+{
+  "requested": 10,
+  "downloaded": 10,
+  "imported": 10,
+  "pages": 156,
+  "chunks": 732,
+  "count_mode": "character",
+  "max_chars": 1200,
+  "overlap_chars": 150,
+  "human_reading_order_review": "not_executed"
+}

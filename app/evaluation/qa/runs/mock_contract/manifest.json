@@ -1,0 +1,28 @@
+{
+  "created_at": "2026-10-16T16:42:24.087299+00:00",
+  "count": 1,
+  "variant": "full",
+  "model_config": {
+    "mode": "mock",
+    "model": "scripted-mock",
+    "context_window_tokens": 32768
+  },
+  "settings": {
+    "planning_enabled": true,
+    "retrieval_mode": "hybrid",
+    "retrieval_top_k": 20,
+    "max_evidence_chunks": 6,
+    "context_budget_tokens": 6000,
+    "max_output_tokens": 1000,
+    "max_answer_repairs": 1,
+    "context_window_tokens": 32768,
+    "corpus_scope": "数字图书馆、信息检索与知识组织主题馆藏；具体资料以检索证据为准"
+  },
+  "dataset_sha256": "e20a52f7a4e4750e8fb2fc107e0a8f24f2c5b085915d47696dd62cfde82336da",
+  "semantic_metrics_status": "pending_human_review",
+  "prompt_sha256": {
+    "planning_prompt": "ab8b1474d278853e072ccf72a20b77f7489ba986c213013b43432d5921b8e77c",
+    "answer_prompt": "a383aa7fbe8f3abb051139c9ee15c12287a00bfbdf1c27ce6fce5d565122eaa2",
+    "repair_prompt": "1445f201592171f38a3249b5b636ecb8590f12a09a2ae646a815a80e650e7018"
+  }
+}

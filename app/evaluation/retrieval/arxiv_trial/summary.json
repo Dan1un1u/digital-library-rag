@@ -1,0 +1,102 @@
+{
+  "built_at": "2026-10-13T09:18:45.795598+00:00",
+  "manifest": {
+    "artifacts": {
+      "chunks.json": "34df0d65f75c8157c4bb253f255b7e60064fdc035c871aa1d5be4456f6fecf9f",
+      "lexical.json": "8ae8856209957230290ffe7a1a4f91d018ede46c00a535153dc505476cf92ce3",
+      "vectors.npy": "b63e9b0ed9793ce533fb0b756da350ec036e2a9414af827ba48b8e2dff3d6d37"
+    },
+    "built_at": "2026-10-13T09:14:40.753152+00:00",
+    "chunk_count": 732,
+    "chunking_config": {
+      "count_mode": "character",
+      "max_chars": 1200,
+      "max_tokens": 400,
+      "overlap_chars": 150,
+      "overlap_tokens": 50,
+      "tokenizer_name": null,
+      "tokenizer_revision": null
+    },
+    "contract_version": "1.0",
+    "corpus_hash": "34df0d65f75c8157c4bb253f255b7e60064fdc035c871aa1d5be4456f6fecf9f",
+    "dimension": 1024,
+    "document_count": 10,
+    "embedding_backend": {
+      "base_url": "https://api.siliconflow.cn/v1",
+      "dimension": 1024,
+      "encoding_format": "float",
+      "input_preprocessing": "original-text-v1",
+      "model": "BAAI/bge-m3",
+      "provider": "siliconflow",
+      "revision": null,
+      "revision_pinned": false
+    },
+    "embedding_model": "BAAI/bge-m3",
+    "embedding_revision": null,
+    "index_version": "idx_20261013T091440_23f3ebf728f9",
+    "lexical_tokenizer": "nfkc-casefold-cjk-bigram-v1",
+    "normalized": true,
+    "retrieval_config": {
+      "bm25_b": 0.75,
+      "bm25_k1": 1.5,
+      "candidate_k": 20,
+      "normalize_embeddings": true,
+      "rrf_k": 60
+    },
+    "tokenizer": null
+  },
+  "question_count": 15,
+  "top_k": 20,
+  "metrics": [
+    {
+      "split": "dev",
+      "mode": "keyword",
+      "questions": 15,
+      "scored_questions": 0,
+      "hit_at_5": null,
+      "recall_at_5": null,
+      "recall_at_10": null,
+      "evidence_group_coverage_at_10": null,
+      "median_ms": 2.797,
+      "p95_ms": 3.489599999999999
+    },
+    {
+      "split": "dev",
+      "mode": "vector",
+      "questions": 15,
+      "scored_questions": 0,
+      "hit_at_5": null,
+      "recall_at_5": null,
+      "recall_at_10": null,
+      "evidence_group_coverage_at_10": null,
+      "median_ms": 118.775,
+      "p95_ms": 189.22929999999994
+    },
+    {
+      "split": "dev",
+      "mode": "hybrid",
+      "questions": 15,
+      "scored_questions": 0,
+      "hit_at_5": null,
+      "recall_at_5": null,
+      "recall_at_10": null,
+      "evidence_group_coverage_at_10": null,
+      "median_ms": 145.424,
+      "p95_ms": 168.3348
+    }
+  ],
+  "metric_unit": "chunk",
+  "fake": false,
+  "label_completeness": "由标注提供者声明；不完备标注会影响召回率解释",
+  "tuning_policy": "仅使用开发集调参；本入口不自动选择参数",
+  "metric_grouping": [
+    "split",
+    "mode"
+  ],
+  "question_counts_by_split": {
+    "dev": 15,
+    "test": 0
+  },
+  "aggregated_at": "2026-10-13T11:17:56.904609+00:00",
+  "aggregation_note": "沿用原45条真实运行记录，按开发/测试集合重新汇总；未重新调用嵌入接口。耗时从已有逐题记录计算。"
+}

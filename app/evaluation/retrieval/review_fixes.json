@@ -1,0 +1,16 @@
+{
+  "checked_at": "2026-10-13T11:20:06.535292+00:00",
+  "issues": {
+    "metrics_separated_by_split_and_mode": "passed",
+    "process_key_aliases_before_file_aliases": "passed",
+    "direct_evaluate_top_k_bounds": "passed",
+    "finite_positive_timeout_validation": "passed",
+    "all_error_codes_documented": "passed",
+    "distributed_gitignore_in_clean_repository": "passed"
+  },
+  "corpus_hash": "保留契约字段并解释其与规范化文本文件哈希一致的原因",
+  "runtime_index_rebuilt": false,
+  "external_embedding_requests_this_fix": 0,
+  "tests": "........................................................................ [ 67%]\n...................................                                      [100%]\n107 passed in 2.51s",
+  "existing_real_runs_sha256": "0fd1e6484e09b71fdd1356210e8931b600e58b33069cf746faeddd4092287e25"
+}
