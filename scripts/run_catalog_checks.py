@@ -77,7 +77,8 @@ def main():
                          for k in ["tests", "failures", "errors", "skipped"]},
                "new_cases": new_count, "reused_cases": len(cases) - new_count,
                "expected_failures": expected_failures,
-               "coverage": {}, "uncovered_focus": {}, "manual_review": "pending", "real_pdf_batch": "pending"}
+               "coverage": {}, "uncovered_focus": {}, "manual_review": "pending",
+               "real_pdf_batch": "not exercised by this offline test run; see separate batch evidence"}
     for name, row in coverage["files"].items():
         name = name.replace("\\", "/")
         metrics = row["summary"]
