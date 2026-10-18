@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "batch_id": "COL-001-20261018-P01-REPEAT",
+  "items": [
+    {
+      "item_id": "paper-001",
+      "sha256": "69c573c123ffd1538d432ab31040072dec01a375a4a5b7c2960a7667cb970dda",
+      "bytes": 3915605,
+      "expected_doc_id": "d_69c573c123ffd1538d432ab31040072dec01a375a4a5b7c2960a7667cb970dda",
+      "metadata": {
+        "title": "Squeezing Operator Performance Potential for the Ascend Architecture",
+        "authors": [
+          "Yuhang Zhou",
+          "Zhibin Wang",
+          "Guyue Liu",
+          "Shipeng Li",
+          "Xi Lin",
+          "Zibo Wang",
+          "Yongzhong Wang",
+          "Fuchun Wei",
+          "Jingyi Zhang",
+          "Zhiheng Hu",
+          "Yanlin Liu",
+          "Chunsheng Li",
+          "Ziyang Zhang",
+          "Yaoyuan Wang",
+          "Bin Zhou",
+          "Wanchun Dou",
+          "Guihai Chen",
+          "Chen Tian"
+        ],
+        "year": 2025,
+        "topics": [
+          "AI accelerators",
+          "Ascend NPU",
+          "Performance modeling"
+        ],
+        "language": "en",
+        "source_url": "https://doi.org/10.1145/3676641.3716243",
+        "rights_note": "用户指定本地 PDF，用于本机课程项目和研究测试；保留原权利声明，开放再分发许可未作推断，待人工核对。"
+      },
+      "review": {
+        "status": "ready",
+        "method": "automated_pdf_check",
+        "evidence": "docs/validation/COL-001/batches/COL-001-20261018-P01/metadata-review.json#paper-001"
+      },
+      "metadata_changes": {
+        "topics": {
+          "before": [],
+          "after": [
+            "AI accelerators",
+            "Ascend NPU",
+            "Performance modeling"
+          ]
+        },
+        "rights_note": {
+          "before": "待人工确认",
+          "after": "用户指定本地 PDF，用于本机课程项目和研究测试；保留原权利声明，开放再分发许可未作推断，待人工核对。"
+        }
+      }
+    }
+  ],
+  "plan_sha256": "7bff93d9720ede0929191bd558947f33fed5ba0eac9c56154129e334f9e92bf8"
+}

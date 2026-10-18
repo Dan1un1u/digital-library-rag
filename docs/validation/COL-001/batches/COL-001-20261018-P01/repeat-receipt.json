@@ -1,0 +1,30 @@
+{
+  "batch_id": "COL-001-20261018-P01-REPEAT",
+  "plan_sha256": "7bff93d9720ede0929191bd558947f33fed5ba0eac9c56154129e334f9e92bf8",
+  "code": {
+    "commit": "dff3ec8d8d1f648a9b154f1bd82641f8f199b761",
+    "branch": "feat/catalog-ingestion-audit",
+    "dirty": false
+  },
+  "backup_ref": "COL-001-20261018-P01-backup-02",
+  "outcome": "completed",
+  "items": [
+    {
+      "item_id": "paper-001",
+      "sha256": "69c573c123ffd1538d432ab31040072dec01a375a4a5b7c2960a7667cb970dda",
+      "outcome": "already_present",
+      "job_id": "2c982ba9cad3420fb358c4db0ac89d24",
+      "doc_id": "d_69c573c123ffd1538d432ab31040072dec01a375a4a5b7c2960a7667cb970dda",
+      "index_version": "idx_20261018T153334_20ed96d8ced7",
+      "page_count": 16,
+      "metadata_differences": {}
+    }
+  ],
+  "manual_retrieval_review": "pending",
+  "document_delta": {
+    "added": [],
+    "removed": []
+  },
+  "collection_delta_verified": true,
+  "last_event_sha256": "79a4302f9709af67ea3ab2054d7c4a5753eb4e547458e152158ca676e051e289"
+}
