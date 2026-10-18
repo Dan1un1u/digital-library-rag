@@ -1,0 +1,254 @@
+{
+  "code": {
+    "commit": "1979f7d9e9ceb0cf528ed39289a038128b648978",
+    "branch": "feat/catalog-ingestion-audit",
+    "dirty": false
+  },
+  "provider": "cliproxyapi",
+  "model": "gpt-6-luna",
+  "mode": "read-only shadow preview from this checkout",
+  "production_code_deployed": false,
+  "before_manifest": {
+    "index_version": "idx_20261018T153334_20ed96d8ced7",
+    "contract_version": "1.0",
+    "built_at": "2026-10-18T15:33:34.670944+00:00",
+    "embedding_model": "BAAI/bge-m3",
+    "embedding_revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "dimension": 1024,
+    "normalized": true,
+    "chunking_config": {
+      "count_mode": "character",
+      "tokenizer_name": null,
+      "tokenizer_revision": null,
+      "max_tokens": 400,
+      "overlap_tokens": 50,
+      "max_chars": 1200,
+      "overlap_chars": 150
+    },
+    "tokenizer": null,
+    "document_count": 25,
+    "chunk_count": 1821,
+    "corpus_hash": "124a3610097b0f8ad8f0e70c35a871c9a1f8a415957d413b286c729e87a4ad44",
+    "embedding_backend": {
+      "base_url": "http://127.0.0.1:18080/v1",
+      "dimension": 1024,
+      "encoding_format": "float",
+      "input_preprocessing": "original-text-v1;fp16;cls;l2-float32",
+      "model": "BAAI/bge-m3",
+      "provider": "local-bge-fp16",
+      "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+      "revision_pinned": true
+    },
+    "lexical_tokenizer": "nfkc-casefold-cjk-bigram-v1",
+    "retrieval_config": {
+      "candidate_k": 20,
+      "rrf_k": 60,
+      "normalize_embeddings": true,
+      "bm25_k1": 1.5,
+      "bm25_b": 0.75
+    },
+    "artifacts": {
+      "chunks.json": "124a3610097b0f8ad8f0e70c35a871c9a1f8a415957d413b286c729e87a4ad44",
+      "lexical.json": "db4f2ba71f70601dcf1a6c98169b1f7b17225d47b13ed595f9e5346ba756931f",
+      "vectors.npy": "32fae2e309103ec7d2db7656fcb79feeff59f9259de0c5abb2874b8c13488044"
+    }
+  },
+  "cases": [
+    {
+      "case_id": "paper-005",
+      "sha256": "f459188e745318a07d8aebb6b685f785125e8ae1d936e0fe250789a86afcc7f9",
+      "expected_year": null,
+      "frozen_candidate_replay": {
+        "before_year": 2023,
+        "after_year": null,
+        "year_review": {
+          "policy": "publication-year-evidence-v1",
+          "status": "needs_confirmation",
+          "reason": "missing_publication_context",
+          "rejected_value": 2023
+        }
+      },
+      "api_assistance": {
+        "status": "completed",
+        "accepted_fields": 4
+      },
+      "metadata": {
+        "title": "FQ-ViT: Post-Training Quantization for Fully Quantized Vision Transformer",
+        "authors": [
+          "Yang Lin",
+          "Tianyu Zhang",
+          "Peiqin Sun",
+          "Zheng Li",
+          "Shuchang Zhou"
+        ],
+        "year": null,
+        "language": "en",
+        "source_url": "https://arxiv.org/abs/2111.13824"
+      },
+      "year_review": {
+        "policy": "publication-year-evidence-v1",
+        "status": "needs_confirmation",
+        "reason": "not_provided",
+        "rejected_value": null
+      },
+      "year_source": null,
+      "warnings": [
+        "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+        "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+        "出版年份待核对：没有明确出版年份证据；已留空，不使用修订日期代填。",
+        "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。"
+      ],
+      "raw_model_year": null,
+      "passed": true
+    },
+    {
+      "case_id": "paper-006",
+      "sha256": "f6009b06362bbcf30b543118761f00b9b6893787d8f94a9ecfc2e589aa777b60",
+      "expected_year": 2021,
+      "api_assistance": {
+        "status": "completed",
+        "accepted_fields": 4
+      },
+      "metadata": {
+        "title": "I-BERT: Integer-only BERT Quantization",
+        "authors": [
+          "Sehoon Kim",
+          "Amir Gholami",
+          "Zhewei Yao",
+          "Michael W. Mahoney",
+          "Kurt Keutzer"
+        ],
+        "year": 2021,
+        "language": "en",
+        "source_url": "https://arxiv.org/abs/2101.01321"
+      },
+      "year_review": {
+        "policy": "publication-year-evidence-v1",
+        "status": "candidate_supported",
+        "source": "validated_seed",
+        "rejected_api_reason": "excerpt_not_on_page"
+      },
+      "year_source": {
+        "method": "document_date_candidate",
+        "pdf_page": 1,
+        "excerpt": "Copyright 2021",
+        "date_type": "copyright",
+        "grounding": "page_text"
+      },
+      "warnings": [
+        "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+        "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+        "年份为正文日期候选，请确认是否为正式出版年份。",
+        "API 年份候选未采纳；保留已有、具有出版依据的年份，仍请核对。",
+        "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。"
+      ],
+      "raw_model_year": {
+        "value": 2021,
+        "date_type": "publication",
+        "pdf_page": 1,
+        "excerpt": "Proceedings of the 38th International Conference on Machine Learning, PMLR 139, 2021."
+      },
+      "passed": true
+    },
+    {
+      "case_id": "paper-010",
+      "sha256": "fe437770d7c981eae9e028eacaa5c772ed0add900ed9dec54c10cfce6dfd86c3",
+      "expected_year": 2025,
+      "api_assistance": {
+        "status": "completed",
+        "accepted_fields": 5
+      },
+      "metadata": {
+        "title": "SpinQuant: LLM Quantization with Learned Rotations",
+        "authors": [
+          "Zechun Liu",
+          "Changsheng Zhao",
+          "Igor Fedorov",
+          "Bilge Soran",
+          "Dhruv Choudhary",
+          "Raghuraman Krishnamoorthi",
+          "Vikas Chandra",
+          "Yuandong Tian",
+          "Tijmen Blankevoort"
+        ],
+        "year": 2025,
+        "language": "en",
+        "source_url": "https://arxiv.org/abs/2405.16406"
+      },
+      "year_review": {
+        "policy": "publication-year-evidence-v1",
+        "status": "candidate_supported",
+        "source": "api",
+        "grounding": "page_text"
+      },
+      "year_source": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "Published as a conference paper at ICLR 2025",
+        "date_type": "publication",
+        "grounding": "page_text"
+      },
+      "warnings": [
+        "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+        "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+        "年份为正文日期候选，请确认是否为正式出版年份。",
+        "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。"
+      ],
+      "raw_model_year": {
+        "value": 2025,
+        "date_type": "publication",
+        "pdf_page": 1,
+        "excerpt": "Published as a conference paper at ICLR 2025"
+      },
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "human_review": "pending",
+  "after_manifest": {
+    "index_version": "idx_20261018T153334_20ed96d8ced7",
+    "contract_version": "1.0",
+    "built_at": "2026-10-18T15:33:34.670944+00:00",
+    "embedding_model": "BAAI/bge-m3",
+    "embedding_revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "dimension": 1024,
+    "normalized": true,
+    "chunking_config": {
+      "count_mode": "character",
+      "tokenizer_name": null,
+      "tokenizer_revision": null,
+      "max_tokens": 400,
+      "overlap_tokens": 50,
+      "max_chars": 1200,
+      "overlap_chars": 150
+    },
+    "tokenizer": null,
+    "document_count": 25,
+    "chunk_count": 1821,
+    "corpus_hash": "124a3610097b0f8ad8f0e70c35a871c9a1f8a415957d413b286c729e87a4ad44",
+    "embedding_backend": {
+      "base_url": "http://127.0.0.1:18080/v1",
+      "dimension": 1024,
+      "encoding_format": "float",
+      "input_preprocessing": "original-text-v1;fp16;cls;l2-float32",
+      "model": "BAAI/bge-m3",
+      "provider": "local-bge-fp16",
+      "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+      "revision_pinned": true
+    },
+    "lexical_tokenizer": "nfkc-casefold-cjk-bigram-v1",
+    "retrieval_config": {
+      "candidate_k": 20,
+      "rrf_k": 60,
+      "normalize_embeddings": true,
+      "bm25_k1": 1.5,
+      "bm25_b": 0.75
+    },
+    "artifacts": {
+      "chunks.json": "124a3610097b0f8ad8f0e70c35a871c9a1f8a415957d413b286c729e87a4ad44",
+      "lexical.json": "db4f2ba71f70601dcf1a6c98169b1f7b17225d47b13ed595f9e5346ba756931f",
+      "vectors.npy": "32fae2e309103ec7d2db7656fcb79feeff59f9259de0c5abb2874b8c13488044"
+    }
+  },
+  "production_index_unchanged": true
+}

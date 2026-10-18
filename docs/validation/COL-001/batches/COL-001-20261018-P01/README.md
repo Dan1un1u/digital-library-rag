@@ -54,4 +54,4 @@
 - `repeat-*`：真实去重批次的计划、回执、事件链和索引不变记录，执行于干净提交 `dff3ec8`。
 - `backup-manifest.json` / `post-import-backup-manifest.json`：两次备份的完整性与文件指纹；实际 PDF、数据库、索引和备份本体保留本机。
 
-**识别缺陷仍未修复。** 用户已通过聊天确认完成 FQ-ViT 作者/年份、Ascend 作者及一页双栏正文的指定抽查，未发现问题；具体正文文献和页码未报告，其余逐篇人工复核保持 pending。详见 [human-review.md](human-review.md) 与 [结构化反馈](human-review-response.json)。入库前审核及执行证据保留原状态，不回写历史快照。PR 保持 Draft，尚未合并。
+**批次执行时 MQ-003 尚未修复；2026-10-19 已有分支修复候选通过验证，正式实例仍待部署。** 见 [修复报告](../../mq003-fix.md)。用户已通过聊天确认完成 FQ-ViT 作者/年份、Ascend 作者及一页双栏正文的指定抽查，未发现问题；具体正文文献和页码未报告，其余逐篇人工复核保持 pending。详见 [human-review.md](human-review.md) 与 [结构化反馈](human-review-response.json)。入库前审核及执行证据保留原状态，不回写历史快照。PR 保持 Draft，尚未合并。
