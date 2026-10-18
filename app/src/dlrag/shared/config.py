@@ -19,6 +19,8 @@ class Settings(BaseSettings):
     metadata_api_provider: Literal["siliconflow", "cliproxyapi"] = "siliconflow"
     metadata_api_model: str = "Qwen/Qwen3-VL-8B-Instruct"
     metadata_api_timeout_seconds: float = Field(default=45, gt=0, le=180, allow_inf_nan=False)
+    metadata_lookup_enabled: bool = True
+    metadata_lookup_timeout_seconds: float = Field(default=10, gt=0, le=30, allow_inf_nan=False)
     api_base_url: str = "http://127.0.0.1:8000"
     embedding_model: str = "BAAI/bge-m3"
     embedding_provider: Literal["siliconflow", "local_bge"] = "siliconflow"
@@ -72,6 +74,8 @@ class Settings(BaseSettings):
                 "metadata_api_enabled": self.metadata_api_enabled,
                 "metadata_api_model": self.metadata_api_model,
                 "metadata_api_timeout_seconds": self.metadata_api_timeout_seconds,
+                "metadata_lookup_enabled": self.metadata_lookup_enabled,
+                "metadata_lookup_timeout_seconds": self.metadata_lookup_timeout_seconds,
                 "embedding_revision": self.embedding_revision or None,
                 "embedding_dimension": self.embedding_dimension, "llm_model": self.llm_model,
                 "llm_timeout_seconds": self.llm_timeout_seconds,

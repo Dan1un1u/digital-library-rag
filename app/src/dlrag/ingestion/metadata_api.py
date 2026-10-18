@@ -102,11 +102,12 @@ def merge_candidates(result, candidates, pages):
     return accepted
 
 
-def recognize_metadata(path, settings, filename=None, assist=True, progress=None):
+def recognize_metadata(path, settings, filename=None, assist=True, progress=None, lookup=False):
     progress = progress or (lambda stage: None)
     progress("local_reading")
     result = extract_metadata(path, filename=filename)
     result["api_assistance"] = {"status": "disabled"}
+    result["bibliographic_enrichment"] = {"status": "skipped" if lookup else "not_requested"}
     if not assist or not settings.metadata_api_enabled or settings.app_mode != "real":
         progress("metadata_validation")
         return result
@@ -163,4 +164,12 @@ def recognize_metadata(path, settings, filename=None, assist=True, progress=None
         result["api_assistance"] = {"status": "failed", "error_code": code}
         result["warnings"].append(reason + "，已保留本机识别结果；可点击重新识别或手动修改。")
         progress("metadata_validation")
+    if lookup and result["api_assistance"]["status"] == "completed":
+        if settings.metadata_lookup_enabled:
+            from .bibliography import enrich_metadata
+            progress("bibliographic_lookup")
+            enrich_metadata(result, settings)
+        else:
+            result["bibliographic_enrichment"] = {"status": "disabled"}
+            result["warnings"].append("管理员已关闭外部书目补全，可手动补充缺失字段。")
     return result

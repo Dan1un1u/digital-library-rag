@@ -53,21 +53,23 @@ def upload(request: Request, file: Annotated[UploadFile, File()], metadata_json:
 
 
 @router.post("/documents/metadata")
-def metadata_preview(request: Request, file: Annotated[UploadFile, File()], use_api: Annotated[bool, Form()] = True):
+def metadata_preview(request: Request, file: Annotated[UploadFile, File()], use_api: Annotated[bool, Form()] = True,
+                     use_lookup: Annotated[bool, Form()] = False):
     """Suggest metadata without writing library records or building an index."""
     from dlrag.ingestion.metadata_api import recognize_metadata
     try:
         with temporary_pdf(file, request.app.state.services) as path:
-            return recognize_metadata(path, request.app.state.services.settings, filename=file.filename, assist=use_api)
+            return recognize_metadata(path, request.app.state.services.settings, filename=file.filename, assist=use_api, lookup=use_lookup)
     finally:
         file.file.close()
 
 
 @router.post("/documents/metadata/jobs", status_code=202)
-def metadata_job(request: Request, file: Annotated[UploadFile, File()], use_api: Annotated[bool, Form()] = True):
+def metadata_job(request: Request, file: Annotated[UploadFile, File()], use_api: Annotated[bool, Form()] = True,
+                 use_lookup: Annotated[bool, Form()] = False):
     try:
         with temporary_pdf(file, request.app.state.services) as path:
-            return request.app.state.document_jobs.submit(path.read_bytes(), file.filename, assist=use_api)
+            return request.app.state.document_jobs.submit(path.read_bytes(), file.filename, assist=use_api, lookup=use_lookup)
     finally:
         file.file.close()
 

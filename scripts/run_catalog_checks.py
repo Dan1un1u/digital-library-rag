@@ -13,11 +13,13 @@ import xml.etree.ElementTree as ET
 ROOT = Path(__file__).resolve().parents[1]
 NEW_TESTS = ["app/tests/integration/test_ingestion_recovery.py", "app/tests/integration/test_catalog_batch.py",
              "app/tests/ingestion/test_metadata_known_issues.py", "app/tests/ingestion/test_metadata_year.py",
-             "app/tests/integration/test_metadata_year_api.py"]
+             "app/tests/integration/test_metadata_year_api.py", "app/tests/ingestion/test_bibliography.py",
+             "app/tests/integration/test_bibliography_api.py"]
 FOCUS = ["app/src/dlrag/api/services.py", "app/src/dlrag/ingestion/library.py",
          "app/src/dlrag/ingestion/parser.py", "app/src/dlrag/ingestion/chunker.py",
          "app/src/dlrag/retrieval/retriever.py", "tools/catalog_batch.py",
-         "app/src/dlrag/ingestion/metadata_api.py", "app/src/dlrag/ingestion/metadata_year.py"]
+         "app/src/dlrag/ingestion/metadata_api.py", "app/src/dlrag/ingestion/metadata_year.py",
+         "app/src/dlrag/ingestion/bibliography.py"]
 
 
 def git(*args):
