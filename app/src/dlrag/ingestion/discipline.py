@@ -1,11 +1,21 @@
 """Merge a keyword or evidence-backed LLM discipline into a metadata preview."""
 import re
+import unicodedata
 
 from dlrag.shared.disciplines import DOMAINS, rule_discipline
 
 
 def normalized(text):
-    return re.sub(r"\s+", " ", text).strip().casefold()
+    return re.sub(r"\s+", " ", unicodedata.normalize("NFKC", text)).strip().casefold()
+
+
+def supported_excerpt(excerpt, page_text):
+    if normalized(excerpt) in normalized(page_text):
+        return True
+    # PDF line endings can split a word ("devel-\noped"); preserve all other
+    # punctuation and word order instead of applying fuzzy semantic matching.
+    unwrapped = re.sub(r"(?<=\w)[-\u00ad][ \t]*\r?\n[ \t]*(?=\w)", "", page_text)
+    return normalized(excerpt) in normalized(unwrapped)
 
 
 def complete_discipline(result, candidate=None, pages=()):
@@ -29,7 +39,7 @@ def complete_discipline(result, candidate=None, pages=()):
             or not isinstance(reason, str) or len(reason) > 500):
         return 0
     page_text = pages[page - 1].get("validation_text", pages[page - 1].get("text", ""))
-    if normalized(excerpt) not in normalized(page_text):
+    if not supported_excerpt(excerpt, page_text):
         return 0
     topics.append(value)
     result["discipline_classification"] = {"status": "classified", "method": "llm_page_classification",
