@@ -55,3 +55,12 @@ def test_preview_requires_matching_validation_marker(marker):
     with pytest.raises(ValueError, match="identity"):
         module.require_dev(api, {"commit": "frozen"})
     api.submit.assert_not_called()
+
+
+@pytest.mark.parametrize("reverse_authors", [False, True])
+def test_verifier_ignores_topic_order_but_preserves_author_order(reverse_authors):
+    module = load("verify_domain_trial")
+    expected = {"topics": ["社会科学", "经济学", "COL-002"], "authors": ["Alice Smith", "Bob Jones"], "year": 1979}
+    document = {**expected, "topics": sorted(expected["topics"]),
+                "authors": list(reversed(expected["authors"])) if reverse_authors else expected["authors"]}
+    assert module.metadata_matches(document, expected) is (not reverse_authors)
