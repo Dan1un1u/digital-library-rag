@@ -1,0 +1,136 @@
+{
+  "derived_from_original_summaries": true,
+  "targets": [
+    {
+      "work_item": "ING-001",
+      "scope": "new",
+      "tested_code": {
+        "commit": "28c709109771ecb411b1d9098fca044101d97069",
+        "branch": "feat/ing-001-fulltext-gate",
+        "dirty": false
+      },
+      "created_at": "2026-10-19T06:42:23.576356+00:00",
+      "tests": {
+        "tests": 18,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "exit_code": 0,
+      "source_path_verified": true,
+      "worktree_dirty_after": false,
+      "artifact_sha256": {
+        "pytest.txt": "afdc763bbb4bbd3c66a392410443941e7acc6a6f44b2041468a3ea7fadf847f1",
+        "junit.xml": "7d89816c2f06c4c4039ab729a6d3710729673da7f2da30c35193a4814842bf78",
+        "coverage.json": "3397b7be383ae3eab68d68686b56e47c97aaff40b292683aa4b712709726b9af"
+      }
+    },
+    {
+      "work_item": "ING-002",
+      "scope": "new",
+      "tested_code": {
+        "commit": "73df991fad5b7c2f2d018488be6d967483d96065",
+        "branch": "fix/ing-002-text-layer-review",
+        "dirty": false
+      },
+      "created_at": "2026-10-19T06:42:21.931168+00:00",
+      "tests": {
+        "tests": 18,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "exit_code": 0,
+      "source_path_verified": true,
+      "worktree_dirty_after": false,
+      "artifact_sha256": {
+        "pytest.txt": "4388a4827365635d398443f26c9dad096b13e3fd64ea16c2c1b8f872e1890ca3",
+        "junit.xml": "8096883ddb34c6717707281a0190e87f1ac9dd1adace833763d9603bbf49f624",
+        "coverage.json": "abdeb04571fc76c6b7a0f0f318ac79a6979558b95eadb89f6e000ff958b2d6a1"
+      }
+    },
+    {
+      "work_item": "MQ-005",
+      "scope": "new",
+      "tested_code": {
+        "commit": "2b0a5ae46807f102b2493ec8f3f473358758ec0e",
+        "branch": "fix/mq-005-issue-year",
+        "dirty": false
+      },
+      "created_at": "2026-10-19T06:42:19.997021+00:00",
+      "tests": {
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "exit_code": 0,
+      "source_path_verified": true,
+      "worktree_dirty_after": false,
+      "artifact_sha256": {
+        "pytest.txt": "5b39c0807b721d9ba4e391891974556c3ea4e3d9df85a971efb2bdbc748e9905",
+        "junit.xml": "e90f6375db640339f74a8f30e286c488ade78f085b873b8027bae993d372aada",
+        "coverage.json": "f21c670be5f23a5c45679313c33c3e79ebe7dd7a1341ff9d91b3a3f701deb0f3"
+      }
+    },
+    {
+      "work_item": "RET-001",
+      "scope": "new",
+      "tested_code": {
+        "commit": "10a746d7d3988ff8e9054cb33f4463059320c0ae",
+        "branch": "fix/ret-001-title-vectors",
+        "dirty": false
+      },
+      "created_at": "2026-10-19T06:42:17.522496+00:00",
+      "tests": {
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "exit_code": 0,
+      "source_path_verified": true,
+      "worktree_dirty_after": false,
+      "artifact_sha256": {
+        "pytest.txt": "2adf1a4ecb88864d848dd741030129fb1d1880c1b09811d5eae36d076b2f7bd4",
+        "junit.xml": "2fd5c44c1b5b5f445487ee67501e55fd51cd2f82062b126725a2c31a63d59b17",
+        "coverage.json": "37c021a54ebb03388fac2d2cc297d6c00250f02a7fec6ddd3d98e2766ee5d012"
+      }
+    }
+  ],
+  "full": {
+    "work_item": "RET-001",
+    "scope": "all",
+    "tested_code": {
+      "commit": "10a746d7d3988ff8e9054cb33f4463059320c0ae",
+      "branch": "fix/ret-001-title-vectors",
+      "dirty": false
+    },
+    "created_at": "2026-10-19T06:42:47.849330+00:00",
+    "tests": {
+      "tests": 523,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "exit_code": 0,
+    "source_path_verified": true,
+    "worktree_dirty_after": false,
+    "artifact_sha256": {
+      "pytest.txt": "b44eb9cfe7a296f3f13c5cb065e12c5a14ff0837f4d735407569d91e1f3c0921",
+      "junit.xml": "3729ca76f15ac8d645bd6db0c7671c896f2fbe24cb9741ad7bfa39e798036ac6",
+      "coverage.json": "40d463d3fe0cb404dc994af933d74e34d3239bbdd27af4d6e401c736fad99b17"
+    },
+    "case_groups": {
+      "COL-001": 128,
+      "COL-002": 10,
+      "ING-001": 18,
+      "ING-002": 18,
+      "MQ-005": 10,
+      "RET-001": 9,
+      "baseline_reused": 330
+    },
+    "pr_incremental_cases": 9,
+    "pr_inherited_cases": 514
+  }
+}
