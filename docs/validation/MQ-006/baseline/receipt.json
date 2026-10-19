@@ -1,0 +1,87 @@
+{
+  "batch_id": "MQ-006-original-metadata",
+  "plan_sha256": "edf43ebdcade32ad3f52a1396f10ffbeebd3bfb1c2facc971ab1428a0160d5f7",
+  "code": {
+    "commit": "7c5476a0bdb5dd6c21d7ae0121591518f49c1da8",
+    "branch": "fix/mq-006-discipline",
+    "dirty": false
+  },
+  "backup_ref": "empty-library-checkpoint.json; new isolated library with zero documents",
+  "outcome": "completed",
+  "items": [
+    {
+      "item_id": "paper-001",
+      "sha256": "69c573c123ffd1538d432ab31040072dec01a375a4a5b7c2960a7667cb970dda",
+      "outcome": "imported",
+      "job_id": "348c61c3daf64f8593729b0febbf5a9a",
+      "doc_id": "d_69c573c123ffd1538d432ab31040072dec01a375a4a5b7c2960a7667cb970dda",
+      "index_version": "idx_20261019T121723_3755ec4c87e1",
+      "page_count": 16,
+      "metadata_differences": {}
+    },
+    {
+      "item_id": "paper-002",
+      "sha256": "b9cae993bbd44a679c75aae59ae802845d0321c9e4ee163a1c77b00417371f3b",
+      "outcome": "imported",
+      "job_id": "021ca6c6299a4d1986d853acccd2584a",
+      "doc_id": "d_b9cae993bbd44a679c75aae59ae802845d0321c9e4ee163a1c77b00417371f3b",
+      "index_version": "idx_20261019T121725_41193897a846",
+      "page_count": 12,
+      "metadata_differences": {}
+    },
+    {
+      "item_id": "paper-003",
+      "sha256": "604fcbd71b570f13ec0ed832c7c083728cf9b42170704f7fddd966530db96bee",
+      "outcome": "imported",
+      "job_id": "cb9b5e9c5f584a4696bb7efc1e245c8d",
+      "doc_id": "d_604fcbd71b570f13ec0ed832c7c083728cf9b42170704f7fddd966530db96bee",
+      "index_version": "idx_20261019T121728_441bc99c9cc6",
+      "page_count": 17,
+      "metadata_differences": {}
+    },
+    {
+      "item_id": "paper-008",
+      "sha256": "a1dfa622dabb6a58261c9eb6367ffd4a4d51dffbf9f74e9741c1d18ad3aba967",
+      "outcome": "imported",
+      "job_id": "0bdc416d7f4e44c99447810692ada781",
+      "doc_id": "d_a1dfa622dabb6a58261c9eb6367ffd4a4d51dffbf9f74e9741c1d18ad3aba967",
+      "index_version": "idx_20261019T121732_4815cf7b6a9e",
+      "page_count": 15,
+      "metadata_differences": {}
+    },
+    {
+      "item_id": "paper-010",
+      "sha256": "fe437770d7c981eae9e028eacaa5c772ed0add900ed9dec54c10cfce6dfd86c3",
+      "outcome": "imported",
+      "job_id": "68eb3019a41e4f5fa71829d7dc85e2f7",
+      "doc_id": "d_fe437770d7c981eae9e028eacaa5c772ed0add900ed9dec54c10cfce6dfd86c3",
+      "index_version": "idx_20261019T121737_e9d56c3fdd3e",
+      "page_count": 24,
+      "metadata_differences": {}
+    },
+    {
+      "item_id": "paper-011",
+      "sha256": "c4eb5fe23e480decfa6f08afda0fdb0bea4d0fe5ee7fafc65f2a2d34a397ddf0",
+      "outcome": "imported",
+      "job_id": "f9b60e778b834dc484726968092c5fc8",
+      "doc_id": "d_c4eb5fe23e480decfa6f08afda0fdb0bea4d0fe5ee7fafc65f2a2d34a397ddf0",
+      "index_version": "idx_20261019T121743_c9e43db68762",
+      "page_count": 16,
+      "metadata_differences": {}
+    }
+  ],
+  "manual_retrieval_review": "pending",
+  "document_delta": {
+    "added": [
+      "d_604fcbd71b570f13ec0ed832c7c083728cf9b42170704f7fddd966530db96bee",
+      "d_69c573c123ffd1538d432ab31040072dec01a375a4a5b7c2960a7667cb970dda",
+      "d_a1dfa622dabb6a58261c9eb6367ffd4a4d51dffbf9f74e9741c1d18ad3aba967",
+      "d_b9cae993bbd44a679c75aae59ae802845d0321c9e4ee163a1c77b00417371f3b",
+      "d_c4eb5fe23e480decfa6f08afda0fdb0bea4d0fe5ee7fafc65f2a2d34a397ddf0",
+      "d_fe437770d7c981eae9e028eacaa5c772ed0add900ed9dec54c10cfce6dfd86c3"
+    ],
+    "removed": []
+  },
+  "collection_delta_verified": true,
+  "last_event_sha256": "74688995748d41beee5bdc6739ff247b6285ee1ae1ea1385069cc49405cfedf9"
+}

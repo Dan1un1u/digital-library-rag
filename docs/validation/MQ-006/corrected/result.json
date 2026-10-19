@@ -1,0 +1,383 @@
+{
+  "work_item": "MQ-006",
+  "phase": "corrected",
+  "code": {
+    "commit": "193ec30bbe2a9d35dda1dda72b35688de7cc26fd",
+    "branch": "fix/mq-006-discipline",
+    "dirty": false
+  },
+  "created_at": "2026-10-19T12:25:56.494772+00:00",
+  "passed": true,
+  "recognition_input": "Replay original frozen reviewed metadata; no new recognition accuracy claim.",
+  "input_sha256": {
+    "paper-001": "69c573c123ffd1538d432ab31040072dec01a375a4a5b7c2960a7667cb970dda",
+    "paper-002": "b9cae993bbd44a679c75aae59ae802845d0321c9e4ee163a1c77b00417371f3b",
+    "paper-003": "604fcbd71b570f13ec0ed832c7c083728cf9b42170704f7fddd966530db96bee",
+    "paper-008": "a1dfa622dabb6a58261c9eb6367ffd4a4d51dffbf9f74e9741c1d18ad3aba967",
+    "paper-010": "fe437770d7c981eae9e028eacaa5c772ed0add900ed9dec54c10cfce6dfd86c3",
+    "paper-011": "c4eb5fe23e480decfa6f08afda0fdb0bea4d0fe5ee7fafc65f2a2d34a397ddf0"
+  },
+  "disciplines": {
+    "paper-001": "自然科学",
+    "paper-002": "自然科学",
+    "paper-003": "自然科学",
+    "paper-008": "自然科学",
+    "paper-010": "自然科学",
+    "paper-011": "自然科学"
+  },
+  "domain_counts": {
+    "自然科学": 6,
+    "社会科学": 0,
+    "哲学与人文科学": 0
+  },
+  "pending_count": 0,
+  "searches": [
+    {
+      "item_id": "paper-001",
+      "mode": "keyword",
+      "found_in_top5": true,
+      "rank": 1,
+      "chunk_id": "c_69c573c123ffd1538d432ab31040072dec01a375a4a5b7c2960a7667cb970dda_p0009_0001"
+    },
+    {
+      "item_id": "paper-001",
+      "mode": "vector",
+      "found_in_top5": true,
+      "rank": 1,
+      "chunk_id": "c_69c573c123ffd1538d432ab31040072dec01a375a4a5b7c2960a7667cb970dda_p0009_0001"
+    },
+    {
+      "item_id": "paper-001",
+      "mode": "hybrid",
+      "found_in_top5": true,
+      "rank": 1,
+      "chunk_id": "c_69c573c123ffd1538d432ab31040072dec01a375a4a5b7c2960a7667cb970dda_p0009_0001"
+    },
+    {
+      "item_id": "paper-002",
+      "mode": "keyword",
+      "found_in_top5": true,
+      "rank": 1,
+      "chunk_id": "c_b9cae993bbd44a679c75aae59ae802845d0321c9e4ee163a1c77b00417371f3b_p0002_0008"
+    },
+    {
+      "item_id": "paper-002",
+      "mode": "vector",
+      "found_in_top5": true,
+      "rank": 1,
+      "chunk_id": "c_b9cae993bbd44a679c75aae59ae802845d0321c9e4ee163a1c77b00417371f3b_p0002_0002"
+    },
+    {
+      "item_id": "paper-002",
+      "mode": "hybrid",
+      "found_in_top5": true,
+      "rank": 1,
+      "chunk_id": "c_b9cae993bbd44a679c75aae59ae802845d0321c9e4ee163a1c77b00417371f3b_p0002_0002"
+    },
+    {
+      "item_id": "paper-003",
+      "mode": "keyword",
+      "found_in_top5": true,
+      "rank": 1,
+      "chunk_id": "c_604fcbd71b570f13ec0ed832c7c083728cf9b42170704f7fddd966530db96bee_p0014_0001"
+    },
+    {
+      "item_id": "paper-003",
+      "mode": "vector",
+      "found_in_top5": true,
+      "rank": 1,
+      "chunk_id": "c_604fcbd71b570f13ec0ed832c7c083728cf9b42170704f7fddd966530db96bee_p0014_0001"
+    },
+    {
+      "item_id": "paper-003",
+      "mode": "hybrid",
+      "found_in_top5": true,
+      "rank": 1,
+      "chunk_id": "c_604fcbd71b570f13ec0ed832c7c083728cf9b42170704f7fddd966530db96bee_p0014_0001"
+    },
+    {
+      "item_id": "paper-008",
+      "mode": "keyword",
+      "found_in_top5": true,
+      "rank": 1,
+      "chunk_id": "c_a1dfa622dabb6a58261c9eb6367ffd4a4d51dffbf9f74e9741c1d18ad3aba967_p0013_0001"
+    },
+    {
+      "item_id": "paper-008",
+      "mode": "vector",
+      "found_in_top5": true,
+      "rank": 1,
+      "chunk_id": "c_a1dfa622dabb6a58261c9eb6367ffd4a4d51dffbf9f74e9741c1d18ad3aba967_p0013_0001"
+    },
+    {
+      "item_id": "paper-008",
+      "mode": "hybrid",
+      "found_in_top5": true,
+      "rank": 1,
+      "chunk_id": "c_a1dfa622dabb6a58261c9eb6367ffd4a4d51dffbf9f74e9741c1d18ad3aba967_p0013_0001"
+    },
+    {
+      "item_id": "paper-010",
+      "mode": "keyword",
+      "found_in_top5": true,
+      "rank": 1,
+      "chunk_id": "c_fe437770d7c981eae9e028eacaa5c772ed0add900ed9dec54c10cfce6dfd86c3_p0001_0001"
+    },
+    {
+      "item_id": "paper-010",
+      "mode": "vector",
+      "found_in_top5": true,
+      "rank": 1,
+      "chunk_id": "c_fe437770d7c981eae9e028eacaa5c772ed0add900ed9dec54c10cfce6dfd86c3_p0010_0005"
+    },
+    {
+      "item_id": "paper-010",
+      "mode": "hybrid",
+      "found_in_top5": true,
+      "rank": 1,
+      "chunk_id": "c_fe437770d7c981eae9e028eacaa5c772ed0add900ed9dec54c10cfce6dfd86c3_p0001_0001"
+    },
+    {
+      "item_id": "paper-011",
+      "mode": "keyword",
+      "found_in_top5": true,
+      "rank": 1,
+      "chunk_id": "c_c4eb5fe23e480decfa6f08afda0fdb0bea4d0fe5ee7fafc65f2a2d34a397ddf0_p0015_0001"
+    },
+    {
+      "item_id": "paper-011",
+      "mode": "vector",
+      "found_in_top5": true,
+      "rank": 1,
+      "chunk_id": "c_c4eb5fe23e480decfa6f08afda0fdb0bea4d0fe5ee7fafc65f2a2d34a397ddf0_p0015_0001"
+    },
+    {
+      "item_id": "paper-011",
+      "mode": "hybrid",
+      "found_in_top5": true,
+      "rank": 1,
+      "chunk_id": "c_c4eb5fe23e480decfa6f08afda0fdb0bea4d0fe5ee7fafc65f2a2d34a397ddf0_p0015_0001"
+    }
+  ],
+  "duplicate_import_preserved_snapshot": true,
+  "before": {
+    "mode": "real",
+    "status": "ready",
+    "documents": [],
+    "manifest": {
+      "index_version": "idx_20261019T122542_be83900a0436",
+      "embedding_model": "BAAI/bge-m3",
+      "embedding_revision": "5617a9f61b028005a4858fdac845db406aefb181",
+      "dimension": 1024,
+      "document_count": 0,
+      "chunk_count": 0,
+      "corpus_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    }
+  },
+  "after": {
+    "mode": "real",
+    "status": "ready",
+    "documents": [
+      {
+        "doc_id": "d_604fcbd71b570f13ec0ed832c7c083728cf9b42170704f7fddd966530db96bee",
+        "file_sha256": "604fcbd71b570f13ec0ed832c7c083728cf9b42170704f7fddd966530db96bee",
+        "status": "ready",
+        "page_count": 17,
+        "title": "ENEC: A Lossless AI Model Compression Method Enabling Fast Inference on Ascend NPUs",
+        "authors": [
+          "Jinwu Yang",
+          "Jiaan Wu",
+          "Zedong Liu",
+          "Xinyang Ma",
+          "Hairui Zhao",
+          "Yida Gu",
+          "Yuanhong Huang",
+          "Xingchen Liu",
+          "Wenjing Huang",
+          "Zheng Wei",
+          "Jing Xing",
+          "Yili Ma",
+          "Qingyi Zhang",
+          "Baoyi An",
+          "Zhongzhe Hu",
+          "Shaoteng Liu",
+          "Xia Zhu",
+          "Jiaxun Lu",
+          "Guangming Tan",
+          "Dingwen Tao"
+        ],
+        "year": 2026,
+        "topics": [
+          "Ascend NPU",
+          "LLM inference",
+          "Lossless compression",
+          "自然科学"
+        ],
+        "language": "en",
+        "source_url": "https://arxiv.org/abs/2604.03298",
+        "rights_note": "用户指定本地 PDF，用于本机课程项目和研究测试；保留原权利声明，开放再分发许可未作推断，待人工核对。"
+      },
+      {
+        "doc_id": "d_69c573c123ffd1538d432ab31040072dec01a375a4a5b7c2960a7667cb970dda",
+        "file_sha256": "69c573c123ffd1538d432ab31040072dec01a375a4a5b7c2960a7667cb970dda",
+        "status": "ready",
+        "page_count": 16,
+        "title": "Squeezing Operator Performance Potential for the Ascend Architecture",
+        "authors": [
+          "Yuhang Zhou",
+          "Zhibin Wang",
+          "Guyue Liu",
+          "Shipeng Li",
+          "Xi Lin",
+          "Zibo Wang",
+          "Yongzhong Wang",
+          "Fuchun Wei",
+          "Jingyi Zhang",
+          "Zhiheng Hu",
+          "Yanlin Liu",
+          "Chunsheng Li",
+          "Ziyang Zhang",
+          "Yaoyuan Wang",
+          "Bin Zhou",
+          "Wanchun Dou",
+          "Guihai Chen",
+          "Chen Tian"
+        ],
+        "year": 2025,
+        "topics": [
+          "AI accelerators",
+          "Ascend NPU",
+          "Performance modeling",
+          "自然科学"
+        ],
+        "language": "en",
+        "source_url": "https://doi.org/10.1145/3676641.3716243",
+        "rights_note": "用户指定本地 PDF，用于本机课程项目和研究测试；保留原权利声明，开放再分发许可未作推断，待人工核对。"
+      },
+      {
+        "doc_id": "d_a1dfa622dabb6a58261c9eb6367ffd4a4d51dffbf9f74e9741c1d18ad3aba967",
+        "file_sha256": "a1dfa622dabb6a58261c9eb6367ffd4a4d51dffbf9f74e9741c1d18ad3aba967",
+        "status": "ready",
+        "page_count": 15,
+        "title": "Is Your NPU Ready for LLMs? Dissecting the Hidden Efficiency Bottlenecks in Mobile LLM Inference",
+        "authors": [
+          "Guanyu Cai",
+          "Ruiming Tian",
+          "Lang Yang",
+          "Zhouhong Ren",
+          "Jinliang Yuan",
+          "Lingkun Li",
+          "Jiliang Wang"
+        ],
+        "year": 2026,
+        "topics": [
+          "Mobile LLM",
+          "NPU",
+          "Performance measurement",
+          "自然科学"
+        ],
+        "language": "en",
+        "source_url": "https://arxiv.org/abs/2607.05475",
+        "rights_note": "用户指定本地 PDF，用于本机课程项目和研究测试；保留原权利声明，开放再分发许可未作推断，待人工核对。"
+      },
+      {
+        "doc_id": "d_b9cae993bbd44a679c75aae59ae802845d0321c9e4ee163a1c77b00417371f3b",
+        "file_sha256": "b9cae993bbd44a679c75aae59ae802845d0321c9e4ee163a1c77b00417371f3b",
+        "status": "ready",
+        "page_count": 12,
+        "title": "CSB-RNN: A Faster-than-Realtime RNN Acceleration Framework with Compressed Structured Blocks",
+        "authors": [
+          "Runbin Shi",
+          "Peiyan Dong",
+          "Tong Geng",
+          "Yuhao Ding",
+          "Xiaolong Ma",
+          "Hayden K.-H. So",
+          "Martin Herbordt",
+          "Ang Li",
+          "Yanzhi Wang"
+        ],
+        "year": 2020,
+        "topics": [
+          "FPGA",
+          "RNN acceleration",
+          "Structured pruning",
+          "自然科学"
+        ],
+        "language": "en",
+        "source_url": "https://doi.org/10.1145/3392717.3392749",
+        "rights_note": "用户指定本地 PDF，用于本机课程项目和研究测试；保留原权利声明，开放再分发许可未作推断，待人工核对。"
+      },
+      {
+        "doc_id": "d_c4eb5fe23e480decfa6f08afda0fdb0bea4d0fe5ee7fafc65f2a2d34a397ddf0",
+        "file_sha256": "c4eb5fe23e480decfa6f08afda0fdb0bea4d0fe5ee7fafc65f2a2d34a397ddf0",
+        "status": "ready",
+        "page_count": 16,
+        "title": "XY-Serve: End-to-End Versatile Production Serving for Dynamic LLM Workloads",
+        "authors": [
+          "Mingcong Song",
+          "Xinru Tang",
+          "Fengfan Hou",
+          "Jing Li",
+          "Wei Wei",
+          "Yipeng Ma",
+          "Runqiu Xiao",
+          "Hongjie Si",
+          "Dingcheng Jiang",
+          "Shouyi Yin",
+          "Yang Hu",
+          "Guoping Long"
+        ],
+        "year": 2026,
+        "topics": [
+          "Ascend NPU",
+          "Dynamic workloads",
+          "LLM serving",
+          "自然科学"
+        ],
+        "language": "en",
+        "source_url": "https://doi.org/10.1145/3760250.3762228",
+        "rights_note": "用户提供本地 PDF；PDF 第1页明确标注 Creative Commons Attribution 4.0 International License (CC BY 4.0)。"
+      },
+      {
+        "doc_id": "d_fe437770d7c981eae9e028eacaa5c772ed0add900ed9dec54c10cfce6dfd86c3",
+        "file_sha256": "fe437770d7c981eae9e028eacaa5c772ed0add900ed9dec54c10cfce6dfd86c3",
+        "status": "ready",
+        "page_count": 24,
+        "title": "SpinQuant: LLM Quantization with Learned Rotations",
+        "authors": [
+          "Zechun Liu",
+          "Changsheng Zhao",
+          "Igor Fedorov",
+          "Bilge Soran",
+          "Dhruv Choudhary",
+          "Raghuraman Krishnamoorthi",
+          "Vikas Chandra",
+          "Yuandong Tian",
+          "Tijmen Blankevoort"
+        ],
+        "year": 2025,
+        "topics": [
+          "LLM inference",
+          "Learned rotations",
+          "Post-training quantization",
+          "自然科学"
+        ],
+        "language": "en",
+        "source_url": "https://arxiv.org/abs/2405.16406",
+        "rights_note": "用户指定本地 PDF，用于本机课程项目和研究测试；保留原权利声明，开放再分发许可未作推断，待人工核对。"
+      }
+    ],
+    "manifest": {
+      "index_version": "idx_20261019T122623_c119d435cd1e",
+      "embedding_model": "BAAI/bge-m3",
+      "embedding_revision": "5617a9f61b028005a4858fdac845db406aefb181",
+      "dimension": 1024,
+      "document_count": 6,
+      "chunk_count": 564,
+      "corpus_hash": "849c503574b49161c1c425e40fc56b50c6b933b64776f94c4d55d6027f49f87f"
+    }
+  },
+  "source_artifact_sha256": "4822bad0a0b27f13e5900d5b67758cc985a142eb517b6305501a87713ae718c8",
+  "publication_note": "Extract of immutable local result: omit personal endpoint/config paths and unused QA client settings. Original retained locally."
+}

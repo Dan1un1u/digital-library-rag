@@ -1,0 +1,12 @@
+{
+  "mode": "Streamlit AppTest against live candidate API",
+  "exceptions": 0,
+  "metrics": {
+    "馆藏文献": "6 篇",
+    "自然科学": "6 篇",
+    "社会科学": "0 篇",
+    "哲学与人文科学": "0 篇"
+  },
+  "captions": [],
+  "natural_science_count_verified": true
+}
