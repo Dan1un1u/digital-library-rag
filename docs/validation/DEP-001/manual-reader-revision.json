@@ -1,0 +1,118 @@
+{
+  "version": "1.2",
+  "updated_at": "2026-10-19T12:01:51.362653+00:00",
+  "pr": 8,
+  "previous_pr_head": "b58fe617473836743112ff2ffbc17c7ad861cb9a",
+  "pages": 11,
+  "figures_in_reader_manual": 13,
+  "chapters": [
+    {
+      "number": 1,
+      "title": "开始使用"
+    },
+    {
+      "number": 2,
+      "title": "浏览馆藏"
+    },
+    {
+      "number": 3,
+      "title": "搜索文献"
+    },
+    {
+      "number": 4,
+      "title": "阅读搜索结果"
+    },
+    {
+      "number": 5,
+      "title": "上传 PDF"
+    },
+    {
+      "number": 6,
+      "title": "核对识别结果"
+    },
+    {
+      "number": 7,
+      "title": "填写编目信息"
+    },
+    {
+      "number": 8,
+      "title": "查看入库状态"
+    },
+    {
+      "number": 9,
+      "title": "向馆藏提问"
+    },
+    {
+      "number": 10,
+      "title": "查看引用和原文"
+    },
+    {
+      "number": 11,
+      "title": "常见问题和演示顺序"
+    }
+  ],
+  "editorial_changes": [
+    "Rewritten around reader actions and visible results.",
+    "Removed personal model names, developer instance ports, PR history and repeated evaluation disclaimers from the reader text.",
+    "Removed system-settings illustration containing private deployment model labels.",
+    "Kept operationally useful guidance for failed recognition, missing text and overwritten form fields."
+  ],
+  "format_checks": {
+    "markdown_word_content_source_same": true,
+    "word_figures_match_the13_original_browser_captures": true,
+    "all_original_capture_files_unchanged": true,
+    "original_acceptance_records_unchanged": true,
+    "forbidden_local_names_absent_in_reader_text": true,
+    "no_cyrillic_typo_characters": true,
+    "figure_and_chapter_numbers_sequential": true,
+    "minimum_body_footer_gap_points": 42.38,
+    "all_11_pages_rendered": true,
+    "pages2_to11_pixel_identical_to_reviewed_pass1": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "page1_updated_installation_sentence": "Removed raw documentation file path from Word reader text.",
+    "all_final_pages_covered_by_visual_review": true,
+    "final_page1_fresh_visual_review_passed": true
+  },
+  "outputs": {
+    "markdown": {
+      "path": "docs/user-guide/使用手册.md",
+      "sha256": "85ebaa380f26f6c24e58273f0f8d95711bdd9eaa40c6f6bf168652e34bc06d39"
+    },
+    "docx": {
+      "path": "docs/user-guide/专题数字图书馆使用手册.docx",
+      "sha256": "74a6a1f53ba5ea21a8a7f7a75baf01895e42c52f5a7d2c191aa3135179084ad0"
+    },
+    "local_pdf": {
+      "path": "D:\\digital-library-worktrees\\siliconflow-portability\\reports\\DEP-001\\manual-reader-revision\\final\\专题数字图书馆使用手册.pdf",
+      "sha256": "8c2062838b0a77302c7e0c7579cea31b86033c96027bfbfad115e4f016f61de0",
+      "committed": false
+    }
+  },
+  "builder_sha256": "c4a0d513d0169ddd4d21feaafca4889cbce04fed000cc7bca9a699591c80d92c",
+  "business_source_tests_and_startup_scripts_unchanged_from_previous_pr_head": true,
+  "business_test_runs_added_by_this_document_revision": 0,
+  "existing_regression_evidence": "525 passed at 80f94004722f52670c6a60dc30a521cc96a9f7ec; no new business test result claimed.",
+  "local_page_sha256": {
+    "page-1.png": "8438bbaa70def925325907ebc43d945d56e3fbadf804912785f087d44af33650",
+    "page-2.png": "3890a3df2e9c958cc795fcd0f6e3ba73b42cd3fc860e70658ee4f5d0f32e7435",
+    "page-3.png": "9f272d5ccb850fbd943fa34c88fdfe7f13c6427274e1d82004aef8be5680aed9",
+    "page-4.png": "b8efc4e08e56dfaab4ea04695c3f95fec8e67a4103b94927553da9d59d9ecdbb",
+    "page-5.png": "6e412092c821fd339e50fbdeb8a72516033a123f5baef6e5404032a0920aa3d9",
+    "page-6.png": "9894a122d2effa1b45397a69e216d21320db7f12e526d97c0acf46c8763c8193",
+    "page-7.png": "58099ccfca1a04b6f65548ac44460df3362fa6e2685e7deacf33a5f5ed185b19",
+    "page-8.png": "f19f2640c052a42f798a55c1aa93a1d52f5d369b8d73297954065dc40702a51f",
+    "page-9.png": "4a57db25586a714517fc785fe59c0432c175ebc0d1e9dee517e0cae70fe68e1b",
+    "page-10.png": "2c38d07ed89075e61d2396de4cabd1ec535af7c1405c4d45f1e7284b55b6ec7b",
+    "page-11.png": "1ed683c64daef44dbac9ad5f3e77e968317f2311df36d0f0f4badbc14f34e499"
+  }
+}

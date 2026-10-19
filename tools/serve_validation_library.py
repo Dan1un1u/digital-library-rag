@@ -46,7 +46,7 @@ def main():
     parser.add_argument("--port", type=int, default=19000)
     parser.add_argument("--initialize-empty-index", action="store_true")
     args = parser.parse_args()
-    if args.port in {8000, 18000, 18501, 8317, 18080} or not 1024 <= args.port <= 65535:
+    if args.port in {8000, 8501, 18000, 18001, 18501, 18502} or not 1024 <= args.port <= 65535:
         parser.error("Choose a separate local validation port")
     settings = validation_settings(args.env_file, args.data_dir)
     identity = {"validation_only": True, "code": code_identity(),

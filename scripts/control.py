@@ -11,6 +11,8 @@ import sys
 import time
 import urllib.request
 
+from dotenv import dotenv_values
+
 ROOT = Path(__file__).resolve().parents[1]
 APP = ROOT / 'app'
 STATE = ROOT / 'runtime' / 'processes.json'
@@ -46,9 +48,15 @@ def records():
 
 def environment(mode):
     result = os.environ.copy()
-    data = ROOT / 'runtime' / ('real_arxiv' if mode == 'real' else 'mock')
-    result.update(APP_MODE=mode, DATA_DIR=str(data), DB_PATH=str(data / 'library.sqlite'),
-                  FILES_DIR=str(data / 'raw'), INDEX_DIR=str(data / 'indexes'),
+    config = {**dotenv_values(APP / '.env'), **os.environ} if mode == 'real' else {}
+    def configured_path(name, fallback):
+        path = Path(config.get(name) or fallback)
+        return str((path if path.is_absolute() else APP / path).resolve())
+    data = Path(configured_path('DATA_DIR', ROOT / 'runtime' / mode))
+    result.update(APP_MODE=mode, DATA_DIR=str(data),
+                  DB_PATH=configured_path('DB_PATH', data / 'library.sqlite'),
+                  FILES_DIR=configured_path('FILES_DIR', data / 'raw'),
+                  INDEX_DIR=configured_path('INDEX_DIR', data / 'indexes'),
                   API_BASE_URL=f'http://127.0.0.1:{PORTS[mode][0]}',
                   PYTHONUTF8='1', PYTHONIOENCODING='utf-8',
                   TIKTOKEN_CACHE_DIR=str(APP / 'data' / 'tokenizer-cache'),
@@ -67,10 +75,13 @@ def listening(port):
 
 
 def save(state):
+    STATE.parent.mkdir(parents=True, exist_ok=True)
     STATE.write_text(json.dumps(state, indent=2), encoding='utf-8')
 
 
 def start(modes):
+    (ROOT / 'runtime').mkdir(parents=True, exist_ok=True)
+    (ROOT / 'logs').mkdir(parents=True, exist_ok=True)
     state = records()
     for mode in modes:
         env = environment(mode)

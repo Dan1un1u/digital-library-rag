@@ -55,7 +55,7 @@ def verify(args):
     before = api.snapshot()
     manifest = before["manifest"]
     docs = {d["doc_id"]: d for d in before["documents"]}
-    if len(docs) != 50 or before["status"] != "ready" or manifest["embedding_backend"]["provider"] != "local-bge-fp16":
+    if len(docs) != 50 or before["status"] != "ready" or manifest["embedding_backend"]["provider"] != "siliconflow":
         raise ValueError("The expected real dev corpus is not ready")
     report = {"work_item": "COL-002", "verifier_code": identity, "backend_marker": marker,
               "business_source_unchanged_from_backend": True, "created_at": datetime.now(timezone.utc).isoformat(),

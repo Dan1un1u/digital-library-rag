@@ -1,6 +1,6 @@
 """ING-001 live dev verification against frozen real PDFs; no automatic OCR.
 
-Run on a NEW marked dev library, with real BGE/Luna already configured. The
+Run on a NEW marked dev library, with real SiliconFlow services already configured. The
 original 50-paper dev library and production are read-only protected controls.
 Receipts contain metadata/counts/hashes, never PDF body text or credentials.
 """
@@ -54,7 +54,7 @@ def run(args):
     report = {"work_item": "ING-001", "created_at": datetime.now(timezone.utc).isoformat(),
               "tested_code": identity, "backend_marker": marker,
               "runner_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
-              "scope": "real frozen PDFs, actual document jobs, real local BGE; one extra Luna metadata preview",
+              "scope": "real frozen PDFs, actual document jobs, real cloud embeddings; one extra metadata preview",
               "protected_before": {str(p): compact(s) for p, s in before.items()},
               "metadata_reference": "external AI-assisted bibliography, not new user human review",
               "compatibility_scan": [], "cases": [], "passed": False}

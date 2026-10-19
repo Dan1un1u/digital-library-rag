@@ -1,0 +1,257 @@
+{
+  "work_item": "DEP-001",
+  "validated_at": "2026-10-19T11:49:16.547240+00:00",
+  "base_commit": "bdfb737c555b4e55d9216f1397316b3bfb513ec0",
+  "tested_commit": "80f94004722f52670c6a60dc30a521cc96a9f7ec",
+  "source_identities": {
+    "app/src/dlrag": "5bae38d0765293d461e6329eed21a75f0dfae65d",
+    "app/tests": "ff6e09bcef943922dbc7122b41e6a46c6d6425d7",
+    "app/.env.example": "d969479a6de3c322aee1d2183420aec47eb1f351",
+    "scripts": "9807895b9d89f38fcf9ce310827382e2f92b2e2b",
+    "tools": "82ab102abc6415493f8b4c0020f2b0e1bb02d403",
+    "Start-Library.ps1": "2c2e02870a3833266084babf95ee146c1c88e456",
+    "Run-Tests.ps1": "7e08d46e7af0b4265e2e3f60850d47bf06b699fa"
+  },
+  "target": {
+    "tests": {
+      "tests": 18,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "new_cases": 18,
+    "tested_code": {
+      "commit": "80f94004722f52670c6a60dc30a521cc96a9f7ec",
+      "branch": "fix/siliconflow-portability",
+      "dirty": false
+    }
+  },
+  "regression": {
+    "tests": {
+      "tests": 525,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "new_cases": 18,
+    "inherited_cases": 507,
+    "tested_code": {
+      "commit": "80f94004722f52670c6a60dc30a521cc96a9f7ec",
+      "branch": "fix/siliconflow-portability",
+      "dirty": false
+    },
+    "warnings": 2,
+    "warning_notes": [
+      "Existing Starlette/httpx deprecation",
+      "Expected duplicate-PDF metadata-retention notice"
+    ]
+  },
+  "count_reconciliation": {
+    "previous_main_total": 527,
+    "private_integration_cases_moved_out": 20,
+    "remaining_inherited": 507,
+    "new_cloud_portability_cases": 18,
+    "current_total": 525
+  },
+  "negative_control": {
+    "base_commit": "bdfb737c555b4e55d9216f1397316b3bfb513ec0",
+    "replaced_files": [
+      "Start-Library.ps1",
+      "scripts/control.py"
+    ],
+    "expected_failure_control": true,
+    "counts": {
+      "tests": 5,
+      "failures": 4,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 1
+    },
+    "scope": "Same five new startup/path tests against original launcher/controller snapshots. Four expected failures: real/both dependency and file/environment data paths. Mock entry already passed. External service starts intercepted."
+  },
+  "startup": {
+    "tested_commit": "6f7bfb2ccf92d2772766663288ffdeec5ab6b4c9",
+    "same_application_and_controller_as_current": true,
+    "real_and_mock_backend_and_ui_started": true,
+    "real_empty_index_not_ready_expected": true,
+    "mock_synthetic_documents": 2,
+    "live_model_requests": 0,
+    "owned_ports_closed": true,
+    "existing_libraries_unchanged": true,
+    "before": {
+      "18000": {
+        "index_version": "idx_20261018T153334_20ed96d8ced7",
+        "document_count": 25,
+        "chunk_count": 1821,
+        "status": "ready"
+      },
+      "19000": {
+        "index_version": "idx_20261019T024947_292c353a8ff5",
+        "document_count": 50,
+        "chunk_count": 3262,
+        "status": "ready"
+      },
+      "19010": {
+        "index_version": "idx_20261019T050415_38b306e4080d",
+        "document_count": 3,
+        "chunk_count": 228,
+        "status": "ready"
+      },
+      "19020": {
+        "index_version": "idx_20261019T091710_a9e391cc545c",
+        "document_count": 4,
+        "chunk_count": 225,
+        "status": "ready"
+      }
+    },
+    "after": {
+      "18000": {
+        "index_version": "idx_20261018T153334_20ed96d8ced7",
+        "document_count": 25,
+        "chunk_count": 1821,
+        "status": "ready"
+      },
+      "19000": {
+        "index_version": "idx_20261019T024947_292c353a8ff5",
+        "document_count": 50,
+        "chunk_count": 3262,
+        "status": "ready"
+      },
+      "19010": {
+        "index_version": "idx_20261019T050415_38b306e4080d",
+        "document_count": 3,
+        "chunk_count": 228,
+        "status": "ready"
+      },
+      "19020": {
+        "index_version": "idx_20261019T091710_a9e391cc545c",
+        "document_count": 4,
+        "chunk_count": 225,
+        "status": "ready"
+      }
+    },
+    "harness_attempts": [
+      {
+        "attempt": 1,
+        "outcome": "Harness decoding failure before startup; UTF-8 explicitly added to child environment."
+      },
+      {
+        "attempt": 2,
+        "outcome": "Application health checks succeeded; overly strict child-command cleanup assertion rejected host representation; safe stop closed all owned ports."
+      },
+      {
+        "attempt": 3,
+        "outcome": "Complete startup, health, stop and preservation checks passed."
+      }
+    ]
+  },
+  "source_audit": {
+    "absolute_dlrag_import_statements_resolved": 54,
+    "no_private_integrations_in_runtime_source": true,
+    "no_tracked_private_service_recipes": true,
+    "historical_guide_manifests_and_all_14_captures_unchanged": true,
+    "current_markdown_links_resolve": true
+  },
+  "publish_audit": {
+    "staged_files": 416,
+    "local_credential_references_checked": 4,
+    "findings": [],
+    "passed": true
+  },
+  "manual": {
+    "pages": 13,
+    "figures": 14,
+    "all_13_pages_rendered_and_visually_reviewed": true,
+    "unchanged_original_browser_images": true,
+    "current_version": "1.1",
+    "minimum_body_footer_gap_points": 18.02,
+    "fresh_cloud_screenshots_claimed": false,
+    "source_sha256": "4a40906bb8cb5d90160d18216f03a0ae0a5562f1ea471c977595c5581a255888",
+    "docx_sha256": "801a1b2194a9d5376eadae5bb20108510fd63d46c01316202c1658dc474f357d",
+    "pdf_sha256": "a05a7b630625b6fa9975226e90a2f4835fbfcae8cbcff62093ef337492a232d6",
+    "pdf_local_only": true,
+    "native_export": "Microsoft Word; packaged render_docx.py with Poppler rasterization",
+    "initial_layout_issue": "First revision spilled a short note to page14; shortened the instruction paragraph and re-rendered to13 pages."
+  },
+  "scope": "Independent branch and stores; no existing deployment restart, corpus migration, or PR merge.",
+  "live_siliconflow_tested": false,
+  "user_human_review_claimed": false,
+  "private_integration_preserved_outside_repository": true,
+  "historical_results_rewritten": false,
+  "local_artifact_root": "reports/DEP-001/",
+  "artifact_sha256": {
+    "reports\\DEP-001\\target-final\\summary.json": "156808425eb7a8b751cf21ff3c5f9b37a7f2a27e627872636fdd62e5d834332c",
+    "reports\\DEP-001\\target-final\\junit.xml": "963684d16c6e81ef0e16a619e4f7b6b10a3e83a89e4f203a80dfd8fa385e5f7d",
+    "reports\\DEP-001\\target-final\\pytest.txt": "ba7695ff3fe9738bbb2f49393573fdf2cfe48aafe7ddbd82071b8c10be6ac36b",
+    "reports\\DEP-001\\target-final\\coverage.json": "6f87a4a01baf6db899844d95a07f18a0e58b223c7e19b92d93f191f31074bb95",
+    "reports\\DEP-001\\regression-final\\summary.json": "a2717b16d9029b0be3c29dc924f2fe5152d8f180075ffbb9a0c821109c839011",
+    "reports\\DEP-001\\regression-final\\junit.xml": "124e9938677974c6dcf99c660446e11ab90abe3aafcd8e7b730330993999909d",
+    "reports\\DEP-001\\regression-final\\pytest.txt": "45aac0ea4dd0d7369f98e899daa048d0d856f1e9c601dbc32346b909df44213d",
+    "reports\\DEP-001\\regression-final\\coverage.json": "46fe0bc9dfc6e13a5c3c76ae354292ff514efd3ba2840431e138cdab51b00cce",
+    "reports\\DEP-001\\source-audit.json": "6b106b0572349e7a534d97f53dc98377dc11fbb4ca2720d57b4087c15a1c0c88",
+    "reports\\DEP-001\\negative-baseline\\result.json": "a876d0d41e359bc268a5ea4e2275b43e9963fcbc3fb90017eb4d0779ffe79139",
+    "reports\\DEP-001\\negative-baseline\\pytest.txt": "60526f556450d27bbe2734743c3610bcc06f2143a33d5cb8ffe5c34a3bf92108",
+    "reports\\DEP-001\\startup-attempt03\\result.json": "01b92286245a8d9779fdd065681af91b70962d5a0571d91c8334fc421b83d63e",
+    "reports\\DEP-001\\startup-attempt03\\controller.txt": "d84242d4a70c13b1bf018e16567e304b9bbeea98e8d75b146ef375abb7f067cf",
+    "reports\\DEP-001\\manual\\review.json": "aa12f9d151517e118c98bec055e9309ac4539a329509ea52ddee1e057600e843"
+  },
+  "application_coverage": {
+    "app/src/dlrag/shared/config.py": {
+      "statements": 62,
+      "covered_statements": 62,
+      "statement_percent": 100.0,
+      "branches": 2,
+      "covered_branches": 2,
+      "branch_percent": 100.0
+    },
+    "app/src/dlrag/api/qa_factory.py": {
+      "statements": 3,
+      "covered_statements": 3,
+      "statement_percent": 100.0,
+      "branches": 0,
+      "covered_branches": 0,
+      "branch_percent": null
+    },
+    "app/src/dlrag/api/services.py": {
+      "statements": 200,
+      "covered_statements": 178,
+      "statement_percent": 89.0,
+      "branches": 68,
+      "covered_branches": 60,
+      "branch_percent": 88.24
+    },
+    "app/src/dlrag/qa/llm_client.py": {
+      "statements": 108,
+      "covered_statements": 94,
+      "statement_percent": 87.04,
+      "branches": 30,
+      "covered_branches": 23,
+      "branch_percent": 76.67
+    },
+    "app/src/dlrag/qa/semantic_reranker.py": {
+      "statements": 61,
+      "covered_statements": 59,
+      "statement_percent": 96.72,
+      "branches": 18,
+      "covered_branches": 16,
+      "branch_percent": 88.89
+    },
+    "app/src/dlrag/retrieval/embeddings.py": {
+      "statements": 149,
+      "covered_statements": 138,
+      "statement_percent": 92.62,
+      "branches": 64,
+      "covered_branches": 54,
+      "branch_percent": 84.38
+    },
+    "app/src/dlrag/ingestion/metadata_api.py": {
+      "statements": 122,
+      "covered_statements": 114,
+      "statement_percent": 93.44,
+      "branches": 50,
+      "covered_branches": 40,
+      "branch_percent": 80.0
+    }
+  },
+  "published_summary_note": "Git copies preserve recorded identity, timestamps and values; line endings normalized to LF. Original local artifacts retain their recorded hashes."
+}

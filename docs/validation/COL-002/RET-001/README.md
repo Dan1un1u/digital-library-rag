@@ -37,3 +37,5 @@ API18000/19000/19010三实例快照、原索引manifest/chunks/vectors/lexical�
 **边界：这是题名路径冒烟和少量正文控制，不是一般语义检索或问答准确率。** 为保持比较分母一致，历史50篇中的HU08乱码负例完整保留在实验快照；题名命中不能说明其正文已恢复。新导入的质量门槛由独立ING-002负责。正式推广仍须重建正确表示的索引并复核旧数据，不能直接覆盖旧运行目录。
 
 复现：`scripts/run_catalog_checks.py --work-item RET-001 --scope new/all`；真实比较使用 `tools/probe_title_retrieval.py --historical-index <历史索引只读目录> --plan <原50份计划> --baseline-ref 2b0a5ae46807f102b2493ec8f3f473358758ec0e --output <全新独立目录>`。工具核对历史manifest与原验证记录，拒绝改变语料。原始日志和候选索引保留在本工作目录 `reports/RET-001/`，不提交真实PDF/正文快照/模型权重。
+
+DEP-001迁移说明：上文真实比较命令对应当时的本机环境；其专用工具随个人接入迁至仓库外保留。历史实现仍可在提交 `e05b3b680f10aa0af108ddf9ed0394e6f4967359` 的 `tools/probe_title_retrieval.py` 查看，原结果不改写。当前交付版本使用硅基流动，见[DEP-001记录](../../DEP-001/README.md)。

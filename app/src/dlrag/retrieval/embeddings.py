@@ -40,14 +40,11 @@ def read_env_file(path):
 
 
 class SiliconFlowEmbedding:
-    allow_loopback_http = False
-    requires_api_key = True
     def __init__(self, api_key=None, model="BAAI/bge-m3", dimension=1024,
                  base_url="https://api.siliconflow.cn/v1", batch_size=16,
                  timeout=60, max_retries=3, session=None, sleep=time.sleep):
         parsed = urlparse(base_url)
-        local = parsed.hostname in {"127.0.0.1", "localhost", "::1"}
-        if ((parsed.scheme != "https" and not (self.allow_loopback_http and local and parsed.scheme == "http")) or not parsed.netloc or parsed.username
+        if (parsed.scheme != "https" or not parsed.netloc or parsed.username
                 or parsed.password or parsed.query or parsed.fragment):
             raise ProjectError("INVALID_REQUEST", "嵌入接口地址必须使用 HTTPS，且不包含凭证或查询参数")
         if isinstance(dimension, bool) or not isinstance(dimension, int) or dimension < 1:
@@ -98,14 +95,14 @@ class SiliconFlowEmbedding:
                 "revision_pinned": False}
 
     def _request(self, texts):
-        if self.requires_api_key and not self._api_key:
+        if not self._api_key:
             raise ProjectError("EMBEDDING_NOT_CONFIGURED", "请配置 SILICONFLOW_API_KEY 或 SD_EMBEDDING_KEY")
         for attempt in range(self.max_retries + 1):
             try:
                 self.stats["requests"] += 1
                 response = self._session.post(
                     self.base_url + "/embeddings",
-                    headers={"Authorization": "Bearer " + self._api_key} if self._api_key else {},
+                    headers={"Authorization": "Bearer " + self._api_key},
                     json={"model": self.model, "input": texts, "encoding_format": "float"},
                     timeout=self.timeout,
                     allow_redirects=False,
@@ -167,44 +164,6 @@ class SiliconFlowEmbedding:
             self.stats["total_tokens"] += used
             vectors.extend(array)
         return np.asarray(vectors, dtype=np.float32)
-
-
-class LocalBGEEmbedding(SiliconFlowEmbedding):
-    """Call the independently deployed FP16 encoder; pin the index to its identity."""
-    allow_loopback_http = True
-    requires_api_key = False
-
-    def __init__(self, base_url="http://127.0.0.1:18080/v1", revision=None, **kwargs):
-        parsed = urlparse(base_url)
-        if parsed.hostname not in {"127.0.0.1", "localhost", "::1"} or parsed.path.rstrip('/') != '/v1':
-            raise ProjectError("INVALID_REQUEST", "本地 BGE 必须使用回环地址和 /v1 路径")
-        if not revision or not isinstance(revision, str):
-            raise ProjectError("INVALID_REQUEST", "本地 BGE 须固定模型来源修订")
-        super().__init__(base_url=base_url, **kwargs)
-        self.revision = revision
-        self._session.trust_env = False
-
-    def get_config(self):
-        return {**super().get_config(), "provider": "local-bge-fp16", "revision_pinned": True,
-                "input_preprocessing": "original-text-v1;fp16;cls;l2-float32"}
-
-    def encode(self, texts):
-        if texts:
-            try:
-                response = self._session.get(self.base_url[:-3] + '/health', timeout=self.timeout,
-                                             allow_redirects=False)
-                if response.status_code != 200:
-                    raise ValueError()
-                health = response.json()
-                if not (health['status'] == 'ready' and health['dtype'] == 'float16'
-                        and health['device'].startswith('cuda') and health['model'] == self.model
-                        and health['dimension'] == self.dimension
-                        and health['source_revision'] == self.revision
-                        and health['pooling'] == 'CLS' and health['normalization'] == 'L2'):
-                    raise ValueError()
-            except (requests.RequestException, KeyError, ValueError, TypeError, AttributeError):
-                raise ProjectError("EMBEDDING_UNAVAILABLE", "本地 BGE 未就绪，或权重精度、修订与索引配置不一致") from None
-        return super().encode(texts)
 
 
 class FakeHashEmbedding:

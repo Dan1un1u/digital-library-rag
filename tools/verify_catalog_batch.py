@@ -35,8 +35,8 @@ def verify(run_dir, data_dir, review, api):
     before = json.loads((run_dir / "before.json").read_text(encoding="utf-8"))
     after = api.snapshot()
     manifest = after["manifest"]
-    if after["status"] != "ready" or manifest["embedding_backend"]["provider"] != "local-bge-fp16":
-        raise ValueError("Real local index is not ready")
+    if after["status"] != "ready" or manifest["embedding_backend"]["provider"] != "siliconflow":
+        raise ValueError("Real SiliconFlow index is not ready")
     docs = {d["doc_id"]: d for d in after["documents"]}
     expected_new = {i["expected_doc_id"] for i in plan["items"]} - {d["doc_id"] for d in before["documents"]}
     if set(docs) - {d["doc_id"] for d in before["documents"]} != expected_new:
