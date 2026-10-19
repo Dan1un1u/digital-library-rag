@@ -1,0 +1,20 @@
+{
+  "work_item": "ING-001",
+  "created_at": "2026-10-19T04:57:54.761748+00:00",
+  "code": {
+    "commit": "f31adcdc366c8a634bac8d6b0d730871c029b19e",
+    "branch": "feat/catalog-ingestion-audit",
+    "dirty": false
+  },
+  "purpose": "new regression fails against unchanged pre-fix business code; isolated synthetic PDFs and mock vectors",
+  "exit_code": 1,
+  "protected_libraries_unchanged": true,
+  "protected_snapshot_sha256": {
+    "18000": "32543215cdab74824873efdecb913700ecc75a4e030e501324155462b6794b90",
+    "19000": "b880ae3f412107420737550aec70f9e0224b176d5e0a788043e5586ec81bfadd"
+  },
+  "artifacts": {
+    "pytest.txt": "a71897be723fbe5589e61abf76c83636e60fae747a8ec9e8694ecdf31bbb7061",
+    "junit.xml": "3db07b56cb946e13bbb21766317acd0a94ea486125eba870cede604dfbc7431d"
+  }
+}

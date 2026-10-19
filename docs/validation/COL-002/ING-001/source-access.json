@@ -1,0 +1,48 @@
+{
+  "code": {
+    "commit": "9f492912e1da7e025a134081f3dbc06cc41d1916",
+    "branch": "feat/catalog-ingestion-audit",
+    "dirty": false
+  },
+  "scope": "read-only actual PDF endpoints including three blocked originals",
+  "items": [
+    {
+      "doc_id": "d_643ef9bd0c253cf91735610abddc5232abcaee1b085e0325df09553a957e845a",
+      "status": "failed",
+      "http_status": 200,
+      "sha256": "643ef9bd0c253cf91735610abddc5232abcaee1b085e0325df09553a957e845a"
+    },
+    {
+      "doc_id": "d_7872906c3e225ab15a16bf2d4cd64d85b5b2767113d2c451af8cd7fd21b2c36a",
+      "status": "ready",
+      "http_status": 200,
+      "sha256": "7872906c3e225ab15a16bf2d4cd64d85b5b2767113d2c451af8cd7fd21b2c36a"
+    },
+    {
+      "doc_id": "d_a067b12208421a545448d08ec93064af19f7e5702dfa2ed41791bf1093c13ab5",
+      "status": "ready",
+      "http_status": 200,
+      "sha256": "a067b12208421a545448d08ec93064af19f7e5702dfa2ed41791bf1093c13ab5"
+    },
+    {
+      "doc_id": "d_a37b62fd92b1d1fe2264f0afc23c5c8f04198e4d157027d138bc65a75934cc5e",
+      "status": "failed",
+      "http_status": 200,
+      "sha256": "a37b62fd92b1d1fe2264f0afc23c5c8f04198e4d157027d138bc65a75934cc5e"
+    },
+    {
+      "doc_id": "d_d0b830982dacd3a8bdaf85583297c8f2adf3e9c25cff0e14169461be53fb1bf3",
+      "status": "failed",
+      "http_status": 200,
+      "sha256": "d0b830982dacd3a8bdaf85583297c8f2adf3e9c25cff0e14169461be53fb1bf3"
+    },
+    {
+      "doc_id": "d_f4cea8a098f6ead6f125e0c82af2fce4891908b9fa12f4a9ec7d642bd9dca7f8",
+      "status": "ready",
+      "http_status": 200,
+      "sha256": "f4cea8a098f6ead6f125e0c82af2fce4891908b9fa12f4a9ec7d642bd9dca7f8"
+    }
+  ],
+  "snapshot_unchanged": true,
+  "snapshot_sha256": "2e092237b64e0a078be70b4ce7d669e4cefe2d0610970417f19c01459574c025"
+}
