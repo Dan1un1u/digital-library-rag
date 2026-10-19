@@ -129,8 +129,8 @@ def recognize_metadata(path, settings, filename=None, assist=True, progress=None
                 image = "data:image/jpeg;base64," + base64.b64encode(pixels.tobytes("jpeg", jpg_quality=80)).decode('ascii')
                 text = page.get_text(sort=True)
                 # The model sees a bounded text preview plus the page image.
-                # Keep full text only for server-side evidence checks so a
-                # legitimate publication footer beyond 6000 chars is retained.
+                # Validate against full native-order text: coordinate sorting
+                # can scatter a rotated arXiv stamp among body text characters.
                 pages.append({"pdf_page": i + 1, "text": text[:6000], "image": image,
                               "validation_text": page.get_text()})
         progress("api_recognition")

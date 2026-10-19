@@ -156,7 +156,8 @@ def merge_year_candidate(result, row, pages):
         result["year_review"] = {**review, "status": "candidate_supported", "source": "validated_seed",
                                  "date_type": fallback["date_type"], "rejected_api_reason": reason}
     else:
-        metadata["year"] = None
+        if "year" in metadata:
+            metadata["year"] = None
         sources.pop("year", None)
         result["year_review"] = {**review, "status": "needs_confirmation", "reason": reason,
                                  "rejected_value": row.get("value") if isinstance(row, dict) and type(row.get("value")) is int else None}
