@@ -108,7 +108,11 @@ def build(source, destination):
             p.alignment = WD_ALIGN_PARAGRAPH.CENTER
             p.paragraph_format.space_after = Pt(3)
             p.paragraph_format.keep_with_next = True
-            width = 5.4 if chapter in {3, 6, 11} else (6.2 if chapter in {2, 8, 9} else 7.0)
+            filename = Path(rel).name
+            narrow = {'01b-classification.jpg', '02-covers.jpg', '03-upload.jpg',
+                      '04-recognizing.jpg', '13-citation.jpg', '14-source-page.jpg'}
+            medium = {'06a-metadata-year.jpg', '15b-scanned-body.jpg', '16-system-status.jpg'}
+            width = 5.4 if filename in narrow else (6.2 if filename in medium else 7.0)
             pic = p.add_run().add_picture(str(source.parent / rel), width=Inches(width))
             pic._inline.docPr.set('descr', caption)
             # Crop only in Word layout; the source browser JPEG remains unchanged.
@@ -139,9 +143,7 @@ def build(source, destination):
             cells = [r for r in cells if not all(re.fullmatch(r':?-+:?', x) for x in r)]
             table = doc.add_table(rows=0, cols=len(cells[0]))
             table.autofit = False
-            widths = ([1.25, 2.0, 3.85] if len(cells[0]) == 3 else [1.7, 5.4])
-            if chapter == 4:
-                widths = [1.25, 3.1, 2.75]
+            widths = ([1.15, 3.05, 2.9] if len(cells[0]) == 3 else [1.7, 5.4])
             for col, width in zip(table.columns, widths):
                 col.width = Inches(width)
             for ri, values in enumerate(cells):
