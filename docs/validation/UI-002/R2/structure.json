@@ -1,0 +1,16 @@
+{
+  "baseline": "7d9abafc109c7a3d506e0c3b806493bbab650f26",
+  "tested_commit": "1447f2a8b0446f25f40f7c71726c8dc0e8d99efd",
+  "original_streamlit_calls": 163,
+  "original_call_sequence_and_column_parameters_equal": true,
+  "forms": [
+    "clarification",
+    "query",
+    "upload"
+  ],
+  "upload_clear_on_submit": false,
+  "style_sha256": "01e13b622c0e4de0bf8835240e635a942f91eb11cfd083f530f726984fc786f3",
+  "manual_builder_unchanged": true,
+  "dev_theme_overrides": [],
+  "browser_body_background": "rgb(14, 17, 23)"
+}
