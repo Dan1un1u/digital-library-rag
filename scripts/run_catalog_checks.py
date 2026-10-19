@@ -25,7 +25,8 @@ CASE_FILES["RET-001"] = ["app/tests/retrieval/test_title_vectors.py"]
 NEW_TESTS += CASE_FILES["RET-001"]
 CASE_FILES["DEP-001"] = ["app/tests/integration/test_siliconflow_portability.py"]
 NEW_TESTS += CASE_FILES["DEP-001"]
-CASE_FILES["MQ-006"] = ["app/tests/integration/test_discipline_ingestion.py"]
+CASE_FILES["MQ-006"] = ["app/tests/integration/test_discipline_ingestion.py",
+                         "app/tests/integration/test_discipline_assistance.py"]
 NEW_TESTS += CASE_FILES["MQ-006"]
 FOCUS = ["app/src/dlrag/api/services.py", "app/src/dlrag/ingestion/library.py",
          "app/src/dlrag/ingestion/parser.py", "app/src/dlrag/ingestion/chunker.py",
@@ -33,7 +34,7 @@ FOCUS = ["app/src/dlrag/api/services.py", "app/src/dlrag/ingestion/library.py",
          "app/src/dlrag/ingestion/metadata_api.py", "app/src/dlrag/ingestion/metadata_year.py",
          "app/src/dlrag/ingestion/bibliography.py", "app/src/dlrag/ingestion/fulltext.py",
          "app/src/dlrag/ingestion/text_quality.py", "app/src/dlrag/shared/disciplines.py",
-         "app/src/dlrag/api/routes.py"]
+         "app/src/dlrag/api/routes.py", "app/src/dlrag/ingestion/discipline.py"]
 
 
 def git(*args):

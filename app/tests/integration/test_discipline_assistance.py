@@ -9,6 +9,7 @@ import fitz
 from pydantic import SecretStr
 import pytest
 from streamlit.testing.v1 import AppTest
+import requests
 
 from dlrag.ingestion.metadata_api import recognize_metadata, request_candidates
 from test_fulltext_gate import wait_job
@@ -163,3 +164,21 @@ def test_upload_page_prefills_llm_selection_and_displays_its_source(client, serv
     assert not app.exception
     assert app.selectbox(key='upload_domain').value == '自然科学'
     assert any('LLM 辅助分类' in w.value for w in app.markdown)
+
+
+def test_classification_timeout_leaves_an_editable_pending_preview(client, services, monkeypatch):
+    model = enhanced(services, monkeypatch)
+    model.side_effect = requests.Timeout('private-provider-detail')
+    result = preview(client, pdf_bytes())
+    assert result['api_assistance']['error_code'] == 'API_TIMEOUT'
+    assert result['discipline_classification']['status'] == 'pending'
+    assert result['metadata']['topics'] == []
+    assert 'private-provider-detail' not in json.dumps(result)
+    assert services.library.list_documents(include_nonready=True) == []
+
+
+def test_ambiguous_keyword_hits_allow_llm_to_resolve_the_main_subject(client, services, monkeypatch):
+    enhanced(services, monkeypatch)
+    result = preview(client, pdf_bytes('Neural methods in economics'))
+    assert result['metadata']['topics'] == ['自然科学']
+    assert result['discipline_classification']['method'] == 'llm_page_classification'

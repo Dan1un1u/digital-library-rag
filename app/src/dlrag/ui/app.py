@@ -376,7 +376,7 @@ else:
     st.subheader("上传 PDF")
     st.caption("选择 PDF，自动识别标题和作者；核对文献信息后，即可加入馆藏。")
     use_metadata_api = st.toggle("增强识别（推荐）", value=True,
-                                 help="使用已配置的 API 辅助识别，会发送 PDF 前两页的图像和文字；关闭后仅在本机识别。")
+                                 help="使用已配置的 API 辅助识别；学科先按关键词判断，未匹配时由 LLM 辅助分类。会发送 PDF 前两页的图像和文字；关闭后仅在本机识别。")
     use_lookup = st.toggle("联网补全出版资料", value=False, disabled=not use_metadata_api,
                            help="增强识别成功后，将题名和前两位作者姓名发送至 Crossref 查询期刊或会议出版记录，不发送 PDF。补充相关出版来源；仅确认同一出版版本时补缺失年份。年份应对应当前 PDF，预印本可填公开或修订年份。结果需核对。修改选项后请点击重新识别。")
     file = st.file_uploader(f"上传 PDF（单份最大 {health['configuration']['max_upload_mb']} MB）", type=["pdf"], key="upload_pdf",
@@ -405,6 +405,17 @@ else:
             with st.expander("识别结果与来源", expanded=True):
                 for warning in preview["warnings"]:
                     st.caption(warning)
+                classification = preview.get("discipline_classification", {})
+                if classification.get("status") == "classified":
+                    method = {"keyword": "关键词匹配", "explicit": "已有学科标签",
+                              "llm_page_classification": "LLM 辅助分类"}.get(classification["method"], "自动分类")
+                    st.write("所属学科：" + classification["value"] + "（" + method + "）")
+                    if classification.get("excerpt"):
+                        st.caption(f"PDF 第 {classification['pdf_page']} 页 · " + classification["excerpt"])
+                    if classification.get("reason"):
+                        st.caption(classification["reason"])
+                else:
+                    st.caption("暂未确定所属学科，可在下方选择，或开启增强识别后重新识别。")
                 labels = {"title": "标题", "authors": "作者", "year": "版本年份", "language": "语言", "source_url": "来源"}
                 methods = {"pdf_metadata": "PDF 自带信息", "first_page_layout": "首页标题排版",
                            "first_page_text": "首页文字", "document_date_candidate": "正文日期候选",
