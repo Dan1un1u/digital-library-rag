@@ -4,7 +4,6 @@ from html import escape
 
 from dlrag.qa.sentences import sentence_spans
 from dlrag.ui.citations import marked_text
-from dlrag.shared.i18n import t, get_language, use_language
 from .services import ProjectError
 
 
@@ -54,25 +53,19 @@ def pdf_preview(path, page_number, highlights):
         return pixmap.tobytes('png'), matched
 
 
-def source_html(chunk, highlights, image, matched, language='zh'):
-    with use_language(language):
-        return _source_html(chunk, highlights, image, matched)
-
-
-def _source_html(chunk, highlights, image, matched):
+def source_html(chunk, highlights, image, matched):
     from urllib.parse import quote
     document = chunk.get('document', {})
-    title = document.get('title', t('文献原文'))
+    title = document.get('title', '文献原文')
     file_url = f"/documents/{quote(chunk['doc_id'], safe='')}/file#page={chunk['pdf_page']}"
     if not highlights:
-        notice = t('该引用未包含句子定位信息。请重新提问以生成句子级高亮。')
+        notice = '该引用未包含句子定位信息。请重新提问以生成句子级高亮。'
     elif matched == len(highlights):
-        notice = t('黄色区域为该角标选中的支持句子；下方为对应 PDF 原页。')
+        notice = '黄色区域为该角标选中的支持句子；下方为对应 PDF 原页。'
     else:
-        notice = t('提取原文已精确高亮；PDF 文字层定位成功 {p0}/{p1} 句。未匹配句子请核对下方提取原文。', p0=matched, p1=len(highlights))
-    lang = 'en' if get_language() == 'en' else 'zh-CN'
-    return f'''<!doctype html><html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{escape(title)} · {t('引用原文')}</title><style>body{{font:17px/1.8 system-ui,sans-serif;max-width:1100px;margin:32px auto;padding:0 20px;color:#172033;background:#f5f7fb}}section{{background:white;padding:24px;border-radius:12px;margin:20px 0}}.source{{white-space:pre-wrap;overflow-wrap:anywhere}}img{{width:100%;height:auto}}a{{color:#175bcc}}#source-text{{scroll-margin-top:20px}}</style></head><body>
-<h1>{escape(title)}</h1><p>{t('PDF 文件第 {p0} 页', p0=chunk['pdf_page'])} · <a href="{escape(file_url, quote=True)}" target="_blank" rel="noopener">{t('打开 PDF 原文件')}</a></p>
-<p>{escape(notice)}</p><section id="source-text"><h2>{t('引用原文')}</h2><div class="source">{marked_text(chunk['text'], highlights)}</div></section>
-<section><h2>{t('PDF 原页预览')}</h2><img alt="{t('对应 PDF 页面及可定位的支持句子高亮')}" src="data:image/png;base64,{base64.b64encode(image).decode('ascii')}"></section></body></html>'''
+        notice = f'提取原文已精确高亮；PDF 文字层定位成功 {matched}/{len(highlights)} 句。未匹配句子请核对下方提取原文。'
+    return f'''<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{escape(title)} · 引用原文</title><style>body{{font:17px/1.8 system-ui,sans-serif;max-width:1100px;margin:32px auto;padding:0 20px;color:#172033;background:#f5f7fb}}section{{background:white;padding:24px;border-radius:12px;margin:20px 0}}.source{{white-space:pre-wrap;overflow-wrap:anywhere}}img{{width:100%;height:auto}}a{{color:#175bcc}}#source-text{{scroll-margin-top:20px}}</style></head><body>
+<h1>{escape(title)}</h1><p>PDF 文件第 {chunk['pdf_page']} 页 · <a href="{escape(file_url, quote=True)}" target="_blank" rel="noopener">打开 PDF 原文件</a></p>
+<p>{escape(notice)}</p><section id="source-text"><h2>引用原文</h2><div class="source">{marked_text(chunk['text'], highlights)}</div></section>
+<section><h2>PDF 原页预览</h2><img alt="对应 PDF 页面及可定位的支持句子高亮" src="data:image/png;base64,{base64.b64encode(image).decode('ascii')}"></section></body></html>'''

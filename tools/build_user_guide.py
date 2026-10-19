@@ -27,19 +27,17 @@ def inline(paragraph, text):
             run.font.name = 'Consolas'
 
 
-def build(source, destination, language='zh'):
+def build(source, destination):
     doc = Document()
     section = doc.sections[0]
     section.page_width, section.page_height = Inches(8.5), Inches(11)
-    section.top_margin, section.bottom_margin = Inches(.64), Inches(.8)
+    section.top_margin, section.bottom_margin = Inches(.64), Inches(.62)
     section.left_margin, section.right_margin = Inches(.7), Inches(.7)
     section.header_distance, section.footer_distance = Inches(.25), Inches(.25)
     for name in ['Normal', 'Title', 'Subtitle', 'Heading 1', 'Heading 2', 'Caption']:
         style = doc.styles[name]
-        style.font.name = 'Arial' if language == 'en' else 'Microsoft YaHei'
+        style.font.name = 'Microsoft YaHei'
         style.element.get_or_add_rPr().get_or_add_rFonts().set(qn('w:eastAsia'), 'Microsoft YaHei')
-        for theme in ('asciiTheme', 'hAnsiTheme', 'eastAsiaTheme', 'cstheme'):
-            style.element.get_or_add_rPr().get_or_add_rFonts().attrib.pop(qn('w:' + theme), None)
         style.font.color.rgb = RGBColor(0, 0, 0)
         grid = OxmlElement('w:snapToGrid')
         grid.set(qn('w:val'), '0')
@@ -60,15 +58,18 @@ def build(source, destination, language='zh'):
     doc.styles['Caption'].paragraph_format.line_spacing = 1.05
     doc.styles['Caption'].paragraph_format.keep_with_next = False
     header = section.header.paragraphs[0]
-    header.text = ''
+    header.text = '专题数字图书馆  使用手册'
+    header.runs[0].font.size = Pt(8)
     footer = section.footer.paragraphs[0]
     footer.alignment = WD_ALIGN_PARAGRAPH.RIGHT
+    version = re.search(r'文档版本为 ([0-9.]+)', source.read_text(encoding='utf-8'))
+    footer.add_run('版本 ' + (version.group(1) if version else '1.0') + '  ·  ')
     field = OxmlElement('w:fldSimple')
     field.set(qn('w:instr'), 'PAGE')
     footer._p.append(field)
     for run in footer.runs:
         run.font.size = Pt(8)
-    doc.core_properties.title = 'Digital Library User Guide' if language == 'en' else '专题数字图书馆使用手册'
+    doc.core_properties.title = '专题数字图书馆使用手册'
     doc.core_properties.subject = '浏览 搜索 上传 元数据核对 证据问答 操作说明'
     doc.core_properties.author = '数字图书馆项目'
     doc.core_properties.last_modified_by = '数字图书馆项目'
@@ -108,15 +109,10 @@ def build(source, destination, language='zh'):
             p.paragraph_format.space_after = Pt(3)
             p.paragraph_format.keep_with_next = True
             filename = Path(rel).name
-            narrow = {'01b-classification.jpg', '02-covers.jpg', '03-upload.jpg', '06a-metadata-year.jpg',
+            narrow = {'01b-classification.jpg', '02-covers.jpg', '03-upload.jpg',
                       '04-recognizing.jpg', '13-citation.jpg', '14-source-page.jpg'}
             medium = {'06a-metadata-year.jpg', '15b-scanned-body.jpg', '16-system-status.jpg'}
             width = 5.4 if filename in narrow else (6.2 if filename in medium else 7.0)
-            if '/UI-002/' in rel:
-                with Image.open(source.parent / rel) as original:
-                    img_w, img_h = original.size
-                width = min(7.0, 3.5 * img_w / img_h)
-            width *= .94
             pic = p.add_run().add_picture(str(source.parent / rel), width=Inches(width))
             pic._inline.docPr.set('descr', caption)
             # Crop only in Word layout; the source browser JPEG remains unchanged.
@@ -199,7 +195,6 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--source', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
-    parser.add_argument('--language', choices=['zh', 'en'], default='zh')
     args = parser.parse_args()
-    build(args.source.resolve(), args.output.resolve(), args.language)
+    build(args.source.resolve(), args.output.resolve())
     print(args.output.resolve())

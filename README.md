@@ -4,8 +4,6 @@
 
 真实模式沿用最初项目的硅基流动接口。成员使用自己的服务密钥；项目不需要部署本机模型服务或登录个人订阅代理。图文操作见[使用手册](docs/user-guide/使用手册.md)及[Word 版](docs/user-guide/专题数字图书馆使用手册.docx)。
 
-界面支持简体中文和 English，可在侧栏顶部切换。英文操作说明见 [English user guide](docs/user-guide/User-Guide.en.md)。语言切换保留当前搜索、回答和上传草稿。
-
 | 功能 | 配置示例中的模型 | 接口 |
 | --- | --- | --- |
 | 文献与查询向量 | BAAI/bge-m3，1024 维 | `/embeddings` |
