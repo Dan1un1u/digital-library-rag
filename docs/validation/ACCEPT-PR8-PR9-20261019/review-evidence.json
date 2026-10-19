@@ -1,0 +1,30 @@
+{
+  "manual": {
+    "version": "1.2",
+    "pages": 11,
+    "figures": 13,
+    "markdown_and_docx_hashes_match": true,
+    "personal_model_names_absent": true,
+    "existing_rendered_pdf_hash_matches": true
+  },
+  "real_pdf_evidence": {
+    "source_tree_matches_current": true,
+    "files": 6,
+    "off_pending": 6,
+    "on_llm_natural_science": 6,
+    "retrieval_hits": 18,
+    "published_artifacts_verified": 19,
+    "event_chain_valid": true
+  },
+  "private_integration_audit": {
+    "runtime_sources_scanned": 82,
+    "findings": []
+  },
+  "live_snapshot_counts": {
+    "18000": 25,
+    "19000": 50,
+    "19010": 6,
+    "19020": 6,
+    "19032": 6
+  }
+}
