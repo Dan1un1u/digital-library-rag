@@ -1,0 +1,153 @@
+{
+  "code": {
+    "commit": "f9cbb96093fbb5c2455e13731fe292f39ca929b5",
+    "branch": "fix/mq-005-issue-year",
+    "dirty": false
+  },
+  "scope": "actual HU25 PDF; live Luna + Crossref; shadow preview only, no import",
+  "sha256": "2df595721dc5502f02d3c657426610fb612731c8022b698ae5b1968a96b92996",
+  "provider": "cliproxyapi",
+  "model": "gpt-6-luna",
+  "passed": true,
+  "result": {
+    "metadata": {
+      "title": "The Digital Future is Now: A Call to Action for the Humanities",
+      "authors": [
+        "Christine L. Borgman"
+      ],
+      "year": 2009,
+      "language": "en",
+      "source_url": "https://doi.org/10.63744/au56n57rd75j"
+    },
+    "field_sources": {
+      "title": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "The Digital Future is Now: A Call to Action for the Humanities"
+      },
+      "language": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "The Digital Future is Now: A Call to Action for the Humanities"
+      },
+      "authors": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "Christine L. Borgman <Borgman_at_gseis_dot_ucla_dot_edu>, Professor & Presidential Chair in Information Studies, UCLA"
+      },
+      "year": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "DHQ: Digital Humanities Quarterly\n2009\nVolume 3 Number 4",
+        "date_type": "issue",
+        "context": "DHQ: Digital Humanities Quarterly\n2009\nVolume 3 Number 4",
+        "grounding": "page_text"
+      },
+      "source_url": {
+        "method": "bibliographic_lookup",
+        "provider": "crossref",
+        "record_url": "https://api.crossref.org/works/10.63744%2Fau56n57rd75j",
+        "retrieved_at": "2026-10-19T06:25:07.263740+00:00",
+        "date_type": null,
+        "excerpt": "10.63744/au56n57rd75j"
+      }
+    },
+    "warnings": [
+      "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+      "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序，以及年份是否对应所收录版本。",
+      "已依据题名和作者吻合的 Crossref 出版记录补全候选字段；DOI 可作为相关出版来源，年份还须与所收录版本对应，请核对后导入。"
+    ],
+    "requires_confirmation": true,
+    "page_count": 20,
+    "method": "local_and_api_page_recognition",
+    "api_assistance": {
+      "status": "completed",
+      "accepted_fields": 4
+    },
+    "bibliographic_enrichment": {
+      "policy": "crossref-collected-version-v2",
+      "provider": "crossref",
+      "status": "completed",
+      "missing_before": [
+        "source_url"
+      ],
+      "filled_fields": [
+        "source_url"
+      ],
+      "conflicts": [],
+      "candidates": [
+        {
+          "title": "The Digital Future is Now: A Call to Action for the Humanities",
+          "authors": [
+            "Christine L. Borgman"
+          ],
+          "doi": "10.63744/au56n57rd75j",
+          "source_url": "https://doi.org/10.63744/au56n57rd75j",
+          "record_url": "https://api.crossref.org/works/10.63744%2Fau56n57rd75j",
+          "type": "journal-article",
+          "dates": [
+            {
+              "kind": "published-online",
+              "date_parts": [
+                2010,
+                3,
+                20
+              ],
+              "year": 2010
+            },
+            {
+              "kind": "published",
+              "date_parts": [
+                2010,
+                3,
+                20
+              ],
+              "year": 2010
+            }
+          ],
+          "selected_date": {
+            "kind": "published-online",
+            "date_parts": [
+              2010,
+              3,
+              20
+            ],
+            "year": 2010
+          },
+          "match": {
+            "title": "normalized_exact",
+            "first_author": "exact",
+            "author_overlap": 1,
+            "required_overlap": 1
+          }
+        }
+      ],
+      "queried_at": "2026-10-19T06:25:07.263740+00:00",
+      "year_decision": "version_not_confirmed"
+    },
+    "document_version": {
+      "kind": "unknown",
+      "dois": []
+    },
+    "year_review": {
+      "policy": "collected-version-year-v2",
+      "status": "candidate_supported",
+      "source": "api",
+      "date_type": "issue",
+      "grounding": "page_text"
+    }
+  },
+  "raw_model_year": {
+    "value": 2009,
+    "date_type": "issue",
+    "pdf_page": 1,
+    "excerpt": "DHQ: Digital Humanities Quarterly\n2009\nVolume 3 Number 4"
+  },
+  "protected_libraries_unchanged": true,
+  "protected_snapshot_sha256": {
+    "18000": "32543215cdab74824873efdecb913700ecc75a4e030e501324155462b6794b90",
+    "19000": "b880ae3f412107420737550aec70f9e0224b176d5e0a788043e5586ec81bfadd",
+    "19010": "2e092237b64e0a078be70b4ce7d669e4cefe2d0610970417f19c01459574c025"
+  },
+  "worktree_dirty_after": false
+}
