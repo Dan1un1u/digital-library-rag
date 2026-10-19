@@ -19,7 +19,7 @@ def test_ready_duplicate_skips_parse_build_and_embedding(services, imported, pdf
     monkeypatch.setattr(services.retriever, "build", build)
     monkeypatch.setattr(services.retriever.backend, "encode", encode)
     with pytest.warns(UserWarning, match="metadata"):
-        result = services.ingest(str(pdf), {"title": "Do not overwrite stored title"})
+        result = services.ingest(str(pdf), {"title": "Do not overwrite stored title", "topics": ["自然科学"]})
     assert result == imported
     assert result["document"]["doc_id"] == "d_" + hashlib.sha256(pdf.read_bytes()).hexdigest()
     assert services.manifest() == before
@@ -56,7 +56,7 @@ def test_index_failure_keeps_old_service_and_retry_reuses_parsed_content(
 
             injected.setattr(retriever_module.os, "replace", fail_pointer)
         with pytest.raises(ProjectError):
-            services.ingest(str(path), {"title": "Recovery sample"})
+            services.ingest(str(path), {"title": "Recovery sample", "topics": ["自然科学"]})
     pending = services.library.get_document(new_id)
     assert pending["status"] == "indexing"
     assert pending["error_code"] == ("EMBEDDING_UNAVAILABLE" if failure == "embedding" else "INDEX_BUILD_FAILED")
@@ -74,7 +74,7 @@ def test_index_failure_keeps_old_service_and_retry_reuses_parsed_content(
     encode = Mock(wraps=services.retriever.backend.encode)
     monkeypatch.setattr(services.library, "_parse_document", parse)
     monkeypatch.setattr(services.retriever.backend, "encode", encode)
-    result = services.ingest(str(path), {"title": "Recovery sample"})
+    result = services.ingest(str(path), {"title": "Recovery sample", "topics": ["自然科学"]})
     parse.assert_not_called()
     assert encode.call_count == 1
     assert result["document"]["status"] == "ready" and result["document"]["error_code"] is None

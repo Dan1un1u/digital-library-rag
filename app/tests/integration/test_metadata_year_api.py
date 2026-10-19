@@ -51,6 +51,7 @@ def test_enhanced_job_year_policy_is_visible_and_manual_correction_can_import(
         assert preview['year_review']['date_type'] == 'version'
         assert preview['field_sources']['year']['date_type'] == 'version'
     metadata = preview['metadata']
+    metadata['topics'] = ['自然科学']  # User selects a discipline after preview.
     metadata['year'] = 2022  # An explicit user correction remains allowed.
     imported = client.post('/documents/jobs', files={'file': ('synthetic.pdf', data, 'application/pdf')},
                            data={'metadata_json': json.dumps(metadata)})

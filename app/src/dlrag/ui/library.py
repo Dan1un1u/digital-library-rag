@@ -2,8 +2,8 @@
 import re
 from html import escape
 from urllib.parse import quote
+from dlrag.shared.disciplines import DOMAINS
 
-DOMAINS = ("自然科学", "社会科学", "哲学与人文科学")
 TERMS = {
     "自然科学": r"计算机|数学|物理|化学|生物|医学|人工智能|信息检索|语言模型|自然科学|computer|retriev|language model|transformer|attention|embedding|bert|splade|colbert|physics|biology|chemistry|mathematics|machine learning|neural",
     "社会科学": r"社会科学|社会学|经济|金融|法学|政治|教育|管理学|economics|sociology|finance|political|education|management",

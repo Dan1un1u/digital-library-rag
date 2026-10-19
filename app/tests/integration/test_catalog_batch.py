@@ -18,7 +18,7 @@ def manifest(tmp_path, pdf):
     value = {"schema_version": 1, "batch_id": "COL-001-synthetic",
              "items": [{"item_id": "synthetic-01", "pdf_path": str(pdf),
                         "sha256": hashlib.sha256(pdf.read_bytes()).hexdigest(),
-                        "metadata": {"title": "Synthetic accession", "year": 2024},
+                        "metadata": {"title": "Synthetic accession", "year": 2024, "topics": ["自然科学"]},
                         "review": {"status": "ready", "method": "automated_pdf_check",
                                    "evidence": "synthetic fixture; not a literature review"}}]}
     path = tmp_path / "input.json"

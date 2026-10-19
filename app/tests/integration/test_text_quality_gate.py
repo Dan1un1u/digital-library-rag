@@ -32,7 +32,7 @@ def test_unusable_font_mapping_cannot_become_ready(client, services, imported, t
     raw = path.read_bytes()
     before = services.manifest()
     chunks = services.library.list_chunks()
-    response = client.post("/documents", files={"file": (path.name, raw, "application/pdf")})
+    response = client.post("/documents", files={"file": (path.name, raw, "application/pdf")}, data={"metadata_json": json.dumps({"topics": ["自然科学"]})})
     assert response.status_code == 422
     assert response.json()["error"]["code"] == "TEXT_LAYER_REVIEW_REQUIRED"
     doc_id = "d_" + hashlib.sha256(raw).hexdigest()
@@ -68,7 +68,7 @@ def test_dense_controls_and_replacement_characters_need_review(character):
 
 def test_correct_unicode_mapping_is_preserved(client, tmp_path):
     path = encoded_pdf(tmp_path / "good-map.pdf", broken=False)
-    result = client.post("/documents", files={"file": (path.name, path.read_bytes(), "application/pdf")})
+    result = client.post("/documents", files={"file": (path.name, path.read_bytes(), "application/pdf")}, data={"metadata_json": json.dumps({"topics": ["自然科学"]})})
     assert result.status_code == 200 and result.json()["document"]["status"] == "ready"
 
 
@@ -90,7 +90,7 @@ def test_async_duplicate_retry_and_corrected_copy_preserve_failed_original(clien
     monkeypatch.setattr(services.retriever, "build", build)
     before = services.manifest()
     for _ in range(2):
-        uploaded = client.post("/documents/jobs", files={"file": (bad.name, raw, "application/pdf")})
+        uploaded = client.post("/documents/jobs", files={"file": (bad.name, raw, "application/pdf")}, data={"metadata_json": json.dumps({"topics": ["自然科学"]})})
         job = wait(client, uploaded.json()["job_id"])
         assert job["stage"] == "error" and job["error"]["code"] == "TEXT_LAYER_REVIEW_REQUIRED"
     ident = "d_" + hashlib.sha256(raw).hexdigest()
@@ -100,7 +100,7 @@ def test_async_duplicate_retry_and_corrected_copy_preserve_failed_original(clien
     build.assert_not_called()
     monkeypatch.setattr(services.retriever, "build", original)
     good = encoded_pdf(tmp_path / "repaired-copy.pdf", broken=False)
-    response = client.post("/documents", files={"file": (good.name, good.read_bytes(), "application/pdf")})
+    response = client.post("/documents", files={"file": (good.name, good.read_bytes(), "application/pdf")}, data={"metadata_json": json.dumps({"topics": ["自然科学"]})})
     assert response.status_code == 200 and services.library.get_document(ident)["status"] == "failed"
 
 
@@ -117,7 +117,7 @@ def test_forged_code_does_not_echo_provider_or_pdf_body(client, services, tmp_pa
     from dlrag.ingestion.errors import ProjectError
     path = encoded_pdf(tmp_path / "source.pdf", broken=False)
     monkeypatch.setattr(services, "ingest", Mock(side_effect=ProjectError("TEXT_LAYER_REVIEW_REQUIRED", "private-provider-body")))
-    response = client.post("/documents/jobs", files={"file": (path.name, path.read_bytes(), "application/pdf")})
+    response = client.post("/documents/jobs", files={"file": (path.name, path.read_bytes(), "application/pdf")}, data={"metadata_json": json.dumps({"topics": ["自然科学"]})})
     job = wait(client, response.json()["job_id"])
     assert job["error"]["code"] == "TEXT_LAYER_REVIEW_REQUIRED" and "private-provider-body" not in json.dumps(job)
 
@@ -125,7 +125,7 @@ def test_forged_code_does_not_echo_provider_or_pdf_body(client, services, tmp_pa
 def test_management_shows_text_review_and_keeps_original(client, tmp_path, monkeypatch):
     from streamlit.testing.v1 import AppTest
     path = encoded_pdf(tmp_path / "bad.pdf")
-    client.post("/documents", files={"file": (path.name, path.read_bytes(), "application/pdf")})
+    client.post("/documents", files={"file": (path.name, path.read_bytes(), "application/pdf")}, data={"metadata_json": json.dumps({"topics": ["自然科学"]})})
     monkeypatch.setattr("dlrag.ui.client.call_api", lambda base, method, path, **kw: client.request(method, path, **kw).json())
     app = AppTest.from_file(str(Path(__file__).parents[2] / "src/dlrag/ui/app.py"), default_timeout=20).run()
     app.sidebar.radio[0].set_value("上传与管理").run()
