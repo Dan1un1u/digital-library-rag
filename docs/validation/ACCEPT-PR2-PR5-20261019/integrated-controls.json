@@ -1,0 +1,349 @@
+{
+  "tested_code": {
+    "commit": "10a746d7d3988ff8e9054cb33f4463059320c0ae",
+    "branch": "fix/ret-001-title-vectors",
+    "dirty": false
+  },
+  "scope": "actual PDFs, isolated TestClient/mock vectors; HU25 frozen model-year replay; separately real BGE candidate-index reload/title queries",
+  "import_controls": [
+    {
+      "case_id": "SS06",
+      "sha256": "a37b62fd92b1d1fe2264f0afc23c5c8f04198e4d157027d138bc65a75934cc5e",
+      "http_status": 422,
+      "error_code": "FULLTEXT_REVIEW_REQUIRED",
+      "suspect_pages": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "SS14",
+      "sha256": "d0b830982dacd3a8bdaf85583297c8f2adf3e9c25cff0e14169461be53fb1bf3",
+      "http_status": 422,
+      "error_code": "FULLTEXT_REVIEW_REQUIRED",
+      "suspect_pages": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "HU08",
+      "sha256": "7872906c3e225ab15a16bf2d4cd64d85b5b2767113d2c451af8cd7fd21b2c36a",
+      "http_status": 422,
+      "error_code": "TEXT_LAYER_REVIEW_REQUIRED",
+      "suspect_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "HU11",
+      "sha256": "ee8c6c83448890881931f6e926fbcd65f57a06982610eb549039b4fd3084b255",
+      "http_status": 200,
+      "error_code": null,
+      "suspect_pages": [],
+      "passed": true
+    },
+    {
+      "case_id": "SS06-OCR",
+      "sha256": "f4cea8a098f6ead6f125e0c82af2fce4891908b9fa12f4a9ec7d642bd9dca7f8",
+      "http_status": 200,
+      "error_code": null,
+      "suspect_pages": [],
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "hu25_replay": {
+    "sha256": "2df595721dc5502f02d3c657426610fb612731c8022b698ae5b1968a96b92996",
+    "source_report_sha256": "3cee2194faf5275f238ab73644420c90eecb07704f1c1116ed36f66694c9c58c",
+    "actual_year": 2009,
+    "date_type": "issue",
+    "new_llm_or_crossref_call": false,
+    "passed": true
+  },
+  "live_bge_reload": {
+    "index_version": "idx_20261019T063239_947121698e49",
+    "corpus_hash": "94b692c3789bf9cf172e3e8b9a5b00fec061e1fd756de0c66cfb12cf71216515",
+    "vector_text_policy": "document-title-prefix-v1",
+    "model_identity": {
+      "provider": "local-bge-fp16",
+      "model": "BAAI/bge-m3",
+      "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+      "dimension": 1024,
+      "base_url": "http://127.0.0.1:18080/v1",
+      "encoding_format": "float",
+      "input_preprocessing": "original-text-v1;fp16;cls;l2-float32",
+      "revision_pinned": true
+    },
+    "query_count": 50,
+    "hits": 50,
+    "rows": [
+      {
+        "item_id": "SS01",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "SS02",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "SS03",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "SS04",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "SS05",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "SS06",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "SS07",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "SS08",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "SS09",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "SS10",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "SS11",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "SS12",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "SS13",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "SS14",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "SS15",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "SS16",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "SS17",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "SS18",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "SS19",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "SS20",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "SS21",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "SS22",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "SS23",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "SS24",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "SS25",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "HU01",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "HU02",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "HU03",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "HU04",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "HU05",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "HU06",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "HU07",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "HU08",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "HU09",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "HU10",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "HU11",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "HU12",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "HU13",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "HU14",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "HU15",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "HU16",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "HU17",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "HU18",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "HU19",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "HU20",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "HU21",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "HU22",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "HU23",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "HU24",
+        "found_in_top_5": true
+      },
+      {
+        "item_id": "HU25",
+        "found_in_top_5": true
+      }
+    ],
+    "index_rebuilt": false,
+    "passed": true
+  },
+  "protected_libraries_unchanged": true,
+  "protected_snapshot_sha256": {
+    "18000": "32543215cdab74824873efdecb913700ecc75a4e030e501324155462b6794b90",
+    "19000": "b880ae3f412107420737550aec70f9e0224b176d5e0a788043e5586ec81bfadd",
+    "19010": "2e092237b64e0a078be70b4ce7d669e4cefe2d0610970417f19c01459574c025"
+  },
+  "worktree_dirty_after": false
+}

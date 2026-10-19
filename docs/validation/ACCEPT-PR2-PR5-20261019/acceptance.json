@@ -1,0 +1,237 @@
+{
+  "created_at": "2026-10-19T06:46:15.433350+00:00",
+  "main_before": "720f5840aa9519b7ca28b66c2e86e851ec85e8ec",
+  "reviews": [
+    {
+      "pr": 2,
+      "url": "https://github.com/Dan1un1u/digital-library-rag/pull/2",
+      "tested_head": "28c709109771ecb411b1d9098fca044101d97069",
+      "base": "main",
+      "work_item": "ING-001",
+      "fresh_targeted": {
+        "tested_code": {
+          "commit": "28c709109771ecb411b1d9098fca044101d97069",
+          "branch": "feat/ing-001-fulltext-gate",
+          "dirty": false
+        },
+        "tests": {
+          "tests": 18,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "exit_code": 0,
+        "source_path_verified": true,
+        "worktree_dirty_after": false
+      },
+      "fresh_summary_sha256": "e42d8b220bc2fa83dbc3810ce605d8fd172ca44ab747286e72d4d76a153f4773",
+      "prior_full_tests": {
+        "tests": 486,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "prior_full_summary_sha256": "281f69b211a72d52951807b5ebc018d9e17eb191e9586632acc722389428c0f8",
+      "source_unchanged_since_prior_real_and_full_tests": true,
+      "prior_raw_artifacts_verified": true,
+      "source_tree_ids": {
+        "app": "b8e2019d0d6ce0f96140832fa5ed6cd7004bea0d",
+        "tools": "52d69c6b102d9b1aa6872cf18b546712e2a155b7",
+        "scripts": "ec9b2b17baec4ce05f1daafe290f92e59822a96b",
+        ".coveragerc": "1c55443768b34f3996ffc151e8e9639c96f1e6ad"
+      },
+      "source_scope": [
+        "api/document_jobs.py",
+        "api/main.py",
+        "api/services.py",
+        "ingestion/fulltext.py",
+        "ingestion/library.py",
+        "ingestion/parser.py",
+        "ui/app.py",
+        "ui/library.py"
+      ],
+      "github_checks": {
+        "check_runs": [],
+        "statuses": [],
+        "hosted_checks_present": false
+      },
+      "github_reviews": {},
+      "blocking_findings": [],
+      "accepted": true
+    },
+    {
+      "pr": 3,
+      "url": "https://github.com/Dan1un1u/digital-library-rag/pull/3",
+      "tested_head": "73df991fad5b7c2f2d018488be6d967483d96065",
+      "base": "feat/ing-001-fulltext-gate",
+      "work_item": "ING-002",
+      "fresh_targeted": {
+        "tested_code": {
+          "commit": "73df991fad5b7c2f2d018488be6d967483d96065",
+          "branch": "fix/ing-002-text-layer-review",
+          "dirty": false
+        },
+        "tests": {
+          "tests": 18,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "exit_code": 0,
+        "source_path_verified": true,
+        "worktree_dirty_after": false
+      },
+      "fresh_summary_sha256": "094dc51793e1c5e0b80eb384d5abfe180fe869839759f69c9a65afd471faab8a",
+      "prior_full_tests": {
+        "tests": 504,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "prior_full_summary_sha256": "164a7c7a4e4d820870407255821483c17cab6aedca3119b690e9b00068c334c4",
+      "source_unchanged_since_prior_real_and_full_tests": true,
+      "prior_raw_artifacts_verified": true,
+      "source_tree_ids": {
+        "app": "acffce98e5064a4f9159a92dca591c83fb6d3365",
+        "tools": "0911eddcaabee3e463e3ee7d16c4b9020c91116b",
+        "scripts": "a03230bec90d5aaea61dc266ef291659f934d8a1",
+        ".coveragerc": "1c55443768b34f3996ffc151e8e9639c96f1e6ad"
+      },
+      "source_scope": [
+        "api/document_jobs.py",
+        "api/services.py",
+        "ingestion/fulltext.py",
+        "ingestion/parser.py",
+        "ingestion/text_quality.py",
+        "ui/library.py"
+      ],
+      "github_checks": {
+        "check_runs": [],
+        "statuses": [],
+        "hosted_checks_present": false
+      },
+      "github_reviews": {},
+      "blocking_findings": [],
+      "accepted": true
+    },
+    {
+      "pr": 4,
+      "url": "https://github.com/Dan1un1u/digital-library-rag/pull/4",
+      "tested_head": "2b0a5ae46807f102b2493ec8f3f473358758ec0e",
+      "base": "fix/ing-002-text-layer-review",
+      "work_item": "MQ-005",
+      "fresh_targeted": {
+        "tested_code": {
+          "commit": "2b0a5ae46807f102b2493ec8f3f473358758ec0e",
+          "branch": "fix/mq-005-issue-year",
+          "dirty": false
+        },
+        "tests": {
+          "tests": 10,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "exit_code": 0,
+        "source_path_verified": true,
+        "worktree_dirty_after": false
+      },
+      "fresh_summary_sha256": "f5c269343a163795dcf527d6e088cba47ad9f88cd5c37c1096491c0bd0044d43",
+      "prior_full_tests": {
+        "tests": 514,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "prior_full_summary_sha256": "5f25d05ace3e42592f452814d5804511aaad2b8abf9fd91d8ce270889f4ebc0f",
+      "source_unchanged_since_prior_real_and_full_tests": true,
+      "prior_raw_artifacts_verified": true,
+      "source_tree_ids": {
+        "app": "ee14e3abce79cf517d790ffce76cb0aac735fe90",
+        "tools": "4cf0dc167381c5d2bfd4007aad55102d7b42fe93",
+        "scripts": "b97a37260a534e8a7a095e4997cafe958aa52eb0",
+        ".coveragerc": "1c55443768b34f3996ffc151e8e9639c96f1e6ad"
+      },
+      "source_scope": [
+        "ingestion/metadata_api.py",
+        "ingestion/metadata_year.py",
+        "ui/app.py"
+      ],
+      "github_checks": {
+        "check_runs": [],
+        "statuses": [],
+        "hosted_checks_present": false
+      },
+      "github_reviews": {},
+      "blocking_findings": [],
+      "accepted": true
+    },
+    {
+      "pr": 5,
+      "url": "https://github.com/Dan1un1u/digital-library-rag/pull/5",
+      "tested_head": "10a746d7d3988ff8e9054cb33f4463059320c0ae",
+      "base": "fix/mq-005-issue-year",
+      "work_item": "RET-001",
+      "fresh_targeted": {
+        "tested_code": {
+          "commit": "10a746d7d3988ff8e9054cb33f4463059320c0ae",
+          "branch": "fix/ret-001-title-vectors",
+          "dirty": false
+        },
+        "tests": {
+          "tests": 9,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "exit_code": 0,
+        "source_path_verified": true,
+        "worktree_dirty_after": false
+      },
+      "fresh_summary_sha256": "a33ae79e6d1cfff24abfc4046a6f27d2a7c73700b23071ae9bf21f4b579dcfba",
+      "prior_full_tests": {
+        "tests": 523,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "prior_full_summary_sha256": "9e25be2477ebb48b5107582ce102e17384801564fce967267ec6cfcb163647d9",
+      "source_unchanged_since_prior_real_and_full_tests": true,
+      "prior_raw_artifacts_verified": true,
+      "source_tree_ids": {
+        "app": "26a1ebd8c8bb2203a306e131e821c419a2f8a898",
+        "tools": "e9cd4f6dbedbc7a94c58c641e601cb725b62eff7",
+        "scripts": "d64f9083f9e3ae8bf0537d0b1d1df76c712e58b6",
+        ".coveragerc": "1c55443768b34f3996ffc151e8e9639c96f1e6ad"
+      },
+      "source_scope": [
+        "retrieval/retriever.py"
+      ],
+      "github_checks": {
+        "check_runs": [],
+        "statuses": [],
+        "hosted_checks_present": false
+      },
+      "github_reviews": {},
+      "blocking_findings": [],
+      "accepted": true
+    }
+  ],
+  "accepted": true,
+  "decision_scope": "code-candidate acceptance and authorized dependency-ordered merge, not deployment or universal extraction/QA accuracy",
+  "fresh_full_tests": {
+    "tests": 523,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "fresh_full_summary_sha256": "4f24cca45b5d8c144b9a124530628b472adb5a6a87d36d793e09e72be55bcc60",
+  "integrated_controls_sha256": "28bc3cc4146fcf393807cfc5e6c37a8f378e20e10c3b9dc6efdc9934215a0c23",
+  "protected_libraries_unchanged": true,
+  "merge_order": [
+    2,
+    3,
+    4,
+    5
+  ]
+}
