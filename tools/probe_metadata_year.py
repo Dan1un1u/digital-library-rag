@@ -69,7 +69,8 @@ def main():
             if case.get("replay_year_candidate"):
                 replay = extract_metadata(path)
                 with fitz.open(path) as pdf:
-                    pages = [{"text": pdf[i].get_text(sort=True)} for i in range(min(2, len(pdf)))]
+                    pages = [{"text": pdf[i].get_text(sort=True), "validation_text": pdf[i].get_text()}
+                             for i in range(min(2, len(pdf)))]
                 metadata_api.merge_candidates(replay, {"year": case["replay_year_candidate"]}, pages)
                 row["frozen_candidate_replay"] = {"before_year": case["replay_year_candidate"]["value"],
                                                    "after_year": replay["metadata"]["year"],

@@ -376,7 +376,7 @@ else:
     use_metadata_api = st.toggle("增强识别（推荐）", value=True,
                                  help="使用已配置的 API 辅助识别，会发送 PDF 前两页的图像和文字；关闭后仅在本机识别。")
     use_lookup = st.toggle("联网补全出版资料", value=False, disabled=not use_metadata_api,
-                           help="增强识别成功后，将题名和前两位作者姓名发送至 Crossref 查询期刊或会议出版记录，不发送 PDF。仅补缺失年份和来源，结果需核对。修改选项后请点击重新识别。")
+                           help="增强识别成功后，将题名和前两位作者姓名发送至 Crossref 查询期刊或会议出版记录，不发送 PDF。补充相关出版来源；仅确认同一出版版本时补缺失年份。年份应对应当前 PDF，预印本可填公开或修订年份。结果需核对。修改选项后请点击重新识别。")
     file = st.file_uploader(f"上传 PDF（单份最大 {health['configuration']['max_upload_mb']} MB）", type=["pdf"], key="upload_pdf",
                             max_upload_size=health['configuration']['max_upload_mb'])
     retry_metadata = st.button("重新识别文献信息", disabled=file is None, help="重新预填当前文件的信息，会替换表单中的识别字段。")
@@ -403,7 +403,7 @@ else:
             with st.expander("识别结果与来源", expanded=True):
                 for warning in preview["warnings"]:
                     st.caption(warning)
-                labels = {"title": "标题", "authors": "作者", "year": "年份", "language": "语言", "source_url": "来源"}
+                labels = {"title": "标题", "authors": "作者", "year": "版本年份", "language": "语言", "source_url": "来源"}
                 methods = {"pdf_metadata": "PDF 自带信息", "first_page_layout": "首页标题排版",
                            "first_page_text": "首页文字", "document_date_candidate": "正文日期候选",
                            "document_identifier": "正文中的文献标识", "text_language_heuristic": "前两页文字",
@@ -411,12 +411,23 @@ else:
                            "bibliographic_lookup": "外部出版记录（待核对）"}
                 for field, origin in preview["field_sources"].items():
                     st.write(labels[field] + "：" + methods[origin["method"]])
+                    if field == "year" and origin.get("date_type"):
+                        date_labels = {"version": "文件版本戳", "revision": "修订日期", "preprint": "预印本公开日期",
+                                       "submission": "投稿日期", "acceptance": "接收日期", "publication": "出版日期",
+                                       "copyright": "版权年份", "published-print": "印刷出版日期",
+                                       "published-online": "在线出版日期", "published": "出版日期"}
+                        st.caption("日期依据：" + date_labels.get(origin["date_type"], origin["date_type"]))
                     if origin["method"] == "api_page_recognition":
                         st.caption(f"PDF 第 {origin['pdf_page']} 页 · " + origin["excerpt"])
                     elif origin["method"] == "bibliographic_lookup":
                         st.caption(origin["excerpt"])
                         st.link_button("查看该字段的出版记录", origin["record_url"], key="metadata_origin_" + field)
                 enrichment = preview.get("bibliographic_enrichment", {})
+                if enrichment.get("year_decision") in {"version_not_confirmed", "registry_dates_differ"}:
+                    for record in enrichment.get("candidates", []):
+                        dates = "、".join(str(d["year"]) + "（" + d["kind"] + "）" for d in record["dates"])
+                        st.caption("相关出版记录日期：" + (dates or "未提供") + "；未自动用作当前版本年份。")
+                        st.link_button("核对相关出版记录", record["record_url"], key="metadata_related_publication")
                 if enrichment.get("conflicts"):
                     st.warning("现有信息与外部记录存在差异，已保留现有值，请核对后修改。")
                     for conflict in enrichment["conflicts"]:
@@ -429,7 +440,7 @@ else:
     with st.form("upload", clear_on_submit=False):
         title = st.text_input("标题（留空则标待核验）", key="upload_title")
         authors = st.text_area("作者（每行一位）", key="upload_authors")
-        year = st.text_input("年份（可留空）", key="upload_year")
+        year = st.text_input("版本年份（可留空）", key="upload_year")
         domain = st.selectbox("所属学科", DOMAINS, index=None, placeholder="请选择文献所属学科", key="upload_domain")
         topics = st.text_input("主题（逗号分隔）", key="upload_topics")
         language = st.selectbox("语言", ["zh", "en", "mixed", "unknown"], index=3, key="upload_language",
