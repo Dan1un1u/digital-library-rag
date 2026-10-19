@@ -1,0 +1,291 @@
+{
+  "work_item": "DOC-001",
+  "created_at_utc": "2026-10-19T09:32:38.518165+00:00",
+  "base_main": "b9565b482d8cf4f085235c9aba2d18e8303554ee",
+  "documentation_base": "d0befcadc5f8adfca194234ef8c2ad3525545d03",
+  "dependency_pr": "https://github.com/Dan1un1u/digital-library-rag/pull/6",
+  "dependency_note": "UI001 is a separate draft; this work item adds documentation only.",
+  "environment": {
+    "ui_url": "http://127.0.0.1:19520/",
+    "api_url": "http://127.0.0.1:19020/",
+    "checkout": "D:\\digital-library-worktrees\\user-guide",
+    "data": "D:\\digital-library-worktrees\\user-guide\\runtime\\guide-library",
+    "api_start_identity": {
+      "validation_only": true,
+      "code": {
+        "commit": "b9565b482d8cf4f085235c9aba2d18e8303554ee",
+        "branch": "docs/illustrated-user-guide",
+        "dirty": false
+      },
+      "storage_identity": "dbbc7a4e3ce4b6910b89781cff4cb87775778193cce4ecbd5c977ecb07e4852f"
+    },
+    "frontend_note": "Frontend reloaded after fast-forward to UI001; API business source unchanged from initial main.",
+    "shared_services": [
+      "local BGE-M3 FP16 at 18080",
+      "authorized Luna through local proxy at 8317"
+    ]
+  },
+  "existing_docs_reviewed": [
+    "README.md",
+    "本地模型使用说明.txt",
+    "app/README.md",
+    "app/docs/demo.md",
+    "app/docs/项目结果与搭建说明.md"
+  ],
+  "browser_operations": [
+    "FQ-ViT PDF chooser upload",
+    "real enhanced preview with five authors and version year 2023",
+    "topic and rights fields filled then actual import",
+    "hybrid search plus year and topic filters",
+    "real question and completed answer",
+    "expand citation and open highlighted source page",
+    "browse collection and covers",
+    "inspect review-required records and system settings"
+  ],
+  "api_preparation": {
+    "ready": [
+      "SS12",
+      "HU11",
+      "HU25"
+    ],
+    "review_required": [
+      "SS06 original",
+      "HU08 original"
+    ],
+    "note": "Preparation via existing document jobs, not counted as browser uploads."
+  },
+  "demo_collection": {
+    "registered": 6,
+    "ready": 4,
+    "review_required": 2,
+    "fq_vit": {
+      "doc_id": "d_f459188e745318a07d8aebb6b685f785125e8ae1d936e0fe250789a86afcc7f9",
+      "title": "FQ-ViT: Post-Training Quantization for Fully Quantized Vision Transformer",
+      "authors": [
+        "Yang Lin",
+        "Tianyu Zhang",
+        "Peiqin Sun",
+        "Zheng Li",
+        "Shuchang Zhou"
+      ],
+      "year": 2023,
+      "status": "ready"
+    },
+    "review_errors": [
+      {
+        "title": "Modern Moral Philosophy",
+        "code": "TEXT_LAYER_REVIEW_REQUIRED"
+      },
+      {
+        "title": "Job Market Signaling",
+        "code": "FULLTEXT_REVIEW_REQUIRED"
+      }
+    ]
+  },
+  "real_question": {
+    "job_id": "6e98d9c3fb9d42c3a29a1b579aa65278",
+    "status": "answered",
+    "claims": 2,
+    "evidence": 3,
+    "elapsed_seconds": 34.2,
+    "index_version": "idx_20261019T091710_a9e391cc545c",
+    "full_local_receipt_sha256": "23d6a5a17cc2b26ba5c5765015eda49f4c3a6ed47438913da7e526fd0db9f842"
+  },
+  "baseline_read_only_snapshots": {
+    "formal": {
+      "read_only_check": true,
+      "documents": 25,
+      "index_version": "idx_20261018T153334_20ed96d8ced7"
+    },
+    "historical_dev": {
+      "read_only_check": true,
+      "documents": 50,
+      "index_version": "idx_20261019T024947_292c353a8ff5"
+    }
+  },
+  "figures": [
+    {
+      "caption": "图1 馆藏首页与功能导航",
+      "path": "screenshots/01-home.jpg",
+      "sha256": "c7efe5f2b0cb35360e74543ae976f935a8efbab80eaca7af4fe239de6e56cda4",
+      "bytes": 63072,
+      "captured_at_utc": "2026-10-19T09:17:41.628752+00:00",
+      "source_url": "http://127.0.0.1:19520/",
+      "frontend_code": "b9565b482d8cf4f085235c9aba2d18e8303554ee",
+      "original_browser_jpeg_unchanged": true
+    },
+    {
+      "caption": "图2 系统设置中的运行模式和模型",
+      "path": "screenshots/16-system-status.jpg",
+      "sha256": "90ac6414e1d608b6ef437ac2baa9081d11e6b9f277f20995ccba94a2feedd609",
+      "bytes": 54303,
+      "captured_at_utc": "2026-10-19T09:23:30.882760+00:00",
+      "source_url": "http://127.0.0.1:19520/",
+      "frontend_code": "a401cf5",
+      "original_browser_jpeg_unchanged": true
+    },
+    {
+      "caption": "图3 馆藏分类与筛选范围",
+      "path": "screenshots/01b-classification.jpg",
+      "sha256": "29b0ccd7bed67a8d7d4433de343a7bc84fe427906fa6c05560e94cc4a1b3d214",
+      "bytes": 62049,
+      "captured_at_utc": "2026-10-19T09:17:41.663286+00:00",
+      "source_url": "http://127.0.0.1:19520/",
+      "frontend_code": "b9565b482d8cf4f085235c9aba2d18e8303554ee",
+      "original_browser_jpeg_unchanged": true
+    },
+    {
+      "caption": "图4 文献封面与原文入口",
+      "path": "screenshots/02-covers.jpg",
+      "sha256": "a8746557ae8140aac8851ea2aff242d2837cbc2115d318e90aa838a818fba294",
+      "bytes": 64448,
+      "captured_at_utc": "2026-10-19T09:17:45.608483+00:00",
+      "source_url": "http://127.0.0.1:19520/",
+      "frontend_code": "b9565b482d8cf4f085235c9aba2d18e8303554ee",
+      "original_browser_jpeg_unchanged": true
+    },
+    {
+      "caption": "图5 搜索输入与年份主题筛选",
+      "path": "screenshots/08-search-form.jpg",
+      "sha256": "f32f4be28371d313ffe8d627670bd993e3b1ed2f7df8ff736daf8bc9d87ec63d",
+      "bytes": 47287,
+      "captured_at_utc": "2026-10-19T09:17:55.329483+00:00",
+      "source_url": "http://127.0.0.1:19520/",
+      "frontend_code": "b9565b482d8cf4f085235c9aba2d18e8303554ee",
+      "original_browser_jpeg_unchanged": true
+    },
+    {
+      "caption": "图6 文献聚合结果和页面片段",
+      "path": "screenshots/09-search-results.jpg",
+      "sha256": "ae7838e2bd23ee7090512d1d1eed8e4eb8c81c69976f8e8b84cafc7efc458ea8",
+      "bytes": 72915,
+      "captured_at_utc": "2026-10-19T09:18:07.565830+00:00",
+      "source_url": "http://127.0.0.1:19520/",
+      "frontend_code": "b9565b482d8cf4f085235c9aba2d18e8303554ee",
+      "original_browser_jpeg_unchanged": true
+    },
+    {
+      "caption": "图7 上传入口和识别选项",
+      "path": "screenshots/03-upload.jpg",
+      "sha256": "9223f755e293724fbf31dad1651e290edb8f1950c4ea5f394e69ec827645bb8b",
+      "bytes": 47249,
+      "captured_at_utc": "2026-10-19T09:15:37.611427+00:00",
+      "source_url": "http://127.0.0.1:19520/",
+      "frontend_code": "b9565b482d8cf4f085235c9aba2d18e8303554ee",
+      "original_browser_jpeg_unchanged": true
+    },
+    {
+      "caption": "图8 真实增强识别的阶段进度",
+      "path": "screenshots/04-recognizing.jpg",
+      "sha256": "db0a4f5b716458f6c0910dd93d6be7a5809426c32d7754d89cebde9c702ea372",
+      "bytes": 40080,
+      "captured_at_utc": "2026-10-19T09:16:41.280443+00:00",
+      "source_url": "http://127.0.0.1:19520/",
+      "frontend_code": "b9565b482d8cf4f085235c9aba2d18e8303554ee",
+      "original_browser_jpeg_unchanged": true
+    },
+    {
+      "caption": "图9 题名作者与版本年份的出处",
+      "path": "screenshots/05-metadata-sources.jpg",
+      "sha256": "7eb6ff45c09abfd35050ebb9f7949879aece41faf30d3fd7e9455e899a22ac2a",
+      "bytes": 59817,
+      "captured_at_utc": "2026-10-19T09:17:02.097438+00:00",
+      "source_url": "http://127.0.0.1:19520/",
+      "frontend_code": "b9565b482d8cf4f085235c9aba2d18e8303554ee",
+      "original_browser_jpeg_unchanged": true
+    },
+    {
+      "caption": "图10 编目表单和与文件对应的年份",
+      "path": "screenshots/06a-metadata-year.jpg",
+      "sha256": "c802d4f5382e3c0c5efc24bd9cb62bae263c1c5a1ab7fc4427d9cfb393742348",
+      "bytes": 44314,
+      "captured_at_utc": "2026-10-19T09:17:07.925282+00:00",
+      "source_url": "http://127.0.0.1:19520/",
+      "frontend_code": "b9565b482d8cf4f085235c9aba2d18e8303554ee",
+      "original_browser_jpeg_unchanged": true
+    },
+    {
+      "caption": "图11 混合扫描正文暂停入库的提示",
+      "path": "screenshots/15b-scanned-body.jpg",
+      "sha256": "c9d0cae68a8b05fe7225e16b6ca1003464a684bca8caac01040d7c7e49e9b054",
+      "bytes": 62510,
+      "captured_at_utc": "2026-10-19T09:23:10.034359+00:00",
+      "source_url": "http://127.0.0.1:19520/",
+      "frontend_code": "a401cf5",
+      "original_browser_jpeg_unchanged": true
+    },
+    {
+      "caption": "图12 真实问答结果和引用角标",
+      "path": "screenshots/12-answer.jpg",
+      "sha256": "83a19870b4b4aa7c519d9f3284f4eb64a10a9ebaae7c16e39f473208fb7859d8",
+      "bytes": 66091,
+      "captured_at_utc": "2026-10-19T09:22:28.509780+00:00",
+      "source_url": "http://127.0.0.1:19520/",
+      "frontend_code": "a401cf5",
+      "original_browser_jpeg_unchanged": true
+    },
+    {
+      "caption": "图13 展开的引用证据和原文件入口",
+      "path": "screenshots/13-citation.jpg",
+      "sha256": "a26ec2ad5526ef782257839579482f89c195b415029fe8782f19b5e4d0f0564b",
+      "bytes": 80872,
+      "captured_at_utc": "2026-10-19T09:22:28.817709+00:00",
+      "source_url": "http://127.0.0.1:19520/",
+      "frontend_code": "a401cf5",
+      "original_browser_jpeg_unchanged": true
+    },
+    {
+      "caption": "图14 高亮原文和 PDF 原页核验入口",
+      "path": "screenshots/14-source-page.jpg",
+      "sha256": "c87f2cd5c4a9daab301141eaf029d503fcf339ed6b8de2895391e1a9da9692a5",
+      "bytes": 115939,
+      "captured_at_utc": "2026-10-19T09:22:47.636880+00:00",
+      "source_url": "http://127.0.0.1:19020/sources/…",
+      "frontend_code": "a401cf5",
+      "original_browser_jpeg_unchanged": true
+    }
+  ],
+  "deliverables": [
+    {
+      "kind": "markdown",
+      "path": "docs/user-guide/使用手册.md",
+      "sha256": "14f18ba2419def3718c81c6b1098e22369a05bd6d1cc21cc0f408a488d666687"
+    },
+    {
+      "kind": "docx",
+      "path": "docs/user-guide/专题数字图书馆使用手册.docx",
+      "sha256": "e54a11b1dde298fcd224590c7fde2571ec05184aaa127557311218c12c4721bf",
+      "bytes": 783346
+    },
+    {
+      "kind": "pdf",
+      "local_path": "D:\\digital-library-worktrees\\user-guide\\reports\\user-guide\\专题数字图书馆使用手册.pdf",
+      "sha256": "c85ffb0d7956273f7fc187c359cbed36f1ede0ea3f3bed44900635363db7443f",
+      "bytes": 1460968,
+      "committed": false
+    }
+  ],
+  "builder_sha256": "b014831058de630d562aaecde14fa116c6a1d675017a29d500e5095070150fcf",
+  "render_review": {
+    "pages": 13,
+    "embedded_figures": 14,
+    "all_pages_visually_inspected": true,
+    "native_pdf_export": "Microsoft Word",
+    "page_renderer": "Codex render_docx.py rasterize with Word conversion adapter and Poppler",
+    "reason_for_adapter": "LibreOffice not installed; original failure log retained locally.",
+    "layout_crop_only": [
+      "04-recognizing.jpg",
+      "15b-scanned-body.jpg"
+    ],
+    "business_test_count_claimed_by_doc_task": 0,
+    "formal_semantic_quality_evaluation": "not performed",
+    "accessibility_audit": {
+      "counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 0
+      },
+      "local_report_sha256": "96b4cfed9f22e175de5ca5ef80d24497408ad788156d2f591f5d0e9bb6223001"
+    }
+  }
+}

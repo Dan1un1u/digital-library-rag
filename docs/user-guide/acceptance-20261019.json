@@ -1,0 +1,84 @@
+{
+  "pr": 7,
+  "accepted": true,
+  "accepted_at": "2026-10-19T10:54:39.827588+00:00",
+  "initial_pr7_head": "483af9cf5c0593b549182a002aac1ae79a34df38",
+  "main_after_pr6": "cbfc43a05b3575635dc11f280eedfb8e37c1eec4",
+  "dependency": {
+    "pr": 6,
+    "merged": true,
+    "merge_commit": "cbfc43a05b3575635dc11f280eedfb8e37c1eec4"
+  },
+  "source_trees": {
+    "app/src": "0566b09df57d2924d3a691efb7b5517186ed408c",
+    "app/tests": "c2e7bdab81658f331faa5360192a56024f3e5795",
+    "services": "ae6dab2d1a6ac1b553a37619733a4f57e77b07e3",
+    "scripts": "d64f9083f9e3ae8bf0537d0b1d1df76c712e58b6"
+  },
+  "business_source_matches_pr6_fresh_527_test_code": true,
+  "business_tests_owned_by_pr7": 0,
+  "blocking_findings": [],
+  "resolved_finding": "Publication status updated after PR6 merge; screenshot-time labels kept as historical context.",
+  "traceability": {
+    "original_manifest_sha256": "689da1080ab71c58e3f16ce818e0270817c86f2419d3f682740a00019e5f8d74",
+    "original_manifest_unchanged": true,
+    "all_14_images_unchanged": true,
+    "word_embedded_images_match_captures": true,
+    "original_delivery_backed_up_locally": true,
+    "screenshot_recapture_claimed": false
+  },
+  "current_outputs": [
+    {
+      "kind": "markdown",
+      "path": "docs/user-guide/使用手册.md",
+      "sha256": "acbbf4c7aca02893ef1b0b301ee8b3105e20dcbe5dc1d3edd5d14093fae4b137"
+    },
+    {
+      "kind": "docx",
+      "path": "docs/user-guide/专题数字图书馆使用手册.docx",
+      "sha256": "fc45c1c27e428d820eb04943bb8708e31a61a037f99bc35d13cdff6b6cbb4742",
+      "bytes": 783390
+    },
+    {
+      "kind": "pdf",
+      "local_path": "D:\\digital-library-worktrees\\user-guide\\reports\\user-guide-accepted\\专题数字图书馆使用手册.pdf",
+      "sha256": "dbeb48e2845d5ecb1dd8e880ef3a89f3e759ea0208464e24b60ad5fda486d717",
+      "bytes": 1458672,
+      "committed": false
+    }
+  ],
+  "render_review": {
+    "pages": 13,
+    "embedded_figures": 14,
+    "current_output_regenerated_and_rendered": true,
+    "pixel_identical_to_previously_reviewed_pages": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      11
+    ],
+    "changed_pages_requiring_fresh_visual_review": [
+      1,
+      10,
+      12,
+      13
+    ],
+    "fresh_changed_page_visual_review_passed": true,
+    "all_pages_covered_by_visual_review_or_identical_pixel_hash": true,
+    "minimum_body_footer_gap_points": 18.02,
+    "accessibility_findings": {
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "native_pdf_export": "Microsoft Word; packaged render_docx.py Poppler rasterization",
+    "pdf_output_note": "Initial PDF could not be overwritten; accepted edition exported to a separate directory. Original preserved."
+  },
+  "deployed": false,
+  "scope_note": "PR7 contains documentation only after synchronizing and retargeting to main. Original timestamps, source commits and capture hashes are not rewritten."
+}
