@@ -3,7 +3,7 @@ import re
 from collections import Counter
 from .errors import ProjectError
 
-PARSER_VERSION = 'pymupdf-conservative-v3'
+PARSER_VERSION = 'pymupdf-conservative-v2'
 
 
 def _margin_key(line):
@@ -23,7 +23,6 @@ def normalize(text):
 
 
 def parse_pdf(file_path):
-    from .fulltext import REVIEW_DIAGNOSTIC, scan_evidence
     try:
         import fitz
     except ImportError as exc:
@@ -77,11 +76,8 @@ def parse_pdf(file_path):
             cleaned = '\n\n'.join(paragraphs)
             if removed:
                 diagnostics.append('REPEATED_MARGIN_REMOVED')
-            normalized = normalize(cleaned)
-            if scan_evidence(pdf[number-1], normalized) is not None:
-                diagnostics.append(REVIEW_DIAGNOSTIC)
             result.append({'pdf_page':number, 'printed_page':None, 'raw_text':raw,
-                           'normalized_text':normalized, 'diagnostics':diagnostics})
+                           'normalized_text':normalize(cleaned), 'diagnostics':diagnostics})
         if not any(p['normalized_text'].strip() for p in result):
             reasons = sorted({d for p in result for d in p['diagnostics']})
             raise ProjectError('NO_EXTRACTABLE_TEXT', 'No usable text; ' + ', '.join(reasons))

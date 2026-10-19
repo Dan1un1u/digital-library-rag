@@ -14,13 +14,12 @@ ROOT = Path(__file__).resolve().parents[1]
 NEW_TESTS = ["app/tests/integration/test_ingestion_recovery.py", "app/tests/integration/test_catalog_batch.py",
              "app/tests/ingestion/test_metadata_known_issues.py", "app/tests/ingestion/test_metadata_year.py",
              "app/tests/integration/test_metadata_year_api.py", "app/tests/ingestion/test_bibliography.py",
-             "app/tests/integration/test_bibliography_api.py", "app/tests/integration/test_domain_trial_guards.py",
-             "app/tests/integration/test_fulltext_gate.py"]
+             "app/tests/integration/test_bibliography_api.py"]
 FOCUS = ["app/src/dlrag/api/services.py", "app/src/dlrag/ingestion/library.py",
          "app/src/dlrag/ingestion/parser.py", "app/src/dlrag/ingestion/chunker.py",
          "app/src/dlrag/retrieval/retriever.py", "tools/catalog_batch.py",
          "app/src/dlrag/ingestion/metadata_api.py", "app/src/dlrag/ingestion/metadata_year.py",
-         "app/src/dlrag/ingestion/bibliography.py", "app/src/dlrag/ingestion/fulltext.py"]
+         "app/src/dlrag/ingestion/bibliography.py"]
 
 
 def git(*args):
@@ -30,7 +29,6 @@ def git(*args):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--scope", choices=["new", "all"], default="all")
-    parser.add_argument("--work-item", choices=["COL-001", "COL-002", "ING-001"], default="COL-001")
     parser.add_argument("--output", type=Path)
     parser.add_argument("--tokenizer-cache", type=Path)
     args = parser.parse_args()
@@ -73,9 +71,7 @@ def main():
     new_count = sum(case.attrib.get("classname", "").split(".")[-1] in new_names for case in cases)
     expected_failures = sum(case.find("skipped") is not None and
                             case.find("skipped").attrib.get("type") == "pytest.xfail" for case in cases)
-    col002_count = sum(case.attrib.get("classname", "").split(".")[-1] == "test_domain_trial_guards" for case in cases)
-    ing001_count = sum(case.attrib.get("classname", "").split(".")[-1] == "test_fulltext_gate" for case in cases)
-    summary = {"work_item": args.work_item, "scope": args.scope, "tested_code": before,
+    summary = {"work_item": "COL-001", "scope": args.scope, "tested_code": before,
                "created_at": datetime.now(timezone.utc).isoformat(),
                "python": sys.version.split()[0], "platform": sys.platform,
                "packages": {name: version(name) for name in ["pytest", "coverage", "PyMuPDF", "numpy", "requests"]},
@@ -84,9 +80,6 @@ def main():
                "tests": {k: sum(int(s.attrib.get(k, 0)) for s in suites)
                          for k in ["tests", "failures", "errors", "skipped"]},
                "new_cases": new_count, "reused_cases": len(cases) - new_count,
-               "case_groups": {"COL-001": new_count - col002_count - ing001_count, "COL-002": col002_count,
-                               "ING-001": ing001_count,
-                               "baseline_reused": len(cases) - new_count},
                "expected_failures": expected_failures,
                "coverage": {}, "uncovered_focus": {}, "manual_review": "pending",
                "real_pdf_batch": "not exercised by this offline test run; see separate batch evidence"}
