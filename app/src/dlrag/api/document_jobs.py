@@ -21,7 +21,7 @@ class DocumentJobs:
     def close(self):
         self.executor.shutdown(wait=False, cancel_futures=True)
 
-    def submit(self, data, filename, kind="metadata", metadata=None, assist=True):
+    def submit(self, data, filename, kind="metadata", metadata=None, assist=True, lookup=False):
         with self.lock:
             now = time.monotonic()
             completed = sorted((j for j in self.jobs.values() if j["stage"] in {"done", "error"}), key=lambda j: j["updated"])
@@ -33,7 +33,7 @@ class DocumentJobs:
             job_id = uuid.uuid4().hex
             self.jobs[job_id] = dict(job_id=job_id, kind=kind, stage="queued", stages=["queued"],
                                      created=now, updated=now, result=None, error=None)
-            self.executor.submit(self._run, job_id, data, filename, kind, metadata, assist)
+            self.executor.submit(self._run, job_id, data, filename, kind, metadata, assist, lookup)
             return {"job_id": job_id}
 
     def get(self, job_id):
@@ -45,7 +45,7 @@ class DocumentJobs:
             value["elapsed_seconds"] = round((job["updated"] if job["stage"] in {"done", "error"} else time.monotonic()) - job["created"], 1)
             return value
 
-    def _run(self, job_id, data, filename, kind, metadata, assist):
+    def _run(self, job_id, data, filename, kind, metadata, assist, lookup):
         def progress(stage):
             with self.lock:
                 job = self.jobs[job_id]
@@ -62,7 +62,8 @@ class DocumentJobs:
                 del data
                 if kind == "metadata":
                     from dlrag.ingestion.metadata_api import recognize_metadata
-                    result = recognize_metadata(path, self.services.settings, filename=filename, assist=assist, progress=progress)
+                    options = {"lookup": True} if lookup else {}
+                    result = recognize_metadata(path, self.services.settings, filename=filename, assist=assist, progress=progress, **options)
                 else:
                     result = self.services.ingest(str(path), metadata, progress=progress)
             with self.lock:

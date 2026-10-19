@@ -1,0 +1,446 @@
+{
+  "code": {
+    "commit": "06183046e6700a4587a839c79088db6540d34e89",
+    "branch": "feat/catalog-ingestion-audit",
+    "dirty": false
+  },
+  "created_at": "2026-10-19T06:01:05.401180+00:00",
+  "scope": "historical missing-field candidates replayed with actual PDF version context; live Crossref, no new LLM calls, no import",
+  "lookup_timeout_seconds": 20,
+  "cases": [
+    {
+      "case_id": "paper-003",
+      "sha256": "604fcbd71b570f13ec0ed832c7c083728cf9b42170704f7fddd966530db96bee",
+      "version": {
+        "kind": "manuscript",
+        "dois": []
+      },
+      "initial_metadata": {
+        "title": "ENEC: A Lossless AI Model Compression Method Enabling Fast Inference on Ascend NPUs",
+        "authors": [
+          "Jinwu Yang",
+          "Jiaan Wu",
+          "Zedong Liu",
+          "Xinyang Ma",
+          "Hairui Zhao",
+          "Yida Gu",
+          "Yuanhong Huang",
+          "Xingchen Liu",
+          "Wenjing Huang",
+          "Zheng Wei",
+          "Jing Xing",
+          "Yili Ma",
+          "Qingyi Zhang",
+          "Baoyi An",
+          "Zhongzhe Hu",
+          "Shaoteng Liu",
+          "Xia Zhu",
+          "Jiaxun Lu",
+          "Guangming Tan",
+          "Dingwen Tao"
+        ],
+        "year": null,
+        "language": "en",
+        "source_url": "https://arxiv.org/abs/2604.03298"
+      },
+      "expected": {
+        "year": null,
+        "source_url": "https://arxiv.org/abs/2604.03298",
+        "doi": "10.1109/isca66397.2026.00100"
+      },
+      "result": {
+        "metadata": {
+          "title": "ENEC: A Lossless AI Model Compression Method Enabling Fast Inference on Ascend NPUs",
+          "authors": [
+            "Jinwu Yang",
+            "Jiaan Wu",
+            "Zedong Liu",
+            "Xinyang Ma",
+            "Hairui Zhao",
+            "Yida Gu",
+            "Yuanhong Huang",
+            "Xingchen Liu",
+            "Wenjing Huang",
+            "Zheng Wei",
+            "Jing Xing",
+            "Yili Ma",
+            "Qingyi Zhang",
+            "Baoyi An",
+            "Zhongzhe Hu",
+            "Shaoteng Liu",
+            "Xia Zhu",
+            "Jiaxun Lu",
+            "Guangming Tan",
+            "Dingwen Tao"
+          ],
+          "year": null,
+          "language": "en",
+          "source_url": "https://arxiv.org/abs/2604.03298"
+        },
+        "field_sources": {},
+        "warnings": [
+          "外部出版日期未能确定对应所收录版本；版本年份继续留空。相关记录仅供核对，可按文件上的日期手动填写。"
+        ],
+        "requires_confirmation": true,
+        "document_version": {
+          "kind": "manuscript",
+          "dois": []
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-collected-version-v2",
+          "provider": "crossref",
+          "status": "completed",
+          "missing_before": [
+            "year"
+          ],
+          "filled_fields": [],
+          "conflicts": [],
+          "candidates": [
+            {
+              "title": "ENEC: A Lossless AI Model Compression Method Enabling Fast Inference on Ascend NPUs",
+              "authors": [
+                "Jinwu Yang",
+                "Jiaan Wu",
+                "Zedong Liu",
+                "Xinyang Ma",
+                "Hairui Zhao",
+                "Yida Gu",
+                "Yuanhong Huang",
+                "Xingchen Liu",
+                "Wenjing Huang",
+                "Zheng Wei",
+                "Jing Xing",
+                "Yili Ma",
+                "Qingyi Zhang",
+                "Baoyi An",
+                "Zhongzhe Hu",
+                "Shaoteng Liu",
+                "Xia Zhu",
+                "Jiaxun Lu",
+                "Guangming Tan",
+                "Dingwen Tao"
+              ],
+              "doi": "10.1109/isca66397.2026.00100",
+              "source_url": "https://doi.org/10.1109/isca66397.2026.00100",
+              "record_url": "https://api.crossref.org/works/10.1109%2Fisca66397.2026.00100",
+              "type": "proceedings-article",
+              "dates": [
+                {
+                  "kind": "published-print",
+                  "date_parts": [
+                    2026,
+                    6
+                  ],
+                  "year": 2026
+                },
+                {
+                  "kind": "published",
+                  "date_parts": [
+                    2026,
+                    6
+                  ],
+                  "year": 2026
+                }
+              ],
+              "selected_date": {
+                "kind": "published-print",
+                "date_parts": [
+                  2026,
+                  6
+                ],
+                "year": 2026
+              },
+              "match": {
+                "title": "normalized_exact",
+                "first_author": "exact",
+                "author_overlap": 20,
+                "required_overlap": 16
+              }
+            }
+          ],
+          "queried_at": "2026-10-19T06:01:05.419395+00:00",
+          "year_decision": "version_not_confirmed"
+        }
+      },
+      "passed": true
+    },
+    {
+      "case_id": "paper-004",
+      "sha256": "959d1cd83e6e32b2433b478269635e0982267998da370a2653bb0d87f444ad6d",
+      "version": {
+        "kind": "unknown",
+        "dois": []
+      },
+      "initial_metadata": {
+        "title": "EQ-ViT: Algorithm-Hardware Co-Design for End-to-End Acceleration of Real-Time Vision Transformer Inference on Versal ACAP Architecture",
+        "authors": [
+          "Peiyan Dong",
+          "Jinming Zhuang",
+          "Zhuoping Yang",
+          "Shixin Ji",
+          "Yanyu Li",
+          "Dongkuan Xu",
+          "Heng Huang",
+          "Jingtong Hu",
+          "Alex K. Jones",
+          "Yiyu Shi",
+          "Yanzhi Wang",
+          "Peipei Zhou"
+        ],
+        "year": null,
+        "language": "en",
+        "source_url": null
+      },
+      "expected": {
+        "year": null,
+        "source_url": "https://doi.org/10.1109/tcad.2024.3443692",
+        "doi": "10.1109/tcad.2024.3443692"
+      },
+      "result": {
+        "metadata": {
+          "title": "EQ-ViT: Algorithm-Hardware Co-Design for End-to-End Acceleration of Real-Time Vision Transformer Inference on Versal ACAP Architecture",
+          "authors": [
+            "Peiyan Dong",
+            "Jinming Zhuang",
+            "Zhuoping Yang",
+            "Shixin Ji",
+            "Yanyu Li",
+            "Dongkuan Xu",
+            "Heng Huang",
+            "Jingtong Hu",
+            "Alex K. Jones",
+            "Yiyu Shi",
+            "Yanzhi Wang",
+            "Peipei Zhou"
+          ],
+          "year": null,
+          "language": "en",
+          "source_url": "https://doi.org/10.1109/tcad.2024.3443692"
+        },
+        "field_sources": {
+          "source_url": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.1109%2Ftcad.2024.3443692",
+            "retrieved_at": "2026-10-19T06:01:06.904502+00:00",
+            "date_type": null,
+            "excerpt": "10.1109/tcad.2024.3443692"
+          }
+        },
+        "warnings": [
+          "已依据题名和作者吻合的 Crossref 出版记录补全候选字段；DOI 可作为相关出版来源，年份还须与所收录版本对应，请核对后导入。",
+          "外部出版日期未能确定对应所收录版本；版本年份继续留空。相关记录仅供核对，可按文件上的日期手动填写。"
+        ],
+        "requires_confirmation": true,
+        "document_version": {
+          "kind": "unknown",
+          "dois": []
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-collected-version-v2",
+          "provider": "crossref",
+          "status": "completed",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [
+            "source_url"
+          ],
+          "conflicts": [],
+          "candidates": [
+            {
+              "title": "EQ-ViT: Algorithm-Hardware Co-Design for End-to-End Acceleration of Real-Time Vision Transformer Inference on Versal ACAP Architecture",
+              "authors": [
+                "Peiyan Dong",
+                "Jinming Zhuang",
+                "Zhuoping Yang",
+                "Shixin Ji",
+                "Yanyu Li",
+                "Dongkuan Xu",
+                "Heng Huang",
+                "Jingtong Hu",
+                "Alex K. Jones",
+                "Yiyu Shi",
+                "Yanzhi Wang",
+                "Peipei Zhou"
+              ],
+              "doi": "10.1109/tcad.2024.3443692",
+              "source_url": "https://doi.org/10.1109/tcad.2024.3443692",
+              "record_url": "https://api.crossref.org/works/10.1109%2Ftcad.2024.3443692",
+              "type": "journal-article",
+              "dates": [
+                {
+                  "kind": "published-print",
+                  "date_parts": [
+                    2024,
+                    11
+                  ],
+                  "year": 2024
+                },
+                {
+                  "kind": "published",
+                  "date_parts": [
+                    2024,
+                    11
+                  ],
+                  "year": 2024
+                }
+              ],
+              "selected_date": {
+                "kind": "published-print",
+                "date_parts": [
+                  2024,
+                  11
+                ],
+                "year": 2024
+              },
+              "match": {
+                "title": "normalized_exact",
+                "first_author": "exact",
+                "author_overlap": 12,
+                "required_overlap": 10
+              }
+            }
+          ],
+          "queried_at": "2026-10-19T06:01:06.904502+00:00",
+          "year_decision": "version_not_confirmed"
+        }
+      },
+      "passed": true
+    },
+    {
+      "case_id": "paper-009",
+      "sha256": "bbfd0e6e5573959a3fc78ce26824f9943fbadcd45375885aa67b1a9588bc3392",
+      "version": {
+        "kind": "unknown",
+        "dois": []
+      },
+      "initial_metadata": {
+        "title": "PackQViT: Faster Sub-8-bit Vision Transformers via Full and Packed Quantization on the Mobile",
+        "authors": [
+          "Peiyan Dong",
+          "Lei Lu",
+          "Chao Wu",
+          "Cheng Lyu",
+          "Geng Yuan",
+          "Hao Tang",
+          "Yanzhi Wang"
+        ],
+        "year": 2023,
+        "language": "en",
+        "source_url": null
+      },
+      "expected": {
+        "year": 2023,
+        "source_url": "https://doi.org/10.52202/075280-0396",
+        "doi": "10.52202/075280-0396"
+      },
+      "result": {
+        "metadata": {
+          "title": "PackQViT: Faster Sub-8-bit Vision Transformers via Full and Packed Quantization on the Mobile",
+          "authors": [
+            "Peiyan Dong",
+            "Lei Lu",
+            "Chao Wu",
+            "Cheng Lyu",
+            "Geng Yuan",
+            "Hao Tang",
+            "Yanzhi Wang"
+          ],
+          "year": 2023,
+          "language": "en",
+          "source_url": "https://doi.org/10.52202/075280-0396"
+        },
+        "field_sources": {
+          "source_url": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.52202%2F075280-0396",
+            "retrieved_at": "2026-10-19T06:01:08.547177+00:00",
+            "date_type": null,
+            "excerpt": "10.52202/075280-0396"
+          }
+        },
+        "warnings": [
+          "已依据题名和作者吻合的 Crossref 出版记录补全候选字段；DOI 可作为相关出版来源，年份还须与所收录版本对应，请核对后导入。"
+        ],
+        "requires_confirmation": true,
+        "document_version": {
+          "kind": "unknown",
+          "dois": []
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-collected-version-v2",
+          "provider": "crossref",
+          "status": "completed",
+          "missing_before": [
+            "source_url"
+          ],
+          "filled_fields": [
+            "source_url"
+          ],
+          "conflicts": [],
+          "candidates": [
+            {
+              "title": "PackQViT: Faster Sub-8-bit Vision Transformers via Full and Packed Quantization on the Mobile",
+              "authors": [
+                "Peiyan Dong",
+                "Lei Lu",
+                "Chao Wu",
+                "Cheng Lyu",
+                "Geng Yuan",
+                "Hao Tang",
+                "Yanzhi Wang"
+              ],
+              "doi": "10.52202/075280-0396",
+              "source_url": "https://doi.org/10.52202/075280-0396",
+              "record_url": "https://api.crossref.org/works/10.52202%2F075280-0396",
+              "type": "proceedings-article",
+              "dates": [
+                {
+                  "kind": "published-print",
+                  "date_parts": [
+                    2023
+                  ],
+                  "year": 2023
+                },
+                {
+                  "kind": "published",
+                  "date_parts": [
+                    2023
+                  ],
+                  "year": 2023
+                }
+              ],
+              "selected_date": {
+                "kind": "published-print",
+                "date_parts": [
+                  2023
+                ],
+                "year": 2023
+              },
+              "match": {
+                "title": "normalized_exact",
+                "first_author": "exact",
+                "author_overlap": 7,
+                "required_overlap": 6
+              }
+            }
+          ],
+          "queried_at": "2026-10-19T06:01:08.547177+00:00",
+          "year_decision": "version_not_confirmed"
+        }
+      },
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "protected_libraries_unchanged": true,
+  "protected_snapshot_sha256": {
+    "18000": "32543215cdab74824873efdecb913700ecc75a4e030e501324155462b6794b90",
+    "19000": "b880ae3f412107420737550aec70f9e0224b176d5e0a788043e5586ec81bfadd",
+    "19010": "2e092237b64e0a078be70b4ce7d669e4cefe2d0610970417f19c01459574c025"
+  },
+  "worktree_dirty_after": false
+}

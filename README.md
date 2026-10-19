@@ -100,13 +100,21 @@ METADATA_API_TIMEOUT_SECONDS=90
 
 这些是部署与开发验证；正式检索质量评测仍需人工复核数据集。仓库保留少量自制合成 PDF 作为测试夹具，实际文献和索引未上传。
 
+同日后续馆藏批次已新增用户指定的 11 篇 PDF：目前为 **25 篇、1821 个片段**，详见 [COL-001 实际批次](docs/validation/COL-001/batches/COL-001-20261018-P01/README.md)。元数据经应用外的 AI 辅助审核，用户已确认指定三项人工抽查未发现问题，其余逐篇复核未报告。按课题范围，仅将增强识别下的 MQ-003 列为确认缺陷、MQ-004 列为补全改进项，MQ-001/MQ-002 本机观察不计项目缺陷；测试范围调整及结果见 [验证说明](docs/validation/COL-001/README.md)。此前 14/935、330 项及范围调整前的 356 passed/2 xfailed 保留为历史证据。
+
+MQ-003 年份误判已有修复候选：增强输出需有出版语境及页面证据，缺少依据时留空待核对。基于干净提交 `1979f7d` 的离线回归为 **389 passed、0 xfailed**；真实 Luna 三篇只读影子预览及原错误输出回放通过，馆藏和索引未变。详见 [修复原因、验证及限制](docs/validation/COL-001/mq003-fix.md)。候选尚未合并部署，正式实例的 MQ-003 保持开放。此前 `5d49681` 的 356 passed/1 xfailed 作为历史证据保留。
+
+MQ-004 补全候选已接入预览：可选择“联网补全出版资料”，默认关闭，只向 Crossref 发送题名和前两位作者姓名，匹配唯一且作者吻合时补缺失年份及 DOI 来源，并保存出处；已有值和冲突供人工核对。基于干净提交 `bbcbe98` 的最新完整回归 **440 passed、0 xfailed**；三篇原增强候选回放及真实 Luna + Crossref 均达到预设结果，首次真实超时记录一并保留。详见 [MQ-004 分析、结果与限制](docs/validation/COL-001/mq004-enrichment.md)。此功能尚未合并部署，正式馆藏仍为 25/1821。
+
 ```powershell
 .\Run-Tests.ps1
 ```
 
-`scripts/verify_local_integration.py` 会调用真实 Luna 并使用订阅额度，当前馆藏断言对应上述 14 篇、935 个片段；扩大或更换馆藏后需要更新该检查。
+`scripts/verify_local_integration.py` 会调用真实 Luna 并使用订阅额度。它将索引文献数与实际馆藏列表核对；需要固定批次基线时，传入 `--expected-documents` 与 `--expected-chunks`。可通过 `--env-file` 指定独立部署的本机配置文件，避免将旧的 14 篇/935 片段写死在检查中。历史 16 项真实联调结果仍对应当时基线，不能算作扩充后已重新执行。
 
 ## 数据与本机部署
+
+2026-10-19范围整理：本分支 **PR1仅保留MQ-003/MQ-004及原COL-001追溯基础**，本轮ING和COL-002基线移往依赖PR2。独立MQ工作目录重验440项通过，详见[PR1范围与验证](docs/validation/COL-001/pr1-scope.md)。后续按[任务隔离规则](docs/workflow/test-task-isolation.md)执行；两份PR保持草稿，暂不合并。
 
 仓库不保存 `.env`、OAuth 凭证、GitHub 令牌、模型权重、真实 PDF 馆藏、数据库、索引、虚拟环境或运行日志。重新克隆后需要配置本机环境与数据。
 
@@ -115,3 +123,5 @@ METADATA_API_TIMEOUT_SECONDS=90
 `D:/llm_exp/digital-library/workspace/deployments/lib_management_v1_20261018/`
 
 进一步操作见[本地模型使用说明](本地模型使用说明.txt)、[BGE 部署说明](services/bge-m3/README.txt)和[CLIProxyAPI 部署说明](services/cliproxyapi/README.txt)。`app/README.md` 与 `app/docs/` 保留原项目的接口、模块交接和历史版本说明。
+
+馆藏扩充使用[入库与白盒验证流程](docs/workflow/catalog-ingestion.md)和[COL-001 工作项](docs/work-items/COL-001.md)，通过独立分支、Draft PR 和提交绑定的执行证据记录贡献。实际文献批次完成并复核后再决定合并。

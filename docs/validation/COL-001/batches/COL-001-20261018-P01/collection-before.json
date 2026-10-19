@@ -1,0 +1,348 @@
+{
+  "status": "ready",
+  "mode": "real",
+  "manifest": {
+    "index_version": "idx_20261018T135302_0689591350db",
+    "contract_version": "1.0",
+    "built_at": "2026-10-18T13:53:02.899104+00:00",
+    "embedding_model": "BAAI/bge-m3",
+    "embedding_revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "dimension": 1024,
+    "normalized": true,
+    "chunking_config": {
+      "count_mode": "character",
+      "tokenizer_name": null,
+      "tokenizer_revision": null,
+      "max_tokens": 400,
+      "overlap_tokens": 50,
+      "max_chars": 1200,
+      "overlap_chars": 150
+    },
+    "tokenizer": null,
+    "document_count": 14,
+    "chunk_count": 935,
+    "corpus_hash": "7f424358c9bcd5ed7406a9e7d49e9a7692d36d6915d13df1cfe39e3b39cd9ef8",
+    "artifacts": {
+      "chunks.json": "7f424358c9bcd5ed7406a9e7d49e9a7692d36d6915d13df1cfe39e3b39cd9ef8",
+      "lexical.json": "71259bc1fbcbc39fdada2a5f6139cdabaab7866d49d224cdc6ad073a18a64f36",
+      "vectors.npy": "be2f7edfa482e63773baebc4c49a8e7ba284e8c5ca3147a92e5172f7cf6ece5d"
+    },
+    "embedding_backend": {
+      "base_url": "http://127.0.0.1:18080/v1",
+      "dimension": 1024,
+      "encoding_format": "float",
+      "input_preprocessing": "original-text-v1;fp16;cls;l2-float32",
+      "model": "BAAI/bge-m3",
+      "provider": "local-bge-fp16",
+      "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+      "revision_pinned": true
+    },
+    "lexical_tokenizer": "nfkc-casefold-cjk-bigram-v1",
+    "retrieval_config": {
+      "bm25_b": 0.75,
+      "bm25_k1": 1.5,
+      "candidate_k": 20,
+      "normalize_embeddings": true,
+      "rrf_k": 60
+    }
+  },
+  "active_models": {
+    "embedding": "BAAI/bge-m3",
+    "llm": "gpt-6-luna",
+    "semantic_reranker": "gpt-6-luna",
+    "qa_engine": "dlrag.qa.engine.QAEngine"
+  },
+  "documents": [
+    {
+      "doc_id": "d_053756b54e2d3462d4690b3aed489c962f17df7c3531865e47374c4a651f526c",
+      "file_sha256": "053756b54e2d3462d4690b3aed489c962f17df7c3531865e47374c4a651f526c",
+      "status": "ready",
+      "page_count": 17,
+      "title": "Longformer: The Long-Document Transformer",
+      "authors": [
+        "Iz Beltagy",
+        "Matthew E. Peters",
+        "Arman Cohan"
+      ],
+      "year": 2020,
+      "topics": [
+        "arXiv实验",
+        "长文本机制"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2004.05150",
+      "rights_note": "arXiv公开原始论文，仅用于本地阅读及解析实验；再分发权限待核验。"
+    },
+    {
+      "doc_id": "d_1925755aeb627123d1a63c66f02e5aa2432f7e92751a02bea7c8c3b6bbb6ec33",
+      "file_sha256": "1925755aeb627123d1a63c66f02e5aa2432f7e92751a02bea7c8c3b6bbb6ec33",
+      "status": "ready",
+      "page_count": 24,
+      "title": "BEIR: A Heterogenous Benchmark for Zero-shot Evaluation of Information Retrieval Models",
+      "authors": [
+        "Thakur, Nandan",
+        "Reimers, Nils",
+        "Rücklé, Andreas",
+        "Srivastava, Abhishek",
+        "Gurevych, Iryna"
+      ],
+      "year": 2021,
+      "topics": [
+        "arXiv实验"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2104.08663",
+      "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "doc_id": "d_1a99079778b2174feda37473878bc82da1ed0699c77a2cbeb11de408844189c9",
+      "file_sha256": "1a99079778b2174feda37473878bc82da1ed0699c77a2cbeb11de408844189c9",
+      "status": "ready",
+      "page_count": 29,
+      "title": "企业化经营何以推动新型农村集体经济有效运行",
+      "authors": [],
+      "year": null,
+      "topics": [
+        "社会科学"
+      ],
+      "language": "zh",
+      "source_url": "https://doi.org/10.19744/j.cnki.11-1235/f.2026.0128",
+      "rights_note": "待人工确认"
+    },
+    {
+      "doc_id": "d_23e3249e9a1e75418d82efecab0ea8c4d033b89c93742f63208d47ce01f21233",
+      "file_sha256": "23e3249e9a1e75418d82efecab0ea8c4d033b89c93742f63208d47ce01f21233",
+      "status": "ready",
+      "page_count": 19,
+      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "authors": [
+        "Lewis, Patrick",
+        "Perez, Ethan",
+        "Piktus, Aleksandra",
+        "Petroni, Fabio",
+        "Karpukhin, Vladimir",
+        "Goyal, Naman",
+        "Küttler, Heinrich",
+        "Lewis, Mike",
+        "Yih, Wen-tau",
+        "Rocktäschel, Tim",
+        "Riedel, Sebastian",
+        "Kiela, Douwe"
+      ],
+      "year": 2020,
+      "topics": [
+        "arXiv实验"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2005.11401",
+      "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+    },
+    {
+      "doc_id": "d_2e487d9b96e3c2e5e286d843e98a066adc0442faa3a6e8ddbd1771221bf9ae14",
+      "file_sha256": "2e487d9b96e3c2e5e286d843e98a066adc0442faa3a6e8ddbd1771221bf9ae14",
+      "status": "ready",
+      "page_count": 10,
+      "title": "ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT",
+      "authors": [
+        "Khattab, Omar",
+        "Zaharia, Matei"
+      ],
+      "year": 2020,
+      "topics": [
+        "arXiv实验"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2004.12832",
+      "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+    },
+    {
+      "doc_id": "d_3e67fc1a9977715acf722d85f0b7d124b03715e975f6310a4d6c12094190912f",
+      "file_sha256": "3e67fc1a9977715acf722d85f0b7d124b03715e975f6310a4d6c12094190912f",
+      "status": "ready",
+      "page_count": 13,
+      "title": "Dense Passage Retrieval for Open-Domain Question Answering",
+      "authors": [
+        "Karpukhin, Vladimir",
+        "Oğuz, Barlas",
+        "Min, Sewon",
+        "Lewis, Patrick",
+        "Wu, Ledell",
+        "Edunov, Sergey",
+        "Chen, Danqi",
+        "Yih, Wen-tau"
+      ],
+      "year": 2020,
+      "topics": [
+        "arXiv实验"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2004.04906",
+      "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+    },
+    {
+      "doc_id": "d_61c834540be91dd009398499ac91097bc15697c3b766e3c14f57155438cd4aa7",
+      "file_sha256": "61c834540be91dd009398499ac91097bc15697c3b766e3c14f57155438cd4aa7",
+      "status": "ready",
+      "page_count": 4,
+      "title": "人工智能体检系统在健康管理中心的应用",
+      "authors": [
+        "张理纯"
+      ],
+      "year": 2020,
+      "topics": [
+        "自然科学"
+      ],
+      "language": "mixed",
+      "source_url": null,
+      "rights_note": "待人工确认"
+    },
+    {
+      "doc_id": "d_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1",
+      "file_sha256": "653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1",
+      "status": "ready",
+      "page_count": 18,
+      "title": "Lost in the Middle: How Language Models Use Long Contexts",
+      "authors": [
+        "Liu, Nelson F.",
+        "Lin, Kevin",
+        "Hewitt, John",
+        "Paranjape, Ashwin",
+        "Bevilacqua, Michele",
+        "Petroni, Fabio",
+        "Liang, Percy"
+      ],
+      "year": 2023,
+      "topics": [
+        "arXiv实验"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2307.03172",
+      "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+    },
+    {
+      "doc_id": "d_7407131fd633561d8eab8701e43ca81061960b6642ae180eb86a3f367b2b8408",
+      "file_sha256": "7407131fd633561d8eab8701e43ca81061960b6642ae180eb86a3f367b2b8408",
+      "status": "ready",
+      "page_count": 21,
+      "title": "Unsupervised Dense Information Retrieval with Contrastive Learning",
+      "authors": [
+        "Izacard, Gautier",
+        "Caron, Mathilde",
+        "Hosseini, Lucas",
+        "Riedel, Sebastian",
+        "Bojanowski, Piotr",
+        "Joulin, Armand",
+        "Grave, Edouard"
+      ],
+      "year": 2021,
+      "topics": [
+        "arXiv实验"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2112.09118",
+      "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "doc_id": "d_92366d22fc0521350d6cbe0ad72bcee754f90e88181d7b4a8e2adb1e7e594fec",
+      "file_sha256": "92366d22fc0521350d6cbe0ad72bcee754f90e88181d7b4a8e2adb1e7e594fec",
+      "status": "ready",
+      "page_count": 11,
+      "title": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks",
+      "authors": [
+        "Reimers, Nils",
+        "Gurevych, Iryna"
+      ],
+      "year": 2019,
+      "topics": [
+        "arXiv实验"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/1908.10084",
+      "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "doc_id": "d_bdfaa68d8984f0dc02beaca527b76f207d99b666d31d1da728ee0728182df697",
+      "file_sha256": "bdfaa68d8984f0dc02beaca527b76f207d99b666d31d1da728ee0728182df697",
+      "status": "ready",
+      "page_count": 15,
+      "title": "Attention Is All You Need",
+      "authors": [
+        "Ashish Vaswani",
+        "Noam Shazeer",
+        "Niki Parmar",
+        "Jakob Uszkoreit",
+        "Llion Jones",
+        "Aidan N. Gomez",
+        "Lukasz Kaiser",
+        "Illia Polosukhin"
+      ],
+      "year": 2017,
+      "topics": [
+        "arXiv实验",
+        "长文本机制"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/1706.03762",
+      "rights_note": "arXiv公开原始论文，仅用于本地阅读及解析实验；再分发权限待核验。"
+    },
+    {
+      "doc_id": "d_bfd15786180a6546e5bf1361fe42356a884517a6497c27ef6994f444be75e91f",
+      "file_sha256": "bfd15786180a6546e5bf1361fe42356a884517a6497c27ef6994f444be75e91f",
+      "status": "ready",
+      "page_count": 24,
+      "title": "MTEB: Massive Text Embedding Benchmark",
+      "authors": [
+        "Muennighoff, Niklas",
+        "Tazi, Nouamane",
+        "Magne, Loïc",
+        "Reimers, Nils"
+      ],
+      "year": 2022,
+      "topics": [
+        "arXiv实验"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2210.07316",
+      "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+    },
+    {
+      "doc_id": "d_dc0ae3c5584ed146beee122e6a9ad9c48547dde048d53e9be8435d8f1d354531",
+      "file_sha256": "dc0ae3c5584ed146beee122e6a9ad9c48547dde048d53e9be8435d8f1d354531",
+      "status": "ready",
+      "page_count": 11,
+      "title": "Precise Zero-Shot Dense Retrieval without Relevance Labels",
+      "authors": [
+        "Gao, Luyu",
+        "Ma, Xueguang",
+        "Lin, Jimmy",
+        "Callan, Jamie"
+      ],
+      "year": 2022,
+      "topics": [
+        "arXiv实验"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2212.10496",
+      "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+    },
+    {
+      "doc_id": "d_e791451960e47e69b0241d7656c6c61ce40b7c3beff92c944e163e5c3bc54c1a",
+      "file_sha256": "e791451960e47e69b0241d7656c6c61ce40b7c3beff92c944e163e5c3bc54c1a",
+      "status": "ready",
+      "page_count": 5,
+      "title": "SPLADE: Sparse Lexical and Expansion Model for First Stage Ranking",
+      "authors": [
+        "Formal, Thibault",
+        "Piwowarski, Benjamin",
+        "Clinchant, Stéphane"
+      ],
+      "year": 2021,
+      "topics": [
+        "arXiv实验"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2107.05720",
+      "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://creativecommons.org/licenses/by-nc-sa/4.0/"
+    }
+  ]
+}

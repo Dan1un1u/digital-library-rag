@@ -1,0 +1,130 @@
+{
+  "batch_id": "COL-001-20261018-P01",
+  "scope_policy": "Only problems remaining after successful LLM-assisted recognition count toward project metadata defects.",
+  "user_instruction": "本机识别不是我们“结合LLM的数字图书馆”项目关注的对象，不列为缺陷。关注增强识别下仍出现问题的项目。",
+  "excluded_observation_ids": [
+    "MQ-001",
+    "MQ-002"
+  ],
+  "confirmed_defect_ids": [
+    "MQ-003"
+  ],
+  "enhancement_follow_up_ids": [
+    "MQ-004"
+  ],
+  "provider": "cliproxyapi",
+  "model": "gpt-6-luna",
+  "jobs": [
+    {
+      "item_id": "paper-001",
+      "job_id": "abb48828d6c84108b833421eb50cfd56",
+      "stage": "done",
+      "api_assistance": {
+        "status": "completed",
+        "accepted_fields": 5
+      }
+    },
+    {
+      "item_id": "paper-002",
+      "job_id": "d7c9ed834857421c86471cc9d7b8ed24",
+      "stage": "done",
+      "api_assistance": {
+        "status": "completed",
+        "accepted_fields": 5
+      }
+    },
+    {
+      "item_id": "paper-003",
+      "job_id": "9767490425094e64803abb6fee1043dd",
+      "stage": "done",
+      "api_assistance": {
+        "status": "completed",
+        "accepted_fields": 4
+      }
+    },
+    {
+      "item_id": "paper-004",
+      "job_id": "1bde0a19a6624257a17ddc032eb1a4f2",
+      "stage": "done",
+      "api_assistance": {
+        "status": "completed",
+        "accepted_fields": 3
+      }
+    },
+    {
+      "item_id": "paper-005",
+      "job_id": "c8bedaf42d164c47a262a0ece09a8014",
+      "stage": "done",
+      "api_assistance": {
+        "status": "completed",
+        "accepted_fields": 5
+      }
+    },
+    {
+      "item_id": "paper-006",
+      "job_id": "112303a0fc594a6e92716bf45a2c5ae2",
+      "stage": "done",
+      "api_assistance": {
+        "status": "completed",
+        "accepted_fields": 5
+      }
+    },
+    {
+      "item_id": "paper-007",
+      "job_id": "9537e57fa0dc46dc8570e611bf66a6a2",
+      "stage": "done",
+      "api_assistance": {
+        "status": "completed",
+        "accepted_fields": 5
+      }
+    },
+    {
+      "item_id": "paper-008",
+      "job_id": "249367b969dd47d9ae6cb8d377ae070c",
+      "stage": "done",
+      "api_assistance": {
+        "status": "completed",
+        "accepted_fields": 5
+      }
+    },
+    {
+      "item_id": "paper-009",
+      "job_id": "ccaf8686ee834effb1671a1b2e2fc9fb",
+      "stage": "done",
+      "api_assistance": {
+        "status": "completed",
+        "accepted_fields": 4
+      }
+    },
+    {
+      "item_id": "paper-010",
+      "job_id": "12737eec87614d8bb6a46cc41bf431aa",
+      "stage": "done",
+      "api_assistance": {
+        "status": "completed",
+        "accepted_fields": 5
+      }
+    },
+    {
+      "item_id": "paper-011",
+      "job_id": "0a37477b781d41728f077e82b01c0b9e",
+      "stage": "done",
+      "api_assistance": {
+        "status": "completed",
+        "accepted_fields": 5
+      }
+    }
+  ],
+  "mq003_observation": {
+    "item_id": "paper-005",
+    "enhanced_year": 2023,
+    "year_field_source": {
+      "method": "api_page_recognition",
+      "pdf_page": 1,
+      "excerpt": "17 Feb 2023"
+    },
+    "externally_verified_publication_year": 2022
+  },
+  "business_logic_changed": false,
+  "historical_evidence_preserved": true
+}

@@ -1,0 +1,11 @@
+[run]
+branch = True
+relative_files = True
+source =
+    app/src/dlrag
+    tools
+
+[report]
+include =
+    app/src/dlrag/*
+    tools/catalog_batch.py

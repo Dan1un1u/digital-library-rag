@@ -1,0 +1,38 @@
+{
+  "accepted": true,
+  "scope": "PR1 code-candidate acceptance under the user-approved collected-version year policy",
+  "tested_code": {
+    "commit": "06183046e6700a4587a839c79088db6540d34e89",
+    "branch": "feat/catalog-ingestion-audit",
+    "dirty": false
+  },
+  "offline_tests": 458,
+  "pr_added_cases": 128,
+  "inherited_cases": 330,
+  "current_revision_added_cases": 18,
+  "mq_target_cases": 102,
+  "api_replay_cases": 7,
+  "live_llm_cases": 3,
+  "historical_candidate_live_crossref_cases": 3,
+  "protected_libraries_unchanged": true,
+  "source_sha256": {
+    "app/src/dlrag/ingestion/metadata_year.py": "878090a0a0d0df0cbd38f95453d39281185856aa65496552311a0af1279509d3",
+    "app/src/dlrag/ingestion/metadata_api.py": "589809357c37cbc056518ec47b0a73d89eed08fa40672f27a5d3a344213e0e50",
+    "app/src/dlrag/ingestion/bibliography.py": "babb39ddc7fd06ef4c0a06400af7e74bc4ba85cf685dccdf5d053ec42721a21d",
+    "app/src/dlrag/ui/app.py": "24f08a0c6283c671ddfdb277c8fedfcc4c27368df5d173e695d24a48b3b86aaf"
+  },
+  "not_a_hosted_approval_or_merge": true,
+  "human_review": "No new user manual review claimed; dates checked against PDF text evidence by the coding agent.",
+  "first_attempt": {
+    "commit": "ffaf5eed86bcff04b790a03244febc771c6b415a",
+    "passed": 457,
+    "failed": 1,
+    "reason": "Rejecting a malformed candidate introduced an absent year key with null; fixed without changing valid-PDF date decisions."
+  },
+  "deployment": "Not deployed; existing corpus metadata and indexes retained.",
+  "limitations": [
+    "Front-two-page preview; no claim of universal extraction accuracy.",
+    "Unknown PDF version can retain an empty year while related publication records remain reviewable.",
+    "Image-only evidence is model-reported and requires user confirmation."
+  ]
+}

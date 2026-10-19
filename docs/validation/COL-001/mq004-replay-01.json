@@ -1,0 +1,1067 @@
+{
+  "code": {
+    "commit": "bbcbe98bbbd5107f4b3ba867568e1e27370ce9ec",
+    "branch": "feat/catalog-ingestion-audit",
+    "dirty": false
+  },
+  "mode": "replay",
+  "network": "live Crossref",
+  "model": null,
+  "production_code_deployed": false,
+  "before_manifest": {
+    "index_version": "idx_20261018T153334_20ed96d8ced7",
+    "contract_version": "1.0",
+    "built_at": "2026-10-18T15:33:34.670944+00:00",
+    "embedding_model": "BAAI/bge-m3",
+    "embedding_revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "dimension": 1024,
+    "normalized": true,
+    "chunking_config": {
+      "count_mode": "character",
+      "tokenizer_name": null,
+      "tokenizer_revision": null,
+      "max_tokens": 400,
+      "overlap_tokens": 50,
+      "max_chars": 1200,
+      "overlap_chars": 150
+    },
+    "tokenizer": null,
+    "document_count": 25,
+    "chunk_count": 1821,
+    "corpus_hash": "124a3610097b0f8ad8f0e70c35a871c9a1f8a415957d413b286c729e87a4ad44",
+    "embedding_backend": {
+      "base_url": "http://127.0.0.1:18080/v1",
+      "dimension": 1024,
+      "encoding_format": "float",
+      "input_preprocessing": "original-text-v1;fp16;cls;l2-float32",
+      "model": "BAAI/bge-m3",
+      "provider": "local-bge-fp16",
+      "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+      "revision_pinned": true
+    },
+    "lexical_tokenizer": "nfkc-casefold-cjk-bigram-v1",
+    "retrieval_config": {
+      "candidate_k": 20,
+      "rrf_k": 60,
+      "normalize_embeddings": true,
+      "bm25_k1": 1.5,
+      "bm25_b": 0.75
+    },
+    "artifacts": {
+      "chunks.json": "124a3610097b0f8ad8f0e70c35a871c9a1f8a415957d413b286c729e87a4ad44",
+      "lexical.json": "db4f2ba71f70601dcf1a6c98169b1f7b17225d47b13ed595f9e5346ba756931f",
+      "vectors.npy": "32fae2e309103ec7d2db7656fcb79feeff59f9259de0c5abb2874b8c13488044"
+    }
+  },
+  "cases": [
+    {
+      "case_id": "paper-003",
+      "sha256": "604fcbd71b570f13ec0ed832c7c083728cf9b42170704f7fddd966530db96bee",
+      "before_enrichment": {
+        "title": "ENEC: A Lossless AI Model Compression Method Enabling Fast Inference on Ascend NPUs",
+        "authors": [
+          "Jinwu Yang",
+          "Jiaan Wu",
+          "Zedong Liu",
+          "Xinyang Ma",
+          "Hairui Zhao",
+          "Yida Gu",
+          "Yuanhong Huang",
+          "Xingchen Liu",
+          "Wenjing Huang",
+          "Zheng Wei",
+          "Jing Xing",
+          "Yili Ma",
+          "Qingyi Zhang",
+          "Baoyi An",
+          "Zhongzhe Hu",
+          "Shaoteng Liu",
+          "Xia Zhu",
+          "Jiaxun Lu",
+          "Guangming Tan",
+          "Dingwen Tao"
+        ],
+        "year": null,
+        "language": "en",
+        "source_url": "https://arxiv.org/abs/2604.03298"
+      },
+      "metadata": {
+        "title": "ENEC: A Lossless AI Model Compression Method Enabling Fast Inference on Ascend NPUs",
+        "authors": [
+          "Jinwu Yang",
+          "Jiaan Wu",
+          "Zedong Liu",
+          "Xinyang Ma",
+          "Hairui Zhao",
+          "Yida Gu",
+          "Yuanhong Huang",
+          "Xingchen Liu",
+          "Wenjing Huang",
+          "Zheng Wei",
+          "Jing Xing",
+          "Yili Ma",
+          "Qingyi Zhang",
+          "Baoyi An",
+          "Zhongzhe Hu",
+          "Shaoteng Liu",
+          "Xia Zhu",
+          "Jiaxun Lu",
+          "Guangming Tan",
+          "Dingwen Tao"
+        ],
+        "year": 2026,
+        "language": "en",
+        "source_url": "https://arxiv.org/abs/2604.03298"
+      },
+      "api_assistance": {
+        "status": "historical_completed_candidates_replayed"
+      },
+      "bibliographic_enrichment": {
+        "policy": "crossref-title-authors-v1",
+        "provider": "crossref",
+        "status": "completed",
+        "missing_before": [
+          "year"
+        ],
+        "filled_fields": [
+          "year"
+        ],
+        "conflicts": [],
+        "candidates": [
+          {
+            "title": "ENEC: A Lossless AI Model Compression Method Enabling Fast Inference on Ascend NPUs",
+            "authors": [
+              "Jinwu Yang",
+              "Jiaan Wu",
+              "Zedong Liu",
+              "Xinyang Ma",
+              "Hairui Zhao",
+              "Yida Gu",
+              "Yuanhong Huang",
+              "Xingchen Liu",
+              "Wenjing Huang",
+              "Zheng Wei",
+              "Jing Xing",
+              "Yili Ma",
+              "Qingyi Zhang",
+              "Baoyi An",
+              "Zhongzhe Hu",
+              "Shaoteng Liu",
+              "Xia Zhu",
+              "Jiaxun Lu",
+              "Guangming Tan",
+              "Dingwen Tao"
+            ],
+            "doi": "10.1109/isca66397.2026.00100",
+            "source_url": "https://doi.org/10.1109/isca66397.2026.00100",
+            "record_url": "https://api.crossref.org/works/10.1109%2Fisca66397.2026.00100",
+            "type": "proceedings-article",
+            "dates": [
+              {
+                "kind": "published-print",
+                "date_parts": [
+                  2026,
+                  6
+                ],
+                "year": 2026
+              },
+              {
+                "kind": "published",
+                "date_parts": [
+                  2026,
+                  6
+                ],
+                "year": 2026
+              }
+            ],
+            "selected_date": {
+              "kind": "published-print",
+              "date_parts": [
+                2026,
+                6
+              ],
+              "year": 2026
+            },
+            "match": {
+              "title": "normalized_exact",
+              "first_author": "exact",
+              "author_overlap": 20,
+              "required_overlap": 16
+            }
+          }
+        ],
+        "queried_at": "2026-10-18T16:30:44.402767+00:00"
+      },
+      "field_sources": {
+        "year": {
+          "method": "bibliographic_lookup",
+          "provider": "crossref",
+          "record_url": "https://api.crossref.org/works/10.1109%2Fisca66397.2026.00100",
+          "retrieved_at": "2026-10-18T16:30:44.402767+00:00",
+          "date_type": "published-print",
+          "excerpt": "published-print: 2026-6"
+        }
+      },
+      "year_review": {
+        "policy": "crossref-title-authors-v1",
+        "status": "candidate_supported",
+        "source": "crossref",
+        "grounding": "registry_record",
+        "date_type": "published-print"
+      },
+      "warnings": [
+        "已依据题名和作者吻合的 Crossref 出版记录补全候选字段；请核对来源与日期类型后导入。"
+      ],
+      "crossref_records": [
+        {
+          "DOI": "10.1109/isca66397.2026.00100",
+          "title": [
+            "ENEC: A Lossless AI Model Compression Method Enabling Fast Inference on Ascend NPUs"
+          ],
+          "author": [
+            {
+              "given": "Jinwu",
+              "family": "Yang",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Institute of Computing Technology, Chinese Academy of Sciences",
+                  "place": [
+                    "Beijing, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Jiaan",
+              "family": "Wu",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "University of Chinese Academy of Sciences",
+                  "place": [
+                    "Beijing, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Zedong",
+              "family": "Liu",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Institute of Computing Technology, Chinese Academy of Sciences",
+                  "place": [
+                    "Beijing, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Xinyang",
+              "family": "Ma",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Institute of Computing Technology, Chinese Academy of Sciences",
+                  "place": [
+                    "Beijing, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Hairui",
+              "family": "Zhao",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Institute of Computing Technology, Chinese Academy of Sciences",
+                  "place": [
+                    "Beijing, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Yida",
+              "family": "Gu",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Institute of Computing Technology, Chinese Academy of Sciences",
+                  "place": [
+                    "Beijing, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Yuanhong",
+              "family": "Huang",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Institute of Computing Technology, Chinese Academy of Sciences",
+                  "place": [
+                    "Beijing, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Xingchen",
+              "family": "Liu",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Institute of Computing Technology, Chinese Academy of Sciences",
+                  "place": [
+                    "Beijing, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Wenjing",
+              "family": "Huang",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Institute of Computing Technology, Chinese Academy of Sciences",
+                  "place": [
+                    "Beijing, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Zheng",
+              "family": "Wei",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Institute of Computing Technology, Chinese Academy of Sciences",
+                  "place": [
+                    "Beijing, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Jing",
+              "family": "Xing",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Institute of Computing Technology, Chinese Academy of Sciences",
+                  "place": [
+                    "Beijing, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Yili",
+              "family": "Ma",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Institute of Computing Technology, Chinese Academy of Sciences",
+                  "place": [
+                    "Beijing, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Qingyi",
+              "family": "Zhang",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Huawei Technologies Co., Ltd.",
+                  "place": [
+                    "Shenzhen, Guangdong, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Baoyi",
+              "family": "An",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Huawei Technologies Co., Ltd.",
+                  "place": [
+                    "Shenzhen, Guangdong, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Zhongzhe",
+              "family": "Hu",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Huawei Technologies Co., Ltd.",
+                  "place": [
+                    "Shenzhen, Guangdong, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Shaoteng",
+              "family": "Liu",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Huawei Technologies Co., Ltd.",
+                  "place": [
+                    "Shenzhen, Guangdong, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Xia",
+              "family": "Zhu",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Huawei Technologies Co., Ltd.",
+                  "place": [
+                    "Shenzhen, Guangdong, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Jiaxun",
+              "family": "Lu",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Huawei Technologies Co., Ltd.",
+                  "place": [
+                    "Shenzhen, Guangdong, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Guangming",
+              "family": "Tan",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Institute of Computing Technology, Chinese Academy of Sciences",
+                  "place": [
+                    "Beijing, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Dingwen",
+              "family": "Tao",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Institute of Computing Technology, Chinese Academy of Sciences",
+                  "place": [
+                    "Beijing, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "type": "proceedings-article",
+          "published-print": {
+            "date-parts": [
+              [
+                2026,
+                6
+              ]
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2026,
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "DOI": "10.1101/127464",
+          "title": [
+            "ChIPWig: A Random Access-Enabling Lossless and Lossy Compression Method for ChIP-seq Data"
+          ],
+          "author": [
+            {
+              "given": "Vida",
+              "family": "Ravanmehr",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Minji",
+              "family": "Kim",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Zhiying",
+              "family": "Wang",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Olgica",
+              "family": "Milenković",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "type": "posted-content",
+          "published": {
+            "date-parts": [
+              [
+                2017,
+                4,
+                14
+              ]
+            ]
+          }
+        },
+        {
+          "DOI": "10.53941/aieng.2026.100010",
+          "title": [
+            "A Review of AI Computing Hardware for Enabling 6G Wireless Networks: Neuromorphic Chips, NPUs, and TPUs"
+          ],
+          "author": [
+            {
+              "given": "Jason",
+              "family": "Lee",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Yu-Dong",
+              "family": "Yao",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "type": "journal-article",
+          "published-online": {
+            "date-parts": [
+              [
+                2026,
+                7,
+                16
+              ]
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2026,
+                7,
+                16
+              ]
+            ]
+          }
+        },
+        {
+          "DOI": "10.1016/j.ins.2016.11.008",
+          "title": [
+            "Lossless compression for aurora spectral images using fast online bi-dimensional decorrelation method"
+          ],
+          "author": [
+            {
+              "ORCID": "https://orcid.org/0000-0002-9814-2028",
+              "authenticated-orcid": false,
+              "given": "Wanqiu",
+              "family": "Kong",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Jiaji",
+              "family": "Wu",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Zejun",
+              "family": "Hu",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Marco",
+              "family": "Anisetti",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Ernesto",
+              "family": "Damiani",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Gwanggil",
+              "family": "Jeon",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "type": "journal-article",
+          "published-print": {
+            "date-parts": [
+              [
+                2017,
+                3
+              ]
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2017,
+                3
+              ]
+            ]
+          }
+        },
+        {
+          "DOI": "10.1016/j.sysarc.2026.103936",
+          "title": [
+            "Efficient operator implementation of simulated quantized GEMM for the decoupled execution model of Ascend NPUs"
+          ],
+          "author": [
+            {
+              "given": "Dongxian",
+              "family": "Chen",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0001-6372-7088",
+              "authenticated-orcid": false,
+              "given": "Lu",
+              "family": "Lu",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Haibiao",
+              "family": "Yang",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Yu",
+              "family": "Zhang",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Hao",
+              "family": "Jiang",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Hongzhe",
+              "family": "Zhou",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "type": "journal-article",
+          "published-print": {
+            "date-parts": [
+              [
+                2026,
+                11
+              ]
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2026,
+                11
+              ]
+            ]
+          }
+        }
+      ],
+      "expected": {
+        "expected_year": 2026,
+        "expected_source_url": "https://arxiv.org/abs/2604.03298",
+        "expected_doi": "10.1109/isca66397.2026.00100"
+      },
+      "passed": true
+    },
+    {
+      "case_id": "paper-004",
+      "sha256": "959d1cd83e6e32b2433b478269635e0982267998da370a2653bb0d87f444ad6d",
+      "before_enrichment": {
+        "title": "EQ-ViT: Algorithm-Hardware Co-Design for End-to-End Acceleration of Real-Time Vision Transformer Inference on Versal ACAP Architecture",
+        "authors": [
+          "Peiyan Dong",
+          "Jinming Zhuang",
+          "Zhuoping Yang",
+          "Shixin Ji",
+          "Yanyu Li",
+          "Dongkuan Xu",
+          "Heng Huang",
+          "Jingtong Hu",
+          "Alex K. Jones",
+          "Yiyu Shi",
+          "Yanzhi Wang",
+          "Peipei Zhou"
+        ],
+        "year": null,
+        "language": "en",
+        "source_url": null
+      },
+      "metadata": {
+        "title": "EQ-ViT: Algorithm-Hardware Co-Design for End-to-End Acceleration of Real-Time Vision Transformer Inference on Versal ACAP Architecture",
+        "authors": [
+          "Peiyan Dong",
+          "Jinming Zhuang",
+          "Zhuoping Yang",
+          "Shixin Ji",
+          "Yanyu Li",
+          "Dongkuan Xu",
+          "Heng Huang",
+          "Jingtong Hu",
+          "Alex K. Jones",
+          "Yiyu Shi",
+          "Yanzhi Wang",
+          "Peipei Zhou"
+        ],
+        "year": null,
+        "language": "en",
+        "source_url": null
+      },
+      "api_assistance": {
+        "status": "historical_completed_candidates_replayed"
+      },
+      "bibliographic_enrichment": {
+        "policy": "crossref-title-authors-v1",
+        "provider": "crossref",
+        "status": "failed",
+        "missing_before": [
+          "year",
+          "source_url"
+        ],
+        "filled_fields": [],
+        "conflicts": [],
+        "candidates": [],
+        "queried_at": "2026-10-18T16:30:45.888363+00:00",
+        "error_code": "TIMEOUT"
+      },
+      "field_sources": {},
+      "year_review": null,
+      "warnings": [
+        "外部书目查询未完成，已保留识别结果；可稍后重试或手工补充。"
+      ],
+      "crossref_records": [],
+      "expected": {
+        "expected_year": 2024,
+        "expected_source_url": "https://doi.org/10.1109/tcad.2024.3443692",
+        "expected_doi": "10.1109/tcad.2024.3443692"
+      },
+      "passed": false
+    }
+  ],
+  "passed": false,
+  "human_review": "pending",
+  "failure_type": "ValueError",
+  "after_manifest": {
+    "index_version": "idx_20261018T153334_20ed96d8ced7",
+    "contract_version": "1.0",
+    "built_at": "2026-10-18T15:33:34.670944+00:00",
+    "embedding_model": "BAAI/bge-m3",
+    "embedding_revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "dimension": 1024,
+    "normalized": true,
+    "chunking_config": {
+      "count_mode": "character",
+      "tokenizer_name": null,
+      "tokenizer_revision": null,
+      "max_tokens": 400,
+      "overlap_tokens": 50,
+      "max_chars": 1200,
+      "overlap_chars": 150
+    },
+    "tokenizer": null,
+    "document_count": 25,
+    "chunk_count": 1821,
+    "corpus_hash": "124a3610097b0f8ad8f0e70c35a871c9a1f8a415957d413b286c729e87a4ad44",
+    "embedding_backend": {
+      "base_url": "http://127.0.0.1:18080/v1",
+      "dimension": 1024,
+      "encoding_format": "float",
+      "input_preprocessing": "original-text-v1;fp16;cls;l2-float32",
+      "model": "BAAI/bge-m3",
+      "provider": "local-bge-fp16",
+      "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+      "revision_pinned": true
+    },
+    "lexical_tokenizer": "nfkc-casefold-cjk-bigram-v1",
+    "retrieval_config": {
+      "candidate_k": 20,
+      "rrf_k": 60,
+      "normalize_embeddings": true,
+      "bm25_k1": 1.5,
+      "bm25_b": 0.75
+    },
+    "artifacts": {
+      "chunks.json": "124a3610097b0f8ad8f0e70c35a871c9a1f8a415957d413b286c729e87a4ad44",
+      "lexical.json": "db4f2ba71f70601dcf1a6c98169b1f7b17225d47b13ed595f9e5346ba756931f",
+      "vectors.npy": "32fae2e309103ec7d2db7656fcb79feeff59f9259de0c5abb2874b8c13488044"
+    }
+  },
+  "production_index_unchanged": true
+}

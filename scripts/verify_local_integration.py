@@ -1,5 +1,6 @@
 """Exercise real local embeddings, Luna text/vision/ranking, and grounded library QA."""
 from datetime import datetime, timezone
+import argparse
 import json
 from pathlib import Path
 import secrets
@@ -14,7 +15,18 @@ from dlrag.shared.config import Settings
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'http://127.0.0.1:18000'
-settings = Settings(_env_file=ROOT / 'app/.env')
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--env-file', type=Path, default=ROOT / 'app/.env')
+parser.add_argument('--expected-documents', type=int)
+parser.add_argument('--expected-chunks', type=int)
+parser.add_argument('--resume-job', action='store_true')
+parser.add_argument('--new-qa-job', action='store_true')
+args = parser.parse_args()
+if (args.expected_documents is None) != (args.expected_chunks is None):
+    parser.error('Provide both expected counts or neither')
+if args.expected_documents is not None and (args.expected_documents < 1 or args.expected_chunks < 1):
+    parser.error('Expected counts must be positive')
+settings = Settings(_env_file=args.env_file)
 http = requests.Session()
 http.trust_env = False
 checks, details = [], {}
@@ -51,9 +63,18 @@ def main():
           and health['active_models']['llm'] == 'gpt-6-luna'
           and health['active_models']['semantic_reranker'] == 'gpt-6-luna' and not health['issues'])
     manifest = health['manifest']
-    check('local_fp16_index_and_full_corpus', manifest['document_count'] == 14 and manifest['chunk_count'] == 935
+    response = http.get(BASE + '/documents', params={'include_nonready': True}, timeout=10)
+    response.raise_for_status()
+    documents = response.json()['documents']
+    counts_match = (args.expected_documents is None or (
+        manifest['document_count'] == args.expected_documents and manifest['chunk_count'] == args.expected_chunks))
+    check('local_fp16_index_and_full_corpus', manifest['document_count'] == len(documents)
+          and bool(documents) and all(d['status'] == 'ready' for d in documents)
+          and manifest['chunk_count'] > 0 and counts_match
           and manifest['embedding_backend']['provider'] == 'local-bge-fp16'
           and manifest['embedding_backend']['revision_pinned'])
+    details['corpus_expectation'] = {'documents': args.expected_documents, 'chunks': args.expected_chunks,
+                                     'listed_documents': len(documents)}
     for mode in ('vector', 'hybrid'):
         answer = post('/search', {'query': 'retrieval augmented generation external knowledge', 'mode': mode, 'top_k': 5})
         hits = answer['hits']
@@ -78,6 +99,7 @@ def main():
     # Raster-only PDF prevents title/author recovery from embedded text or PDF metadata.
     title = 'Library Metadata Test ' + secrets.token_hex(2).upper()
     scan = ROOT / 'evidence/luna-vision-scan.pdf'
+    scan.parent.mkdir(parents=True, exist_ok=True)
     with fitz.open() as source:
         page = source.new_page(width=620, height=800)
         page.insert_text((45, 80), title, fontsize=22)
@@ -165,6 +187,7 @@ if __name__ == '__main__':
                   'completed': completed, 'failure': failure,
                   'passed': sum(row['passed'] for row in checks), 'failed': sum(not row['passed'] for row in checks),
                   'details': details, 'scope': 'Live integration smoke checks; not a formal retrieval quality benchmark'}
+        (ROOT / 'reports').mkdir(exist_ok=True)
         (ROOT / 'reports/local_models_integration.json').write_text(
             json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')
     print(json.dumps({'passed': report['passed'], 'failed': report['failed']}, indent=2), flush=True)

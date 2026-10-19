@@ -1,0 +1,110 @@
+"""Reproduce COL-001 offline checks and retain commit-bound, portable summaries."""
+import argparse
+from datetime import datetime, timezone
+from importlib.metadata import version
+import json
+import os
+from pathlib import Path
+import subprocess
+import sys
+import time
+import xml.etree.ElementTree as ET
+
+ROOT = Path(__file__).resolve().parents[1]
+NEW_TESTS = ["app/tests/integration/test_ingestion_recovery.py", "app/tests/integration/test_catalog_batch.py",
+             "app/tests/ingestion/test_metadata_known_issues.py", "app/tests/ingestion/test_metadata_year.py",
+             "app/tests/integration/test_metadata_year_api.py", "app/tests/ingestion/test_bibliography.py",
+             "app/tests/integration/test_bibliography_api.py"]
+FOCUS = ["app/src/dlrag/api/services.py", "app/src/dlrag/ingestion/library.py",
+         "app/src/dlrag/ingestion/parser.py", "app/src/dlrag/ingestion/chunker.py",
+         "app/src/dlrag/retrieval/retriever.py", "tools/catalog_batch.py",
+         "app/src/dlrag/ingestion/metadata_api.py", "app/src/dlrag/ingestion/metadata_year.py",
+         "app/src/dlrag/ingestion/bibliography.py"]
+
+
+def git(*args):
+    return subprocess.check_output(["git", *args], cwd=ROOT, text=True, encoding="utf-8").strip()
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--scope", choices=["new", "all"], default="all")
+    parser.add_argument("--output", type=Path)
+    parser.add_argument("--tokenizer-cache", type=Path)
+    args = parser.parse_args()
+    output = (args.output or ROOT / "reports" / "COL-001" /
+              (datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ") + "-" + args.scope)).resolve()
+    output.mkdir(parents=True, exist_ok=False)
+    import dlrag
+    source_path = Path(next(iter(dlrag.__path__))).resolve()
+    if source_path != ROOT / "app/src/dlrag":
+        raise RuntimeError("Refusing to measure a different deployment's source")
+    before = {"commit": git("rev-parse", "HEAD"), "branch": git("branch", "--show-current"),
+              "dirty": bool(git("status", "--porcelain"))}
+    env = os.environ.copy()
+    env.update(APP_MODE="mock", PYTHONUTF8="1", PYTHONIOENCODING="utf-8",
+               SILICONFLOW_API_KEY="", LLM_API_KEY="", SD_EMBEDDING_KEY="",
+               EMBEDDING_PROVIDER="siliconflow", LLM_PROVIDER="siliconflow",
+               QA_RERANK_PROVIDER="siliconflow", METADATA_API_PROVIDER="siliconflow")
+    env["TIKTOKEN_CACHE_DIR"] = str((args.tokenizer_cache or ROOT / "app/data/tokenizer-cache").resolve())
+    command = [sys.executable, "-m", "coverage", "run", "--rcfile=" + str(ROOT / ".coveragerc"),
+               "--data-file=" + str(output / ".coverage"), "-m", "pytest", "-q",
+               "-c", "app/pyproject.toml", *(NEW_TESTS if args.scope == "new" else ["app/tests"]),
+               "--junitxml=" + str(output / "junit.xml")]
+    started = time.monotonic()
+    result = subprocess.run(command, cwd=ROOT, env=env, stdout=subprocess.PIPE,
+                            stderr=subprocess.STDOUT, encoding="utf-8", errors="replace")
+    (output / "pytest.txt").write_text(result.stdout, encoding="utf-8")
+    print(result.stdout)
+    coverage_result = subprocess.run([sys.executable, "-m", "coverage", "json",
+                                     "--rcfile=" + str(ROOT / ".coveragerc"),
+                                     "--data-file=" + str(output / ".coverage"),
+                                     "-o", str(output / "coverage.json")], cwd=ROOT, env=env,
+                                    stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+    if coverage_result.returncode:
+        print(coverage_result.stdout)
+        return 1
+    coverage = json.loads((output / "coverage.json").read_text(encoding="utf-8"))
+    suites = ET.parse(output / "junit.xml").getroot().findall("testsuite")
+    cases = [case for suite in suites for case in suite.findall("testcase")]
+    new_names = {Path(path).stem for path in NEW_TESTS}
+    new_count = sum(case.attrib.get("classname", "").split(".")[-1] in new_names for case in cases)
+    expected_failures = sum(case.find("skipped") is not None and
+                            case.find("skipped").attrib.get("type") == "pytest.xfail" for case in cases)
+    summary = {"work_item": "COL-001", "scope": args.scope, "tested_code": before,
+               "created_at": datetime.now(timezone.utc).isoformat(),
+               "python": sys.version.split()[0], "platform": sys.platform,
+               "packages": {name: version(name) for name in ["pytest", "coverage", "PyMuPDF", "numpy", "requests"]},
+               "source_path_verified": True, "environment": "isolated temporary stores; mock embeddings; no live model calls",
+               "exit_code": result.returncode, "duration_seconds": round(time.monotonic() - started, 2),
+               "tests": {k: sum(int(s.attrib.get(k, 0)) for s in suites)
+                         for k in ["tests", "failures", "errors", "skipped"]},
+               "new_cases": new_count, "reused_cases": len(cases) - new_count,
+               "expected_failures": expected_failures,
+               "coverage": {}, "uncovered_focus": {}, "manual_review": "pending",
+               "real_pdf_batch": "not exercised by this offline test run; see separate batch evidence"}
+    for name, row in coverage["files"].items():
+        name = name.replace("\\", "/")
+        metrics = row["summary"]
+        statements, branches = metrics["num_statements"], metrics["num_branches"]
+        summary["coverage"][name] = {
+            "statements": statements, "covered_statements": metrics["covered_lines"],
+            "statement_percent": round(100 * metrics["covered_lines"] / statements, 2) if statements else None,
+            "branches": branches, "covered_branches": metrics["covered_branches"],
+            "branch_percent": round(100 * metrics["covered_branches"] / branches, 2) if branches else None}
+        if name in FOCUS:
+            summary["uncovered_focus"][name] = {"missing_lines": row["missing_lines"],
+                                                 "missing_branches": row["missing_branches"]}
+    summary["worktree_dirty_after"] = bool(git("status", "--porcelain"))
+    summary["artifact_sha256"] = {}
+    import hashlib
+    for name in ["pytest.txt", "junit.xml", "coverage.json"]:
+        summary["artifact_sha256"][name] = hashlib.sha256((output / name).read_bytes()).hexdigest()
+    (output / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(json.dumps({"tests": summary["tests"], "new": new_count,
+                      "reused": summary["reused_cases"], "tested_code": before, "output": str(output)}, ensure_ascii=False))
+    return result.returncode
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
