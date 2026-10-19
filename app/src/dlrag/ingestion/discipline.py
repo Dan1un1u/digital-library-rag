@@ -18,6 +18,17 @@ def supported_excerpt(excerpt, page_text):
     return normalized(excerpt) in normalized(unwrapped)
 
 
+def verified_excerpt(excerpt, page_text):
+    if supported_excerpt(excerpt, page_text):
+        return excerpt.strip()
+    # A model may quote two sentences with an ellipsis. Keep only an actual
+    # contiguous source span; omitted or unverifiable fragments are not shown.
+    for span in re.split(r"\.{3,}|…+", excerpt):
+        if len(span.strip()) >= 20 and supported_excerpt(span.strip(), page_text):
+            return span.strip()
+    return None
+
+
 def complete_discipline(result, candidate=None, pages=()):
     metadata = result["metadata"]
     topics = metadata.setdefault("topics", [])
@@ -39,7 +50,8 @@ def complete_discipline(result, candidate=None, pages=()):
             or not isinstance(reason, str) or len(reason) > 500):
         return 0
     page_text = pages[page - 1].get("validation_text", pages[page - 1].get("text", ""))
-    if not supported_excerpt(excerpt, page_text):
+    excerpt = verified_excerpt(excerpt, page_text)
+    if not excerpt:
         return 0
     topics.append(value)
     result["discipline_classification"] = {"status": "classified", "method": "llm_page_classification",
