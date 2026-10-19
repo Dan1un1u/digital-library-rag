@@ -25,7 +25,7 @@ def http_status(code):
         return 413
     if code == "UNSUPPORTED_FILE":
         return 415
-    if code in {"INVALID_REQUEST", "INVALID_PDF", "NO_EXTRACTABLE_TEXT",
+    if code in {"INVALID_REQUEST", "INVALID_PDF", "NO_EXTRACTABLE_TEXT", "FULLTEXT_REVIEW_REQUIRED",
                 "CHUNK_CONFIG_MISMATCH", "UNSUPPORTED_HISTORY"}:
         return 422
     if code in {"INDEX_NOT_READY", "EMBEDDING_NOT_CONFIGURED", "EMBEDDING_MISMATCH",
