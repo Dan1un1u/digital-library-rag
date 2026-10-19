@@ -2,13 +2,18 @@
 from html import escape
 from urllib.parse import quote
 from dlrag.shared.disciplines import DOMAINS, rule_discipline as discipline
+from dlrag.shared.i18n import t, get_language
 
 
 def document_status(document):
     if document.get("error_code") in {"FULLTEXT_REVIEW_REQUIRED", "TEXT_LAYER_REVIEW_REQUIRED"}:
-        return "待核对正文（未加入检索）"
-    return {"ready": "可阅读", "uploaded": "处理中", "parsing": "处理中",
-            "indexing": "正在建立检索", "failed": "处理失败"}.get(document["status"], document["status"])
+        return t("待核对正文（未加入检索）")
+    return t({"ready": "可阅读", "uploaded": "处理中", "parsing": "处理中",
+              "indexing": "正在建立检索", "failed": "处理失败"}.get(document["status"], document["status"]))
+
+
+def display_topics(topics):
+    return (", " if get_language() == "en" else "、").join(t(x) if x in DOMAINS else x for x in topics)
 
 
 def domain_counts(documents):
@@ -26,13 +31,13 @@ def domain_counts(documents):
 def cover_card(document, base):
     url = base.rstrip("/") + "/documents/" + quote(document["doc_id"], safe="")
     title = escape(document["title"])
-    authors = escape("、".join(document.get("authors", [])) or "作者未标注")
-    domain = escape(discipline(document) or "待分类")
-    year = escape(str(document.get("year") or "年份未标注"))
+    authors = escape("、".join(document.get("authors", [])) or t("作者未标注"))
+    domain = escape(t(discipline(document) or "待分类"))
+    year = escape(str(document.get("year") or t("年份未标注")))
     return f'''<a class="book-card" href="{escape(url + '/file', quote=True)}" target="_blank" rel="noopener noreferrer">
-    <div class="book-cover"><img loading="lazy" src="{escape(url + '/cover', quote=True)}" alt="{title} · PDF 首页" /></div>
+    <div class="book-cover"><img loading="lazy" src="{escape(url + '/cover', quote=True)}" alt="{title} · {t('PDF 首页')}" /></div>
     <div class="book-info"><span class="book-domain">{domain} · {year}</span>
-    <h3>{title}</h3><p>{authors}</p><span class="book-open">阅读原文 ↗</span></div></a>'''
+    <h3>{title}</h3><p>{authors}</p><span class="book-open">{t('阅读原文')} ↗</span></div></a>'''
 
 
 STYLE = """<style>
