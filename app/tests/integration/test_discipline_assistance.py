@@ -182,3 +182,14 @@ def test_ambiguous_keyword_hits_allow_llm_to_resolve_the_main_subject(client, se
     result = preview(client, pdf_bytes('Neural methods in economics'))
     assert result['metadata']['topics'] == ['自然科学']
     assert result['discipline_classification']['method'] == 'llm_page_classification'
+
+
+@pytest.mark.parametrize('printed', [PROOF.replace('computing', 'comput-\ning'),
+                                    PROOF.replace('efficient', 'e\ufb03cient')])
+def test_pdf_line_wraps_and_typographic_ligatures_support_the_same_excerpt(printed):
+    from dlrag.ingestion.discipline import complete_discipline
+    result = {'metadata': {'title': TITLES[0], 'topics': []}}
+    accepted = complete_discipline(result, response()['discipline'],
+                                  [{'pdf_page': 1, 'text': printed, 'validation_text': printed}])
+    assert accepted == 1
+    assert result['metadata']['topics'] == ['自然科学']

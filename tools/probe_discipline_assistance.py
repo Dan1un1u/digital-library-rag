@@ -58,6 +58,7 @@ def main():
                 data={'use_api': str(enabled).lower(), 'use_lookup': 'false'})
             previews[str(enabled)] = wait(api, submitted['job_id'])
         off, on = previews['False']['result'], previews['True']['result']
+        write_json(a.output / (item['item_id'] + '-previews.json'), previews)
         assert off['api_assistance']['status'] == 'disabled'
         decision = on['discipline_classification']
         assert on['api_assistance']['status'] == 'completed', on['api_assistance']
@@ -71,7 +72,6 @@ def main():
         item['metadata']['topics'].extend(t for t in on['metadata']['topics'] if t in DOMAINS)
         item['review'] = {'status': 'ready', 'method': 'automated_pdf_check',
             'evidence': 'Original frozen reviewed fields plus fresh enhanced automatic discipline; see paired preview job.'}
-        write_json(a.output / (item['item_id'] + '-previews.json'), previews)
         results.append({'item_id': item['item_id'], 'sha256': original['sha256'],
             'off_classification': off['discipline_classification'],
             'on_classification': decision, 'enhanced_stages': previews['True']['stages'],
