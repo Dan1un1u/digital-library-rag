@@ -122,7 +122,9 @@ def draw_progress(job):
     if progress_target is None:
         return
     progress_target.empty()
-    with progress_target.container(border=True, key=f"answer_progress_{job.get('job_id', 'initial')}_{job['stage']}"):
+    # Static status blocks are replaced on every poll, including repeated stages.
+    # Clearing a placeholder does not release explicit keys within the same run.
+    with progress_target.container(border=True):
         st.markdown("**回答进度**")
         st.write(STAGES.get(job["stage"], job["stage"]))
         st.caption(f"已用时 {job['elapsed_seconds']:.1f} 秒")
@@ -138,7 +140,7 @@ def draw_progress(job):
 def idle_progress():
     if progress_target is not None:
         progress_target.empty()
-        with progress_target.container(border=True, key="answer_progress_idle"):
+        with progress_target.container(border=True):
             st.markdown("**回答进度**")
             st.caption("提交问答后，这里会显示后台实际处理阶段。")
 
