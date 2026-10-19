@@ -1,4 +1,4 @@
-"""Language selection changes presentation only and preserves session drafts."""
+"""Select the interface language without changing the original form workflow."""
 import streamlit as st
 from dlrag.shared.i18n import normalize_language, set_language
 
