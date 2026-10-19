@@ -1,0 +1,74 @@
+{
+  "created_at": "2026-10-19T10:49:21.027223+00:00",
+  "accepted": true,
+  "pr": 6,
+  "tested_commit": "d0befcadc5f8adfca194234ef8c2ad3525545d03",
+  "base_main": "b9565b482d8cf4f085235c9aba2d18e8303554ee",
+  "code_review": {
+    "blocking_findings": [],
+    "scope": "Only two static progress container keys removed; no model, ingestion or retrieval behavior change.",
+    "root_cause_verified_in_installed_streamlit": true,
+    "independent_test_storage": "pytest temporary library fixtures",
+    "new_tests": 4,
+    "inherited_tests": 523,
+    "targeted_tests_overlap_full_suite": true
+  },
+  "fresh_tests": {
+    "all": {
+      "tests": 527,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "sha256": "bf32676725b2f8c5ff4815769d3f5a7ee09e30503b4919b539953389fd92ad02"
+    },
+    "targeted": {
+      "tests": 11,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "sha256": "ed8b06ac833fa184064bfdd282041c8aa6ecc369d925fb3e031ae09f62720020"
+    }
+  },
+  "historical_receipts_hash_verified": true,
+  "source_trees": {
+    "app/src": "0566b09df57d2924d3a691efb7b5517186ed408c",
+    "app/tests": "c2e7bdab81658f331faa5360192a56024f3e5795",
+    "services": "ae6dab2d1a6ac1b553a37619733a4f57e77b07e3",
+    "scripts": "d64f9083f9e3ae8bf0537d0b1d1df76c712e58b6"
+  },
+  "github_checks": {
+    "check_runs": [],
+    "statuses": [],
+    "hosted_checks_present": false
+  },
+  "github_reviews": {},
+  "checks_note": "Codex check connector unavailable without connection; read-only GitHub REST confirms whether hosted checks exist. No absent check is reported as passed.",
+  "merge_authorization": "User explicitly requested acceptance review and dependency-ordered merge of PR6 and PR7.",
+  "merge_order": [
+    6,
+    7
+  ],
+  "deployment_authorized": false,
+  "protected_libraries_before_merge": {
+    "18000": {
+      "sha256": "32543215cdab74824873efdecb913700ecc75a4e030e501324155462b6794b90",
+      "document_count": 25,
+      "index_version": "idx_20261018T153334_20ed96d8ced7"
+    },
+    "19000": {
+      "sha256": "b880ae3f412107420737550aec70f9e0224b176d5e0a788043e5586ec81bfadd",
+      "document_count": 50,
+      "index_version": "idx_20261019T024947_292c353a8ff5"
+    },
+    "19010": {
+      "sha256": "2e092237b64e0a078be70b4ce7d669e4cefe2d0610970417f19c01459574c025",
+      "document_count": 6,
+      "index_version": "idx_20261019T050415_38b306e4080d"
+    },
+    "19020": {
+      "sha256": "51e42753c0a28640338fea30c0ff92e46546fafc3fa9ca1c57cf6742ec6496e3",
+      "document_count": 6,
+      "index_version": "idx_20261019T091710_a9e391cc545c"
+    }
+  }
+}
