@@ -1,0 +1,19 @@
+[
+  {
+    "item_id": "HU08",
+    "diagnostic_only_top_k": 20,
+    "target_ranks": [],
+    "top_5_still_failed": true
+  },
+  {
+    "item_id": "HU11",
+    "diagnostic_only_top_k": 20,
+    "target_ranks": [
+      14,
+      15,
+      16,
+      19
+    ],
+    "top_5_still_failed": true
+  }
+]

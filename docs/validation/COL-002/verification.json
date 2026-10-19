@@ -1,0 +1,2036 @@
+{
+  "work_item": "COL-002",
+  "verifier_code": {
+    "commit": "fc60a065056195297bada598b6746ad3c84be34a",
+    "branch": "feat/catalog-ingestion-audit",
+    "dirty": false
+  },
+  "backend_marker": {
+    "validation_only": true,
+    "code": {
+      "commit": "20ec245051a783e55701ae4001418c45a93b6e8e",
+      "branch": "feat/catalog-ingestion-audit",
+      "dirty": false
+    },
+    "storage_identity": "2d53e82075b2777f528b665811a20a45312c9174265a290599f8958414035101"
+  },
+  "business_source_unchanged_from_backend": true,
+  "created_at": "2026-10-19T02:53:01.673869+00:00",
+  "before_manifest": {
+    "index_version": "idx_20261019T024947_292c353a8ff5",
+    "contract_version": "1.0",
+    "built_at": "2026-10-19T02:49:47.806771+00:00",
+    "embedding_model": "BAAI/bge-m3",
+    "embedding_revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "dimension": 1024,
+    "normalized": true,
+    "chunking_config": {
+      "count_mode": "character",
+      "tokenizer_name": null,
+      "tokenizer_revision": null,
+      "max_tokens": 400,
+      "overlap_tokens": 50,
+      "max_chars": 1200,
+      "overlap_chars": 150
+    },
+    "tokenizer": null,
+    "document_count": 50,
+    "chunk_count": 3262,
+    "corpus_hash": "94b692c3789bf9cf172e3e8b9a5b00fec061e1fd756de0c66cfb12cf71216515",
+    "embedding_backend": {
+      "base_url": "http://127.0.0.1:18080/v1",
+      "dimension": 1024,
+      "encoding_format": "float",
+      "input_preprocessing": "original-text-v1;fp16;cls;l2-float32",
+      "model": "BAAI/bge-m3",
+      "provider": "local-bge-fp16",
+      "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+      "revision_pinned": true
+    },
+    "lexical_tokenizer": "nfkc-casefold-cjk-bigram-v1",
+    "retrieval_config": {
+      "candidate_k": 20,
+      "rrf_k": 60,
+      "normalize_embeddings": true,
+      "bm25_k1": 1.5,
+      "bm25_b": 0.75
+    },
+    "artifacts": {
+      "chunks.json": "94b692c3789bf9cf172e3e8b9a5b00fec061e1fd756de0c66cfb12cf71216515",
+      "lexical.json": "726ffa5530ec10c7ddf6b9d604d8d30a216ea94e5ba260ded3689772df446185",
+      "vectors.npy": "c760de54b7c39223f9c7b61f1695cf6c057ee6f1e3634eb17777efbbf74e6e09"
+    }
+  },
+  "event_chain_verified": true,
+  "items": [
+    {
+      "item_id": "SS01",
+      "category": "社会科学",
+      "doc_id": "d_a067b12208421a545448d08ec93064af19f7e5702dfa2ed41791bf1093c13ab5",
+      "sha256": "a067b12208421a545448d08ec93064af19f7e5702dfa2ed41791bf1093c13ab5",
+      "pages": 29,
+      "chunks": 107,
+      "pages_with_text": 29,
+      "pages_with_chunks": 29,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_a067b12208421a545448d08ec93064af19f7e5702dfa2ed41791bf1093c13ab5_p0001_0001",
+          "pdf_page": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_a067b12208421a545448d08ec93064af19f7e5702dfa2ed41791bf1093c13ab5_p0001_0001",
+          "pdf_page": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_a067b12208421a545448d08ec93064af19f7e5702dfa2ed41791bf1093c13ab5_p0001_0001",
+          "pdf_page": 1
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "SS02",
+      "category": "社会科学",
+      "doc_id": "d_770b53e35e8043fcaa4dd170bce420d4902dee280facaa5363bb48817a179f58",
+      "sha256": "770b53e35e8043fcaa4dd170bce420d4902dee280facaa5363bb48817a179f58",
+      "pages": 14,
+      "chunks": 38,
+      "pages_with_text": 14,
+      "pages_with_chunks": 14,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_770b53e35e8043fcaa4dd170bce420d4902dee280facaa5363bb48817a179f58_p0002_0001",
+          "pdf_page": 2
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_770b53e35e8043fcaa4dd170bce420d4902dee280facaa5363bb48817a179f58_p0002_0001",
+          "pdf_page": 2
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_770b53e35e8043fcaa4dd170bce420d4902dee280facaa5363bb48817a179f58_p0002_0001",
+          "pdf_page": 2
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "SS03",
+      "category": "社会科学",
+      "doc_id": "d_29ba7bac3df28009170eef8f7b6c006ed991fb011942214c0af22858ae7e5f84",
+      "sha256": "29ba7bac3df28009170eef8f7b6c006ed991fb011942214c0af22858ae7e5f84",
+      "pages": 45,
+      "chunks": 168,
+      "pages_with_text": 45,
+      "pages_with_chunks": 45,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_29ba7bac3df28009170eef8f7b6c006ed991fb011942214c0af22858ae7e5f84_p0012_0001",
+          "pdf_page": 12
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_29ba7bac3df28009170eef8f7b6c006ed991fb011942214c0af22858ae7e5f84_p0016_0001",
+          "pdf_page": 16
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_29ba7bac3df28009170eef8f7b6c006ed991fb011942214c0af22858ae7e5f84_p0016_0001",
+          "pdf_page": 16
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "SS04",
+      "category": "社会科学",
+      "doc_id": "d_25a759e477649c0c9d7a10109cba854e453fa7027181fd7cbf2612a70f3ae79f",
+      "sha256": "25a759e477649c0c9d7a10109cba854e453fa7027181fd7cbf2612a70f3ae79f",
+      "pages": 21,
+      "chunks": 56,
+      "pages_with_text": 21,
+      "pages_with_chunks": 21,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_25a759e477649c0c9d7a10109cba854e453fa7027181fd7cbf2612a70f3ae79f_p0009_0003",
+          "pdf_page": 9
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_25a759e477649c0c9d7a10109cba854e453fa7027181fd7cbf2612a70f3ae79f_p0001_0001",
+          "pdf_page": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_25a759e477649c0c9d7a10109cba854e453fa7027181fd7cbf2612a70f3ae79f_p0011_0001",
+          "pdf_page": 11
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "SS05",
+      "category": "社会科学",
+      "doc_id": "d_de7e14007cef3173941883aa00bad549f04ff1d6811b758788a0aae79d5b6d93",
+      "sha256": "de7e14007cef3173941883aa00bad549f04ff1d6811b758788a0aae79d5b6d93",
+      "pages": 30,
+      "chunks": 77,
+      "pages_with_text": 30,
+      "pages_with_chunks": 30,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_de7e14007cef3173941883aa00bad549f04ff1d6811b758788a0aae79d5b6d93_p0013_0001",
+          "pdf_page": 13
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_de7e14007cef3173941883aa00bad549f04ff1d6811b758788a0aae79d5b6d93_p0001_0001",
+          "pdf_page": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_de7e14007cef3173941883aa00bad549f04ff1d6811b758788a0aae79d5b6d93_p0001_0001",
+          "pdf_page": 1
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "SS06",
+      "category": "社会科学",
+      "doc_id": "d_f4cea8a098f6ead6f125e0c82af2fce4891908b9fa12f4a9ec7d642bd9dca7f8",
+      "sha256": "f4cea8a098f6ead6f125e0c82af2fce4891908b9fa12f4a9ec7d642bd9dca7f8",
+      "pages": 21,
+      "chunks": 55,
+      "pages_with_text": 21,
+      "pages_with_chunks": 21,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_f4cea8a098f6ead6f125e0c82af2fce4891908b9fa12f4a9ec7d642bd9dca7f8_p0020_0001",
+          "pdf_page": 20
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_f4cea8a098f6ead6f125e0c82af2fce4891908b9fa12f4a9ec7d642bd9dca7f8_p0001_0001",
+          "pdf_page": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_f4cea8a098f6ead6f125e0c82af2fce4891908b9fa12f4a9ec7d642bd9dca7f8_p0020_0001",
+          "pdf_page": 20
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "SS07",
+      "category": "社会科学",
+      "doc_id": "d_fa9e32cc3eb85c4c2745a9dce0673f2fe1d9bc2264c96c61c0b7957d5fce53de",
+      "sha256": "fa9e32cc3eb85c4c2745a9dce0673f2fe1d9bc2264c96c61c0b7957d5fce53de",
+      "pages": 22,
+      "chunks": 63,
+      "pages_with_text": 22,
+      "pages_with_chunks": 22,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_fa9e32cc3eb85c4c2745a9dce0673f2fe1d9bc2264c96c61c0b7957d5fce53de_p0002_0001",
+          "pdf_page": 2
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_fa9e32cc3eb85c4c2745a9dce0673f2fe1d9bc2264c96c61c0b7957d5fce53de_p0003_0001",
+          "pdf_page": 3
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_fa9e32cc3eb85c4c2745a9dce0673f2fe1d9bc2264c96c61c0b7957d5fce53de_p0002_0001",
+          "pdf_page": 2
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "SS08",
+      "category": "社会科学",
+      "doc_id": "d_b618a02846c134d37eeb4ca5c05520f0bb281c401cd6b0707964a17f7d98c84f",
+      "sha256": "b618a02846c134d37eeb4ca5c05520f0bb281c401cd6b0707964a17f7d98c84f",
+      "pages": 31,
+      "chunks": 91,
+      "pages_with_text": 31,
+      "pages_with_chunks": 31,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_b618a02846c134d37eeb4ca5c05520f0bb281c401cd6b0707964a17f7d98c84f_p0002_0001",
+          "pdf_page": 2
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_b618a02846c134d37eeb4ca5c05520f0bb281c401cd6b0707964a17f7d98c84f_p0002_0001",
+          "pdf_page": 2
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_b618a02846c134d37eeb4ca5c05520f0bb281c401cd6b0707964a17f7d98c84f_p0002_0001",
+          "pdf_page": 2
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "SS09",
+      "category": "社会科学",
+      "doc_id": "d_e45bf45563f24ebd14bc1b9e57b61f293cd9146660871d4297fd450de593c2e8",
+      "sha256": "e45bf45563f24ebd14bc1b9e57b61f293cd9146660871d4297fd450de593c2e8",
+      "pages": 27,
+      "chunks": 76,
+      "pages_with_text": 27,
+      "pages_with_chunks": 27,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_e45bf45563f24ebd14bc1b9e57b61f293cd9146660871d4297fd450de593c2e8_p0007_0002",
+          "pdf_page": 7
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_e45bf45563f24ebd14bc1b9e57b61f293cd9146660871d4297fd450de593c2e8_p0007_0003",
+          "pdf_page": 7
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_e45bf45563f24ebd14bc1b9e57b61f293cd9146660871d4297fd450de593c2e8_p0016_0001",
+          "pdf_page": 16
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "SS10",
+      "category": "社会科学",
+      "doc_id": "d_a0dcfce4aab13d67bcdbe93fb9a81302c519609461807aa257fb45abff1b99ca",
+      "sha256": "a0dcfce4aab13d67bcdbe93fb9a81302c519609461807aa257fb45abff1b99ca",
+      "pages": 15,
+      "chunks": 81,
+      "pages_with_text": 15,
+      "pages_with_chunks": 15,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_a0dcfce4aab13d67bcdbe93fb9a81302c519609461807aa257fb45abff1b99ca_p0002_0005",
+          "pdf_page": 2
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_a0dcfce4aab13d67bcdbe93fb9a81302c519609461807aa257fb45abff1b99ca_p0001_0001",
+          "pdf_page": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_a0dcfce4aab13d67bcdbe93fb9a81302c519609461807aa257fb45abff1b99ca_p0002_0001",
+          "pdf_page": 2
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "SS11",
+      "category": "社会科学",
+      "doc_id": "d_83b462acc625a49ff41c1d5bad2e40777911b7af8e71aeccabd8f4872bc47e69",
+      "sha256": "83b462acc625a49ff41c1d5bad2e40777911b7af8e71aeccabd8f4872bc47e69",
+      "pages": 18,
+      "chunks": 63,
+      "pages_with_text": 18,
+      "pages_with_chunks": 18,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_83b462acc625a49ff41c1d5bad2e40777911b7af8e71aeccabd8f4872bc47e69_p0011_0003",
+          "pdf_page": 11
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_83b462acc625a49ff41c1d5bad2e40777911b7af8e71aeccabd8f4872bc47e69_p0001_0001",
+          "pdf_page": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_83b462acc625a49ff41c1d5bad2e40777911b7af8e71aeccabd8f4872bc47e69_p0001_0001",
+          "pdf_page": 1
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "SS12",
+      "category": "社会科学",
+      "doc_id": "d_95fc1cb4a84cf1c563b8085c0c8adca9f44c0162ae343368c688c1f5b64e5209",
+      "sha256": "95fc1cb4a84cf1c563b8085c0c8adca9f44c0162ae343368c688c1f5b64e5209",
+      "pages": 8,
+      "chunks": 67,
+      "pages_with_text": 8,
+      "pages_with_chunks": 8,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_95fc1cb4a84cf1c563b8085c0c8adca9f44c0162ae343368c688c1f5b64e5209_p0005_0001",
+          "pdf_page": 5
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_95fc1cb4a84cf1c563b8085c0c8adca9f44c0162ae343368c688c1f5b64e5209_p0005_0004",
+          "pdf_page": 5
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_95fc1cb4a84cf1c563b8085c0c8adca9f44c0162ae343368c688c1f5b64e5209_p0005_0001",
+          "pdf_page": 5
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "SS13",
+      "category": "社会科学",
+      "doc_id": "d_3c3ee049ab5d7336b14e06bcb2770d980521c94bac9e5c7d3407ac8c14665df4",
+      "sha256": "3c3ee049ab5d7336b14e06bcb2770d980521c94bac9e5c7d3407ac8c14665df4",
+      "pages": 9,
+      "chunks": 43,
+      "pages_with_text": 9,
+      "pages_with_chunks": 9,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_3c3ee049ab5d7336b14e06bcb2770d980521c94bac9e5c7d3407ac8c14665df4_p0001_0005",
+          "pdf_page": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_3c3ee049ab5d7336b14e06bcb2770d980521c94bac9e5c7d3407ac8c14665df4_p0001_0005",
+          "pdf_page": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_3c3ee049ab5d7336b14e06bcb2770d980521c94bac9e5c7d3407ac8c14665df4_p0001_0005",
+          "pdf_page": 1
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "SS14",
+      "category": "社会科学",
+      "doc_id": "d_d0b830982dacd3a8bdaf85583297c8f2adf3e9c25cff0e14169461be53fb1bf3",
+      "sha256": "d0b830982dacd3a8bdaf85583297c8f2adf3e9c25cff0e14169461be53fb1bf3",
+      "pages": 25,
+      "chunks": 2,
+      "pages_with_text": 2,
+      "pages_with_chunks": 2,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_d0b830982dacd3a8bdaf85583297c8f2adf3e9c25cff0e14169461be53fb1bf3_p0002_0001",
+          "pdf_page": 2
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_d0b830982dacd3a8bdaf85583297c8f2adf3e9c25cff0e14169461be53fb1bf3_p0001_0001",
+          "pdf_page": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_d0b830982dacd3a8bdaf85583297c8f2adf3e9c25cff0e14169461be53fb1bf3_p0001_0001",
+          "pdf_page": 1
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "SS15",
+      "category": "社会科学",
+      "doc_id": "d_c0b38a214463d00781f21783de700fcd647675a04d6481ab87d583f91fe31810",
+      "sha256": "c0b38a214463d00781f21783de700fcd647675a04d6481ab87d583f91fe31810",
+      "pages": 6,
+      "chunks": 52,
+      "pages_with_text": 6,
+      "pages_with_chunks": 6,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_c0b38a214463d00781f21783de700fcd647675a04d6481ab87d583f91fe31810_p0005_0009",
+          "pdf_page": 5
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_c0b38a214463d00781f21783de700fcd647675a04d6481ab87d583f91fe31810_p0001_0005",
+          "pdf_page": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_c0b38a214463d00781f21783de700fcd647675a04d6481ab87d583f91fe31810_p0005_0009",
+          "pdf_page": 5
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "SS16",
+      "category": "社会科学",
+      "doc_id": "d_16a36994ac7047aa9dfbc196ae9c0453c4c947a72c71b70684b24e6ab15a70de",
+      "sha256": "16a36994ac7047aa9dfbc196ae9c0453c4c947a72c71b70684b24e6ab15a70de",
+      "pages": 9,
+      "chunks": 77,
+      "pages_with_text": 9,
+      "pages_with_chunks": 9,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_16a36994ac7047aa9dfbc196ae9c0453c4c947a72c71b70684b24e6ab15a70de_p0002_0001",
+          "pdf_page": 2
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_16a36994ac7047aa9dfbc196ae9c0453c4c947a72c71b70684b24e6ab15a70de_p0002_0001",
+          "pdf_page": 2
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_16a36994ac7047aa9dfbc196ae9c0453c4c947a72c71b70684b24e6ab15a70de_p0002_0001",
+          "pdf_page": 2
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "SS17",
+      "category": "社会科学",
+      "doc_id": "d_4b24a13a22b5ba1b29f04f7b6e90d5b01c17bb55dd9f347d5e49bd6935f8645a",
+      "sha256": "4b24a13a22b5ba1b29f04f7b6e90d5b01c17bb55dd9f347d5e49bd6935f8645a",
+      "pages": 8,
+      "chunks": 34,
+      "pages_with_text": 8,
+      "pages_with_chunks": 8,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_4b24a13a22b5ba1b29f04f7b6e90d5b01c17bb55dd9f347d5e49bd6935f8645a_p0007_0005",
+          "pdf_page": 7
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_4b24a13a22b5ba1b29f04f7b6e90d5b01c17bb55dd9f347d5e49bd6935f8645a_p0001_0001",
+          "pdf_page": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_4b24a13a22b5ba1b29f04f7b6e90d5b01c17bb55dd9f347d5e49bd6935f8645a_p0001_0001",
+          "pdf_page": 1
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "SS18",
+      "category": "社会科学",
+      "doc_id": "d_98f36f74ec226569b5dd9923f26dd1cd3ab4ec34233693d23c7afe8dd884b62e",
+      "sha256": "98f36f74ec226569b5dd9923f26dd1cd3ab4ec34233693d23c7afe8dd884b62e",
+      "pages": 7,
+      "chunks": 40,
+      "pages_with_text": 7,
+      "pages_with_chunks": 7,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_98f36f74ec226569b5dd9923f26dd1cd3ab4ec34233693d23c7afe8dd884b62e_p0006_0007",
+          "pdf_page": 6
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_98f36f74ec226569b5dd9923f26dd1cd3ab4ec34233693d23c7afe8dd884b62e_p0001_0001",
+          "pdf_page": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_98f36f74ec226569b5dd9923f26dd1cd3ab4ec34233693d23c7afe8dd884b62e_p0001_0001",
+          "pdf_page": 1
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "SS19",
+      "category": "社会科学",
+      "doc_id": "d_f7c9a70e46eb1e585a82226c3ad90215a94973f8fb307d6c042b51566baf0550",
+      "sha256": "f7c9a70e46eb1e585a82226c3ad90215a94973f8fb307d6c042b51566baf0550",
+      "pages": 22,
+      "chunks": 133,
+      "pages_with_text": 22,
+      "pages_with_chunks": 22,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_f7c9a70e46eb1e585a82226c3ad90215a94973f8fb307d6c042b51566baf0550_p0019_0008",
+          "pdf_page": 19
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_f7c9a70e46eb1e585a82226c3ad90215a94973f8fb307d6c042b51566baf0550_p0001_0001",
+          "pdf_page": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_f7c9a70e46eb1e585a82226c3ad90215a94973f8fb307d6c042b51566baf0550_p0001_0001",
+          "pdf_page": 1
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "SS20",
+      "category": "社会科学",
+      "doc_id": "d_b47a470393348a951bbd861901c84fb17f21a85aa00243c6599e75d86b69b70f",
+      "sha256": "b47a470393348a951bbd861901c84fb17f21a85aa00243c6599e75d86b69b70f",
+      "pages": 22,
+      "chunks": 107,
+      "pages_with_text": 22,
+      "pages_with_chunks": 22,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_b47a470393348a951bbd861901c84fb17f21a85aa00243c6599e75d86b69b70f_p0014_0001",
+          "pdf_page": 14
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_b47a470393348a951bbd861901c84fb17f21a85aa00243c6599e75d86b69b70f_p0022_0001",
+          "pdf_page": 22
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_b47a470393348a951bbd861901c84fb17f21a85aa00243c6599e75d86b69b70f_p0014_0001",
+          "pdf_page": 14
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "SS21",
+      "category": "社会科学",
+      "doc_id": "d_e7dcb442ae83a10574f26d52b05c0a09ce23b3ec837ae7ef935b54cc383212a2",
+      "sha256": "e7dcb442ae83a10574f26d52b05c0a09ce23b3ec837ae7ef935b54cc383212a2",
+      "pages": 12,
+      "chunks": 50,
+      "pages_with_text": 12,
+      "pages_with_chunks": 12,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_e7dcb442ae83a10574f26d52b05c0a09ce23b3ec837ae7ef935b54cc383212a2_p0006_0004",
+          "pdf_page": 6
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_e7dcb442ae83a10574f26d52b05c0a09ce23b3ec837ae7ef935b54cc383212a2_p0003_0001",
+          "pdf_page": 3
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_e7dcb442ae83a10574f26d52b05c0a09ce23b3ec837ae7ef935b54cc383212a2_p0003_0001",
+          "pdf_page": 3
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "SS22",
+      "category": "社会科学",
+      "doc_id": "d_e14779081a999b49dfdde8fe7078fcef65a282d4e6374a037269083d063a1ec3",
+      "sha256": "e14779081a999b49dfdde8fe7078fcef65a282d4e6374a037269083d063a1ec3",
+      "pages": 11,
+      "chunks": 70,
+      "pages_with_text": 11,
+      "pages_with_chunks": 11,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_e14779081a999b49dfdde8fe7078fcef65a282d4e6374a037269083d063a1ec3_p0001_0001",
+          "pdf_page": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_e14779081a999b49dfdde8fe7078fcef65a282d4e6374a037269083d063a1ec3_p0001_0001",
+          "pdf_page": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_e14779081a999b49dfdde8fe7078fcef65a282d4e6374a037269083d063a1ec3_p0001_0001",
+          "pdf_page": 1
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "SS23",
+      "category": "社会科学",
+      "doc_id": "d_18d802e069a081d192a5ca7d57135e4433c372fd1ed891681e4e68d0689b0e37",
+      "sha256": "18d802e069a081d192a5ca7d57135e4433c372fd1ed891681e4e68d0689b0e37",
+      "pages": 15,
+      "chunks": 63,
+      "pages_with_text": 15,
+      "pages_with_chunks": 15,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_18d802e069a081d192a5ca7d57135e4433c372fd1ed891681e4e68d0689b0e37_p0002_0005",
+          "pdf_page": 2
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_18d802e069a081d192a5ca7d57135e4433c372fd1ed891681e4e68d0689b0e37_p0015_0001",
+          "pdf_page": 15
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_18d802e069a081d192a5ca7d57135e4433c372fd1ed891681e4e68d0689b0e37_p0015_0001",
+          "pdf_page": 15
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "SS24",
+      "category": "社会科学",
+      "doc_id": "d_e78b964422f38b33b43ea55b6a480ce4254701b25ab4e469e4fec651b1ad29b8",
+      "sha256": "e78b964422f38b33b43ea55b6a480ce4254701b25ab4e469e4fec651b1ad29b8",
+      "pages": 12,
+      "chunks": 36,
+      "pages_with_text": 12,
+      "pages_with_chunks": 12,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_e78b964422f38b33b43ea55b6a480ce4254701b25ab4e469e4fec651b1ad29b8_p0009_0003",
+          "pdf_page": 9
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_e78b964422f38b33b43ea55b6a480ce4254701b25ab4e469e4fec651b1ad29b8_p0001_0001",
+          "pdf_page": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_e78b964422f38b33b43ea55b6a480ce4254701b25ab4e469e4fec651b1ad29b8_p0009_0003",
+          "pdf_page": 9
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "SS25",
+      "category": "社会科学",
+      "doc_id": "d_17190882a4d6dc069d2fb62aa27e2c9240045dfdf65e377fff383036c9c129bf",
+      "sha256": "17190882a4d6dc069d2fb62aa27e2c9240045dfdf65e377fff383036c9c129bf",
+      "pages": 9,
+      "chunks": 33,
+      "pages_with_text": 9,
+      "pages_with_chunks": 9,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_17190882a4d6dc069d2fb62aa27e2c9240045dfdf65e377fff383036c9c129bf_p0003_0001",
+          "pdf_page": 3
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_17190882a4d6dc069d2fb62aa27e2c9240045dfdf65e377fff383036c9c129bf_p0003_0001",
+          "pdf_page": 3
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_17190882a4d6dc069d2fb62aa27e2c9240045dfdf65e377fff383036c9c129bf_p0003_0001",
+          "pdf_page": 3
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "HU01",
+      "category": "人文",
+      "doc_id": "d_9eb820f5c942abbfa68d6fc6be43eb88720d62d0779854952c38949060b736a6",
+      "sha256": "9eb820f5c942abbfa68d6fc6be43eb88720d62d0779854952c38949060b736a6",
+      "pages": 3,
+      "chunks": 7,
+      "pages_with_text": 3,
+      "pages_with_chunks": 3,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_9eb820f5c942abbfa68d6fc6be43eb88720d62d0779854952c38949060b736a6_p0001_0001",
+          "pdf_page": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_9eb820f5c942abbfa68d6fc6be43eb88720d62d0779854952c38949060b736a6_p0001_0001",
+          "pdf_page": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_9eb820f5c942abbfa68d6fc6be43eb88720d62d0779854952c38949060b736a6_p0001_0001",
+          "pdf_page": 1
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "HU02",
+      "category": "人文",
+      "doc_id": "d_1217bc72fc5a2ffbbb95c852319ae29c8f674b288c27725c74db48ef161f2ee4",
+      "sha256": "1217bc72fc5a2ffbbb95c852319ae29c8f674b288c27725c74db48ef161f2ee4",
+      "pages": 17,
+      "chunks": 47,
+      "pages_with_text": 17,
+      "pages_with_chunks": 17,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_1217bc72fc5a2ffbbb95c852319ae29c8f674b288c27725c74db48ef161f2ee4_p0009_0003",
+          "pdf_page": 9
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_1217bc72fc5a2ffbbb95c852319ae29c8f674b288c27725c74db48ef161f2ee4_p0006_0001",
+          "pdf_page": 6
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_1217bc72fc5a2ffbbb95c852319ae29c8f674b288c27725c74db48ef161f2ee4_p0006_0001",
+          "pdf_page": 6
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "HU03",
+      "category": "人文",
+      "doc_id": "d_d85e51aac35ae7985daf2c0a272fec36463a5c15a3d94c530d164a6c0f758d3a",
+      "sha256": "d85e51aac35ae7985daf2c0a272fec36463a5c15a3d94c530d164a6c0f758d3a",
+      "pages": 17,
+      "chunks": 81,
+      "pages_with_text": 17,
+      "pages_with_chunks": 17,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_d85e51aac35ae7985daf2c0a272fec36463a5c15a3d94c530d164a6c0f758d3a_p0001_0002",
+          "pdf_page": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_d85e51aac35ae7985daf2c0a272fec36463a5c15a3d94c530d164a6c0f758d3a_p0001_0001",
+          "pdf_page": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_d85e51aac35ae7985daf2c0a272fec36463a5c15a3d94c530d164a6c0f758d3a_p0001_0001",
+          "pdf_page": 1
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "HU04",
+      "category": "人文",
+      "doc_id": "d_02b2c4e61fa10c94232031d5a1b60be0319f3b5d7c0b8a719683855ad6d1e205",
+      "sha256": "02b2c4e61fa10c94232031d5a1b60be0319f3b5d7c0b8a719683855ad6d1e205",
+      "pages": 25,
+      "chunks": 88,
+      "pages_with_text": 25,
+      "pages_with_chunks": 25,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_02b2c4e61fa10c94232031d5a1b60be0319f3b5d7c0b8a719683855ad6d1e205_p0002_0001",
+          "pdf_page": 2
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_02b2c4e61fa10c94232031d5a1b60be0319f3b5d7c0b8a719683855ad6d1e205_p0002_0001",
+          "pdf_page": 2
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_02b2c4e61fa10c94232031d5a1b60be0319f3b5d7c0b8a719683855ad6d1e205_p0002_0001",
+          "pdf_page": 2
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "HU05",
+      "category": "人文",
+      "doc_id": "d_2e2bc0d66c93f830ca3c8a33c08a70095a2148da04f7ca4da64bb316ac6a5909",
+      "sha256": "2e2bc0d66c93f830ca3c8a33c08a70095a2148da04f7ca4da64bb316ac6a5909",
+      "pages": 12,
+      "chunks": 35,
+      "pages_with_text": 12,
+      "pages_with_chunks": 12,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_2e2bc0d66c93f830ca3c8a33c08a70095a2148da04f7ca4da64bb316ac6a5909_p0006_0003",
+          "pdf_page": 6
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_2e2bc0d66c93f830ca3c8a33c08a70095a2148da04f7ca4da64bb316ac6a5909_p0004_0001",
+          "pdf_page": 4
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_2e2bc0d66c93f830ca3c8a33c08a70095a2148da04f7ca4da64bb316ac6a5909_p0004_0001",
+          "pdf_page": 4
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "HU06",
+      "category": "人文",
+      "doc_id": "d_7dc707e45cb48cf2bf4e9af57539403ffd07511d4ed15a0dcf2a3e0c6d9d4395",
+      "sha256": "7dc707e45cb48cf2bf4e9af57539403ffd07511d4ed15a0dcf2a3e0c6d9d4395",
+      "pages": 32,
+      "chunks": 92,
+      "pages_with_text": 32,
+      "pages_with_chunks": 32,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_7dc707e45cb48cf2bf4e9af57539403ffd07511d4ed15a0dcf2a3e0c6d9d4395_p0026_0003",
+          "pdf_page": 26
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_7dc707e45cb48cf2bf4e9af57539403ffd07511d4ed15a0dcf2a3e0c6d9d4395_p0001_0001",
+          "pdf_page": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_7dc707e45cb48cf2bf4e9af57539403ffd07511d4ed15a0dcf2a3e0c6d9d4395_p0002_0001",
+          "pdf_page": 2
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "HU07",
+      "category": "人文",
+      "doc_id": "d_9b3975b5f7aeb38cb758a9fec97a3f9f3d861c56eef2277e4c3d4b112da421a4",
+      "sha256": "9b3975b5f7aeb38cb758a9fec97a3f9f3d861c56eef2277e4c3d4b112da421a4",
+      "pages": 28,
+      "chunks": 89,
+      "pages_with_text": 28,
+      "pages_with_chunks": 28,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_9b3975b5f7aeb38cb758a9fec97a3f9f3d861c56eef2277e4c3d4b112da421a4_p0017_0001",
+          "pdf_page": 17
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_9b3975b5f7aeb38cb758a9fec97a3f9f3d861c56eef2277e4c3d4b112da421a4_p0009_0001",
+          "pdf_page": 9
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_9b3975b5f7aeb38cb758a9fec97a3f9f3d861c56eef2277e4c3d4b112da421a4_p0009_0001",
+          "pdf_page": 9
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "HU08",
+      "category": "人文",
+      "doc_id": "d_7872906c3e225ab15a16bf2d4cd64d85b5b2767113d2c451af8cd7fd21b2c36a",
+      "sha256": "7872906c3e225ab15a16bf2d4cd64d85b5b2767113d2c451af8cd7fd21b2c36a",
+      "pages": 16,
+      "chunks": 66,
+      "pages_with_text": 16,
+      "pages_with_chunks": 16,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_7872906c3e225ab15a16bf2d4cd64d85b5b2767113d2c451af8cd7fd21b2c36a_p0005_0005",
+          "pdf_page": 5
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": false,
+          "rank": null
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 3,
+          "chunk_id": "c_7872906c3e225ab15a16bf2d4cd64d85b5b2767113d2c451af8cd7fd21b2c36a_p0005_0005",
+          "pdf_page": 5
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "HU09",
+      "category": "人文",
+      "doc_id": "d_1a468da1fc2a64cb7f197ff4a826b53dd7741660beae254a05f249b6c84c3254",
+      "sha256": "1a468da1fc2a64cb7f197ff4a826b53dd7741660beae254a05f249b6c84c3254",
+      "pages": 7,
+      "chunks": 39,
+      "pages_with_text": 7,
+      "pages_with_chunks": 7,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_1a468da1fc2a64cb7f197ff4a826b53dd7741660beae254a05f249b6c84c3254_p0001_0001",
+          "pdf_page": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_1a468da1fc2a64cb7f197ff4a826b53dd7741660beae254a05f249b6c84c3254_p0001_0001",
+          "pdf_page": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_1a468da1fc2a64cb7f197ff4a826b53dd7741660beae254a05f249b6c84c3254_p0001_0001",
+          "pdf_page": 1
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "HU10",
+      "category": "人文",
+      "doc_id": "d_5ca70a6d9fdc37a22d0e0aa97a6318e39684257d3e07cd44c5c72dafa610c712",
+      "sha256": "5ca70a6d9fdc37a22d0e0aa97a6318e39684257d3e07cd44c5c72dafa610c712",
+      "pages": 17,
+      "chunks": 64,
+      "pages_with_text": 17,
+      "pages_with_chunks": 17,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_5ca70a6d9fdc37a22d0e0aa97a6318e39684257d3e07cd44c5c72dafa610c712_p0016_0002",
+          "pdf_page": 16
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_5ca70a6d9fdc37a22d0e0aa97a6318e39684257d3e07cd44c5c72dafa610c712_p0001_0001",
+          "pdf_page": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_5ca70a6d9fdc37a22d0e0aa97a6318e39684257d3e07cd44c5c72dafa610c712_p0009_0002",
+          "pdf_page": 9
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "HU11",
+      "category": "人文",
+      "doc_id": "d_ee8c6c83448890881931f6e926fbcd65f57a06982610eb549039b4fd3084b255",
+      "sha256": "ee8c6c83448890881931f6e926fbcd65f57a06982610eb549039b4fd3084b255",
+      "pages": 6,
+      "chunks": 20,
+      "pages_with_text": 6,
+      "pages_with_chunks": 6,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_ee8c6c83448890881931f6e926fbcd65f57a06982610eb549039b4fd3084b255_p0001_0002",
+          "pdf_page": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": false,
+          "rank": null
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 2,
+          "chunk_id": "c_ee8c6c83448890881931f6e926fbcd65f57a06982610eb549039b4fd3084b255_p0001_0002",
+          "pdf_page": 1
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "HU12",
+      "category": "人文",
+      "doc_id": "d_6547515f0880f0f103d7b83c0052fd98fb0987973f705df6b3c11cc98a32950a",
+      "sha256": "6547515f0880f0f103d7b83c0052fd98fb0987973f705df6b3c11cc98a32950a",
+      "pages": 6,
+      "chunks": 28,
+      "pages_with_text": 6,
+      "pages_with_chunks": 6,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_6547515f0880f0f103d7b83c0052fd98fb0987973f705df6b3c11cc98a32950a_p0002_0003",
+          "pdf_page": 2
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_6547515f0880f0f103d7b83c0052fd98fb0987973f705df6b3c11cc98a32950a_p0005_0001",
+          "pdf_page": 5
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_6547515f0880f0f103d7b83c0052fd98fb0987973f705df6b3c11cc98a32950a_p0003_0001",
+          "pdf_page": 3
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "HU13",
+      "category": "人文",
+      "doc_id": "d_1a91e33d3c2cf64e91a8af2381bfe7fb3d1eefca6bc5996519d5852432a9c136",
+      "sha256": "1a91e33d3c2cf64e91a8af2381bfe7fb3d1eefca6bc5996519d5852432a9c136",
+      "pages": 35,
+      "chunks": 95,
+      "pages_with_text": 34,
+      "pages_with_chunks": 34,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_1a91e33d3c2cf64e91a8af2381bfe7fb3d1eefca6bc5996519d5852432a9c136_p0014_0001",
+          "pdf_page": 14
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_1a91e33d3c2cf64e91a8af2381bfe7fb3d1eefca6bc5996519d5852432a9c136_p0001_0001",
+          "pdf_page": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_1a91e33d3c2cf64e91a8af2381bfe7fb3d1eefca6bc5996519d5852432a9c136_p0008_0001",
+          "pdf_page": 8
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "HU14",
+      "category": "人文",
+      "doc_id": "d_28795793f06084d0f159e720011cd25e938bb375d185bb478155279a473d86b3",
+      "sha256": "28795793f06084d0f159e720011cd25e938bb375d185bb478155279a473d86b3",
+      "pages": 15,
+      "chunks": 51,
+      "pages_with_text": 15,
+      "pages_with_chunks": 15,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_28795793f06084d0f159e720011cd25e938bb375d185bb478155279a473d86b3_p0001_0001",
+          "pdf_page": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 2,
+          "chunk_id": "c_28795793f06084d0f159e720011cd25e938bb375d185bb478155279a473d86b3_p0001_0001",
+          "pdf_page": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_28795793f06084d0f159e720011cd25e938bb375d185bb478155279a473d86b3_p0001_0001",
+          "pdf_page": 1
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "HU15",
+      "category": "人文",
+      "doc_id": "d_be2b05758ad2299b097b17af0a506d20fcfd8309aa20175b39d61f481a5d88c1",
+      "sha256": "be2b05758ad2299b097b17af0a506d20fcfd8309aa20175b39d61f481a5d88c1",
+      "pages": 29,
+      "chunks": 94,
+      "pages_with_text": 29,
+      "pages_with_chunks": 29,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_be2b05758ad2299b097b17af0a506d20fcfd8309aa20175b39d61f481a5d88c1_p0001_0001",
+          "pdf_page": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_be2b05758ad2299b097b17af0a506d20fcfd8309aa20175b39d61f481a5d88c1_p0001_0001",
+          "pdf_page": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_be2b05758ad2299b097b17af0a506d20fcfd8309aa20175b39d61f481a5d88c1_p0001_0001",
+          "pdf_page": 1
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "HU16",
+      "category": "人文",
+      "doc_id": "d_07152dc9a5e458389bfe7aed56eb453280dcef8efcb4db5f9bf6ad542df6edb8",
+      "sha256": "07152dc9a5e458389bfe7aed56eb453280dcef8efcb4db5f9bf6ad542df6edb8",
+      "pages": 8,
+      "chunks": 22,
+      "pages_with_text": 8,
+      "pages_with_chunks": 8,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_07152dc9a5e458389bfe7aed56eb453280dcef8efcb4db5f9bf6ad542df6edb8_p0002_0001",
+          "pdf_page": 2
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_07152dc9a5e458389bfe7aed56eb453280dcef8efcb4db5f9bf6ad542df6edb8_p0001_0001",
+          "pdf_page": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_07152dc9a5e458389bfe7aed56eb453280dcef8efcb4db5f9bf6ad542df6edb8_p0001_0001",
+          "pdf_page": 1
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "HU17",
+      "category": "人文",
+      "doc_id": "d_a35ec14b257ebf55843910a1571ddcea0f30ae45397edbd6eff5221afbe2f31a",
+      "sha256": "a35ec14b257ebf55843910a1571ddcea0f30ae45397edbd6eff5221afbe2f31a",
+      "pages": 23,
+      "chunks": 87,
+      "pages_with_text": 23,
+      "pages_with_chunks": 23,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_a35ec14b257ebf55843910a1571ddcea0f30ae45397edbd6eff5221afbe2f31a_p0016_0001",
+          "pdf_page": 16
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_a35ec14b257ebf55843910a1571ddcea0f30ae45397edbd6eff5221afbe2f31a_p0020_0001",
+          "pdf_page": 20
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_a35ec14b257ebf55843910a1571ddcea0f30ae45397edbd6eff5221afbe2f31a_p0016_0001",
+          "pdf_page": 16
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "HU18",
+      "category": "人文",
+      "doc_id": "d_c3b7756cd1b754fd5669b6bd2863a7cd40bfdf9d3db7f94ff25128996c7227ff",
+      "sha256": "c3b7756cd1b754fd5669b6bd2863a7cd40bfdf9d3db7f94ff25128996c7227ff",
+      "pages": 24,
+      "chunks": 84,
+      "pages_with_text": 24,
+      "pages_with_chunks": 24,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_c3b7756cd1b754fd5669b6bd2863a7cd40bfdf9d3db7f94ff25128996c7227ff_p0008_0004",
+          "pdf_page": 8
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_c3b7756cd1b754fd5669b6bd2863a7cd40bfdf9d3db7f94ff25128996c7227ff_p0001_0001",
+          "pdf_page": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_c3b7756cd1b754fd5669b6bd2863a7cd40bfdf9d3db7f94ff25128996c7227ff_p0001_0001",
+          "pdf_page": 1
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "HU19",
+      "category": "人文",
+      "doc_id": "d_85891749cd948bdeadb145cbe49f2677834b387c917e11ca80a9adb17bc104e5",
+      "sha256": "85891749cd948bdeadb145cbe49f2677834b387c917e11ca80a9adb17bc104e5",
+      "pages": 27,
+      "chunks": 99,
+      "pages_with_text": 27,
+      "pages_with_chunks": 27,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_85891749cd948bdeadb145cbe49f2677834b387c917e11ca80a9adb17bc104e5_p0010_0001",
+          "pdf_page": 10
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_85891749cd948bdeadb145cbe49f2677834b387c917e11ca80a9adb17bc104e5_p0002_0001",
+          "pdf_page": 2
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_85891749cd948bdeadb145cbe49f2677834b387c917e11ca80a9adb17bc104e5_p0024_0001",
+          "pdf_page": 24
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "HU20",
+      "category": "人文",
+      "doc_id": "d_c310cdbe1fecbf7146ddb8a54b87df462988644eed61ce3cda545bbddd5f3704",
+      "sha256": "c310cdbe1fecbf7146ddb8a54b87df462988644eed61ce3cda545bbddd5f3704",
+      "pages": 11,
+      "chunks": 61,
+      "pages_with_text": 11,
+      "pages_with_chunks": 11,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_c310cdbe1fecbf7146ddb8a54b87df462988644eed61ce3cda545bbddd5f3704_p0001_0005",
+          "pdf_page": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_c310cdbe1fecbf7146ddb8a54b87df462988644eed61ce3cda545bbddd5f3704_p0005_0006",
+          "pdf_page": 5
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_c310cdbe1fecbf7146ddb8a54b87df462988644eed61ce3cda545bbddd5f3704_p0005_0006",
+          "pdf_page": 5
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "HU21",
+      "category": "人文",
+      "doc_id": "d_0085c704946dc1e35e736b83c6cf55d48fd7209b6574535c5886404e223cd090",
+      "sha256": "0085c704946dc1e35e736b83c6cf55d48fd7209b6574535c5886404e223cd090",
+      "pages": 22,
+      "chunks": 64,
+      "pages_with_text": 22,
+      "pages_with_chunks": 22,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_0085c704946dc1e35e736b83c6cf55d48fd7209b6574535c5886404e223cd090_p0001_0001",
+          "pdf_page": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_0085c704946dc1e35e736b83c6cf55d48fd7209b6574535c5886404e223cd090_p0001_0001",
+          "pdf_page": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_0085c704946dc1e35e736b83c6cf55d48fd7209b6574535c5886404e223cd090_p0001_0001",
+          "pdf_page": 1
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "HU22",
+      "category": "人文",
+      "doc_id": "d_6a7a9b63805126ab22fcfe50f23b84e6b7d5d2fcda1ec4d08eb0127887b86a9d",
+      "sha256": "6a7a9b63805126ab22fcfe50f23b84e6b7d5d2fcda1ec4d08eb0127887b86a9d",
+      "pages": 15,
+      "chunks": 42,
+      "pages_with_text": 15,
+      "pages_with_chunks": 15,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_6a7a9b63805126ab22fcfe50f23b84e6b7d5d2fcda1ec4d08eb0127887b86a9d_p0001_0001",
+          "pdf_page": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_6a7a9b63805126ab22fcfe50f23b84e6b7d5d2fcda1ec4d08eb0127887b86a9d_p0001_0001",
+          "pdf_page": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_6a7a9b63805126ab22fcfe50f23b84e6b7d5d2fcda1ec4d08eb0127887b86a9d_p0001_0001",
+          "pdf_page": 1
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "HU23",
+      "category": "人文",
+      "doc_id": "d_4a2ef0aaf355711963a61313fa6df400d084ddc23f291c42a902ee954db82306",
+      "sha256": "4a2ef0aaf355711963a61313fa6df400d084ddc23f291c42a902ee954db82306",
+      "pages": 13,
+      "chunks": 59,
+      "pages_with_text": 13,
+      "pages_with_chunks": 13,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_4a2ef0aaf355711963a61313fa6df400d084ddc23f291c42a902ee954db82306_p0001_0001",
+          "pdf_page": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_4a2ef0aaf355711963a61313fa6df400d084ddc23f291c42a902ee954db82306_p0001_0001",
+          "pdf_page": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_4a2ef0aaf355711963a61313fa6df400d084ddc23f291c42a902ee954db82306_p0001_0001",
+          "pdf_page": 1
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "HU24",
+      "category": "人文",
+      "doc_id": "d_d149877b4245a53b757b8f81c54fb947c96a74cb58e2367ec2c63166a2fceedb",
+      "sha256": "d149877b4245a53b757b8f81c54fb947c96a74cb58e2367ec2c63166a2fceedb",
+      "pages": 16,
+      "chunks": 74,
+      "pages_with_text": 16,
+      "pages_with_chunks": 16,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_d149877b4245a53b757b8f81c54fb947c96a74cb58e2367ec2c63166a2fceedb_p0013_0001",
+          "pdf_page": 13
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_d149877b4245a53b757b8f81c54fb947c96a74cb58e2367ec2c63166a2fceedb_p0013_0001",
+          "pdf_page": 13
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_d149877b4245a53b757b8f81c54fb947c96a74cb58e2367ec2c63166a2fceedb_p0013_0001",
+          "pdf_page": 13
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    },
+    {
+      "item_id": "HU25",
+      "category": "人文",
+      "doc_id": "d_2df595721dc5502f02d3c657426610fb612731c8022b698ae5b1968a96b92996",
+      "sha256": "2df595721dc5502f02d3c657426610fb612731c8022b698ae5b1968a96b92996",
+      "pages": 20,
+      "chunks": 92,
+      "pages_with_text": 20,
+      "pages_with_chunks": 20,
+      "all_chunk_offsets_verified": true,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_2df595721dc5502f02d3c657426610fb612731c8022b698ae5b1968a96b92996_p0001_0001",
+          "pdf_page": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_2df595721dc5502f02d3c657426610fb612731c8022b698ae5b1968a96b92996_p0001_0001",
+          "pdf_page": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top_5": true,
+          "rank": 1,
+          "chunk_id": "c_2df595721dc5502f02d3c657426610fb612731c8022b698ae5b1968a96b92996_p0001_0001",
+          "pdf_page": 1
+        }
+      ],
+      "metadata_semantically_matches_reviewed_plan": true,
+      "topic_order_is_not_significant": true,
+      "author_order_checked_exactly": true,
+      "source_page_endpoint_verified": true
+    }
+  ],
+  "retrieval_failures": [
+    {
+      "item_id": "HU08",
+      "mode": "vector",
+      "found_in_top_5": false,
+      "rank": null
+    },
+    {
+      "item_id": "HU11",
+      "mode": "vector",
+      "found_in_top_5": false,
+      "rank": null
+    }
+  ],
+  "human_review": "pending",
+  "integrity_passed": true,
+  "evaluation_type": "accession integrity plus title-query smoke checks, not general retrieval accuracy",
+  "index_unchanged": true,
+  "after_manifest": {
+    "index_version": "idx_20261019T024947_292c353a8ff5",
+    "contract_version": "1.0",
+    "built_at": "2026-10-19T02:49:47.806771+00:00",
+    "embedding_model": "BAAI/bge-m3",
+    "embedding_revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "dimension": 1024,
+    "normalized": true,
+    "chunking_config": {
+      "count_mode": "character",
+      "tokenizer_name": null,
+      "tokenizer_revision": null,
+      "max_tokens": 400,
+      "overlap_tokens": 50,
+      "max_chars": 1200,
+      "overlap_chars": 150
+    },
+    "tokenizer": null,
+    "document_count": 50,
+    "chunk_count": 3262,
+    "corpus_hash": "94b692c3789bf9cf172e3e8b9a5b00fec061e1fd756de0c66cfb12cf71216515",
+    "embedding_backend": {
+      "base_url": "http://127.0.0.1:18080/v1",
+      "dimension": 1024,
+      "encoding_format": "float",
+      "input_preprocessing": "original-text-v1;fp16;cls;l2-float32",
+      "model": "BAAI/bge-m3",
+      "provider": "local-bge-fp16",
+      "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+      "revision_pinned": true
+    },
+    "lexical_tokenizer": "nfkc-casefold-cjk-bigram-v1",
+    "retrieval_config": {
+      "candidate_k": 20,
+      "rrf_k": 60,
+      "normalize_embeddings": true,
+      "bm25_k1": 1.5,
+      "bm25_b": 0.75
+    },
+    "artifacts": {
+      "chunks.json": "94b692c3789bf9cf172e3e8b9a5b00fec061e1fd756de0c66cfb12cf71216515",
+      "lexical.json": "726ffa5530ec10c7ddf6b9d604d8d30a216ea94e5ba260ded3689772df446185",
+      "vectors.npy": "c760de54b7c39223f9c7b61f1695cf6c057ee6f1e3634eb17777efbbf74e6e09"
+    }
+  },
+  "document_count": 50,
+  "chunk_count": 3262,
+  "category_counts": {
+    "社会科学": 25,
+    "人文": 25
+  },
+  "title_query_checks": 150,
+  "source_page_checks": 50,
+  "smoke_all_passed": false,
+  "passed": false
+}

@@ -1,0 +1,5145 @@
+{
+  "work_item": "COL-002",
+  "backend_code": {
+    "commit": "20ec245051a783e55701ae4001418c45a93b6e8e",
+    "branch": "feat/catalog-ingestion-audit",
+    "dirty": false
+  },
+  "catalog_sha256": "df0e02fd40039e3db3df12d3c4034e6d3edc9a59375ddf3b13ca240dddf11ee8",
+  "model": "gpt-6-luna",
+  "preview_did_not_import": true,
+  "production_unchanged": true,
+  "items": [
+    {
+      "item_id": "SS01",
+      "source_sha256": "a067b12208421a545448d08ec93064af19f7e5702dfa2ed41791bf1093c13ab5",
+      "job_id": "fd19edbecea34d99989e9c5348b67b04",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "PROSPECT THEORY: AN ANALYSIS OF DECISION UNDER RISK",
+          "authors": [
+            "Daniel Kahneman",
+            "Amos Tversky"
+          ],
+          "year": 1979,
+          "language": "en",
+          "source_url": "https://doi.org/10.2307/1914185"
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "cdbbe714f484a7d3576a8afeed1099bc73367eca96a4d13d45e1508c93b33777"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "78fcf6161d8166c82b77fcb0d91bceac583351c658a00870758f9b524cab73dd"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "df62cd8b6a1ab0c56eaebc6b098e3f8fad22e69c78c7d605184f0e85ad390b0b"
+          },
+          "source_url": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.2307%2F1914185",
+            "retrieved_at": "2026-10-19T02:26:13.864338+00:00",
+            "date_type": null,
+            "excerpt_sha256": "05ec69a9abe20c3afca7afb1dfe1c8153e47cd94483cd2d5fbc8072be2de073b"
+          },
+          "year": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.2307%2F1914185",
+            "retrieved_at": "2026-10-19T02:26:13.864338+00:00",
+            "date_type": "published-print",
+            "excerpt_sha256": "81835e81727ea36ce9c4981f06bef5ff4f83aef5b4240d73f1990278051f63aa",
+            "short_date_evidence": "published-print: 1979-3"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "已依据题名和作者吻合的 Crossref 出版记录补全候选字段；请核对来源与日期类型后导入。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 29,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "completed",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [
+            "source_url",
+            "year"
+          ],
+          "conflicts": [],
+          "candidates": [
+            {
+              "title": "Prospect Theory: An Analysis of Decision under Risk",
+              "authors": [
+                "Daniel Kahneman",
+                "Amos Tversky"
+              ],
+              "doi": "10.2307/1914185",
+              "source_url": "https://doi.org/10.2307/1914185",
+              "record_url": "https://api.crossref.org/works/10.2307%2F1914185",
+              "type": "journal-article",
+              "dates": [
+                {
+                  "kind": "published-print",
+                  "date_parts": [
+                    1979,
+                    3
+                  ],
+                  "year": 1979
+                },
+                {
+                  "kind": "published",
+                  "date_parts": [
+                    1979,
+                    3
+                  ],
+                  "year": 1979
+                }
+              ],
+              "selected_date": {
+                "kind": "published-print",
+                "date_parts": [
+                  1979,
+                  3
+                ],
+                "year": 1979
+              },
+              "match": {
+                "title": "normalized_exact",
+                "first_author": "exact",
+                "author_overlap": 2,
+                "required_overlap": 2
+              }
+            }
+          ],
+          "queried_at": "2026-10-19T02:26:13.864338+00:00"
+        },
+        "year_review": {
+          "policy": "crossref-title-authors-v1",
+          "status": "candidate_supported",
+          "source": "crossref",
+          "grounding": "registry_record",
+          "date_type": "published-print"
+        }
+      },
+      "raw_receipt_sha256": "8425c5c750c5ad59444560876b7d79a9df194d6ee445a069813433c27e2c783b"
+    },
+    {
+      "item_id": "SS02",
+      "source_sha256": "770b53e35e8043fcaa4dd170bce420d4902dee280facaa5363bb48817a179f58",
+      "job_id": "6c513bbd1f87442a87a27b632e1cd7a5",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "The Market for \"Lemons\": Quality Uncertainty and the Market Mechanism",
+          "authors": [
+            "George A. Akerlof"
+          ],
+          "year": 1970,
+          "language": "en",
+          "source_url": "https://doi.org/10.2307/1879431"
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "1fe31648a6e79cfdb8c64446c7d6ff09e25e1745dafb47ef553698a84aec6389"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "3e4570e8541d13c5b99308ab98b39094918ff028c9231702fda5ba31baa188ef"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "921409188b92dc11926cf97670db401f50fce8069f49adc19a605712b6051fd6"
+          },
+          "source_url": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.2307%2F1879431",
+            "retrieved_at": "2026-10-19T02:26:24.115755+00:00",
+            "date_type": null,
+            "excerpt_sha256": "a8326c9fa05278cacd58383f31be03ac8ea6c6ec2a24f75a9c348d179d4b993a"
+          },
+          "year": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.2307%2F1879431",
+            "retrieved_at": "2026-10-19T02:26:24.115755+00:00",
+            "date_type": "published-print",
+            "excerpt_sha256": "a7bb034b4a12afdcba4cd38c489a194ae484161c1db1756eadb5ff6c87d08120",
+            "short_date_evidence": "published-print: 1970-8"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "已依据题名和作者吻合的 Crossref 出版记录补全候选字段；请核对来源与日期类型后导入。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 14,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "completed",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [
+            "source_url",
+            "year"
+          ],
+          "conflicts": [],
+          "candidates": [
+            {
+              "title": "The Market for \"Lemons\": Quality Uncertainty and the Market Mechanism",
+              "authors": [
+                "George A. Akerlof"
+              ],
+              "doi": "10.2307/1879431",
+              "source_url": "https://doi.org/10.2307/1879431",
+              "record_url": "https://api.crossref.org/works/10.2307%2F1879431",
+              "type": "journal-article",
+              "dates": [
+                {
+                  "kind": "published-print",
+                  "date_parts": [
+                    1970,
+                    8
+                  ],
+                  "year": 1970
+                },
+                {
+                  "kind": "published",
+                  "date_parts": [
+                    1970,
+                    8
+                  ],
+                  "year": 1970
+                }
+              ],
+              "selected_date": {
+                "kind": "published-print",
+                "date_parts": [
+                  1970,
+                  8
+                ],
+                "year": 1970
+              },
+              "match": {
+                "title": "normalized_exact",
+                "first_author": "exact",
+                "author_overlap": 1,
+                "required_overlap": 1
+              }
+            }
+          ],
+          "queried_at": "2026-10-19T02:26:24.115755+00:00"
+        },
+        "year_review": {
+          "policy": "crossref-title-authors-v1",
+          "status": "candidate_supported",
+          "source": "crossref",
+          "grounding": "registry_record",
+          "date_type": "published-print"
+        }
+      },
+      "raw_receipt_sha256": "3aeb8e8bb129deecba3044cc0809778ae0f6070262ac694193c61e647a89b5be"
+    },
+    {
+      "item_id": "SS03",
+      "source_sha256": "29ba7bac3df28009170eef8f7b6c006ed991fb011942214c0af22858ae7e5f84",
+      "job_id": "4780f1e649504ce381ba25129f44f3f4",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "The Problem of Social Cost",
+          "authors": [
+            "R. H. Coase"
+          ],
+          "year": null,
+          "language": "en",
+          "source_url": null
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "ba84e7504eeffaaf8bca7b3b1bbb68ddf3b13711c53931200f0554ecfcbcfbdf"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "bdbc9d63a86f30fe4073dcd8c921526846672f1a37b0725ae85c6081af5fd805"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "6808e4770822f663f6677bda037005e49ec25fa7cefd7313484284737530e654"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "出版年份待核对：日期摘录没有明确出版或发表语境；已留空，不使用修订日期代填。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "书目查询未找到唯一、题名和作者均吻合的出版记录；缺失字段保持为空，请核对。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 45,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "no_match",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [],
+          "conflicts": [],
+          "candidates": [],
+          "queried_at": "2026-10-19T02:26:34.337850+00:00"
+        },
+        "year_review": {
+          "policy": "publication-year-evidence-v1",
+          "status": "needs_confirmation",
+          "reason": "missing_publication_context",
+          "rejected_value": 1960
+        }
+      },
+      "raw_receipt_sha256": "3e809bd2d75b4d82eea58d23e29df3d1f35bade46aff4a4a1196cb3011738804"
+    },
+    {
+      "item_id": "SS04",
+      "source_sha256": "643ef9bd0c253cf91735610abddc5232abcaee1b085e0325df09553a957e845a",
+      "job_id": "29dc843e521d45068f10a9ae682d95fe",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "The Nature of the Firm",
+          "authors": [
+            "R. H. Coase"
+          ],
+          "year": null,
+          "language": "en",
+          "source_url": null
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "d9dd333dae68156a01e0a0b2528dc674a843f4fbbc0658afafeae6a10f9fef79"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "473e64ba4f7a52d7e31f8d9a79b8c87442a340adaa17752e246549e94fc38150"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "d9dd333dae68156a01e0a0b2528dc674a843f4fbbc0658afafeae6a10f9fef79"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "出版年份待核对：日期摘录没有明确出版或发表语境；已留空，不使用修订日期代填。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "书目查询未找到唯一、题名和作者均吻合的出版记录；缺失字段保持为空，请核对。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 21,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "no_match",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [],
+          "conflicts": [],
+          "candidates": [],
+          "queried_at": "2026-10-19T02:26:44.741897+00:00"
+        },
+        "year_review": {
+          "policy": "publication-year-evidence-v1",
+          "status": "needs_confirmation",
+          "reason": "missing_publication_context",
+          "rejected_value": 1937
+        }
+      },
+      "raw_receipt_sha256": "e6f2ae1b5a101d495762e62b5d6a3954512cb2351bae448df0e52fae955593e3"
+    },
+    {
+      "item_id": "SS05",
+      "source_sha256": "de7e14007cef3173941883aa00bad549f04ff1d6811b758788a0aae79d5b6d93",
+      "job_id": "b7d5bc05b5534eaeace27490d4f62b01",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "A CONTRIBUTION TO THE THEORY OF ECONOMIC GROWTH",
+          "authors": [
+            "Robert M. Solow"
+          ],
+          "year": 1956,
+          "language": "en",
+          "source_url": "https://doi.org/10.2307/1884513"
+        },
+        "field_sources": {
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "8238d5e338680c173ff66c88f3d07a5f020da42d66b5414cba40b13a62c88618"
+          },
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "8238d5e338680c173ff66c88f3d07a5f020da42d66b5414cba40b13a62c88618"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "e937871d58d76b1b2ef099c456a3d53b02001ea14baa20c64fcd051ae89350af"
+          },
+          "source_url": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.2307%2F1884513",
+            "retrieved_at": "2026-10-19T02:26:54.008158+00:00",
+            "date_type": null,
+            "excerpt_sha256": "ca222ea8a8c5cd264c931e07cd5d6f4dc4318c051630d61e748fd86549dd10ea"
+          },
+          "year": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.2307%2F1884513",
+            "retrieved_at": "2026-10-19T02:26:54.008158+00:00",
+            "date_type": "published-print",
+            "excerpt_sha256": "e7bfa807fa99593865373c68dc7500149a19c61391465acf83f2f25597ca6c66",
+            "short_date_evidence": "published-print: 1956-2"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "已依据题名和作者吻合的 Crossref 出版记录补全候选字段；请核对来源与日期类型后导入。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 30,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "completed",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [
+            "source_url",
+            "year"
+          ],
+          "conflicts": [],
+          "candidates": [
+            {
+              "title": "A Contribution to the Theory of Economic Growth",
+              "authors": [
+                "Robert M. Solow"
+              ],
+              "doi": "10.2307/1884513",
+              "source_url": "https://doi.org/10.2307/1884513",
+              "record_url": "https://api.crossref.org/works/10.2307%2F1884513",
+              "type": "journal-article",
+              "dates": [
+                {
+                  "kind": "published-print",
+                  "date_parts": [
+                    1956,
+                    2
+                  ],
+                  "year": 1956
+                },
+                {
+                  "kind": "published",
+                  "date_parts": [
+                    1956,
+                    2
+                  ],
+                  "year": 1956
+                }
+              ],
+              "selected_date": {
+                "kind": "published-print",
+                "date_parts": [
+                  1956,
+                  2
+                ],
+                "year": 1956
+              },
+              "match": {
+                "title": "normalized_exact",
+                "first_author": "exact",
+                "author_overlap": 1,
+                "required_overlap": 1
+              }
+            }
+          ],
+          "queried_at": "2026-10-19T02:26:54.008158+00:00"
+        },
+        "year_review": {
+          "policy": "crossref-title-authors-v1",
+          "status": "candidate_supported",
+          "source": "crossref",
+          "grounding": "registry_record",
+          "date_type": "published-print"
+        }
+      },
+      "raw_receipt_sha256": "1f0752991389c41d8389172d444e66d8fe3fbb38e821b420037b0365405e2057"
+    },
+    {
+      "item_id": "SS06",
+      "source_sha256": "a37b62fd92b1d1fe2264f0afc23c5c8f04198e4d157027d138bc65a75934cc5e",
+      "job_id": "f30b6bff37494b30a588140f00a666df",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "Job Market Signaling",
+          "authors": [
+            "Michael Spence"
+          ],
+          "year": 1973,
+          "language": "en",
+          "source_url": "https://doi.org/10.2307/1882010"
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "09af9967be40f4a65d4c6272ac931be04108af138c62da9c46ed16022fe18577"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "09af9967be40f4a65d4c6272ac931be04108af138c62da9c46ed16022fe18577"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "930fe29f8becd5dca13b2ac6e8a71fd05a2822be15326bc70c5455fd2be33112"
+          },
+          "source_url": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.2307%2F1882010",
+            "retrieved_at": "2026-10-19T02:27:02.752859+00:00",
+            "date_type": null,
+            "excerpt_sha256": "96ba5668d7282d77c0bcbd64176d88b1b974e3ab7431b2167967e14b00b9a2ac"
+          },
+          "year": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.2307%2F1882010",
+            "retrieved_at": "2026-10-19T02:27:02.752859+00:00",
+            "date_type": "published-print",
+            "excerpt_sha256": "8ac3e0fa52f35a18c1b7c1bb9ef0afeeba8fa4b05f1955e2a0e593724284cd1d",
+            "short_date_evidence": "published-print: 1973-8"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "已依据题名和作者吻合的 Crossref 出版记录补全候选字段；请核对来源与日期类型后导入。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 21,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "completed",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [
+            "source_url",
+            "year"
+          ],
+          "conflicts": [],
+          "candidates": [
+            {
+              "title": "Job Market Signaling",
+              "authors": [
+                "Michael Spence"
+              ],
+              "doi": "10.2307/1882010",
+              "source_url": "https://doi.org/10.2307/1882010",
+              "record_url": "https://api.crossref.org/works/10.2307%2F1882010",
+              "type": "journal-article",
+              "dates": [
+                {
+                  "kind": "published-print",
+                  "date_parts": [
+                    1973,
+                    8
+                  ],
+                  "year": 1973
+                },
+                {
+                  "kind": "published",
+                  "date_parts": [
+                    1973,
+                    8
+                  ],
+                  "year": 1973
+                }
+              ],
+              "selected_date": {
+                "kind": "published-print",
+                "date_parts": [
+                  1973,
+                  8
+                ],
+                "year": 1973
+              },
+              "match": {
+                "title": "normalized_exact",
+                "first_author": "exact",
+                "author_overlap": 1,
+                "required_overlap": 1
+              }
+            }
+          ],
+          "queried_at": "2026-10-19T02:27:02.752859+00:00"
+        },
+        "year_review": {
+          "policy": "crossref-title-authors-v1",
+          "status": "candidate_supported",
+          "source": "crossref",
+          "grounding": "registry_record",
+          "date_type": "published-print"
+        }
+      },
+      "raw_receipt_sha256": "ad079567833bfcfa9a69a370d3079944b1e9f82234856cc698e2ec5f0c5a0f6c"
+    },
+    {
+      "item_id": "SS07",
+      "source_sha256": "ee8e527ab9796435c80719db82b2bec244832d6509180e165f8854ccf518fcaf",
+      "job_id": "0a9542d4e75a4e0faaa44fb101ca9ec5",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "The Strength of Weak Ties",
+          "authors": [
+            "Mark S. Granovetter"
+          ],
+          "year": null,
+          "language": "en",
+          "source_url": null
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "9b1fb03546817b7d03a31c14ecea622d6a995a3b3439acfe820d8fd9fe123d95"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "cd266ea4cf83c978746b799f05981a0445b6c4941564afe06ab5a7a4819597c5"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "2a2e61dd9d72bc740f29b70cb02b9ca2d67cb28277dd404717afe35df3839838"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "出版年份待核对：日期摘录没有明确出版或发表语境；已留空，不使用修订日期代填。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "书目查询未找到唯一、题名和作者均吻合的出版记录；缺失字段保持为空，请核对。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 22,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "no_match",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [],
+          "conflicts": [],
+          "candidates": [],
+          "queried_at": "2026-10-19T02:27:11.978793+00:00"
+        },
+        "year_review": {
+          "policy": "publication-year-evidence-v1",
+          "status": "needs_confirmation",
+          "reason": "missing_publication_context",
+          "rejected_value": 1973
+        }
+      },
+      "raw_receipt_sha256": "cd4da1d3d39f865dca5a69d109d73fdf52271b7366b39e26671a40df01d56f25"
+    },
+    {
+      "item_id": "SS08",
+      "source_sha256": "1c142553b05aea5a9228b8ac40c2b115edc866371010de00c6b9fb20e5fb3625",
+      "job_id": "c56e9d5f709248fc88be1eb59bed5027",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "Economic Action and Social Structure: The Problem of Embeddedness",
+          "authors": [
+            "Mark Granovetter"
+          ],
+          "year": 1985,
+          "language": "en",
+          "source_url": "https://doi.org/10.31430/aryo6512"
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "345e2c61b4a0ef52e3d8030ac71610c14d955129c7079130cda8120c77713be1"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "3c1b88a11131e4f41b5c8229f80f52be68a46e4481fdd961c83d5092f0a53202"
+          },
+          "year": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "date_type": "copyright",
+            "grounding": "model_read_page_image",
+            "excerpt_sha256": "8ddd4c76ce7a4b981f0534970790512fb2c18f52cd368623c1f4941630c2dcbc",
+            "short_date_evidence": "© 1985 by The University of Chicago. All rights reserved."
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "bd8fb0396095ca5888926e836e828104603ece5ee970fd2de72cdd84b9ce133d"
+          },
+          "source_url": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.31430%2Faryo6512",
+            "retrieved_at": "2026-10-19T02:27:21.301967+00:00",
+            "date_type": null,
+            "excerpt_sha256": "bceb9d5f4d38fd27ee6dd3f9fe9fba4c3a86be93f855e2d9a46e8c9670a25ca7"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "已依据题名和作者吻合的 Crossref 出版记录补全候选字段；请核对来源与日期类型后导入。",
+          "现有字段与外部书目存在差异，未自动覆盖，请核对后选择。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 31,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 4
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "completed",
+          "missing_before": [
+            "source_url"
+          ],
+          "filled_fields": [
+            "source_url"
+          ],
+          "conflicts": [
+            {
+              "field": "year",
+              "existing": 1985,
+              "external": 2026
+            }
+          ],
+          "candidates": [
+            {
+              "title": "Economic Action and Social Structure: The Problem of Embeddedness",
+              "authors": [
+                "Mark Granovetter"
+              ],
+              "doi": "10.31430/aryo6512",
+              "source_url": "https://doi.org/10.31430/aryo6512",
+              "record_url": "https://api.crossref.org/works/10.31430%2Faryo6512",
+              "type": "journal-article",
+              "dates": [
+                {
+                  "kind": "published-print",
+                  "date_parts": [
+                    2026,
+                    1,
+                    1
+                  ],
+                  "year": 2026
+                },
+                {
+                  "kind": "published-online",
+                  "date_parts": [
+                    2026,
+                    1,
+                    1
+                  ],
+                  "year": 2026
+                },
+                {
+                  "kind": "published",
+                  "date_parts": [
+                    2026,
+                    1,
+                    1
+                  ],
+                  "year": 2026
+                }
+              ],
+              "selected_date": {
+                "kind": "published-print",
+                "date_parts": [
+                  2026,
+                  1,
+                  1
+                ],
+                "year": 2026
+              },
+              "match": {
+                "title": "normalized_exact",
+                "first_author": "exact",
+                "author_overlap": 1,
+                "required_overlap": 1
+              }
+            }
+          ],
+          "queried_at": "2026-10-19T02:27:21.301967+00:00"
+        },
+        "year_review": {
+          "policy": "publication-year-evidence-v1",
+          "status": "candidate_supported",
+          "source": "api",
+          "grounding": "model_read_page_image"
+        }
+      },
+      "raw_receipt_sha256": "759b3d18eca349e968507e47191352edfbf5c02168cec23fadbd4604b27b6511"
+    },
+    {
+      "item_id": "SS09",
+      "source_sha256": "74c620e87a0c9ffe8a2c95ba58439073d006fd20795a59266938dfd1b8e1fbf9",
+      "job_id": "e7daab6c8e1448a6816c0065e8f76546",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "Social Capital in the Creation of Human Capital",
+          "authors": [
+            "James S. Coleman"
+          ],
+          "year": 1988,
+          "language": "en",
+          "source_url": null
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "344337f8d2cd61d6c8f325f021c7c8e4d40612e9ddab1af17c0d572b299b5a56"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "344337f8d2cd61d6c8f325f021c7c8e4d40612e9ddab1af17c0d572b299b5a56"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "b62890fc3618ce3f0e566385327b64013935de8549cd7f13ece5943f8d6b5da7"
+          },
+          "year": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "date_type": "copyright",
+            "grounding": "model_read_page_image",
+            "excerpt_sha256": "33e6f952234107762459f4a0c87ff75788149ac1a59fff101d119df65dd5e355",
+            "short_date_evidence": "© 1988 by The University of Chicago. All rights reserved."
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "书目查询未找到唯一、题名和作者均吻合的出版记录；缺失字段保持为空，请核对。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 27,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 4
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "no_match",
+          "missing_before": [
+            "source_url"
+          ],
+          "filled_fields": [],
+          "conflicts": [],
+          "candidates": [],
+          "queried_at": "2026-10-19T02:27:31.511054+00:00"
+        },
+        "year_review": {
+          "policy": "publication-year-evidence-v1",
+          "status": "candidate_supported",
+          "source": "api",
+          "grounding": "model_read_page_image"
+        }
+      },
+      "raw_receipt_sha256": "d85b527562ed53d55f366a1fc4b8ed8ebc5bbc5a3f9e6862182581b2e7ab7df0"
+    },
+    {
+      "item_id": "SS10",
+      "source_sha256": "a0dcfce4aab13d67bcdbe93fb9a81302c519609461807aa257fb45abff1b99ca",
+      "job_id": "5d000f3e25c142feaab66c2f3deb7c47",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "The Iron Cage Revisited: Institutional Isomorphism and Collective Rationality in Organizational Fields",
+          "authors": [
+            "Paul J. DiMaggio",
+            "Walter W. Powell"
+          ],
+          "year": null,
+          "language": "en",
+          "source_url": null
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "bf56ee1b4e4cab9eab5a4555778c4d74684f0d267ad073bf44b018cd984e296b"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "dd5451c5e176689394d1d9e6b60e233a60e4b1747582e9bf92d3652ec9016d38"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "db5b8128a853464fd20007ce8f359668c1286d70034db620aa3994c167f848b3"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "出版年份待核对：日期摘录没有明确出版或发表语境；已留空，不使用修订日期代填。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "书目查询未找到唯一、题名和作者均吻合的出版记录；缺失字段保持为空，请核对。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 15,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "no_match",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [],
+          "conflicts": [],
+          "candidates": [],
+          "queried_at": "2026-10-19T02:27:42.676463+00:00"
+        },
+        "year_review": {
+          "policy": "publication-year-evidence-v1",
+          "status": "needs_confirmation",
+          "reason": "missing_publication_context",
+          "rejected_value": 1983
+        }
+      },
+      "raw_receipt_sha256": "37a6079dd4e000f4402da7972b6be1ecc63a238b8504ce1565866e07a2ac9e60"
+    },
+    {
+      "item_id": "SS11",
+      "source_sha256": "83b462acc625a49ff41c1d5bad2e40777911b7af8e71aeccabd8f4872bc47e69",
+      "job_id": "66cd2ffa63fd482ebe9028d0331bc5fb",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "Bowling Alone: America's Declining Social Capital",
+          "authors": [
+            "Robert D. Putnam"
+          ],
+          "year": 1995,
+          "language": "en",
+          "source_url": "https://doi.org/10.1353/jod.1995.0002"
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "4b2446b75fe2cad933e686734912420b8ffaff25e30338d368362f6a81931740"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "96249c4ad6e7f3d2e9bec4b5cc8ffad15ce43cfd5628a1b86402e73aaf1b0180"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "03233e83969074801526de54a80163032a1a3b7c8aa843b06d16ed2a57feaa44"
+          },
+          "source_url": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.1353%2Fjod.1995.0002",
+            "retrieved_at": "2026-10-19T02:27:53.809813+00:00",
+            "date_type": null,
+            "excerpt_sha256": "1a52188b4c26a8ddecc933678a176b3551e3dac3ab8d6c687a526e25d6aa4eff"
+          },
+          "year": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.1353%2Fjod.1995.0002",
+            "retrieved_at": "2026-10-19T02:27:53.809813+00:00",
+            "date_type": "published-print",
+            "excerpt_sha256": "3d5b269de92205300da32a8e05096f5689e55d8cd421aff0a67fd4618b6225a6",
+            "short_date_evidence": "published-print: 1995-1"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "已依据题名和作者吻合的 Crossref 出版记录补全候选字段；请核对来源与日期类型后导入。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 18,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "completed",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [
+            "source_url",
+            "year"
+          ],
+          "conflicts": [],
+          "candidates": [
+            {
+              "title": "Bowling Alone: America's Declining Social Capital",
+              "authors": [
+                "Robert D Putnam"
+              ],
+              "doi": "10.1353/jod.1995.0002",
+              "source_url": "https://doi.org/10.1353/jod.1995.0002",
+              "record_url": "https://api.crossref.org/works/10.1353%2Fjod.1995.0002",
+              "type": "journal-article",
+              "dates": [
+                {
+                  "kind": "published-print",
+                  "date_parts": [
+                    1995,
+                    1
+                  ],
+                  "year": 1995
+                },
+                {
+                  "kind": "published",
+                  "date_parts": [
+                    1995,
+                    1
+                  ],
+                  "year": 1995
+                }
+              ],
+              "selected_date": {
+                "kind": "published-print",
+                "date_parts": [
+                  1995,
+                  1
+                ],
+                "year": 1995
+              },
+              "match": {
+                "title": "normalized_exact",
+                "first_author": "exact",
+                "author_overlap": 1,
+                "required_overlap": 1
+              }
+            }
+          ],
+          "queried_at": "2026-10-19T02:27:53.809813+00:00"
+        },
+        "year_review": {
+          "policy": "crossref-title-authors-v1",
+          "status": "candidate_supported",
+          "source": "crossref",
+          "grounding": "registry_record",
+          "date_type": "published-print"
+        }
+      },
+      "raw_receipt_sha256": "9e31077df817ec545962034a423c0e6a264395985e430f1a8a10b5d1a05762e7"
+    },
+    {
+      "item_id": "SS12",
+      "source_sha256": "95fc1cb4a84cf1c563b8085c0c8adca9f44c0162ae343368c688c1f5b64e5209",
+      "job_id": "346a8e41e1a24733a4bca66f08256753",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "The Matthew Effect in Science",
+          "authors": [
+            "Robert K. Merton"
+          ],
+          "year": null,
+          "language": "en",
+          "source_url": null
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "142a22e829499e64e4635a3b204d55c5c8f080047337b7a36f8956919f55fcdc"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "ef87537fbc25d47194b51ad64c558174b83185180af8b40b84edc63af9423e26"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "f48d270b21fe51f8b582be51adfd55f5aa5d90585dd1e849fe45576fba213055"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+          "出版年份待核对：日期摘录没有明确出版或发表语境；已留空，不使用修订日期代填。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "书目查询未找到唯一、题名和作者均吻合的出版记录；缺失字段保持为空，请核对。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 8,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "no_match",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [],
+          "conflicts": [],
+          "candidates": [],
+          "queried_at": "2026-10-19T02:28:04.754284+00:00"
+        },
+        "year_review": {
+          "policy": "publication-year-evidence-v1",
+          "status": "needs_confirmation",
+          "reason": "missing_publication_context",
+          "rejected_value": 1968
+        }
+      },
+      "raw_receipt_sha256": "08f1170e75880fd231f52d803a8e94cd530c66de7276e317bff87546a1a8d762"
+    },
+    {
+      "item_id": "SS13",
+      "source_sha256": "3c3ee049ab5d7336b14e06bcb2770d980521c94bac9e5c7d3407ac8c14665df4",
+      "job_id": "54513253418a4a1681a7dc8c3d991570",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "Behavioral Study of Obedience",
+          "authors": [
+            "Stanley Milgram"
+          ],
+          "year": null,
+          "language": "en",
+          "source_url": null
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "64df91e89e5a71c919ba7bffde9c3f506177bb2ed201e93c1162471f706cad92"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "654192ac4bda54883825f89eba994c2e875b95a8dc48f577b21c214ab3a1c41d"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "a0fe6a5e77a29ec7bce5cd5fd26c3c2ce733531aaee29b1e3520dd0f12c5bede"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+          "出版年份待核对：日期摘录没有明确出版或发表语境；已留空，不使用修订日期代填。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "书目查询未找到唯一、题名和作者均吻合的出版记录；缺失字段保持为空，请核对。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 9,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "no_match",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [],
+          "conflicts": [],
+          "candidates": [],
+          "queried_at": "2026-10-19T02:28:15.862119+00:00"
+        },
+        "year_review": {
+          "policy": "publication-year-evidence-v1",
+          "status": "needs_confirmation",
+          "reason": "missing_publication_context",
+          "rejected_value": 1963
+        }
+      },
+      "raw_receipt_sha256": "21c9bfcfb7e24921a793c450006843ebd9ef028633a825b03b1e20953442318c"
+    },
+    {
+      "item_id": "SS14",
+      "source_sha256": "d0b830982dacd3a8bdaf85583297c8f2adf3e9c25cff0e14169461be53fb1bf3",
+      "job_id": "887a7f60d4d2431d9ccd26591c31332e",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "A Theory of Social Comparison Processes",
+          "authors": [
+            "Leon Festinger"
+          ],
+          "year": 1954,
+          "language": "en",
+          "source_url": "https://doi.org/10.1177/001872675400700202"
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "a832e80204b89dac52a546d04a7f7138e265642a8dd977cc3c898f34efd0e7f4"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "88f0dbf9dd4da18e4a3209a24c5b21b1411ecc6407cedf3a0e8a50f12df9b7a2"
+          },
+          "source_url": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "29c2d0cc33b7df28929baaa53529f7dad48c0d8c942ff6e0149db0ccb5b61d41"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "fe74b094264c9f27456e67cbdead5bd9c1e4cc6ae11d90a79e5e1406cef8e2b2"
+          },
+          "year": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.1177%2F001872675400700202",
+            "retrieved_at": "2026-10-19T02:28:30.000377+00:00",
+            "date_type": "published-print",
+            "excerpt_sha256": "a90197546a880e95085c7b578a7bfda9af872342904e14bcfe721cd958ef3946",
+            "short_date_evidence": "published-print: 1954-5"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "已依据题名和作者吻合的 Crossref 出版记录补全候选字段；请核对来源与日期类型后导入。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 25,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 4
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "completed",
+          "missing_before": [
+            "year"
+          ],
+          "filled_fields": [
+            "year"
+          ],
+          "conflicts": [],
+          "candidates": [
+            {
+              "title": "A Theory of Social Comparison Processes",
+              "authors": [
+                "Leon Festinger"
+              ],
+              "doi": "10.1177/001872675400700202",
+              "source_url": "https://doi.org/10.1177/001872675400700202",
+              "record_url": "https://api.crossref.org/works/10.1177%2F001872675400700202",
+              "type": "journal-article",
+              "dates": [
+                {
+                  "kind": "published-print",
+                  "date_parts": [
+                    1954,
+                    5
+                  ],
+                  "year": 1954
+                },
+                {
+                  "kind": "published-online",
+                  "date_parts": [
+                    1954,
+                    5,
+                    1
+                  ],
+                  "year": 1954
+                },
+                {
+                  "kind": "published",
+                  "date_parts": [
+                    1954,
+                    5
+                  ],
+                  "year": 1954
+                }
+              ],
+              "selected_date": {
+                "kind": "published-print",
+                "date_parts": [
+                  1954,
+                  5
+                ],
+                "year": 1954
+              },
+              "match": {
+                "title": "normalized_exact",
+                "first_author": "exact",
+                "author_overlap": 1,
+                "required_overlap": 1
+              }
+            }
+          ],
+          "queried_at": "2026-10-19T02:28:30.000377+00:00"
+        },
+        "year_review": {
+          "policy": "crossref-title-authors-v1",
+          "status": "candidate_supported",
+          "source": "crossref",
+          "grounding": "registry_record",
+          "date_type": "published-print"
+        }
+      },
+      "raw_receipt_sha256": "27444a8845185d99707e91a696994aa7660f945839f45606d70e5b683c3d1adb"
+    },
+    {
+      "item_id": "SS15",
+      "source_sha256": "c0b38a214463d00781f21783de700fcd647675a04d6481ab87d583f91fe31810",
+      "job_id": "2d27126649764e61a19623bc9f173136",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "The Framing of Decisions and the Psychology of Choice",
+          "authors": [
+            "Amos Tversky",
+            "Daniel Kahneman"
+          ],
+          "year": 1981,
+          "language": "en",
+          "source_url": "https://doi.org/10.1126/science.7455683"
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "b4d521dcb1c68edba9a18c0c4f0f9323b913d15fe37945a1e8bb4838f9f6d526"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "8e6506035b728c1c218ca8e017b30ac0165a03eee4b8d6512b825d0d5ebfa4fa"
+          },
+          "year": {
+            "method": "document_date_candidate",
+            "pdf_page": 1,
+            "date_type": "copyright",
+            "grounding": "page_text",
+            "excerpt_sha256": "d3474457c61717b82f6e63651b791ae12657ae7418958853ac2539c8373cd450",
+            "short_date_evidence": "© 1981"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "b4d521dcb1c68edba9a18c0c4f0f9323b913d15fe37945a1e8bb4838f9f6d526"
+          },
+          "source_url": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.1126%2Fscience.7455683",
+            "retrieved_at": "2026-10-19T02:28:41.541530+00:00",
+            "date_type": null,
+            "excerpt_sha256": "cd078db6292ea078d504799714b5b0f72a955e913bab7e80c43da870e061714d"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+          "年份为正文日期候选，请确认是否为正式出版年份。",
+          "API 年份候选未采纳；保留已有、具有出版依据的年份，仍请核对。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "已依据题名和作者吻合的 Crossref 出版记录补全候选字段；请核对来源与日期类型后导入。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 6,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "completed",
+          "missing_before": [
+            "source_url"
+          ],
+          "filled_fields": [
+            "source_url"
+          ],
+          "conflicts": [],
+          "candidates": [
+            {
+              "title": "The Framing of Decisions and the Psychology of Choice",
+              "authors": [
+                "Amos Tversky",
+                "Daniel Kahneman"
+              ],
+              "doi": "10.1126/science.7455683",
+              "source_url": "https://doi.org/10.1126/science.7455683",
+              "record_url": "https://api.crossref.org/works/10.1126%2Fscience.7455683",
+              "type": "journal-article",
+              "dates": [
+                {
+                  "kind": "published-print",
+                  "date_parts": [
+                    1981,
+                    1,
+                    30
+                  ],
+                  "year": 1981
+                },
+                {
+                  "kind": "published",
+                  "date_parts": [
+                    1981,
+                    1,
+                    30
+                  ],
+                  "year": 1981
+                }
+              ],
+              "selected_date": {
+                "kind": "published-print",
+                "date_parts": [
+                  1981,
+                  1,
+                  30
+                ],
+                "year": 1981
+              },
+              "match": {
+                "title": "normalized_exact",
+                "first_author": "exact",
+                "author_overlap": 2,
+                "required_overlap": 2
+              }
+            }
+          ],
+          "queried_at": "2026-10-19T02:28:41.541530+00:00"
+        },
+        "year_review": {
+          "policy": "publication-year-evidence-v1",
+          "status": "candidate_supported",
+          "source": "validated_seed",
+          "rejected_api_reason": "missing_publication_context"
+        }
+      },
+      "raw_receipt_sha256": "42bf0a9a9f1c669982b433f61cead6df43513c896519a62d0b6d1f2683719878"
+    },
+    {
+      "item_id": "SS16",
+      "source_sha256": "16a36994ac7047aa9dfbc196ae9c0453c4c947a72c71b70684b24e6ab15a70de",
+      "job_id": "b39561e6a36e4a45abfa1d39be4ea678",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "Judgment under Uncertainty: Heuristics and Biases",
+          "authors": [
+            "Amos Tversky",
+            "Daniel Kahneman"
+          ],
+          "year": null,
+          "language": "en",
+          "source_url": null
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "e7b3321e5140e47498fdca5a966830a38ab4ef0f734a0bbdc06af124e06f271f"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "bbe0f6fc1dd8e9f3242538254a5289051d0ab87386f1b8f6907051c97e7984fc"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "8e6506035b728c1c218ca8e017b30ac0165a03eee4b8d6512b825d0d5ebfa4fa"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "出版年份待核对：日期摘录没有明确出版或发表语境；已留空，不使用修订日期代填。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "书目查询未找到唯一、题名和作者均吻合的出版记录；缺失字段保持为空，请核对。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 9,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "no_match",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [],
+          "conflicts": [],
+          "candidates": [],
+          "queried_at": "2026-10-19T02:28:52.565995+00:00"
+        },
+        "year_review": {
+          "policy": "publication-year-evidence-v1",
+          "status": "needs_confirmation",
+          "reason": "missing_publication_context",
+          "rejected_value": 1974
+        }
+      },
+      "raw_receipt_sha256": "c047fcf94d28eed382d4b4f5b4a0beaf4cc76cd8cb3cebf582581e83126c6710"
+    },
+    {
+      "item_id": "SS17",
+      "source_sha256": "4b24a13a22b5ba1b29f04f7b6e90d5b01c17bb55dd9f347d5e49bd6935f8645a",
+      "job_id": "9a13958e081740b8aa7354d7e93cd575",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "COGNITIVE CONSEQUENCES OF FORCED COMPLIANCE",
+          "authors": [
+            "Leon Festinger",
+            "James M. Carlsmith"
+          ],
+          "year": 1959,
+          "language": "en",
+          "source_url": "https://doi.org/10.1037/h0041593"
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "e80ac452def4849b2527df8889a28fcc522e9e8b2e540c36ff56bcd9ed9b6c55"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "b0a10af313262e726cc3d68979a06fbbb7610baea2a4503c59dd61fc37726266"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "e80ac452def4849b2527df8889a28fcc522e9e8b2e540c36ff56bcd9ed9b6c55"
+          },
+          "source_url": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.1037%2Fh0041593",
+            "retrieved_at": "2026-10-19T02:29:02.071319+00:00",
+            "date_type": null,
+            "excerpt_sha256": "b5d5b13d70300ea4e950481f05fdf5bf82f6dc967365139cfb72bfcf0d8bc170"
+          },
+          "year": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.1037%2Fh0041593",
+            "retrieved_at": "2026-10-19T02:29:02.071319+00:00",
+            "date_type": "published-online",
+            "excerpt_sha256": "462c837ce9309f1fcf1546591b979a02b191b550f97251d4c8009f2d48d09e78",
+            "short_date_evidence": "published-online: 1959-3"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "已依据题名和作者吻合的 Crossref 出版记录补全候选字段；请核对来源与日期类型后导入。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 8,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "completed",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [
+            "source_url",
+            "year"
+          ],
+          "conflicts": [],
+          "candidates": [
+            {
+              "title": "Cognitive consequences of forced compliance.",
+              "authors": [
+                "Leon Festinger",
+                "James M. Carlsmith"
+              ],
+              "doi": "10.1037/h0041593",
+              "source_url": "https://doi.org/10.1037/h0041593",
+              "record_url": "https://api.crossref.org/works/10.1037%2Fh0041593",
+              "type": "journal-article",
+              "dates": [
+                {
+                  "kind": "published-online",
+                  "date_parts": [
+                    1959,
+                    3
+                  ],
+                  "year": 1959
+                },
+                {
+                  "kind": "published",
+                  "date_parts": [
+                    1959,
+                    3
+                  ],
+                  "year": 1959
+                }
+              ],
+              "selected_date": {
+                "kind": "published-online",
+                "date_parts": [
+                  1959,
+                  3
+                ],
+                "year": 1959
+              },
+              "match": {
+                "title": "normalized_exact",
+                "first_author": "exact",
+                "author_overlap": 2,
+                "required_overlap": 2
+              }
+            }
+          ],
+          "queried_at": "2026-10-19T02:29:02.071319+00:00"
+        },
+        "year_review": {
+          "policy": "crossref-title-authors-v1",
+          "status": "candidate_supported",
+          "source": "crossref",
+          "grounding": "registry_record",
+          "date_type": "published-online"
+        }
+      },
+      "raw_receipt_sha256": "79679e7ba8b95c88908b9f8a512211c5dc7f210cd4687317f91a643ae88fbe26"
+    },
+    {
+      "item_id": "SS18",
+      "source_sha256": "806a457af76e50d5510ef6ae5ecb69918638cc26e802debf46b0159d1c80b57d",
+      "job_id": "b3ff84d4c3014862b196369eb8e83e99",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "The Tragedy of the Commons",
+          "authors": [
+            "Garrett Hardin"
+          ],
+          "year": null,
+          "language": "en",
+          "source_url": null
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "67906b0e7cdf1b7af2d83ec65336485ab8d587e95a7a7cfb0f62265ebc94b509"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "b4f0725eab3a04f615cc98817377dee46cde9fba62d1893a1fd284db2dd3bc81"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "67906b0e7cdf1b7af2d83ec65336485ab8d587e95a7a7cfb0f62265ebc94b509"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+          "出版年份待核对：日期摘录没有明确出版或发表语境；已留空，不使用修订日期代填。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "书目查询未找到唯一、题名和作者均吻合的出版记录；缺失字段保持为空，请核对。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 7,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "no_match",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [],
+          "conflicts": [],
+          "candidates": [],
+          "queried_at": "2026-10-19T02:29:12.333470+00:00"
+        },
+        "year_review": {
+          "policy": "publication-year-evidence-v1",
+          "status": "needs_confirmation",
+          "reason": "missing_publication_context",
+          "rejected_value": 1968
+        }
+      },
+      "raw_receipt_sha256": "65a0cb60f6e3253e472381b3da084291efcec4e8be890ecb77a72e6d15daaeb5"
+    },
+    {
+      "item_id": "SS19",
+      "source_sha256": "1072d835d1d8c96f17048f468a878d410eebbaa25228c349e95b14d8e53f0e5a",
+      "job_id": "03cb0636ca9148fc972da5543c306249",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "A Behavioral Approach to the Rational Choice Theory of Collective Action: Presidential Address, American Political Science Association, 1997",
+          "authors": [
+            "Elinor Ostrom"
+          ],
+          "year": 1998,
+          "language": "en",
+          "source_url": "https://doi.org/10.2307/2585925"
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "54081b6371ab821f92ff86e91f6403f3018a9a1d030a6e7dd6c5fad34ccea84f"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "5b8c2286ee347b8f021ccf0cc52ff8e9ab4baa60c60289de92f42d16a4f2af0a"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "f2d7bd651254c650de6b0abaf7fa263284a8e52749461368af1e574f92feafb6"
+          },
+          "source_url": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.2307%2F2585925",
+            "retrieved_at": "2026-10-19T02:29:23.496720+00:00",
+            "date_type": null,
+            "excerpt_sha256": "10682f6cc43663e8d116a2e9426f86adfdc3f6e3462f756e48232c11d9b34c9c"
+          },
+          "year": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.2307%2F2585925",
+            "retrieved_at": "2026-10-19T02:29:23.496720+00:00",
+            "date_type": "published-print",
+            "excerpt_sha256": "b874e5e8289b73c6a3e8fc4c75c55a788e30fb7119af7b92be38ce1b5f8eaf3d",
+            "short_date_evidence": "published-print: 1998-3"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "已依据题名和作者吻合的 Crossref 出版记录补全候选字段；请核对来源与日期类型后导入。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 22,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "completed",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [
+            "source_url",
+            "year"
+          ],
+          "conflicts": [],
+          "candidates": [
+            {
+              "title": "A Behavioral Approach to the Rational Choice Theory of Collective Action: Presidential Address, American Political Science Association, 1997",
+              "authors": [
+                "Elinor Ostrom"
+              ],
+              "doi": "10.2307/2585925",
+              "source_url": "https://doi.org/10.2307/2585925",
+              "record_url": "https://api.crossref.org/works/10.2307%2F2585925",
+              "type": "journal-article",
+              "dates": [
+                {
+                  "kind": "published-print",
+                  "date_parts": [
+                    1998,
+                    3
+                  ],
+                  "year": 1998
+                },
+                {
+                  "kind": "published-online",
+                  "date_parts": [
+                    2014,
+                    8,
+                    1
+                  ],
+                  "year": 2014
+                },
+                {
+                  "kind": "published",
+                  "date_parts": [
+                    1998,
+                    3
+                  ],
+                  "year": 1998
+                }
+              ],
+              "selected_date": {
+                "kind": "published-print",
+                "date_parts": [
+                  1998,
+                  3
+                ],
+                "year": 1998
+              },
+              "match": {
+                "title": "normalized_exact",
+                "first_author": "exact",
+                "author_overlap": 1,
+                "required_overlap": 1
+              }
+            }
+          ],
+          "queried_at": "2026-10-19T02:29:23.496720+00:00"
+        },
+        "year_review": {
+          "policy": "crossref-title-authors-v1",
+          "status": "candidate_supported",
+          "source": "crossref",
+          "grounding": "registry_record",
+          "date_type": "published-print"
+        }
+      },
+      "raw_receipt_sha256": "fdad8af3e0815a4fef1f3d076f1f3fa848c5a064ebc0603340f2b65fa71c1f21"
+    },
+    {
+      "item_id": "SS20",
+      "source_sha256": "bb3aa017ce9668af399b85f98967448e093d6b05fe2af20938cbc1cdf52c55f1",
+      "job_id": "06a0e938f50f4ea6895f19a33292c9a5",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "CONCEPT MISFORMATION IN COMPARATIVE POLITICS",
+          "authors": [
+            "Giovanni Sartori"
+          ],
+          "year": 1970,
+          "language": "en",
+          "source_url": "https://doi.org/10.2307/1958356"
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "1b8ff0f9f44ea10c0a402ea6a1a89450a7528fb2a217c9871b12f632852a4e34"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "40693968d41cda9d74ba3af342a1748048ff3320af9f0dcca5eefd036155c683"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "60277361c5764be3b7f39376464ac2d9bd1b2844b58c3316c8eee7b5f470d146"
+          },
+          "source_url": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.2307%2F1958356",
+            "retrieved_at": "2026-10-19T02:29:36.229259+00:00",
+            "date_type": null,
+            "excerpt_sha256": "e0ce21c1c1e57dd28023e39e1bb7df661882e4630869e8e883dc0643d2069a3f"
+          },
+          "year": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.2307%2F1958356",
+            "retrieved_at": "2026-10-19T02:29:36.229259+00:00",
+            "date_type": "published-print",
+            "excerpt_sha256": "b3cc659c763531c7ea4231c451f8574a4ce283e7d02a77ffa05f134193b11178",
+            "short_date_evidence": "published-print: 1970-12"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "已依据题名和作者吻合的 Crossref 出版记录补全候选字段；请核对来源与日期类型后导入。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 22,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "completed",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [
+            "source_url",
+            "year"
+          ],
+          "conflicts": [],
+          "candidates": [
+            {
+              "title": "Concept Misformation in Comparative Politics",
+              "authors": [
+                "Giovanni Sartori"
+              ],
+              "doi": "10.2307/1958356",
+              "source_url": "https://doi.org/10.2307/1958356",
+              "record_url": "https://api.crossref.org/works/10.2307%2F1958356",
+              "type": "journal-article",
+              "dates": [
+                {
+                  "kind": "published-print",
+                  "date_parts": [
+                    1970,
+                    12
+                  ],
+                  "year": 1970
+                },
+                {
+                  "kind": "published-online",
+                  "date_parts": [
+                    2014,
+                    8,
+                    1
+                  ],
+                  "year": 2014
+                },
+                {
+                  "kind": "published",
+                  "date_parts": [
+                    1970,
+                    12
+                  ],
+                  "year": 1970
+                }
+              ],
+              "selected_date": {
+                "kind": "published-print",
+                "date_parts": [
+                  1970,
+                  12
+                ],
+                "year": 1970
+              },
+              "match": {
+                "title": "normalized_exact",
+                "first_author": "exact",
+                "author_overlap": 1,
+                "required_overlap": 1
+              }
+            }
+          ],
+          "queried_at": "2026-10-19T02:29:36.229259+00:00"
+        },
+        "year_review": {
+          "policy": "crossref-title-authors-v1",
+          "status": "candidate_supported",
+          "source": "crossref",
+          "grounding": "registry_record",
+          "date_type": "published-print"
+        }
+      },
+      "raw_receipt_sha256": "fcccd5f6e1fd5a7c385e8e98748607be7eb2c290e47fa4ecf961abd16951a578"
+    },
+    {
+      "item_id": "SS21",
+      "source_sha256": "81357bc2eabcec41641a22ef193c3c3f761b66eb1f142ba9a443b40f5fa1c54d",
+      "job_id": "294eac68cc4d4ce5b748c5bca5d5db9c",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "DEMOCRACY WITH ADJECTIVES: Conceptual Innovation in Comparative Research",
+          "authors": [
+            "David Collier",
+            "Steven Levitsky"
+          ],
+          "year": 1997,
+          "language": "en",
+          "source_url": "https://doi.org/10.1353/wp.1997.0009"
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "153dd3060feada83aca2621a66fa8c081c52faa79f1378e0442c79c50e9dbf06"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "c20e999016b6da34baa49f874862998410d985e908caf72779164c1d0b7c8c20"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "153dd3060feada83aca2621a66fa8c081c52faa79f1378e0442c79c50e9dbf06"
+          },
+          "source_url": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.1353%2Fwp.1997.0009",
+            "retrieved_at": "2026-10-19T02:29:49.011294+00:00",
+            "date_type": null,
+            "excerpt_sha256": "3063cb94ebdd65f7dbcbfefd08f87e7820febc0497c894711b8e54abdf295bc1"
+          },
+          "year": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.1353%2Fwp.1997.0009",
+            "retrieved_at": "2026-10-19T02:29:49.011294+00:00",
+            "date_type": "published-print",
+            "excerpt_sha256": "c90daa389e7b6d7bfaa685afcbba7831d001f386c7411829e9e86005ed2e38c3",
+            "short_date_evidence": "published-print: 1997-4"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "已依据题名和作者吻合的 Crossref 出版记录补全候选字段；请核对来源与日期类型后导入。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 12,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "completed",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [
+            "source_url",
+            "year"
+          ],
+          "conflicts": [],
+          "candidates": [
+            {
+              "title": "Democracy with Adjectives: Conceptual Innovation in Comparative Research",
+              "authors": [
+                "David Collier",
+                "Steven Levitsky"
+              ],
+              "doi": "10.1353/wp.1997.0009",
+              "source_url": "https://doi.org/10.1353/wp.1997.0009",
+              "record_url": "https://api.crossref.org/works/10.1353%2Fwp.1997.0009",
+              "type": "journal-article",
+              "dates": [
+                {
+                  "kind": "published-print",
+                  "date_parts": [
+                    1997,
+                    4
+                  ],
+                  "year": 1997
+                },
+                {
+                  "kind": "published-online",
+                  "date_parts": [
+                    2011,
+                    6,
+                    13
+                  ],
+                  "year": 2011
+                },
+                {
+                  "kind": "published",
+                  "date_parts": [
+                    1997,
+                    4
+                  ],
+                  "year": 1997
+                }
+              ],
+              "selected_date": {
+                "kind": "published-print",
+                "date_parts": [
+                  1997,
+                  4
+                ],
+                "year": 1997
+              },
+              "match": {
+                "title": "normalized_exact",
+                "first_author": "exact",
+                "author_overlap": 2,
+                "required_overlap": 2
+              }
+            }
+          ],
+          "queried_at": "2026-10-19T02:29:49.011294+00:00"
+        },
+        "year_review": {
+          "policy": "crossref-title-authors-v1",
+          "status": "candidate_supported",
+          "source": "crossref",
+          "grounding": "registry_record",
+          "date_type": "published-print"
+        }
+      },
+      "raw_receipt_sha256": "bfdbda41714f7eb950cc123fa96b23c88a3194c3eff91d65531702f9f995b82f"
+    },
+    {
+      "item_id": "SS22",
+      "source_sha256": "e14779081a999b49dfdde8fe7078fcef65a282d4e6374a037269083d063a1ec3",
+      "job_id": "1264ecaaefd34bba8ce06ba8ba9038ad",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "Self-Determination Theory and the Facilitation of Intrinsic Motivation, Social Development, and Well-Being",
+          "authors": [
+            "Richard M. Ryan",
+            "Edward L. Deci"
+          ],
+          "year": 2000,
+          "language": "en",
+          "source_url": "https://doi.org/10.1037/0003-066X.55.1.68"
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "49f7b300334e0d3b495e48538d37dafab5121e906629a4fb7962f679075a9a0b"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "a9098547ce2570e57de9f310190b4a258f8d5668ed9ba767ab9a1cc71b2263da"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "49f7b300334e0d3b495e48538d37dafab5121e906629a4fb7962f679075a9a0b"
+          },
+          "source_url": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "a6c4a9857b0b2a21202dbb28256789543c0f7d20e2514463848b96776536f7e1"
+          },
+          "year": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.1037%2F0003-066x.55.1.68",
+            "retrieved_at": "2026-10-19T02:30:02.016280+00:00",
+            "date_type": "published-online",
+            "excerpt_sha256": "9a900bfd4ae73ef84ad0d776f13ec7a182bee4d206c298df654c967904b6b141",
+            "short_date_evidence": "published-online: 2000"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+          "年份为正文日期候选，请确认是否为正式出版年份。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "已依据题名和作者吻合的 Crossref 出版记录补全候选字段；请核对来源与日期类型后导入。",
+          "现有字段与外部书目存在差异，未自动覆盖，请核对后选择。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 11,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 4
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "completed",
+          "missing_before": [
+            "year"
+          ],
+          "filled_fields": [
+            "year"
+          ],
+          "conflicts": [
+            {
+              "field": "source_url",
+              "existing": "https://doi.org/10.1037/0003-066X.55.1.68",
+              "external": "https://doi.org/10.1037/0003-066x.55.1.68"
+            }
+          ],
+          "candidates": [
+            {
+              "title": "Self-determination theory and the facilitation of intrinsic motivation, social development, and well-being.",
+              "authors": [
+                "Richard M. Ryan",
+                "Edward L. Deci"
+              ],
+              "doi": "10.1037/0003-066x.55.1.68",
+              "source_url": "https://doi.org/10.1037/0003-066x.55.1.68",
+              "record_url": "https://api.crossref.org/works/10.1037%2F0003-066x.55.1.68",
+              "type": "journal-article",
+              "dates": [
+                {
+                  "kind": "published-online",
+                  "date_parts": [
+                    2000
+                  ],
+                  "year": 2000
+                },
+                {
+                  "kind": "published",
+                  "date_parts": [
+                    2000
+                  ],
+                  "year": 2000
+                }
+              ],
+              "selected_date": {
+                "kind": "published-online",
+                "date_parts": [
+                  2000
+                ],
+                "year": 2000
+              },
+              "match": {
+                "title": "normalized_exact",
+                "first_author": "exact",
+                "author_overlap": 2,
+                "required_overlap": 2
+              }
+            }
+          ],
+          "queried_at": "2026-10-19T02:30:02.016280+00:00"
+        },
+        "year_review": {
+          "policy": "crossref-title-authors-v1",
+          "status": "candidate_supported",
+          "source": "crossref",
+          "grounding": "registry_record",
+          "date_type": "published-online"
+        }
+      },
+      "raw_receipt_sha256": "e7dc535b2ad076abc06e28ad76302927f1374bbceca6820e62ecbbc49336d1c3"
+    },
+    {
+      "item_id": "SS23",
+      "source_sha256": "583630e3fd54ca899fc624f7704d287492be91d16902f4c2edb5bbe41474acee",
+      "job_id": "8c47ee4640f946b8987fdd0fe41ad566",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "The 2 Sigma Problem: The Search for Methods of Group Instruction as Effective as One-to-One Tutoring",
+          "authors": [
+            "Benjamin S. Bloom"
+          ],
+          "year": null,
+          "language": "en",
+          "source_url": null
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "0dac3f6eac460bd5d87641465e303e0f05c04254bd4c8f5193f6ca378b82f470"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "6642bd60fd9600bfdc6b8403c7a3425ccef82a80e4e03a5c5c3597fca05a6c16"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "0dac3f6eac460bd5d87641465e303e0f05c04254bd4c8f5193f6ca378b82f470"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "出版年份待核对：日期摘录没有明确出版或发表语境；已留空，不使用修订日期代填。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "书目查询未找到唯一、题名和作者均吻合的出版记录；缺失字段保持为空，请核对。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 15,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "ambiguous",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [],
+          "conflicts": [],
+          "candidates": [
+            {
+              "title": "The 2 Sigma Problem: The Search for Methods of Group Instruction as Effective as One-to-One Tutoring",
+              "authors": [
+                "Benjamin S. Bloom"
+              ],
+              "doi": "10.2307/1175554",
+              "source_url": "https://doi.org/10.2307/1175554",
+              "record_url": "https://api.crossref.org/works/10.2307%2F1175554",
+              "type": "journal-article",
+              "dates": [
+                {
+                  "kind": "published-print",
+                  "date_parts": [
+                    1984,
+                    6
+                  ],
+                  "year": 1984
+                },
+                {
+                  "kind": "published",
+                  "date_parts": [
+                    1984,
+                    6
+                  ],
+                  "year": 1984
+                }
+              ],
+              "selected_date": {
+                "kind": "published-print",
+                "date_parts": [
+                  1984,
+                  6
+                ],
+                "year": 1984
+              },
+              "match": {
+                "title": "normalized_exact",
+                "first_author": "exact",
+                "author_overlap": 1,
+                "required_overlap": 1
+              }
+            },
+            {
+              "title": "The 2 Sigma Problem: The Search for Methods of Group Instruction as Effective as One-to-One Tutoring",
+              "authors": [
+                "BENJAMIN S. BLOOM"
+              ],
+              "doi": "10.3102/0013189x013006004",
+              "source_url": "https://doi.org/10.3102/0013189x013006004",
+              "record_url": "https://api.crossref.org/works/10.3102%2F0013189x013006004",
+              "type": "journal-article",
+              "dates": [
+                {
+                  "kind": "published-print",
+                  "date_parts": [
+                    1984,
+                    6
+                  ],
+                  "year": 1984
+                },
+                {
+                  "kind": "published-online",
+                  "date_parts": [
+                    1984,
+                    6,
+                    1
+                  ],
+                  "year": 1984
+                },
+                {
+                  "kind": "published",
+                  "date_parts": [
+                    1984,
+                    6
+                  ],
+                  "year": 1984
+                }
+              ],
+              "selected_date": {
+                "kind": "published-print",
+                "date_parts": [
+                  1984,
+                  6
+                ],
+                "year": 1984
+              },
+              "match": {
+                "title": "normalized_exact",
+                "first_author": "exact",
+                "author_overlap": 1,
+                "required_overlap": 1
+              }
+            }
+          ],
+          "queried_at": "2026-10-19T02:30:14.900097+00:00"
+        },
+        "year_review": {
+          "policy": "publication-year-evidence-v1",
+          "status": "needs_confirmation",
+          "reason": "missing_publication_context",
+          "rejected_value": 1984
+        }
+      },
+      "raw_receipt_sha256": "363f4ed1e76feded33a34c263f669fc21c346413501bacefb69b00d4300a1e14"
+    },
+    {
+      "item_id": "SS24",
+      "source_sha256": "e78b964422f38b33b43ea55b6a480ce4254701b25ab4e469e4fec651b1ad29b8",
+      "job_id": "b3c7c93955684eb7b358c99cea022097",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "THE AGENDA-SETTING FUNCTION OF MASS MEDIA",
+          "authors": [
+            "Maxwell E. McCombs",
+            "Donald L. Shaw"
+          ],
+          "year": 1972,
+          "language": "en",
+          "source_url": "https://doi.org/10.1086/267990"
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "cc6f1226fc995a2437ae69a720057da6ed11d3597a0272d5dd339a4d62ad94c8"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "19b8216260ed9313ee2cb9cb490eddcb5c00981224c6e304f3281fddd30b8960"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "92734070309e840162afcb711b1346c08dc13920c5fa8965ee7bf661a3f39ed3"
+          },
+          "source_url": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.1086%2F267990",
+            "retrieved_at": "2026-10-19T02:30:25.627084+00:00",
+            "date_type": null,
+            "excerpt_sha256": "12b92d5bba127d24b4fe751f4885aaa2c641454f8d196d7a2c7400e4bddd30d6"
+          },
+          "year": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.1086%2F267990",
+            "retrieved_at": "2026-10-19T02:30:25.627084+00:00",
+            "date_type": "published-print",
+            "excerpt_sha256": "3fcb28b7aa42c98605660ae98b30ee816f2a67751bdc6de2196b7976689aebd8",
+            "short_date_evidence": "published-print: 1972"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "已依据题名和作者吻合的 Crossref 出版记录补全候选字段；请核对来源与日期类型后导入。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 12,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "completed",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [
+            "source_url",
+            "year"
+          ],
+          "conflicts": [],
+          "candidates": [
+            {
+              "title": "The Agenda-Setting Function of Mass Media",
+              "authors": [
+                "Maxwell E. McCombs",
+                "Donald L. Shaw"
+              ],
+              "doi": "10.1086/267990",
+              "source_url": "https://doi.org/10.1086/267990",
+              "record_url": "https://api.crossref.org/works/10.1086%2F267990",
+              "type": "journal-article",
+              "dates": [
+                {
+                  "kind": "published-print",
+                  "date_parts": [
+                    1972
+                  ],
+                  "year": 1972
+                },
+                {
+                  "kind": "published",
+                  "date_parts": [
+                    1972
+                  ],
+                  "year": 1972
+                }
+              ],
+              "selected_date": {
+                "kind": "published-print",
+                "date_parts": [
+                  1972
+                ],
+                "year": 1972
+              },
+              "match": {
+                "title": "normalized_exact",
+                "first_author": "exact",
+                "author_overlap": 2,
+                "required_overlap": 2
+              }
+            }
+          ],
+          "queried_at": "2026-10-19T02:30:25.627084+00:00"
+        },
+        "year_review": {
+          "policy": "crossref-title-authors-v1",
+          "status": "candidate_supported",
+          "source": "crossref",
+          "grounding": "registry_record",
+          "date_type": "published-print"
+        }
+      },
+      "raw_receipt_sha256": "e4d319c9f9ba11bc8c5988942bdf23b303ba326d659f9b7432ef3c56cbd0296d"
+    },
+    {
+      "item_id": "SS25",
+      "source_sha256": "17190882a4d6dc069d2fb62aa27e2c9240045dfdf65e377fff383036c9c129bf",
+      "job_id": "91975e4bfb1c433f92ef8b46f970d032",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "The Spiral of Silence: A Theory of Public Opinion",
+          "authors": [
+            "Elisabeth Noelle-Neumann"
+          ],
+          "year": null,
+          "language": "en",
+          "source_url": null
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "d8964824598c1ed774c882d0be9ff83eeae5a430e9c6c91d3a535e213f9fd909"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "d8964824598c1ed774c882d0be9ff83eeae5a430e9c6c91d3a535e213f9fd909"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "b30b7c8e48d67b10c55b645985fb0e867ad0efa25428b46b33f7221dff0a32e7"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "出版年份待核对：日期摘录没有明确出版或发表语境；已留空，不使用修订日期代填。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "书目查询未找到唯一、题名和作者均吻合的出版记录；缺失字段保持为空，请核对。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 9,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "no_match",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [],
+          "conflicts": [],
+          "candidates": [],
+          "queried_at": "2026-10-19T02:30:34.766380+00:00"
+        },
+        "year_review": {
+          "policy": "publication-year-evidence-v1",
+          "status": "needs_confirmation",
+          "reason": "missing_publication_context",
+          "rejected_value": 1974
+        }
+      },
+      "raw_receipt_sha256": "a81184a0680aefd58e70a1e3907b21ca863b5842181045676c16b890401c8297"
+    },
+    {
+      "item_id": "HU01",
+      "source_sha256": "9eb820f5c942abbfa68d6fc6be43eb88720d62d0779854952c38949060b736a6",
+      "job_id": "36acea60ef55457e9dc77369e13fd33d",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "IS JUSTIFIED TRUE BELIEF KNOWLEDGE?",
+          "authors": [
+            "Edmund L. Gettier"
+          ],
+          "year": null,
+          "language": "en",
+          "source_url": null
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "f6e5563ce134fd44d1c074a2dc10ee40aeed4896b26ca7f83c47928c02c5d890"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "a7b4561bfaf20faf9b4e4e78df90733d07188d409fa6f5ad8cccbec5cf6385b8"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "2c4639c4728563aeec42ee949669a642f9973c5b3d4f57655247c47dcc405c0d"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+          "出版年份待核对：日期摘录没有明确出版或发表语境；已留空，不使用修订日期代填。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "书目查询未找到唯一、题名和作者均吻合的出版记录；缺失字段保持为空，请核对。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 3,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "no_match",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [],
+          "conflicts": [],
+          "candidates": [],
+          "queried_at": "2026-10-19T02:30:43.499770+00:00"
+        },
+        "year_review": {
+          "policy": "publication-year-evidence-v1",
+          "status": "needs_confirmation",
+          "reason": "missing_publication_context",
+          "rejected_value": 1963
+        }
+      },
+      "raw_receipt_sha256": "5658439ada74d136a538084dfb243f294f8f6bea168af2f094cac13479cacf7d"
+    },
+    {
+      "item_id": "HU02",
+      "source_sha256": "1217bc72fc5a2ffbbb95c852319ae29c8f674b288c27725c74db48ef161f2ee4",
+      "job_id": "81e3d5c47f854e5ea10f2845598b2e31",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "What Is It Like to Be a Bat?",
+          "authors": [
+            "Thomas Nagel"
+          ],
+          "year": null,
+          "language": "en",
+          "source_url": null
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "6fa64748ca5f28189b1ce86ac3466b1bcb6759726f55f074b4d6685a688b6934"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "83839a0778e832426ee91b2b1826a9e5d27d5b3984cc71caa3eacbb48130a8eb"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "229a2761b385bc8cd8126cf9d77c237f2fcd7e1dd4abd0997bb442585be3b51e"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "出版年份待核对：日期摘录没有明确出版或发表语境；已留空，不使用修订日期代填。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "书目查询未找到唯一、题名和作者均吻合的出版记录；缺失字段保持为空，请核对。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 17,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "no_match",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [],
+          "conflicts": [],
+          "candidates": [],
+          "queried_at": "2026-10-19T02:30:53.756768+00:00"
+        },
+        "year_review": {
+          "policy": "publication-year-evidence-v1",
+          "status": "needs_confirmation",
+          "reason": "missing_publication_context",
+          "rejected_value": 1974
+        }
+      },
+      "raw_receipt_sha256": "fe9cf7eeed54e4c8e73e3c64e0e8356d1047ac5c79173bcbf45c00fe4800bf26"
+    },
+    {
+      "item_id": "HU03",
+      "source_sha256": "d85e51aac35ae7985daf2c0a272fec36463a5c15a3d94c530d164a6c0f758d3a",
+      "job_id": "2568df1ad8fe437497da305ca8a65e2c",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "Minds, Brains, and Programs",
+          "authors": [
+            "John R. Searle"
+          ],
+          "year": 1980,
+          "language": "en",
+          "source_url": null
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "e571b33aa63c29b168554fe60c43106cb876fc02d7b5e1acf75ba3d17465e8d9"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "88948eda01c10a887cec69374afeeb4f7befc9e8464f07488507287e67303278"
+          },
+          "year": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "date_type": "copyright",
+            "grounding": "page_text",
+            "excerpt_sha256": "56d637842428441f0547ec437d2ff34a8199017e177070a08882dd8f8c236842",
+            "short_date_evidence": "This is the unedited penultimate draft of a BBS target article that has been accepted for publication (Copyright"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "e571b33aa63c29b168554fe60c43106cb876fc02d7b5e1acf75ba3d17465e8d9"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+          "年份为正文日期候选，请确认是否为正式出版年份。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "书目查询未找到唯一、题名和作者均吻合的出版记录；缺失字段保持为空，请核对。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 17,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 4
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "no_match",
+          "missing_before": [
+            "source_url"
+          ],
+          "filled_fields": [],
+          "conflicts": [],
+          "candidates": [],
+          "queried_at": "2026-10-19T02:31:03.613733+00:00"
+        },
+        "year_review": {
+          "policy": "publication-year-evidence-v1",
+          "status": "candidate_supported",
+          "source": "api",
+          "grounding": "page_text"
+        }
+      },
+      "raw_receipt_sha256": "32f7047d823ad0dfa3faf04aad6ddd22caf949212a108892545584963964f6df"
+    },
+    {
+      "item_id": "HU04",
+      "source_sha256": "02b2c4e61fa10c94232031d5a1b60be0319f3b5d7c0b8a719683855ad6d1e205",
+      "job_id": "5905d9cc9c8c42d497c5c7ce41df33cd",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "Two Dogmas of Empiricism",
+          "authors": [
+            "W. V. Quine"
+          ],
+          "year": null,
+          "language": "en",
+          "source_url": null
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "0f14e4f49f3dd94d2fafe6bfe6e28b7329e4d858b2f1be1a1dcb72324a897969"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "a623c5764d8743513ef46a6bca917376da489c248789ec65c02cedc6765c8f1d"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "e51e94f89b901bc8f62e3ea7f2a02b50f2b0915698041208ce9dc277b562524c"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "出版年份待核对：日期摘录没有明确出版或发表语境；已留空，不使用修订日期代填。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "书目查询未找到唯一、题名和作者均吻合的出版记录；缺失字段保持为空，请核对。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 25,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "no_match",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [],
+          "conflicts": [],
+          "candidates": [],
+          "queried_at": "2026-10-19T02:31:13.673456+00:00"
+        },
+        "year_review": {
+          "policy": "publication-year-evidence-v1",
+          "status": "needs_confirmation",
+          "reason": "missing_publication_context",
+          "rejected_value": 1951
+        }
+      },
+      "raw_receipt_sha256": "80f2df7a4d85381b68b1f4e6d468d51eeba7f94496fbc4ee593b3eb709f4932b"
+    },
+    {
+      "item_id": "HU05",
+      "source_sha256": "a03109b54b6bd14d34fbc879a6f5c45a38917aa923fc6770ca07fbaf6a19f879",
+      "job_id": "e244b6ca9e7644c2a45e1a68a2631a96",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "Alternate Possibilities and Moral Responsibility",
+          "authors": [
+            "Harry G. Frankfurt"
+          ],
+          "year": 1969,
+          "language": "en",
+          "source_url": "https://doi.org/10.2307/2023833"
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "5f40c3841181ef3cffe22680d10f1b97b86378712615ab0b2f8acb3f662a8835"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "5f40c3841181ef3cffe22680d10f1b97b86378712615ab0b2f8acb3f662a8835"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "59828dacd74283cf44910ded0a7f480a18b38ce3c16c3519ef030c37116f859b"
+          },
+          "source_url": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.2307%2F2023833",
+            "retrieved_at": "2026-10-19T02:31:23.114773+00:00",
+            "date_type": null,
+            "excerpt_sha256": "7b3a01df984d64ee2066190766bf43da2a240c21403f7994d3e46951bdb5334c"
+          },
+          "year": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.2307%2F2023833",
+            "retrieved_at": "2026-10-19T02:31:23.114773+00:00",
+            "date_type": "published-print",
+            "excerpt_sha256": "7c3a322e0fa11bfd647ab42ad8d83e611cf39cdcdd939f6836e4e99a1f7b42d9",
+            "short_date_evidence": "published-print: 1969-12-4"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "已依据题名和作者吻合的 Crossref 出版记录补全候选字段；请核对来源与日期类型后导入。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 12,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "completed",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [
+            "source_url",
+            "year"
+          ],
+          "conflicts": [],
+          "candidates": [
+            {
+              "title": "Alternate Possibilities and Moral Responsibility",
+              "authors": [
+                "Harry G. Frankfurt"
+              ],
+              "doi": "10.2307/2023833",
+              "source_url": "https://doi.org/10.2307/2023833",
+              "record_url": "https://api.crossref.org/works/10.2307%2F2023833",
+              "type": "journal-article",
+              "dates": [
+                {
+                  "kind": "published-print",
+                  "date_parts": [
+                    1969,
+                    12,
+                    4
+                  ],
+                  "year": 1969
+                },
+                {
+                  "kind": "published",
+                  "date_parts": [
+                    1969,
+                    12,
+                    4
+                  ],
+                  "year": 1969
+                }
+              ],
+              "selected_date": {
+                "kind": "published-print",
+                "date_parts": [
+                  1969,
+                  12,
+                  4
+                ],
+                "year": 1969
+              },
+              "match": {
+                "title": "normalized_exact",
+                "first_author": "exact",
+                "author_overlap": 1,
+                "required_overlap": 1
+              }
+            }
+          ],
+          "queried_at": "2026-10-19T02:31:23.114773+00:00"
+        },
+        "year_review": {
+          "policy": "crossref-title-authors-v1",
+          "status": "candidate_supported",
+          "source": "crossref",
+          "grounding": "registry_record",
+          "date_type": "published-print"
+        }
+      },
+      "raw_receipt_sha256": "645608db6ee20bee69a4797342dae957ce65279f1bd3bed09d53880e2ec98b33"
+    },
+    {
+      "item_id": "HU06",
+      "source_sha256": "1023b7400fc34cf7a91804483100709d610e1f8e0951d171bb49b7b2b61c5dd5",
+      "job_id": "00b86d4fc60b4ee4ba2871700954aae1",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "Justice as Fairness",
+          "authors": [
+            "John Rawls"
+          ],
+          "year": null,
+          "language": "en",
+          "source_url": null
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "934a3a76dd3b68347235d1e2c1b314bf9025b2b349985965f16b0738c8e257c4"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "934a3a76dd3b68347235d1e2c1b314bf9025b2b349985965f16b0738c8e257c4"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "e218b3fc0dc2b878b7291a6c15d8cf9bef6d911cafabfc1d872e7693dbecfeda"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "出版年份待核对：没有明确出版年份证据；已留空，不使用修订日期代填。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "书目查询未找到唯一、题名和作者均吻合的出版记录；缺失字段保持为空，请核对。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 32,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "no_match",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [],
+          "conflicts": [],
+          "candidates": [],
+          "queried_at": "2026-10-19T02:31:31.402999+00:00"
+        },
+        "year_review": {
+          "policy": "publication-year-evidence-v1",
+          "status": "needs_confirmation",
+          "reason": "not_provided",
+          "rejected_value": null
+        }
+      },
+      "raw_receipt_sha256": "c2245898cf6aa494e225affaab6f4b7e4bdffeb1c112737f2f10a7a3d9d1173c"
+    },
+    {
+      "item_id": "HU07",
+      "source_sha256": "9b3975b5f7aeb38cb758a9fec97a3f9f3d861c56eef2277e4c3d4b112da421a4",
+      "job_id": "f0d1b2532a2746f8b70330b1ea3d7a4b",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "Computing Machinery and Intelligence",
+          "authors": [
+            "A. M. Turing"
+          ],
+          "year": null,
+          "language": "en",
+          "source_url": null
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "a5768de7f92944da3c93e145fb2eff67138f2508d083b73cd63f24e473d6fe98"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "ccc226886d847df030e74cd8a9a6c4b9cb3fb8fc09efa63f37bc04d12e489c23"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "0e0bf50e871470ab70711d86633d5a132ef0cae63a96346591c5713693bf5e48"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+          "出版年份待核对：日期摘录没有明确出版或发表语境；已留空，不使用修订日期代填。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "书目查询未找到唯一、题名和作者均吻合的出版记录；缺失字段保持为空，请核对。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 28,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "no_match",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [],
+          "conflicts": [],
+          "candidates": [],
+          "queried_at": "2026-10-19T02:31:40.390771+00:00"
+        },
+        "year_review": {
+          "policy": "publication-year-evidence-v1",
+          "status": "needs_confirmation",
+          "reason": "missing_publication_context",
+          "rejected_value": 1950
+        }
+      },
+      "raw_receipt_sha256": "262bdf02204271b258b8d21b0cb6c451887697516212b4a9c84f31e342527532"
+    },
+    {
+      "item_id": "HU08",
+      "source_sha256": "7872906c3e225ab15a16bf2d4cd64d85b5b2767113d2c451af8cd7fd21b2c36a",
+      "job_id": "b64992035bc04347b0d8d2f88ca91f9e",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "Modern Moral Philosophy",
+          "authors": [
+            "G. E. M. Anscombe"
+          ],
+          "year": 1958,
+          "language": "en",
+          "source_url": "https://doi.org/10.1017/s0031819100037943"
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "c26f7fd4d88f967e74c875bca3fab244e6d28a2154d1f3c1e0ab450231504d81"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "1c671368a475165ac6d0f02719b6c493c871b6829717d125c7d00a6389265043"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "d3d1fec2da6f39bd81a4a0b261fef01bf7cb556837bb3659c3d7ebc34724eb82"
+          },
+          "source_url": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.1017%2Fs0031819100037943",
+            "retrieved_at": "2026-10-19T02:31:51.869062+00:00",
+            "date_type": null,
+            "excerpt_sha256": "9cbc21c63e91cad7a4ecf5295bbb3e96c02e3dcab239fb58716ed813b700c079"
+          },
+          "year": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.1017%2Fs0031819100037943",
+            "retrieved_at": "2026-10-19T02:31:51.869062+00:00",
+            "date_type": "published-print",
+            "excerpt_sha256": "87cb770682acaaacf42857a851bb8c647a08e0b20d45abe181f70428f7e3a7af",
+            "short_date_evidence": "published-print: 1958-1"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "已依据题名和作者吻合的 Crossref 出版记录补全候选字段；请核对来源与日期类型后导入。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 16,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "completed",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [
+            "source_url",
+            "year"
+          ],
+          "conflicts": [],
+          "candidates": [
+            {
+              "title": "Modern Moral Philosophy",
+              "authors": [
+                "G. E. M. Anscombe"
+              ],
+              "doi": "10.1017/s0031819100037943",
+              "source_url": "https://doi.org/10.1017/s0031819100037943",
+              "record_url": "https://api.crossref.org/works/10.1017%2Fs0031819100037943",
+              "type": "journal-article",
+              "dates": [
+                {
+                  "kind": "published-print",
+                  "date_parts": [
+                    1958,
+                    1
+                  ],
+                  "year": 1958
+                },
+                {
+                  "kind": "published-online",
+                  "date_parts": [
+                    2009,
+                    2,
+                    25
+                  ],
+                  "year": 2009
+                },
+                {
+                  "kind": "published",
+                  "date_parts": [
+                    1958,
+                    1
+                  ],
+                  "year": 1958
+                }
+              ],
+              "selected_date": {
+                "kind": "published-print",
+                "date_parts": [
+                  1958,
+                  1
+                ],
+                "year": 1958
+              },
+              "match": {
+                "title": "normalized_exact",
+                "first_author": "exact",
+                "author_overlap": 1,
+                "required_overlap": 1
+              }
+            }
+          ],
+          "queried_at": "2026-10-19T02:31:51.869062+00:00"
+        },
+        "year_review": {
+          "policy": "crossref-title-authors-v1",
+          "status": "candidate_supported",
+          "source": "crossref",
+          "grounding": "registry_record",
+          "date_type": "published-print"
+        }
+      },
+      "raw_receipt_sha256": "794107698445a5e2805387f3f75f36c4cf4e8fea12d92f60f060d68cae93014b"
+    },
+    {
+      "item_id": "HU09",
+      "source_sha256": "1a468da1fc2a64cb7f197ff4a826b53dd7741660beae254a05f249b6c84c3254",
+      "job_id": "301ce87bce194dfd956905ce0a376d4a",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "The Problem of Abortion and the Doctrine of the Double Effect",
+          "authors": [
+            "Philippa Foot"
+          ],
+          "year": null,
+          "language": "en",
+          "source_url": null
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "0f649e7809c32fa1e9541c306eca93d45bc26be07e7974216d687907f065f1d1"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "21ee19c04322c7a80bf93ac86ed2a0dbdbd9554549a35d7fd5e031aba341670a"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "be59019a7ebc31ef40db3da647b3c73a331d9272db0ea122f22e1ea3f7dec406"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+          "出版年份待核对：日期摘录没有明确出版或发表语境；已留空，不使用修订日期代填。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "书目查询未找到唯一、题名和作者均吻合的出版记录；缺失字段保持为空，请核对。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 7,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "no_match",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [],
+          "conflicts": [],
+          "candidates": [],
+          "queried_at": "2026-10-19T02:32:03.084376+00:00"
+        },
+        "year_review": {
+          "policy": "publication-year-evidence-v1",
+          "status": "needs_confirmation",
+          "reason": "missing_publication_context",
+          "rejected_value": 1967
+        }
+      },
+      "raw_receipt_sha256": "2cae48267b222a8bcc9286f7e1a82ffb46c6fb27f0bb0d5f46596494a3a0869f"
+    },
+    {
+      "item_id": "HU10",
+      "source_sha256": "5ca70a6d9fdc37a22d0e0aa97a6318e39684257d3e07cd44c5c72dafa610c712",
+      "job_id": "7219e814444e4b8b880c9ede8755ee80",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "Actions, Reasons, and Causes",
+          "authors": [
+            "Donald Davidson"
+          ],
+          "year": 1963,
+          "language": "en",
+          "source_url": "https://doi.org/10.2307/2023177"
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "586b99ea2acd0d2daecbccf53bdb9c1cb763cedc514085ebc3fb7a6a40552184"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "188070aabb5512c7bc10568513d2ab7d8e727a27f80e0b7a44bfbee2750073a8"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "e7f141c4d0f45107e2339c4a07b7ccae42b91c280ae3513ddc829165be61f9da"
+          },
+          "source_url": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.2307%2F2023177",
+            "retrieved_at": "2026-10-19T02:32:14.228578+00:00",
+            "date_type": null,
+            "excerpt_sha256": "81cc3270ae7779756f4b7dbc820bb5610431bc87c436a21496a17b4adfa9297f"
+          },
+          "year": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.2307%2F2023177",
+            "retrieved_at": "2026-10-19T02:32:14.228578+00:00",
+            "date_type": "published-print",
+            "excerpt_sha256": "726a0276f07c14b875679e30034f37e855e1828f6107280e0c21bf19cf42536d",
+            "short_date_evidence": "published-print: 1963-11-7"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "已依据题名和作者吻合的 Crossref 出版记录补全候选字段；请核对来源与日期类型后导入。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 17,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "completed",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [
+            "source_url",
+            "year"
+          ],
+          "conflicts": [],
+          "candidates": [
+            {
+              "title": "Actions, Reasons, and Causes",
+              "authors": [
+                "Donald Davidson"
+              ],
+              "doi": "10.2307/2023177",
+              "source_url": "https://doi.org/10.2307/2023177",
+              "record_url": "https://api.crossref.org/works/10.2307%2F2023177",
+              "type": "journal-article",
+              "dates": [
+                {
+                  "kind": "published-print",
+                  "date_parts": [
+                    1963,
+                    11,
+                    7
+                  ],
+                  "year": 1963
+                },
+                {
+                  "kind": "published",
+                  "date_parts": [
+                    1963,
+                    11,
+                    7
+                  ],
+                  "year": 1963
+                }
+              ],
+              "selected_date": {
+                "kind": "published-print",
+                "date_parts": [
+                  1963,
+                  11,
+                  7
+                ],
+                "year": 1963
+              },
+              "match": {
+                "title": "normalized_exact",
+                "first_author": "exact",
+                "author_overlap": 1,
+                "required_overlap": 1
+              }
+            }
+          ],
+          "queried_at": "2026-10-19T02:32:14.228578+00:00"
+        },
+        "year_review": {
+          "policy": "crossref-title-authors-v1",
+          "status": "candidate_supported",
+          "source": "crossref",
+          "grounding": "registry_record",
+          "date_type": "published-print"
+        }
+      },
+      "raw_receipt_sha256": "79e141e808da37d4ea28b3fb819e13e1d84a6c42e7a9a26865a66ca746e90d8e"
+    },
+    {
+      "item_id": "HU11",
+      "source_sha256": "ee8c6c83448890881931f6e926fbcd65f57a06982610eb549039b4fd3084b255",
+      "job_id": "f7a36a4ac9d1443ba3f92a6405e14b81",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "THE DEATH OF THE AUTHOR",
+          "authors": [
+            "ROLAND BARTHES"
+          ],
+          "year": null,
+          "language": "en",
+          "source_url": null
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "937577d26ed66a8e8df14ef235a4e4314693ad2f80a7dfdbe75eec85339d8ce2"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "d83e69240e4e6f509e6baa5fa056cbf9bb6103d2a96239dbb10a0e8403494262"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "152352e2ce19fa7d1b0d3c72387b1427dba11bc2da88de9d7e26543f588d8a93"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+          "出版年份待核对：没有明确出版年份证据；已留空，不使用修订日期代填。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "书目查询未找到唯一、题名和作者均吻合的出版记录；缺失字段保持为空，请核对。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 6,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "no_match",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [],
+          "conflicts": [],
+          "candidates": [],
+          "queried_at": "2026-10-19T02:32:23.086087+00:00"
+        },
+        "year_review": {
+          "policy": "publication-year-evidence-v1",
+          "status": "needs_confirmation",
+          "reason": "not_provided",
+          "rejected_value": null
+        }
+      },
+      "raw_receipt_sha256": "f202cb44b3d0b9ae91a589994ffe0770614eb85b196edd60056f5e774890e4b9"
+    },
+    {
+      "item_id": "HU12",
+      "source_sha256": "195eefce6d8d47a4d1ec96a5636be74d236abd51cc13baafa17b6b385dd8d8fb",
+      "job_id": "73d78da4e55e4702b1da9efdb6a7e527",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "WHAT IS AN AUTHOR?",
+          "authors": [
+            "Michel Foucault"
+          ],
+          "year": null,
+          "language": "en",
+          "source_url": null
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "fbf7d5258bc51c796702a13aac85413870913636e1622d04edcd7cdaed5d56d7"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "d015eaacaa1fc99b42fa794ebbf27df6183740bc8cccafdeaa70f0845009751a"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "8dda1c2cd98e297a8010514209fc772556aa6938a7f100566b47768da95abfa8"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "出版年份待核对：没有明确出版年份证据；已留空，不使用修订日期代填。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "书目查询未找到唯一、题名和作者均吻合的出版记录；缺失字段保持为空，请核对。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 6,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "no_match",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [],
+          "conflicts": [],
+          "candidates": [],
+          "queried_at": "2026-10-19T02:32:31.461471+00:00"
+        },
+        "year_review": {
+          "policy": "publication-year-evidence-v1",
+          "status": "needs_confirmation",
+          "reason": "not_provided",
+          "rejected_value": null
+        }
+      },
+      "raw_receipt_sha256": "c81e0b79ea3adbaa9272d544203a750af0287bb8037091eceb1182d3e8392b48"
+    },
+    {
+      "item_id": "HU13",
+      "source_sha256": "1a91e33d3c2cf64e91a8af2381bfe7fb3d1eefca6bc5996519d5852432a9c136",
+      "job_id": "744a0134860f49628dca02e808348600",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "The Work of Art in the Age of Mechanical Reproduction",
+          "authors": [
+            "Walter Benjamin"
+          ],
+          "year": null,
+          "language": "en",
+          "source_url": null
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "378b3831be0b75f071606b208219d28f07341861c9956f5898c97ce450c3c279"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "378b3831be0b75f071606b208219d28f07341861c9956f5898c97ce450c3c279"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "0512527157cddcb52ba45dd078c9b96fafb47ef8f623318bf6296448c32367dc"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "出版年份待核对：没有明确出版年份证据；已留空，不使用修订日期代填。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "书目查询未找到唯一、题名和作者均吻合的出版记录；缺失字段保持为空，请核对。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 35,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "no_match",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [],
+          "conflicts": [],
+          "candidates": [],
+          "queried_at": "2026-10-19T02:32:40.555571+00:00"
+        },
+        "year_review": {
+          "policy": "publication-year-evidence-v1",
+          "status": "needs_confirmation",
+          "reason": "not_provided",
+          "rejected_value": null
+        }
+      },
+      "raw_receipt_sha256": "4f1416dda28ce7a32508eed3daed541b19c5303c206dae215424ed0e15683242"
+    },
+    {
+      "item_id": "HU14",
+      "source_sha256": "28795793f06084d0f159e720011cd25e938bb375d185bb478155279a473d86b3",
+      "job_id": "7f9f006223704008a36c84da5f6bf124",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "Conjectures on World Literature",
+          "authors": [
+            "Franco Moretti"
+          ],
+          "year": 2000,
+          "language": "en",
+          "source_url": "https://doi.org/10.64590/hxj"
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "7a6362fdbc572af3135f881c7be340198a344931b20b5056038ae195a803ed59"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "450e432897cf13939568a3b347c55feea59ee1307afe059a445fd46f507dcb07"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "7a6362fdbc572af3135f881c7be340198a344931b20b5056038ae195a803ed59"
+          },
+          "source_url": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.64590%2Fhxj",
+            "retrieved_at": "2026-10-19T02:32:49.484831+00:00",
+            "date_type": null,
+            "excerpt_sha256": "a7cd47632d7b668f49885dbd8cbd7bc917e5ed1efc2e89e90f0b801ae53a75c4"
+          },
+          "year": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.64590%2Fhxj",
+            "retrieved_at": "2026-10-19T02:32:49.484831+00:00",
+            "date_type": "published-print",
+            "excerpt_sha256": "f320d8f2777c4d4568b6afbd2bde9a5b1d515fb2a532f6ba6257d0702c62d86f",
+            "short_date_evidence": "published-print: 2000-1-31"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "已依据题名和作者吻合的 Crossref 出版记录补全候选字段；请核对来源与日期类型后导入。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 15,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "completed",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [
+            "source_url",
+            "year"
+          ],
+          "conflicts": [],
+          "candidates": [
+            {
+              "title": "Conjectures on World Literature",
+              "authors": [
+                "Franco Moretti"
+              ],
+              "doi": "10.64590/hxj",
+              "source_url": "https://doi.org/10.64590/hxj",
+              "record_url": "https://api.crossref.org/works/10.64590%2Fhxj",
+              "type": "journal-article",
+              "dates": [
+                {
+                  "kind": "published-print",
+                  "date_parts": [
+                    2000,
+                    1,
+                    31
+                  ],
+                  "year": 2000
+                },
+                {
+                  "kind": "published-online",
+                  "date_parts": [
+                    2000,
+                    2,
+                    1
+                  ],
+                  "year": 2000
+                },
+                {
+                  "kind": "published",
+                  "date_parts": [
+                    2000,
+                    1,
+                    31
+                  ],
+                  "year": 2000
+                }
+              ],
+              "selected_date": {
+                "kind": "published-print",
+                "date_parts": [
+                  2000,
+                  1,
+                  31
+                ],
+                "year": 2000
+              },
+              "match": {
+                "title": "normalized_exact",
+                "first_author": "exact",
+                "author_overlap": 1,
+                "required_overlap": 1
+              }
+            }
+          ],
+          "queried_at": "2026-10-19T02:32:49.484831+00:00"
+        },
+        "year_review": {
+          "policy": "crossref-title-authors-v1",
+          "status": "candidate_supported",
+          "source": "crossref",
+          "grounding": "registry_record",
+          "date_type": "published-print"
+        }
+      },
+      "raw_receipt_sha256": "52c6b5de41af353b7938ba752ca305ae696aa69aaef57ec074c15a95dc008612"
+    },
+    {
+      "item_id": "HU15",
+      "source_sha256": "be2b05758ad2299b097b17af0a506d20fcfd8309aa20175b39d61f481a5d88c1",
+      "job_id": "7f45390c2de84eb8ad79fa12c6da0a30",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "Quantitative Formalism: an Experiment",
+          "authors": [
+            "Sarah Allison",
+            "Ryan Heuser",
+            "Matthew Jockers",
+            "Franco Moretti",
+            "Michael Witmore"
+          ],
+          "year": null,
+          "language": "en",
+          "source_url": null
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "26859c652128daecf597cae1d9dfc274882da61e938041159630f7a82bba7ad3"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "e482ffab410b42fb3e7dbd7bf536ea64ed1467ec7898443b97ce8cd885e28023"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "26859c652128daecf597cae1d9dfc274882da61e938041159630f7a82bba7ad3"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+          "出版年份待核对：没有明确出版年份证据；已留空，不使用修订日期代填。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "书目查询未找到唯一、题名和作者均吻合的出版记录；缺失字段保持为空，请核对。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 29,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "no_match",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [],
+          "conflicts": [],
+          "candidates": [],
+          "queried_at": "2026-10-19T02:32:57.562303+00:00"
+        },
+        "year_review": {
+          "policy": "publication-year-evidence-v1",
+          "status": "needs_confirmation",
+          "reason": "not_provided",
+          "rejected_value": null
+        }
+      },
+      "raw_receipt_sha256": "66b2d589b892142dff0c906b3139cd4c2e7d58824b2a9e704db1d1cc744095f1"
+    },
+    {
+      "item_id": "HU16",
+      "source_sha256": "07152dc9a5e458389bfe7aed56eb453280dcef8efcb4db5f9bf6ad542df6edb8",
+      "job_id": "dbb5c2c265d8430ea37b5b648727f911",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "Tradition and the Individual Talent",
+          "authors": [
+            "T. S. Eliot"
+          ],
+          "year": 1982,
+          "language": "en",
+          "source_url": "https://doi.org/10.2307/1567048"
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "a1325149e3a82c5776f73113c2b85448a99ce2f96b3c06bd8fc4ee6c4ea5c8db"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "a095fa0edefdec51027f1e9eca26445139428902404cc759f666fbbdea53745a"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "ee037209b0164b24cc8c5d4fb223f1df33318d958376c3c0aad6a3fe6a2f30bd"
+          },
+          "source_url": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.2307%2F1567048",
+            "retrieved_at": "2026-10-19T02:33:07.815892+00:00",
+            "date_type": null,
+            "excerpt_sha256": "8453ebb816dc072753e9126a2a10cd1bb582a4c083b1a41182311b3a9e2d3054"
+          },
+          "year": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.2307%2F1567048",
+            "retrieved_at": "2026-10-19T02:33:07.815892+00:00",
+            "date_type": "published-print",
+            "excerpt_sha256": "cff20ad4bc83eed30d851e6c1ea157b17b9bef77309c18abe74896d044a23795",
+            "short_date_evidence": "published-print: 1982"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "已依据题名和作者吻合的 Crossref 出版记录补全候选字段；请核对来源与日期类型后导入。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 8,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "completed",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [
+            "source_url",
+            "year"
+          ],
+          "conflicts": [],
+          "candidates": [
+            {
+              "title": "Tradition and the Individual Talent",
+              "authors": [
+                "T. S. Eliot"
+              ],
+              "doi": "10.2307/1567048",
+              "source_url": "https://doi.org/10.2307/1567048",
+              "record_url": "https://api.crossref.org/works/10.2307%2F1567048",
+              "type": "journal-article",
+              "dates": [
+                {
+                  "kind": "published-print",
+                  "date_parts": [
+                    1982
+                  ],
+                  "year": 1982
+                },
+                {
+                  "kind": "published",
+                  "date_parts": [
+                    1982
+                  ],
+                  "year": 1982
+                }
+              ],
+              "selected_date": {
+                "kind": "published-print",
+                "date_parts": [
+                  1982
+                ],
+                "year": 1982
+              },
+              "match": {
+                "title": "normalized_exact",
+                "first_author": "exact",
+                "author_overlap": 1,
+                "required_overlap": 1
+              }
+            }
+          ],
+          "queried_at": "2026-10-19T02:33:07.815892+00:00"
+        },
+        "year_review": {
+          "policy": "crossref-title-authors-v1",
+          "status": "candidate_supported",
+          "source": "crossref",
+          "grounding": "registry_record",
+          "date_type": "published-print"
+        }
+      },
+      "raw_receipt_sha256": "183860d3ac368e21ad75e4fd8077a47988f0a2c22c916bd5ef26d0c0c8c8eb33"
+    },
+    {
+      "item_id": "HU17",
+      "source_sha256": "a35ec14b257ebf55843910a1571ddcea0f30ae45397edbd6eff5221afbe2f31a",
+      "job_id": "5e4bf02798424c188ea235b4ea7a8646",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "The Value of Narrativity in the Representation of Reality",
+          "authors": [
+            "Hayden White"
+          ],
+          "year": 1980,
+          "language": "en",
+          "source_url": "https://doi.org/10.1086/448086"
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "9663f39665ebe450599b09704f8b75f953e49de5ac60c1c68c909cf83fc85b7c"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "85e32c278631207ae5d2c48ac20cc62606cd153aa897e337661a6d4fdbf92a8b"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "342020162a3b087a022d250cd513e148445f07465653033ddc197b13c57af28e"
+          },
+          "source_url": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.1086%2F448086",
+            "retrieved_at": "2026-10-19T02:33:19.917018+00:00",
+            "date_type": null,
+            "excerpt_sha256": "84549215f32218d5f04c29307760b57545c6eeaf503d55717adb4b823e6f0a76"
+          },
+          "year": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.1086%2F448086",
+            "retrieved_at": "2026-10-19T02:33:19.917018+00:00",
+            "date_type": "published-print",
+            "excerpt_sha256": "74dbb36a49b51b0246f53e81b745c19eb62dfd490e80404ef435cdf507fd86f0",
+            "short_date_evidence": "published-print: 1980-10"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "已依据题名和作者吻合的 Crossref 出版记录补全候选字段；请核对来源与日期类型后导入。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 23,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "completed",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [
+            "source_url",
+            "year"
+          ],
+          "conflicts": [],
+          "candidates": [
+            {
+              "title": "The Value of Narrativity in the Representation of Reality",
+              "authors": [
+                "Hayden White"
+              ],
+              "doi": "10.1086/448086",
+              "source_url": "https://doi.org/10.1086/448086",
+              "record_url": "https://api.crossref.org/works/10.1086%2F448086",
+              "type": "journal-article",
+              "dates": [
+                {
+                  "kind": "published-print",
+                  "date_parts": [
+                    1980,
+                    10
+                  ],
+                  "year": 1980
+                },
+                {
+                  "kind": "published",
+                  "date_parts": [
+                    1980,
+                    10
+                  ],
+                  "year": 1980
+                }
+              ],
+              "selected_date": {
+                "kind": "published-print",
+                "date_parts": [
+                  1980,
+                  10
+                ],
+                "year": 1980
+              },
+              "match": {
+                "title": "normalized_exact",
+                "first_author": "exact",
+                "author_overlap": 1,
+                "required_overlap": 1
+              }
+            }
+          ],
+          "queried_at": "2026-10-19T02:33:19.917018+00:00"
+        },
+        "year_review": {
+          "policy": "crossref-title-authors-v1",
+          "status": "candidate_supported",
+          "source": "crossref",
+          "grounding": "registry_record",
+          "date_type": "published-print"
+        }
+      },
+      "raw_receipt_sha256": "5fca0dc1bcd141b1bdd8dd2c37d49d76e7a8b2ed7a783856c767f2a1efec5517"
+    },
+    {
+      "item_id": "HU18",
+      "source_sha256": "d5183489250f006c7175d032ea1439ab2075309669672757baf32240d6c9d9a3",
+      "job_id": "049ce09ec91c46858f8feb111b7ded36",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "Gender: A Useful Category of Historical Analysis",
+          "authors": [
+            "Joan W. Scott"
+          ],
+          "year": null,
+          "language": "en",
+          "source_url": null
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "9f7d2653e23dd5ba023dc825e961222df4eb2aca367adfa90bd9a8a433dad5ab"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "9f7d2653e23dd5ba023dc825e961222df4eb2aca367adfa90bd9a8a433dad5ab"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "0faef91e9567827fa45f3454f094d8689a5e2cdea1d053f1c14a4120fee67bb4"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "出版年份待核对：没有明确出版年份证据；已留空，不使用修订日期代填。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "书目查询未找到唯一、题名和作者均吻合的出版记录；缺失字段保持为空，请核对。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 24,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "ambiguous",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [],
+          "conflicts": [],
+          "candidates": [
+            {
+              "title": "Gender: A Useful Category of Historical Analysis",
+              "authors": [
+                "Joan W. Scott"
+              ],
+              "doi": "10.2307/1864376",
+              "source_url": "https://doi.org/10.2307/1864376",
+              "record_url": "https://api.crossref.org/works/10.2307%2F1864376",
+              "type": "journal-article",
+              "dates": [
+                {
+                  "kind": "published-print",
+                  "date_parts": [
+                    1986,
+                    12
+                  ],
+                  "year": 1986
+                },
+                {
+                  "kind": "published",
+                  "date_parts": [
+                    1986,
+                    12
+                  ],
+                  "year": 1986
+                }
+              ],
+              "selected_date": {
+                "kind": "published-print",
+                "date_parts": [
+                  1986,
+                  12
+                ],
+                "year": 1986
+              },
+              "match": {
+                "title": "normalized_exact",
+                "first_author": "exact",
+                "author_overlap": 1,
+                "required_overlap": 1
+              }
+            },
+            {
+              "title": "Gender: A Useful Category of Historical Analysis",
+              "authors": [
+                "Joan W. Scott"
+              ],
+              "doi": "10.1086/ahr/91.5.1053",
+              "source_url": "https://doi.org/10.1086/ahr/91.5.1053",
+              "record_url": "https://api.crossref.org/works/10.1086%2Fahr%2F91.5.1053",
+              "type": "journal-article",
+              "dates": [
+                {
+                  "kind": "published-print",
+                  "date_parts": [
+                    1986,
+                    12,
+                    1
+                  ],
+                  "year": 1986
+                },
+                {
+                  "kind": "published-online",
+                  "date_parts": [
+                    1986,
+                    12,
+                    1
+                  ],
+                  "year": 1986
+                },
+                {
+                  "kind": "published",
+                  "date_parts": [
+                    1986,
+                    12,
+                    1
+                  ],
+                  "year": 1986
+                }
+              ],
+              "selected_date": {
+                "kind": "published-print",
+                "date_parts": [
+                  1986,
+                  12,
+                  1
+                ],
+                "year": 1986
+              },
+              "match": {
+                "title": "normalized_exact",
+                "first_author": "exact",
+                "author_overlap": 1,
+                "required_overlap": 1
+              }
+            }
+          ],
+          "queried_at": "2026-10-19T02:33:29.123267+00:00"
+        },
+        "year_review": {
+          "policy": "publication-year-evidence-v1",
+          "status": "needs_confirmation",
+          "reason": "not_provided",
+          "rejected_value": null
+        }
+      },
+      "raw_receipt_sha256": "3d94d265962ef59a5a9fab10cc0ffb2c6e13a7a39ebba6fa1c5a613d9fcd9782"
+    },
+    {
+      "item_id": "HU19",
+      "source_sha256": "85891749cd948bdeadb145cbe49f2677834b387c917e11ca80a9adb17bc104e5",
+      "job_id": "1d6729758c9549c1b458c5e99562d51d",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "Microhistory: Two or Three Things That I Know about It",
+          "authors": [
+            "Carlo Ginzburg"
+          ],
+          "year": null,
+          "language": "en",
+          "source_url": null
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "7de977876dadbde765c4847e5351414fef823c9a611126a858c7bd7b053eaa03"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "cddd92d4a4630d45ab41d380d60d3f993b4b7d7009483102b7a3b2c1fceffe64"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "7de977876dadbde765c4847e5351414fef823c9a611126a858c7bd7b053eaa03"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+          "出版年份待核对：日期摘录没有明确出版或发表语境；已留空，不使用修订日期代填。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "书目查询未找到唯一、题名和作者均吻合的出版记录；缺失字段保持为空，请核对。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 27,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "no_match",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [],
+          "conflicts": [],
+          "candidates": [],
+          "queried_at": "2026-10-19T02:33:41.293511+00:00"
+        },
+        "year_review": {
+          "policy": "publication-year-evidence-v1",
+          "status": "needs_confirmation",
+          "reason": "missing_publication_context",
+          "rejected_value": 1993
+        }
+      },
+      "raw_receipt_sha256": "3d52d4fdd877d84fef03d5d9767931cb8c5fec513884339f17b3b5a237a64282"
+    },
+    {
+      "item_id": "HU20",
+      "source_sha256": "9eecd09a8f3b052d61ef19534de5b15483f3b16b5ed6813f0db54a8349fbeb5b",
+      "job_id": "d69d1d1515fa4be8bc878077a7af6ec0",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "THE HISTORICAL TEXT AS LITERARY ARTIFACT",
+          "authors": [
+            "Hayden White"
+          ],
+          "year": null,
+          "language": "en",
+          "source_url": null
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "f2799e0eb22181fc8c036e6a15096c80ff608c5536240ac22c433609d3882fad"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "1906293a4262f15764ec2750ed87547586b2e39d14c3d64eb27abd26808ecb86"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "f2799e0eb22181fc8c036e6a15096c80ff608c5536240ac22c433609d3882fad"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "出版年份待核对：没有明确出版年份证据；已留空，不使用修订日期代填。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "书目查询未找到唯一、题名和作者均吻合的出版记录；缺失字段保持为空，请核对。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 11,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "no_match",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [],
+          "conflicts": [],
+          "candidates": [],
+          "queried_at": "2026-10-19T02:33:52.628503+00:00"
+        },
+        "year_review": {
+          "policy": "publication-year-evidence-v1",
+          "status": "needs_confirmation",
+          "reason": "not_provided",
+          "rejected_value": null
+        }
+      },
+      "raw_receipt_sha256": "a49f1095ddd67c41952a237997337b21b069d9df5ba653610e2006a0258bb4ee"
+    },
+    {
+      "item_id": "HU21",
+      "source_sha256": "0085c704946dc1e35e736b83c6cf55d48fd7209b6574535c5886404e223cd090",
+      "job_id": "dc0805c9622348c4b567e30d7e344eed",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "Humanities Approaches to Graphical Display",
+          "authors": [
+            "Johanna Drucker"
+          ],
+          "year": 2011,
+          "language": "en",
+          "source_url": "https://doi.org/10.63744/r4ysrh7ae534"
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "1f49598f17fd0eac235f5ff071320116a95cbf434c0f826a31c9a95349bdccb7"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "77cab058bad29f5e35b20cf14cabb7c1e892a070bd960c4009931f2bba93bfc7"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "1f49598f17fd0eac235f5ff071320116a95cbf434c0f826a31c9a95349bdccb7"
+          },
+          "source_url": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.63744%2Fr4ysrh7ae534",
+            "retrieved_at": "2026-10-19T02:34:02.964042+00:00",
+            "date_type": null,
+            "excerpt_sha256": "e196db587295b913c21470253fb894f57946b0afe444b791d5834d3cfc801b3d"
+          },
+          "year": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.63744%2Fr4ysrh7ae534",
+            "retrieved_at": "2026-10-19T02:34:02.964042+00:00",
+            "date_type": "published-online",
+            "excerpt_sha256": "a0409400f68e070f32ba99600d67de17233d981191081b88bae501910679a084",
+            "short_date_evidence": "published-online: 2011-3-10"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "已依据题名和作者吻合的 Crossref 出版记录补全候选字段；请核对来源与日期类型后导入。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 22,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "completed",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [
+            "source_url",
+            "year"
+          ],
+          "conflicts": [],
+          "candidates": [
+            {
+              "title": "Humanities Approaches to Graphical Display",
+              "authors": [
+                "Johanna Drucker"
+              ],
+              "doi": "10.63744/r4ysrh7ae534",
+              "source_url": "https://doi.org/10.63744/r4ysrh7ae534",
+              "record_url": "https://api.crossref.org/works/10.63744%2Fr4ysrh7ae534",
+              "type": "journal-article",
+              "dates": [
+                {
+                  "kind": "published-online",
+                  "date_parts": [
+                    2011,
+                    3,
+                    10
+                  ],
+                  "year": 2011
+                },
+                {
+                  "kind": "published",
+                  "date_parts": [
+                    2011,
+                    3,
+                    10
+                  ],
+                  "year": 2011
+                }
+              ],
+              "selected_date": {
+                "kind": "published-online",
+                "date_parts": [
+                  2011,
+                  3,
+                  10
+                ],
+                "year": 2011
+              },
+              "match": {
+                "title": "normalized_exact",
+                "first_author": "exact",
+                "author_overlap": 1,
+                "required_overlap": 1
+              }
+            }
+          ],
+          "queried_at": "2026-10-19T02:34:02.964042+00:00"
+        },
+        "year_review": {
+          "policy": "crossref-title-authors-v1",
+          "status": "candidate_supported",
+          "source": "crossref",
+          "grounding": "registry_record",
+          "date_type": "published-online"
+        }
+      },
+      "raw_receipt_sha256": "acaa6c7ef0fb900b7323f56152404ee24dabc13f42c13a99808ec86243e3250e"
+    },
+    {
+      "item_id": "HU22",
+      "source_sha256": "6a7a9b63805126ab22fcfe50f23b84e6b7d5d2fcda1ec4d08eb0127887b86a9d",
+      "job_id": "f118d4d4b40d466ea44b234fba23c7c1",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "“Operationalizing”: or, the function of measurement in modern literary theory",
+          "authors": [
+            "Franco Moretti"
+          ],
+          "year": null,
+          "language": "en",
+          "source_url": null
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "abac255129099180feab09fef512035466544737fe53fcc20e446fc6d7a1eccb"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "dbcf8383d8ff3d1a20560d8770e435eb5317ff42f3d0cbeffaae66072f5ee307"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "abac255129099180feab09fef512035466544737fe53fcc20e446fc6d7a1eccb"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+          "出版年份待核对：没有明确出版年份证据；已留空，不使用修订日期代填。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "书目查询未找到唯一、题名和作者均吻合的出版记录；缺失字段保持为空，请核对。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 15,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "no_match",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [],
+          "conflicts": [],
+          "candidates": [],
+          "queried_at": "2026-10-19T02:34:10.285566+00:00"
+        },
+        "year_review": {
+          "policy": "publication-year-evidence-v1",
+          "status": "needs_confirmation",
+          "reason": "not_provided",
+          "rejected_value": null
+        }
+      },
+      "raw_receipt_sha256": "53d9f27ec01cbb349d5445e6b7c61a47a1129c9bc4ec153a19428a409ca3c04f"
+    },
+    {
+      "item_id": "HU23",
+      "source_sha256": "4a2ef0aaf355711963a61313fa6df400d084ddc23f291c42a902ee954db82306",
+      "job_id": "cced2c134c2044f28f3f45b75a50321d",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "A Genealogy of Distant Reading",
+          "authors": [
+            "Ted Underwood"
+          ],
+          "year": 2017,
+          "language": "en",
+          "source_url": "https://doi.org/10.63744/ktwb2atwsbep"
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "706135a4fed1a94e9db1aeea4a8d32b1f8fecf30d8dd8b1d12dae4da264c5af4"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "706135a4fed1a94e9db1aeea4a8d32b1f8fecf30d8dd8b1d12dae4da264c5af4"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "700d42fb91a04cf3b6aff63342aa762c23a0dc07bcad35668f22cc9f699ef11c"
+          },
+          "source_url": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.63744%2Fktwb2atwsbep",
+            "retrieved_at": "2026-10-19T02:34:20.626772+00:00",
+            "date_type": null,
+            "excerpt_sha256": "3bfbae0fb14d04297b12da35f321a98cd8adf2f47034dfb97c8d3d9a749a992a"
+          },
+          "year": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.63744%2Fktwb2atwsbep",
+            "retrieved_at": "2026-10-19T02:34:20.626772+00:00",
+            "date_type": "published-online",
+            "excerpt_sha256": "9d74b93f89a571d14e028ae465593e33122c0027b2ca1fcce6ee7441ed1a0345",
+            "short_date_evidence": "published-online: 2017-6-27"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "已依据题名和作者吻合的 Crossref 出版记录补全候选字段；请核对来源与日期类型后导入。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 13,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "completed",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [
+            "source_url",
+            "year"
+          ],
+          "conflicts": [],
+          "candidates": [
+            {
+              "title": "A Genealogy of Distant Reading",
+              "authors": [
+                "Ted Underwood"
+              ],
+              "doi": "10.63744/ktwb2atwsbep",
+              "source_url": "https://doi.org/10.63744/ktwb2atwsbep",
+              "record_url": "https://api.crossref.org/works/10.63744%2Fktwb2atwsbep",
+              "type": "journal-article",
+              "dates": [
+                {
+                  "kind": "published-online",
+                  "date_parts": [
+                    2017,
+                    6,
+                    27
+                  ],
+                  "year": 2017
+                },
+                {
+                  "kind": "published",
+                  "date_parts": [
+                    2017,
+                    6,
+                    27
+                  ],
+                  "year": 2017
+                }
+              ],
+              "selected_date": {
+                "kind": "published-online",
+                "date_parts": [
+                  2017,
+                  6,
+                  27
+                ],
+                "year": 2017
+              },
+              "match": {
+                "title": "normalized_exact",
+                "first_author": "exact",
+                "author_overlap": 1,
+                "required_overlap": 1
+              }
+            }
+          ],
+          "queried_at": "2026-10-19T02:34:20.626772+00:00"
+        },
+        "year_review": {
+          "policy": "crossref-title-authors-v1",
+          "status": "candidate_supported",
+          "source": "crossref",
+          "grounding": "registry_record",
+          "date_type": "published-online"
+        }
+      },
+      "raw_receipt_sha256": "232a61ffefdd069a6abe783af0157bdfb71b7d0b45150543a6f0cc96abffa14b"
+    },
+    {
+      "item_id": "HU24",
+      "source_sha256": "d149877b4245a53b757b8f81c54fb947c96a74cb58e2367ec2c63166a2fceedb",
+      "job_id": "65a6763bd3a44c6f9cc0ce9757246ecf",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "The Meaning of the Digital Humanities",
+          "authors": [
+            "Alan Liu"
+          ],
+          "year": 2013,
+          "language": "en",
+          "source_url": "https://doi.org/10.1632/pmla.2013.128.2.409"
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "e441d907ddf4c0bb37e0079dd4bbc15ec419009b1dd1bd8b145dbeb86062eb59"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "7449d301231cbd7111df7c202aba3e69b13ce3454a64a8d19224bdc3c6c926de"
+          },
+          "year": {
+            "method": "document_date_candidate",
+            "pdf_page": 1,
+            "date_type": "publication",
+            "grounding": "page_text",
+            "excerpt_sha256": "53b16b195f82203f290d3449b0609412193c03e55328322a2c7096065c9c9162",
+            "short_date_evidence": "Publication Date 2013"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 2,
+            "excerpt_sha256": "f4d0dfb9b73705beb1050d00e0bf09f9d323acd18df855b610b4e0dce76b0e98"
+          },
+          "source_url": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "d0baec1b1a1617c10c6e53e3351126afa81b3e4d812414d672bc40018febb73a"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+          "年份为正文日期候选，请确认是否为正式出版年份。",
+          "API 年份候选未采纳；保留已有、具有出版依据的年份，仍请核对。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 16,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 4
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "not_needed",
+          "missing_before": [],
+          "filled_fields": [],
+          "conflicts": [],
+          "candidates": []
+        },
+        "year_review": {
+          "policy": "publication-year-evidence-v1",
+          "status": "candidate_supported",
+          "source": "validated_seed",
+          "rejected_api_reason": "missing_publication_context"
+        }
+      },
+      "raw_receipt_sha256": "a7cc987992af5bfc6a5abd9e690885190e92431c241719f15d9a0c3bb0fd9edb"
+    },
+    {
+      "item_id": "HU25",
+      "source_sha256": "2df595721dc5502f02d3c657426610fb612731c8022b698ae5b1968a96b92996",
+      "job_id": "01fb11022e1d4116af01db20451de6cf",
+      "stage": "done",
+      "preview": {
+        "metadata": {
+          "title": "The Digital Future is Now: A Call to Action for the Humanities",
+          "authors": [
+            "Christine L. Borgman"
+          ],
+          "year": 2010,
+          "language": "en",
+          "source_url": "https://doi.org/10.63744/au56n57rd75j"
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "80cd6554cd3987bd5f7e5f4f4d0c0ed58e4d4bd9784a8457d2cf90b3ce37f064"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "80cd6554cd3987bd5f7e5f4f4d0c0ed58e4d4bd9784a8457d2cf90b3ce37f064"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt_sha256": "730b65067a4a2b96e1ef423e53ff9ea9791da821afcd5bcda13a55912eed3b87"
+          },
+          "source_url": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.63744%2Fau56n57rd75j",
+            "retrieved_at": "2026-10-19T02:34:39.187684+00:00",
+            "date_type": null,
+            "excerpt_sha256": "4df281f60a59758f4461b677239e30516f6b9ec6a2a6b42267883fe870027885"
+          },
+          "year": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.63744%2Fau56n57rd75j",
+            "retrieved_at": "2026-10-19T02:34:39.187684+00:00",
+            "date_type": "published-online",
+            "excerpt_sha256": "2e2e06dea6384e18f77d94717c456d1c472ffa6429165c5fd4a4e8a4b6108e80",
+            "short_date_evidence": "published-online: 2010-3-20"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序和出版年份。",
+          "已依据题名和作者吻合的 Crossref 出版记录补全候选字段；请核对来源与日期类型后导入。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 20,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-title-authors-v1",
+          "provider": "crossref",
+          "status": "completed",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [
+            "source_url",
+            "year"
+          ],
+          "conflicts": [],
+          "candidates": [
+            {
+              "title": "The Digital Future is Now: A Call to Action for the Humanities",
+              "authors": [
+                "Christine L. Borgman"
+              ],
+              "doi": "10.63744/au56n57rd75j",
+              "source_url": "https://doi.org/10.63744/au56n57rd75j",
+              "record_url": "https://api.crossref.org/works/10.63744%2Fau56n57rd75j",
+              "type": "journal-article",
+              "dates": [
+                {
+                  "kind": "published-online",
+                  "date_parts": [
+                    2010,
+                    3,
+                    20
+                  ],
+                  "year": 2010
+                },
+                {
+                  "kind": "published",
+                  "date_parts": [
+                    2010,
+                    3,
+                    20
+                  ],
+                  "year": 2010
+                }
+              ],
+              "selected_date": {
+                "kind": "published-online",
+                "date_parts": [
+                  2010,
+                  3,
+                  20
+                ],
+                "year": 2010
+              },
+              "match": {
+                "title": "normalized_exact",
+                "first_author": "exact",
+                "author_overlap": 1,
+                "required_overlap": 1
+              }
+            }
+          ],
+          "queried_at": "2026-10-19T02:34:39.187684+00:00"
+        },
+        "year_review": {
+          "policy": "crossref-title-authors-v1",
+          "status": "candidate_supported",
+          "source": "crossref",
+          "grounding": "registry_record",
+          "date_type": "published-online"
+        }
+      },
+      "raw_receipt_sha256": "ad2e69a9fc04d2411df55c8ed3e9c23fc9ebb4e4cef5d6b3bfa0448adb1da5f7"
+    }
+  ],
+  "excerpt_policy": "Long original-PDF excerpts remain local; hashes retained, date excerpts limited to 18 words.",
+  "reference_review": "AI-assisted curation and partial page-image checks, not independent user/expert gold labels"
+}

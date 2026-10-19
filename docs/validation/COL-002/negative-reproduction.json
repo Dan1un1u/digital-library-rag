@@ -1,0 +1,127 @@
+{
+  "reproduction_code": {
+    "commit": "da0fdc126d89f601a6581b2e106c226d9918bd45",
+    "branch": "feat/catalog-ingestion-audit",
+    "dirty": false
+  },
+  "original_app_commit": "20ec245051a783e55701ae4001418c45a93b6e8e",
+  "business_source_unchanged": true,
+  "scope": "real PDFs, actual import jobs, isolated mock vectors, curated reference metadata",
+  "runner_sha256": "d2e12319fb4deb33cb3c837b1bb2a1ec290a5ae86f6422149d6ad0657b5610b4",
+  "cases": [
+    {
+      "item_id": "SS04",
+      "case": "pure_scan_known_boundary",
+      "source_sha256": "643ef9bd0c253cf91735610abddc5232abcaee1b085e0325df09553a957e845a",
+      "job_id": "fbd06c4a8bfa4dd58d1fc5abe32075cc",
+      "stage": "error",
+      "error": {
+        "code": "NO_EXTRACTABLE_TEXT",
+        "message": "PDF 正文没有可提取文字。增强识别用于标题和作者等信息，全文导入仍需先完成 OCR。"
+      }
+    },
+    {
+      "item_id": "SS06",
+      "case": "mixed_cover_and_scanned_body",
+      "source_sha256": "a37b62fd92b1d1fe2264f0afc23c5c8f04198e4d157027d138bc65a75934cc5e",
+      "job_id": "20f550dd78d343118e3d17face20364d",
+      "stage": "done",
+      "error": null,
+      "document_status": "ready",
+      "document_error_code": null,
+      "page_count": 21,
+      "stored_pages": 21,
+      "pages_with_text": 1,
+      "pages_with_chunks": 1,
+      "chunk_count": 2,
+      "scanned_no_ocr_pages": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "item_id": "HU08",
+      "case": "garbled_text_layer",
+      "source_sha256": "7872906c3e225ab15a16bf2d4cd64d85b5b2767113d2c451af8cd7fd21b2c36a",
+      "job_id": "a92b51e0760549b1b84d858efbe914d6",
+      "stage": "done",
+      "error": null,
+      "document_status": "ready",
+      "document_error_code": null,
+      "page_count": 16,
+      "stored_pages": 16,
+      "pages_with_text": 16,
+      "pages_with_chunks": 16,
+      "chunk_count": 66,
+      "scanned_no_ocr_pages": [],
+      "text_sample": "0RGHUQ\u00030RUDO\u00033KLORVRSK\\\n\n*\u0011\u0003(\u0011\u00030\u0011\u0003$QVFRPEH\n\n3KLORVRSK\\\u0003\u0016\u0016\u000f 1R\u0011 \u0014\u0015",
+      "expected_visual_title_present_in_page_text": false,
+      "visual_reference": "Original p1 renders Modern Moral Philosophy, G. E. M. Anscombe, January 1958; coding-assistant visual check, not user human review"
+    }
+  ],
+  "production_unchanged": true,
+  "production_manifest": {
+    "index_version": "idx_20261018T153334_20ed96d8ced7",
+    "contract_version": "1.0",
+    "built_at": "2026-10-18T15:33:34.670944+00:00",
+    "embedding_model": "BAAI/bge-m3",
+    "embedding_revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "dimension": 1024,
+    "normalized": true,
+    "chunking_config": {
+      "count_mode": "character",
+      "tokenizer_name": null,
+      "tokenizer_revision": null,
+      "max_tokens": 400,
+      "overlap_tokens": 50,
+      "max_chars": 1200,
+      "overlap_chars": 150
+    },
+    "tokenizer": null,
+    "document_count": 25,
+    "chunk_count": 1821,
+    "corpus_hash": "124a3610097b0f8ad8f0e70c35a871c9a1f8a415957d413b286c729e87a4ad44",
+    "embedding_backend": {
+      "base_url": "http://127.0.0.1:18080/v1",
+      "dimension": 1024,
+      "encoding_format": "float",
+      "input_preprocessing": "original-text-v1;fp16;cls;l2-float32",
+      "model": "BAAI/bge-m3",
+      "provider": "local-bge-fp16",
+      "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+      "revision_pinned": true
+    },
+    "lexical_tokenizer": "nfkc-casefold-cjk-bigram-v1",
+    "retrieval_config": {
+      "candidate_k": 20,
+      "rrf_k": 60,
+      "normalize_embeddings": true,
+      "bm25_k1": 1.5,
+      "bm25_b": 0.75
+    },
+    "artifacts": {
+      "chunks.json": "124a3610097b0f8ad8f0e70c35a871c9a1f8a415957d413b286c729e87a4ad44",
+      "lexical.json": "db4f2ba71f70601dcf1a6c98169b1f7b17225d47b13ed595f9e5346ba756931f",
+      "vectors.npy": "32fae2e309103ec7d2db7656fcb79feeff59f9259de0c5abb2874b8c13488044"
+    }
+  },
+  "reproduced": true
+}
