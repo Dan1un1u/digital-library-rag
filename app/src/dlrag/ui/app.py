@@ -265,7 +265,7 @@ if page == "馆藏展示":
             with chart:
                 if any(counts.values()):
                     st.vega_lite_chart({"data": {"values": [{"学科": k, "篇数": v} for k, v in counts.items()]},
-                        "mark": {"type": "arc", "outerRadius": 140, "stroke": "white", "strokeWidth": 2},
+                        "mark": {"type": "arc", "outerRadius": {"expr": "max(0, min(140, width / 2 - 1, height / 2 - 1))"}, "stroke": "white", "strokeWidth": 2},
                         "encoding": {"theta": {"field": "篇数", "type": "quantitative"},
                             "color": {"field": "学科", "type": "nominal", "scale": {"domain": list(DOMAINS), "range": ["#247f87", "#e9aa58", "#8072b2"]}, "legend": {"orient": "bottom", "title": None}},
                             "tooltip": [{"field": "学科"}, {"field": "篇数", "type": "quantitative"}]},
