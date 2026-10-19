@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="23" skipped="0" tests="33" time="2.210" timestamp="2026-10-19T20:19:55.208372+08:00" hostname="DANIUNIU"><testcase classname="tests.integration.test_discipline_ingestion" name="test_six_original_subject_lists_rejected_before_any_write[Squeezing Operator Performance Potential for the Ascend Architecture-topics0-/documents]" time="0.341"><failure message="assert 500 == 422&#10; +  where 500 = &lt;Response [500 Internal Server Error]&gt;.status_code">client = &lt;starlette.testclient.TestClient object at 0x000001895D790F20&gt;
+services = &lt;dlrag.api.services.Services object at 0x000001892E184410&gt;
+pdf = WindowsPath('C:/Users/35961/AppData/Local/Temp/pytest-of-35961/pytest-69/test_six_original_subject_list0/synthetic.pdf')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001895D817DD0&gt;
+route = '/documents'
+title = 'Squeezing Operator Performance Potential for the Ascend Architecture'
+topics = ['AI accelerators', 'Ascend NPU']
+
+    @pytest.mark.parametrize('route', ['/documents', '/documents/jobs'])
+    @pytest.mark.parametrize('title,topics', PAPERS)
+    def test_six_original_subject_lists_rejected_before_any_write(client, services, pdf, monkeypatch, route, title, topics):
+        before = services.manifest()
+        store = Mock(side_effect=AssertionError('Missing discipline must not reach storage'))
+        submit = Mock(side_effect=AssertionError('Missing discipline must not enqueue a job'))
+        monkeypatch.setattr(services, 'ingest', store)
+        monkeypatch.setattr(client.app.state.document_jobs, 'submit', submit)
+        response = post(client, route, pdf, {'title': title, 'topics': topics})
+&gt;       assert response.status_code == 422
+E       assert 500 == 422
+E        +  where 500 = &lt;Response [500 Internal Server Error]&gt;.status_code
+
+app\tests\integration\test_discipline_ingestion.py:54: AssertionError</failure></testcase><testcase classname="tests.integration.test_discipline_ingestion" name="test_six_original_subject_lists_rejected_before_any_write[Squeezing Operator Performance Potential for the Ascend Architecture-topics0-/documents/jobs]" time="0.048"><failure message="assert 500 == 422&#10; +  where 500 = &lt;Response [500 Internal Server Error]&gt;.status_code">client = &lt;starlette.testclient.TestClient object at 0x000001895DDC47A0&gt;
+services = &lt;dlrag.api.services.Services object at 0x000001895D5C6030&gt;
+pdf = WindowsPath('C:/Users/35961/AppData/Local/Temp/pytest-of-35961/pytest-69/test_six_original_subject_list1/synthetic.pdf')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001895D9AAF00&gt;
+route = '/documents/jobs'
+title = 'Squeezing Operator Performance Potential for the Ascend Architecture'
+topics = ['AI accelerators', 'Ascend NPU']
+
+    @pytest.mark.parametrize('route', ['/documents', '/documents/jobs'])
+    @pytest.mark.parametrize('title,topics', PAPERS)
+    def test_six_original_subject_lists_rejected_before_any_write(client, services, pdf, monkeypatch, route, title, topics):
+        before = services.manifest()
+        store = Mock(side_effect=AssertionError('Missing discipline must not reach storage'))
+        submit = Mock(side_effect=AssertionError('Missing discipline must not enqueue a job'))
+        monkeypatch.setattr(services, 'ingest', store)
+        monkeypatch.setattr(client.app.state.document_jobs, 'submit', submit)
+        response = post(client, route, pdf, {'title': title, 'topics': topics})
+&gt;       assert response.status_code == 422
+E       assert 500 == 422
+E        +  where 500 = &lt;Response [500 Internal Server Error]&gt;.status_code
+
+app\tests\integration\test_discipline_ingestion.py:54: AssertionError</failure></testcase><testcase classname="tests.integration.test_discipline_ingestion" name="test_six_original_subject_lists_rejected_before_any_write[CSB-RNN: A Faster-than-Realtime RNN Acceleration Framework with Compressed Structured Blocks-topics1-/documents]" time="0.046"><failure message="assert 500 == 422&#10; +  where 500 = &lt;Response [500 Internal Server Error]&gt;.status_code">client = &lt;starlette.testclient.TestClient object at 0x000001895E68DAF0&gt;
+services = &lt;dlrag.api.services.Services object at 0x000001895DE142C0&gt;
+pdf = WindowsPath('C:/Users/35961/AppData/Local/Temp/pytest-of-35961/pytest-69/test_six_original_subject_list2/synthetic.pdf')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001895DE15BE0&gt;
+route = '/documents'
+title = 'CSB-RNN: A Faster-than-Realtime RNN Acceleration Framework with Compressed Structured Blocks'
+topics = ['FPGA', 'RNN acceleration']
+
+    @pytest.mark.parametrize('route', ['/documents', '/documents/jobs'])
+    @pytest.mark.parametrize('title,topics', PAPERS)
+    def test_six_original_subject_lists_rejected_before_any_write(client, services, pdf, monkeypatch, route, title, topics):
+        before = services.manifest()
+        store = Mock(side_effect=AssertionError('Missing discipline must not reach storage'))
+        submit = Mock(side_effect=AssertionError('Missing discipline must not enqueue a job'))
+        monkeypatch.setattr(services, 'ingest', store)
+        monkeypatch.setattr(client.app.state.document_jobs, 'submit', submit)
+        response = post(client, route, pdf, {'title': title, 'topics': topics})
+&gt;       assert response.status_code == 422
+E       assert 500 == 422
+E        +  where 500 = &lt;Response [500 Internal Server Error]&gt;.status_code
+
+app\tests\integration\test_discipline_ingestion.py:54: AssertionError</failure></testcase><testcase classname="tests.integration.test_discipline_ingestion" name="test_six_original_subject_lists_rejected_before_any_write[CSB-RNN: A Faster-than-Realtime RNN Acceleration Framework with Compressed Structured Blocks-topics1-/documents/jobs]" time="0.046"><failure message="assert 500 == 422&#10; +  where 500 = &lt;Response [500 Internal Server Error]&gt;.status_code">client = &lt;starlette.testclient.TestClient object at 0x000001895E6E2F30&gt;
+services = &lt;dlrag.api.services.Services object at 0x000001895E68DDF0&gt;
+pdf = WindowsPath('C:/Users/35961/AppData/Local/Temp/pytest-of-35961/pytest-69/test_six_original_subject_list3/synthetic.pdf')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001895DDC7F20&gt;
+route = '/documents/jobs'
+title = 'CSB-RNN: A Faster-than-Realtime RNN Acceleration Framework with Compressed Structured Blocks'
+topics = ['FPGA', 'RNN acceleration']
+
+    @pytest.mark.parametrize('route', ['/documents', '/documents/jobs'])
+    @pytest.mark.parametrize('title,topics', PAPERS)
+    def test_six_original_subject_lists_rejected_before_any_write(client, services, pdf, monkeypatch, route, title, topics):
+        before = services.manifest()
+        store = Mock(side_effect=AssertionError('Missing discipline must not reach storage'))
+        submit = Mock(side_effect=AssertionError('Missing discipline must not enqueue a job'))
+        monkeypatch.setattr(services, 'ingest', store)
+        monkeypatch.setattr(client.app.state.document_jobs, 'submit', submit)
+        response = post(client, route, pdf, {'title': title, 'topics': topics})
+&gt;       assert response.status_code == 422
+E       assert 500 == 422
+E        +  where 500 = &lt;Response [500 Internal Server Error]&gt;.status_code
+
+app\tests\integration\test_discipline_ingestion.py:54: AssertionError</failure></testcase><testcase classname="tests.integration.test_discipline_ingestion" name="test_six_original_subject_lists_rejected_before_any_write[ENEC: A Lossless AI Model Compression Method Enabling Fast Inference on Ascend NPUs-topics2-/documents]" time="0.046"><failure message="assert 500 == 422&#10; +  where 500 = &lt;Response [500 Internal Server Error]&gt;.status_code">client = &lt;starlette.testclient.TestClient object at 0x000001895E68EDE0&gt;
+services = &lt;dlrag.api.services.Services object at 0x000001895E68CA40&gt;
+pdf = WindowsPath('C:/Users/35961/AppData/Local/Temp/pytest-of-35961/pytest-69/test_six_original_subject_list4/synthetic.pdf')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001895E68FB90&gt;
+route = '/documents'
+title = 'ENEC: A Lossless AI Model Compression Method Enabling Fast Inference on Ascend NPUs'
+topics = ['LLM inference', 'Lossless compression']
+
+    @pytest.mark.parametrize('route', ['/documents', '/documents/jobs'])
+    @pytest.mark.parametrize('title,topics', PAPERS)
+    def test_six_original_subject_lists_rejected_before_any_write(client, services, pdf, monkeypatch, route, title, topics):
+        before = services.manifest()
+        store = Mock(side_effect=AssertionError('Missing discipline must not reach storage'))
+        submit = Mock(side_effect=AssertionError('Missing discipline must not enqueue a job'))
+        monkeypatch.setattr(services, 'ingest', store)
+        monkeypatch.setattr(client.app.state.document_jobs, 'submit', submit)
+        response = post(client, route, pdf, {'title': title, 'topics': topics})
+&gt;       assert response.status_code == 422
+E       assert 500 == 422
+E        +  where 500 = &lt;Response [500 Internal Server Error]&gt;.status_code
+
+app\tests\integration\test_discipline_ingestion.py:54: AssertionError</failure></testcase><testcase classname="tests.integration.test_discipline_ingestion" name="test_six_original_subject_lists_rejected_before_any_write[ENEC: A Lossless AI Model Compression Method Enabling Fast Inference on Ascend NPUs-topics2-/documents/jobs]" time="0.045"><failure message="assert 500 == 422&#10; +  where 500 = &lt;Response [500 Internal Server Error]&gt;.status_code">client = &lt;starlette.testclient.TestClient object at 0x000001895DDC7A40&gt;
+services = &lt;dlrag.api.services.Services object at 0x000001895E68EB40&gt;
+pdf = WindowsPath('C:/Users/35961/AppData/Local/Temp/pytest-of-35961/pytest-69/test_six_original_subject_list5/synthetic.pdf')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001895E6736E0&gt;
+route = '/documents/jobs'
+title = 'ENEC: A Lossless AI Model Compression Method Enabling Fast Inference on Ascend NPUs'
+topics = ['LLM inference', 'Lossless compression']
+
+    @pytest.mark.parametrize('route', ['/documents', '/documents/jobs'])
+    @pytest.mark.parametrize('title,topics', PAPERS)
+    def test_six_original_subject_lists_rejected_before_any_write(client, services, pdf, monkeypatch, route, title, topics):
+        before = services.manifest()
+        store = Mock(side_effect=AssertionError('Missing discipline must not reach storage'))
+        submit = Mock(side_effect=AssertionError('Missing discipline must not enqueue a job'))
+        monkeypatch.setattr(services, 'ingest', store)
+        monkeypatch.setattr(client.app.state.document_jobs, 'submit', submit)
+        response = post(client, route, pdf, {'title': title, 'topics': topics})
+&gt;       assert response.status_code == 422
+E       assert 500 == 422
+E        +  where 500 = &lt;Response [500 Internal Server Error]&gt;.status_code
+
+app\tests\integration\test_discipline_ingestion.py:54: AssertionError</failure></testcase><testcase classname="tests.integration.test_discipline_ingestion" name="test_six_original_subject_lists_rejected_before_any_write[Is Your NPU Ready for LLMs? Dissecting the Hidden Efficiency Bottlenecks in Mobile LLM Inference-topics3-/documents]" time="0.073"><failure message="assert 500 == 422&#10; +  where 500 = &lt;Response [500 Internal Server Error]&gt;.status_code">client = &lt;starlette.testclient.TestClient object at 0x000001895E767650&gt;
+services = &lt;dlrag.api.services.Services object at 0x000001895E708EC0&gt;
+pdf = WindowsPath('C:/Users/35961/AppData/Local/Temp/pytest-of-35961/pytest-69/test_six_original_subject_list6/synthetic.pdf')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001895E68F440&gt;
+route = '/documents'
+title = 'Is Your NPU Ready for LLMs? Dissecting the Hidden Efficiency Bottlenecks in Mobile LLM Inference'
+topics = ['Mobile LLM', 'NPU']
+
+    @pytest.mark.parametrize('route', ['/documents', '/documents/jobs'])
+    @pytest.mark.parametrize('title,topics', PAPERS)
+    def test_six_original_subject_lists_rejected_before_any_write(client, services, pdf, monkeypatch, route, title, topics):
+        before = services.manifest()
+        store = Mock(side_effect=AssertionError('Missing discipline must not reach storage'))
+        submit = Mock(side_effect=AssertionError('Missing discipline must not enqueue a job'))
+        monkeypatch.setattr(services, 'ingest', store)
+        monkeypatch.setattr(client.app.state.document_jobs, 'submit', submit)
+        response = post(client, route, pdf, {'title': title, 'topics': topics})
+&gt;       assert response.status_code == 422
+E       assert 500 == 422
+E        +  where 500 = &lt;Response [500 Internal Server Error]&gt;.status_code
+
+app\tests\integration\test_discipline_ingestion.py:54: AssertionError</failure></testcase><testcase classname="tests.integration.test_discipline_ingestion" name="test_six_original_subject_lists_rejected_before_any_write[Is Your NPU Ready for LLMs? Dissecting the Hidden Efficiency Bottlenecks in Mobile LLM Inference-topics3-/documents/jobs]" time="0.046"><failure message="assert 500 == 422&#10; +  where 500 = &lt;Response [500 Internal Server Error]&gt;.status_code">client = &lt;starlette.testclient.TestClient object at 0x000001895E7086B0&gt;
+services = &lt;dlrag.api.services.Services object at 0x000001895E709A90&gt;
+pdf = WindowsPath('C:/Users/35961/AppData/Local/Temp/pytest-of-35961/pytest-69/test_six_original_subject_list7/synthetic.pdf')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001895E70AEA0&gt;
+route = '/documents/jobs'
+title = 'Is Your NPU Ready for LLMs? Dissecting the Hidden Efficiency Bottlenecks in Mobile LLM Inference'
+topics = ['Mobile LLM', 'NPU']
+
+    @pytest.mark.parametrize('route', ['/documents', '/documents/jobs'])
+    @pytest.mark.parametrize('title,topics', PAPERS)
+    def test_six_original_subject_lists_rejected_before_any_write(client, services, pdf, monkeypatch, route, title, topics):
+        before = services.manifest()
+        store = Mock(side_effect=AssertionError('Missing discipline must not reach storage'))
+        submit = Mock(side_effect=AssertionError('Missing discipline must not enqueue a job'))
+        monkeypatch.setattr(services, 'ingest', store)
+        monkeypatch.setattr(client.app.state.document_jobs, 'submit', submit)
+        response = post(client, route, pdf, {'title': title, 'topics': topics})
+&gt;       assert response.status_code == 422
+E       assert 500 == 422
+E        +  where 500 = &lt;Response [500 Internal Server Error]&gt;.status_code
+
+app\tests\integration\test_discipline_ingestion.py:54: AssertionError</failure></testcase><testcase classname="tests.integration.test_discipline_ingestion" name="test_six_original_subject_lists_rejected_before_any_write[SpinQuant: LLM Quantization with Learned Rotations-topics4-/documents]" time="0.042"><failure message="assert 500 == 422&#10; +  where 500 = &lt;Response [500 Internal Server Error]&gt;.status_code">client = &lt;starlette.testclient.TestClient object at 0x000001895D790A40&gt;
+services = &lt;dlrag.api.services.Services object at 0x000001895E70A1E0&gt;
+pdf = WindowsPath('C:/Users/35961/AppData/Local/Temp/pytest-of-35961/pytest-69/test_six_original_subject_list8/synthetic.pdf')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001895DDBA5A0&gt;
+route = '/documents'
+title = 'SpinQuant: LLM Quantization with Learned Rotations'
+topics = ['LLM inference', 'Learned rotations']
+
+    @pytest.mark.parametrize('route', ['/documents', '/documents/jobs'])
+    @pytest.mark.parametrize('title,topics', PAPERS)
+    def test_six_original_subject_lists_rejected_before_any_write(client, services, pdf, monkeypatch, route, title, topics):
+        before = services.manifest()
+        store = Mock(side_effect=AssertionError('Missing discipline must not reach storage'))
+        submit = Mock(side_effect=AssertionError('Missing discipline must not enqueue a job'))
+        monkeypatch.setattr(services, 'ingest', store)
+        monkeypatch.setattr(client.app.state.document_jobs, 'submit', submit)
+        response = post(client, route, pdf, {'title': title, 'topics': topics})
+&gt;       assert response.status_code == 422
+E       assert 500 == 422
+E        +  where 500 = &lt;Response [500 Internal Server Error]&gt;.status_code
+
+app\tests\integration\test_discipline_ingestion.py:54: AssertionError</failure></testcase><testcase classname="tests.integration.test_discipline_ingestion" name="test_six_original_subject_lists_rejected_before_any_write[SpinQuant: LLM Quantization with Learned Rotations-topics4-/documents/jobs]" time="0.041"><failure message="assert 500 == 422&#10; +  where 500 = &lt;Response [500 Internal Server Error]&gt;.status_code">client = &lt;starlette.testclient.TestClient object at 0x000001895E673620&gt;
+services = &lt;dlrag.api.services.Services object at 0x000001895D8D4530&gt;
+pdf = WindowsPath('C:/Users/35961/AppData/Local/Temp/pytest-of-35961/pytest-69/test_six_original_subject_list9/synthetic.pdf')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001895E6C5430&gt;
+route = '/documents/jobs'
+title = 'SpinQuant: LLM Quantization with Learned Rotations'
+topics = ['LLM inference', 'Learned rotations']
+
+    @pytest.mark.parametrize('route', ['/documents', '/documents/jobs'])
+    @pytest.mark.parametrize('title,topics', PAPERS)
+    def test_six_original_subject_lists_rejected_before_any_write(client, services, pdf, monkeypatch, route, title, topics):
+        before = services.manifest()
+        store = Mock(side_effect=AssertionError('Missing discipline must not reach storage'))
+        submit = Mock(side_effect=AssertionError('Missing discipline must not enqueue a job'))
+        monkeypatch.setattr(services, 'ingest', store)
+        monkeypatch.setattr(client.app.state.document_jobs, 'submit', submit)
+        response = post(client, route, pdf, {'title': title, 'topics': topics})
+&gt;       assert response.status_code == 422
+E       assert 500 == 422
+E        +  where 500 = &lt;Response [500 Internal Server Error]&gt;.status_code
+
+app\tests\integration\test_discipline_ingestion.py:54: AssertionError</failure></testcase><testcase classname="tests.integration.test_discipline_ingestion" name="test_six_original_subject_lists_rejected_before_any_write[XY-Serve: End-to-End Versatile Production Serving for Dynamic LLM Workloads-topics5-/documents]" time="0.043"><failure message="assert 500 == 422&#10; +  where 500 = &lt;Response [500 Internal Server Error]&gt;.status_code">client = &lt;starlette.testclient.TestClient object at 0x000001895E766720&gt;
+services = &lt;dlrag.api.services.Services object at 0x000001895E6711F0&gt;
+pdf = WindowsPath('C:/Users/35961/AppData/Local/Temp/pytest-of-35961/pytest-69/test_six_original_subject_list10/synthetic.pdf')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001895D458440&gt;
+route = '/documents'
+title = 'XY-Serve: End-to-End Versatile Production Serving for Dynamic LLM Workloads'
+topics = ['LLM serving', 'Ascend NPU']
+
+    @pytest.mark.parametrize('route', ['/documents', '/documents/jobs'])
+    @pytest.mark.parametrize('title,topics', PAPERS)
+    def test_six_original_subject_lists_rejected_before_any_write(client, services, pdf, monkeypatch, route, title, topics):
+        before = services.manifest()
+        store = Mock(side_effect=AssertionError('Missing discipline must not reach storage'))
+        submit = Mock(side_effect=AssertionError('Missing discipline must not enqueue a job'))
+        monkeypatch.setattr(services, 'ingest', store)
+        monkeypatch.setattr(client.app.state.document_jobs, 'submit', submit)
+        response = post(client, route, pdf, {'title': title, 'topics': topics})
+&gt;       assert response.status_code == 422
+E       assert 500 == 422
+E        +  where 500 = &lt;Response [500 Internal Server Error]&gt;.status_code
+
+app\tests\integration\test_discipline_ingestion.py:54: AssertionError</failure></testcase><testcase classname="tests.integration.test_discipline_ingestion" name="test_six_original_subject_lists_rejected_before_any_write[XY-Serve: End-to-End Versatile Production Serving for Dynamic LLM Workloads-topics5-/documents/jobs]" time="0.044"><failure message="assert 500 == 422&#10; +  where 500 = &lt;Response [500 Internal Server Error]&gt;.status_code">client = &lt;starlette.testclient.TestClient object at 0x000001895DDBAB10&gt;
+services = &lt;dlrag.api.services.Services object at 0x000001895E767380&gt;
+pdf = WindowsPath('C:/Users/35961/AppData/Local/Temp/pytest-of-35961/pytest-69/test_six_original_subject_list11/synthetic.pdf')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001895E767B30&gt;
+route = '/documents/jobs'
+title = 'XY-Serve: End-to-End Versatile Production Serving for Dynamic LLM Workloads'
+topics = ['LLM serving', 'Ascend NPU']
+
+    @pytest.mark.parametrize('route', ['/documents', '/documents/jobs'])
+    @pytest.mark.parametrize('title,topics', PAPERS)
+    def test_six_original_subject_lists_rejected_before_any_write(client, services, pdf, monkeypatch, route, title, topics):
+        before = services.manifest()
+        store = Mock(side_effect=AssertionError('Missing discipline must not reach storage'))
+        submit = Mock(side_effect=AssertionError('Missing discipline must not enqueue a job'))
+        monkeypatch.setattr(services, 'ingest', store)
+        monkeypatch.setattr(client.app.state.document_jobs, 'submit', submit)
+        response = post(client, route, pdf, {'title': title, 'topics': topics})
+&gt;       assert response.status_code == 422
+E       assert 500 == 422
+E        +  where 500 = &lt;Response [500 Internal Server Error]&gt;.status_code
+
+app\tests\integration\test_discipline_ingestion.py:54: AssertionError</failure></testcase><testcase classname="tests.integration.test_discipline_ingestion" name="test_conflicting_disciplines_rejected[/documents]" time="0.087"><failure message="assert 200 == 422&#10; +  where 200 = &lt;Response [200 OK]&gt;.status_code">client = &lt;starlette.testclient.TestClient object at 0x000001895E68CA10&gt;
+services = &lt;dlrag.api.services.Services object at 0x000001895DDBBB90&gt;
+pdf = WindowsPath('C:/Users/35961/AppData/Local/Temp/pytest-of-35961/pytest-69/test_conflicting_disciplines_r0/synthetic.pdf')
+route = '/documents'
+
+    @pytest.mark.parametrize('route', ['/documents', '/documents/jobs'])
+    def test_conflicting_disciplines_rejected(client, services, pdf, route):
+        response = post(client, route, pdf, {'title': 'Mixed subject terms', 'topics': DOMAINS[:2]})
+&gt;       assert response.status_code == 422
+E       assert 200 == 422
+E        +  where 200 = &lt;Response [200 OK]&gt;.status_code
+
+app\tests\integration\test_discipline_ingestion.py:66: AssertionError</failure></testcase><testcase classname="tests.integration.test_discipline_ingestion" name="test_conflicting_disciplines_rejected[/documents/jobs]" time="0.045"><failure message="assert 202 == 422&#10; +  where 202 = &lt;Response [202 Accepted]&gt;.status_code">client = &lt;starlette.testclient.TestClient object at 0x000001895DE14260&gt;
+services = &lt;dlrag.api.services.Services object at 0x000001895E7095B0&gt;
+pdf = WindowsPath('C:/Users/35961/AppData/Local/Temp/pytest-of-35961/pytest-69/test_conflicting_disciplines_r1/synthetic.pdf')
+route = '/documents/jobs'
+
+    @pytest.mark.parametrize('route', ['/documents', '/documents/jobs'])
+    def test_conflicting_disciplines_rejected(client, services, pdf, route):
+        response = post(client, route, pdf, {'title': 'Mixed subject terms', 'topics': DOMAINS[:2]})
+&gt;       assert response.status_code == 422
+E       assert 202 == 422
+E        +  where 202 = &lt;Response [202 Accepted]&gt;.status_code
+
+app\tests\integration\test_discipline_ingestion.py:66: AssertionError</failure></testcase><testcase classname="tests.integration.test_discipline_ingestion" name="test_explicit_discipline_survives_import_and_overrides_conflicting_keywords[\u81ea\u7136\u79d1\u5b66-/documents]" time="0.082" /><testcase classname="tests.integration.test_discipline_ingestion" name="test_explicit_discipline_survives_import_and_overrides_conflicting_keywords[\u81ea\u7136\u79d1\u5b66-/documents/jobs]" time="0.079" /><testcase classname="tests.integration.test_discipline_ingestion" name="test_explicit_discipline_survives_import_and_overrides_conflicting_keywords[\u793e\u4f1a\u79d1\u5b66-/documents]" time="0.074" /><testcase classname="tests.integration.test_discipline_ingestion" name="test_explicit_discipline_survives_import_and_overrides_conflicting_keywords[\u793e\u4f1a\u79d1\u5b66-/documents/jobs]" time="0.080" /><testcase classname="tests.integration.test_discipline_ingestion" name="test_explicit_discipline_survives_import_and_overrides_conflicting_keywords[\u54f2\u5b66\u4e0e\u4eba\u6587\u79d1\u5b66-/documents]" time="0.113" /><testcase classname="tests.integration.test_discipline_ingestion" name="test_explicit_discipline_survives_import_and_overrides_conflicting_keywords[\u54f2\u5b66\u4e0e\u4eba\u6587\u79d1\u5b66-/documents/jobs]" time="0.083" /><testcase classname="tests.integration.test_discipline_ingestion" name="test_batch_plan_rejects_the_six_missing_disciplines[Squeezing Operator Performance Potential for the Ascend Architecture-topics0]" time="0.007"><failure message="Failed: DID NOT RAISE &lt;class 'tools.catalog_batch.BatchError'&gt;">tmp_path = WindowsPath('C:/Users/35961/AppData/Local/Temp/pytest-of-35961/pytest-69/test_batch_plan_rejects_the_si0')
+pdf = WindowsPath('C:/Users/35961/AppData/Local/Temp/pytest-of-35961/pytest-69/test_batch_plan_rejects_the_si0/synthetic.pdf')
+title = 'Squeezing Operator Performance Potential for the Ascend Architecture'
+topics = ['AI accelerators', 'Ascend NPU']
+
+    @pytest.mark.parametrize('title,topics', PAPERS)
+    def test_batch_plan_rejects_the_six_missing_disciplines(tmp_path, pdf, title, topics):
+        path = manifest(tmp_path, pdf, {'title': title, 'topics': topics})
+&gt;       with pytest.raises(batch.BatchError, match='学科'):
+E       Failed: DID NOT RAISE &lt;class 'tools.catalog_batch.BatchError'&gt;
+
+app\tests\integration\test_discipline_ingestion.py:96: Failed</failure></testcase><testcase classname="tests.integration.test_discipline_ingestion" name="test_batch_plan_rejects_the_six_missing_disciplines[CSB-RNN: A Faster-than-Realtime RNN Acceleration Framework with Compressed Structured Blocks-topics1]" time="0.008"><failure message="Failed: DID NOT RAISE &lt;class 'tools.catalog_batch.BatchError'&gt;">tmp_path = WindowsPath('C:/Users/35961/AppData/Local/Temp/pytest-of-35961/pytest-69/test_batch_plan_rejects_the_si1')
+pdf = WindowsPath('C:/Users/35961/AppData/Local/Temp/pytest-of-35961/pytest-69/test_batch_plan_rejects_the_si1/synthetic.pdf')
+title = 'CSB-RNN: A Faster-than-Realtime RNN Acceleration Framework with Compressed Structured Blocks'
+topics = ['FPGA', 'RNN acceleration']
+
+    @pytest.mark.parametrize('title,topics', PAPERS)
+    def test_batch_plan_rejects_the_six_missing_disciplines(tmp_path, pdf, title, topics):
+        path = manifest(tmp_path, pdf, {'title': title, 'topics': topics})
+&gt;       with pytest.raises(batch.BatchError, match='学科'):
+E       Failed: DID NOT RAISE &lt;class 'tools.catalog_batch.BatchError'&gt;
+
+app\tests\integration\test_discipline_ingestion.py:96: Failed</failure></testcase><testcase classname="tests.integration.test_discipline_ingestion" name="test_batch_plan_rejects_the_six_missing_disciplines[ENEC: A Lossless AI Model Compression Method Enabling Fast Inference on Ascend NPUs-topics2]" time="0.008"><failure message="Failed: DID NOT RAISE &lt;class 'tools.catalog_batch.BatchError'&gt;">tmp_path = WindowsPath('C:/Users/35961/AppData/Local/Temp/pytest-of-35961/pytest-69/test_batch_plan_rejects_the_si2')
+pdf = WindowsPath('C:/Users/35961/AppData/Local/Temp/pytest-of-35961/pytest-69/test_batch_plan_rejects_the_si2/synthetic.pdf')
+title = 'ENEC: A Lossless AI Model Compression Method Enabling Fast Inference on Ascend NPUs'
+topics = ['LLM inference', 'Lossless compression']
+
+    @pytest.mark.parametrize('title,topics', PAPERS)
+    def test_batch_plan_rejects_the_six_missing_disciplines(tmp_path, pdf, title, topics):
+        path = manifest(tmp_path, pdf, {'title': title, 'topics': topics})
+&gt;       with pytest.raises(batch.BatchError, match='学科'):
+E       Failed: DID NOT RAISE &lt;class 'tools.catalog_batch.BatchError'&gt;
+
+app\tests\integration\test_discipline_ingestion.py:96: Failed</failure></testcase><testcase classname="tests.integration.test_discipline_ingestion" name="test_batch_plan_rejects_the_six_missing_disciplines[Is Your NPU Ready for LLMs? Dissecting the Hidden Efficiency Bottlenecks in Mobile LLM Inference-topics3]" time="0.007"><failure message="Failed: DID NOT RAISE &lt;class 'tools.catalog_batch.BatchError'&gt;">tmp_path = WindowsPath('C:/Users/35961/AppData/Local/Temp/pytest-of-35961/pytest-69/test_batch_plan_rejects_the_si3')
+pdf = WindowsPath('C:/Users/35961/AppData/Local/Temp/pytest-of-35961/pytest-69/test_batch_plan_rejects_the_si3/synthetic.pdf')
+title = 'Is Your NPU Ready for LLMs? Dissecting the Hidden Efficiency Bottlenecks in Mobile LLM Inference'
+topics = ['Mobile LLM', 'NPU']
+
+    @pytest.mark.parametrize('title,topics', PAPERS)
+    def test_batch_plan_rejects_the_six_missing_disciplines(tmp_path, pdf, title, topics):
+        path = manifest(tmp_path, pdf, {'title': title, 'topics': topics})
+&gt;       with pytest.raises(batch.BatchError, match='学科'):
+E       Failed: DID NOT RAISE &lt;class 'tools.catalog_batch.BatchError'&gt;
+
+app\tests\integration\test_discipline_ingestion.py:96: Failed</failure></testcase><testcase classname="tests.integration.test_discipline_ingestion" name="test_batch_plan_rejects_the_six_missing_disciplines[SpinQuant: LLM Quantization with Learned Rotations-topics4]" time="0.007"><failure message="Failed: DID NOT RAISE &lt;class 'tools.catalog_batch.BatchError'&gt;">tmp_path = WindowsPath('C:/Users/35961/AppData/Local/Temp/pytest-of-35961/pytest-69/test_batch_plan_rejects_the_si4')
+pdf = WindowsPath('C:/Users/35961/AppData/Local/Temp/pytest-of-35961/pytest-69/test_batch_plan_rejects_the_si4/synthetic.pdf')
+title = 'SpinQuant: LLM Quantization with Learned Rotations'
+topics = ['LLM inference', 'Learned rotations']
+
+    @pytest.mark.parametrize('title,topics', PAPERS)
+    def test_batch_plan_rejects_the_six_missing_disciplines(tmp_path, pdf, title, topics):
+        path = manifest(tmp_path, pdf, {'title': title, 'topics': topics})
+&gt;       with pytest.raises(batch.BatchError, match='学科'):
+E       Failed: DID NOT RAISE &lt;class 'tools.catalog_batch.BatchError'&gt;
+
+app\tests\integration\test_discipline_ingestion.py:96: Failed</failure></testcase><testcase classname="tests.integration.test_discipline_ingestion" name="test_batch_plan_rejects_the_six_missing_disciplines[XY-Serve: End-to-End Versatile Production Serving for Dynamic LLM Workloads-topics5]" time="0.007"><failure message="Failed: DID NOT RAISE &lt;class 'tools.catalog_batch.BatchError'&gt;">tmp_path = WindowsPath('C:/Users/35961/AppData/Local/Temp/pytest-of-35961/pytest-69/test_batch_plan_rejects_the_si5')
+pdf = WindowsPath('C:/Users/35961/AppData/Local/Temp/pytest-of-35961/pytest-69/test_batch_plan_rejects_the_si5/synthetic.pdf')
+title = 'XY-Serve: End-to-End Versatile Production Serving for Dynamic LLM Workloads'
+topics = ['LLM serving', 'Ascend NPU']
+
+    @pytest.mark.parametrize('title,topics', PAPERS)
+    def test_batch_plan_rejects_the_six_missing_disciplines(tmp_path, pdf, title, topics):
+        path = manifest(tmp_path, pdf, {'title': title, 'topics': topics})
+&gt;       with pytest.raises(batch.BatchError, match='学科'):
+E       Failed: DID NOT RAISE &lt;class 'tools.catalog_batch.BatchError'&gt;
+
+app\tests\integration\test_discipline_ingestion.py:96: Failed</failure></testcase><testcase classname="tests.integration.test_discipline_ingestion" name="test_batch_plan_rejects_conflicting_disciplines" time="0.007"><failure message="Failed: DID NOT RAISE &lt;class 'tools.catalog_batch.BatchError'&gt;">tmp_path = WindowsPath('C:/Users/35961/AppData/Local/Temp/pytest-of-35961/pytest-69/test_batch_plan_rejects_confli0')
+pdf = WindowsPath('C:/Users/35961/AppData/Local/Temp/pytest-of-35961/pytest-69/test_batch_plan_rejects_confli0/synthetic.pdf')
+
+    def test_batch_plan_rejects_conflicting_disciplines(tmp_path, pdf):
+        path = manifest(tmp_path, pdf, {'title': 'fixture', 'topics': DOMAINS[:2]})
+&gt;       with pytest.raises(batch.BatchError, match='学科'):
+E       Failed: DID NOT RAISE &lt;class 'tools.catalog_batch.BatchError'&gt;
+
+app\tests\integration\test_discipline_ingestion.py:102: Failed</failure></testcase><testcase classname="tests.integration.test_discipline_ingestion" name="test_apply_revalidates_even_an_old_correctly_hashed_plan_before_network" time="0.007"><failure message="TypeError: 'Mock' object is not subscriptable">tmp_path = WindowsPath('C:/Users/35961/AppData/Local/Temp/pytest-of-35961/pytest-69/test_apply_revalidates_even_an0')
+pdf = WindowsPath('C:/Users/35961/AppData/Local/Temp/pytest-of-35961/pytest-69/test_apply_revalidates_even_an0/synthetic.pdf')
+
+    def test_apply_revalidates_even_an_old_correctly_hashed_plan_before_network(tmp_path, pdf):
+        path = manifest(tmp_path, pdf, {'title': 'fixture', 'topics': ['自然科学', 'NPU']})
+        plan, payloads = batch.prepare(path)
+        plan['items'][0]['metadata']['topics'] = ['NPU']
+        plan['plan_sha256'] = batch.digest({k: v for k, v in plan.items() if k != 'plan_sha256'})
+        api = Mock()
+        with pytest.raises(batch.BatchError, match='学科'):
+&gt;           batch.apply(plan, payloads, tmp_path / 'output', api, backup_ref='synthetic checkpoint')
+
+app\tests\integration\test_discipline_ingestion.py:113: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+plan = {'batch_id': 'MQ-006-fixture', 'items': [{'bytes': 1527, 'expected_doc_id': 'd_948af07454e7ffc094d36c0452fa25487bb32e5...e, ...}, ...}], 'plan_sha256': '7dcf24c1153fdf833ac517f117fd92fc83d96ab4b2c5f72025a460ee57498914', 'schema_version': 1}
+payloads = [b'%PDF-1.7\n%\xc2\xb5\xc2\xb6\n% Written by MuPDF 1.27.2\n\n1 0 obj\n&lt;&lt;/Type/Catalog/Pages 2 0 R/Info&lt;&lt;/Producer(MuPD...0 0 R/Root 1 0 R/ID[&lt;C397C386C29AC2B9C2A04D12C386C393&gt;&lt;C3D8420FBD1957385191ADD0A2300A25&gt;]&gt;&gt;\nstartxref\n1158\n%%EOF\n']
+output = WindowsPath('C:/Users/35961/AppData/Local/Temp/pytest-of-35961/pytest-69/test_apply_revalidates_even_an0/output')
+api = &lt;Mock id='1689496815616'&gt;
+
+    def apply(plan, payloads, output, api, *, job_timeout=900, poll_interval=1, backup_ref):
+        """Fail closed on pending review; preserve the evidence of partial/unknown outcomes."""
+        if plan.get("plan_sha256") != digest({k: v for k, v in plan.items() if k != "plan_sha256"}):
+            raise BatchError("Fixed plan was modified")
+        if any(i["review"]["status"] != "ready" for i in plan["items"]):
+            raise BatchError("Review pending: prepare metadata before apply")
+        if len(payloads) != len(plan["items"]) or any(
+                hashlib.sha256(data).hexdigest() != item["sha256"]
+                for item, data in zip(plan["items"], payloads)):
+            raise BatchError("Payload does not match the fixed plan")
+        if not backup_ref.strip():
+            raise BatchError("Record the completed local backup reference")
+        before = api.snapshot()
+&gt;       if before["status"] != "ready":
+E       TypeError: 'Mock' object is not subscriptable
+
+tools\catalog_batch.py:170: TypeError</failure></testcase><testcase classname="tests.integration.test_discipline_ingestion" name="test_direct_service_cannot_bypass_discipline_admission" time="0.028"><failure message="AssertionError: Must validate before parsing">services = &lt;dlrag.api.services.Services object at 0x000001895DDBB530&gt;
+pdf = WindowsPath('C:/Users/35961/AppData/Local/Temp/pytest-of-35961/pytest-69/test_direct_service_cannot_byp0/synthetic.pdf')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001895DDBACC0&gt;
+
+    def test_direct_service_cannot_bypass_discipline_admission(services, pdf, monkeypatch):
+        store = Mock(side_effect=AssertionError('Must validate before parsing'))
+        monkeypatch.setattr(services.library, 'ingest_pdf', store)
+        with pytest.raises(ProjectError) as error:
+&gt;           services.ingest(str(pdf), {'title': 'NPU research', 'topics': ['NPU']})
+
+app\tests\integration\test_discipline_ingestion.py:123: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+app\src\dlrag\api\services.py:114: in ingest
+    doc = boundary(Document, store.ingest_pdf(path, metadata, self.settings.chunking_config.model_dump()))
+C:\Users\35961\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\unittest\mock.py:1139: in __call__
+    return self._mock_call(*args, **kwargs)
+C:\Users\35961\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\unittest\mock.py:1143: in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;Mock id='1689496823872'&gt;
+args = ('C:\\Users\\35961\\AppData\\Local\\Temp\\pytest-of-35961\\pytest-69\\test_direct_service_cannot_byp0\\synthetic.pdf',...rch', 'topics': ['NPU']}, {'count_mode': 'character', 'max_chars': 1200, 'max_tokens': 400, 'overlap_chars': 150, ...})
+kwargs = {}, effect = AssertionError('Must validate before parsing')
+
+    def _execute_mock_call(self, /, *args, **kwargs):
+        # separate from _increment_mock_call so that awaited functions are
+        # executed separately from their call, also AsyncMock overrides this method
+    
+        effect = self.side_effect
+        if effect is not None:
+            if _is_exception(effect):
+&gt;               raise effect
+E               AssertionError: Must validate before parsing
+
+C:\Users\35961\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\unittest\mock.py:1198: AssertionError</failure></testcase><testcase classname="tests.integration.test_discipline_ingestion" name="test_historical_unclassified_documents_remain_readable" time="0.068" /><testcase classname="tests.integration.test_discipline_ingestion" name="test_duplicate_keeps_selected_discipline_and_index" time="0.088" /><testcase classname="tests.integration.test_discipline_ingestion" name="test_repeated_same_discipline_is_not_a_conflict" time="0.076" /><testcase classname="tests.integration.test_discipline_ingestion" name="test_batch_plan_preserves_explicit_discipline_and_other_metadata" time="0.007" /></testsuite></testsuites>

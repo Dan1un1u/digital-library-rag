@@ -6,9 +6,17 @@ from typing import Annotated
 from fastapi import APIRouter, File, Form, Query, Request, UploadFile
 from fastapi.responses import FileResponse, JSONResponse, HTMLResponse, Response
 from dlrag.shared.models import AskRequest, Chunk, Document, Feedback, Filters, Metadata, SearchRequest
+from dlrag.shared.disciplines import DisciplineError, require_discipline
 from .services import ProjectError, boundary, http_status
 
 router = APIRouter()
+
+
+def check_discipline(metadata):
+    try:
+        require_discipline(metadata)
+    except DisciplineError as error:
+        raise ProjectError(error.code, error.message) from None
 
 
 @contextmanager
@@ -47,6 +55,7 @@ def upload(request: Request, file: Annotated[UploadFile, File()], metadata_json:
         if "title" not in metadata:
             metadata["title"] = Path(file.filename or "upload.pdf").stem + "（待核验）"
         with temporary_pdf(file, service) as path:
+            check_discipline(metadata)
             return service.ingest(str(path), metadata)
     finally:
         file.file.close()
@@ -85,6 +94,7 @@ def import_job(request: Request, file: Annotated[UploadFile, File()], metadata_j
         if "title" not in metadata:
             metadata["title"] = Path(file.filename or "upload.pdf").stem + "（待核验）"
         with temporary_pdf(file, request.app.state.services) as path:
+            check_discipline(metadata)
             return request.app.state.document_jobs.submit(path.read_bytes(), file.filename, kind="import", metadata=metadata)
     finally:
         file.file.close()

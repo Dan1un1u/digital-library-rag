@@ -35,6 +35,6 @@ def pdf(tmp_path):
 @pytest.fixture
 def imported(client, pdf):
     response = client.post("/documents", files={"file": (pdf.name, pdf.read_bytes(), "application/pdf")},
-                           data={"metadata_json": json.dumps({"title": "合成测试资料", "year": 2024, "topics": ["合成测试"]})})
+                           data={"metadata_json": json.dumps({"title": "合成测试资料", "year": 2024, "topics": ["自然科学", "合成测试"]})})
     assert response.status_code == 200, response.text
     return response.json()

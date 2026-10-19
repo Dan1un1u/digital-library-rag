@@ -1,0 +1,13 @@
+{
+  "catalogue": "live dev API",
+  "metrics": {
+    "馆藏文献": "6 篇",
+    "自然科学": "6 篇",
+    "社会科学": "0 篇",
+    "哲学与人文科学": "0 篇"
+  },
+  "upload": "replay of actual enhanced PDF preview; no additional model call",
+  "domain_prefilled": "自然科学",
+  "classification_source_displayed": true,
+  "exceptions": 0
+}

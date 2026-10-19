@@ -1,0 +1,248 @@
+{
+  "work_item": "MQ-006",
+  "phase": "automatic-classification",
+  "tested_commit": "7b1f24d43992530ca06ff5e46fb711cc1427d4cd",
+  "counts": {
+    "this_continuation_new_cases": 39,
+    "prior_discipline_cases": 33,
+    "pr9_new_total": 72,
+    "pr8_inherited": 525,
+    "regression_total": 597,
+    "files": 6,
+    "off_pending": 6,
+    "on_llm_natural_science": 6,
+    "ready_after_import": 6,
+    "pending_after_import": 0,
+    "title_searches": 18,
+    "final_real_model_requests": 6
+  },
+  "coverage": {
+    "target": {
+      "app/src/dlrag/ingestion/discipline.py": {
+        "statements": 41,
+        "covered_statements": 41,
+        "statement_percent": 100.0,
+        "branches": 18,
+        "covered_branches": 17,
+        "branch_percent": 94.44
+      },
+      "app/src/dlrag/ingestion/metadata_api.py": {
+        "statements": 128,
+        "covered_statements": 89,
+        "statement_percent": 69.53,
+        "branches": 50,
+        "covered_branches": 21,
+        "branch_percent": 42.0
+      },
+      "app/src/dlrag/shared/disciplines.py": {
+        "statements": 25,
+        "covered_statements": 24,
+        "statement_percent": 96.0,
+        "branches": 8,
+        "covered_branches": 7,
+        "branch_percent": 87.5
+      }
+    },
+    "regression": {
+      "app/src/dlrag/ingestion/discipline.py": {
+        "statements": 41,
+        "covered_statements": 41,
+        "statement_percent": 100.0,
+        "branches": 18,
+        "covered_branches": 17,
+        "branch_percent": 94.44
+      },
+      "app/src/dlrag/ingestion/metadata_api.py": {
+        "statements": 128,
+        "covered_statements": 121,
+        "statement_percent": 94.53,
+        "branches": 50,
+        "covered_branches": 42,
+        "branch_percent": 84.0
+      },
+      "app/src/dlrag/shared/disciplines.py": {
+        "statements": 25,
+        "covered_statements": 24,
+        "statement_percent": 96.0,
+        "branches": 8,
+        "covered_branches": 7,
+        "branch_percent": 87.5
+      }
+    }
+  },
+  "intermediate_green_runs": [
+    {
+      "local_artifact": "reports/MQ-006/llm-target/summary.json",
+      "sha256": "f6b07afcca3bce3f6174069872e5081e49181b4da61b2adc870dbc5e1b738023",
+      "tested_code": {
+        "commit": "1922e15298a04c0da55e95b52d411fd9463c383c",
+        "branch": "fix/mq-006-discipline",
+        "dirty": false
+      },
+      "tests": {
+        "tests": 69,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "local_artifact": "reports/MQ-006/llm-regression/summary.json",
+      "sha256": "c41745f818e73fa1182b3647c7e0cd0bd2f88578ac8347d046c771a355220caa",
+      "tested_code": {
+        "commit": "1922e15298a04c0da55e95b52d411fd9463c383c",
+        "branch": "fix/mq-006-discipline",
+        "dirty": false
+      },
+      "tests": {
+        "tests": 594,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "local_artifact": "reports/MQ-006/llm-target-v2/summary.json",
+      "sha256": "4abdf0db8fb2e2a3305ffeb597e4c5d15ee3d592d98baa0751b146f6f3e6f9da",
+      "tested_code": {
+        "commit": "f61d01a71a153b94710f1225e6a3090bf0a7ac5d",
+        "branch": "fix/mq-006-discipline",
+        "dirty": false
+      },
+      "tests": {
+        "tests": 71,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "local_artifact": "reports/MQ-006/llm-regression-v2/summary.json",
+      "sha256": "82f50fb9e1630104770efbfe3599cbc2d86368f48a3f382c22555ff405bc6cf9",
+      "tested_code": {
+        "commit": "f61d01a71a153b94710f1225e6a3090bf0a7ac5d",
+        "branch": "fix/mq-006-discipline",
+        "dirty": false
+      },
+      "tests": {
+        "tests": 596,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    }
+  ],
+  "real_failures_and_diagnostic_replay": [
+    {
+      "stage": "first-real-preview",
+      "commit": "1922e15298a04c0da55e95b52d411fd9463c383c",
+      "local_artifact": "reports/MQ-006/llm-real/failed-preview.json",
+      "sha256": "5134c144476a8a968b7e541ef75d40fef8565cdec01db8495b2ce424fa017484"
+    },
+    {
+      "stage": "diagnostic-replay-candidate",
+      "commit": "1922e15298a04c0da55e95b52d411fd9463c383c",
+      "local_artifact": "reports/MQ-006/llm-real/diagnostic-candidates.json",
+      "sha256": "01e75e4d1c282106f017b5c506e82cd3e9a7de95d73664a50425cb9536a93dc6"
+    },
+    {
+      "stage": "second-real-preview",
+      "commit": "f61d01a71a153b94710f1225e6a3090bf0a7ac5d",
+      "local_artifact": "reports/MQ-006/llm-real-v2/probe/paper-002-previews.json",
+      "sha256": "6f2414040c2e18fc8e85657ec97d997904507bf55bfb498a13b71569ba61c5c6"
+    }
+  ],
+  "format_red_commit": "8f8cedf",
+  "ellipsis_red_commit": "7d49aa4",
+  "environment": {
+    "automatic_checks": "mocked model responses; isolated temporary storage",
+    "real_metadata_model": "gpt-6-luna",
+    "real_embedding": "BAAI/bge-m3 FP16",
+    "personal_transport": "outside repository; production request builder/prompt/merge validation used",
+    "cloud_contract": "existing SiliconFlow endpoint, key, payload and opt-in tests retained",
+    "manual_review": "no new human confirmation claimed"
+  },
+  "source_trees": {
+    "app": "6f2190d0b730282e390e1ce8bc7fadc119281dfc",
+    "scripts": "c545aa10cce3772177695ecac237f57cf07cbff5",
+    "tools": "25fca590aae756ad6ab8a75078a2ee05b1de5ba2"
+  },
+  "artifact_hashes": [
+    {
+      "artifact": "batch/events.jsonl",
+      "sha256": "34096ef921b22715b989ff79808cb6f1fa29d1d0cceafc8117f0efa65a2a98fd"
+    },
+    {
+      "artifact": "batch/plan.json",
+      "sha256": "3bd3472c5b1fdfa2f7aca3d0105c3fe44f356e436b9853f09031a7dba2f6a3d2"
+    },
+    {
+      "artifact": "batch/receipt.json",
+      "sha256": "2ae0c59c14e43a348688e8df832ff03de2a40af3b18f42aeddc46abfd798260f"
+    },
+    {
+      "artifact": "final-verification.json",
+      "sha256": "3224a508e1704e83ded4909286c5b82e0b7e21f2b758b41718b3fb2134cf09c8"
+    },
+    {
+      "artifact": "real-result.json",
+      "sha256": "60f8c15ccd71164b8dd4dc0bf108d718cb24938c30e394cb3b6e5515c96363e8"
+    },
+    {
+      "artifact": "red-auto/junit.xml",
+      "sha256": "5344587184b72f67dcce856acec45d6101a462f45763e210fa1e863ba4ba721e"
+    },
+    {
+      "artifact": "red-auto/pytest.txt",
+      "sha256": "bdba4e66f351c43cc2b31ce4ed55cb306be79a30f8e12e918dce583a18af5ce4"
+    },
+    {
+      "artifact": "red-auto/summary.json",
+      "sha256": "11a8905710982646fd201d8f34055bd3327de06dddd76f8d9590c628bedb6aa3"
+    },
+    {
+      "artifact": "red-ellipsis/junit.xml",
+      "sha256": "2abdbaa02b17f526a1a12e6ba93a8b4c7348fcdafd3d2e556353be8d61cf622c"
+    },
+    {
+      "artifact": "red-ellipsis/pytest.txt",
+      "sha256": "536563bdcdc49b9bfe903c0b12866a6c931c6673bd60418ffb8c7db408fd7afc"
+    },
+    {
+      "artifact": "red-word-wrap/junit.xml",
+      "sha256": "ffb8699cb9a8a8f276e0d1d02040f9c721da6915254e7f2b46757383599e633b"
+    },
+    {
+      "artifact": "red-word-wrap/pytest.txt",
+      "sha256": "2ade4bd23eefbe606ba54fca23693e7db7745079f5f97a95e10237dddc79c1b4"
+    },
+    {
+      "artifact": "regression/junit.xml",
+      "sha256": "c966d3e0fb4143643f5a95a1be37648b202fda2270e9a86ad0083cea891ed5a7"
+    },
+    {
+      "artifact": "regression/pytest.txt",
+      "sha256": "5a9e0640c13cec9d3b92de37514255fe9325b5120358206bf5db02a8fa6b980f"
+    },
+    {
+      "artifact": "regression/summary.json",
+      "sha256": "3ea52273d7b66b8878a2e98d2517b89c85a450ae3a74c8308a5e073f968e61fb"
+    },
+    {
+      "artifact": "target/junit.xml",
+      "sha256": "6589f7eac6845c2ce9b2059efb45e1c0e5d06d7f8684bd73cd7d7477df90bd61"
+    },
+    {
+      "artifact": "target/pytest.txt",
+      "sha256": "f920be56929b425104a17650112f51ee695e7df0962843e37c81acde5f2e1a3c"
+    },
+    {
+      "artifact": "target/summary.json",
+      "sha256": "55d8a44a6b6b531379cab6ddd6924a2b2600865c0d25a50585f6ebe7ab7efaf0"
+    },
+    {
+      "artifact": "ui-verification.json",
+      "sha256": "929548df2e485c3e2bd07274283d8d36976bb6c6a5ecfa11025b2293d671e2c2"
+    }
+  ]
+}

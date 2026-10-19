@@ -34,6 +34,7 @@ def test_issue_year_survives_preview_lookup_and_import(client, services, monkeyp
         assert result["bibliographic_enrichment"]["candidates"][0]["selected_date"]["year"] == 2010
         assert "year" not in result["bibliographic_enrichment"]["filled_fields"]
     services.settings.app_mode = "mock"
+    result["metadata"]["topics"] = ["自然科学"]  # User selects a discipline after preview.
     imported = client.post("/documents", files={"file": ("fixture.pdf", raw, "application/pdf")},
                            data={"metadata_json": json.dumps(result["metadata"])})
     assert imported.status_code == 200 and imported.json()["document"]["year"] == 2009

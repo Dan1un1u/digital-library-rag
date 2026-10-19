@@ -1,0 +1,11 @@
+{
+  "commit": "dbade9e0486eff0ee14dcc2a480cccfaf54a24e0",
+  "negative_control": true,
+  "tests": {
+    "tests": 34,
+    "failures": 32,
+    "errors": 0,
+    "skipped": 0
+  },
+  "note": "34-case initial automatic-classification suite before implementation; two additional cases added with the fix."
+}

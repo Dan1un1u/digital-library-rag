@@ -64,6 +64,7 @@ def test_opt_in_fills_with_provenance_without_import_until_confirmed(client, ser
     assert result["field_sources"]["year"]["method"] == "bibliographic_lookup"
     assert result["requires_confirmation"]
     assert services.library.list_documents(include_nonready=True) == [] and services.manifest() is None
+    result["metadata"]["topics"] = ["自然科学"]  # User selects a discipline after preview.
     response = client.post("/documents/jobs", files={"file": ("fixture.pdf", data, "application/pdf")},
                            data={"metadata_json": json.dumps(result["metadata"])})
     imported = wait(client, response.json()["job_id"])

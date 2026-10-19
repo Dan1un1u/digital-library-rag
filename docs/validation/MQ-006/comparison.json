@@ -1,0 +1,198 @@
+{
+  "work_item": "MQ-006",
+  "dependency": {
+    "pr": 8,
+    "branch": "fix/siliconflow-portability",
+    "commit": "c8ab90ad96db22c1b04c27548ceb4bb553fe5471"
+  },
+  "baseline_commit": "7c5476a0bdb5dd6c21d7ae0121591518f49c1da8",
+  "red_commit": "d40c68c23f9219be1219afe9ba6ea9d907b210a9",
+  "fixed_commit": "193ec30bbe2a9d35dda1dda72b35688de7cc26fd",
+  "counts": {
+    "new_cases": 33,
+    "inherited_cases": 525,
+    "regression_total": 558,
+    "red_failures": 23,
+    "red_controls_passed": 10,
+    "real_pdf_files": 6,
+    "pages": 100,
+    "chunks": 564,
+    "before_pending": 6,
+    "after_pending": 0,
+    "missing_api_rejections": 12,
+    "title_searches_each_phase": 18
+  },
+  "coverage": {
+    "target": {
+      "app/src/dlrag/api/routes.py": {
+        "statements": 136,
+        "covered_statements": 89,
+        "statement_percent": 65.44,
+        "branches": 14,
+        "covered_branches": 7,
+        "branch_percent": 50.0
+      },
+      "app/src/dlrag/api/services.py": {
+        "statements": 205,
+        "covered_statements": 100,
+        "statement_percent": 48.78,
+        "branches": 68,
+        "covered_branches": 23,
+        "branch_percent": 33.82
+      },
+      "app/src/dlrag/shared/disciplines.py": {
+        "statements": 15,
+        "covered_statements": 14,
+        "statement_percent": 93.33,
+        "branches": 6,
+        "covered_branches": 5,
+        "branch_percent": 83.33
+      },
+      "tools/catalog_batch.py": {
+        "statements": 217,
+        "covered_statements": 78,
+        "statement_percent": 35.94,
+        "branches": 66,
+        "covered_branches": 19,
+        "branch_percent": 28.79
+      }
+    },
+    "regression": {
+      "app/src/dlrag/api/routes.py": {
+        "statements": 136,
+        "covered_statements": 136,
+        "statement_percent": 100.0,
+        "branches": 14,
+        "covered_branches": 14,
+        "branch_percent": 100.0
+      },
+      "app/src/dlrag/api/services.py": {
+        "statements": 205,
+        "covered_statements": 183,
+        "statement_percent": 89.27,
+        "branches": 68,
+        "covered_branches": 60,
+        "branch_percent": 88.24
+      },
+      "app/src/dlrag/shared/disciplines.py": {
+        "statements": 15,
+        "covered_statements": 14,
+        "statement_percent": 93.33,
+        "branches": 6,
+        "covered_branches": 5,
+        "branch_percent": 83.33
+      },
+      "tools/catalog_batch.py": {
+        "statements": 217,
+        "covered_statements": 183,
+        "statement_percent": 84.33,
+        "branches": 66,
+        "covered_branches": 51,
+        "branch_percent": 77.27
+      }
+    }
+  },
+  "uncovered_discipline_guard": "The direct-service malformed topics type branch is defensive validation; API and batch first pass the existing Metadata model. Missing/conflicting/valid discipline branches exercised. No 100% coverage claim.",
+  "exploratory_checks": [
+    {
+      "path": "reports/MQ-006/fixture-migration/pytest-initial.txt",
+      "sha256": "e23e37d87c60a283650eeb4b0b0c68a2fd1e24d1d2a2f5dba9f1393a0c3d7dce",
+      "outcome": "Stopped at18 failures/errors: old valid admission fixtures lacked discipline; subprocess also lacked UTF8 environment. Assertions retained and fixtures updated."
+    },
+    {
+      "path": "reports/MQ-006/fixture-migration/pytest-after.txt",
+      "sha256": "44e8f7742360baf9de165a79a346295ef9e6053e616be0ce6706bc0a71be5083",
+      "outcome": "557 passed,1 failed from missing json import in updated fixture; corrected before clean formal runs."
+    }
+  ],
+  "environment": {
+    "unit_and_integration": "temporary stores; mocked models",
+    "real_pdf": "new independent stores; actual parsing and real FP16 vectors via outside-repository test wiring",
+    "embedding_model": "BAAI/bge-m3",
+    "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "metadata": "original reviewed fields replayed; no new recognition/model accuracy test",
+    "distributed_provider": "SiliconFlow adapters inherited from PR8; no private model or proxy code added"
+  },
+  "artifact_hashes": [
+    {
+      "artifact": "baseline/events.jsonl",
+      "sha256": "008cc8684f3aeb44cf5885f1bc8ca299fdb436380510a1ffd69bef2fbfdcbbf1"
+    },
+    {
+      "artifact": "baseline/plan.json",
+      "sha256": "7e3f0e668c13c660b879bf5869cb8b30d3fa7712bd90277c07a96c2a36ff7c61"
+    },
+    {
+      "artifact": "baseline/receipt.json",
+      "sha256": "1ff91a7bed304703d6dbe9ded6d0ec1d19080eda7cff64d00ef52004eda84cb9"
+    },
+    {
+      "artifact": "baseline/result.json",
+      "sha256": "0373c6a4becaf14c7a4217e8879b6aac789367fee3210b8a9cafb99a04fdc273"
+    },
+    {
+      "artifact": "corrected/events.jsonl",
+      "sha256": "1d25a11c57933eab450bf1ac81805d66fd907f9116826cd538c70a1e831d64d7"
+    },
+    {
+      "artifact": "corrected/plan.json",
+      "sha256": "b33bfea1c54fcd7f1ce4994c3ae115795599a556687d26a05248efd8698c572e"
+    },
+    {
+      "artifact": "corrected/receipt.json",
+      "sha256": "9b16a9f4870b8182f007da0514779f319f7cb74e6fe91c2032281054fcf346e1"
+    },
+    {
+      "artifact": "corrected/result.json",
+      "sha256": "6a703feb1bc77a2e4921ed6b14113aa2db40ccf446a888c87031672677578f63"
+    },
+    {
+      "artifact": "final-verification.json",
+      "sha256": "f8dbb6cde8c1f4bf928ad3fc086907b79feafb74b1b24cb937c63780dc600376"
+    },
+    {
+      "artifact": "missing-discipline.json",
+      "sha256": "08576a65846ba03bc8d107bf653f815280065676edfb7ea1a73ff788c1c0a8e9"
+    },
+    {
+      "artifact": "red/junit.xml",
+      "sha256": "ed3c2f07c9429fa40dcad9890553f9327569030372a68a602c83d5a1f6326955"
+    },
+    {
+      "artifact": "red/pytest.txt",
+      "sha256": "6ef086113b0c76e43ccfe7c2ed8e07fd1f6a43c9c499468d14e1b150a58556f9"
+    },
+    {
+      "artifact": "red/summary.json",
+      "sha256": "dad0756d094f38f8468534e5429d9eac09de40c4b2b8e049d75effc92e2ffcc8"
+    },
+    {
+      "artifact": "regression/junit.xml",
+      "sha256": "7429c5bfacf1d4c7a1615d5853664ae47bb45a8d136a928228cf3cfde6699807"
+    },
+    {
+      "artifact": "regression/pytest.txt",
+      "sha256": "c1007f35d75ac3f9b03709fb14de80827a9a3b1c35fa12ebd6816dcdd5b52018"
+    },
+    {
+      "artifact": "regression/summary.json",
+      "sha256": "52087a2b3a9e8116479c8171d1cac4d4933ef9fb1e5f596a7751f9c88181590c"
+    },
+    {
+      "artifact": "target/junit.xml",
+      "sha256": "305c1f64316c3e8eda83a532843c61d9aad0f6c61dedcf7521796fba859ce00a"
+    },
+    {
+      "artifact": "target/pytest.txt",
+      "sha256": "2d0dffe30babe06b3ff2d7df50f7e85832be0f6d0e8a26ee40a1b4c989124bf8"
+    },
+    {
+      "artifact": "target/summary.json",
+      "sha256": "561e71f1ed135861d494b531492301169ee6edf26ada69230268116dab7648ff"
+    },
+    {
+      "artifact": "ui-verification.json",
+      "sha256": "01be708dd286db876c4da4bcd1256074c1b7139cc13de2e51f118cb1c380e7bd"
+    }
+  ]
+}

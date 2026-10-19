@@ -1,5 +1,6 @@
 import threading
 import time
+import json
 
 import fitz
 import pytest
@@ -132,7 +133,7 @@ def test_metadata_progress_does_not_hold_library_lock(client, services, pdf, mon
 def test_import_jobs_and_validation(client, services, pdf):
     assert client.post('/documents/metadata/jobs', files={'file': ('a.txt', b'no', 'text/plain')}).status_code == 415
     assert client.post('/documents/jobs', files={'file': ('a.pdf', b'bad', 'application/pdf')}, data={'metadata_json': '{bad'}).status_code == 422
-    response = client.post('/documents/jobs', files={'file': ('a.pdf', pdf.read_bytes(), 'application/pdf')})
+    response = client.post('/documents/jobs', files={'file': ('a.pdf', pdf.read_bytes(), 'application/pdf')}, data={"metadata_json": json.dumps({"topics": ["自然科学"]})})
     job = wait_job(client, response.json()['job_id'])
     assert job['stage'] == 'done'
     assert 'document_parsing' in job['stages'] and 'document_processing' in job['stages']

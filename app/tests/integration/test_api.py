@@ -36,7 +36,7 @@ def test_real_pdf_pipeline_and_duplicate(client, imported, pdf, services):
     doc = imported["document"]
     assert doc["status"] == "ready" and doc["page_count"] == 2
     before = services.library.list_chunks()
-    result = client.post("/documents", files={"file": ("same.pdf", pdf.read_bytes(), "application/pdf")})
+    result = client.post("/documents", files={"file": ("same.pdf", pdf.read_bytes(), "application/pdf")}, data={"metadata_json": json.dumps({"topics": ["自然科学"]})})
     assert result.status_code == 200
     assert result.json()["document"]["doc_id"] == doc["doc_id"]
     assert services.library.list_chunks() == before
@@ -98,11 +98,11 @@ def test_invalid_upload_metadata(client, pdf, metadata):
 
 
 def test_bad_empty_type_oversize_and_cleanup(client, services, pdf, tmp_path):
-    bad = client.post("/documents", files={"file": ("bad.pdf", b"broken", "application/pdf")})
+    bad = client.post("/documents", files={"file": ("bad.pdf", b"broken", "application/pdf")}, data={"metadata_json": json.dumps({"topics": ["自然科学"]})})
     assert bad.status_code == 422 and bad.json()["error"]["code"] == "INVALID_PDF"
     empty = tmp_path / "empty.pdf"
     create_pdf(empty, [""])
-    response = client.post("/documents", files={"file": (empty.name, empty.read_bytes(), "application/pdf")})
+    response = client.post("/documents", files={"file": (empty.name, empty.read_bytes(), "application/pdf")}, data={"metadata_json": json.dumps({"topics": ["自然科学"]})})
     assert response.status_code == 422 and response.json()["error"]["code"] == "NO_EXTRACTABLE_TEXT"
     assert client.get("/documents").json()["documents"] == []
     failed = client.get("/documents?include_nonready=true").json()["documents"]
@@ -160,7 +160,7 @@ def test_failure_keeps_old_index_and_new_document_retryable(client, imported, se
     def fail(chunks):
         raise ProjectError("INDEX_BUILD_FAILED", "injected failure")
     monkeypatch.setattr(services.retriever, "build", fail)
-    result = client.post("/documents", files={"file": (second.name, second.read_bytes(), "application/pdf")})
+    result = client.post("/documents", files={"file": (second.name, second.read_bytes(), "application/pdf")}, data={"metadata_json": json.dumps({"topics": ["自然科学"]})})
     assert result.status_code == 500
     assert client.post("/search", json={"query": "BM25", "mode": "keyword"}).json()["index_version"] == old_version
     docs = client.get("/documents?include_nonready=true").json()["documents"]

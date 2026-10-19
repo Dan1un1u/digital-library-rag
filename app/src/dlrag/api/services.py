@@ -10,6 +10,7 @@ from pathlib import Path
 from pydantic import ValidationError
 from dlrag.shared.config import Settings
 from dlrag.shared.models import AnswerResponse, Chunk, Document, IndexManifest, RetrievalHit, error_answer
+from dlrag.shared.disciplines import DisciplineError, require_discipline
 
 
 class ProjectError(Exception):
@@ -26,7 +27,7 @@ def http_status(code):
     if code == "UNSUPPORTED_FILE":
         return 415
     if code in {"INVALID_REQUEST", "INVALID_PDF", "NO_EXTRACTABLE_TEXT", "FULLTEXT_REVIEW_REQUIRED", "TEXT_LAYER_REVIEW_REQUIRED",
-                "CHUNK_CONFIG_MISMATCH", "UNSUPPORTED_HISTORY"}:
+                "CHUNK_CONFIG_MISMATCH", "UNSUPPORTED_HISTORY", "DISCIPLINE_REQUIRED", "DISCIPLINE_CONFLICT"}:
         return 422
     if code in {"INDEX_NOT_READY", "EMBEDDING_NOT_CONFIGURED", "EMBEDDING_MISMATCH",
                 "MODEL_NOT_CONFIGURED", "MODEL_TIMEOUT", "MODEL_UNAVAILABLE",
@@ -105,6 +106,10 @@ class Services:
             return manifest
 
     def ingest(self, path: str, metadata: dict, progress=None):
+        try:
+            require_discipline(metadata)
+        except DisciplineError as error:
+            raise ProjectError(error.code, error.message) from None
         if progress:
             progress("waiting")
         with self.lock:

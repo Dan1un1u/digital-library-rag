@@ -1,0 +1,13 @@
+........................................................................ [100%]
+============================== warnings summary ===============================
+..\..\llm_exp\digital-library\workspace\deployments\lib_management_v1_20261018\.venv\Lib\site-packages\fastapi\testclient.py:1
+  D:\llm_exp\digital-library\workspace\deployments\lib_management_v1_20261018\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+tests/integration/test_discipline_ingestion.py::test_duplicate_keeps_selected_discipline_and_index
+  D:\digital-library-worktrees\mq-006\app\src\dlrag\ingestion\library.py:29: UserWarning: Duplicate PDF: existing metadata retained
+    document = self.register_document(file_path, metadata)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: D:\digital-library-worktrees\mq-006\reports\MQ-006\llm-target-final\junit.xml -
+72 passed, 2 warnings in 11.67s

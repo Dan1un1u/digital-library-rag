@@ -50,7 +50,7 @@ def test_mixed_scan_import_is_not_served(client, services, imported, tmp_path):
     path = mixed_pdf(tmp_path / "mixed.pdf")
     before = services.manifest()
     chunks = services.library.list_chunks()
-    response = client.post("/documents", files={"file": (path.name, path.read_bytes(), "application/pdf")})
+    response = client.post("/documents", files={"file": (path.name, path.read_bytes(), "application/pdf")}, data={"metadata_json": json.dumps({"topics": ["自然科学"]})})
     assert response.status_code == 422, response.text
     assert response.json()["error"]["code"] == "FULLTEXT_REVIEW_REQUIRED"
     assert response.json()["error"]["fulltext_review"]["suspect_pages"] == [2]
@@ -66,7 +66,7 @@ def test_mixed_scan_import_is_not_served(client, services, imported, tmp_path):
 @pytest.mark.parametrize("mode", ["blank", "blank_scan", "logo", "overlapping_logos", "vector", "ocr"])
 def test_blank_small_graphic_and_readable_ocr_are_not_blocked(client, tmp_path, mode):
     path = mixed_pdf(tmp_path / "boundary.pdf", mode=mode)
-    result = client.post("/documents", files={"file": (path.name, path.read_bytes(), "application/pdf")})
+    result = client.post("/documents", files={"file": (path.name, path.read_bytes(), "application/pdf")}, data={"metadata_json": json.dumps({"topics": ["自然科学"]})})
     assert result.status_code == 200, result.text
     assert result.json()["document"]["status"] == "ready"
 
@@ -113,7 +113,7 @@ def test_async_review_survives_repeated_upload_and_explicit_retry(
     build = Mock(side_effect=AssertionError("suspect pages must not be embedded"))
     monkeypatch.setattr(services.retriever, "build", build)
     for attempt in range(2):
-        response = client.post("/documents/jobs", files={"file": (path.name, path.read_bytes(), "application/pdf")})
+        response = client.post("/documents/jobs", files={"file": (path.name, path.read_bytes(), "application/pdf")}, data={"metadata_json": json.dumps({"topics": ["自然科学"]})})
         job = wait_job(client, response.json()["job_id"])
         assert job["stage"] == "error" and job["error"]["code"] == "FULLTEXT_REVIEW_REQUIRED"
         assert job["result"] is None
@@ -130,9 +130,9 @@ def test_async_review_survives_repeated_upload_and_explicit_retry(
 
 def test_corrected_ocr_copy_can_be_imported_without_promoting_original(client, services, tmp_path):
     bad = mixed_pdf(tmp_path / "bad.pdf")
-    assert client.post("/documents", files={"file": (bad.name, bad.read_bytes(), "application/pdf")}).status_code == 422
+    assert client.post("/documents", files={"file": (bad.name, bad.read_bytes(), "application/pdf")}, data={"metadata_json": json.dumps({"topics": ["自然科学"]})}).status_code == 422
     fixed = mixed_pdf(tmp_path / "fixed.pdf", mode="ocr")
-    response = client.post("/documents/jobs", files={"file": (fixed.name, fixed.read_bytes(), "application/pdf")})
+    response = client.post("/documents/jobs", files={"file": (fixed.name, fixed.read_bytes(), "application/pdf")}, data={"metadata_json": json.dumps({"topics": ["自然科学"]})})
     job = wait_job(client, response.json()["job_id"])
     assert job["stage"] == "done" and job["result"]["document"]["status"] == "ready"
     assert len(client.get("/documents").json()["documents"]) == 1
@@ -146,14 +146,14 @@ def test_review_error_does_not_expose_provider_exception(client, services, tmp_p
     from dlrag.ingestion.errors import ProjectError
     path = mixed_pdf(tmp_path / "sample.pdf")
     monkeypatch.setattr(services, "ingest", Mock(side_effect=ProjectError("FULLTEXT_REVIEW_REQUIRED", "private-provider-body")))
-    job_id = client.post("/documents/jobs", files={"file": (path.name, path.read_bytes(), "application/pdf")}).json()["job_id"]
+    job_id = client.post("/documents/jobs", files={"file": (path.name, path.read_bytes(), "application/pdf")}, data={"metadata_json": json.dumps({"topics": ["自然科学"]})}).json()["job_id"]
     job = wait_job(client, job_id)
     assert job["stage"] == "error" and "private-provider-body" not in json.dumps(job)
 
 
 def test_management_ui_explains_review_and_keeps_source_access(client, services, tmp_path, monkeypatch):
     path = mixed_pdf(tmp_path / "review.pdf")
-    client.post("/documents", files={"file": (path.name, path.read_bytes(), "application/pdf")})
+    client.post("/documents", files={"file": (path.name, path.read_bytes(), "application/pdf")}, data={"metadata_json": json.dumps({"topics": ["自然科学"]})})
     monkeypatch.setattr("dlrag.ui.client.call_api", lambda base, method, path, **kw: client.request(method, path, **kw).json())
     app = AppTest.from_file(str(Path(__file__).parents[2] / "src/dlrag/ui/app.py"), default_timeout=20).run()
     app.sidebar.radio[0].set_value("上传与管理").run()

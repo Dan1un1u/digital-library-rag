@@ -1,0 +1,64 @@
+{
+  "8": {
+    "number": 8,
+    "title": "DEP-001：恢复硅基流动交付，移出本机专用接入",
+    "state": "open",
+    "draft": true,
+    "merged": false,
+    "mergeable": true,
+    "mergeable_state": "clean",
+    "changed_files": 71,
+    "additions": 6670,
+    "deletions": 2475,
+    "html_url": "https://github.com/Dan1un1u/digital-library-rag/pull/8",
+    "head": {
+      "ref": "fix/siliconflow-portability",
+      "sha": "c8ab90ad96db22c1b04c27548ceb4bb553fe5471"
+    },
+    "base": {
+      "ref": "main",
+      "sha": "bdfb737c555b4e55d9216f1397316b3bfb513ec0"
+    },
+    "checks": {
+      "check_runs": [],
+      "statuses": [],
+      "hosted_checks_present": false
+    },
+    "reviews": {}
+  },
+  "9": {
+    "number": 9,
+    "title": "MQ-006：加入关键词与LLM辅助学科分类，复验六篇待分类文献",
+    "state": "open",
+    "draft": true,
+    "merged": false,
+    "mergeable": true,
+    "mergeable_state": "clean",
+    "changed_files": 75,
+    "additions": 15865,
+    "deletions": 52,
+    "html_url": "https://github.com/Dan1un1u/digital-library-rag/pull/9",
+    "head": {
+      "ref": "fix/mq-006-discipline",
+      "sha": "25bcd6ae6a58e5edeab10e585f3cf713c5e31602"
+    },
+    "base": {
+      "ref": "fix/siliconflow-portability",
+      "sha": "c8ab90ad96db22c1b04c27548ceb4bb553fe5471"
+    },
+    "checks": {
+      "check_runs": [],
+      "statuses": [],
+      "hosted_checks_present": false
+    },
+    "reviews": {}
+  },
+  "repo": {
+    "private": true,
+    "default_branch": "main",
+    "allow_squash_merge": true,
+    "allow_merge_commit": true,
+    "allow_rebase_merge": true,
+    "delete_branch_on_merge": false
+  }
+}

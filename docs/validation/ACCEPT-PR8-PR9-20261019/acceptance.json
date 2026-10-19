@@ -1,0 +1,162 @@
+{
+  "accepted_at": "2026-10-19T13:17:31.628402+00:00",
+  "user_authorized_merge_order": [
+    8,
+    9
+  ],
+  "status": "pass",
+  "blocking_findings": [],
+  "prs": {
+    "8": {
+      "target": {
+        "tests": {
+          "tests": 18,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "tested_code": {
+          "commit": "c8ab90ad96db22c1b04c27548ceb4bb553fe5471",
+          "branch": "fix/siliconflow-portability",
+          "dirty": false
+        },
+        "new_cases": 18,
+        "inherited_cases": 0,
+        "scope": "fresh run for this acceptance",
+        "artifact": "pr8-target/summary.json"
+      },
+      "regression": {
+        "tests": {
+          "tests": 525,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "tested_code": {
+          "commit": "c8ab90ad96db22c1b04c27548ceb4bb553fe5471",
+          "branch": "fix/siliconflow-portability",
+          "dirty": false
+        },
+        "new_cases": 18,
+        "inherited_cases": 507,
+        "scope": "fresh run for this acceptance",
+        "artifact": "pr8-regression/summary.json"
+      }
+    },
+    "9": {
+      "target": {
+        "tests": {
+          "tests": 72,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "tested_code": {
+          "commit": "25bcd6ae6a58e5edeab10e585f3cf713c5e31602",
+          "branch": "review/accept-pr8-pr9",
+          "dirty": false
+        },
+        "new_cases": 72,
+        "inherited_cases": 0,
+        "scope": "fresh run for this acceptance",
+        "artifact": "pr9-target/summary.json"
+      },
+      "regression": {
+        "tests": {
+          "tests": 597,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "tested_code": {
+          "commit": "25bcd6ae6a58e5edeab10e585f3cf713c5e31602",
+          "branch": "review/accept-pr8-pr9",
+          "dirty": false
+        },
+        "new_cases": 72,
+        "inherited_cases": 525,
+        "scope": "fresh run for this acceptance",
+        "artifact": "pr9-regression/summary.json"
+      }
+    }
+  },
+  "source_trees": {
+    "app": "6f2190d0b730282e390e1ce8bc7fadc119281dfc",
+    "scripts": "c545aa10cce3772177695ecac237f57cf07cbff5",
+    "tools": "25fca590aae756ad6ab8a75078a2ee05b1de5ba2"
+  },
+  "source_review": {
+    "pr8_original_cloud_contract_and_portable_startup": true,
+    "pr8_reader_manual_files_and_render_hashes_verified": true,
+    "pr9_keyword_then_opt_in_llm_classification": true,
+    "pr9_six_pdf_prior_live_evidence_verified_not_rerun": true,
+    "private_integrations_not_reintroduced": true,
+    "test_fixture_updates_preserve_original_assertions": true
+  },
+  "limitations": [
+    "No live SiliconFlow account request; compatibility validated with intercepted request contracts.",
+    "No hosted checks configured; no deployment or catalogue migration authorized."
+  ],
+  "artifact_sha256": [
+    {
+      "path": "initial-github.json",
+      "sha256": "2d55a3a55bfc4ac71070e267ba8efccf30ec1afe38318f64f433032ab34cefa7"
+    },
+    {
+      "path": "pr8-regression/junit.xml",
+      "sha256": "77f546f24c3878284e0ba9dfeb5456916ecb33fb8ee665788bdc6307fee32ded"
+    },
+    {
+      "path": "pr8-regression/pytest.txt",
+      "sha256": "11932f89d68055aa45e4efed88875fa675c6696e2f74bf43d05323ca7dea0e55"
+    },
+    {
+      "path": "pr8-regression/summary.json",
+      "sha256": "055984e56834a06a6073cd5ce32369eabc6c87a6173ef5d1090354ec68a97ddd"
+    },
+    {
+      "path": "pr8-target/junit.xml",
+      "sha256": "e40c1395fe6ddbb906a4706c6b65342447600bc2ea887e69acbf7608014b9b8e"
+    },
+    {
+      "path": "pr8-target/pytest.txt",
+      "sha256": "08889fdf5491a87df6ca6d242adcdaaec379b6c789526919bed173bd7d920917"
+    },
+    {
+      "path": "pr8-target/summary.json",
+      "sha256": "c3c6f69f843356464c2ed31327f8028aa47fb8f0487bd45b12007bf1e3959664"
+    },
+    {
+      "path": "pr9-regression/junit.xml",
+      "sha256": "f2404bc95d9a33b12e72d9ce8e08a233207d4112f0a8b0076f229890877c21fb"
+    },
+    {
+      "path": "pr9-regression/pytest.txt",
+      "sha256": "f7f30abdc36c6c0bf9db0d993b9fa39cb44f6f1a251d6f43b2977b6c860a1e09"
+    },
+    {
+      "path": "pr9-regression/summary.json",
+      "sha256": "975d5b41aa07c01b436aa4033a7005915ebcd03db229bb0a6b4e9b26d903b763"
+    },
+    {
+      "path": "pr9-target/junit.xml",
+      "sha256": "fdccdade2f6d27565b891166226f49cd19044ed422d1043f292eecc6f202727d"
+    },
+    {
+      "path": "pr9-target/pytest.txt",
+      "sha256": "08e922c6e94b0a6040c03ebb8ba0e700871dc915f9bfc0c6ce6333d6389566aa"
+    },
+    {
+      "path": "pr9-target/summary.json",
+      "sha256": "32fe1f507e4321e90d8221163fb3ca9db58900777c9f04f997c5371746c368a0"
+    },
+    {
+      "path": "publish-audit.json",
+      "sha256": "f9fa05b8af4ac465c9b1c8fd0df0e0a227442b07fe0f5a6a4a14a3c551c6777e"
+    },
+    {
+      "path": "review-evidence.json",
+      "sha256": "3fb39be51ae321c0b30df931e65853ea0133313ad25c38167c2f6d63728b6f1f"
+    }
+  ]
+}

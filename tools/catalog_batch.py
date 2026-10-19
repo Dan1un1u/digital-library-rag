@@ -18,6 +18,7 @@ from urllib.parse import urlsplit
 
 import requests
 from dlrag.shared.models import Metadata
+from dlrag.shared.disciplines import DisciplineError, require_discipline
 
 ROOT = Path(__file__).resolve().parents[1]
 MAX_PDF_BYTES = 25 * 1024 * 1024
@@ -68,6 +69,10 @@ def prepare(path):
             raise BatchError(f"{item_id}: duplicate content inside batch; use a separate repeat-import batch")
         hashes.add(sha)
         metadata = Metadata.model_validate(row["metadata"]).model_dump()
+        try:
+            require_discipline(metadata)
+        except DisciplineError as error:
+            raise BatchError(f"{item_id}: {error.message}") from None
         if not metadata["title"]:
             raise BatchError(f"{item_id}: explicit title required")
         review = row.get("review", {})
@@ -164,6 +169,11 @@ def apply(plan, payloads, output, api, *, job_timeout=900, poll_interval=1, back
             hashlib.sha256(data).hexdigest() != item["sha256"]
             for item, data in zip(plan["items"], payloads)):
         raise BatchError("Payload does not match the fixed plan")
+    for item in plan["items"]:
+        try:
+            require_discipline(item["metadata"])
+        except DisciplineError as error:
+            raise BatchError(f"{item['item_id']}: {error.message}") from None
     if not backup_ref.strip():
         raise BatchError("Record the completed local backup reference")
     before = api.snapshot()

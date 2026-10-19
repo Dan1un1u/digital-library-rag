@@ -1,0 +1,89 @@
+{
+  "work_item": "MQ-006",
+  "phase": "missing",
+  "code": {
+    "commit": "193ec30bbe2a9d35dda1dda72b35688de7cc26fd",
+    "branch": "fix/mq-006-discipline",
+    "dirty": false
+  },
+  "created_at": "2026-10-19T12:25:55.140365+00:00",
+  "passed": true,
+  "recognition_input": "Replay original frozen reviewed metadata; no new recognition accuracy claim.",
+  "plan_rejected": true,
+  "plan_error_type": "BatchError",
+  "api_rejections": [
+    {
+      "item_id": "paper-001",
+      "route": "/documents",
+      "http_status": 422,
+      "error_code": "DISCIPLINE_REQUIRED"
+    },
+    {
+      "item_id": "paper-001",
+      "route": "/documents/jobs",
+      "http_status": 422,
+      "error_code": "DISCIPLINE_REQUIRED"
+    },
+    {
+      "item_id": "paper-002",
+      "route": "/documents",
+      "http_status": 422,
+      "error_code": "DISCIPLINE_REQUIRED"
+    },
+    {
+      "item_id": "paper-002",
+      "route": "/documents/jobs",
+      "http_status": 422,
+      "error_code": "DISCIPLINE_REQUIRED"
+    },
+    {
+      "item_id": "paper-003",
+      "route": "/documents",
+      "http_status": 422,
+      "error_code": "DISCIPLINE_REQUIRED"
+    },
+    {
+      "item_id": "paper-003",
+      "route": "/documents/jobs",
+      "http_status": 422,
+      "error_code": "DISCIPLINE_REQUIRED"
+    },
+    {
+      "item_id": "paper-008",
+      "route": "/documents",
+      "http_status": 422,
+      "error_code": "DISCIPLINE_REQUIRED"
+    },
+    {
+      "item_id": "paper-008",
+      "route": "/documents/jobs",
+      "http_status": 422,
+      "error_code": "DISCIPLINE_REQUIRED"
+    },
+    {
+      "item_id": "paper-010",
+      "route": "/documents",
+      "http_status": 422,
+      "error_code": "DISCIPLINE_REQUIRED"
+    },
+    {
+      "item_id": "paper-010",
+      "route": "/documents/jobs",
+      "http_status": 422,
+      "error_code": "DISCIPLINE_REQUIRED"
+    },
+    {
+      "item_id": "paper-011",
+      "route": "/documents",
+      "http_status": 422,
+      "error_code": "DISCIPLINE_REQUIRED"
+    },
+    {
+      "item_id": "paper-011",
+      "route": "/documents/jobs",
+      "http_status": 422,
+      "error_code": "DISCIPLINE_REQUIRED"
+    }
+  ],
+  "no_store_or_index_change": true
+}

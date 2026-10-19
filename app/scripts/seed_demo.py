@@ -44,7 +44,7 @@ def main(argv=None):
                 if not path.exists():
                     create_pdf(path, pages)
                 services.ingest(str(path), {"title": f"合成测试资料 {n + 1}（非论文）", "authors": [],
-                                           "year": 2024 + n, "topics": ["合成测试"], "language": "en",
+                                           "year": 2024 + n, "topics": ["自然科学", "合成测试"], "language": "en",
                                            "rights_note": "本项目生成的合成测试资料"})
             manifest = services.manifest()
         print(json.dumps({"mode": settings.app_mode, "synthetic": True, "manifest": manifest,

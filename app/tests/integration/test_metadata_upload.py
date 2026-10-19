@@ -26,6 +26,7 @@ def test_preview_does_not_ingest_and_user_can_override(client, services):
     assert services.retriever.get_manifest() is None
     assert not list((services.settings.data_dir / "tmp").iterdir())
     m["title"] = "User corrected title"
+    m["topics"] = ["自然科学"]  # User selects a discipline after preview.
     imported = client.post("/documents", files={"file": ("paper.pdf", data, "application/pdf")}, data={"metadata_json": json.dumps(m)})
     assert imported.status_code == 200
     assert imported.json()["document"]["title"] == "User corrected title"

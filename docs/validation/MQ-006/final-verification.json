@@ -1,0 +1,75 @@
+{
+  "metadata_and_files": [
+    {
+      "item_id": "paper-001",
+      "all_metadata_fields_match": true,
+      "source_file_sha256_match": true,
+      "page_count": 16
+    },
+    {
+      "item_id": "paper-002",
+      "all_metadata_fields_match": true,
+      "source_file_sha256_match": true,
+      "page_count": 12
+    },
+    {
+      "item_id": "paper-003",
+      "all_metadata_fields_match": true,
+      "source_file_sha256_match": true,
+      "page_count": 17
+    },
+    {
+      "item_id": "paper-008",
+      "all_metadata_fields_match": true,
+      "source_file_sha256_match": true,
+      "page_count": 15
+    },
+    {
+      "item_id": "paper-010",
+      "all_metadata_fields_match": true,
+      "source_file_sha256_match": true,
+      "page_count": 24
+    },
+    {
+      "item_id": "paper-011",
+      "all_metadata_fields_match": true,
+      "source_file_sha256_match": true,
+      "page_count": 16
+    }
+  ],
+  "api_discipline_filter_counts": {
+    "自然科学": 6,
+    "社会科学": 0,
+    "哲学与人文科学": 0
+  },
+  "protected_instances": [
+    {
+      "port": "18000",
+      "document_count": 25,
+      "index_version": "idx_20261018T153334_20ed96d8ced7",
+      "snapshot_unchanged": true,
+      "before_after_canonical_sha256": "32543215cdab74824873efdecb913700ecc75a4e030e501324155462b6794b90"
+    },
+    {
+      "port": "19000",
+      "document_count": 50,
+      "index_version": "idx_20261019T024947_292c353a8ff5",
+      "snapshot_unchanged": true,
+      "before_after_canonical_sha256": "b880ae3f412107420737550aec70f9e0224b176d5e0a788043e5586ec81bfadd"
+    },
+    {
+      "port": "19010",
+      "document_count": 6,
+      "index_version": "idx_20261019T050415_38b306e4080d",
+      "snapshot_unchanged": true,
+      "before_after_canonical_sha256": "2e092237b64e0a078be70b4ce7d669e4cefe2d0610970417f19c01459574c025"
+    },
+    {
+      "port": "19020",
+      "document_count": 6,
+      "index_version": "idx_20261019T091710_a9e391cc545c",
+      "snapshot_unchanged": true,
+      "before_after_canonical_sha256": "51e42753c0a28640338fea30c0ff92e46546fafc3fa9ca1c57cf6742ec6496e3"
+    }
+  ]
+}

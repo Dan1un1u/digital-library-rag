@@ -1,0 +1,10 @@
+{
+  "commit": "d40c68c23f9219be1219afe9ba6ea9d907b210a9",
+  "counts": {
+    "tests": 33,
+    "failures": 23,
+    "errors": 0,
+    "skipped": 0
+  },
+  "negative_control": true
+}
