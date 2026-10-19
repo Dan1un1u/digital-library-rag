@@ -24,7 +24,7 @@ def discipline(document):
 
 
 def document_status(document):
-    if document.get("error_code") == "FULLTEXT_REVIEW_REQUIRED":
+    if document.get("error_code") in {"FULLTEXT_REVIEW_REQUIRED", "TEXT_LAYER_REVIEW_REQUIRED"}:
         return "待核对正文（未加入检索）"
     return {"ready": "可阅读", "uploaded": "处理中", "parsing": "处理中",
             "indexing": "正在建立检索", "failed": "处理失败"}.get(document["status"], document["status"])
