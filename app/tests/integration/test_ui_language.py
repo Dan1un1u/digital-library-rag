@@ -52,6 +52,17 @@ def test_url_language_initialization(client, monkeypatch, language, expected):
     assert app.title[0].value == expected
 
 
+def test_switch_resends_selected_choices_with_translated_labels(client, monkeypatch):
+    app, _ = open_app(client, monkeypatch)
+    app.selectbox(key='browse_domain').set_value('自然科学').run()
+    switch(app, 'en')
+    assert app.radio(key='navigation_page').value == '馆藏展示'
+    assert app.selectbox(key='browse_domain').value == '自然科学'
+    assert app.radio(key='navigation_page').proto.set_value
+    assert app.selectbox(key='browse_domain').proto.set_value
+    assert app.selectbox(key='browse_domain').proto.raw_value == 'Natural sciences'
+
+
 @pytest.mark.parametrize('page,section,heading', [
     ('馆藏展示', '馆藏文献分类', 'Collection by subject'),
     ('馆藏展示', '热门电子文献资源', 'Featured documents'),
