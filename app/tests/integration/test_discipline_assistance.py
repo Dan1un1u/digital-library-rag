@@ -193,3 +193,12 @@ def test_pdf_line_wraps_and_typographic_ligatures_support_the_same_excerpt(print
                                   [{'pdf_page': 1, 'text': printed, 'validation_text': printed}])
     assert accepted == 1
     assert result['metadata']['topics'] == ['自然科学']
+
+
+def test_ellipses_retain_only_a_contiguous_verifiable_excerpt():
+    from dlrag.ingestion.discipline import complete_discipline
+    result = {'metadata': {'title': TITLES[0], 'topics': []}}
+    candidate = response()['discipline']
+    candidate['excerpt'] = PROOF + ' ... This unverified second fragment must never be displayed.'
+    assert complete_discipline(result, candidate, [{'pdf_page': 1, 'text': PROOF}]) == 1
+    assert result['discipline_classification']['excerpt'] == PROOF
