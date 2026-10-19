@@ -114,7 +114,7 @@ MQ-004 补全候选已接入预览：可选择“联网补全出版资料”，�
 
 ## 数据与本机部署
 
-2026-10-19 PR归属已拆分：**PR1为MQ-003/MQ-004及COL-001基础；本分支PR2为ING-001及COL-002测试基线**，PR2依赖PR1但差异不重复MQ修复。下文沿用原PR的描述属于历史记录；当前以[PR2迁移说明](docs/validation/COL-002/pr2-migration.md)和[任务隔离流程](docs/workflow/test-task-isolation.md)为准。
+2026-10-19 PR归属已拆分：**PR1为MQ-003/MQ-004及COL-001基础；本分支PR2为ING-001及COL-002测试基线**，PR2依赖PR1但差异不重复MQ修复。MQ分支独立440项重验见[PR1范围记录](docs/validation/COL-001/pr1-scope.md)。下文沿用原PR的描述属于历史记录；当前以[PR2迁移说明](docs/validation/COL-002/pr2-migration.md)和[任务隔离流程](docs/workflow/test-task-isolation.md)为准。
 
 2026-10-19 新增的跨学科独立检测使用 **dev 库**：社会科学25篇、人文25篇，共892页/3262片段，可在本机 [dev 界面](http://127.0.0.1:19501/)查看；正式库仍为25篇/1821片段。50篇原件真实增强预览、外部OCR和编目、实际添加及失败证据分开保存。离线回归450项通过；真实题名检索148/150命中，发现的正文覆盖、乱码及日期口径改进均未伪装成已修复。见[50篇清单](docs/validation/COL-002/selection.md)、[独立报告](docs/validation/COL-002/README.md)和[工作量台账](docs/validation/COL-002/contributions.md)。候选未部署正式实例，原PR暂不合并。
 
