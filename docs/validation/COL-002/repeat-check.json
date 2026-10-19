@@ -1,0 +1,14 @@
+{
+  "code": {
+    "commit": "20ec245051a783e55701ae4001418c45a93b6e8e",
+    "branch": "feat/catalog-ingestion-audit",
+    "dirty": false
+  },
+  "runner_sha256": "77010d979ff7b4c3c7d55a9e46b97ace6ef9e6501e8d8d09eb404608fd69d4a8",
+  "dev_snapshot_unchanged": true,
+  "production_unchanged": true,
+  "document_count": 50,
+  "chunk_count": 3262,
+  "index_version": "idx_20261019T024947_292c353a8ff5",
+  "repeat_outcome": "already_present"
+}

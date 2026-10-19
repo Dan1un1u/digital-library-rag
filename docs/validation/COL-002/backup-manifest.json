@@ -1,0 +1,37 @@
+{
+  "backup_id": "COL-002-dev-before-import",
+  "scope": "empty dev library only",
+  "integrity_check": "ok",
+  "files": [
+    {
+      "path": "library.sqlite",
+      "sha256": "16370db19d42f1a9161b4644ada2b1b504f131fb64a112581499d3a79e9e9a2a",
+      "bytes": 57344
+    },
+    {
+      "path": "indexes/current.json",
+      "sha256": "6ff480b1c5e5402a0f2712eece559fe59e35005cecce07d6f26b1d5140337ac5",
+      "bytes": 52
+    },
+    {
+      "path": "indexes/idx_20261019T022558_a3817cdba1b5/chunks.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    {
+      "path": "indexes/idx_20261019T022558_a3817cdba1b5/lexical.json",
+      "sha256": "b4f3540a49e8b0fa44f32ab3c1e605a8dee1f84d2af50df8bacb0a7497815bbb",
+      "bytes": 55
+    },
+    {
+      "path": "indexes/idx_20261019T022558_a3817cdba1b5/manifest.json",
+      "sha256": "068674a92925dfb4b5465ffddec5e978d2a2e21778fdedf8085c2fcc8bb29dc5",
+      "bytes": 1259
+    },
+    {
+      "path": "indexes/idx_20261019T022558_a3817cdba1b5/vectors.npy",
+      "sha256": "5f8a001dc9d1eed5ef47d4ab87bdcc6ab84ee23306628a1604138e201a9562e9",
+      "bytes": 128
+    }
+  ]
+}

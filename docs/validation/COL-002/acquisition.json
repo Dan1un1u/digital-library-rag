@@ -1,0 +1,1024 @@
+{
+  "items": [
+    {
+      "id": "SS01",
+      "created_at": "2026-10-19T02:11:25.049650+00:00",
+      "attempts": [
+        {
+          "url": "https://web.mit.edu/curhan/www/docs/Articles/15341_Readings/Behavioral_Decision_Theory/Kahneman_Tversky_1979_Prospect_theory.pdf",
+          "http_status": 200,
+          "final_url": "https://web.mit.edu/curhan/www/docs/Articles/15341_Readings/Behavioral_Decision_Theory/Kahneman_Tversky_1979_Prospect_theory.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "a067b12208421a545448d08ec93064af19f7e5702dfa2ed41791bf1093c13ab5",
+      "bytes": 570368,
+      "source_url": "https://web.mit.edu/curhan/www/docs/Articles/15341_Readings/Behavioral_Decision_Theory/Kahneman_Tversky_1979_Prospect_theory.pdf",
+      "final_url": "https://web.mit.edu/curhan/www/docs/Articles/15341_Readings/Behavioral_Decision_Theory/Kahneman_Tversky_1979_Prospect_theory.pdf",
+      "page_count": 29,
+      "extractable_characters": 87446,
+      "local_raw_receipt_sha256": "f5b4acd34d72a150a43110b639e20c261d809971d27b1fabc24ff3313ce01ba5"
+    },
+    {
+      "id": "SS02",
+      "created_at": "2026-10-19T02:11:25.050881+00:00",
+      "attempts": [
+        {
+          "url": "https://web.pdx.edu/~nwallace/EHP/AkerlofLemons.pdf",
+          "http_status": 200,
+          "final_url": "https://web.pdx.edu/~nwallace/EHP/AkerlofLemons.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "770b53e35e8043fcaa4dd170bce420d4902dee280facaa5363bb48817a179f58",
+      "bytes": 496634,
+      "source_url": "https://web.pdx.edu/~nwallace/EHP/AkerlofLemons.pdf",
+      "final_url": "https://web.pdx.edu/~nwallace/EHP/AkerlofLemons.pdf",
+      "page_count": 14,
+      "extractable_characters": 35300,
+      "local_raw_receipt_sha256": "b724b999ad0fa31328ccc2992ae982f19c71d0d58fbab8c5f4baeea6d6cd4e7d"
+    },
+    {
+      "id": "SS03",
+      "created_at": "2026-10-19T02:11:25.050881+00:00",
+      "attempts": [
+        {
+          "url": "https://sites.socsci.uci.edu/~jkbrueck/course%20readings/Econ%20272B%20readings/coase.pdf",
+          "http_status": 200,
+          "final_url": "https://sites.socsci.uci.edu/~jkbrueck/course%20readings/Econ%20272B%20readings/coase.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "29ba7bac3df28009170eef8f7b6c006ed991fb011942214c0af22858ae7e5f84",
+      "bytes": 5619147,
+      "source_url": "https://sites.socsci.uci.edu/~jkbrueck/course%20readings/Econ%20272B%20readings/coase.pdf",
+      "final_url": "https://sites.socsci.uci.edu/~jkbrueck/course%20readings/Econ%20272B%20readings/coase.pdf",
+      "page_count": 45,
+      "extractable_characters": 145949,
+      "local_raw_receipt_sha256": "a15fbf3f3787aa3b92e0169ec288247cdce843b3affbb0122eb25f854484f286"
+    },
+    {
+      "id": "SS04",
+      "created_at": "2026-10-19T02:11:25.051886+00:00",
+      "attempts": [
+        {
+          "url": "https://msuweb.montclair.edu/~lebelp/coasenatfirmec1937.pdf",
+          "http_status": 200,
+          "final_url": "https://msuweb.montclair.edu/~lebelp/coasenatfirmec1937.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "643ef9bd0c253cf91735610abddc5232abcaee1b085e0325df09553a957e845a",
+      "bytes": 1771423,
+      "source_url": "https://msuweb.montclair.edu/~lebelp/coasenatfirmec1937.pdf",
+      "final_url": "https://msuweb.montclair.edu/~lebelp/coasenatfirmec1937.pdf",
+      "page_count": 21,
+      "extractable_characters": 0,
+      "local_raw_receipt_sha256": "912dcf67591432a79872bccce2bfaeebb5f31e037c9c0374e90a55923639ba23"
+    },
+    {
+      "id": "SS05",
+      "created_at": "2026-10-19T02:15:25.275431+00:00",
+      "attempts": [
+        {
+          "url": "https://msuweb.montclair.edu/~lebelp/SolowContToThOfEcGrowth1956QJEpdf.pdf",
+          "http_status": 200,
+          "final_url": "https://msuweb.montclair.edu/~lebelp/SolowContToThOfEcGrowth1956QJEpdf.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "de7e14007cef3173941883aa00bad549f04ff1d6811b758788a0aae79d5b6d93",
+      "bytes": 1494051,
+      "source_url": "https://msuweb.montclair.edu/~lebelp/SolowContToThOfEcGrowth1956QJEpdf.pdf",
+      "final_url": "https://msuweb.montclair.edu/~lebelp/SolowContToThOfEcGrowth1956QJEpdf.pdf",
+      "page_count": 30,
+      "extractable_characters": 111379,
+      "local_raw_receipt_sha256": "2c0c9b7317b5652bfe6a7a4109327d0844e03a582f12601e81a3ceccfd421e8a"
+    },
+    {
+      "id": "SS06",
+      "created_at": "2026-10-19T02:11:25.053097+00:00",
+      "attempts": [
+        {
+          "url": "https://competitionandappropriation.econ.ucla.edu/wp-content/uploads/sites/95/2017/08/Spence1973.pdf",
+          "http_status": 200,
+          "final_url": "https://competitionandappropriation.econ.ucla.edu/wp-content/uploads/sites/95/2017/08/Spence1973.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "a37b62fd92b1d1fe2264f0afc23c5c8f04198e4d157027d138bc65a75934cc5e",
+      "bytes": 356437,
+      "source_url": "https://competitionandappropriation.econ.ucla.edu/wp-content/uploads/sites/95/2017/08/Spence1973.pdf",
+      "final_url": "https://competitionandappropriation.econ.ucla.edu/wp-content/uploads/sites/95/2017/08/Spence1973.pdf",
+      "page_count": 21,
+      "extractable_characters": 1528,
+      "local_raw_receipt_sha256": "2dade55c97fb597b7f1f963d54d79c2c85eb0fff3bbcbf86f4388407ad68d35d"
+    },
+    {
+      "id": "SS07",
+      "created_at": "2026-10-19T02:11:26.424771+00:00",
+      "attempts": [
+        {
+          "url": "https://snap.stanford.edu/class/cs224w-readings/granovetter73weakties.pdf",
+          "http_status": 200,
+          "final_url": "https://snap.stanford.edu/class/cs224w-readings/granovetter73weakties.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "ee8e527ab9796435c80719db82b2bec244832d6509180e165f8854ccf518fcaf",
+      "bytes": 2223187,
+      "source_url": "https://snap.stanford.edu/class/cs224w-readings/granovetter73weakties.pdf",
+      "final_url": "https://snap.stanford.edu/class/cs224w-readings/granovetter73weakties.pdf",
+      "page_count": 22,
+      "extractable_characters": 0,
+      "local_raw_receipt_sha256": "d60e2e6ec7ec2fb5e54bccbd8a0686039ca05fc48580d516f506a57390cf613f"
+    },
+    {
+      "id": "SS08",
+      "created_at": "2026-10-19T02:11:26.879939+00:00",
+      "attempts": [
+        {
+          "url": "https://inequality.stanford.edu/sites/default/files/media/_media/pdf/Classic_Media/Granovetter_1985_Social%20Networks.pdf",
+          "http_status": 200,
+          "final_url": "https://inequality.stanford.edu/sites/default/files/media/_media/pdf/Classic_Media/Granovetter_1985_Social%20Networks.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "1c142553b05aea5a9228b8ac40c2b115edc866371010de00c6b9fb20e5fb3625",
+      "bytes": 883190,
+      "source_url": "https://inequality.stanford.edu/sites/default/files/media/_media/pdf/Classic_Media/Granovetter_1985_Social%20Networks.pdf",
+      "final_url": "https://inequality.stanford.edu/sites/default/files/media/_media/pdf/Classic_Media/Granovetter_1985_Social%20Networks.pdf",
+      "page_count": 31,
+      "extractable_characters": 0,
+      "local_raw_receipt_sha256": "0ed417bb0f1e9006830c3d71cf6f22898d356b0d98fbd74e18db987965856957"
+    },
+    {
+      "id": "SS09",
+      "created_at": "2026-10-19T02:11:26.883970+00:00",
+      "attempts": [
+        {
+          "url": "https://faculty.washington.edu/matsueda/courses/587/readings/Coleman%201988.pdf",
+          "http_status": 200,
+          "final_url": "https://faculty.washington.edu/matsueda/courses/587/readings/Coleman%201988.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "74c620e87a0c9ffe8a2c95ba58439073d006fd20795a59266938dfd1b8e1fbf9",
+      "bytes": 2591006,
+      "source_url": "https://faculty.washington.edu/matsueda/courses/587/readings/Coleman%201988.pdf",
+      "final_url": "https://faculty.washington.edu/matsueda/courses/587/readings/Coleman%201988.pdf",
+      "page_count": 27,
+      "extractable_characters": 1720,
+      "local_raw_receipt_sha256": "60cfcd0a923c9ab30fb5072b9bf88ba8370cd29cc2c9e9e70eeeb9f5f3f9b409"
+    },
+    {
+      "id": "SS10",
+      "created_at": "2026-10-19T02:11:38.983191+00:00",
+      "attempts": [
+        {
+          "url": "https://courses.umass.edu/marta/schmgmt802-marta/DiMaggio%26PowellASRtheironcagerevisited1983.pdf",
+          "http_status": 200,
+          "final_url": "https://courses.umass.edu/marta/schmgmt802-marta/DiMaggio%26PowellASRtheironcagerevisited1983.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "a0dcfce4aab13d67bcdbe93fb9a81302c519609461807aa257fb45abff1b99ca",
+      "bytes": 2572794,
+      "source_url": "https://courses.umass.edu/marta/schmgmt802-marta/DiMaggio%26PowellASRtheironcagerevisited1983.pdf",
+      "final_url": "https://courses.umass.edu/marta/schmgmt802-marta/DiMaggio%26PowellASRtheironcagerevisited1983.pdf",
+      "page_count": 15,
+      "extractable_characters": 83190,
+      "local_raw_receipt_sha256": "115bfb740b30b07c57a2c72b92ad956cb073206a43516b3373228138ad24ca42"
+    },
+    {
+      "id": "SS11",
+      "created_at": "2026-10-19T02:15:25.277426+00:00",
+      "attempts": [
+        {
+          "url": "https://eclass.unipi.gr/modules/document/file.php/DES316/Putnam%20Bowling%20Alone.pdf",
+          "http_status": 200,
+          "final_url": "https://eclass.unipi.gr/main/login_form.php?next=%2Fmodules%2Fdocument%2Ffile.php%2FDES316%2FPutnam%2520Bowling%2520Alone.pdf",
+          "error": "not_pdf"
+        },
+        {
+          "url": "https://dl1.cuni.cz/pluginfile.php/498313/mod_resource/content/1/BowlingAlone.pdf",
+          "http_status": 200,
+          "final_url": "https://dl1.cuni.cz/pluginfile.php/498313/mod_resource/content/1/BowlingAlone.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "83b462acc625a49ff41c1d5bad2e40777911b7af8e71aeccabd8f4872bc47e69",
+      "bytes": 71806,
+      "source_url": "https://dl1.cuni.cz/pluginfile.php/498313/mod_resource/content/1/BowlingAlone.pdf",
+      "final_url": "https://dl1.cuni.cz/pluginfile.php/498313/mod_resource/content/1/BowlingAlone.pdf",
+      "page_count": 18,
+      "extractable_characters": 54793,
+      "local_raw_receipt_sha256": "16c83616f499ba0c3800202588e79609e01c49d7113514784adee7e063db0457"
+    },
+    {
+      "id": "SS12",
+      "created_at": "2026-10-19T02:11:38.990818+00:00",
+      "attempts": [
+        {
+          "url": "https://garfield.library.upenn.edu/merton/matthew1.pdf",
+          "http_status": 200,
+          "final_url": "https://garfield.library.upenn.edu/merton/matthew1.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "95fc1cb4a84cf1c563b8085c0c8adca9f44c0162ae343368c688c1f5b64e5209",
+      "bytes": 2630812,
+      "source_url": "https://garfield.library.upenn.edu/merton/matthew1.pdf",
+      "final_url": "https://garfield.library.upenn.edu/merton/matthew1.pdf",
+      "page_count": 8,
+      "extractable_characters": 89757,
+      "local_raw_receipt_sha256": "4284f42a892314cfab106c6f91fe305fc52f5f2b24a2ec83a981e883867417f6"
+    },
+    {
+      "id": "SS13",
+      "created_at": "2026-10-19T02:11:40.115506+00:00",
+      "attempts": [
+        {
+          "url": "https://communities.pacificu.edu/laylaobeidi/wp-content/uploads/sites/1611/2024/04/Milgrim-S.-1963.-Behavioral-Study-of-Obedience.pdf",
+          "error": "SSLError"
+        },
+        {
+          "url": "https://irbmember.web.unc.edu/wp-content/uploads/sites/7878/2017/01/1963_Milgram_BehavioralStudy.pdf",
+          "http_status": 200,
+          "final_url": "https://irbmember.web.unc.edu/wp-content/uploads/sites/7878/2017/01/1963_Milgram_BehavioralStudy.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "3c3ee049ab5d7336b14e06bcb2770d980521c94bac9e5c7d3407ac8c14665df4",
+      "bytes": 99578,
+      "source_url": "https://irbmember.web.unc.edu/wp-content/uploads/sites/7878/2017/01/1963_Milgram_BehavioralStudy.pdf",
+      "final_url": "https://irbmember.web.unc.edu/wp-content/uploads/sites/7878/2017/01/1963_Milgram_BehavioralStudy.pdf",
+      "page_count": 9,
+      "extractable_characters": 46987,
+      "local_raw_receipt_sha256": "9a736210c37be9aa04b114d0fd834ff1dbe287e94fb6ad86bec88400ac9c06d0"
+    },
+    {
+      "id": "SS14",
+      "created_at": "2026-10-19T02:15:25.281147+00:00",
+      "attempts": [
+        {
+          "url": "https://www2.psych.ubc.ca/~schaller/528Readings/Festinger1954.pdf",
+          "http_status": 200,
+          "final_url": "https://www2.psych.ubc.ca/~schaller/528Readings/Festinger1954.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "d0b830982dacd3a8bdaf85583297c8f2adf3e9c25cff0e14169461be53fb1bf3",
+      "bytes": 3065461,
+      "source_url": "https://www2.psych.ubc.ca/~schaller/528Readings/Festinger1954.pdf",
+      "final_url": "https://www2.psych.ubc.ca/~schaller/528Readings/Festinger1954.pdf",
+      "page_count": 25,
+      "extractable_characters": 3453,
+      "local_raw_receipt_sha256": "346d3ad2b255e4cb8453ce5d0f116c186b13358feacd682044447f12e7a03c3e"
+    },
+    {
+      "id": "SS15",
+      "created_at": "2026-10-19T02:11:41.067070+00:00",
+      "attempts": [
+        {
+          "url": "https://stanford.edu/class/psych205/papers/Tversky-Kahneman-1981.pdf",
+          "http_status": 200,
+          "final_url": "https://web.stanford.edu/class/psych205/papers/Tversky-Kahneman-1981.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "c0b38a214463d00781f21783de700fcd647675a04d6481ab87d583f91fe31810",
+      "bytes": 4145829,
+      "source_url": "https://stanford.edu/class/psych205/papers/Tversky-Kahneman-1981.pdf",
+      "final_url": "https://web.stanford.edu/class/psych205/papers/Tversky-Kahneman-1981.pdf",
+      "page_count": 6,
+      "extractable_characters": 70675,
+      "local_raw_receipt_sha256": "e21fb6c0a2eac9b3020427a2c1afc508357f6caec031167648ba08eff31cd096"
+    },
+    {
+      "id": "SS16",
+      "created_at": "2026-10-19T02:11:41.341101+00:00",
+      "attempts": [
+        {
+          "url": "https://fbaum.unc.edu/teaching/articles/Science_1973_JudgmentUnderUncertainty.pdf",
+          "http_status": 200,
+          "final_url": "https://fbaum.unc.edu/teaching/articles/Science_1973_JudgmentUnderUncertainty.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "16a36994ac7047aa9dfbc196ae9c0453c4c947a72c71b70684b24e6ab15a70de",
+      "bytes": 1804460,
+      "source_url": "https://fbaum.unc.edu/teaching/articles/Science_1973_JudgmentUnderUncertainty.pdf",
+      "final_url": "https://fbaum.unc.edu/teaching/articles/Science_1973_JudgmentUnderUncertainty.pdf",
+      "page_count": 9,
+      "extractable_characters": 86209,
+      "local_raw_receipt_sha256": "f4ec0e814e76c44f567d75f46e3256c117a6aa21f4e7386020cac76a7248bc75"
+    },
+    {
+      "id": "SS17",
+      "created_at": "2026-10-19T02:11:43.357752+00:00",
+      "attempts": [
+        {
+          "url": "https://web.mit.edu/curhan/www/docs/Articles/15341_Readings/Motivation/Festinger_Carlsmith_1959_Cognitive_consequences_of_forced_compliance.pdf",
+          "http_status": 200,
+          "final_url": "https://web.mit.edu/curhan/www/docs/Articles/15341_Readings/Motivation/Festinger_Carlsmith_1959_Cognitive_consequences_of_forced_compliance.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "4b24a13a22b5ba1b29f04f7b6e90d5b01c17bb55dd9f347d5e49bd6935f8645a",
+      "bytes": 680077,
+      "source_url": "https://web.mit.edu/curhan/www/docs/Articles/15341_Readings/Motivation/Festinger_Carlsmith_1959_Cognitive_consequences_of_forced_compliance.pdf",
+      "final_url": "https://web.mit.edu/curhan/www/docs/Articles/15341_Readings/Motivation/Festinger_Carlsmith_1959_Cognitive_consequences_of_forced_compliance.pdf",
+      "page_count": 8,
+      "extractable_characters": 39534,
+      "local_raw_receipt_sha256": "f0aa2b75580c269454dc325e1de2001cbfaf4fed52a0b4c0ff868227677c9756"
+    },
+    {
+      "id": "SS18",
+      "created_at": "2026-10-19T02:11:45.137732+00:00",
+      "attempts": [
+        {
+          "url": "https://faculty.lsu.edu/kharms/files/hardin_1968.pdf",
+          "http_status": 200,
+          "final_url": "https://faculty.lsu.edu/kharms/files/hardin_1968.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "806a457af76e50d5510ef6ae5ecb69918638cc26e802debf46b0159d1c80b57d",
+      "bytes": 2132729,
+      "source_url": "https://faculty.lsu.edu/kharms/files/hardin_1968.pdf",
+      "final_url": "https://faculty.lsu.edu/kharms/files/hardin_1968.pdf",
+      "page_count": 7,
+      "extractable_characters": 1574,
+      "local_raw_receipt_sha256": "983637be28dcfd66734447751e9f747b85751446e790e881005e27aac23747ab"
+    },
+    {
+      "id": "SS19",
+      "created_at": "2026-10-19T02:11:45.139637+00:00",
+      "attempts": [
+        {
+          "url": "https://apsanet.org/Portals/54/PresidentialAddresses/1997AddrOSTROM.pdf",
+          "http_status": 200,
+          "final_url": "https://apsanet.org/Portals/54/PresidentialAddresses/1997AddrOSTROM.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "1072d835d1d8c96f17048f468a878d410eebbaa25228c349e95b14d8e53f0e5a",
+      "bytes": 2763476,
+      "source_url": "https://apsanet.org/Portals/54/PresidentialAddresses/1997AddrOSTROM.pdf",
+      "final_url": "https://apsanet.org/Portals/54/PresidentialAddresses/1997AddrOSTROM.pdf",
+      "page_count": 22,
+      "extractable_characters": 0,
+      "local_raw_receipt_sha256": "3e5024a33dc13a1aff1c92bc163b171bf33b84a3e65949fa2a3b6846087356eb"
+    },
+    {
+      "id": "SS20",
+      "created_at": "2026-10-19T02:11:46.258379+00:00",
+      "attempts": [
+        {
+          "url": "https://www.la.utexas.edu/users/chenry/core/Course%20Materials/Sartori/0.pdf",
+          "http_status": 200,
+          "final_url": "https://www.la.utexas.edu/users/chenry/core/Course%20Materials/Sartori/0.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "bb3aa017ce9668af399b85f98967448e093d6b05fe2af20938cbc1cdf52c55f1",
+      "bytes": 3900762,
+      "source_url": "https://www.la.utexas.edu/users/chenry/core/Course%20Materials/Sartori/0.pdf",
+      "final_url": "https://www.la.utexas.edu/users/chenry/core/Course%20Materials/Sartori/0.pdf",
+      "page_count": 22,
+      "extractable_characters": 0,
+      "local_raw_receipt_sha256": "98a22c992cd944a8dc248edf2cd1c36e7e7515ea6625e31af4136f83e7d896c9"
+    },
+    {
+      "id": "SS21",
+      "created_at": "2026-10-19T02:11:28.052280+00:00",
+      "attempts": [
+        {
+          "url": "https://polisci.berkeley.edu/sites/default/files/people/u3827/DemocracywithAdjectives.pdf",
+          "http_status": 200,
+          "final_url": "https://polisci.berkeley.edu/sites/default/files/people/u3827/DemocracywithAdjectives.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "81357bc2eabcec41641a22ef193c3c3f761b66eb1f142ba9a443b40f5fa1c54d",
+      "bytes": 1380175,
+      "source_url": "https://polisci.berkeley.edu/sites/default/files/people/u3827/DemocracywithAdjectives.pdf",
+      "final_url": "https://polisci.berkeley.edu/sites/default/files/people/u3827/DemocracywithAdjectives.pdf",
+      "page_count": 12,
+      "extractable_characters": 0,
+      "local_raw_receipt_sha256": "e403d5643b33eb6a24115324669dd5d35ab4b9ea1ead453e37da066bc167a0ed"
+    },
+    {
+      "id": "SS22",
+      "created_at": "2026-10-19T02:15:25.277426+00:00",
+      "attempts": [
+        {
+          "url": "https://selfdeterminationtheory.org/SDT/documents/2000_RyanDeci_SDT.pdf",
+          "http_status": 200,
+          "final_url": "https://selfdeterminationtheory.org/SDT/documents/2000_RyanDeci_SDT.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "e14779081a999b49dfdde8fe7078fcef65a282d4e6374a037269083d063a1ec3",
+      "bytes": 2336577,
+      "source_url": "https://selfdeterminationtheory.org/SDT/documents/2000_RyanDeci_SDT.pdf",
+      "final_url": "https://selfdeterminationtheory.org/SDT/documents/2000_RyanDeci_SDT.pdf",
+      "page_count": 11,
+      "extractable_characters": 80481,
+      "local_raw_receipt_sha256": "d2049a3052f7401ef8b27da892787362158eccf0007552cdd5a63be6b6fe4b5a"
+    },
+    {
+      "id": "SS23",
+      "created_at": "2026-10-19T02:11:46.299587+00:00",
+      "attempts": [
+        {
+          "url": "https://facultycenter.ischool.syr.edu/wp-content/uploads/2012/02/2-sigma.pdf",
+          "error": "SSLError"
+        },
+        {
+          "url": "https://web.mit.edu/5.95/readings/bloom-two-sigma.pdf",
+          "http_status": 200,
+          "final_url": "https://web.mit.edu/5.95/readings/bloom-two-sigma.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "583630e3fd54ca899fc624f7704d287492be91d16902f4c2edb5bbe41474acee",
+      "bytes": 2569660,
+      "source_url": "https://web.mit.edu/5.95/readings/bloom-two-sigma.pdf",
+      "final_url": "https://web.mit.edu/5.95/readings/bloom-two-sigma.pdf",
+      "page_count": 15,
+      "extractable_characters": 1687,
+      "local_raw_receipt_sha256": "62c041d59f7f80a3fe1e38436c0838760fc018d6b119c547debebc76ce9137ef"
+    },
+    {
+      "id": "SS24",
+      "created_at": "2026-10-19T02:11:47.839298+00:00",
+      "attempts": [
+        {
+          "url": "https://fbaum.unc.edu/teaching/articles/POQ-1972-McCOMBS-176-87.pdf",
+          "http_status": 200,
+          "final_url": "https://fbaum.unc.edu/teaching/articles/POQ-1972-McCOMBS-176-87.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "e78b964422f38b33b43ea55b6a480ce4254701b25ab4e469e4fec651b1ad29b8",
+      "bytes": 573503,
+      "source_url": "https://fbaum.unc.edu/teaching/articles/POQ-1972-McCOMBS-176-87.pdf",
+      "final_url": "https://fbaum.unc.edu/teaching/articles/POQ-1972-McCOMBS-176-87.pdf",
+      "page_count": 12,
+      "extractable_characters": 57127,
+      "local_raw_receipt_sha256": "29f8ae95489521ec1d5e60219b16e62cb4d1bba1de44fd556002b39bc5c6c7ac"
+    },
+    {
+      "id": "SS25",
+      "created_at": "2026-10-19T02:11:29.966369+00:00",
+      "attempts": [
+        {
+          "url": "https://vnecas.wordpress.com/wp-content/uploads/2010/03/spiral_of_silence.pdf",
+          "http_status": 200,
+          "final_url": "https://vnecas.wordpress.com/wp-content/uploads/2010/03/spiral_of_silence.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "17190882a4d6dc069d2fb62aa27e2c9240045dfdf65e377fff383036c9c129bf",
+      "bytes": 528638,
+      "source_url": "https://vnecas.wordpress.com/wp-content/uploads/2010/03/spiral_of_silence.pdf",
+      "final_url": "https://vnecas.wordpress.com/wp-content/uploads/2010/03/spiral_of_silence.pdf",
+      "page_count": 9,
+      "extractable_characters": 33266,
+      "local_raw_receipt_sha256": "feb39d1cf497e72fedcb7e98d6df2d6454237b0a3f5a1850e915e307c85f8828"
+    },
+    {
+      "id": "HU01",
+      "created_at": "2026-10-19T02:11:30.017395+00:00",
+      "attempts": [
+        {
+          "url": "https://courses.physics.illinois.edu/phys419/sp2021/Gettier.pdf",
+          "http_status": 200,
+          "final_url": "https://courses.physics.illinois.edu/phys419/sp2021/Gettier.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "9eb820f5c942abbfa68d6fc6be43eb88720d62d0779854952c38949060b736a6",
+      "bytes": 327838,
+      "source_url": "https://courses.physics.illinois.edu/phys419/sp2021/Gettier.pdf",
+      "final_url": "https://courses.physics.illinois.edu/phys419/sp2021/Gettier.pdf",
+      "page_count": 3,
+      "extractable_characters": 7578,
+      "local_raw_receipt_sha256": "6283946eaebbaa332eb9972c2d1da81ef67eba17b7d9e7f6e8b336794dfb1356"
+    },
+    {
+      "id": "HU02",
+      "created_at": "2026-10-19T02:11:31.035110+00:00",
+      "attempts": [
+        {
+          "url": "https://philosophy.uconn.edu/wp-content/uploads/sites/365/2020/03/Nagel-What-is-it-like-to-be-a-bat.pdf",
+          "http_status": 200,
+          "final_url": "https://philosophy.uconn.edu/wp-content/uploads/sites/365/2020/03/Nagel-What-is-it-like-to-be-a-bat.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "1217bc72fc5a2ffbbb95c852319ae29c8f674b288c27725c74db48ef161f2ee4",
+      "bytes": 1278606,
+      "source_url": "https://philosophy.uconn.edu/wp-content/uploads/sites/365/2020/03/Nagel-What-is-it-like-to-be-a-bat.pdf",
+      "final_url": "https://philosophy.uconn.edu/wp-content/uploads/sites/365/2020/03/Nagel-What-is-it-like-to-be-a-bat.pdf",
+      "page_count": 17,
+      "extractable_characters": 43179,
+      "local_raw_receipt_sha256": "decd23f609c4c4981597318d83651f20cfc552ffdf9fa5bb3da4eb07adfb62cf"
+    },
+    {
+      "id": "HU03",
+      "created_at": "2026-10-19T02:11:31.887148+00:00",
+      "attempts": [
+        {
+          "url": "https://artscimedia.case.edu/wp-content/uploads/2013/07/14182625/Searle-Minds-Brains-and-Programs.pdf",
+          "http_status": 200,
+          "final_url": "https://artscimedia.case.edu/wp-content/uploads/2013/07/14182625/Searle-Minds-Brains-and-Programs.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "d85e51aac35ae7985daf2c0a272fec36463a5c15a3d94c530d164a6c0f758d3a",
+      "bytes": 74440,
+      "source_url": "https://artscimedia.case.edu/wp-content/uploads/2013/07/14182625/Searle-Minds-Brains-and-Programs.pdf",
+      "final_url": "https://artscimedia.case.edu/wp-content/uploads/2013/07/14182625/Searle-Minds-Brains-and-Programs.pdf",
+      "page_count": 17,
+      "extractable_characters": 73385,
+      "local_raw_receipt_sha256": "f03b81aae2c22e8027edd17b0f9588c4e67b906f13927e8de9fb7ab4742b8cd4"
+    },
+    {
+      "id": "HU04",
+      "created_at": "2026-10-19T02:11:32.763451+00:00",
+      "attempts": [
+        {
+          "url": "https://cla.csulb.edu/departments/philosophy/wp-content/uploads/2025/05/Quine-1951-two-dogmas-of-empiricism.pdf",
+          "http_status": 200,
+          "final_url": "https://cla.csulb.edu/departments/philosophy/wp-content/uploads/2025/05/Quine-1951-two-dogmas-of-empiricism.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "02b2c4e61fa10c94232031d5a1b60be0319f3b5d7c0b8a719683855ad6d1e205",
+      "bytes": 451593,
+      "source_url": "https://cla.csulb.edu/departments/philosophy/wp-content/uploads/2025/05/Quine-1951-two-dogmas-of-empiricism.pdf",
+      "final_url": "https://cla.csulb.edu/departments/philosophy/wp-content/uploads/2025/05/Quine-1951-two-dogmas-of-empiricism.pdf",
+      "page_count": 25,
+      "extractable_characters": 62909,
+      "local_raw_receipt_sha256": "cccb77eedabc3827456dc8890141ecf1267be962bf6390852718e4abf563a172"
+    },
+    {
+      "id": "HU05",
+      "created_at": "2026-10-19T02:15:25.283560+00:00",
+      "attempts": [
+        {
+          "url": "https://personal.lse.ac.uk/ROBERT49/teaching/ph103/pdf/Frankfurt1969.pdf",
+          "http_status": 200,
+          "final_url": "https://personal.lse.ac.uk/ROBERT49/teaching/ph103/pdf/Frankfurt1969.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "a03109b54b6bd14d34fbc879a6f5c45a38917aa923fc6770ca07fbaf6a19f879",
+      "bytes": 1138957,
+      "source_url": "https://personal.lse.ac.uk/ROBERT49/teaching/ph103/pdf/Frankfurt1969.pdf",
+      "final_url": "https://personal.lse.ac.uk/ROBERT49/teaching/ph103/pdf/Frankfurt1969.pdf",
+      "page_count": 12,
+      "extractable_characters": 1506,
+      "local_raw_receipt_sha256": "301cbb4c85be62677b64f37c5f0a92c55e881abf0c627a9959a842211a6673bd"
+    },
+    {
+      "id": "HU06",
+      "created_at": "2026-10-19T02:15:25.284131+00:00",
+      "attempts": [
+        {
+          "url": "https://philosophyandlaw.org/Syllabi/Philosophers/Rawls/JusticeAsFairness.pdf",
+          "http_status": 200,
+          "final_url": "https://philosophyandlaw.org/Syllabi/Philosophers/Rawls/JusticeAsFairness.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "1023b7400fc34cf7a91804483100709d610e1f8e0951d171bb49b7b2b61c5dd5",
+      "bytes": 2978043,
+      "source_url": "https://philosophyandlaw.org/Syllabi/Philosophers/Rawls/JusticeAsFairness.pdf",
+      "final_url": "https://philosophyandlaw.org/Syllabi/Philosophers/Rawls/JusticeAsFairness.pdf",
+      "page_count": 32,
+      "extractable_characters": 1443,
+      "local_raw_receipt_sha256": "50080aa74d2216bf97f97febbacc921297b473e61a31c56914998759350e306a"
+    },
+    {
+      "id": "HU07",
+      "created_at": "2026-10-19T02:11:34.218894+00:00",
+      "attempts": [
+        {
+          "url": "https://ebiquity.umbc.edu/get/a/publication/1389.pdf",
+          "http_status": 200,
+          "final_url": "https://ebiquity.umbc.edu/_file_directory_/papers/1389.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "9b3975b5f7aeb38cb758a9fec97a3f9f3d861c56eef2277e4c3d4b112da421a4",
+      "bytes": 702954,
+      "source_url": "https://ebiquity.umbc.edu/get/a/publication/1389.pdf",
+      "final_url": "https://ebiquity.umbc.edu/_file_directory_/papers/1389.pdf",
+      "page_count": 28,
+      "extractable_characters": 72643,
+      "local_raw_receipt_sha256": "d08acb8babdc61c712c76f13adc629dd3b2a49f94972701598a70881b597f6d7"
+    },
+    {
+      "id": "HU08",
+      "created_at": "2026-10-19T02:11:34.999828+00:00",
+      "attempts": [
+        {
+          "url": "https://sites.pitt.edu/~mthompso/readings/mmp.pdf",
+          "http_status": 200,
+          "final_url": "https://sites.pitt.edu/~mthompso/readings/mmp.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "7872906c3e225ab15a16bf2d4cd64d85b5b2767113d2c451af8cd7fd21b2c36a",
+      "bytes": 190716,
+      "source_url": "https://sites.pitt.edu/~mthompso/readings/mmp.pdf",
+      "final_url": "https://sites.pitt.edu/~mthompso/readings/mmp.pdf",
+      "page_count": 16,
+      "extractable_characters": 71176,
+      "local_raw_receipt_sha256": "d338767225f0d97cf22f6a693294d3db9cd171030db6c90cb4cc3c1d96489ca5"
+    },
+    {
+      "id": "HU09",
+      "created_at": "2026-10-19T02:11:35.445389+00:00",
+      "attempts": [
+        {
+          "url": "https://sites.pitt.edu/~mthompso/readings/foot.pdf",
+          "http_status": 200,
+          "final_url": "https://sites.pitt.edu/~mthompso/readings/foot.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "1a468da1fc2a64cb7f197ff4a826b53dd7741660beae254a05f249b6c84c3254",
+      "bytes": 78687,
+      "source_url": "https://sites.pitt.edu/~mthompso/readings/foot.pdf",
+      "final_url": "https://sites.pitt.edu/~mthompso/readings/foot.pdf",
+      "page_count": 7,
+      "extractable_characters": 40100,
+      "local_raw_receipt_sha256": "b714610123a3fb7ca8a1df5d52dc490feaa49f083b681be83bf92b2681d614a0"
+    },
+    {
+      "id": "HU10",
+      "created_at": "2026-10-19T02:15:26.661421+00:00",
+      "attempts": [
+        {
+          "url": "https://bibliotecamathom.wordpress.com/wp-content/uploads/2012/09/actions-reasons-and-causes.pdf",
+          "http_status": 200,
+          "final_url": "https://bibliotecamathom.wordpress.com/wp-content/uploads/2012/09/actions-reasons-and-causes.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "5ca70a6d9fdc37a22d0e0aa97a6318e39684257d3e07cd44c5c72dafa610c712",
+      "bytes": 475279,
+      "source_url": "https://bibliotecamathom.wordpress.com/wp-content/uploads/2012/09/actions-reasons-and-causes.pdf",
+      "final_url": "https://bibliotecamathom.wordpress.com/wp-content/uploads/2012/09/actions-reasons-and-causes.pdf",
+      "page_count": 17,
+      "extractable_characters": 47312,
+      "local_raw_receipt_sha256": "1b734154fc1aa9a14d37ae2ca224462c9c8f2204b1dd266930329fb776450f4d"
+    },
+    {
+      "id": "HU11",
+      "created_at": "2026-10-19T02:15:27.847987+00:00",
+      "attempts": [
+        {
+          "url": "https://sites.tufts.edu/english292b/files/2012/01/Barthes-The-Death-of-the-Author.pdf",
+          "http_status": 404,
+          "final_url": "https://bpb-us-e1.wpmucdn.com/404.html"
+        },
+        {
+          "url": "https://writing.upenn.edu/~taransky/Barthes.pdf",
+          "http_status": 200,
+          "final_url": "https://writing.upenn.edu/~taransky/Barthes.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "ee8c6c83448890881931f6e926fbcd65f57a06982610eb549039b4fd3084b255",
+      "bytes": 53891,
+      "source_url": "https://writing.upenn.edu/~taransky/Barthes.pdf",
+      "final_url": "https://writing.upenn.edu/~taransky/Barthes.pdf",
+      "page_count": 6,
+      "extractable_characters": 14907,
+      "local_raw_receipt_sha256": "f8e3d6583683d7c53fa3fd7c8cd1c8c6d92a485dbb0b1b7a7bb787928b3eb8be"
+    },
+    {
+      "id": "HU12",
+      "created_at": "2026-10-19T02:17:17.244604+00:00",
+      "attempts": [
+        {
+          "url": "https://web-facstaff.sas.upenn.edu/~cavitch/pdf-library/Foucault_Author.pdf",
+          "error": "SSLError"
+        },
+        {
+          "url": "https://case.edu/affil/sce/authorship/Foucault.pdf",
+          "http_status": 200,
+          "final_url": "https://case.edu/affil/sce/authorship/Foucault.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "195eefce6d8d47a4d1ec96a5636be74d236abd51cc13baafa17b6b385dd8d8fb",
+      "bytes": 3121499,
+      "source_url": "https://case.edu/affil/sce/authorship/Foucault.pdf",
+      "final_url": "https://case.edu/affil/sce/authorship/Foucault.pdf",
+      "page_count": 6,
+      "extractable_characters": 0,
+      "local_raw_receipt_sha256": "99a0896fd320184e5bdc27fddf3fd508393bfa6b3376833695986af69fe8f64c"
+    },
+    {
+      "id": "HU13",
+      "created_at": "2026-10-19T02:15:28.637762+00:00",
+      "attempts": [
+        {
+          "url": "https://www.eng.utah.edu/~cs5789/handouts/Benjamin.pdf",
+          "http_status": 200,
+          "final_url": "https://my.eng.utah.edu/~cs5789/handouts/Benjamin.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "1a91e33d3c2cf64e91a8af2381bfe7fb3d1eefca6bc5996519d5852432a9c136",
+      "bytes": 87308,
+      "source_url": "https://www.eng.utah.edu/~cs5789/handouts/Benjamin.pdf",
+      "final_url": "https://my.eng.utah.edu/~cs5789/handouts/Benjamin.pdf",
+      "page_count": 35,
+      "extractable_characters": 108030,
+      "local_raw_receipt_sha256": "63e8e23696592d00f5e59abf05d72dfa35c13867a06363e7d59ddc20493544b9"
+    },
+    {
+      "id": "HU14",
+      "created_at": "2026-10-19T02:15:29.446607+00:00",
+      "attempts": [
+        {
+          "url": "https://pdodds.w3.uvm.edu/files/papers/others/2000/moretti2000.pdf",
+          "http_status": 200,
+          "final_url": "https://pdodds.w3.uvm.edu/files/papers/others/2000/moretti2000.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "28795793f06084d0f159e720011cd25e938bb375d185bb478155279a473d86b3",
+      "bytes": 79822,
+      "source_url": "https://pdodds.w3.uvm.edu/files/papers/others/2000/moretti2000.pdf",
+      "final_url": "https://pdodds.w3.uvm.edu/files/papers/others/2000/moretti2000.pdf",
+      "page_count": 15,
+      "extractable_characters": 42326,
+      "local_raw_receipt_sha256": "0b960d075ff5b5896b5cf7a90897a3600dd67fad23e503da6230f8973b5a8288"
+    },
+    {
+      "id": "HU15",
+      "created_at": "2026-10-19T02:17:17.245603+00:00",
+      "attempts": [
+        {
+          "url": "https://litlab.stanford.edu/assets/pdf/LiteraryLabPamphlet1.pdf",
+          "http_status": 200,
+          "final_url": "https://litlab.stanford.edu/assets/pdf/LiteraryLabPamphlet1.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "be2b05758ad2299b097b17af0a506d20fcfd8309aa20175b39d61f481a5d88c1",
+      "bytes": 1756297,
+      "source_url": "https://litlab.stanford.edu/assets/pdf/LiteraryLabPamphlet1.pdf",
+      "final_url": "https://litlab.stanford.edu/assets/pdf/LiteraryLabPamphlet1.pdf",
+      "page_count": 29,
+      "extractable_characters": 183864,
+      "local_raw_receipt_sha256": "85069dd92dd2c2429487703453bb1463b493c8c32d17661b426f2eca2bff3af0"
+    },
+    {
+      "id": "HU16",
+      "created_at": "2026-10-19T02:17:17.246602+00:00",
+      "attempts": [
+        {
+          "url": "https://web-facstaff.sas.upenn.edu/~cavitch/pdf-library/Eliot_Tradition_1919.pdf",
+          "error": "SSLError"
+        },
+        {
+          "url": "https://cte.univ-setif2.dz/moodle/pluginfile.php/276794/mod_resource/content/1/eliot%20essay.pdf",
+          "http_status": 200,
+          "final_url": "https://cte.univ-setif2.dz/moodle/pluginfile.php/276794/mod_resource/content/1/eliot%20essay.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "07152dc9a5e458389bfe7aed56eb453280dcef8efcb4db5f9bf6ad542df6edb8",
+      "bytes": 618831,
+      "source_url": "https://cte.univ-setif2.dz/moodle/pluginfile.php/276794/mod_resource/content/1/eliot%20essay.pdf",
+      "final_url": "https://cte.univ-setif2.dz/moodle/pluginfile.php/276794/mod_resource/content/1/eliot%20essay.pdf",
+      "page_count": 8,
+      "extractable_characters": 25208,
+      "local_raw_receipt_sha256": "956188b4ce4591b08702d2e62200ff0714e4e26cacc064259a3f2150e3c8188c"
+    },
+    {
+      "id": "HU17",
+      "created_at": "2026-10-19T02:15:32.472540+00:00",
+      "attempts": [
+        {
+          "url": "https://religion.ua.edu/wp-content/uploads/2021/10/Value-of-Narrative.pdf",
+          "http_status": 200,
+          "final_url": "https://religion.ua.edu/wp-content/uploads/2021/10/Value-of-Narrative.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "a35ec14b257ebf55843910a1571ddcea0f30ae45397edbd6eff5221afbe2f31a",
+      "bytes": 2679009,
+      "source_url": "https://religion.ua.edu/wp-content/uploads/2021/10/Value-of-Narrative.pdf",
+      "final_url": "https://religion.ua.edu/wp-content/uploads/2021/10/Value-of-Narrative.pdf",
+      "page_count": 23,
+      "extractable_characters": 76114,
+      "local_raw_receipt_sha256": "2fe65ee9c57473d05b22353129ff29c7278c14cea8e1146d2fc1dcf72bc56a44"
+    },
+    {
+      "id": "HU18",
+      "created_at": "2026-10-19T02:15:32.476187+00:00",
+      "attempts": [
+        {
+          "url": "https://warwick.ac.uk/fac/arts/history/students/modules/archive/sexuality_and_the_body/bibliography/joan_scott_gender_1986.pdf",
+          "http_status": 200,
+          "final_url": "https://warwick.ac.uk/fac/arts/history/students/modules/archive/sexuality_and_the_body/bibliography/joan_scott_gender_1986.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "d5183489250f006c7175d032ea1439ab2075309669672757baf32240d6c9d9a3",
+      "bytes": 554484,
+      "source_url": "https://warwick.ac.uk/fac/arts/history/students/modules/archive/sexuality_and_the_body/bibliography/joan_scott_gender_1986.pdf",
+      "final_url": "https://warwick.ac.uk/fac/arts/history/students/modules/archive/sexuality_and_the_body/bibliography/joan_scott_gender_1986.pdf",
+      "page_count": 24,
+      "extractable_characters": 1070,
+      "local_raw_receipt_sha256": "085cd691049fa96f2829dbfb45ec10563fe92694185493124ffe00b7ffd18baf"
+    },
+    {
+      "id": "HU19",
+      "created_at": "2026-10-19T02:15:32.479361+00:00",
+      "attempts": [
+        {
+          "url": "https://eclass.duth.gr/modules/document/file.php/KOM03267/Ginzburg%20Microhistory.pdf",
+          "http_status": 200,
+          "final_url": "https://eclass.duth.gr/modules/document/file.php/KOM03267/Ginzburg%20Microhistory.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "85891749cd948bdeadb145cbe49f2677834b387c917e11ca80a9adb17bc104e5",
+      "bytes": 963601,
+      "source_url": "https://eclass.duth.gr/modules/document/file.php/KOM03267/Ginzburg%20Microhistory.pdf",
+      "final_url": "https://eclass.duth.gr/modules/document/file.php/KOM03267/Ginzburg%20Microhistory.pdf",
+      "page_count": 27,
+      "extractable_characters": 80472,
+      "local_raw_receipt_sha256": "69ca7dd97a636c5e3f9be3153537934b0d407c895211559f993b16b7e09f1abc"
+    },
+    {
+      "id": "HU20",
+      "created_at": "2026-10-19T02:15:32.482457+00:00",
+      "attempts": [
+        {
+          "url": "https://spot.colorado.edu/~klages/7119/hayden%20white.pdf",
+          "http_status": 200,
+          "final_url": "https://spot.colorado.edu/~klages/7119/hayden%20white.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "9eecd09a8f3b052d61ef19534de5b15483f3b16b5ed6813f0db54a8349fbeb5b",
+      "bytes": 1574783,
+      "source_url": "https://spot.colorado.edu/~klages/7119/hayden%20white.pdf",
+      "final_url": "https://spot.colorado.edu/~klages/7119/hayden%20white.pdf",
+      "page_count": 11,
+      "extractable_characters": 0,
+      "local_raw_receipt_sha256": "3829db27611661bc7d83431fbba355ef9b052e7a34f5e897bec9b84284430a7d"
+    },
+    {
+      "id": "HU21",
+      "created_at": "2026-10-19T02:11:37.648068+00:00",
+      "attempts": [
+        {
+          "url": "https://dhq-static.digitalhumanities.org/pdf/000091.pdf",
+          "http_status": 200,
+          "final_url": "https://dhq-static.digitalhumanities.org/pdf/000091.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "0085c704946dc1e35e736b83c6cf55d48fd7209b6574535c5886404e223cd090",
+      "bytes": 1352525,
+      "source_url": "https://dhq-static.digitalhumanities.org/pdf/000091.pdf",
+      "final_url": "https://dhq-static.digitalhumanities.org/pdf/000091.pdf",
+      "page_count": 22,
+      "extractable_characters": 68164,
+      "local_raw_receipt_sha256": "952b7e205b5bc0935fad260e6e6a13c594249548ae78458ac708d440cdd6a21f"
+    },
+    {
+      "id": "HU22",
+      "created_at": "2026-10-19T02:15:32.968595+00:00",
+      "attempts": [
+        {
+          "url": "https://litlab.stanford.edu/assets/pdf/LiteraryLabPamphlet6.pdf",
+          "http_status": 200,
+          "final_url": "https://litlab.stanford.edu/assets/pdf/LiteraryLabPamphlet6.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "6a7a9b63805126ab22fcfe50f23b84e6b7d5d2fcda1ec4d08eb0127887b86a9d",
+      "bytes": 137985,
+      "source_url": "https://litlab.stanford.edu/assets/pdf/LiteraryLabPamphlet6.pdf",
+      "final_url": "https://litlab.stanford.edu/assets/pdf/LiteraryLabPamphlet6.pdf",
+      "page_count": 15,
+      "extractable_characters": 41417,
+      "local_raw_receipt_sha256": "aecf1c000a6268415cc282ec1f43b4a3f16adaee9635d0688dba416eebe61faf"
+    },
+    {
+      "id": "HU23",
+      "created_at": "2026-10-19T02:15:34.073209+00:00",
+      "attempts": [
+        {
+          "url": "https://dhq-static.digitalhumanities.org/pdf/000317.pdf",
+          "http_status": 200,
+          "final_url": "https://dhq-static.digitalhumanities.org/pdf/000317.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "4a2ef0aaf355711963a61313fa6df400d084ddc23f291c42a902ee954db82306",
+      "bytes": 1099200,
+      "source_url": "https://dhq-static.digitalhumanities.org/pdf/000317.pdf",
+      "final_url": "https://dhq-static.digitalhumanities.org/pdf/000317.pdf",
+      "page_count": 13,
+      "extractable_characters": 60560,
+      "local_raw_receipt_sha256": "190dc67211844c9a6e108f430115528eb719a2bfdf41f6932a07721d9ef516f5"
+    },
+    {
+      "id": "HU24",
+      "created_at": "2026-10-19T02:11:37.978991+00:00",
+      "attempts": [
+        {
+          "url": "https://escholarship.org/content/qt5gc857tw/qt5gc857tw.pdf",
+          "http_status": 200,
+          "final_url": "https://escholarship.org/content/qt5gc857tw/qt5gc857tw.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "d149877b4245a53b757b8f81c54fb947c96a74cb58e2367ec2c63166a2fceedb",
+      "bytes": 556806,
+      "source_url": "https://escholarship.org/content/qt5gc857tw/qt5gc857tw.pdf",
+      "final_url": "https://escholarship.org/content/qt5gc857tw/qt5gc857tw.pdf",
+      "page_count": 16,
+      "extractable_characters": 82463,
+      "local_raw_receipt_sha256": "a15a6c70f67c9a6f31e1bcd1fb25c7174f9addb1f09b58c2327c937bb5a596ed"
+    },
+    {
+      "id": "HU25",
+      "created_at": "2026-10-19T02:11:38.867927+00:00",
+      "attempts": [
+        {
+          "url": "https://dhq-static.digitalhumanities.org/pdf/000077.pdf",
+          "http_status": 200,
+          "final_url": "https://dhq-static.digitalhumanities.org/pdf/000077.pdf"
+        }
+      ],
+      "downloaded": true,
+      "sha256": "2df595721dc5502f02d3c657426610fb612731c8022b698ae5b1968a96b92996",
+      "bytes": 341445,
+      "source_url": "https://dhq-static.digitalhumanities.org/pdf/000077.pdf",
+      "final_url": "https://dhq-static.digitalhumanities.org/pdf/000077.pdf",
+      "page_count": 20,
+      "extractable_characters": 98721,
+      "local_raw_receipt_sha256": "e2d7ee483ee331e1f6769feea50be7aa25bcb56acd993bf9d43e3aab02f95275"
+    }
+  ],
+  "selection_substitutions": [
+    {
+      "item_id": "SS22",
+      "initial_candidate": "Self-Efficacy: Toward a Unifying Theory of Behavioral Change",
+      "selected": "Self-Determination Theory and the Facilitation of Intrinsic Motivation, Social Development, and Well-Being",
+      "reason": "自我决定理论与教育动机经典；替代无法获取全文的初选 Bandura 文献"
+    },
+    {
+      "item_id": "HU15",
+      "initial_candidate": "Graphs, Maps, Trees: Abstract Models for Literary History 1",
+      "selected": "Quantitative Formalism: An Experiment",
+      "reason": "文学史量化研究的代表性公开工作论文；替代未取得完整 PDF 的初选 Moretti 文献"
+    },
+    {
+      "item_id": "HU16",
+      "initial_candidate": "Towards a Poetics of Culture",
+      "selected": "Tradition and the Individual Talent",
+      "reason": "现代文学批评经典；替代无法取得完整公开文本的初选 Greenblatt 论文"
+    },
+    {
+      "item_id": "HU23",
+      "initial_candidate": "Theorizing Research Practices We Forgot to Theorize Twenty Years Ago",
+      "selected": "A Genealogy of Distant Reading",
+      "reason": "远读方法的学术史反思；替代未取得完整公开文本的另一篇 Underwood 论文"
+    }
+  ],
+  "retained_rejected_inputs": [
+    {
+      "id": "SS11",
+      "sha256": "725aed3d8211c077afab2490996c7f4379e98fb2eabfbb780d93e7ca03344002",
+      "source_url": "https://www.csun.edu/~rdavids/350fall08/350readings/Putnam_Bowling_Alone.pdf",
+      "page_count": 71,
+      "extractable_characters": 0
+    },
+    {
+      "id": "SS14",
+      "sha256": "c4af0674a2187c58d71222551865b2f5e760f3b32851778d1847a6c30f6a105f",
+      "source_url": "https://iiif.library.cmu.edu/file/Newell_box00107_fld08240_doc0001/Newell_box00107_fld08240_doc0001.pdf",
+      "page_count": 1,
+      "extractable_characters": 2200
+    }
+  ],
+  "note": "Final selected inputs have hashed receipts. Preliminary scratch downloads did not preserve every failed retry immutably; substitutions and retained rejected files are identified without claiming a complete acquisition event journal."
+}
