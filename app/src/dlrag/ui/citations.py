@@ -1,10 +1,13 @@
 """Escaped source HTML and per-claim citation links, independent of Streamlit state."""
 from html import escape
 from urllib.parse import quote, urlencode
+from dlrag.shared.i18n import t, get_language
 
 
 def source_url(base, evidence, highlights, version):
     params = [('index_version', version)] if version else []
+    if get_language() == 'en':
+        params.append(('lang', 'en'))
     params += [('span', f"{s['start']}:{s['end']}") for s in highlights]
     return base.rstrip('/') + '/sources/' + quote(evidence['chunk_id'], safe='') + '?' + urlencode(params) + '#source-text'
 
@@ -34,5 +37,6 @@ def claim_html(claim, evidence, numbers, base, version):
     refs = []
     for eid in claim['evidence_ids']:
         url = source_url(base, by_id[eid], positions.get(eid, []), version)
-        refs.append(f'<sup><a href="{escape(url, quote=True)}" target="_blank" rel="noopener noreferrer" aria-label="查看引用 {numbers[eid]} 的原文">[{numbers[eid]}]</a></sup>')
+        label = escape(t('查看引用 {p0} 的原文', p0=numbers[eid]), quote=True)
+        refs.append(f'<sup><a href="{escape(url, quote=True)}" target="_blank" rel="noopener noreferrer" aria-label="{label}">[{numbers[eid]}]</a></sup>')
     return escape(claim['text'].strip()) + ' ' + ' '.join(refs)

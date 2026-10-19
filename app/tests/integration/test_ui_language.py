@@ -1,5 +1,6 @@
 """UI-002: bilingual controls keep user data and canonical API values intact."""
 import copy
+import ast
 import json
 from pathlib import Path
 from types import SimpleNamespace
@@ -39,7 +40,7 @@ def test_default_chinese_and_query_language_choice(client, monkeypatch):
     assert app.title[0].value == '专题数字图书馆'
     switch(app, 'en')
     assert app.title[0].value == 'Digital Library'
-    assert app.query_params['lang'] == ['en']
+    assert app.query_params['lang'] == 'en'
     assert app.sidebar.radio[0].options == ['Collection', 'Search and Q&A', 'Upload and manage']
     switch(app, 'zh')
     assert app.title[0].value == '专题数字图书馆'
@@ -171,3 +172,38 @@ def test_known_backend_errors_have_english_messages_and_preserve_code(code):
         assert text.strip()
         if code in {'FULLTEXT_REVIEW_REQUIRED', 'TEXT_LAYER_REVIEW_REQUIRED'}:
             assert '2' in text and '4' in text
+
+
+def test_static_interface_messages_have_english_catalogue_entries():
+    from dlrag.shared.i18n import MESSAGES
+    root = Path(APP).parents[1]
+    files = [Path(APP), root / 'ui/library.py', root / 'ui/citations.py', root / 'api/sources.py']
+    missing = []
+    for file in files:
+        for node in ast.walk(ast.parse(file.read_text(encoding='utf-8'))):
+            if isinstance(node, ast.Call) and isinstance(node.func, ast.Name) and node.func.id == 't' and node.args:
+                value = node.args[0]
+                if isinstance(value, ast.Constant) and isinstance(value.value, str):
+                    if any('\u4e00' <= c <= '\u9fff' for c in value.value) and value.value not in MESSAGES:
+                        missing.append(value.value)
+    assert not missing
+
+
+def test_citation_url_carries_locale_and_context_is_restored():
+    from urllib.parse import urlparse, parse_qs
+    from dlrag.shared.i18n import use_language, get_language
+    from dlrag.ui.citations import source_url
+    with use_language('zh'):
+        with use_language('en'):
+            params = parse_qs(urlparse(source_url('http://localhost', {'chunk_id': 'x'}, [], 'v1')).query)
+            assert params == {'index_version': ['v1'], 'lang': ['en']}
+        assert get_language() == 'zh'
+        assert 'lang=' not in source_url('http://localhost', {'chunk_id': 'x'}, [], 'v1')
+
+
+def test_english_source_error_and_invalid_locale(client):
+    response = client.get('/sources/missing?lang=en')
+    assert response.status_code == 404
+    assert response.json()['error']['code'] == 'NOT_FOUND'
+    assert 'does not exist' in response.json()['error']['message']
+    assert client.get('/sources/missing?lang=invalid').status_code == 422
