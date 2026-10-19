@@ -4,6 +4,10 @@ import copy
 from datetime import datetime, timezone
 import json
 from pathlib import Path
+import sys
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
 
 from tools import catalog_batch as batch
 from dlrag.ui.library import discipline, domain_counts
