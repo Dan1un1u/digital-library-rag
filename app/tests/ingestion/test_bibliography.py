@@ -23,7 +23,8 @@ def record(**changes):
 def preview(**changes):
     return {"metadata": {"title": TITLE, "authors": AUTHORS.copy(), "year": None,
                          "source_url": None, **changes}, "field_sources": {},
-            "warnings": ["出版年份待核对：无页面出版证据"], "requires_confirmation": True}
+            "warnings": ["版本年份待核对：无页面日期证据"], "requires_confirmation": True,
+            "document_version": {"kind": "publication", "dois": ["10.1234/library.1"]}}
 
 
 def enrich(monkeypatch, result, records):
@@ -41,7 +42,7 @@ def test_unique_record_fills_only_missing_fields_with_date_provenance(monkeypatc
     assert result["field_sources"]["year"]["date_type"] == "published-print"
     assert result["year_review"]["source"] == "crossref"
     assert result["requires_confirmation"]
-    assert not any(w.startswith("出版年份待核对") for w in result["warnings"])
+    assert not any(w.startswith("版本年份待核对") for w in result["warnings"])
 
 
 @pytest.mark.parametrize("existing", [{"source_url": "https://arxiv.org/abs/2604.03298"},
@@ -75,7 +76,7 @@ def test_created_issued_accepted_and_preprint_dates_cannot_fill_publication_year
     audit = enrich(monkeypatch, result, [row])
     assert result["metadata"]["year"] is None
     assert audit["filled_fields"] == ["source_url"]
-    assert any("不使用预印本" in w for w in result["warnings"])
+    assert any("版本年份继续留空" in w for w in result["warnings"])
 
 
 @pytest.mark.parametrize("change", [
@@ -170,3 +171,32 @@ def test_single_author_and_generic_publication_date_are_supported(monkeypatch):
         "published-print": None, "published": {"date-parts": [[2024]]}})
     assert enrich(monkeypatch, result, [row])["status"] == "completed"
     assert result["metadata"]["year"] == 2024
+
+
+@pytest.mark.parametrize("version", [
+    None, {"kind": "unknown", "dois": []},
+    {"kind": "manuscript", "dois": ["10.1234/library.1"]},
+    {"kind": "publication", "dois": ["10.1234/different-version"]},
+])
+def test_same_work_is_insufficient_to_date_an_unconfirmed_pdf_version(monkeypatch, version):
+    result = preview()
+    result["document_version"] = version or {}
+    audit = enrich(monkeypatch, result, [record()])
+    assert result["metadata"]["year"] is None
+    assert audit["year_decision"] == "version_not_confirmed"
+    assert audit["filled_fields"] == ["source_url"]
+    assert audit["candidates"][0]["selected_date"]["year"] == 2024
+
+
+def test_registry_dates_for_different_years_require_selection_for_this_version(monkeypatch):
+    result = preview()
+    audit = enrich(monkeypatch, result, [record(**{"published-online": {"date-parts": [[2023]]}})])
+    assert result["metadata"]["year"] is None
+    assert audit["year_decision"] == "registry_dates_differ"
+
+
+def test_preprint_revision_is_preserved_without_reporting_a_false_publication_conflict(monkeypatch):
+    result = preview(year=2023, source_url="https://arxiv.org/abs/2111.13824v4")
+    result["document_version"] = {"kind": "manuscript", "dois": []}
+    audit = enrich(monkeypatch, result, [record()])
+    assert result["metadata"]["year"] == 2023 and not audit["conflicts"]

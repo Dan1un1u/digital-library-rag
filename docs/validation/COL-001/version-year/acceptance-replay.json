@@ -1,0 +1,193 @@
+{
+  "work_item": "PR1-VERSION-YEAR-ACCEPTANCE",
+  "policy": "collected-version-year-v2",
+  "code": {
+    "commit": "06183046e6700a4587a839c79088db6540d34e89",
+    "branch": "feat/catalog-ingestion-audit",
+    "dirty": false
+  },
+  "created_at": "2026-10-19T06:00:00.472419+00:00",
+  "source_path_verified": true,
+  "scope": "synthetic PDF/API replay; no live model or registry; not a real-PDF accuracy estimate",
+  "source_sha256": {
+    "app/src/dlrag/ingestion/metadata_year.py": "878090a0a0d0df0cbd38f95453d39281185856aa65496552311a0af1279509d3",
+    "app/src/dlrag/ingestion/metadata_api.py": "589809357c37cbc056518ec47b0a73d89eed08fa40672f27a5d3a344213e0e50",
+    "app/src/dlrag/ingestion/bibliography.py": "babb39ddc7fd06ef4c0a06400af7e74bc4ba85cf685dccdf5d053ec42721a21d",
+    "app/src/dlrag/ui/app.py": "24f08a0c6283c671ddfdb277c8fedfcc4c27368df5d173e695d24a48b3b86aaf"
+  },
+  "cases": [
+    {
+      "case_id": "submitted_conference",
+      "page_text": "Submitted to ICLR 2025",
+      "candidate": {
+        "value": 2025,
+        "pdf_page": 1,
+        "excerpt": "Submitted to ICLR 2025",
+        "date_type": "publication"
+      },
+      "expected_year": null,
+      "actual_year": null,
+      "expected_date_type": null,
+      "actual_date_type": null,
+      "function_reason": "missing_version_context",
+      "year_review": {
+        "policy": "collected-version-year-v2",
+        "status": "needs_confirmation",
+        "reason": "missing_version_context",
+        "rejected_value": 2025
+      },
+      "http_status": 200,
+      "passed": true
+    },
+    {
+      "case_id": "under_review_conference",
+      "page_text": "Under review as a conference paper at ICLR 2025",
+      "candidate": {
+        "value": 2025,
+        "pdf_page": 1,
+        "excerpt": "Under review as a conference paper at ICLR 2025",
+        "date_type": "publication"
+      },
+      "expected_year": null,
+      "actual_year": null,
+      "expected_date_type": null,
+      "actual_date_type": null,
+      "function_reason": "missing_version_context",
+      "year_review": {
+        "policy": "collected-version-year-v2",
+        "status": "needs_confirmation",
+        "reason": "missing_version_context",
+        "rejected_value": 2025
+      },
+      "http_status": 200,
+      "passed": true
+    },
+    {
+      "case_id": "trimmed_preprint",
+      "page_text": "This preprint was published in 2023.",
+      "candidate": {
+        "value": 2023,
+        "pdf_page": 1,
+        "excerpt": "published in 2023",
+        "date_type": "publication"
+      },
+      "expected_year": 2023,
+      "actual_year": 2023,
+      "expected_date_type": "preprint",
+      "actual_date_type": "preprint",
+      "function_reason": null,
+      "year_review": {
+        "policy": "collected-version-year-v2",
+        "status": "candidate_supported",
+        "source": "api",
+        "date_type": "preprint",
+        "grounding": "page_text"
+      },
+      "http_status": 200,
+      "passed": true
+    },
+    {
+      "case_id": "full_negation_control",
+      "page_text": "Not published in 2024.",
+      "candidate": {
+        "value": 2024,
+        "pdf_page": 1,
+        "excerpt": "Not published in 2024.",
+        "date_type": "publication"
+      },
+      "expected_year": null,
+      "actual_year": null,
+      "expected_date_type": null,
+      "actual_date_type": null,
+      "function_reason": "missing_version_context",
+      "year_review": {
+        "policy": "collected-version-year-v2",
+        "status": "needs_confirmation",
+        "reason": "missing_version_context",
+        "rejected_value": 2024
+      },
+      "http_status": 200,
+      "passed": true
+    },
+    {
+      "case_id": "trimmed_negation",
+      "page_text": "Not published in 2024.",
+      "candidate": {
+        "value": 2024,
+        "pdf_page": 1,
+        "excerpt": "published in 2024",
+        "date_type": "publication"
+      },
+      "expected_year": null,
+      "actual_year": null,
+      "expected_date_type": null,
+      "actual_date_type": null,
+      "function_reason": "missing_version_context",
+      "year_review": {
+        "policy": "collected-version-year-v2",
+        "status": "needs_confirmation",
+        "reason": "missing_version_context",
+        "rejected_value": 2024
+      },
+      "http_status": 200,
+      "passed": true
+    },
+    {
+      "case_id": "formal_publication_control",
+      "page_text": "Published as a conference paper at ICLR 2025",
+      "candidate": {
+        "value": 2025,
+        "pdf_page": 1,
+        "excerpt": "Published as a conference paper at ICLR 2025",
+        "date_type": "publication"
+      },
+      "expected_year": 2025,
+      "actual_year": 2025,
+      "expected_date_type": "publication",
+      "actual_date_type": "publication",
+      "function_reason": null,
+      "year_review": {
+        "policy": "collected-version-year-v2",
+        "status": "candidate_supported",
+        "source": "api",
+        "date_type": "publication",
+        "grounding": "page_text"
+      },
+      "http_status": 200,
+      "passed": true
+    },
+    {
+      "case_id": "original_revision_control",
+      "page_text": "arXiv v4 17 Feb 2023",
+      "candidate": {
+        "value": 2023,
+        "pdf_page": 1,
+        "excerpt": "17 Feb 2023",
+        "date_type": "publication"
+      },
+      "expected_year": 2023,
+      "actual_year": 2023,
+      "expected_date_type": "version",
+      "actual_date_type": "version",
+      "function_reason": null,
+      "year_review": {
+        "policy": "collected-version-year-v2",
+        "status": "candidate_supported",
+        "source": "api",
+        "date_type": "version",
+        "grounding": "page_text"
+      },
+      "http_status": 200,
+      "passed": true
+    }
+  ],
+  "preview_did_not_import": true,
+  "protected_libraries_unchanged": true,
+  "protected_snapshot_sha256": {
+    "http://127.0.0.1:18000": "32543215cdab74824873efdecb913700ecc75a4e030e501324155462b6794b90",
+    "http://127.0.0.1:19000": "b880ae3f412107420737550aec70f9e0224b176d5e0a788043e5586ec81bfadd",
+    "http://127.0.0.1:19010": "2e092237b64e0a078be70b4ce7d669e4cefe2d0610970417f19c01459574c025"
+  },
+  "worktree_dirty_after": false,
+  "passed": true
+}

@@ -13,7 +13,7 @@ from urllib.parse import quote
 import requests
 
 ENDPOINT = "https://api.crossref.org/works"
-POLICY = "crossref-title-authors-v1"
+POLICY = "crossref-collected-version-v2"
 MAX_BYTES = 512 * 1024
 FORMAL_TYPES = {"journal-article", "proceedings-article"}
 
@@ -150,13 +150,22 @@ def enrich_metadata(result, settings):
         return
     record = matches[0]
     chosen = record["selected_date"]
+    version = result.get("document_version", {})
+    same_version = version.get("kind") == "publication" and record["doi"] in version.get("dois", [])
+    date_years = {d["year"] for d in record["dates"]}
+    audit["year_decision"] = ("same_publication_version" if same_version and len(date_years) == 1 else
+                              "registry_dates_differ" if same_version and len(date_years) > 1 else
+                              "version_not_confirmed" if not same_version else "no_registry_date")
     values = {"source_url": record["source_url"], "year": chosen["year"] if chosen else None}
     for field, value in values.items():
         if value is None:
             continue
         if field not in missing:
-            if metadata.get(field) != value and (field == "year" or str(metadata.get(field)).startswith("https://doi.org/")):
+            if metadata.get(field) != value and ((field == "year" and same_version) or
+                                                (field != "year" and str(metadata.get(field)).startswith("https://doi.org/"))):
                 audit["conflicts"].append({"field": field, "existing": metadata[field], "external": value})
+            continue
+        if field == "year" and audit["year_decision"] != "same_publication_version":
             continue
         metadata[field] = value
         result["field_sources"][field] = {"method": "bibliographic_lookup", "provider": "crossref",
@@ -167,11 +176,11 @@ def enrich_metadata(result, settings):
         if field == "year":
             result["year_review"] = {"policy": POLICY, "status": "candidate_supported", "source": "crossref",
                                      "grounding": "registry_record", "date_type": chosen["kind"]}
-            result["warnings"] = [w for w in result["warnings"] if not w.startswith("出版年份待核对")]
+            result["warnings"] = [w for w in result["warnings"] if not w.startswith(("版本年份待核对", "出版年份待核对"))]
     audit["status"] = "completed"
     if audit["filled_fields"]:
-        result["warnings"].append("已依据题名和作者吻合的 Crossref 出版记录补全候选字段；请核对来源与日期类型后导入。")
+        result["warnings"].append("已依据题名和作者吻合的 Crossref 出版记录补全候选字段；DOI 可作为相关出版来源，年份还须与所收录版本对应，请核对后导入。")
     if audit["conflicts"]:
         result["warnings"].append("现有字段与外部书目存在差异，未自动覆盖，请核对后选择。")
     if "year" in missing and metadata.get("year") is None:
-        result["warnings"].append("外部记录也没有可用出版日期；出版年继续留空，不使用预印本或创建日期代填。")
+        result["warnings"].append("外部出版日期未能确定对应所收录版本；版本年份继续留空。相关记录仅供核对，可按文件上的日期手动填写。")

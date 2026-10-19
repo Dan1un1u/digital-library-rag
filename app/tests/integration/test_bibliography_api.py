@@ -14,11 +14,14 @@ TITLE = "Evidence Search: Reliable Metadata for Libraries"
 AUTHORS = ["Alice Smith", "Bob Jones"]
 
 
-def fixture_pdf():
+def fixture_pdf(*, publication=True):
     with fitz.open() as pdf:
         page = pdf.new_page()
         page.insert_text((40, 70), TITLE, fontsize=13)
         page.insert_text((40, 110), "Alice Smith and Bob Jones")
+        if publication:
+            page.insert_text((40, 150), "Proceedings of the Library Conference")
+            page.insert_text((40, 180), "doi:10.1234/library.1")
         return pdf.tobytes()
 
 
@@ -119,7 +122,8 @@ def test_ui_lookup_opt_in_and_external_evidence_render(client, imported, monkeyp
         if kwargs.get("lookup"):
             result["metadata"]["year"] = 2024
             result["field_sources"]["year"] = {"method": "bibliographic_lookup", "provider": "crossref",
-                "record_url": "https://api.crossref.org/works/10.1234%2Flibrary.1", "excerpt": "published-print: 2024"}
+                "record_url": "https://api.crossref.org/works/10.1234%2Flibrary.1", "excerpt": "published-print: 2024",
+                "date_type": "published-print"}
         return result
     monkeypatch.setattr("dlrag.ingestion.metadata_api.recognize_metadata", recognized)
     monkeypatch.setattr("dlrag.ui.client.call_api", lambda base, method, path, **kwargs:
@@ -135,3 +139,28 @@ def test_ui_lookup_opt_in_and_external_evidence_render(client, imported, monkeyp
     assert app.text_input(key="upload_year").value == "2024"
     assert any("外部出版记录" in w.value for w in app.markdown)
     assert any("published-print: 2024" in c.value for c in app.caption)
+    assert app.text_input(key="upload_year").label == "版本年份（可留空）"
+    assert any("日期依据：印刷出版日期" in c.value for c in app.caption)
+
+
+@pytest.mark.parametrize("stamp,expected", [("", None), ("arXiv:2111.13824v4 17 Feb 2023", 2023)])
+def test_lookup_cannot_replace_a_manuscript_version_with_the_formal_year(client, services, monkeypatch, stamp, expected):
+    setup(services, monkeypatch)
+    if stamp:
+        reply = {"title": {"value": TITLE, "pdf_page": 1, "excerpt": TITLE},
+                 "year": {"value": 2023, "pdf_page": 1, "excerpt": stamp, "date_type": "version"}}
+        monkeypatch.setattr("dlrag.ingestion.metadata_api.request_candidates", lambda *args: reply)
+    with fitz.open(stream=fixture_pdf(publication=False), filetype="pdf") as pdf:
+        if stamp:
+            pdf[0].insert_text((40, 150), stamp)
+        data = pdf.tobytes()
+    row = {"title": [TITLE], "author": [{"given": "Alice", "family": "Smith"}, {"given": "Bob", "family": "Jones"}],
+           "DOI": "10.1234/library.1", "type": "journal-article", "published-print": {"date-parts": [[2024]]}}
+    monkeypatch.setattr("dlrag.ingestion.bibliography.query_crossref", lambda *args: [row])
+    result = client.post("/documents/metadata", files={"file": ("fixture.pdf", data, "application/pdf")},
+                         data={"use_lookup": "true"}).json()
+    assert result["metadata"]["year"] == expected
+    if stamp:
+        assert result["bibliographic_enrichment"]["status"] == "not_needed"
+    else:
+        assert result["bibliographic_enrichment"]["year_decision"] == "version_not_confirmed"

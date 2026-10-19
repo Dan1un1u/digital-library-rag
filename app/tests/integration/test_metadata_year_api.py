@@ -43,13 +43,13 @@ def test_enhanced_job_year_policy_is_visible_and_manual_correction_can_import(
     assert job['stage'] == 'done'
     preview = job['result']
     assert preview['api_assistance']['status'] == 'completed'
-    assert preview['metadata']['year'] == (None if revision_only else 2022)
+    assert preview['metadata']['year'] == (2023 if revision_only else 2022)
     assert preview['requires_confirmation'] is True
     assert services.library.list_documents(include_nonready=True) == []
     assert services.manifest() is None
     if revision_only:
-        assert preview['year_review']['status'] == 'needs_confirmation'
-        assert any('出版年份待核对' in warning for warning in preview['warnings'])
+        assert preview['year_review']['date_type'] == 'version'
+        assert preview['field_sources']['year']['date_type'] == 'version'
     metadata = preview['metadata']
     metadata['year'] = 2022  # An explicit user correction remains allowed.
     imported = client.post('/documents/jobs', files={'file': ('synthetic.pdf', data, 'application/pdf')},
