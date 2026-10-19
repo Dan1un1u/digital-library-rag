@@ -1,0 +1,17 @@
+{
+  "code": {
+    "commit": "c127fa1afd5472b8f322909e0e11f79b1dc62e2d",
+    "branch": "feat/ing-001-fulltext-gate",
+    "dirty": false
+  },
+  "scope": "actual PDFs through isolated TestClient import; mock embeddings; HU25 separately uses live Luna and Crossref",
+  "cases": [],
+  "passed": false,
+  "protected_libraries_unchanged": true,
+  "protected_snapshot_sha256": {
+    "18000": "32543215cdab74824873efdecb913700ecc75a4e030e501324155462b6794b90",
+    "19000": "b880ae3f412107420737550aec70f9e0224b176d5e0a788043e5586ec81bfadd",
+    "19010": "2e092237b64e0a078be70b4ce7d669e4cefe2d0610970417f19c01459574c025"
+  },
+  "worktree_dirty_after": false
+}

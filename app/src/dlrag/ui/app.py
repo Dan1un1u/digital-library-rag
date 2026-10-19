@@ -9,7 +9,7 @@ import streamlit as st
 from dotenv import dotenv_values
 from dlrag.ui.client import call_api, citation_numbers, clarified_question
 from dlrag.ui.citations import claim_html, marked_text, source_url
-from dlrag.ui.library import DOMAINS, STYLE, cover_card, discipline, domain_counts
+from dlrag.ui.library import DOMAINS, STYLE, cover_card, discipline, domain_counts, document_status
 from dlrag.ui.state import reset_question, reset_upload, reset_view
 
 st.set_page_config(page_title="专题数字图书馆", page_icon="📚", layout="wide")
@@ -366,7 +366,7 @@ else:
             for doc in result["documents"]:
                 with st.container(border=True):
                     doc_card(doc)
-                    st.caption("所属学科：" + (discipline(doc) or "待分类") + " · 状态：" + {"ready": "可阅读", "pending": "处理中", "failed": "处理失败"}.get(doc["status"], doc["status"]))
+                    st.caption("所属学科：" + (discipline(doc) or "待分类") + " · 状态：" + document_status(doc))
                     if doc.get("error_code"):
                         st.error(doc.get("error_message") or "文献处理未完成")
                     st.link_button("阅读原文", base.rstrip("/") + f"/documents/{quote(doc['doc_id'], safe='')}/file")

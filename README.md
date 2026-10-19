@@ -114,7 +114,11 @@ MQ-004 补全候选已接入预览：可选择“联网补全出版资料”，�
 
 ## 数据与本机部署
 
-2026-10-19范围整理：本分支 **PR1仅保留MQ-003/MQ-004及原COL-001追溯基础**，本轮ING和COL-002基线移往依赖PR2。独立MQ工作目录重验440项通过，详见[PR1范围与验证](docs/validation/COL-001/pr1-scope.md)。后续按[任务隔离规则](docs/workflow/test-task-isolation.md)执行；两份PR保持草稿，暂不合并。
+2026-10-19 PR归属已拆分：**PR1为MQ-003/MQ-004及COL-001基础；本分支PR2为ING-001及COL-002测试基线**，PR2依赖PR1但差异不重复MQ修复。MQ分支独立440项重验见[PR1范围记录](docs/validation/COL-001/pr1-scope.md)。下文沿用原PR的描述属于历史记录；当前以[PR2迁移说明](docs/validation/COL-002/pr2-migration.md)和[任务隔离流程](docs/workflow/test-task-isolation.md)为准。
+
+2026-10-19 新增的跨学科独立检测使用 **dev 库**：社会科学25篇、人文25篇，共892页/3262片段，可在本机 [dev 界面](http://127.0.0.1:19501/)查看；正式库仍为25篇/1821片段。50篇原件真实增强预览、外部OCR和编目、实际添加及失败证据分开保存。离线回归450项通过；真实题名检索148/150命中，发现的正文覆盖、乱码及日期口径改进均未伪装成已修复。见[50篇清单](docs/validation/COL-002/selection.md)、[独立报告](docs/validation/COL-002/README.md)和[工作量台账](docs/validation/COL-002/contributions.md)。候选未部署正式实例，原PR暂不合并。
+
+后续 **ING-001修复候选** 已在新隔离dev API19010验证：混合扫描原件暂停导入、列出需核对页码，不写部分正文/索引；已有OCR副本可导入。新增18项测试，完整468项通过，SS06真实原件和扩大检测发现的SS14均阻断；原正式库及50篇dev基线不变。见[原因、白盒路径与验证记录](docs/validation/COL-002/ING-001/README.md)。现有19501网页仍为原dev基线；候选通过实际接口和AppTest验证，独立候选网页未启动。ING-002/MQ-005/RET-001及旧数据复核仍待处理，暂不合并。
 
 仓库不保存 `.env`、OAuth 凭证、GitHub 令牌、模型权重、真实 PDF 馆藏、数据库、索引、虚拟环境或运行日志。重新克隆后需要配置本机环境与数据。
 

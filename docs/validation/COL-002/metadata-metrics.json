@@ -1,0 +1,42 @@
+{
+  "sample_count": 50,
+  "category_counts": {
+    "社会科学": 25,
+    "人文": 25
+  },
+  "model_status_counts": {
+    "completed": 50
+  },
+  "lookup_status_counts": {
+    "completed": 23,
+    "no_match": 24,
+    "ambiguous": 2,
+    "not_needed": 1
+  },
+  "title_nonempty": 50,
+  "author_nonempty": 50,
+  "title_normalized_exact_reference_agreement": 49,
+  "author_order_normalized_reference_agreement": 50,
+  "year_before_lookup_nonempty": 5,
+  "year_after_lookup_nonempty": 26,
+  "source_before_lookup_nonempty": 3,
+  "source_after_lookup_nonempty": 24,
+  "lookup_added_years": 21,
+  "lookup_added_sources": 21,
+  "known_reference_years": 47,
+  "known_year_reference_agreement": 25,
+  "known_year_left_empty": 21,
+  "date_semantic_conflicts": [
+    {
+      "item_id": "HU25",
+      "reference_issue_year": 2009,
+      "system_year": 2010
+    }
+  ],
+  "unknown_edition_years": [
+    "HU11",
+    "HU12",
+    "HU13"
+  ],
+  "qualification": "Reference agreement is a comparison with assistant-curated bibliography, not independent human accuracy; one issue/online-year difference is not proven hallucination."
+}

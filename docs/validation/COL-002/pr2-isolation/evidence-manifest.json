@@ -1,0 +1,20 @@
+{
+  "artifacts": [
+    {
+      "path": "targeted-summary.json",
+      "sha256": "4492a04b57880d6aa6a5cab23ae6810d1e687924ad7e23937cd7ec0d9c52b68e",
+      "local_source_sha256": "4f5a44a56e3648f247c90cf3892c330f30330f015b33b8ce02ec49ee39558356"
+    },
+    {
+      "path": "all-summary.json",
+      "sha256": "ae569220f9d65200cf8db0241eb7c4e91b5e41bbf693000abb5b0d62fb1e465b",
+      "local_source_sha256": "8f6a0367b3f1cfc76ae7c56fd9b61e7c2cd6b39c000c25412ec6d197d10eae06"
+    },
+    {
+      "path": "scope-check.json",
+      "sha256": "5d67c6aefc900e50989a07ee2ccc383c8239ce99debcda99771eab80959b9099",
+      "local_source_sha256": "5d67c6aefc900e50989a07ee2ccc383c8239ce99debcda99771eab80959b9099"
+    }
+  ],
+  "note": "New branch-isolation checks; historical experiment files and their code identities unchanged."
+}

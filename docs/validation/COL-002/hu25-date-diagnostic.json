@@ -1,0 +1,141 @@
+{
+  "scope": "extra diagnostic after the frozen 50-paper trial; excluded from initial success rates",
+  "application_code": {
+    "commit": "20ec245051a783e55701ae4001418c45a93b6e8e",
+    "branch": "feat/catalog-ingestion-audit",
+    "dirty": false
+  },
+  "source_sha256": "2df595721dc5502f02d3c657426610fb612731c8022b698ae5b1968a96b92996",
+  "runner_sha256": "c7c77c64a17ab1c5b017dbdea178fae617b4af6a32cb3b6a2a3f545e9dd8ac15",
+  "external_checks": [
+    {
+      "url": "https://dhq-static.digitalhumanities.org/xml/000077.xml",
+      "http_status": 404,
+      "response_sha256": "76327dae562ef2f3e49e3bc4a98832daf169d53c26cd097effb48907594c2c99"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.63744/au56n57rd75j",
+      "http_status": 200,
+      "response_sha256": "8e85a32645c8956374e6b8113fbc470869ea916b6a2fcfb8bdea4a716202dbb1",
+      "dates": {
+        "published-online": {
+          "date-parts": [
+            [
+              2010,
+              3,
+              20
+            ]
+          ]
+        },
+        "published": {
+          "date-parts": [
+            [
+              2010,
+              3,
+              20
+            ]
+          ]
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2010,
+              3,
+              20
+            ]
+          ]
+        }
+      }
+    }
+  ],
+  "raw_model_year": null,
+  "before_lookup": {
+    "year": null,
+    "year_review": {
+      "policy": "publication-year-evidence-v1",
+      "status": "needs_confirmation",
+      "reason": "not_provided",
+      "rejected_value": null
+    }
+  },
+  "after_lookup": {
+    "metadata": {
+      "title": "The Digital Future is Now: A Call to Action for the Humanities",
+      "authors": [
+        "Christine L. Borgman"
+      ],
+      "year": 2010,
+      "language": "en",
+      "source_url": "https://doi.org/10.63744/au56n57rd75j"
+    },
+    "year_review": {
+      "policy": "crossref-title-authors-v1",
+      "status": "candidate_supported",
+      "source": "crossref",
+      "grounding": "registry_record",
+      "date_type": "published-online"
+    },
+    "bibliographic_enrichment": {
+      "policy": "crossref-title-authors-v1",
+      "provider": "crossref",
+      "status": "completed",
+      "missing_before": [
+        "year",
+        "source_url"
+      ],
+      "filled_fields": [
+        "source_url",
+        "year"
+      ],
+      "conflicts": [],
+      "candidates": [
+        {
+          "title": "The Digital Future is Now: A Call to Action for the Humanities",
+          "authors": [
+            "Christine L. Borgman"
+          ],
+          "doi": "10.63744/au56n57rd75j",
+          "source_url": "https://doi.org/10.63744/au56n57rd75j",
+          "record_url": "https://api.crossref.org/works/10.63744%2Fau56n57rd75j",
+          "type": "journal-article",
+          "dates": [
+            {
+              "kind": "published-online",
+              "date_parts": [
+                2010,
+                3,
+                20
+              ],
+              "year": 2010
+            },
+            {
+              "kind": "published",
+              "date_parts": [
+                2010,
+                3,
+                20
+              ],
+              "year": 2010
+            }
+          ],
+          "selected_date": {
+            "kind": "published-online",
+            "date_parts": [
+              2010,
+              3,
+              20
+            ],
+            "year": 2010
+          },
+          "match": {
+            "title": "normalized_exact",
+            "first_author": "exact",
+            "author_overlap": 1,
+            "required_overlap": 1
+          }
+        }
+      ],
+      "queried_at": "2026-10-19T02:38:55.244356+00:00"
+    }
+  }
+}

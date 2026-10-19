@@ -1,0 +1,13 @@
+{
+  "ui_code_commit": "fc60a06",
+  "test": "Streamlit AppTest with actual dev API, not a browser/manual test",
+  "exceptions": [],
+  "dev_banner_present": true,
+  "captions": [
+    "查找文献 · 依据原文提问 · 核对每一条引用",
+    "统计范围为当前筛选结果。优先使用学科标签；旧资料按题名和主题辅助归类。",
+    "另有 2 篇待分类，未计入饼图。",
+    "当前显示 50 篇文献",
+    "专题数字图书馆 · 您的文献工作台"
+  ]
+}

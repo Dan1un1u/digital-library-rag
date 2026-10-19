@@ -6,8 +6,8 @@
 
 | PR | 分支 / 工作目录 | 内容 | 目标分支 |
 | --- | --- | --- | --- |
-| PR1 | feat/catalog-ingestion-audit / D:/digital-library-worktrees/mq-fixes | MQ-003年份证据、MQ-004选择式书目补全，以及原COL-001追溯/验证基础 | main |
-| PR2 | feat/ing-001-fulltext-gate / D:/digital-library-worktrees/ing-001 | ING-001修复及其COL-002测试语料、隔离运行工具和原始验证记录 | feat/catalog-ingestion-audit |
+| PR1（已合并） | feat/catalog-ingestion-audit / D:/digital-library-worktrees/mq-fixes | MQ-003版本年份证据、MQ-004选择式书目补全，以及原COL-001追溯/验证基础 | main |
+| PR2（Draft） | feat/ing-001-fulltext-gate / D:/digital-library-worktrees/ing-001 | ING-001修复及其COL-002测试语料、隔离运行工具和原始验证记录 | main |
 
 PR2继承PR1的公共工具和MQ候选，采用依赖PR的方式单独审阅ING差异，不能把继承代码算作PR2新修复。PR2的50篇历史检测记录中虽有元数据观察，也不据此把MQ修复重新加入PR2。ING-002、MQ-005、RET-001不顺带实现。
 
@@ -22,4 +22,4 @@ PR2继承PR1的公共工具和MQ候选，采用依赖PR的方式单独审阅ING�
 5. 记录任务、提交、输入、环境和产物哈希；原失败不回写。旧实验可以作为历史证据，必须说明未在新分支重新执行。
 6. 检查PR相对base的最终差异，确认没有其他工作项的修复、用例和新数据写入；发布审计通过后提交对应PR。合并由用户决定。
 
-当前两份PR均保持草稿、未合并。拆分验证不重跑外部模型实验或重复添加馆藏，只检查分支差异、各自离线回归和现有馆藏只读快照。
+2026-10-19用户授权合并PR1并依次处理PR2检测发现。PR1已通过普通merge提交720f584合入main，PR2改以main为base。后续ING-002与RET-001分别建立独立工作目录和依赖PR；MQ-005先验证已合入的新日期规则，不重复修复已经覆盖的行为。PR2及新增修复PR保持Draft、未合并。

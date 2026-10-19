@@ -1,0 +1,82 @@
+{
+  "candidate_commit": "9f492912e1da7e025a134081f3dbc06cc41d1916",
+  "artifacts": [
+    {
+      "path": "baseline-red-summary.json",
+      "sha256": "884691b0904c95593cc4512803c23b03e41927adae48fb0bddfd104a4648dd88",
+      "local_source_artifact": "reports/ING-001/baseline-red/summary.json",
+      "local_source_sha256": "884691b0904c95593cc4512803c23b03e41927adae48fb0bddfd104a4648dd88"
+    },
+    {
+      "path": "offline-all-summary.json",
+      "sha256": "e9d0d2db61d148d5ce182833f3aca03197d29ac2f861e9b5dff85a94079d2e44",
+      "local_source_artifact": "reports/ING-001/offline-all/summary.json",
+      "local_source_sha256": "4d372b8ef948de4e927a17eb3f742c699a37409cd660fe518e196469d2ba0b07"
+    },
+    {
+      "path": "live-dev.json",
+      "sha256": "952bce256f416b71380d8e060d041ebb5c4be4fe484562b58603aaa33f7bea12",
+      "local_source_artifact": "reports/ING-001/live-dev/summary.json",
+      "local_source_sha256": "952bce256f416b71380d8e060d041ebb5c4be4fe484562b58603aaa33f7bea12"
+    },
+    {
+      "path": "ui-check.json",
+      "sha256": "aa9a5d01af9ff848f6e8c7eb9c2507dc944626bcb1a4cc0fb997452dfc3d6026",
+      "local_source_artifact": "reports/ING-001/ui-check.json",
+      "local_source_sha256": "aa9a5d01af9ff848f6e8c7eb9c2507dc944626bcb1a4cc0fb997452dfc3d6026"
+    },
+    {
+      "path": "source-access.json",
+      "sha256": "9b7fd7fa58fa057a2c82d884e147dbcbce57db1d4b51f321727df7bcc85d45d7",
+      "local_source_artifact": "reports/ING-001/source-access.json",
+      "local_source_sha256": "9b7fd7fa58fa057a2c82d884e147dbcbce57db1d4b51f321727df7bcc85d45d7"
+    },
+    {
+      "path": "execution-notes.json",
+      "sha256": "a0c15f41cbdcbe552a0f9284fa0a4cc454e7c245f3c4bed497330481df77ac2f"
+    }
+  ],
+  "original_failure_reference": {
+    "path": "../negative-reproduction.json",
+    "sha256": "76fbeb407881138e07c2969de5b3e3dbe842950d620ad6597cdb1b84edbc35a7"
+  },
+  "local_raw_jobs": [
+    {
+      "artifact": "normal-text-raw-job.json",
+      "sha256": "cbd24ca57f498a62b5eda9134ec2369d2d7a25bfa556e3ad11d1c8444c094d21"
+    },
+    {
+      "artifact": "enhanced-preview-raw-job.json",
+      "sha256": "9914d3aa07b9f152f286dd4fdb7c3de627a686cc4234aac67eb8f40dbe66bc54"
+    },
+    {
+      "artifact": "original-mixed-scan-raw-job.json",
+      "sha256": "0ea563c09a71dc1b99b6d40278ae5ef2fb1b60b4459d8e755780f0446b00c5d1"
+    },
+    {
+      "artifact": "repeated-blocked-original-raw-job.json",
+      "sha256": "7450bbd70acee82ab9169e9702f9789fd0289ca96c99b4543f199bb9b6cb9acc"
+    },
+    {
+      "artifact": "additional-mixed-scan-raw-job.json",
+      "sha256": "8d132cdb79d136f97e55dfb60ab04e91a6d7d2cdf58095c126ce97ac079f9def"
+    },
+    {
+      "artifact": "pure-scan-boundary-raw-job.json",
+      "sha256": "e42a4d15472d4da6f7148c7375f0961e6a66b76724b970f489df744f79257060"
+    },
+    {
+      "artifact": "external-ocr-copy-raw-job.json",
+      "sha256": "3e6a5c30445fcd272c72d285daee6d8f920af9bb159b4df587523322b128a83b"
+    },
+    {
+      "artifact": "unfixed-garbled-control-raw-job.json",
+      "sha256": "b001ba97fba5de46f5d9d5527e69e4f369e3ee2b8ed186c98969f5cd41a1d1ef"
+    },
+    {
+      "artifact": "repeat-ocr-copy-raw-job.json",
+      "sha256": "e07f18b3e7ba4f250e29b3a3a7f41d0c0f2b90af8a9f4e736ca397168183ab68"
+    }
+  ],
+  "note": "Raw model excerpts, original PDF files, databases and index artifacts stay local. Hashes bind evidence; this is not a signature or human acceptance."
+}

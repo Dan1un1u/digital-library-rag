@@ -51,6 +51,9 @@ def create_app(settings=None, services=None):
 
     @app.exception_handler(Exception)
     async def error(request: Request, exc):
+        from dlrag.ingestion.fulltext import FulltextReviewRequired
+        if isinstance(exc, FulltextReviewRequired):
+            return JSONResponse({"error": exc.public_error()}, status_code=422)
         code = getattr(exc, "code", "INTERNAL_ERROR")
         message = getattr(exc, "message", "服务内部错误，请检查本地配置和运行状态。")
         # 防止模块异常意外带出当前配置中的密钥。

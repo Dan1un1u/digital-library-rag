@@ -49,12 +49,14 @@ class LibraryStore:
     def _parse_document(self, doc_id, config):
         from .parser import parse_pdf, PARSER_VERSION
         from .chunker import chunk_pages
+        from .fulltext import require_complete_text
         self.set_document_status(doc_id, 'parsing')
         try:
             file_path = self.get_file_path(doc_id)
             if file_path is None:
                 raise ProjectError('FILE_NOT_FOUND', 'Stored source PDF is missing')
             pages = parse_pdf(file_path)
+            require_complete_text(pages)
             chunks = chunk_pages(doc_id, pages, config)
             self.save_parsed_content(doc_id, pages, chunks, config, PARSER_VERSION)
         except Exception as exc:
@@ -152,6 +154,8 @@ class LibraryStore:
 
     def save_parsed_content(self, doc_id, pages, chunks, chunking_config, parser_version):
         """Atomically store parser output; failed validation leaves old data intact."""
+        from .fulltext import require_complete_text
+        require_complete_text(pages)
         if chunking_config.get('count_mode') not in ('token', 'character'):
             raise ProjectError('INVALID_REQUEST', 'Explicit count_mode required')
         page_map = {p['pdf_page']: p for p in pages}

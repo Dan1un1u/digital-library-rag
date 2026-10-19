@@ -1,0 +1,14 @@
+{
+  "pr1_url": "https://github.com/Dan1un1u/digital-library-rag/pull/1",
+  "pr1_head": "dc153713d55c22055d86565d6498fd0a0645ac19",
+  "merged": true,
+  "merged_at": "2026-10-19T06:08:51Z",
+  "merge_commit": "720f5840aa9519b7ca28b66c2e86e851ec85e8ec",
+  "merge_method": "merge",
+  "pr2_base": "main",
+  "pr2_head": "f85d44817f49ad9fb3d6065038bfce865dc85156",
+  "pr2_draft": true,
+  "pr2_merged": false,
+  "branch_deleted": false,
+  "deployed": false
+}
