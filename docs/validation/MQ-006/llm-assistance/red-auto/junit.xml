@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="32" skipped="0" tests="34" time="4.166" timestamp="2026-10-19T20:38:04.674217+08:00" hostname="DANIUNIU"><testcase classname="tests.integration.test_discipline_assistance" name="test_six_unmatched_titles_receive_llm_discipline_and_can_import[False-Squeezing Operator Performance Potential for the Ascend Architecture]" time="0.212"><failure message="KeyError: 'topics'">client = &lt;starlette.testclient.TestClient object at 0x0000024BFEB0D550&gt;
+services = &lt;dlrag.api.services.Services object at 0x0000024BE65514C0&gt;
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000024BFEB0F020&gt;
+title = 'Squeezing Operator Performance Potential for the Ascend Architecture'
+job = False
+
+    @pytest.mark.parametrize('title', TITLES)
+    @pytest.mark.parametrize('job', [False, True])
+    def test_six_unmatched_titles_receive_llm_discipline_and_can_import(client, services, monkeypatch, title, job):
+        model = enhanced(services, monkeypatch)
+        raw = pdf_bytes(title)
+        result = preview(client, raw, job=job)
+&gt;       assert result['metadata']['topics'] == ['自然科学']
+E       KeyError: 'topics'
+
+app\tests\integration\test_discipline_assistance.py:64: KeyError</failure></testcase><testcase classname="tests.integration.test_discipline_assistance" name="test_six_unmatched_titles_receive_llm_discipline_and_can_import[False-CSB-RNN: A Faster-than-Realtime RNN Acceleration Framework with Compressed Structured Blocks]" time="0.083"><failure message="KeyError: 'topics'">client = &lt;starlette.testclient.TestClient object at 0x0000024BFEB0E6F0&gt;
+services = &lt;dlrag.api.services.Services object at 0x0000024BFEB0DA30&gt;
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000024BFEB6AD20&gt;
+title = 'CSB-RNN: A Faster-than-Realtime RNN Acceleration Framework with Compressed Structured Blocks'
+job = False
+
+    @pytest.mark.parametrize('title', TITLES)
+    @pytest.mark.parametrize('job', [False, True])
+    def test_six_unmatched_titles_receive_llm_discipline_and_can_import(client, services, monkeypatch, title, job):
+        model = enhanced(services, monkeypatch)
+        raw = pdf_bytes(title)
+        result = preview(client, raw, job=job)
+&gt;       assert result['metadata']['topics'] == ['自然科学']
+E       KeyError: 'topics'
+
+app\tests\integration\test_discipline_assistance.py:64: KeyError</failure></testcase><testcase classname="tests.integration.test_discipline_assistance" name="test_six_unmatched_titles_receive_llm_discipline_and_can_import[False-ENEC: A Lossless AI Model Compression Method Enabling Fast Inference on Ascend NPUs]" time="0.080"><failure message="KeyError: 'topics'">client = &lt;starlette.testclient.TestClient object at 0x0000024BFE946BD0&gt;
+services = &lt;dlrag.api.services.Services object at 0x0000024BFEBF0200&gt;
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000024BFEC2C6B0&gt;
+title = 'ENEC: A Lossless AI Model Compression Method Enabling Fast Inference on Ascend NPUs'
+job = False
+
+    @pytest.mark.parametrize('title', TITLES)
+    @pytest.mark.parametrize('job', [False, True])
+    def test_six_unmatched_titles_receive_llm_discipline_and_can_import(client, services, monkeypatch, title, job):
+        model = enhanced(services, monkeypatch)
+        raw = pdf_bytes(title)
+        result = preview(client, raw, job=job)
+&gt;       assert result['metadata']['topics'] == ['自然科学']
+E       KeyError: 'topics'
+
+app\tests\integration\test_discipline_assistance.py:64: KeyError</failure></testcase><testcase classname="tests.integration.test_discipline_assistance" name="test_six_unmatched_titles_receive_llm_discipline_and_can_import[False-Is Your NPU Ready for LLMs? Dissecting the Hidden Efficiency Bottlenecks in Mobile LLM Inference]" time="0.081"><failure message="KeyError: 'topics'">client = &lt;starlette.testclient.TestClient object at 0x0000024BFEB0E300&gt;
+services = &lt;dlrag.api.services.Services object at 0x0000024BFEB6B470&gt;
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000024BFEC2C500&gt;
+title = 'Is Your NPU Ready for LLMs? Dissecting the Hidden Efficiency Bottlenecks in Mobile LLM Inference'
+job = False
+
+    @pytest.mark.parametrize('title', TITLES)
+    @pytest.mark.parametrize('job', [False, True])
+    def test_six_unmatched_titles_receive_llm_discipline_and_can_import(client, services, monkeypatch, title, job):
+        model = enhanced(services, monkeypatch)
+        raw = pdf_bytes(title)
+        result = preview(client, raw, job=job)
+&gt;       assert result['metadata']['topics'] == ['自然科学']
+E       KeyError: 'topics'
+
+app\tests\integration\test_discipline_assistance.py:64: KeyError</failure></testcase><testcase classname="tests.integration.test_discipline_assistance" name="test_six_unmatched_titles_receive_llm_discipline_and_can_import[False-SpinQuant: LLM Quantization with Learned Rotations]" time="0.079"><failure message="KeyError: 'topics'">client = &lt;starlette.testclient.TestClient object at 0x0000024BFEC2E990&gt;
+services = &lt;dlrag.api.services.Services object at 0x0000024BFEB0FAA0&gt;
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000024BFEC8A060&gt;
+title = 'SpinQuant: LLM Quantization with Learned Rotations', job = False
+
+    @pytest.mark.parametrize('title', TITLES)
+    @pytest.mark.parametrize('job', [False, True])
+    def test_six_unmatched_titles_receive_llm_discipline_and_can_import(client, services, monkeypatch, title, job):
+        model = enhanced(services, monkeypatch)
+        raw = pdf_bytes(title)
+        result = preview(client, raw, job=job)
+&gt;       assert result['metadata']['topics'] == ['自然科学']
+E       KeyError: 'topics'
+
+app\tests\integration\test_discipline_assistance.py:64: KeyError</failure></testcase><testcase classname="tests.integration.test_discipline_assistance" name="test_six_unmatched_titles_receive_llm_discipline_and_can_import[False-XY-Serve: End-to-End Versatile Production Serving for Dynamic LLM Workloads]" time="0.082"><failure message="KeyError: 'topics'">client = &lt;starlette.testclient.TestClient object at 0x0000024BFEC89E50&gt;
+services = &lt;dlrag.api.services.Services object at 0x0000024BFEC8BAD0&gt;
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000024BFEC8A5D0&gt;
+title = 'XY-Serve: End-to-End Versatile Production Serving for Dynamic LLM Workloads'
+job = False
+
+    @pytest.mark.parametrize('title', TITLES)
+    @pytest.mark.parametrize('job', [False, True])
+    def test_six_unmatched_titles_receive_llm_discipline_and_can_import(client, services, monkeypatch, title, job):
+        model = enhanced(services, monkeypatch)
+        raw = pdf_bytes(title)
+        result = preview(client, raw, job=job)
+&gt;       assert result['metadata']['topics'] == ['自然科学']
+E       KeyError: 'topics'
+
+app\tests\integration\test_discipline_assistance.py:64: KeyError</failure></testcase><testcase classname="tests.integration.test_discipline_assistance" name="test_six_unmatched_titles_receive_llm_discipline_and_can_import[True-Squeezing Operator Performance Potential for the Ascend Architecture]" time="0.095"><failure message="KeyError: 'topics'">client = &lt;starlette.testclient.TestClient object at 0x0000024BFEC86330&gt;
+services = &lt;dlrag.api.services.Services object at 0x0000024BFECCB0E0&gt;
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000024BFEC86C90&gt;
+title = 'Squeezing Operator Performance Potential for the Ascend Architecture'
+job = True
+
+    @pytest.mark.parametrize('title', TITLES)
+    @pytest.mark.parametrize('job', [False, True])
+    def test_six_unmatched_titles_receive_llm_discipline_and_can_import(client, services, monkeypatch, title, job):
+        model = enhanced(services, monkeypatch)
+        raw = pdf_bytes(title)
+        result = preview(client, raw, job=job)
+&gt;       assert result['metadata']['topics'] == ['自然科学']
+E       KeyError: 'topics'
+
+app\tests\integration\test_discipline_assistance.py:64: KeyError</failure></testcase><testcase classname="tests.integration.test_discipline_assistance" name="test_six_unmatched_titles_receive_llm_discipline_and_can_import[True-CSB-RNN: A Faster-than-Realtime RNN Acceleration Framework with Compressed Structured Blocks]" time="0.093"><failure message="KeyError: 'topics'">client = &lt;starlette.testclient.TestClient object at 0x0000024BFECCAB10&gt;
+services = &lt;dlrag.api.services.Services object at 0x0000024BFEC88D10&gt;
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000024BFECAC8F0&gt;
+title = 'CSB-RNN: A Faster-than-Realtime RNN Acceleration Framework with Compressed Structured Blocks'
+job = True
+
+    @pytest.mark.parametrize('title', TITLES)
+    @pytest.mark.parametrize('job', [False, True])
+    def test_six_unmatched_titles_receive_llm_discipline_and_can_import(client, services, monkeypatch, title, job):
+        model = enhanced(services, monkeypatch)
+        raw = pdf_bytes(title)
+        result = preview(client, raw, job=job)
+&gt;       assert result['metadata']['topics'] == ['自然科学']
+E       KeyError: 'topics'
+
+app\tests\integration\test_discipline_assistance.py:64: KeyError</failure></testcase><testcase classname="tests.integration.test_discipline_assistance" name="test_six_unmatched_titles_receive_llm_discipline_and_can_import[True-ENEC: A Lossless AI Model Compression Method Enabling Fast Inference on Ascend NPUs]" time="0.098"><failure message="KeyError: 'topics'">client = &lt;starlette.testclient.TestClient object at 0x0000024BFECADF70&gt;
+services = &lt;dlrag.api.services.Services object at 0x0000024BFEC87290&gt;
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000024BFECAD520&gt;
+title = 'ENEC: A Lossless AI Model Compression Method Enabling Fast Inference on Ascend NPUs'
+job = True
+
+    @pytest.mark.parametrize('title', TITLES)
+    @pytest.mark.parametrize('job', [False, True])
+    def test_six_unmatched_titles_receive_llm_discipline_and_can_import(client, services, monkeypatch, title, job):
+        model = enhanced(services, monkeypatch)
+        raw = pdf_bytes(title)
+        result = preview(client, raw, job=job)
+&gt;       assert result['metadata']['topics'] == ['自然科学']
+E       KeyError: 'topics'
+
+app\tests\integration\test_discipline_assistance.py:64: KeyError</failure></testcase><testcase classname="tests.integration.test_discipline_assistance" name="test_six_unmatched_titles_receive_llm_discipline_and_can_import[True-Is Your NPU Ready for LLMs? Dissecting the Hidden Efficiency Bottlenecks in Mobile LLM Inference]" time="0.098"><failure message="KeyError: 'topics'">client = &lt;starlette.testclient.TestClient object at 0x0000024BFECAD4F0&gt;
+services = &lt;dlrag.api.services.Services object at 0x0000024BFECAC1A0&gt;
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000024BFEC86CC0&gt;
+title = 'Is Your NPU Ready for LLMs? Dissecting the Hidden Efficiency Bottlenecks in Mobile LLM Inference'
+job = True
+
+    @pytest.mark.parametrize('title', TITLES)
+    @pytest.mark.parametrize('job', [False, True])
+    def test_six_unmatched_titles_receive_llm_discipline_and_can_import(client, services, monkeypatch, title, job):
+        model = enhanced(services, monkeypatch)
+        raw = pdf_bytes(title)
+        result = preview(client, raw, job=job)
+&gt;       assert result['metadata']['topics'] == ['自然科学']
+E       KeyError: 'topics'
+
+app\tests\integration\test_discipline_assistance.py:64: KeyError</failure></testcase><testcase classname="tests.integration.test_discipline_assistance" name="test_six_unmatched_titles_receive_llm_discipline_and_can_import[True-SpinQuant: LLM Quantization with Learned Rotations]" time="0.094"><failure message="KeyError: 'topics'">client = &lt;starlette.testclient.TestClient object at 0x0000024BFEC85280&gt;
+services = &lt;dlrag.api.services.Services object at 0x0000024BFECAF740&gt;
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000024BFED05D60&gt;
+title = 'SpinQuant: LLM Quantization with Learned Rotations', job = True
+
+    @pytest.mark.parametrize('title', TITLES)
+    @pytest.mark.parametrize('job', [False, True])
+    def test_six_unmatched_titles_receive_llm_discipline_and_can_import(client, services, monkeypatch, title, job):
+        model = enhanced(services, monkeypatch)
+        raw = pdf_bytes(title)
+        result = preview(client, raw, job=job)
+&gt;       assert result['metadata']['topics'] == ['自然科学']
+E       KeyError: 'topics'
+
+app\tests\integration\test_discipline_assistance.py:64: KeyError</failure></testcase><testcase classname="tests.integration.test_discipline_assistance" name="test_six_unmatched_titles_receive_llm_discipline_and_can_import[True-XY-Serve: End-to-End Versatile Production Serving for Dynamic LLM Workloads]" time="0.096"><failure message="KeyError: 'topics'">client = &lt;starlette.testclient.TestClient object at 0x0000024BFED06C00&gt;
+services = &lt;dlrag.api.services.Services object at 0x0000024BFEC86FC0&gt;
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000024BFED724E0&gt;
+title = 'XY-Serve: End-to-End Versatile Production Serving for Dynamic LLM Workloads'
+job = True
+
+    @pytest.mark.parametrize('title', TITLES)
+    @pytest.mark.parametrize('job', [False, True])
+    def test_six_unmatched_titles_receive_llm_discipline_and_can_import(client, services, monkeypatch, title, job):
+        model = enhanced(services, monkeypatch)
+        raw = pdf_bytes(title)
+        result = preview(client, raw, job=job)
+&gt;       assert result['metadata']['topics'] == ['自然科学']
+E       KeyError: 'topics'
+
+app\tests\integration\test_discipline_assistance.py:64: KeyError</failure></testcase><testcase classname="tests.integration.test_discipline_assistance" name="test_keywords_take_priority_over_a_conflicting_model_reply[Neural computation methods-\u81ea\u7136\u79d1\u5b66]" time="0.077"><failure message="KeyError: 'topics'">client = &lt;starlette.testclient.TestClient object at 0x0000024BFED71580&gt;
+services = &lt;dlrag.api.services.Services object at 0x0000024BFEC2DDF0&gt;
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000024BFED73EF0&gt;
+title = 'Neural computation methods', domain = '自然科学'
+
+    @pytest.mark.parametrize('title,domain', [('Neural computation methods', '自然科学'),
+                                             ('Economics of public policy', '社会科学'),
+                                             ('History of art', '哲学与人文科学')])
+    def test_keywords_take_priority_over_a_conflicting_model_reply(client, services, monkeypatch, title, domain):
+        enhanced(services, monkeypatch, response('社会科学' if domain != '社会科学' else '自然科学'))
+        result = preview(client, pdf_bytes(title))
+&gt;       assert result['metadata']['topics'] == [domain]
+E       KeyError: 'topics'
+
+app\tests\integration\test_discipline_assistance.py:84: KeyError</failure></testcase><testcase classname="tests.integration.test_discipline_assistance" name="test_keywords_take_priority_over_a_conflicting_model_reply[Economics of public policy-\u793e\u4f1a\u79d1\u5b66]" time="0.082"><failure message="KeyError: 'topics'">client = &lt;starlette.testclient.TestClient object at 0x0000024BFEDA0740&gt;
+services = &lt;dlrag.api.services.Services object at 0x0000024BFEC2E630&gt;
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000024BFEDA0F20&gt;
+title = 'Economics of public policy', domain = '社会科学'
+
+    @pytest.mark.parametrize('title,domain', [('Neural computation methods', '自然科学'),
+                                             ('Economics of public policy', '社会科学'),
+                                             ('History of art', '哲学与人文科学')])
+    def test_keywords_take_priority_over_a_conflicting_model_reply(client, services, monkeypatch, title, domain):
+        enhanced(services, monkeypatch, response('社会科学' if domain != '社会科学' else '自然科学'))
+        result = preview(client, pdf_bytes(title))
+&gt;       assert result['metadata']['topics'] == [domain]
+E       KeyError: 'topics'
+
+app\tests\integration\test_discipline_assistance.py:84: KeyError</failure></testcase><testcase classname="tests.integration.test_discipline_assistance" name="test_keywords_take_priority_over_a_conflicting_model_reply[History of art-\u54f2\u5b66\u4e0e\u4eba\u6587\u79d1\u5b66]" time="0.082"><failure message="KeyError: 'topics'">client = &lt;starlette.testclient.TestClient object at 0x0000024BFEDA0B00&gt;
+services = &lt;dlrag.api.services.Services object at 0x0000024BFEDA3740&gt;
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000024BFEDF0170&gt;
+title = 'History of art', domain = '哲学与人文科学'
+
+    @pytest.mark.parametrize('title,domain', [('Neural computation methods', '自然科学'),
+                                             ('Economics of public policy', '社会科学'),
+                                             ('History of art', '哲学与人文科学')])
+    def test_keywords_take_priority_over_a_conflicting_model_reply(client, services, monkeypatch, title, domain):
+        enhanced(services, monkeypatch, response('社会科学' if domain != '社会科学' else '自然科学'))
+        result = preview(client, pdf_bytes(title))
+&gt;       assert result['metadata']['topics'] == [domain]
+E       KeyError: 'topics'
+
+app\tests\integration\test_discipline_assistance.py:84: KeyError</failure></testcase><testcase classname="tests.integration.test_discipline_assistance" name="test_no_llm_call_when_assistance_is_unavailable[user_off]" time="0.045"><failure message="KeyError: 'discipline_classification'">client = &lt;starlette.testclient.TestClient object at 0x0000024BFED06390&gt;
+services = &lt;dlrag.api.services.Services object at 0x0000024BFEDA2B40&gt;
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000024BFED33080&gt;
+gate = 'user_off'
+
+    @pytest.mark.parametrize('gate', ['user_off', 'server_off', 'mock', 'no_key'])
+    def test_no_llm_call_when_assistance_is_unavailable(client, services, monkeypatch, gate):
+        model = enhanced(services, monkeypatch)
+        if gate == 'server_off': services.settings.metadata_api_enabled = False
+        if gate == 'mock': services.settings.app_mode = 'mock'
+        if gate == 'no_key': services.settings.siliconflow_api_key = SecretStr('')
+        result = preview(client, pdf_bytes(), assist=gate != 'user_off')
+        model.assert_not_called()
+&gt;       assert result['discipline_classification']['status'] == 'pending'
+E       KeyError: 'discipline_classification'
+
+app\tests\integration\test_discipline_assistance.py:96: KeyError</failure></testcase><testcase classname="tests.integration.test_discipline_assistance" name="test_no_llm_call_when_assistance_is_unavailable[server_off]" time="0.045"><failure message="KeyError: 'discipline_classification'">client = &lt;starlette.testclient.TestClient object at 0x0000024BFED31D00&gt;
+services = &lt;dlrag.api.services.Services object at 0x0000024BFED73B90&gt;
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000024BFED30530&gt;
+gate = 'server_off'
+
+    @pytest.mark.parametrize('gate', ['user_off', 'server_off', 'mock', 'no_key'])
+    def test_no_llm_call_when_assistance_is_unavailable(client, services, monkeypatch, gate):
+        model = enhanced(services, monkeypatch)
+        if gate == 'server_off': services.settings.metadata_api_enabled = False
+        if gate == 'mock': services.settings.app_mode = 'mock'
+        if gate == 'no_key': services.settings.siliconflow_api_key = SecretStr('')
+        result = preview(client, pdf_bytes(), assist=gate != 'user_off')
+        model.assert_not_called()
+&gt;       assert result['discipline_classification']['status'] == 'pending'
+E       KeyError: 'discipline_classification'
+
+app\tests\integration\test_discipline_assistance.py:96: KeyError</failure></testcase><testcase classname="tests.integration.test_discipline_assistance" name="test_no_llm_call_when_assistance_is_unavailable[mock]" time="0.044"><failure message="KeyError: 'discipline_classification'">client = &lt;starlette.testclient.TestClient object at 0x0000024BFEDF36B0&gt;
+services = &lt;dlrag.api.services.Services object at 0x0000024BFED303E0&gt;
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000024B9603C860&gt;
+gate = 'mock'
+
+    @pytest.mark.parametrize('gate', ['user_off', 'server_off', 'mock', 'no_key'])
+    def test_no_llm_call_when_assistance_is_unavailable(client, services, monkeypatch, gate):
+        model = enhanced(services, monkeypatch)
+        if gate == 'server_off': services.settings.metadata_api_enabled = False
+        if gate == 'mock': services.settings.app_mode = 'mock'
+        if gate == 'no_key': services.settings.siliconflow_api_key = SecretStr('')
+        result = preview(client, pdf_bytes(), assist=gate != 'user_off')
+        model.assert_not_called()
+&gt;       assert result['discipline_classification']['status'] == 'pending'
+E       KeyError: 'discipline_classification'
+
+app\tests\integration\test_discipline_assistance.py:96: KeyError</failure></testcase><testcase classname="tests.integration.test_discipline_assistance" name="test_no_llm_call_when_assistance_is_unavailable[no_key]" time="0.047"><failure message="KeyError: 'discipline_classification'">client = &lt;starlette.testclient.TestClient object at 0x0000024BFECADA30&gt;
+services = &lt;dlrag.api.services.Services object at 0x0000024BFECAF890&gt;
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000024BFED33440&gt;
+gate = 'no_key'
+
+    @pytest.mark.parametrize('gate', ['user_off', 'server_off', 'mock', 'no_key'])
+    def test_no_llm_call_when_assistance_is_unavailable(client, services, monkeypatch, gate):
+        model = enhanced(services, monkeypatch)
+        if gate == 'server_off': services.settings.metadata_api_enabled = False
+        if gate == 'mock': services.settings.app_mode = 'mock'
+        if gate == 'no_key': services.settings.siliconflow_api_key = SecretStr('')
+        result = preview(client, pdf_bytes(), assist=gate != 'user_off')
+        model.assert_not_called()
+&gt;       assert result['discipline_classification']['status'] == 'pending'
+E       KeyError: 'discipline_classification'
+
+app\tests\integration\test_discipline_assistance.py:96: KeyError</failure></testcase><testcase classname="tests.integration.test_discipline_assistance" name="test_keywords_classify_without_enhancement" time="0.048"><failure message="KeyError: 'topics'">client = &lt;starlette.testclient.TestClient object at 0x0000024BFED30F80&gt;
+services = &lt;dlrag.api.services.Services object at 0x0000024BFEC2D0A0&gt;
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000024B9603CC20&gt;
+
+    def test_keywords_classify_without_enhancement(client, services, monkeypatch):
+        model = enhanced(services, monkeypatch)
+        result = preview(client, pdf_bytes('Neural computation methods'), assist=False)
+&gt;       assert result['metadata']['topics'] == ['自然科学']
+E       KeyError: 'topics'
+
+app\tests\integration\test_discipline_assistance.py:103: KeyError</failure></testcase><testcase classname="tests.integration.test_discipline_assistance" name="test_unusable_model_classification_remains_pending[None]" time="0.084"><failure message="KeyError: 'topics'">client = &lt;starlette.testclient.TestClient object at 0x0000024B9603F500&gt;
+services = &lt;dlrag.api.services.Services object at 0x0000024B9603F020&gt;
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000024B9608E780&gt;
+bad = None
+
+    @pytest.mark.parametrize('bad', [None, {}, {'value': '其他'},
+        {'value': ['自然科学'], 'pdf_page': 1, 'excerpt': PROOF},
+        {'value': '自然科学', 'pdf_page': True, 'excerpt': PROOF},
+        {'value': '自然科学', 'pdf_page': 2, 'excerpt': PROOF},
+        {'value': '自然科学', 'pdf_page': 1, 'excerpt': 'Invented evidence nowhere in the PDF.'},
+        {'value': '自然科学', 'pdf_page': 1, 'excerpt': ''},
+        {'value': '自然科学', 'pdf_page': 1, 'excerpt': PROOF, 'reason': ['bad']}])
+    def test_unusable_model_classification_remains_pending(client, services, monkeypatch, bad):
+        enhanced(services, monkeypatch, {'discipline': bad})
+        result = preview(client, pdf_bytes())
+&gt;       assert result['metadata']['topics'] == []
+E       KeyError: 'topics'
+
+app\tests\integration\test_discipline_assistance.py:118: KeyError</failure></testcase><testcase classname="tests.integration.test_discipline_assistance" name="test_unusable_model_classification_remains_pending[bad1]" time="0.082"><failure message="KeyError: 'topics'">client = &lt;starlette.testclient.TestClient object at 0x0000024BFED04890&gt;
+services = &lt;dlrag.api.services.Services object at 0x0000024BFEDF3800&gt;
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000024BFEDDF3B0&gt;
+bad = {}
+
+    @pytest.mark.parametrize('bad', [None, {}, {'value': '其他'},
+        {'value': ['自然科学'], 'pdf_page': 1, 'excerpt': PROOF},
+        {'value': '自然科学', 'pdf_page': True, 'excerpt': PROOF},
+        {'value': '自然科学', 'pdf_page': 2, 'excerpt': PROOF},
+        {'value': '自然科学', 'pdf_page': 1, 'excerpt': 'Invented evidence nowhere in the PDF.'},
+        {'value': '自然科学', 'pdf_page': 1, 'excerpt': ''},
+        {'value': '自然科学', 'pdf_page': 1, 'excerpt': PROOF, 'reason': ['bad']}])
+    def test_unusable_model_classification_remains_pending(client, services, monkeypatch, bad):
+        enhanced(services, monkeypatch, {'discipline': bad})
+        result = preview(client, pdf_bytes())
+&gt;       assert result['metadata']['topics'] == []
+E       KeyError: 'topics'
+
+app\tests\integration\test_discipline_assistance.py:118: KeyError</failure></testcase><testcase classname="tests.integration.test_discipline_assistance" name="test_unusable_model_classification_remains_pending[bad2]" time="0.079"><failure message="KeyError: 'topics'">client = &lt;starlette.testclient.TestClient object at 0x0000024BFED722D0&gt;
+services = &lt;dlrag.api.services.Services object at 0x0000024BFED070B0&gt;
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000024B9608C980&gt;
+bad = {'value': '其他'}
+
+    @pytest.mark.parametrize('bad', [None, {}, {'value': '其他'},
+        {'value': ['自然科学'], 'pdf_page': 1, 'excerpt': PROOF},
+        {'value': '自然科学', 'pdf_page': True, 'excerpt': PROOF},
+        {'value': '自然科学', 'pdf_page': 2, 'excerpt': PROOF},
+        {'value': '自然科学', 'pdf_page': 1, 'excerpt': 'Invented evidence nowhere in the PDF.'},
+        {'value': '自然科学', 'pdf_page': 1, 'excerpt': ''},
+        {'value': '自然科学', 'pdf_page': 1, 'excerpt': PROOF, 'reason': ['bad']}])
+    def test_unusable_model_classification_remains_pending(client, services, monkeypatch, bad):
+        enhanced(services, monkeypatch, {'discipline': bad})
+        result = preview(client, pdf_bytes())
+&gt;       assert result['metadata']['topics'] == []
+E       KeyError: 'topics'
+
+app\tests\integration\test_discipline_assistance.py:118: KeyError</failure></testcase><testcase classname="tests.integration.test_discipline_assistance" name="test_unusable_model_classification_remains_pending[bad3]" time="0.082"><failure message="KeyError: 'topics'">client = &lt;starlette.testclient.TestClient object at 0x0000024B9608D970&gt;
+services = &lt;dlrag.api.services.Services object at 0x0000024B9608D190&gt;
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000024B960F7CB0&gt;
+bad = {'excerpt': 'We study efficient execution of computing kernels on AI accelerators.', 'pdf_page': 1, 'value': ['自然科学']}
+
+    @pytest.mark.parametrize('bad', [None, {}, {'value': '其他'},
+        {'value': ['自然科学'], 'pdf_page': 1, 'excerpt': PROOF},
+        {'value': '自然科学', 'pdf_page': True, 'excerpt': PROOF},
+        {'value': '自然科学', 'pdf_page': 2, 'excerpt': PROOF},
+        {'value': '自然科学', 'pdf_page': 1, 'excerpt': 'Invented evidence nowhere in the PDF.'},
+        {'value': '自然科学', 'pdf_page': 1, 'excerpt': ''},
+        {'value': '自然科学', 'pdf_page': 1, 'excerpt': PROOF, 'reason': ['bad']}])
+    def test_unusable_model_classification_remains_pending(client, services, monkeypatch, bad):
+        enhanced(services, monkeypatch, {'discipline': bad})
+        result = preview(client, pdf_bytes())
+&gt;       assert result['metadata']['topics'] == []
+E       KeyError: 'topics'
+
+app\tests\integration\test_discipline_assistance.py:118: KeyError</failure></testcase><testcase classname="tests.integration.test_discipline_assistance" name="test_unusable_model_classification_remains_pending[bad4]" time="0.080"><failure message="KeyError: 'topics'">client = &lt;starlette.testclient.TestClient object at 0x0000024B960D35F0&gt;
+services = &lt;dlrag.api.services.Services object at 0x0000024B960F64E0&gt;
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000024BFED30B30&gt;
+bad = {'excerpt': 'We study efficient execution of computing kernels on AI accelerators.', 'pdf_page': True, 'value': '自然科学'}
+
+    @pytest.mark.parametrize('bad', [None, {}, {'value': '其他'},
+        {'value': ['自然科学'], 'pdf_page': 1, 'excerpt': PROOF},
+        {'value': '自然科学', 'pdf_page': True, 'excerpt': PROOF},
+        {'value': '自然科学', 'pdf_page': 2, 'excerpt': PROOF},
+        {'value': '自然科学', 'pdf_page': 1, 'excerpt': 'Invented evidence nowhere in the PDF.'},
+        {'value': '自然科学', 'pdf_page': 1, 'excerpt': ''},
+        {'value': '自然科学', 'pdf_page': 1, 'excerpt': PROOF, 'reason': ['bad']}])
+    def test_unusable_model_classification_remains_pending(client, services, monkeypatch, bad):
+        enhanced(services, monkeypatch, {'discipline': bad})
+        result = preview(client, pdf_bytes())
+&gt;       assert result['metadata']['topics'] == []
+E       KeyError: 'topics'
+
+app\tests\integration\test_discipline_assistance.py:118: KeyError</failure></testcase><testcase classname="tests.integration.test_discipline_assistance" name="test_unusable_model_classification_remains_pending[bad5]" time="0.079"><failure message="KeyError: 'topics'">client = &lt;starlette.testclient.TestClient object at 0x0000024BFED312E0&gt;
+services = &lt;dlrag.api.services.Services object at 0x0000024B9603F260&gt;
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000024B96101A00&gt;
+bad = {'excerpt': 'We study efficient execution of computing kernels on AI accelerators.', 'pdf_page': 2, 'value': '自然科学'}
+
+    @pytest.mark.parametrize('bad', [None, {}, {'value': '其他'},
+        {'value': ['自然科学'], 'pdf_page': 1, 'excerpt': PROOF},
+        {'value': '自然科学', 'pdf_page': True, 'excerpt': PROOF},
+        {'value': '自然科学', 'pdf_page': 2, 'excerpt': PROOF},
+        {'value': '自然科学', 'pdf_page': 1, 'excerpt': 'Invented evidence nowhere in the PDF.'},
+        {'value': '自然科学', 'pdf_page': 1, 'excerpt': ''},
+        {'value': '自然科学', 'pdf_page': 1, 'excerpt': PROOF, 'reason': ['bad']}])
+    def test_unusable_model_classification_remains_pending(client, services, monkeypatch, bad):
+        enhanced(services, monkeypatch, {'discipline': bad})
+        result = preview(client, pdf_bytes())
+&gt;       assert result['metadata']['topics'] == []
+E       KeyError: 'topics'
+
+app\tests\integration\test_discipline_assistance.py:118: KeyError</failure></testcase><testcase classname="tests.integration.test_discipline_assistance" name="test_unusable_model_classification_remains_pending[bad6]" time="0.122"><failure message="KeyError: 'topics'">client = &lt;starlette.testclient.TestClient object at 0x0000024BFED31970&gt;
+services = &lt;dlrag.api.services.Services object at 0x0000024B961011C0&gt;
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000024B96158320&gt;
+bad = {'excerpt': 'Invented evidence nowhere in the PDF.', 'pdf_page': 1, 'value': '自然科学'}
+
+    @pytest.mark.parametrize('bad', [None, {}, {'value': '其他'},
+        {'value': ['自然科学'], 'pdf_page': 1, 'excerpt': PROOF},
+        {'value': '自然科学', 'pdf_page': True, 'excerpt': PROOF},
+        {'value': '自然科学', 'pdf_page': 2, 'excerpt': PROOF},
+        {'value': '自然科学', 'pdf_page': 1, 'excerpt': 'Invented evidence nowhere in the PDF.'},
+        {'value': '自然科学', 'pdf_page': 1, 'excerpt': ''},
+        {'value': '自然科学', 'pdf_page': 1, 'excerpt': PROOF, 'reason': ['bad']}])
+    def test_unusable_model_classification_remains_pending(client, services, monkeypatch, bad):
+        enhanced(services, monkeypatch, {'discipline': bad})
+        result = preview(client, pdf_bytes())
+&gt;       assert result['metadata']['topics'] == []
+E       KeyError: 'topics'
+
+app\tests\integration\test_discipline_assistance.py:118: KeyError</failure></testcase><testcase classname="tests.integration.test_discipline_assistance" name="test_unusable_model_classification_remains_pending[bad7]" time="0.080"><failure message="KeyError: 'topics'">client = &lt;starlette.testclient.TestClient object at 0x0000024BFECCB740&gt;
+services = &lt;dlrag.api.services.Services object at 0x0000024BFECC86E0&gt;
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000024BFECC9550&gt;
+bad = {'excerpt': '', 'pdf_page': 1, 'value': '自然科学'}
+
+    @pytest.mark.parametrize('bad', [None, {}, {'value': '其他'},
+        {'value': ['自然科学'], 'pdf_page': 1, 'excerpt': PROOF},
+        {'value': '自然科学', 'pdf_page': True, 'excerpt': PROOF},
+        {'value': '自然科学', 'pdf_page': 2, 'excerpt': PROOF},
+        {'value': '自然科学', 'pdf_page': 1, 'excerpt': 'Invented evidence nowhere in the PDF.'},
+        {'value': '自然科学', 'pdf_page': 1, 'excerpt': ''},
+        {'value': '自然科学', 'pdf_page': 1, 'excerpt': PROOF, 'reason': ['bad']}])
+    def test_unusable_model_classification_remains_pending(client, services, monkeypatch, bad):
+        enhanced(services, monkeypatch, {'discipline': bad})
+        result = preview(client, pdf_bytes())
+&gt;       assert result['metadata']['topics'] == []
+E       KeyError: 'topics'
+
+app\tests\integration\test_discipline_assistance.py:118: KeyError</failure></testcase><testcase classname="tests.integration.test_discipline_assistance" name="test_unusable_model_classification_remains_pending[bad8]" time="0.080"><failure message="KeyError: 'topics'">client = &lt;starlette.testclient.TestClient object at 0x0000024BFEC2BA40&gt;
+services = &lt;dlrag.api.services.Services object at 0x0000024BFEC2B350&gt;
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000024BFECCA6F0&gt;
+bad = {'excerpt': 'We study efficient execution of computing kernels on AI accelerators.', 'pdf_page': 1, 'reason': ['bad'], 'value': '自然科学'}
+
+    @pytest.mark.parametrize('bad', [None, {}, {'value': '其他'},
+        {'value': ['自然科学'], 'pdf_page': 1, 'excerpt': PROOF},
+        {'value': '自然科学', 'pdf_page': True, 'excerpt': PROOF},
+        {'value': '自然科学', 'pdf_page': 2, 'excerpt': PROOF},
+        {'value': '自然科学', 'pdf_page': 1, 'excerpt': 'Invented evidence nowhere in the PDF.'},
+        {'value': '自然科学', 'pdf_page': 1, 'excerpt': ''},
+        {'value': '自然科学', 'pdf_page': 1, 'excerpt': PROOF, 'reason': ['bad']}])
+    def test_unusable_model_classification_remains_pending(client, services, monkeypatch, bad):
+        enhanced(services, monkeypatch, {'discipline': bad})
+        result = preview(client, pdf_bytes())
+&gt;       assert result['metadata']['topics'] == []
+E       KeyError: 'topics'
+
+app\tests\integration\test_discipline_assistance.py:118: KeyError</failure></testcase><testcase classname="tests.integration.test_discipline_assistance" name="test_user_can_override_llm_selection_before_import[\u793e\u4f1a\u79d1\u5b66]" time="0.124" /><testcase classname="tests.integration.test_discipline_assistance" name="test_user_can_override_llm_selection_before_import[\u54f2\u5b66\u4e0e\u4eba\u6587\u79d1\u5b66]" time="0.113" /><testcase classname="tests.integration.test_discipline_assistance" name="test_cloud_request_asks_for_classification_only_on_keyword_miss[Squeezing Operator Performance Potential for the Ascend Architecture-True]" time="0.008"><failure message="KeyError: 'classify_discipline'">settings = Settings(app_mode='real', data_dir=WindowsPath('C:/Users/35961/AppData/Local/Temp/pytest-of-35961/pytest-75/test_cloud...0.0, qa_reference_penalty_enabled=True, qa_neighbor_expansion_enabled=True, qa_neighbor_radius=1, qa_neighbor_seed_k=3)
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000024BFEB6B350&gt;
+title = 'Squeezing Operator Performance Potential for the Ascend Architecture'
+requested = True
+
+    @pytest.mark.parametrize('title,requested', [(TITLES[0], True), ('Neural computation methods', False)])
+    def test_cloud_request_asks_for_classification_only_on_keyword_miss(settings, monkeypatch, title, requested):
+        settings.app_mode = 'real'
+        settings.siliconflow_api_key = SecretStr('offline-classification-fixture')
+        calls = []
+        def post(url, **kwargs):
+            calls.append((url, kwargs))
+            return SimpleNamespace(raise_for_status=lambda: None, json=lambda: {
+                'choices': [{'finish_reason': 'stop', 'message': {'content': json.dumps(response())}}]})
+        monkeypatch.setattr('requests.post', post)
+        request_candidates(settings, [{'pdf_page': 1, 'text': PROOF, 'image': 'data:image/jpeg;base64,AA=='}],
+                           {'title': title, 'topics': []})
+        payload = json.loads(calls[0][1]['json']['messages'][1]['content'][0]['text'])
+&gt;       assert payload['classify_discipline'] is requested
+E       KeyError: 'classify_discipline'
+
+app\tests\integration\test_discipline_assistance.py:149: KeyError</failure></testcase><testcase classname="tests.integration.test_discipline_assistance" name="test_cloud_request_asks_for_classification_only_on_keyword_miss[Neural computation methods-False]" time="0.005"><failure message="KeyError: 'classify_discipline'">settings = Settings(app_mode='real', data_dir=WindowsPath('C:/Users/35961/AppData/Local/Temp/pytest-of-35961/pytest-75/test_cloud...0.0, qa_reference_penalty_enabled=True, qa_neighbor_expansion_enabled=True, qa_neighbor_radius=1, qa_neighbor_seed_k=3)
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000024BFECCB0B0&gt;
+title = 'Neural computation methods', requested = False
+
+    @pytest.mark.parametrize('title,requested', [(TITLES[0], True), ('Neural computation methods', False)])
+    def test_cloud_request_asks_for_classification_only_on_keyword_miss(settings, monkeypatch, title, requested):
+        settings.app_mode = 'real'
+        settings.siliconflow_api_key = SecretStr('offline-classification-fixture')
+        calls = []
+        def post(url, **kwargs):
+            calls.append((url, kwargs))
+            return SimpleNamespace(raise_for_status=lambda: None, json=lambda: {
+                'choices': [{'finish_reason': 'stop', 'message': {'content': json.dumps(response())}}]})
+        monkeypatch.setattr('requests.post', post)
+        request_candidates(settings, [{'pdf_page': 1, 'text': PROOF, 'image': 'data:image/jpeg;base64,AA=='}],
+                           {'title': title, 'topics': []})
+        payload = json.loads(calls[0][1]['json']['messages'][1]['content'][0]['text'])
+&gt;       assert payload['classify_discipline'] is requested
+E       KeyError: 'classify_discipline'
+
+app\tests\integration\test_discipline_assistance.py:149: KeyError</failure></testcase><testcase classname="tests.integration.test_discipline_assistance" name="test_upload_page_prefills_llm_selection_and_displays_its_source" time="0.649"><failure message="AssertionError: assert None == '自然科学'&#10; +  where None = Selectbox(key='upload_domain', _value=InitialValue(), label='所属学科', options=['自然科学', '社会科学', '哲学与人文科学'], form_id='upload').value&#10; +    where Selectbox(key='upload_domain', _value=InitialValue(), label='所属学科', options=['自然科学', '社会科学', '哲学与人文科学'], form_id='upload') = WidgetList(_list=[Selectbox(key='upload_domain', _value=InitialValue(), label='所属学科', options=['自然科学', '社会科学', '哲学与人文科...tbox(key='upload_language', _value=InitialValue(), label='语言', options=['中文', '英文', '中英混合', '未确定'], form_id='upload')])(key='upload_domain')&#10; +      where WidgetList(_list=[Selectbox(key='upload_domain', _value=InitialValue(), label='所属学科', options=['自然科学', '社会科学', '哲学与人文科...tbox(key='upload_language', _value=InitialValue(), label='语言', options=['中文', '英文', '中英混合', '未确定'], form_id='upload')]) = AppTest(\n    _script_path='D:\\digital-library-worktrees\\mq-006\\app\\src\\dlrag\\ui\\app.py',\n    default_timeout=25...=['上传文献', '文献管理', '系统设置'])\n            }\n        ),\n        2: SpecialBlock(\n            type='event'\n        )\n    }\n).selectbox">client = &lt;starlette.testclient.TestClient object at 0x0000024BFEB0FCB0&gt;
+services = &lt;dlrag.api.services.Services object at 0x0000024BFEB0F3B0&gt;
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000024BFE9D0260&gt;
+
+    def test_upload_page_prefills_llm_selection_and_displays_its_source(client, services, monkeypatch):
+        enhanced(services, monkeypatch)
+        raw = pdf_bytes()
+        monkeypatch.setattr('streamlit.file_uploader', lambda *a, **k: SimpleNamespace(name='fixture.pdf', getvalue=lambda: raw))
+        def api(base, method, path, **kwargs):
+            return client.request(method, path, **kwargs).json()
+        monkeypatch.setattr('dlrag.ui.client.call_api', api)
+        app = AppTest.from_file(str(Path(__file__).parents[2] / 'src/dlrag/ui/app.py'), default_timeout=25).run()
+        app.sidebar.radio[0].set_value('上传与管理').run()
+        assert not app.exception
+&gt;       assert app.selectbox(key='upload_domain').value == '自然科学'
+E       AssertionError: assert None == '自然科学'
+E        +  where None = Selectbox(key='upload_domain', _value=InitialValue(), label='所属学科', options=['自然科学', '社会科学', '哲学与人文科学'], form_id='upload').value
+E        +    where Selectbox(key='upload_domain', _value=InitialValue(), label='所属学科', options=['自然科学', '社会科学', '哲学与人文科学'], form_id='upload') = WidgetList(_list=[Selectbox(key='upload_domain', _value=InitialValue(), label='所属学科', options=['自然科学', '社会科学', '哲学与人文科...tbox(key='upload_language', _value=InitialValue(), label='语言', options=['中文', '英文', '中英混合', '未确定'], form_id='upload')])(key='upload_domain')
+E        +      where WidgetList(_list=[Selectbox(key='upload_domain', _value=InitialValue(), label='所属学科', options=['自然科学', '社会科学', '哲学与人文科...tbox(key='upload_language', _value=InitialValue(), label='语言', options=['中文', '英文', '中英混合', '未确定'], form_id='upload')]) = AppTest(\n    _script_path='D:\\digital-library-worktrees\\mq-006\\app\\src\\dlrag\\ui\\app.py',\n    default_timeout=25...=['上传文献', '文献管理', '系统设置'])\n            }\n        ),\n        2: SpecialBlock(\n            type='event'\n        )\n    }\n).selectbox
+
+app\tests\integration\test_discipline_assistance.py:164: AssertionError</failure></testcase></testsuite></testsuites>

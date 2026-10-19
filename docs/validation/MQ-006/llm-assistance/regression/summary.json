@@ -1,0 +1,1265 @@
+{
+  "work_item": "MQ-006",
+  "scope": "all",
+  "tested_code": {
+    "commit": "7b1f24d43992530ca06ff5e46fb711cc1427d4cd",
+    "branch": "fix/mq-006-discipline",
+    "dirty": false
+  },
+  "created_at": "2026-10-19T12:49:20.564156+00:00",
+  "python": "3.12.14",
+  "platform": "win32",
+  "packages": {
+    "pytest": "8.3.4",
+    "coverage": "7.16.2",
+    "PyMuPDF": "1.27.2.2",
+    "numpy": "1.26.4",
+    "requests": "2.34.2"
+  },
+  "source_path_verified": true,
+  "environment": "isolated temporary stores; mock embeddings; no live model calls",
+  "exit_code": 0,
+  "duration_seconds": 52.41,
+  "tests": {
+    "tests": 597,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "new_cases": 72,
+  "reused_cases": 525,
+  "case_count_policy": "new_cases selects one work item; stacked PR increments use incremental_groups; old reports retain original attribution",
+  "pr_incremental_groups": [
+    "MQ-006"
+  ],
+  "pr_incremental_cases": 72,
+  "pr_inherited_cases": 525,
+  "case_groups": {
+    "COL-001": 128,
+    "COL-002": 10,
+    "ING-001": 18,
+    "ING-002": 18,
+    "MQ-005": 10,
+    "RET-001": 9,
+    "DEP-001": 18,
+    "MQ-006": 72,
+    "baseline_reused": 314
+  },
+  "expected_failures": 0,
+  "coverage": {
+    "app/src/dlrag/__init__.py": {
+      "statements": 1,
+      "covered_statements": 1,
+      "statement_percent": 100.0,
+      "branches": 0,
+      "covered_branches": 0,
+      "branch_percent": null
+    },
+    "app/src/dlrag/api/__init__.py": {
+      "statements": 0,
+      "covered_statements": 0,
+      "statement_percent": null,
+      "branches": 0,
+      "covered_branches": 0,
+      "branch_percent": null
+    },
+    "app/src/dlrag/api/ask_jobs.py": {
+      "statements": 48,
+      "covered_statements": 47,
+      "statement_percent": 97.92,
+      "branches": 10,
+      "covered_branches": 8,
+      "branch_percent": 80.0
+    },
+    "app/src/dlrag/api/covers.py": {
+      "statements": 8,
+      "covered_statements": 8,
+      "statement_percent": 100.0,
+      "branches": 0,
+      "covered_branches": 0,
+      "branch_percent": null
+    },
+    "app/src/dlrag/api/document_jobs.py": {
+      "statements": 71,
+      "covered_statements": 70,
+      "statement_percent": 98.59,
+      "branches": 14,
+      "covered_branches": 12,
+      "branch_percent": 85.71
+    },
+    "app/src/dlrag/api/main.py": {
+      "statements": 56,
+      "covered_statements": 53,
+      "statement_percent": 94.64,
+      "branches": 8,
+      "covered_branches": 7,
+      "branch_percent": 87.5
+    },
+    "app/src/dlrag/api/mock_qa.py": {
+      "statements": 27,
+      "covered_statements": 26,
+      "statement_percent": 96.3,
+      "branches": 10,
+      "covered_branches": 8,
+      "branch_percent": 80.0
+    },
+    "app/src/dlrag/api/qa_factory.py": {
+      "statements": 3,
+      "covered_statements": 3,
+      "statement_percent": 100.0,
+      "branches": 0,
+      "covered_branches": 0,
+      "branch_percent": null
+    },
+    "app/src/dlrag/api/routes.py": {
+      "statements": 136,
+      "covered_statements": 136,
+      "statement_percent": 100.0,
+      "branches": 14,
+      "covered_branches": 14,
+      "branch_percent": 100.0
+    },
+    "app/src/dlrag/api/services.py": {
+      "statements": 205,
+      "covered_statements": 183,
+      "statement_percent": 89.27,
+      "branches": 68,
+      "covered_branches": 60,
+      "branch_percent": 88.24
+    },
+    "app/src/dlrag/api/sources.py": {
+      "statements": 56,
+      "covered_statements": 54,
+      "statement_percent": 96.43,
+      "branches": 20,
+      "covered_branches": 17,
+      "branch_percent": 85.0
+    },
+    "app/src/dlrag/ingestion/__init__.py": {
+      "statements": 2,
+      "covered_statements": 2,
+      "statement_percent": 100.0,
+      "branches": 0,
+      "covered_branches": 0,
+      "branch_percent": null
+    },
+    "app/src/dlrag/ingestion/bibliography.py": {
+      "statements": 138,
+      "covered_statements": 138,
+      "statement_percent": 100.0,
+      "branches": 58,
+      "covered_branches": 56,
+      "branch_percent": 96.55
+    },
+    "app/src/dlrag/ingestion/chunker.py": {
+      "statements": 86,
+      "covered_statements": 76,
+      "statement_percent": 88.37,
+      "branches": 50,
+      "covered_branches": 40,
+      "branch_percent": 80.0
+    },
+    "app/src/dlrag/ingestion/cli.py": {
+      "statements": 63,
+      "covered_statements": 0,
+      "statement_percent": 0.0,
+      "branches": 30,
+      "covered_branches": 0,
+      "branch_percent": 0.0
+    },
+    "app/src/dlrag/ingestion/discipline.py": {
+      "statements": 41,
+      "covered_statements": 41,
+      "statement_percent": 100.0,
+      "branches": 18,
+      "covered_branches": 17,
+      "branch_percent": 94.44
+    },
+    "app/src/dlrag/ingestion/errors.py": {
+      "statements": 4,
+      "covered_statements": 4,
+      "statement_percent": 100.0,
+      "branches": 0,
+      "covered_branches": 0,
+      "branch_percent": null
+    },
+    "app/src/dlrag/ingestion/fulltext.py": {
+      "statements": 59,
+      "covered_statements": 58,
+      "statement_percent": 98.31,
+      "branches": 22,
+      "covered_branches": 20,
+      "branch_percent": 90.91
+    },
+    "app/src/dlrag/ingestion/library.py": {
+      "statements": 232,
+      "covered_statements": 206,
+      "statement_percent": 88.79,
+      "branches": 100,
+      "covered_branches": 75,
+      "branch_percent": 75.0
+    },
+    "app/src/dlrag/ingestion/metadata.py": {
+      "statements": 149,
+      "covered_statements": 142,
+      "statement_percent": 95.3,
+      "branches": 94,
+      "covered_branches": 87,
+      "branch_percent": 92.55
+    },
+    "app/src/dlrag/ingestion/metadata_api.py": {
+      "statements": 128,
+      "covered_statements": 121,
+      "statement_percent": 94.53,
+      "branches": 50,
+      "covered_branches": 42,
+      "branch_percent": 84.0
+    },
+    "app/src/dlrag/ingestion/metadata_year.py": {
+      "statements": 114,
+      "covered_statements": 111,
+      "statement_percent": 97.37,
+      "branches": 46,
+      "covered_branches": 43,
+      "branch_percent": 93.48
+    },
+    "app/src/dlrag/ingestion/parser.py": {
+      "statements": 78,
+      "covered_statements": 71,
+      "statement_percent": 91.03,
+      "branches": 34,
+      "covered_branches": 31,
+      "branch_percent": 91.18
+    },
+    "app/src/dlrag/ingestion/reports.py": {
+      "statements": 38,
+      "covered_statements": 38,
+      "statement_percent": 100.0,
+      "branches": 10,
+      "covered_branches": 10,
+      "branch_percent": 100.0
+    },
+    "app/src/dlrag/ingestion/text_quality.py": {
+      "statements": 21,
+      "covered_statements": 21,
+      "statement_percent": 100.0,
+      "branches": 4,
+      "covered_branches": 4,
+      "branch_percent": 100.0
+    },
+    "app/src/dlrag/qa/__init__.py": {
+      "statements": 4,
+      "covered_statements": 4,
+      "statement_percent": 100.0,
+      "branches": 0,
+      "covered_branches": 0,
+      "branch_percent": null
+    },
+    "app/src/dlrag/qa/cli.py": {
+      "statements": 56,
+      "covered_statements": 0,
+      "statement_percent": 0.0,
+      "branches": 14,
+      "covered_branches": 0,
+      "branch_percent": 0.0
+    },
+    "app/src/dlrag/qa/coverage.py": {
+      "statements": 31,
+      "covered_statements": 31,
+      "statement_percent": 100.0,
+      "branches": 16,
+      "covered_branches": 16,
+      "branch_percent": 100.0
+    },
+    "app/src/dlrag/qa/demo.py": {
+      "statements": 24,
+      "covered_statements": 22,
+      "statement_percent": 91.67,
+      "branches": 4,
+      "covered_branches": 3,
+      "branch_percent": 75.0
+    },
+    "app/src/dlrag/qa/engine.py": {
+      "statements": 269,
+      "covered_statements": 241,
+      "statement_percent": 89.59,
+      "branches": 92,
+      "covered_branches": 71,
+      "branch_percent": 77.17
+    },
+    "app/src/dlrag/qa/errors.py": {
+      "statements": 4,
+      "covered_statements": 4,
+      "statement_percent": 100.0,
+      "branches": 0,
+      "covered_branches": 0,
+      "branch_percent": null
+    },
+    "app/src/dlrag/qa/evaluation.py": {
+      "statements": 100,
+      "covered_statements": 92,
+      "statement_percent": 92.0,
+      "branches": 44,
+      "covered_branches": 36,
+      "branch_percent": 81.82
+    },
+    "app/src/dlrag/qa/evidence.py": {
+      "statements": 130,
+      "covered_statements": 121,
+      "statement_percent": 93.08,
+      "branches": 58,
+      "covered_branches": 50,
+      "branch_percent": 86.21
+    },
+    "app/src/dlrag/qa/grounding.py": {
+      "statements": 28,
+      "covered_statements": 27,
+      "statement_percent": 96.43,
+      "branches": 14,
+      "covered_branches": 13,
+      "branch_percent": 92.86
+    },
+    "app/src/dlrag/qa/llm_client.py": {
+      "statements": 108,
+      "covered_statements": 94,
+      "statement_percent": 87.04,
+      "branches": 30,
+      "covered_branches": 23,
+      "branch_percent": 76.67
+    },
+    "app/src/dlrag/qa/planner.py": {
+      "statements": 34,
+      "covered_statements": 27,
+      "statement_percent": 79.41,
+      "branches": 26,
+      "covered_branches": 19,
+      "branch_percent": 73.08
+    },
+    "app/src/dlrag/qa/reranking.py": {
+      "statements": 59,
+      "covered_statements": 59,
+      "statement_percent": 100.0,
+      "branches": 14,
+      "covered_branches": 12,
+      "branch_percent": 85.71
+    },
+    "app/src/dlrag/qa/retrieval.py": {
+      "statements": 27,
+      "covered_statements": 27,
+      "statement_percent": 100.0,
+      "branches": 10,
+      "covered_branches": 10,
+      "branch_percent": 100.0
+    },
+    "app/src/dlrag/qa/semantic_reranker.py": {
+      "statements": 61,
+      "covered_statements": 59,
+      "statement_percent": 96.72,
+      "branches": 18,
+      "covered_branches": 16,
+      "branch_percent": 88.89
+    },
+    "app/src/dlrag/qa/sentences.py": {
+      "statements": 21,
+      "covered_statements": 20,
+      "statement_percent": 95.24,
+      "branches": 10,
+      "covered_branches": 9,
+      "branch_percent": 90.0
+    },
+    "app/src/dlrag/qa/validation.py": {
+      "statements": 86,
+      "covered_statements": 80,
+      "statement_percent": 93.02,
+      "branches": 56,
+      "covered_branches": 50,
+      "branch_percent": 89.29
+    },
+    "app/src/dlrag/retrieval/__init__.py": {
+      "statements": 3,
+      "covered_statements": 3,
+      "statement_percent": 100.0,
+      "branches": 0,
+      "covered_branches": 0,
+      "branch_percent": null
+    },
+    "app/src/dlrag/retrieval/cli.py": {
+      "statements": 105,
+      "covered_statements": 17,
+      "statement_percent": 16.19,
+      "branches": 40,
+      "covered_branches": 3,
+      "branch_percent": 7.5
+    },
+    "app/src/dlrag/retrieval/embeddings.py": {
+      "statements": 149,
+      "covered_statements": 138,
+      "statement_percent": 92.62,
+      "branches": 64,
+      "covered_branches": 54,
+      "branch_percent": 84.38
+    },
+    "app/src/dlrag/retrieval/errors.py": {
+      "statements": 5,
+      "covered_statements": 5,
+      "statement_percent": 100.0,
+      "branches": 0,
+      "covered_branches": 0,
+      "branch_percent": null
+    },
+    "app/src/dlrag/retrieval/evaluation.py": {
+      "statements": 89,
+      "covered_statements": 76,
+      "statement_percent": 85.39,
+      "branches": 40,
+      "covered_branches": 29,
+      "branch_percent": 72.5
+    },
+    "app/src/dlrag/retrieval/fusion.py": {
+      "statements": 6,
+      "covered_statements": 6,
+      "statement_percent": 100.0,
+      "branches": 4,
+      "covered_branches": 4,
+      "branch_percent": 100.0
+    },
+    "app/src/dlrag/retrieval/lexical.py": {
+      "statements": 43,
+      "covered_statements": 43,
+      "statement_percent": 100.0,
+      "branches": 14,
+      "covered_branches": 14,
+      "branch_percent": 100.0
+    },
+    "app/src/dlrag/retrieval/retriever.py": {
+      "statements": 342,
+      "covered_statements": 295,
+      "statement_percent": 86.26,
+      "branches": 168,
+      "covered_branches": 124,
+      "branch_percent": 73.81
+    },
+    "app/src/dlrag/shared/__init__.py": {
+      "statements": 0,
+      "covered_statements": 0,
+      "statement_percent": null,
+      "branches": 0,
+      "covered_branches": 0,
+      "branch_percent": null
+    },
+    "app/src/dlrag/shared/config.py": {
+      "statements": 62,
+      "covered_statements": 62,
+      "statement_percent": 100.0,
+      "branches": 2,
+      "covered_branches": 2,
+      "branch_percent": 100.0
+    },
+    "app/src/dlrag/shared/disciplines.py": {
+      "statements": 25,
+      "covered_statements": 24,
+      "statement_percent": 96.0,
+      "branches": 8,
+      "covered_branches": 7,
+      "branch_percent": 87.5
+    },
+    "app/src/dlrag/shared/models.py": {
+      "statements": 227,
+      "covered_statements": 214,
+      "statement_percent": 94.27,
+      "branches": 46,
+      "covered_branches": 33,
+      "branch_percent": 71.74
+    },
+    "app/src/dlrag/ui/__init__.py": {
+      "statements": 0,
+      "covered_statements": 0,
+      "statement_percent": null,
+      "branches": 0,
+      "covered_branches": 0,
+      "branch_percent": null
+    },
+    "app/src/dlrag/ui/app.py": {
+      "statements": 398,
+      "covered_statements": 322,
+      "statement_percent": 80.9,
+      "branches": 198,
+      "covered_branches": 134,
+      "branch_percent": 67.68
+    },
+    "app/src/dlrag/ui/citations.py": {
+      "statements": 27,
+      "covered_statements": 26,
+      "statement_percent": 96.3,
+      "branches": 8,
+      "covered_branches": 7,
+      "branch_percent": 87.5
+    },
+    "app/src/dlrag/ui/client.py": {
+      "statements": 14,
+      "covered_statements": 6,
+      "statement_percent": 42.86,
+      "branches": 2,
+      "covered_branches": 0,
+      "branch_percent": 0.0
+    },
+    "app/src/dlrag/ui/library.py": {
+      "statements": 24,
+      "covered_statements": 23,
+      "statement_percent": 95.83,
+      "branches": 6,
+      "covered_branches": 5,
+      "branch_percent": 83.33
+    },
+    "app/src/dlrag/ui/state.py": {
+      "statements": 11,
+      "covered_statements": 11,
+      "statement_percent": 100.0,
+      "branches": 6,
+      "covered_branches": 6,
+      "branch_percent": 100.0
+    },
+    "tools/catalog_batch.py": {
+      "statements": 217,
+      "covered_statements": 183,
+      "statement_percent": 84.33,
+      "branches": 66,
+      "covered_branches": 51,
+      "branch_percent": 77.27
+    }
+  },
+  "uncovered_focus": {
+    "app/src/dlrag/api/routes.py": {
+      "missing_lines": [],
+      "missing_branches": []
+    },
+    "app/src/dlrag/api/services.py": {
+      "missing_lines": [
+        59,
+        121,
+        123,
+        140,
+        145,
+        175,
+        185,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        222,
+        236,
+        237,
+        238,
+        239,
+        275,
+        276,
+        277,
+        278
+      ],
+      "missing_branches": [
+        [
+          58,
+          59
+        ],
+        [
+          120,
+          121
+        ],
+        [
+          122,
+          123
+        ],
+        [
+          139,
+          140
+        ],
+        [
+          143,
+          145
+        ],
+        [
+          174,
+          175
+        ],
+        [
+          184,
+          185
+        ],
+        [
+          221,
+          222
+        ]
+      ]
+    },
+    "app/src/dlrag/ingestion/bibliography.py": {
+      "missing_lines": [],
+      "missing_branches": [
+        [
+          85,
+          84
+        ],
+        [
+          181,
+          183
+        ]
+      ]
+    },
+    "app/src/dlrag/ingestion/chunker.py": {
+      "missing_lines": [
+        12,
+        19,
+        27,
+        30,
+        31,
+        34,
+        46,
+        79,
+        100,
+        101
+      ],
+      "missing_branches": [
+        [
+          11,
+          12
+        ],
+        [
+          18,
+          19
+        ],
+        [
+          26,
+          27
+        ],
+        [
+          33,
+          34
+        ],
+        [
+          45,
+          46
+        ],
+        [
+          78,
+          79
+        ],
+        [
+          88,
+          94
+        ],
+        [
+          99,
+          100
+        ],
+        [
+          100,
+          101
+        ],
+        [
+          100,
+          104
+        ]
+      ]
+    },
+    "app/src/dlrag/ingestion/discipline.py": {
+      "missing_lines": [],
+      "missing_branches": [
+        [
+          38,
+          40
+        ]
+      ]
+    },
+    "app/src/dlrag/ingestion/fulltext.py": {
+      "missing_lines": [
+        71
+      ],
+      "missing_branches": [
+        [
+          39,
+          37
+        ],
+        [
+          70,
+          71
+        ]
+      ]
+    },
+    "app/src/dlrag/ingestion/library.py": {
+      "missing_lines": [
+        21,
+        44,
+        46,
+        57,
+        104,
+        107,
+        110,
+        113,
+        116,
+        134,
+        135,
+        150,
+        151,
+        152,
+        153,
+        160,
+        163,
+        165,
+        175,
+        177,
+        182,
+        186,
+        210,
+        213,
+        268,
+        275
+      ],
+      "missing_branches": [
+        [
+          20,
+          21
+        ],
+        [
+          43,
+          44
+        ],
+        [
+          45,
+          46
+        ],
+        [
+          56,
+          57
+        ],
+        [
+          103,
+          104
+        ],
+        [
+          106,
+          107
+        ],
+        [
+          109,
+          110
+        ],
+        [
+          112,
+          113
+        ],
+        [
+          115,
+          116
+        ],
+        [
+          133,
+          134
+        ],
+        [
+          134,
+          135
+        ],
+        [
+          134,
+          140
+        ],
+        [
+          151,
+          152
+        ],
+        [
+          151,
+          153
+        ],
+        [
+          159,
+          160
+        ],
+        [
+          162,
+          163
+        ],
+        [
+          164,
+          165
+        ],
+        [
+          174,
+          175
+        ],
+        [
+          176,
+          177
+        ],
+        [
+          181,
+          182
+        ],
+        [
+          184,
+          186
+        ],
+        [
+          209,
+          210
+        ],
+        [
+          212,
+          213
+        ],
+        [
+          267,
+          268
+        ],
+        [
+          274,
+          275
+        ]
+      ]
+    },
+    "app/src/dlrag/ingestion/metadata_api.py": {
+      "missing_lines": [
+        65,
+        73,
+        83,
+        98,
+        163,
+        165,
+        167
+      ],
+      "missing_branches": [
+        [
+          64,
+          65
+        ],
+        [
+          72,
+          73
+        ],
+        [
+          82,
+          83
+        ],
+        [
+          97,
+          98
+        ],
+        [
+          148,
+          150
+        ],
+        [
+          162,
+          163
+        ],
+        [
+          164,
+          165
+        ],
+        [
+          166,
+          167
+        ]
+      ]
+    },
+    "app/src/dlrag/ingestion/metadata_year.py": {
+      "missing_lines": [
+        65,
+        99,
+        118
+      ],
+      "missing_branches": [
+        [
+          63,
+          65
+        ],
+        [
+          98,
+          99
+        ],
+        [
+          114,
+          118
+        ]
+      ]
+    },
+    "app/src/dlrag/ingestion/parser.py": {
+      "missing_lines": [
+        30,
+        31,
+        52,
+        60,
+        66,
+        67,
+        76
+      ],
+      "missing_branches": [
+        [
+          51,
+          52
+        ],
+        [
+          59,
+          60
+        ],
+        [
+          75,
+          76
+        ]
+      ]
+    },
+    "app/src/dlrag/ingestion/text_quality.py": {
+      "missing_lines": [],
+      "missing_branches": []
+    },
+    "app/src/dlrag/retrieval/retriever.py": {
+      "missing_lines": [
+        71,
+        74,
+        75,
+        79,
+        81,
+        91,
+        94,
+        97,
+        99,
+        102,
+        104,
+        106,
+        108,
+        117,
+        119,
+        122,
+        125,
+        130,
+        132,
+        133,
+        134,
+        135,
+        137,
+        141,
+        148,
+        153,
+        155,
+        159,
+        167,
+        174,
+        181,
+        188,
+        216,
+        217,
+        225,
+        276,
+        279,
+        296,
+        299,
+        302,
+        305,
+        308,
+        327,
+        338,
+        342,
+        348,
+        400
+      ],
+      "missing_branches": [
+        [
+          70,
+          71
+        ],
+        [
+          78,
+          79
+        ],
+        [
+          80,
+          81
+        ],
+        [
+          90,
+          91
+        ],
+        [
+          93,
+          94
+        ],
+        [
+          96,
+          97
+        ],
+        [
+          98,
+          99
+        ],
+        [
+          101,
+          102
+        ],
+        [
+          103,
+          104
+        ],
+        [
+          105,
+          106
+        ],
+        [
+          107,
+          108
+        ],
+        [
+          115,
+          117
+        ],
+        [
+          118,
+          119
+        ],
+        [
+          121,
+          122
+        ],
+        [
+          124,
+          125
+        ],
+        [
+          129,
+          130
+        ],
+        [
+          131,
+          132
+        ],
+        [
+          132,
+          133
+        ],
+        [
+          132,
+          134
+        ],
+        [
+          134,
+          135
+        ],
+        [
+          134,
+          138
+        ],
+        [
+          136,
+          137
+        ],
+        [
+          140,
+          141
+        ],
+        [
+          147,
+          148
+        ],
+        [
+          152,
+          153
+        ],
+        [
+          154,
+          155
+        ],
+        [
+          158,
+          159
+        ],
+        [
+          166,
+          167
+        ],
+        [
+          173,
+          174
+        ],
+        [
+          180,
+          181
+        ],
+        [
+          187,
+          188
+        ],
+        [
+          224,
+          225
+        ],
+        [
+          275,
+          276
+        ],
+        [
+          278,
+          279
+        ],
+        [
+          293,
+          296
+        ],
+        [
+          298,
+          299
+        ],
+        [
+          301,
+          302
+        ],
+        [
+          304,
+          305
+        ],
+        [
+          307,
+          308
+        ],
+        [
+          326,
+          327
+        ],
+        [
+          337,
+          338
+        ],
+        [
+          341,
+          342
+        ],
+        [
+          347,
+          348
+        ],
+        [
+          399,
+          400
+        ]
+      ]
+    },
+    "app/src/dlrag/shared/disciplines.py": {
+      "missing_lines": [
+        33
+      ],
+      "missing_branches": [
+        [
+          32,
+          33
+        ]
+      ]
+    },
+    "tools/catalog_batch.py": {
+      "missing_lines": [
+        48,
+        50,
+        59,
+        61,
+        77,
+        80,
+        83,
+        151,
+        181,
+        214,
+        260,
+        261,
+        262,
+        263,
+        264,
+        265,
+        266,
+        267,
+        268,
+        269,
+        270,
+        271,
+        272,
+        273,
+        274,
+        276,
+        277,
+        278,
+        279,
+        280,
+        281,
+        282,
+        283,
+        287
+      ],
+      "missing_branches": [
+        [
+          47,
+          48
+        ],
+        [
+          49,
+          50
+        ],
+        [
+          58,
+          59
+        ],
+        [
+          60,
+          61
+        ],
+        [
+          76,
+          77
+        ],
+        [
+          79,
+          80
+        ],
+        [
+          81,
+          83
+        ],
+        [
+          150,
+          151
+        ],
+        [
+          180,
+          181
+        ],
+        [
+          213,
+          214
+        ],
+        [
+          270,
+          271
+        ],
+        [
+          270,
+          276
+        ],
+        [
+          276,
+          277
+        ],
+        [
+          276,
+          278
+        ],
+        [
+          286,
+          287
+        ]
+      ]
+    }
+  },
+  "manual_review": "pending",
+  "real_pdf_batch": "not exercised by this offline test run; see separate batch evidence",
+  "worktree_dirty_after": false,
+  "artifact_sha256": {
+    "pytest.txt": "5a9e0640c13cec9d3b92de37514255fe9325b5120358206bf5db02a8fa6b980f",
+    "junit.xml": "c966d3e0fb4143643f5a95a1be37648b202fda2270e9a86ad0083cea891ed5a7",
+    "coverage.json": "76c21bb141aa1da0d616e33934a3ab71459fe9b7a751ea18d0ffa705c189594e"
+  }
+}

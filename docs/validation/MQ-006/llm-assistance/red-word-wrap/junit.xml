@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="2" time="0.681" timestamp="2026-10-19T20:45:00.183851+08:00" hostname="DANIUNIU"><testcase classname="tests.integration.test_discipline_assistance" name="test_pdf_line_wraps_and_typographic_ligatures_support_the_same_excerpt[We study efficient execution of comput-\ning kernels on AI accelerators.]" time="0.001"><failure message="assert 0 == 1">printed = 'We study efficient execution of comput-\ning kernels on AI accelerators.'
+
+    @pytest.mark.parametrize('printed', [PROOF.replace('computing', 'comput-\ning'),
+                                        PROOF.replace('efficient', 'e\ufb03cient')])
+    def test_pdf_line_wraps_and_typographic_ligatures_support_the_same_excerpt(printed):
+        from dlrag.ingestion.discipline import complete_discipline
+        result = {'metadata': {'title': TITLES[0], 'topics': []}}
+        accepted = complete_discipline(result, response()['discipline'],
+                                      [{'pdf_page': 1, 'text': printed, 'validation_text': printed}])
+&gt;       assert accepted == 1
+E       assert 0 == 1
+
+app\tests\integration\test_discipline_assistance.py:194: AssertionError</failure></testcase><testcase classname="tests.integration.test_discipline_assistance" name="test_pdf_line_wraps_and_typographic_ligatures_support_the_same_excerpt[We study e\ufb03cient execution of computing kernels on AI accelerators.]" time="0.000" /></testsuite></testsuites>
