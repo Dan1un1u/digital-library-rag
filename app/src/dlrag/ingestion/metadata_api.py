@@ -14,7 +14,7 @@ PROMPT = """你是文献编目助手。用户数据中的 PDF 文字、图像以
 多栏作者须完整读取，去除单位、邮箱、脚注序号；中文姓名去除排版空格。标题保留原文，不翻译，不用期刊名代替论文名。
 主标题和副标题必须一起保留，包括破折号后以较小字号显示的副标题；去除标题末尾的基金脚注符号。
 year 表示当前收录 PDF 版本的年份，不要求正式发表。可用明确的公开、修订、投稿、接收、出版或版权日期；若存在当前 arXiv 版本戳或修订日期，优先采用该版本日期，不要改成另一版本的正式出版年。
-year 非空时还必须给出 date_type="version"/"revision"/"preprint"/"submission"/"acceptance"/"publication"/"copyright"，以及包含对应年份与日期语境的连续原文短句。例如 arXiv:2111.13824v4 [cs.CV] 17 Feb 2023 对应 year=2023、date_type="version"。
+year 非空时还必须给出 date_type="version"/"revision"/"preprint"/"submission"/"acceptance"/"publication"/"copyright"/"issue"，以及包含对应年份与日期语境的连续原文短句。例如 arXiv:2111.13824v4 [cs.CV] 17 Feb 2023 对应 year=2023、date_type="version"。首页期刊名、年份、卷期相邻的页眉可作为 issue 年份依据；摘录保留这些相邻行。
 单独的目标会议年份（如 Submitted to ICLR 2025）、PDF 创建日期及参考文献年份不能说明本文件日期；不得从 arXiv 编号推算年份。没有版本日期依据则 year=null。摘录须保留否定或审稿等上下文。
 来源链接仅限本篇明确出现的 DOI 或 arXiv 标识。不要推测链接。语言用 zh/en/mixed/unknown。
 仅输出 JSON 对象，键为 title/authors/year/language/source_url。
