@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="19" skipped="0" tests="21" time="6.370" timestamp="2026-10-19T22:28:23.931044+08:00" hostname="DANIUNIU"><testcase classname="tests.integration.test_ui_language" name="test_default_chinese_and_query_language_choice" time="0.620"><failure message="KeyError: 'ui_language'">client = &lt;starlette.testclient.TestClient object at 0x00000159C3DD81D0&gt;
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x00000159C3DCA5D0&gt;
+
+    def test_default_chinese_and_query_language_choice(client, monkeypatch):
+        app, _ = open_app(client, monkeypatch)
+&gt;       assert app.selectbox(key='ui_language').value == 'zh'
+
+app\tests\integration\test_ui_language.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WidgetList(_list=[Selectbox(_value=InitialValue(), label='浏览所属学科', options=['全部', '自然科学', '社会科学', '哲学与人文科学', '待分类'])])
+key = 'ui_language'
+
+    def __call__(self, key: str) -&gt; El_co:
+        """Return the first element in this collection with the given user key.
+    
+        The same key can appear on different element types, so this returns the
+        first match in this collection. Use ``get_by_key`` when an ambiguous
+        key should raise.
+        """
+        for e in self._list:
+            if getattr(e, "key", None) == key:
+                return e
+&gt;       raise KeyError(key)
+E       KeyError: 'ui_language'
+
+D:\llm_exp\digital-library\workspace\deployments\lib_management_v1_20261018\.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:590: KeyError</failure></testcase><testcase classname="tests.integration.test_ui_language" name="test_url_language_initialization[en-Digital Library]" time="0.210"><failure message="AssertionError: assert '专题数字图书馆' == 'Digital Library'&#10;  &#10;  - Digital Library&#10;  + 专题数字图书馆">client = &lt;starlette.testclient.TestClient object at 0x00000159C3EF77A0&gt;
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x00000159C3EF80B0&gt;
+language = 'en', expected = 'Digital Library'
+
+    @pytest.mark.parametrize('language,expected', [('en', 'Digital Library'), ('zh', '专题数字图书馆'), ('invalid', '专题数字图书馆')])
+    def test_url_language_initialization(client, monkeypatch, language, expected):
+        app, _ = open_app(client, monkeypatch, language)
+&gt;       assert app.title[0].value == expected
+E       AssertionError: assert '专题数字图书馆' == 'Digital Library'
+E         
+E         - Digital Library
+E         + 专题数字图书馆
+
+app\tests\integration\test_ui_language.py:51: AssertionError</failure></testcase><testcase classname="tests.integration.test_ui_language" name="test_url_language_initialization[zh-\u4e13\u9898\u6570\u5b57\u56fe\u4e66\u9986]" time="0.250" /><testcase classname="tests.integration.test_ui_language" name="test_url_language_initialization[invalid-\u4e13\u9898\u6570\u5b57\u56fe\u4e66\u9986]" time="0.238" /><testcase classname="tests.integration.test_ui_language" name="test_all_navigation_pages_are_available_in_english[\u9986\u85cf\u5c55\u793a-\u9986\u85cf\u6587\u732e\u5206\u7c7b-Collection by subject]" time="0.787"><failure message="AssertionError: assert ('Collection by subject' in ['馆藏文献分类'] or 'Collection by subject' in ['查找文献 · 依据原文提问 · 核对每一条引用', '统计范围为当前筛选结果。优先使用学科标签；旧资料按题名和主题辅助归类。', '当前显示 1 篇文献', '专题数字图书馆 · 您的文献工作台'])">client = &lt;starlette.testclient.TestClient object at 0x00000159C3EB8F80&gt;
+imported = {'document': {'authors': [], 'chunking_config': {'count_mode': 'character', 'max_chars': 1200, 'max_tokens': 400, 'ove...544cbcdf7e7a8a4f04afc22a7d11f217a2a7a9d60d543f38bd30795989', ...}, 'index_version': 'idx_20261019T142826_3178337b8878'}
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x00000159C5153200&gt;
+page = '馆藏展示', section = '馆藏文献分类', heading = 'Collection by subject'
+
+    @pytest.mark.parametrize('page,section,heading', [
+        ('馆藏展示', '馆藏文献分类', 'Collection by subject'),
+        ('馆藏展示', '热门电子文献资源', 'Featured documents'),
+        ('搜索与问答', None, 'Search and Q&amp;A'),
+        ('上传与管理', '上传文献', 'Upload a PDF'),
+        ('上传与管理', '文献管理', 'Manage documents'),
+        ('上传与管理', '系统设置', 'System settings'),
+    ])
+    def test_all_navigation_pages_are_available_in_english(client, imported, monkeypatch, page, section, heading):
+        app, _ = open_app(client, monkeypatch, 'en')
+        app.sidebar.radio[0].set_value(page).run()
+        if section:
+            app.sidebar.radio[1].set_value(section).run()
+        assert not app.exception
+&gt;       assert heading in [h.value for h in app.subheader] or heading in [c.value for c in app.caption]
+E       AssertionError: assert ('Collection by subject' in ['馆藏文献分类'] or 'Collection by subject' in ['查找文献 · 依据原文提问 · 核对每一条引用', '统计范围为当前筛选结果。优先使用学科标签；旧资料按题名和主题辅助归类。', '当前显示 1 篇文献', '专题数字图书馆 · 您的文献工作台'])
+
+app\tests\integration\test_ui_language.py:68: AssertionError</failure></testcase><testcase classname="tests.integration.test_ui_language" name="test_all_navigation_pages_are_available_in_english[\u9986\u85cf\u5c55\u793a-\u70ed\u95e8\u7535\u5b50\u6587\u732e\u8d44\u6e90-Featured documents]" time="0.396"><failure message="AssertionError: assert ('Featured documents' in ['热门电子文献资源'] or 'Featured documents' in ['查找文献 · 依据原文提问 · 核对每一条引用', '精选馆藏推荐 · 封面采用文献 PDF 首页，点击封面阅读原文。当前未统计阅读热度，展示顺序不代表访问量排名。', '专题数字图书馆 · 您的文献工作台'])">client = &lt;starlette.testclient.TestClient object at 0x00000159C5191250&gt;
+imported = {'document': {'authors': [], 'chunking_config': {'count_mode': 'character', 'max_chars': 1200, 'max_tokens': 400, 'ove...7d0b535f57408aeb00a450ecf97faecb41896abd059a952d47e723a5c8', ...}, 'index_version': 'idx_20261019T142826_fd3778aec401'}
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x00000159C6004290&gt;
+page = '馆藏展示', section = '热门电子文献资源', heading = 'Featured documents'
+
+    @pytest.mark.parametrize('page,section,heading', [
+        ('馆藏展示', '馆藏文献分类', 'Collection by subject'),
+        ('馆藏展示', '热门电子文献资源', 'Featured documents'),
+        ('搜索与问答', None, 'Search and Q&amp;A'),
+        ('上传与管理', '上传文献', 'Upload a PDF'),
+        ('上传与管理', '文献管理', 'Manage documents'),
+        ('上传与管理', '系统设置', 'System settings'),
+    ])
+    def test_all_navigation_pages_are_available_in_english(client, imported, monkeypatch, page, section, heading):
+        app, _ = open_app(client, monkeypatch, 'en')
+        app.sidebar.radio[0].set_value(page).run()
+        if section:
+            app.sidebar.radio[1].set_value(section).run()
+        assert not app.exception
+&gt;       assert heading in [h.value for h in app.subheader] or heading in [c.value for c in app.caption]
+E       AssertionError: assert ('Featured documents' in ['热门电子文献资源'] or 'Featured documents' in ['查找文献 · 依据原文提问 · 核对每一条引用', '精选馆藏推荐 · 封面采用文献 PDF 首页，点击封面阅读原文。当前未统计阅读热度，展示顺序不代表访问量排名。', '专题数字图书馆 · 您的文献工作台'])
+
+app\tests\integration\test_ui_language.py:68: AssertionError</failure></testcase><testcase classname="tests.integration.test_ui_language" name="test_all_navigation_pages_are_available_in_english[\u641c\u7d22\u4e0e\u95ee\u7b54-None-Search and Q&amp;A]" time="0.274"><failure message="AssertionError: assert ('Search and Q&amp;A' in ['搜索与问答'] or 'Search and Q&amp;A' in ['查找文献 · 依据原文提问 · 核对每一条引用', '提交问答后，这里会显示后台实际处理阶段。', '专题数字图书馆 · 您的文献工作台'])">client = &lt;starlette.testclient.TestClient object at 0x00000159C5191010&gt;
+imported = {'document': {'authors': [], 'chunking_config': {'count_mode': 'character', 'max_chars': 1200, 'max_tokens': 400, 'ove...9d911130e9ac9c764852d45df0cf96f9f27f3871565e49ba0e448516c0', ...}, 'index_version': 'idx_20261019T142827_a62d1f5cc9fe'}
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x00000159C5FBF2C0&gt;
+page = '搜索与问答', section = None, heading = 'Search and Q&amp;A'
+
+    @pytest.mark.parametrize('page,section,heading', [
+        ('馆藏展示', '馆藏文献分类', 'Collection by subject'),
+        ('馆藏展示', '热门电子文献资源', 'Featured documents'),
+        ('搜索与问答', None, 'Search and Q&amp;A'),
+        ('上传与管理', '上传文献', 'Upload a PDF'),
+        ('上传与管理', '文献管理', 'Manage documents'),
+        ('上传与管理', '系统设置', 'System settings'),
+    ])
+    def test_all_navigation_pages_are_available_in_english(client, imported, monkeypatch, page, section, heading):
+        app, _ = open_app(client, monkeypatch, 'en')
+        app.sidebar.radio[0].set_value(page).run()
+        if section:
+            app.sidebar.radio[1].set_value(section).run()
+        assert not app.exception
+&gt;       assert heading in [h.value for h in app.subheader] or heading in [c.value for c in app.caption]
+E       AssertionError: assert ('Search and Q&amp;A' in ['搜索与问答'] or 'Search and Q&amp;A' in ['查找文献 · 依据原文提问 · 核对每一条引用', '提交问答后，这里会显示后台实际处理阶段。', '专题数字图书馆 · 您的文献工作台'])
+
+app\tests\integration\test_ui_language.py:68: AssertionError</failure></testcase><testcase classname="tests.integration.test_ui_language" name="test_all_navigation_pages_are_available_in_english[\u4e0a\u4f20\u4e0e\u7ba1\u7406-\u4e0a\u4f20\u6587\u732e-Upload a PDF]" time="0.312"><failure message="AssertionError: assert ('Upload a PDF' in ['上传与管理', '上传 PDF'] or 'Upload a PDF' in ['查找文献 · 依据原文提问 · 核对每一条引用', '选择 PDF，自动识别标题和作者；核对文献信息后，即可加入馆藏。', '专题数字图书馆 · 您的文献工作台'])">client = &lt;starlette.testclient.TestClient object at 0x00000159C6006690&gt;
+imported = {'document': {'authors': [], 'chunking_config': {'count_mode': 'character', 'max_chars': 1200, 'max_tokens': 400, 'ove...c7cc0073465d4cf002b0617a5b6c9c2f0f4b500886492eb07dce1fb20a', ...}, 'index_version': 'idx_20261019T142827_a274b07030df'}
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x00000159C6069AF0&gt;
+page = '上传与管理', section = '上传文献', heading = 'Upload a PDF'
+
+    @pytest.mark.parametrize('page,section,heading', [
+        ('馆藏展示', '馆藏文献分类', 'Collection by subject'),
+        ('馆藏展示', '热门电子文献资源', 'Featured documents'),
+        ('搜索与问答', None, 'Search and Q&amp;A'),
+        ('上传与管理', '上传文献', 'Upload a PDF'),
+        ('上传与管理', '文献管理', 'Manage documents'),
+        ('上传与管理', '系统设置', 'System settings'),
+    ])
+    def test_all_navigation_pages_are_available_in_english(client, imported, monkeypatch, page, section, heading):
+        app, _ = open_app(client, monkeypatch, 'en')
+        app.sidebar.radio[0].set_value(page).run()
+        if section:
+            app.sidebar.radio[1].set_value(section).run()
+        assert not app.exception
+&gt;       assert heading in [h.value for h in app.subheader] or heading in [c.value for c in app.caption]
+E       AssertionError: assert ('Upload a PDF' in ['上传与管理', '上传 PDF'] or 'Upload a PDF' in ['查找文献 · 依据原文提问 · 核对每一条引用', '选择 PDF，自动识别标题和作者；核对文献信息后，即可加入馆藏。', '专题数字图书馆 · 您的文献工作台'])
+
+app\tests\integration\test_ui_language.py:68: AssertionError</failure></testcase><testcase classname="tests.integration.test_ui_language" name="test_all_navigation_pages_are_available_in_english[\u4e0a\u4f20\u4e0e\u7ba1\u7406-\u6587\u732e\u7ba1\u7406-Manage documents]" time="0.307"><failure message="AssertionError: assert ('Manage documents' in ['上传与管理'] or 'Manage documents' in ['查找文献 · 依据原文提问 · 核对每一条引用', '查看已上传文献及其处理状态。', '共 1 篇文献', '所属学科：自然科学 · 状态：可阅读', '专题数字图书馆 · 您的文献工作台'])">client = &lt;starlette.testclient.TestClient object at 0x00000159C3EB9100&gt;
+imported = {'document': {'authors': [], 'chunking_config': {'count_mode': 'character', 'max_chars': 1200, 'max_tokens': 400, 'ove...edcaacc73e61f006e1a4b6e006afb4100e498e7e6b609d942ac9f2b0a1', ...}, 'index_version': 'idx_20261019T142827_a38943072577'}
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x00000159C3E36390&gt;
+page = '上传与管理', section = '文献管理', heading = 'Manage documents'
+
+    @pytest.mark.parametrize('page,section,heading', [
+        ('馆藏展示', '馆藏文献分类', 'Collection by subject'),
+        ('馆藏展示', '热门电子文献资源', 'Featured documents'),
+        ('搜索与问答', None, 'Search and Q&amp;A'),
+        ('上传与管理', '上传文献', 'Upload a PDF'),
+        ('上传与管理', '文献管理', 'Manage documents'),
+        ('上传与管理', '系统设置', 'System settings'),
+    ])
+    def test_all_navigation_pages_are_available_in_english(client, imported, monkeypatch, page, section, heading):
+        app, _ = open_app(client, monkeypatch, 'en')
+        app.sidebar.radio[0].set_value(page).run()
+        if section:
+            app.sidebar.radio[1].set_value(section).run()
+        assert not app.exception
+&gt;       assert heading in [h.value for h in app.subheader] or heading in [c.value for c in app.caption]
+E       AssertionError: assert ('Manage documents' in ['上传与管理'] or 'Manage documents' in ['查找文献 · 依据原文提问 · 核对每一条引用', '查看已上传文献及其处理状态。', '共 1 篇文献', '所属学科：自然科学 · 状态：可阅读', '专题数字图书馆 · 您的文献工作台'])
+
+app\tests\integration\test_ui_language.py:68: AssertionError</failure></testcase><testcase classname="tests.integration.test_ui_language" name="test_all_navigation_pages_are_available_in_english[\u4e0a\u4f20\u4e0e\u7ba1\u7406-\u7cfb\u7edf\u8bbe\u7f6e-System settings]" time="0.305"><failure message="AssertionError: assert ('System settings' in ['上传与管理'] or 'System settings' in ['查找文献 · 依据原文提问 · 核对每一条引用', '运行模式、模型和索引信息集中在此处，供维护时查看。', '切换前请等待当前问答和上传完成。两种模式使用各自的数据目录。', '专题数字图书馆 · 您的文献工作台'])">client = &lt;starlette.testclient.TestClient object at 0x00000159C3EBA360&gt;
+imported = {'document': {'authors': [], 'chunking_config': {'count_mode': 'character', 'max_chars': 1200, 'max_tokens': 400, 'ove...b6cd7824c67a242a5c25de7c99a052006447a8d2eb6d5fd96f6b18173a', ...}, 'index_version': 'idx_20261019T142828_6f38b007eeea'}
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x00000159C3E34140&gt;
+page = '上传与管理', section = '系统设置', heading = 'System settings'
+
+    @pytest.mark.parametrize('page,section,heading', [
+        ('馆藏展示', '馆藏文献分类', 'Collection by subject'),
+        ('馆藏展示', '热门电子文献资源', 'Featured documents'),
+        ('搜索与问答', None, 'Search and Q&amp;A'),
+        ('上传与管理', '上传文献', 'Upload a PDF'),
+        ('上传与管理', '文献管理', 'Manage documents'),
+        ('上传与管理', '系统设置', 'System settings'),
+    ])
+    def test_all_navigation_pages_are_available_in_english(client, imported, monkeypatch, page, section, heading):
+        app, _ = open_app(client, monkeypatch, 'en')
+        app.sidebar.radio[0].set_value(page).run()
+        if section:
+            app.sidebar.radio[1].set_value(section).run()
+        assert not app.exception
+&gt;       assert heading in [h.value for h in app.subheader] or heading in [c.value for c in app.caption]
+E       AssertionError: assert ('System settings' in ['上传与管理'] or 'System settings' in ['查找文献 · 依据原文提问 · 核对每一条引用', '运行模式、模型和索引信息集中在此处，供维护时查看。', '切换前请等待当前问答和上传完成。两种模式使用各自的数据目录。', '专题数字图书馆 · 您的文献工作台'])
+
+app\tests\integration\test_ui_language.py:68: AssertionError</failure></testcase><testcase classname="tests.integration.test_ui_language" name="test_switch_keeps_search_draft_filters_and_results" time="0.264"><failure message="KeyError: 'query_question'">client = &lt;starlette.testclient.TestClient object at 0x00000159C60B66C0&gt;
+imported = {'document': {'authors': [], 'chunking_config': {'count_mode': 'character', 'max_chars': 1200, 'max_tokens': 400, 'ove...4d8c3deddc319001bbb1c2d0eb790a3139a568b19c393aa17c42d5795f', ...}, 'index_version': 'idx_20261019T142828_b3a4b96b5fba'}
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x00000159C60B42C0&gt;
+
+    def test_switch_keeps_search_draft_filters_and_results(client, imported, monkeypatch):
+        app, calls = open_app(client, monkeypatch)
+        app.sidebar.radio[0].set_value('搜索与问答').run()
+&gt;       app.text_area(key='query_question').set_value('BM25')
+
+app\tests\integration\test_ui_language.py:75: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WidgetList(_list=[TextArea(_value=InitialValue(), label='想查找或了解什么？', max_chars=2000, form_id='query')])
+key = 'query_question'
+
+    def __call__(self, key: str) -&gt; El_co:
+        """Return the first element in this collection with the given user key.
+    
+        The same key can appear on different element types, so this returns the
+        first match in this collection. Use ``get_by_key`` when an ambiguous
+        key should raise.
+        """
+        for e in self._list:
+            if getattr(e, "key", None) == key:
+                return e
+&gt;       raise KeyError(key)
+E       KeyError: 'query_question'
+
+D:\llm_exp\digital-library\workspace\deployments\lib_management_v1_20261018\.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:590: KeyError</failure></testcase><testcase classname="tests.integration.test_ui_language" name="test_switch_keeps_original_answer_and_selected_citation" time="0.273"><failure message="KeyError: 'query_question'">client = &lt;starlette.testclient.TestClient object at 0x00000159C61297C0&gt;
+imported = {'document': {'authors': [], 'chunking_config': {'count_mode': 'character', 'max_chars': 1200, 'max_tokens': 400, 'ove...31a3428ed98508a6c996bf00675bca6d833ec5faf008a0e22b324e4656', ...}, 'index_version': 'idx_20261019T142828_0af74b3ff83c'}
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x00000159C612B4A0&gt;
+
+    def test_switch_keeps_original_answer_and_selected_citation(client, imported, monkeypatch):
+        app, calls = open_app(client, monkeypatch)
+        app.sidebar.radio[0].set_value('搜索与问答').run()
+&gt;       app.text_area(key='query_question').set_value('BM25')
+
+app\tests\integration\test_ui_language.py:94: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WidgetList(_list=[TextArea(_value=InitialValue(), label='想查找或了解什么？', max_chars=2000, form_id='query')])
+key = 'query_question'
+
+    def __call__(self, key: str) -&gt; El_co:
+        """Return the first element in this collection with the given user key.
+    
+        The same key can appear on different element types, so this returns the
+        first match in this collection. Use ``get_by_key`` when an ambiguous
+        key should raise.
+        """
+        for e in self._list:
+            if getattr(e, "key", None) == key:
+                return e
+&gt;       raise KeyError(key)
+E       KeyError: 'query_question'
+
+D:\llm_exp\digital-library\workspace\deployments\lib_management_v1_20261018\.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:590: KeyError</failure></testcase><testcase classname="tests.integration.test_ui_language" name="test_upload_draft_survives_switch_without_recognition_or_data_translation" time="0.622"><failure message="KeyError: 'ui_language'">client = &lt;starlette.testclient.TestClient object at 0x00000159C6138740&gt;
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x00000159C613A5A0&gt;
+
+    def test_upload_draft_survives_switch_without_recognition_or_data_translation(client, monkeypatch):
+        raw = paper_bytes()
+        monkeypatch.setattr('streamlit.file_uploader', lambda *a, **k: SimpleNamespace(name='fixture.pdf', getvalue=lambda: raw))
+        app, calls = open_app(client, monkeypatch)
+        app.sidebar.radio[0].set_value('上传与管理').run()
+        app.text_input(key='upload_title').set_value('自然科学 is the original document title')
+        app.text_area(key='upload_authors').set_value('张三\nJane Smith')
+        app.text_input(key='upload_topics').set_value('原始主题,NPU')
+        app.selectbox(key='upload_domain').set_value('自然科学')
+        app.run()
+        count = len([c for c in calls if c[1] == '/documents/metadata/jobs'])
+&gt;       switch(app, 'en')
+
+app\tests\integration\test_ui_language.py:119: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+app\tests\integration\test_ui_language.py:32: in switch
+    app.selectbox(key='ui_language').set_value(language).run()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WidgetList(_list=[Selectbox(key='upload_domain', _value=InitialValue(), label='所属学科', options=['自然科学', '社会科学', '哲学与人文科...tbox(key='upload_language', _value=InitialValue(), label='语言', options=['中文', '英文', '中英混合', '未确定'], form_id='upload')])
+key = 'ui_language'
+
+    def __call__(self, key: str) -&gt; El_co:
+        """Return the first element in this collection with the given user key.
+    
+        The same key can appear on different element types, so this returns the
+        first match in this collection. Use ``get_by_key`` when an ambiguous
+        key should raise.
+        """
+        for e in self._list:
+            if getattr(e, "key", None) == key:
+                return e
+&gt;       raise KeyError(key)
+E       KeyError: 'ui_language'
+
+D:\llm_exp\digital-library\workspace\deployments\lib_management_v1_20261018\.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:590: KeyError</failure></testcase><testcase classname="tests.integration.test_ui_language" name="test_separate_sessions_do_not_share_interface_language" time="0.354"><failure message="AssertionError: assert '专题数字图书馆' == 'Digital Library'&#10;  &#10;  - Digital Library&#10;  + 专题数字图书馆">client = &lt;starlette.testclient.TestClient object at 0x00000159C61A0AA0&gt;
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x00000159C61A3AD0&gt;
+
+    def test_separate_sessions_do_not_share_interface_language(client, monkeypatch):
+        english, _ = open_app(client, monkeypatch, 'en')
+        chinese, _ = open_app(client, monkeypatch)
+&gt;       assert english.title[0].value == 'Digital Library'
+E       AssertionError: assert '专题数字图书馆' == 'Digital Library'
+E         
+E         - Digital Library
+E         + 专题数字图书馆
+
+app\tests\integration\test_ui_language.py:135: AssertionError</failure></testcase><testcase classname="tests.integration.test_ui_language" name="test_english_source_page_keeps_exact_quote_and_highlights" time="0.094"><failure message="assert '&lt;html lang=&quot;en&quot;' in '&lt;!doctype html&gt;&lt;html lang=&quot;zh-CN&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initi...EgEAhCQCAAhJBAAQkggAICQRAEBIIgCAkEQAACGJAABCEgEAhCQCAAhJBACQ/g+s9omL3SBvLAAAAABJRU5ErkJggg==&quot;&gt;&lt;/section&gt;&lt;/body&gt;&lt;/html&gt;'&#10; +  where '&lt;!doctype html&gt;&lt;html lang=&quot;zh-CN&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initi...EgEAhCQCAAhJBAAQkggAICQRAEBIIgCAkEQAACGJAABCEgEAhCQCAAhJBACQ/g+s9omL3SBvLAAAAABJRU5ErkJggg==&quot;&gt;&lt;/section&gt;&lt;/body&gt;&lt;/html&gt;' = &lt;Response [200 OK]&gt;.text">client = &lt;starlette.testclient.TestClient object at 0x00000159C60D2C30&gt;
+imported = {'document': {'authors': [], 'chunking_config': {'count_mode': 'character', 'max_chars': 1200, 'max_tokens': 400, 'ove...165d2eef1123f82e135c945b25463911ae913a70b0901d02cf51caa5c7', ...}, 'index_version': 'idx_20261019T142830_b0eb014a7c40'}
+
+    def test_english_source_page_keeps_exact_quote_and_highlights(client, imported):
+        hit, span, params = source(client)
+        response = client.get('/sources/' + hit['chunk']['chunk_id'], params={**params, 'lang': 'en'})
+        assert response.status_code == 200
+&gt;       assert '&lt;html lang="en"' in response.text
+E       assert '&lt;html lang="en"' in '&lt;!doctype html&gt;&lt;html lang="zh-CN"&gt;&lt;head&gt;&lt;meta charset="utf-8"&gt;&lt;meta name="viewport" content="width=device-width,initi...EgEAhCQCAAhJBAAQkggAICQRAEBIIgCAkEQAACGJAABCEgEAhCQCAAhJBACQ/g+s9omL3SBvLAAAAABJRU5ErkJggg=="&gt;&lt;/section&gt;&lt;/body&gt;&lt;/html&gt;'
+E        +  where '&lt;!doctype html&gt;&lt;html lang="zh-CN"&gt;&lt;head&gt;&lt;meta charset="utf-8"&gt;&lt;meta name="viewport" content="width=device-width,initi...EgEAhCQCAAhJBAAQkggAICQRAEBIIgCAkEQAACGJAABCEgEAhCQCAAhJBACQ/g+s9omL3SBvLAAAAABJRU5ErkJggg=="&gt;&lt;/section&gt;&lt;/body&gt;&lt;/html&gt;' = &lt;Response [200 OK]&gt;.text
+
+app\tests\integration\test_ui_language.py:145: AssertionError</failure></testcase><testcase classname="tests.integration.test_ui_language" name="test_display_labels_do_not_change_classification_or_counts[zh-\u81ea\u7136\u79d1\u5b66]" time="0.001"><failure message="ModuleNotFoundError: No module named 'dlrag.shared.i18n'">language = 'zh', expected = '自然科学'
+
+    @pytest.mark.parametrize('language,expected', [('zh', '自然科学'), ('en', 'Natural sciences')])
+    def test_display_labels_do_not_change_classification_or_counts(language, expected):
+&gt;       from dlrag.shared.i18n import use_language, t
+E       ModuleNotFoundError: No module named 'dlrag.shared.i18n'
+
+app\tests\integration\test_ui_language.py:152: ModuleNotFoundError</failure></testcase><testcase classname="tests.integration.test_ui_language" name="test_display_labels_do_not_change_classification_or_counts[en-Natural sciences]" time="0.001"><failure message="ModuleNotFoundError: No module named 'dlrag.shared.i18n'">language = 'en', expected = 'Natural sciences'
+
+    @pytest.mark.parametrize('language,expected', [('zh', '自然科学'), ('en', 'Natural sciences')])
+    def test_display_labels_do_not_change_classification_or_counts(language, expected):
+&gt;       from dlrag.shared.i18n import use_language, t
+E       ModuleNotFoundError: No module named 'dlrag.shared.i18n'
+
+app\tests\integration\test_ui_language.py:152: ModuleNotFoundError</failure></testcase><testcase classname="tests.integration.test_ui_language" name="test_known_backend_errors_have_english_messages_and_preserve_code[FULLTEXT_REVIEW_REQUIRED]" time="0.000"><failure message="ModuleNotFoundError: No module named 'dlrag.shared.i18n'">code = 'FULLTEXT_REVIEW_REQUIRED'
+
+    @pytest.mark.parametrize('code', ['FULLTEXT_REVIEW_REQUIRED', 'TEXT_LAYER_REVIEW_REQUIRED', 'MODEL_TIMEOUT', 'DISCIPLINE_REQUIRED'])
+    def test_known_backend_errors_have_english_messages_and_preserve_code(code):
+&gt;       from dlrag.shared.i18n import use_language, error_message
+E       ModuleNotFoundError: No module named 'dlrag.shared.i18n'
+
+app\tests\integration\test_ui_language.py:167: ModuleNotFoundError</failure></testcase><testcase classname="tests.integration.test_ui_language" name="test_known_backend_errors_have_english_messages_and_preserve_code[TEXT_LAYER_REVIEW_REQUIRED]" time="0.000"><failure message="ModuleNotFoundError: No module named 'dlrag.shared.i18n'">code = 'TEXT_LAYER_REVIEW_REQUIRED'
+
+    @pytest.mark.parametrize('code', ['FULLTEXT_REVIEW_REQUIRED', 'TEXT_LAYER_REVIEW_REQUIRED', 'MODEL_TIMEOUT', 'DISCIPLINE_REQUIRED'])
+    def test_known_backend_errors_have_english_messages_and_preserve_code(code):
+&gt;       from dlrag.shared.i18n import use_language, error_message
+E       ModuleNotFoundError: No module named 'dlrag.shared.i18n'
+
+app\tests\integration\test_ui_language.py:167: ModuleNotFoundError</failure></testcase><testcase classname="tests.integration.test_ui_language" name="test_known_backend_errors_have_english_messages_and_preserve_code[MODEL_TIMEOUT]" time="0.000"><failure message="ModuleNotFoundError: No module named 'dlrag.shared.i18n'">code = 'MODEL_TIMEOUT'
+
+    @pytest.mark.parametrize('code', ['FULLTEXT_REVIEW_REQUIRED', 'TEXT_LAYER_REVIEW_REQUIRED', 'MODEL_TIMEOUT', 'DISCIPLINE_REQUIRED'])
+    def test_known_backend_errors_have_english_messages_and_preserve_code(code):
+&gt;       from dlrag.shared.i18n import use_language, error_message
+E       ModuleNotFoundError: No module named 'dlrag.shared.i18n'
+
+app\tests\integration\test_ui_language.py:167: ModuleNotFoundError</failure></testcase><testcase classname="tests.integration.test_ui_language" name="test_known_backend_errors_have_english_messages_and_preserve_code[DISCIPLINE_REQUIRED]" time="0.001"><failure message="ModuleNotFoundError: No module named 'dlrag.shared.i18n'">code = 'DISCIPLINE_REQUIRED'
+
+    @pytest.mark.parametrize('code', ['FULLTEXT_REVIEW_REQUIRED', 'TEXT_LAYER_REVIEW_REQUIRED', 'MODEL_TIMEOUT', 'DISCIPLINE_REQUIRED'])
+    def test_known_backend_errors_have_english_messages_and_preserve_code(code):
+&gt;       from dlrag.shared.i18n import use_language, error_message
+E       ModuleNotFoundError: No module named 'dlrag.shared.i18n'
+
+app\tests\integration\test_ui_language.py:167: ModuleNotFoundError</failure></testcase></testsuite></testsuites>

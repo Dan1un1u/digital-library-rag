@@ -1,0 +1,11 @@
+{
+  "tested_commit": "15a080750119d429efec6bc8d2d6271618ac15b8",
+  "app_tree": "18845d6d46f3ac0c7eec23be58b4cfbeeacdff3d",
+  "documentation_commit": "35261b9a9973084f96fd15469c93d1309be5e89c",
+  "app_tree_equal_after_documentation": true,
+  "catalogue_entries": 226,
+  "new_tests": 25,
+  "inherited_tests": 597,
+  "full_tests": 622,
+  "note": "Raw runner summaries retain their original pending manual-review field; browser and manual records supply that separate review. Final publication adds records without changing app source."
+}

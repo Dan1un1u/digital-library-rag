@@ -1,0 +1,13 @@
+{
+  "created_at": "2026-10-19T15:05:18.220241+00:00",
+  "staged_files": 524,
+  "total_staged_bytes": 10376683,
+  "synthetic_pdf_fixtures": [
+    "app/tests/ingestion/samples/long.pdf",
+    "app/tests/ingestion/samples/multi.pdf",
+    "app/tests/ingestion/samples/single.pdf"
+  ],
+  "local_credential_references_checked": 4,
+  "findings": [],
+  "passed": true
+}

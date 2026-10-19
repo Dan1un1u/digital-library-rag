@@ -1,0 +1,102 @@
+[
+  {
+    "file": "docs/user-guide/screenshots/UI-002/01-home-zh.jpg",
+    "pixels": [
+      1280,
+      720
+    ],
+    "sha256": "d1ffbfc6e34440a9d68fac0210bc2dcc8cbe60944dec0b9eeeb85a83a94dee76",
+    "source_png_sha256": "46aec3582ed0760559c1d6e13952abd360d83a4a943c75c64280ff71c2f146cf",
+    "transformation": "PNG to JPEG only; no crop or content edits"
+  },
+  {
+    "file": "docs/user-guide/screenshots/UI-002/02-home-en.jpg",
+    "pixels": [
+      1280,
+      720
+    ],
+    "sha256": "dff90c831501f745a5a644a4a9b9b8eb3509f7f6f5154818f57a23f0bc25ffdf",
+    "source_png_sha256": "99ecf470afd8d55824db5781fc3142db9633b0abd0ce316e1fa2f14a6bb89eae",
+    "transformation": "PNG to JPEG only; no crop or content edits"
+  },
+  {
+    "file": "docs/user-guide/screenshots/UI-002/03-covers-en.jpg",
+    "pixels": [
+      1280,
+      720
+    ],
+    "sha256": "7a7ea7b68a92808fb5efc15e282aae601dd9069bbfe29683ec6c940e5223a1c2",
+    "source_png_sha256": "17732151f3f92245ab5aeece8b82e2816b8af318d67f296307eff2114631a840",
+    "transformation": "PNG to JPEG only; no crop or content edits"
+  },
+  {
+    "file": "docs/user-guide/screenshots/UI-002/04-search-en.jpg",
+    "pixels": [
+      1280,
+      720
+    ],
+    "sha256": "ff9ad486538176eacd6cc316f9aaebd46163afe707c8261dcf3af430f5c02e86",
+    "source_png_sha256": "b71f651e213667d584ef537f293eb3769029bb056a90f349d2c58fc96bc7b53c",
+    "transformation": "PNG to JPEG only; no crop or content edits"
+  },
+  {
+    "file": "docs/user-guide/screenshots/UI-002/05-upload-en.jpg",
+    "pixels": [
+      1280,
+      720
+    ],
+    "sha256": "f556e20341679b6fbd05d12cf5d2f790e98b6bd2b5a5ff0c7bf247f7ce7437d2",
+    "source_png_sha256": "6d9dc273fe6a83482ef70a4f7162244a690770fa13c1babc7fd6ebf7c884c142",
+    "transformation": "PNG to JPEG only; no crop or content edits"
+  },
+  {
+    "file": "docs/user-guide/screenshots/UI-002/06-form-en.jpg",
+    "pixels": [
+      1280,
+      720
+    ],
+    "sha256": "e2175fea60b7fa69857fee7345955da1dddb7e7c5c0713b464700ed2b3142293",
+    "source_png_sha256": "9d4f22c96c60557b05259350520970f7984089e9a5609120816e9db84a5793c7",
+    "transformation": "PNG to JPEG only; no crop or content edits"
+  },
+  {
+    "file": "docs/user-guide/screenshots/UI-002/07-manage-en.jpg",
+    "pixels": [
+      1280,
+      720
+    ],
+    "sha256": "aca68497d60d08df6daf6af492ca29a031fdd6d04694fe84fe53d4ff701d7252",
+    "source_png_sha256": "d9042d3afeb7717590d4d275303ce5c4d6f93e2289eb09714737f11a518ef064",
+    "transformation": "PNG to JPEG only; no crop or content edits"
+  },
+  {
+    "file": "docs/user-guide/screenshots/UI-002/08-answer-en.jpg",
+    "pixels": [
+      1280,
+      720
+    ],
+    "sha256": "f7d86fb67068e2289eecbeb988629b1657429208c8a94ff32c8415ec414a82cc",
+    "source_png_sha256": "5860cd3047abf9acf812c6cad55d97c4b5f0dc77e4451ac4f367b7db68ad920d",
+    "transformation": "PNG to JPEG only; no crop or content edits"
+  },
+  {
+    "file": "docs/user-guide/screenshots/UI-002/09-settings-en.jpg",
+    "pixels": [
+      1280,
+      720
+    ],
+    "sha256": "96f96ac59bf334ae2eb85d0cf668abc6540a15388ec16d8f09859362ce4bec4f",
+    "source_png_sha256": "f019cdefcfe7414662b3f8dcc5a12d870d488705c3dfb6e4946aac3c62f0d5bc",
+    "transformation": "PNG to JPEG only; no crop or content edits"
+  },
+  {
+    "file": "docs/user-guide/screenshots/UI-002/10-source-en.jpg",
+    "pixels": [
+      1265,
+      712
+    ],
+    "sha256": "8e4b754fb910a7b66767034c234f8cf837c65f3fab471e01964a52a7048a7452",
+    "source_png_sha256": "bca59a85023009198de2115b4110bc0d1e42f96206ce5f968b385c5d73a63252",
+    "transformation": "PNG to JPEG only; no crop or content edits"
+  }
+]

@@ -1,0 +1,3599 @@
+{
+  "work_item": "UI-002",
+  "scope": "new",
+  "tested_code": {
+    "commit": "15a080750119d429efec6bc8d2d6271618ac15b8",
+    "branch": "feat/ui-002-bilingual",
+    "dirty": false
+  },
+  "created_at": "2026-10-19T14:42:28.680447+00:00",
+  "python": "3.12.14",
+  "platform": "win32",
+  "packages": {
+    "pytest": "8.3.4",
+    "coverage": "7.16.2",
+    "PyMuPDF": "1.27.2.2",
+    "numpy": "1.26.4",
+    "requests": "2.34.2"
+  },
+  "source_path_verified": true,
+  "environment": "isolated temporary stores; mock embeddings; no live model calls",
+  "exit_code": 0,
+  "duration_seconds": 19.02,
+  "tests": {
+    "tests": 25,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "new_cases": 25,
+  "reused_cases": 0,
+  "case_count_policy": "new_cases selects one work item; stacked PR increments use incremental_groups; old reports retain original attribution",
+  "pr_incremental_groups": [
+    "UI-002"
+  ],
+  "pr_incremental_cases": 25,
+  "pr_inherited_cases": 0,
+  "case_groups": {
+    "COL-001": 0,
+    "COL-002": 0,
+    "ING-001": 0,
+    "ING-002": 0,
+    "MQ-005": 0,
+    "RET-001": 0,
+    "DEP-001": 0,
+    "MQ-006": 0,
+    "UI-002": 25,
+    "baseline_reused": 0
+  },
+  "expected_failures": 0,
+  "coverage": {
+    "app/src/dlrag/__init__.py": {
+      "statements": 1,
+      "covered_statements": 1,
+      "statement_percent": 100.0,
+      "branches": 0,
+      "covered_branches": 0,
+      "branch_percent": null
+    },
+    "app/src/dlrag/api/__init__.py": {
+      "statements": 0,
+      "covered_statements": 0,
+      "statement_percent": null,
+      "branches": 0,
+      "covered_branches": 0,
+      "branch_percent": null
+    },
+    "app/src/dlrag/api/ask_jobs.py": {
+      "statements": 48,
+      "covered_statements": 42,
+      "statement_percent": 87.5,
+      "branches": 10,
+      "covered_branches": 4,
+      "branch_percent": 40.0
+    },
+    "app/src/dlrag/api/covers.py": {
+      "statements": 8,
+      "covered_statements": 0,
+      "statement_percent": 0.0,
+      "branches": 0,
+      "covered_branches": 0,
+      "branch_percent": null
+    },
+    "app/src/dlrag/api/document_jobs.py": {
+      "statements": 71,
+      "covered_statements": 58,
+      "statement_percent": 81.69,
+      "branches": 14,
+      "covered_branches": 8,
+      "branch_percent": 57.14
+    },
+    "app/src/dlrag/api/main.py": {
+      "statements": 56,
+      "covered_statements": 50,
+      "statement_percent": 89.29,
+      "branches": 8,
+      "covered_branches": 5,
+      "branch_percent": 62.5
+    },
+    "app/src/dlrag/api/mock_qa.py": {
+      "statements": 27,
+      "covered_statements": 22,
+      "statement_percent": 81.48,
+      "branches": 10,
+      "covered_branches": 5,
+      "branch_percent": 50.0
+    },
+    "app/src/dlrag/api/qa_factory.py": {
+      "statements": 3,
+      "covered_statements": 0,
+      "statement_percent": 0.0,
+      "branches": 0,
+      "covered_branches": 0,
+      "branch_percent": null
+    },
+    "app/src/dlrag/api/routes.py": {
+      "statements": 143,
+      "covered_statements": 105,
+      "statement_percent": 73.43,
+      "branches": 16,
+      "covered_branches": 7,
+      "branch_percent": 43.75
+    },
+    "app/src/dlrag/api/services.py": {
+      "statements": 205,
+      "covered_statements": 136,
+      "statement_percent": 66.34,
+      "branches": 68,
+      "covered_branches": 34,
+      "branch_percent": 50.0
+    },
+    "app/src/dlrag/api/sources.py": {
+      "statements": 61,
+      "covered_statements": 53,
+      "statement_percent": 86.89,
+      "branches": 20,
+      "covered_branches": 13,
+      "branch_percent": 65.0
+    },
+    "app/src/dlrag/ingestion/__init__.py": {
+      "statements": 2,
+      "covered_statements": 2,
+      "statement_percent": 100.0,
+      "branches": 0,
+      "covered_branches": 0,
+      "branch_percent": null
+    },
+    "app/src/dlrag/ingestion/bibliography.py": {
+      "statements": 138,
+      "covered_statements": 0,
+      "statement_percent": 0.0,
+      "branches": 58,
+      "covered_branches": 0,
+      "branch_percent": 0.0
+    },
+    "app/src/dlrag/ingestion/chunker.py": {
+      "statements": 86,
+      "covered_statements": 44,
+      "statement_percent": 51.16,
+      "branches": 50,
+      "covered_branches": 16,
+      "branch_percent": 32.0
+    },
+    "app/src/dlrag/ingestion/cli.py": {
+      "statements": 63,
+      "covered_statements": 0,
+      "statement_percent": 0.0,
+      "branches": 30,
+      "covered_branches": 0,
+      "branch_percent": 0.0
+    },
+    "app/src/dlrag/ingestion/discipline.py": {
+      "statements": 41,
+      "covered_statements": 14,
+      "statement_percent": 34.15,
+      "branches": 18,
+      "covered_branches": 2,
+      "branch_percent": 11.11
+    },
+    "app/src/dlrag/ingestion/errors.py": {
+      "statements": 4,
+      "covered_statements": 2,
+      "statement_percent": 50.0,
+      "branches": 0,
+      "covered_branches": 0,
+      "branch_percent": null
+    },
+    "app/src/dlrag/ingestion/fulltext.py": {
+      "statements": 59,
+      "covered_statements": 21,
+      "statement_percent": 35.59,
+      "branches": 22,
+      "covered_branches": 2,
+      "branch_percent": 9.09
+    },
+    "app/src/dlrag/ingestion/library.py": {
+      "statements": 232,
+      "covered_statements": 168,
+      "statement_percent": 72.41,
+      "branches": 100,
+      "covered_branches": 48,
+      "branch_percent": 48.0
+    },
+    "app/src/dlrag/ingestion/metadata.py": {
+      "statements": 149,
+      "covered_statements": 96,
+      "statement_percent": 64.43,
+      "branches": 94,
+      "covered_branches": 41,
+      "branch_percent": 43.62
+    },
+    "app/src/dlrag/ingestion/metadata_api.py": {
+      "statements": 128,
+      "covered_statements": 24,
+      "statement_percent": 18.75,
+      "branches": 50,
+      "covered_branches": 1,
+      "branch_percent": 2.0
+    },
+    "app/src/dlrag/ingestion/metadata_year.py": {
+      "statements": 114,
+      "covered_statements": 19,
+      "statement_percent": 16.67,
+      "branches": 46,
+      "covered_branches": 0,
+      "branch_percent": 0.0
+    },
+    "app/src/dlrag/ingestion/parser.py": {
+      "statements": 78,
+      "covered_statements": 62,
+      "statement_percent": 79.49,
+      "branches": 34,
+      "covered_branches": 25,
+      "branch_percent": 73.53
+    },
+    "app/src/dlrag/ingestion/reports.py": {
+      "statements": 38,
+      "covered_statements": 0,
+      "statement_percent": 0.0,
+      "branches": 10,
+      "covered_branches": 0,
+      "branch_percent": 0.0
+    },
+    "app/src/dlrag/ingestion/text_quality.py": {
+      "statements": 21,
+      "covered_statements": 16,
+      "statement_percent": 76.19,
+      "branches": 4,
+      "covered_branches": 2,
+      "branch_percent": 50.0
+    },
+    "app/src/dlrag/qa/__init__.py": {
+      "statements": 4,
+      "covered_statements": 4,
+      "statement_percent": 100.0,
+      "branches": 0,
+      "covered_branches": 0,
+      "branch_percent": null
+    },
+    "app/src/dlrag/qa/cli.py": {
+      "statements": 56,
+      "covered_statements": 0,
+      "statement_percent": 0.0,
+      "branches": 14,
+      "covered_branches": 0,
+      "branch_percent": 0.0
+    },
+    "app/src/dlrag/qa/coverage.py": {
+      "statements": 31,
+      "covered_statements": 0,
+      "statement_percent": 0.0,
+      "branches": 16,
+      "covered_branches": 0,
+      "branch_percent": 0.0
+    },
+    "app/src/dlrag/qa/demo.py": {
+      "statements": 24,
+      "covered_statements": 0,
+      "statement_percent": 0.0,
+      "branches": 4,
+      "covered_branches": 0,
+      "branch_percent": 0.0
+    },
+    "app/src/dlrag/qa/engine.py": {
+      "statements": 269,
+      "covered_statements": 18,
+      "statement_percent": 6.69,
+      "branches": 92,
+      "covered_branches": 0,
+      "branch_percent": 0.0
+    },
+    "app/src/dlrag/qa/errors.py": {
+      "statements": 4,
+      "covered_statements": 2,
+      "statement_percent": 50.0,
+      "branches": 0,
+      "covered_branches": 0,
+      "branch_percent": null
+    },
+    "app/src/dlrag/qa/evaluation.py": {
+      "statements": 100,
+      "covered_statements": 0,
+      "statement_percent": 0.0,
+      "branches": 44,
+      "covered_branches": 0,
+      "branch_percent": 0.0
+    },
+    "app/src/dlrag/qa/evidence.py": {
+      "statements": 130,
+      "covered_statements": 12,
+      "statement_percent": 9.23,
+      "branches": 58,
+      "covered_branches": 0,
+      "branch_percent": 0.0
+    },
+    "app/src/dlrag/qa/grounding.py": {
+      "statements": 28,
+      "covered_statements": 0,
+      "statement_percent": 0.0,
+      "branches": 14,
+      "covered_branches": 0,
+      "branch_percent": 0.0
+    },
+    "app/src/dlrag/qa/llm_client.py": {
+      "statements": 108,
+      "covered_statements": 26,
+      "statement_percent": 24.07,
+      "branches": 30,
+      "covered_branches": 0,
+      "branch_percent": 0.0
+    },
+    "app/src/dlrag/qa/planner.py": {
+      "statements": 34,
+      "covered_statements": 3,
+      "statement_percent": 8.82,
+      "branches": 26,
+      "covered_branches": 0,
+      "branch_percent": 0.0
+    },
+    "app/src/dlrag/qa/reranking.py": {
+      "statements": 59,
+      "covered_statements": 9,
+      "statement_percent": 15.25,
+      "branches": 14,
+      "covered_branches": 0,
+      "branch_percent": 0.0
+    },
+    "app/src/dlrag/qa/retrieval.py": {
+      "statements": 27,
+      "covered_statements": 3,
+      "statement_percent": 11.11,
+      "branches": 10,
+      "covered_branches": 0,
+      "branch_percent": 0.0
+    },
+    "app/src/dlrag/qa/semantic_reranker.py": {
+      "statements": 61,
+      "covered_statements": 0,
+      "statement_percent": 0.0,
+      "branches": 18,
+      "covered_branches": 0,
+      "branch_percent": 0.0
+    },
+    "app/src/dlrag/qa/sentences.py": {
+      "statements": 21,
+      "covered_statements": 14,
+      "statement_percent": 66.67,
+      "branches": 10,
+      "covered_branches": 7,
+      "branch_percent": 70.0
+    },
+    "app/src/dlrag/qa/validation.py": {
+      "statements": 86,
+      "covered_statements": 8,
+      "statement_percent": 9.3,
+      "branches": 56,
+      "covered_branches": 0,
+      "branch_percent": 0.0
+    },
+    "app/src/dlrag/retrieval/__init__.py": {
+      "statements": 3,
+      "covered_statements": 3,
+      "statement_percent": 100.0,
+      "branches": 0,
+      "covered_branches": 0,
+      "branch_percent": null
+    },
+    "app/src/dlrag/retrieval/cli.py": {
+      "statements": 105,
+      "covered_statements": 0,
+      "statement_percent": 0.0,
+      "branches": 40,
+      "covered_branches": 0,
+      "branch_percent": 0.0
+    },
+    "app/src/dlrag/retrieval/embeddings.py": {
+      "statements": 149,
+      "covered_statements": 33,
+      "statement_percent": 22.15,
+      "branches": 64,
+      "covered_branches": 4,
+      "branch_percent": 6.25
+    },
+    "app/src/dlrag/retrieval/errors.py": {
+      "statements": 5,
+      "covered_statements": 5,
+      "statement_percent": 100.0,
+      "branches": 0,
+      "covered_branches": 0,
+      "branch_percent": null
+    },
+    "app/src/dlrag/retrieval/evaluation.py": {
+      "statements": 89,
+      "covered_statements": 0,
+      "statement_percent": 0.0,
+      "branches": 40,
+      "covered_branches": 0,
+      "branch_percent": 0.0
+    },
+    "app/src/dlrag/retrieval/fusion.py": {
+      "statements": 6,
+      "covered_statements": 6,
+      "statement_percent": 100.0,
+      "branches": 4,
+      "covered_branches": 4,
+      "branch_percent": 100.0
+    },
+    "app/src/dlrag/retrieval/lexical.py": {
+      "statements": 43,
+      "covered_statements": 42,
+      "statement_percent": 97.67,
+      "branches": 14,
+      "covered_branches": 13,
+      "branch_percent": 92.86
+    },
+    "app/src/dlrag/retrieval/retriever.py": {
+      "statements": 342,
+      "covered_statements": 211,
+      "statement_percent": 61.7,
+      "branches": 168,
+      "covered_branches": 74,
+      "branch_percent": 44.05
+    },
+    "app/src/dlrag/shared/__init__.py": {
+      "statements": 0,
+      "covered_statements": 0,
+      "statement_percent": null,
+      "branches": 0,
+      "covered_branches": 0,
+      "branch_percent": null
+    },
+    "app/src/dlrag/shared/config.py": {
+      "statements": 62,
+      "covered_statements": 61,
+      "statement_percent": 98.39,
+      "branches": 2,
+      "covered_branches": 1,
+      "branch_percent": 50.0
+    },
+    "app/src/dlrag/shared/disciplines.py": {
+      "statements": 25,
+      "covered_statements": 20,
+      "statement_percent": 80.0,
+      "branches": 8,
+      "covered_branches": 5,
+      "branch_percent": 62.5
+    },
+    "app/src/dlrag/shared/i18n.py": {
+      "statements": 44,
+      "covered_statements": 41,
+      "statement_percent": 93.18,
+      "branches": 14,
+      "covered_branches": 10,
+      "branch_percent": 71.43
+    },
+    "app/src/dlrag/shared/models.py": {
+      "statements": 227,
+      "covered_statements": 205,
+      "statement_percent": 90.31,
+      "branches": 46,
+      "covered_branches": 22,
+      "branch_percent": 47.83
+    },
+    "app/src/dlrag/ui/__init__.py": {
+      "statements": 0,
+      "covered_statements": 0,
+      "statement_percent": null,
+      "branches": 0,
+      "covered_branches": 0,
+      "branch_percent": null
+    },
+    "app/src/dlrag/ui/app.py": {
+      "statements": 403,
+      "covered_statements": 323,
+      "statement_percent": 80.15,
+      "branches": 198,
+      "covered_branches": 130,
+      "branch_percent": 65.66
+    },
+    "app/src/dlrag/ui/citations.py": {
+      "statements": 31,
+      "covered_statements": 30,
+      "statement_percent": 96.77,
+      "branches": 10,
+      "covered_branches": 9,
+      "branch_percent": 90.0
+    },
+    "app/src/dlrag/ui/client.py": {
+      "statements": 14,
+      "covered_statements": 5,
+      "statement_percent": 35.71,
+      "branches": 2,
+      "covered_branches": 0,
+      "branch_percent": 0.0
+    },
+    "app/src/dlrag/ui/language.py": {
+      "statements": 16,
+      "covered_statements": 16,
+      "statement_percent": 100.0,
+      "branches": 6,
+      "covered_branches": 6,
+      "branch_percent": 100.0
+    },
+    "app/src/dlrag/ui/library.py": {
+      "statements": 27,
+      "covered_statements": 25,
+      "statement_percent": 92.59,
+      "branches": 6,
+      "covered_branches": 4,
+      "branch_percent": 66.67
+    },
+    "app/src/dlrag/ui/state.py": {
+      "statements": 11,
+      "covered_statements": 11,
+      "statement_percent": 100.0,
+      "branches": 6,
+      "covered_branches": 6,
+      "branch_percent": 100.0
+    },
+    "tools/catalog_batch.py": {
+      "statements": 217,
+      "covered_statements": 0,
+      "statement_percent": 0.0,
+      "branches": 66,
+      "covered_branches": 0,
+      "branch_percent": 0.0
+    }
+  },
+  "uncovered_focus": {
+    "app/src/dlrag/api/routes.py": {
+      "missing_lines": [
+        18,
+        19,
+        26,
+        36,
+        52,
+        53,
+        56,
+        68,
+        69,
+        70,
+        71,
+        73,
+        91,
+        92,
+        95,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        130,
+        131,
+        136,
+        137,
+        138,
+        139,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        160,
+        161,
+        162,
+        167,
+        192
+      ],
+      "missing_branches": [
+        [
+          25,
+          26
+        ],
+        [
+          35,
+          36
+        ],
+        [
+          55,
+          56
+        ],
+        [
+          94,
+          95
+        ],
+        [
+          123,
+          124
+        ],
+        [
+          123,
+          125
+        ],
+        [
+          148,
+          149
+        ],
+        [
+          148,
+          150
+        ],
+        [
+          189,
+          192
+        ]
+      ]
+    },
+    "app/src/dlrag/api/services.py": {
+      "missing_lines": [
+        25,
+        26,
+        27,
+        28,
+        29,
+        31,
+        32,
+        36,
+        37,
+        43,
+        45,
+        59,
+        97,
+        98,
+        100,
+        101,
+        102,
+        111,
+        112,
+        121,
+        123,
+        140,
+        145,
+        162,
+        164,
+        168,
+        175,
+        182,
+        185,
+        188,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        221,
+        222,
+        223,
+        224,
+        227,
+        236,
+        237,
+        238,
+        239,
+        245,
+        246,
+        247,
+        248,
+        250,
+        251,
+        252,
+        253,
+        254,
+        255,
+        256,
+        257,
+        261,
+        274,
+        275,
+        276,
+        277,
+        278
+      ],
+      "missing_branches": [
+        [
+          23,
+          25
+        ],
+        [
+          25,
+          26
+        ],
+        [
+          25,
+          27
+        ],
+        [
+          27,
+          28
+        ],
+        [
+          27,
+          29
+        ],
+        [
+          29,
+          31
+        ],
+        [
+          29,
+          32
+        ],
+        [
+          32,
+          36
+        ],
+        [
+          32,
+          37
+        ],
+        [
+          58,
+          59
+        ],
+        [
+          100,
+          101
+        ],
+        [
+          100,
+          102
+        ],
+        [
+          120,
+          121
+        ],
+        [
+          122,
+          123
+        ],
+        [
+          126,
+          130
+        ],
+        [
+          139,
+          140
+        ],
+        [
+          143,
+          145
+        ],
+        [
+          158,
+          160
+        ],
+        [
+          161,
+          162
+        ],
+        [
+          163,
+          164
+        ],
+        [
+          167,
+          168
+        ],
+        [
+          170,
+          172
+        ],
+        [
+          174,
+          175
+        ],
+        [
+          181,
+          182
+        ],
+        [
+          184,
+          185
+        ],
+        [
+          187,
+          188
+        ],
+        [
+          217,
+          221
+        ],
+        [
+          221,
+          222
+        ],
+        [
+          221,
+          223
+        ],
+        [
+          240,
+          245
+        ],
+        [
+          247,
+          248
+        ],
+        [
+          247,
+          250
+        ],
+        [
+          252,
+          253
+        ],
+        [
+          252,
+          280
+        ]
+      ]
+    },
+    "app/src/dlrag/ingestion/bibliography.py": {
+      "missing_lines": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        15,
+        16,
+        17,
+        18,
+        21,
+        22,
+        23,
+        26,
+        27,
+        30,
+        32,
+        33,
+        34,
+        35,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        53,
+        55,
+        56,
+        57,
+        58,
+        59,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        71,
+        72,
+        73,
+        76,
+        77,
+        78,
+        79,
+        80,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        96,
+        97,
+        98,
+        99,
+        100,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        117,
+        119,
+        120,
+        121,
+        123,
+        124,
+        125,
+        126,
+        127,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        138,
+        139,
+        140,
+        141,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        175,
+        176,
+        177,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186
+      ],
+      "missing_branches": [
+        [
+          39,
+          40
+        ],
+        [
+          39,
+          41
+        ],
+        [
+          42,
+          43
+        ],
+        [
+          42,
+          46
+        ],
+        [
+          44,
+          42
+        ],
+        [
+          44,
+          45
+        ],
+        [
+          48,
+          49
+        ],
+        [
+          48,
+          50
+        ],
+        [
+          56,
+          57
+        ],
+        [
+          56,
+          71
+        ],
+        [
+          59,
+          61
+        ],
+        [
+          59,
+          62
+        ],
+        [
+          63,
+          64
+        ],
+        [
+          63,
+          65
+        ],
+        [
+          77,
+          78
+        ],
+        [
+          77,
+          79
+        ],
+        [
+          80,
+          82
+        ],
+        [
+          80,
+          83
+        ],
+        [
+          84,
+          85
+        ],
+        [
+          84,
+          87
+        ],
+        [
+          85,
+          84
+        ],
+        [
+          85,
+          86
+        ],
+        [
+          87,
+          88
+        ],
+        [
+          87,
+          89
+        ],
+        [
+          90,
+          91
+        ],
+        [
+          90,
+          92
+        ],
+        [
+          93,
+          94
+        ],
+        [
+          93,
+          98
+        ],
+        [
+          94,
+          96
+        ],
+        [
+          94,
+          97
+        ],
+        [
+          102,
+          103
+        ],
+        [
+          102,
+          104
+        ],
+        [
+          105,
+          106
+        ],
+        [
+          105,
+          107
+        ],
+        [
+          124,
+          125
+        ],
+        [
+          124,
+          126
+        ],
+        [
+          127,
+          130
+        ],
+        [
+          127,
+          133
+        ],
+        [
+          147,
+          148
+        ],
+        [
+          147,
+          151
+        ],
+        [
+          160,
+          161
+        ],
+        [
+          160,
+          180
+        ],
+        [
+          161,
+          162
+        ],
+        [
+          161,
+          163
+        ],
+        [
+          163,
+          164
+        ],
+        [
+          163,
+          168
+        ],
+        [
+          164,
+          166
+        ],
+        [
+          164,
+          167
+        ],
+        [
+          168,
+          169
+        ],
+        [
+          168,
+          170
+        ],
+        [
+          176,
+          160
+        ],
+        [
+          176,
+          177
+        ],
+        [
+          181,
+          182
+        ],
+        [
+          181,
+          183
+        ],
+        [
+          183,
+          184
+        ],
+        [
+          183,
+          185
+        ],
+        [
+          185,
+          -117
+        ],
+        [
+          185,
+          186
+        ]
+      ]
+    },
+    "app/src/dlrag/ingestion/chunker.py": {
+      "missing_lines": [
+        12,
+        16,
+        19,
+        22,
+        24,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        54,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        83,
+        84,
+        85,
+        86,
+        87,
+        97,
+        98,
+        99,
+        100,
+        101,
+        103,
+        104
+      ],
+      "missing_branches": [
+        [
+          11,
+          12
+        ],
+        [
+          15,
+          16
+        ],
+        [
+          18,
+          19
+        ],
+        [
+          21,
+          22
+        ],
+        [
+          23,
+          24
+        ],
+        [
+          25,
+          26
+        ],
+        [
+          26,
+          27
+        ],
+        [
+          26,
+          28
+        ],
+        [
+          33,
+          34
+        ],
+        [
+          33,
+          35
+        ],
+        [
+          36,
+          39
+        ],
+        [
+          45,
+          46
+        ],
+        [
+          45,
+          47
+        ],
+        [
+          69,
+          63
+        ],
+        [
+          72,
+          73
+        ],
+        [
+          74,
+          75
+        ],
+        [
+          74,
+          78
+        ],
+        [
+          75,
+          76
+        ],
+        [
+          75,
+          77
+        ],
+        [
+          78,
+          79
+        ],
+        [
+          78,
+          82
+        ],
+        [
+          82,
+          83
+        ],
+        [
+          84,
+          85
+        ],
+        [
+          84,
+          86
+        ],
+        [
+          86,
+          87
+        ],
+        [
+          86,
+          88
+        ],
+        [
+          88,
+          94
+        ],
+        [
+          94,
+          97
+        ],
+        [
+          98,
+          99
+        ],
+        [
+          98,
+          104
+        ],
+        [
+          99,
+          100
+        ],
+        [
+          99,
+          103
+        ],
+        [
+          100,
+          101
+        ],
+        [
+          100,
+          104
+        ]
+      ]
+    },
+    "app/src/dlrag/ingestion/discipline.py": {
+      "missing_lines": [
+        9,
+        13,
+        14,
+        17,
+        18,
+        22,
+        23,
+        26,
+        27,
+        28,
+        29,
+        37,
+        38,
+        39,
+        40,
+        41,
+        46,
+        47,
+        48,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        59
+      ],
+      "missing_branches": [
+        [
+          13,
+          14
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          22,
+          23
+        ],
+        [
+          22,
+          26
+        ],
+        [
+          26,
+          27
+        ],
+        [
+          26,
+          29
+        ],
+        [
+          27,
+          26
+        ],
+        [
+          27,
+          28
+        ],
+        [
+          36,
+          37
+        ],
+        [
+          38,
+          39
+        ],
+        [
+          38,
+          40
+        ],
+        [
+          44,
+          46
+        ],
+        [
+          48,
+          51
+        ],
+        [
+          48,
+          52
+        ],
+        [
+          54,
+          55
+        ],
+        [
+          54,
+          56
+        ]
+      ]
+    },
+    "app/src/dlrag/ingestion/fulltext.py": {
+      "missing_lines": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        47,
+        48,
+        49,
+        50,
+        55,
+        56,
+        57,
+        58,
+        60,
+        61,
+        66,
+        69,
+        70,
+        71,
+        72,
+        79,
+        85
+      ],
+      "missing_branches": [
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          26
+        ],
+        [
+          22,
+          23
+        ],
+        [
+          22,
+          25
+        ],
+        [
+          32,
+          35
+        ],
+        [
+          37,
+          38
+        ],
+        [
+          37,
+          41
+        ],
+        [
+          39,
+          37
+        ],
+        [
+          39,
+          40
+        ],
+        [
+          42,
+          43
+        ],
+        [
+          42,
+          44
+        ],
+        [
+          48,
+          49
+        ],
+        [
+          48,
+          50
+        ],
+        [
+          56,
+          57
+        ],
+        [
+          56,
+          61
+        ],
+        [
+          57,
+          58
+        ],
+        [
+          57,
+          60
+        ],
+        [
+          70,
+          71
+        ],
+        [
+          70,
+          72
+        ],
+        [
+          84,
+          85
+        ]
+      ]
+    },
+    "app/src/dlrag/ingestion/library.py": {
+      "missing_lines": [
+        21,
+        32,
+        33,
+        34,
+        36,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        57,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        83,
+        97,
+        100,
+        104,
+        107,
+        110,
+        113,
+        116,
+        129,
+        130,
+        131,
+        132,
+        134,
+        135,
+        150,
+        151,
+        152,
+        153,
+        160,
+        163,
+        165,
+        172,
+        175,
+        177,
+        182,
+        184,
+        185,
+        186,
+        188,
+        189,
+        210,
+        213,
+        215,
+        221,
+        222,
+        224,
+        225,
+        252,
+        253,
+        254,
+        260,
+        263,
+        268,
+        271,
+        275
+      ],
+      "missing_branches": [
+        [
+          20,
+          21
+        ],
+        [
+          22,
+          -13
+        ],
+        [
+          31,
+          32
+        ],
+        [
+          32,
+          33
+        ],
+        [
+          32,
+          34
+        ],
+        [
+          35,
+          36
+        ],
+        [
+          43,
+          44
+        ],
+        [
+          43,
+          45
+        ],
+        [
+          45,
+          46
+        ],
+        [
+          45,
+          47
+        ],
+        [
+          56,
+          57
+        ],
+        [
+          65,
+          66
+        ],
+        [
+          65,
+          67
+        ],
+        [
+          82,
+          83
+        ],
+        [
+          96,
+          97
+        ],
+        [
+          99,
+          100
+        ],
+        [
+          103,
+          104
+        ],
+        [
+          106,
+          107
+        ],
+        [
+          109,
+          110
+        ],
+        [
+          112,
+          113
+        ],
+        [
+          115,
+          116
+        ],
+        [
+          128,
+          129
+        ],
+        [
+          130,
+          131
+        ],
+        [
+          130,
+          132
+        ],
+        [
+          133,
+          134
+        ],
+        [
+          134,
+          135
+        ],
+        [
+          134,
+          140
+        ],
+        [
+          151,
+          152
+        ],
+        [
+          151,
+          153
+        ],
+        [
+          159,
+          160
+        ],
+        [
+          162,
+          163
+        ],
+        [
+          164,
+          165
+        ],
+        [
+          169,
+          172
+        ],
+        [
+          174,
+          175
+        ],
+        [
+          176,
+          177
+        ],
+        [
+          181,
+          182
+        ],
+        [
+          183,
+          184
+        ],
+        [
+          184,
+          185
+        ],
+        [
+          184,
+          186
+        ],
+        [
+          187,
+          188
+        ],
+        [
+          188,
+          187
+        ],
+        [
+          188,
+          189
+        ],
+        [
+          209,
+          210
+        ],
+        [
+          212,
+          213
+        ],
+        [
+          214,
+          215
+        ],
+        [
+          220,
+          221
+        ],
+        [
+          223,
+          224
+        ],
+        [
+          259,
+          260
+        ],
+        [
+          262,
+          263
+        ],
+        [
+          267,
+          268
+        ],
+        [
+          270,
+          271
+        ],
+        [
+          274,
+          275
+        ]
+      ]
+    },
+    "app/src/dlrag/ingestion/metadata_api.py": {
+      "missing_lines": [
+        32,
+        36,
+        37,
+        40,
+        41,
+        46,
+        47,
+        48,
+        50,
+        52,
+        55,
+        56,
+        58,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        92,
+        93,
+        95,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        137,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        155,
+        156,
+        157,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        179,
+        180,
+        181
+      ],
+      "missing_branches": [
+        [
+          36,
+          37
+        ],
+        [
+          36,
+          40
+        ],
+        [
+          55,
+          56
+        ],
+        [
+          55,
+          58
+        ],
+        [
+          64,
+          65
+        ],
+        [
+          64,
+          66
+        ],
+        [
+          72,
+          73
+        ],
+        [
+          72,
+          74
+        ],
+        [
+          74,
+          75
+        ],
+        [
+          74,
+          104
+        ],
+        [
+          75,
+          76
+        ],
+        [
+          75,
+          78
+        ],
+        [
+          79,
+          80
+        ],
+        [
+          79,
+          81
+        ],
+        [
+          82,
+          83
+        ],
+        [
+          82,
+          84
+        ],
+        [
+          85,
+          86
+        ],
+        [
+          85,
+          87
+        ],
+        [
+          87,
+          88
+        ],
+        [
+          87,
+          92
+        ],
+        [
+          92,
+          93
+        ],
+        [
+          92,
+          95
+        ],
+        [
+          97,
+          98
+        ],
+        [
+          97,
+          99
+        ],
+        [
+          99,
+          100
+        ],
+        [
+          99,
+          101
+        ],
+        [
+          113,
+          117
+        ],
+        [
+          118,
+          119
+        ],
+        [
+          118,
+          124
+        ],
+        [
+          128,
+          129
+        ],
+        [
+          128,
+          139
+        ],
+        [
+          145,
+          146
+        ],
+        [
+          145,
+          155
+        ],
+        [
+          148,
+          149
+        ],
+        [
+          148,
+          150
+        ],
+        [
+          150,
+          151
+        ],
+        [
+          150,
+          152
+        ],
+        [
+          160,
+          161
+        ],
+        [
+          160,
+          162
+        ],
+        [
+          162,
+          163
+        ],
+        [
+          162,
+          164
+        ],
+        [
+          164,
+          165
+        ],
+        [
+          164,
+          166
+        ],
+        [
+          166,
+          167
+        ],
+        [
+          166,
+          169
+        ],
+        [
+          173,
+          174
+        ],
+        [
+          173,
+          181
+        ],
+        [
+          174,
+          175
+        ],
+        [
+          174,
+          179
+        ]
+      ]
+    },
+    "app/src/dlrag/ingestion/metadata_year.py": {
+      "missing_lines": [
+        38,
+        39,
+        43,
+        48,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        58,
+        60,
+        61,
+        62,
+        63,
+        65,
+        66,
+        67,
+        68,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        127,
+        128,
+        129,
+        130,
+        136,
+        137,
+        139,
+        140,
+        142,
+        148,
+        149,
+        150,
+        151,
+        152,
+        154,
+        155,
+        156,
+        157,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        168,
+        169,
+        170,
+        171,
+        173,
+        174
+      ],
+      "missing_branches": [
+        [
+          51,
+          52
+        ],
+        [
+          51,
+          53
+        ],
+        [
+          53,
+          54
+        ],
+        [
+          53,
+          55
+        ],
+        [
+          55,
+          56
+        ],
+        [
+          55,
+          68
+        ],
+        [
+          56,
+          55
+        ],
+        [
+          56,
+          58
+        ],
+        [
+          61,
+          62
+        ],
+        [
+          61,
+          63
+        ],
+        [
+          63,
+          65
+        ],
+        [
+          63,
+          66
+        ],
+        [
+          75,
+          76
+        ],
+        [
+          75,
+          78
+        ],
+        [
+          79,
+          80
+        ],
+        [
+          79,
+          81
+        ],
+        [
+          82,
+          83
+        ],
+        [
+          82,
+          84
+        ],
+        [
+          85,
+          86
+        ],
+        [
+          85,
+          87
+        ],
+        [
+          88,
+          89
+        ],
+        [
+          88,
+          91
+        ],
+        [
+          96,
+          97
+        ],
+        [
+          96,
+          98
+        ],
+        [
+          98,
+          99
+        ],
+        [
+          98,
+          100
+        ],
+        [
+          101,
+          105
+        ],
+        [
+          101,
+          106
+        ],
+        [
+          108,
+          109
+        ],
+        [
+          108,
+          114
+        ],
+        [
+          109,
+          110
+        ],
+        [
+          109,
+          111
+        ],
+        [
+          114,
+          115
+        ],
+        [
+          114,
+          118
+        ],
+        [
+          120,
+          121
+        ],
+        [
+          120,
+          122
+        ],
+        [
+          122,
+          123
+        ],
+        [
+          122,
+          124
+        ],
+        [
+          127,
+          128
+        ],
+        [
+          127,
+          129
+        ],
+        [
+          154,
+          155
+        ],
+        [
+          154,
+          160
+        ],
+        [
+          162,
+          163
+        ],
+        [
+          162,
+          168
+        ],
+        [
+          168,
+          169
+        ],
+        [
+          168,
+          170
+        ]
+      ]
+    },
+    "app/src/dlrag/ingestion/parser.py": {
+      "missing_lines": [
+        30,
+        31,
+        34,
+        35,
+        38,
+        52,
+        60,
+        62,
+        64,
+        66,
+        67,
+        76,
+        85,
+        87,
+        91,
+        92
+      ],
+      "missing_branches": [
+        [
+          37,
+          38
+        ],
+        [
+          51,
+          52
+        ],
+        [
+          59,
+          60
+        ],
+        [
+          61,
+          62
+        ],
+        [
+          63,
+          64
+        ],
+        [
+          75,
+          76
+        ],
+        [
+          84,
+          85
+        ],
+        [
+          86,
+          87
+        ],
+        [
+          90,
+          91
+        ]
+      ]
+    },
+    "app/src/dlrag/ingestion/text_quality.py": {
+      "missing_lines": [
+        17,
+        22,
+        24,
+        25,
+        36
+      ],
+      "missing_branches": [
+        [
+          15,
+          17
+        ],
+        [
+          35,
+          36
+        ]
+      ]
+    },
+    "app/src/dlrag/retrieval/retriever.py": {
+      "missing_lines": [
+        54,
+        56,
+        60,
+        62,
+        65,
+        71,
+        74,
+        75,
+        79,
+        81,
+        83,
+        88,
+        91,
+        94,
+        97,
+        99,
+        102,
+        104,
+        106,
+        108,
+        115,
+        116,
+        117,
+        119,
+        122,
+        125,
+        130,
+        132,
+        133,
+        134,
+        135,
+        137,
+        141,
+        148,
+        153,
+        155,
+        159,
+        167,
+        174,
+        177,
+        181,
+        188,
+        190,
+        192,
+        195,
+        199,
+        200,
+        201,
+        202,
+        216,
+        217,
+        224,
+        225,
+        226,
+        259,
+        260,
+        261,
+        262,
+        265,
+        271,
+        272,
+        273,
+        274,
+        275,
+        276,
+        277,
+        278,
+        279,
+        280,
+        284,
+        285,
+        286,
+        287,
+        288,
+        289,
+        290,
+        291,
+        292,
+        293,
+        296,
+        297,
+        298,
+        299,
+        300,
+        301,
+        302,
+        303,
+        304,
+        305,
+        306,
+        307,
+        308,
+        309,
+        311,
+        314,
+        315,
+        316,
+        317,
+        327,
+        337,
+        338,
+        339,
+        340,
+        341,
+        342,
+        343,
+        344,
+        345,
+        346,
+        347,
+        348,
+        349,
+        350,
+        351,
+        352,
+        355,
+        356,
+        357,
+        359,
+        360,
+        362,
+        369,
+        371,
+        373,
+        377,
+        384,
+        386,
+        388,
+        391,
+        400,
+        405
+      ],
+      "missing_branches": [
+        [
+          53,
+          54
+        ],
+        [
+          55,
+          56
+        ],
+        [
+          59,
+          60
+        ],
+        [
+          61,
+          62
+        ],
+        [
+          64,
+          65
+        ],
+        [
+          70,
+          71
+        ],
+        [
+          78,
+          79
+        ],
+        [
+          80,
+          81
+        ],
+        [
+          82,
+          83
+        ],
+        [
+          86,
+          88
+        ],
+        [
+          90,
+          91
+        ],
+        [
+          93,
+          94
+        ],
+        [
+          96,
+          97
+        ],
+        [
+          98,
+          99
+        ],
+        [
+          101,
+          102
+        ],
+        [
+          103,
+          104
+        ],
+        [
+          105,
+          106
+        ],
+        [
+          107,
+          108
+        ],
+        [
+          114,
+          115
+        ],
+        [
+          115,
+          116
+        ],
+        [
+          115,
+          117
+        ],
+        [
+          118,
+          119
+        ],
+        [
+          121,
+          122
+        ],
+        [
+          124,
+          125
+        ],
+        [
+          129,
+          130
+        ],
+        [
+          131,
+          132
+        ],
+        [
+          132,
+          133
+        ],
+        [
+          132,
+          134
+        ],
+        [
+          134,
+          135
+        ],
+        [
+          134,
+          138
+        ],
+        [
+          136,
+          137
+        ],
+        [
+          140,
+          141
+        ],
+        [
+          147,
+          148
+        ],
+        [
+          152,
+          153
+        ],
+        [
+          154,
+          155
+        ],
+        [
+          158,
+          159
+        ],
+        [
+          166,
+          167
+        ],
+        [
+          169,
+          177
+        ],
+        [
+          173,
+          174
+        ],
+        [
+          180,
+          181
+        ],
+        [
+          187,
+          188
+        ],
+        [
+          189,
+          190
+        ],
+        [
+          191,
+          192
+        ],
+        [
+          194,
+          195
+        ],
+        [
+          196,
+          198
+        ],
+        [
+          220,
+          224
+        ],
+        [
+          224,
+          225
+        ],
+        [
+          224,
+          226
+        ],
+        [
+          272,
+          273
+        ],
+        [
+          272,
+          274
+        ],
+        [
+          275,
+          276
+        ],
+        [
+          275,
+          277
+        ],
+        [
+          278,
+          279
+        ],
+        [
+          278,
+          280
+        ],
+        [
+          280,
+          284
+        ],
+        [
+          280,
+          285
+        ],
+        [
+          286,
+          287
+        ],
+        [
+          286,
+          288
+        ],
+        [
+          288,
+          289
+        ],
+        [
+          288,
+          291
+        ],
+        [
+          289,
+          288
+        ],
+        [
+          289,
+          290
+        ],
+        [
+          293,
+          296
+        ],
+        [
+          293,
+          297
+        ],
+        [
+          298,
+          299
+        ],
+        [
+          298,
+          300
+        ],
+        [
+          301,
+          302
+        ],
+        [
+          301,
+          303
+        ],
+        [
+          304,
+          305
+        ],
+        [
+          304,
+          306
+        ],
+        [
+          307,
+          308
+        ],
+        [
+          307,
+          309
+        ],
+        [
+          326,
+          327
+        ],
+        [
+          337,
+          338
+        ],
+        [
+          337,
+          339
+        ],
+        [
+          341,
+          342
+        ],
+        [
+          341,
+          343
+        ],
+        [
+          344,
+          345
+        ],
+        [
+          344,
+          346
+        ],
+        [
+          347,
+          348
+        ],
+        [
+          347,
+          349
+        ],
+        [
+          355,
+          356
+        ],
+        [
+          355,
+          357
+        ],
+        [
+          368,
+          369
+        ],
+        [
+          370,
+          371
+        ],
+        [
+          372,
+          373
+        ],
+        [
+          376,
+          377
+        ],
+        [
+          383,
+          384
+        ],
+        [
+          385,
+          386
+        ],
+        [
+          387,
+          388
+        ],
+        [
+          390,
+          391
+        ],
+        [
+          395,
+          398
+        ],
+        [
+          399,
+          400
+        ],
+        [
+          404,
+          405
+        ]
+      ]
+    },
+    "app/src/dlrag/shared/disciplines.py": {
+      "missing_lines": [
+        26,
+        27,
+        33,
+        36,
+        38
+      ],
+      "missing_branches": [
+        [
+          32,
+          33
+        ],
+        [
+          35,
+          36
+        ],
+        [
+          37,
+          38
+        ]
+      ]
+    },
+    "tools/catalog_batch.py": {
+      "missing_lines": [
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        19,
+        20,
+        21,
+        23,
+        24,
+        27,
+        28,
+        31,
+        32,
+        36,
+        37,
+        40,
+        41,
+        44,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        90,
+        94,
+        95,
+        96,
+        97,
+        100,
+        101,
+        102,
+        104,
+        105,
+        106,
+        108,
+        109,
+        110,
+        111,
+        114,
+        115,
+        116,
+        117,
+        120,
+        121,
+        122,
+        123,
+        125,
+        126,
+        127,
+        129,
+        130,
+        131,
+        132,
+        133,
+        135,
+        136,
+        137,
+        138,
+        139,
+        144,
+        145,
+        149,
+        150,
+        151,
+        152,
+        155,
+        156,
+        157,
+        158,
+        162,
+        164,
+        165,
+        166,
+        167,
+        168,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        231,
+        233,
+        234,
+        235,
+        236,
+        237,
+        239,
+        240,
+        245,
+        246,
+        247,
+        248,
+        249,
+        250,
+        251,
+        252,
+        253,
+        254,
+        255,
+        256,
+        259,
+        260,
+        261,
+        262,
+        263,
+        264,
+        265,
+        266,
+        267,
+        268,
+        269,
+        270,
+        271,
+        272,
+        273,
+        274,
+        276,
+        277,
+        278,
+        279,
+        280,
+        281,
+        282,
+        283,
+        286,
+        287
+      ],
+      "missing_branches": [
+        [
+          47,
+          48
+        ],
+        [
+          47,
+          49
+        ],
+        [
+          49,
+          50
+        ],
+        [
+          49,
+          51
+        ],
+        [
+          52,
+          53
+        ],
+        [
+          52,
+          95
+        ],
+        [
+          54,
+          55
+        ],
+        [
+          54,
+          56
+        ],
+        [
+          58,
+          59
+        ],
+        [
+          58,
+          60
+        ],
+        [
+          60,
+          61
+        ],
+        [
+          60,
+          62
+        ],
+        [
+          63,
+          64
+        ],
+        [
+          63,
+          65
+        ],
+        [
+          66,
+          67
+        ],
+        [
+          66,
+          68
+        ],
+        [
+          68,
+          69
+        ],
+        [
+          68,
+          70
+        ],
+        [
+          76,
+          77
+        ],
+        [
+          76,
+          78
+        ],
+        [
+          79,
+          80
+        ],
+        [
+          79,
+          81
+        ],
+        [
+          81,
+          83
+        ],
+        [
+          81,
+          84
+        ],
+        [
+          86,
+          87
+        ],
+        [
+          86,
+          90
+        ],
+        [
+          117,
+          120
+        ],
+        [
+          117,
+          121
+        ],
+        [
+          131,
+          132
+        ],
+        [
+          131,
+          133
+        ],
+        [
+          150,
+          151
+        ],
+        [
+          150,
+          152
+        ],
+        [
+          164,
+          165
+        ],
+        [
+          164,
+          166
+        ],
+        [
+          166,
+          167
+        ],
+        [
+          166,
+          168
+        ],
+        [
+          168,
+          171
+        ],
+        [
+          168,
+          172
+        ],
+        [
+          172,
+          173
+        ],
+        [
+          172,
+          177
+        ],
+        [
+          177,
+          178
+        ],
+        [
+          177,
+          179
+        ],
+        [
+          180,
+          181
+        ],
+        [
+          180,
+          182
+        ],
+        [
+          193,
+          194
+        ],
+        [
+          193,
+          226
+        ],
+        [
+          204,
+          205
+        ],
+        [
+          204,
+          207
+        ],
+        [
+          207,
+          208
+        ],
+        [
+          207,
+          210
+        ],
+        [
+          210,
+          211
+        ],
+        [
+          210,
+          222
+        ],
+        [
+          213,
+          214
+        ],
+        [
+          213,
+          215
+        ],
+        [
+          222,
+          223
+        ],
+        [
+          222,
+          225
+        ],
+        [
+          248,
+          249
+        ],
+        [
+          248,
+          251
+        ],
+        [
+          254,
+          255
+        ],
+        [
+          254,
+          256
+        ],
+        [
+          270,
+          271
+        ],
+        [
+          270,
+          276
+        ],
+        [
+          276,
+          277
+        ],
+        [
+          276,
+          278
+        ],
+        [
+          286,
+          -1
+        ],
+        [
+          286,
+          287
+        ]
+      ]
+    }
+  },
+  "manual_review": "pending",
+  "real_pdf_batch": "not exercised by this offline test run; see separate batch evidence",
+  "worktree_dirty_after": false,
+  "artifact_sha256": {
+    "pytest.txt": "fb733350c4941fddcb40899a46dfacf5d5b78fdeffa547c0584ce38454464a25",
+    "junit.xml": "9fdcce6e5ca6300898873d642bce72a60589f5724375b5c5080b0a2659f8df7d",
+    "coverage.json": "ae3fee1b950e17f7890c195fe2cae13b93ad56dc17a92aec459f0e948f2b7774"
+  }
+}
