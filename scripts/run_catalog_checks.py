@@ -19,7 +19,7 @@ NEW_TESTS = ["app/tests/integration/test_ingestion_recovery.py", "app/tests/inte
 CASE_FILES = {"COL-001": NEW_TESTS[:-2], "COL-002": [NEW_TESTS[-2]], "ING-001": [NEW_TESTS[-1]]}
 CASE_FILES["ING-002"] = ["app/tests/integration/test_text_quality_gate.py"]
 NEW_TESTS += CASE_FILES["ING-002"]
-CASE_FILES["MQ-005"] = ["app/tests/ingestion/test_issue_year.py"]
+CASE_FILES["MQ-005"] = ["app/tests/ingestion/test_issue_year.py", "app/tests/integration/test_issue_year_api.py"]
 NEW_TESTS += CASE_FILES["MQ-005"]
 FOCUS = ["app/src/dlrag/api/services.py", "app/src/dlrag/ingestion/library.py",
          "app/src/dlrag/ingestion/parser.py", "app/src/dlrag/ingestion/chunker.py",

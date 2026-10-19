@@ -412,7 +412,7 @@ else:
                 for field, origin in preview["field_sources"].items():
                     st.write(labels[field] + "：" + methods[origin["method"]])
                     if field == "year" and origin.get("date_type"):
-                        date_labels = {"version": "文件版本戳", "revision": "修订日期", "preprint": "预印本公开日期",
+                        date_labels = {"issue": "卷期年份", "version": "文件版本戳", "revision": "修订日期", "preprint": "预印本公开日期",
                                        "submission": "投稿日期", "acceptance": "接收日期", "publication": "出版日期",
                                        "copyright": "版权年份", "published-print": "印刷出版日期",
                                        "published-online": "在线出版日期", "published": "出版日期"}

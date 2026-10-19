@@ -21,6 +21,8 @@ PATTERNS = [(kind, re.compile("(?:" + cue + r")[^\n.!?。]{0,160}?\b" + YEAR, re
 ARXIV_DATE = re.compile(r"\barxiv\s*(?::\s*\d{4}\.\d{4,5})?\s*v\d+\b"
                         r"(?:\s*\[[^\]\n]{1,30}\])?\s+\d{1,2}\s+[A-Za-z]{3,9}\s+" + YEAR, re.I)
 NEGATIVE = re.compile(r"\b(?:not|never|no|unpublished)\b|\bunder\s+review\b|\bsubmitted\s+to\b|尚未|未发表|未出版", re.I)
+ISSUE_HEADER = re.compile(r"^[^\n]{0,150}(?:journal|quarterly|学报|期刊)[^\n]{0,150}\n\s*" + YEAR
+                          + r"\s*\n\s*(?:(?:volume|vol\.?)\s+\d|第\s*\d+\s*卷)[^\n]{0,100}", re.I | re.M)
 REASONS = {
     "not_provided": "没有提供版本年份候选",
     "invalid_candidate": "年份类型、页码或范围不合法",
@@ -44,6 +46,10 @@ def body_text(page):
 def date_evidence(text):
     """Read labelled dates in context; a target conference year is not a date."""
     evidence = []
+    # Bounded front matter, not a journal citation buried in the article body.
+    header = re.split(r"(?im)^\s*(?:abstract|introduction|摘要|引言)\s*$", text[:2000], maxsplit=1)[0]
+    for match in ISSUE_HEADER.finditer(header):
+        evidence.append((int(match.group(1)), "issue", match.group().strip()))
     for match in ARXIV_DATE.finditer(text):
         evidence.append((int(match.group(1)), "version", match.group().strip()))
     for kind, pattern in PATTERNS:
@@ -72,6 +78,9 @@ def preferred_dates(evidence):
     preprints = [e for e in evidence if e[1] == "preprint"]
     if preprints:
         return [e for e in preprints if e[0] == max(e[0] for e in preprints)]
+    issues = [e for e in evidence if e[1] == "issue"]
+    if issues:
+        return issues
     publications = [e for e in evidence if e[1] == "publication"]
     if publications:
         return publications
