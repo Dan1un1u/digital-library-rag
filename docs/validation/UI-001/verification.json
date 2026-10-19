@@ -1,0 +1,35 @@
+{
+  "work_item": "UI-001",
+  "source_commit": "a401cf5",
+  "base_main": "b9565b482d8cf4f085235c9aba2d18e8303554ee",
+  "results": {
+    "ui001-red.xml": {
+      "tests": 3,
+      "failures": 3,
+      "errors": 0,
+      "skipped": 0,
+      "sha256": "6f29e7c0cd75f0fd1e02761c8518b7c46315018c5c0efcfab56a9a37b87cbeca"
+    },
+    "ui001-targeted.xml": {
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "sha256": "f1758836312fa563950663c357d7569bdf82967e4a29fe69cbe80434cf317ecc"
+    },
+    "ui001-all.xml": {
+      "tests": 527,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "sha256": "024868c951494ef12becbd0a49e8e38030572b34354136f209f95000721c7756"
+    }
+  },
+  "targeted_note": "10项目标及关联回归先执行；随后增加提交失败路径，527项全量包含4项新增与523项继承，不重复计数。",
+  "browser_observation": {
+    "source": "DOC001 独立演示环境 原main未修改UI时的截图",
+    "path": "browser-observation.jpg",
+    "note": "观察证据不等于在UI001分支重新执行浏览器测试"
+  },
+  "formal_deployment_changed": false
+}
