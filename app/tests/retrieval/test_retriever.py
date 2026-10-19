@@ -37,7 +37,10 @@ class ControlledEmbedding:
     def encode(self, texts):
         if self.fail:
             raise RuntimeError("受控测试故障")
-        return np.asarray([self.values.get(text, [1, 0]) for text in texts], dtype=np.float32)
+        # These fixtures isolate cosine mathematics from metadata context.
+        # Title-sensitive behaviour is exercised separately by test_title_vectors.
+        return np.asarray([self.values.get(text, self.values.get(text.partition("\n\n")[2], [1, 0]))
+                           for text in texts], dtype=np.float32)
 
 
 @pytest.fixture

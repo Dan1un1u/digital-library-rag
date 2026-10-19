@@ -26,6 +26,12 @@ CHUNK_KEYS = {"chunk_id", "doc_id", "pdf_page", "printed_page", "section", "text
 DOC_KEYS = {"title", "authors", "year", "topics", "language"}
 CHUNKING_KEYS = {"count_mode", "tokenizer_name", "tokenizer_revision", "max_tokens",
                  "overlap_tokens", "max_chars", "overlap_chars"}
+VECTOR_TEXT_POLICY = "document-title-prefix-v1"
+
+
+def vector_text(chunk):
+    """Add retrieval context without changing the quoted body or page offsets."""
+    return "Title: " + chunk["document"]["title"] + "\n\n" + chunk["text"]
 
 
 def canonical(value):
@@ -196,7 +202,8 @@ class Retriever:
             raise ProjectError("EMBEDDING_INVALID_RESPONSE", "嵌入计算失败或向量数值不合法") from None
 
     def _retrieval_config(self):
-        return {key: self.settings[key] for key in ("candidate_k", "rrf_k", "normalize_embeddings", "bm25_k1", "bm25_b")}
+        return {**{key: self.settings[key] for key in ("candidate_k", "rrf_k", "normalize_embeddings", "bm25_k1", "bm25_b")},
+                "vector_text_policy": VECTOR_TEXT_POLICY}
 
     def build(self, chunks: list[dict]) -> dict:
         with self._lock:
@@ -211,7 +218,7 @@ class Retriever:
             try:
                 dimension = backend_config.get("dimension")
                 if chunks:
-                    vectors = self._encode([c["text"] for c in chunks], dimension)
+                    vectors = self._encode([vector_text(c) for c in chunks], dimension)
                     dimension = vectors.shape[1]
                 else:
                     if isinstance(dimension, bool) or not isinstance(dimension, int) or dimension < 1:
@@ -274,7 +281,7 @@ class Retriever:
                         or manifest["normalized"] != self.settings["normalize_embeddings"]
                         or manifest["retrieval_config"] != self._retrieval_config()
                         or manifest["lexical_tokenizer"] != TOKENIZER_VERSION):
-                    raise ProjectError("EMBEDDING_MISMATCH", "模型、归一化或检索配置与索引不兼容")
+                    raise ProjectError("EMBEDDING_MISMATCH", "模型、文字表示、归一化或检索配置与索引不兼容，请在独立环境重新构建索引")
                 requested = self.settings["chunking_config"]
                 if requested is not None and requested != manifest["chunking_config"]:
                     raise ProjectError("EMBEDDING_MISMATCH", "切块配置与索引不兼容")
