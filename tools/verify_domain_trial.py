@@ -17,6 +17,12 @@ def write(path, value):
     path.write_bytes((json.dumps(value, ensure_ascii=False, indent=2) + "\n").encode("utf-8"))
 
 
+def metadata_matches(document, expected):
+    # Topic tags are a set in storage; author order is bibliographic information.
+    return all(set(document[k]) == set(v) if k == "topics" else document[k] == v
+               for k, v in expected.items())
+
+
 def verify(args):
     identity = code_identity()
     if identity["dirty"]:
@@ -68,7 +74,7 @@ def verify(args):
             ident, doc_id = item["item_id"], item["expected_doc_id"]
             doc = docs[doc_id]
             expected = review[ident]
-            if doc["status"] != "ready" or any(doc[k] != v for k, v in item["metadata"].items()):
+            if doc["status"] != "ready" or not metadata_matches(doc, item["metadata"]):
                 raise ValueError("Stored metadata differs from reviewed plan")
             if hashlib.sha256((args.data_dir / "raw" / (doc_id + ".pdf")).read_bytes()).hexdigest() != item["sha256"]:
                 raise ValueError("Stored PDF differs")
@@ -86,6 +92,9 @@ def verify(args):
                    "pages_with_text": sum(bool(t.strip()) for t in pages.values()),
                    "pages_with_chunks": len({c["pdf_page"] for c in chunks}),
                    "all_chunk_offsets_verified": True, "searches": []}
+            row["metadata_semantically_matches_reviewed_plan"] = True
+            row["topic_order_is_not_significant"] = True
+            row["author_order_checked_exactly"] = True
             for mode in ("keyword", "vector", "hybrid"):
                 check = {"mode": mode, "found_in_top_5": False}
                 try:
