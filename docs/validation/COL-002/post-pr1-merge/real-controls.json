@@ -1,0 +1,280 @@
+{
+  "code": {
+    "commit": "c127fa1afd5472b8f322909e0e11f79b1dc62e2d",
+    "branch": "feat/ing-001-fulltext-gate",
+    "dirty": false
+  },
+  "scope": "actual PDFs through isolated TestClient import; mock embeddings; HU25 separately uses live Luna and Crossref",
+  "cases": [
+    {
+      "case_id": "SS06",
+      "sha256": "a37b62fd92b1d1fe2264f0afc23c5c8f04198e4d157027d138bc65a75934cc5e",
+      "http_status": 422,
+      "expected_status": 422,
+      "result": {
+        "error": {
+          "code": "FULLTEXT_REVIEW_REQUIRED",
+          "message": "PDF 第 2–21 页疑似扫描页且缺少可用文字层，已暂停导入，未加入检索。请核对这些页面；若包含正文，请完成 OCR 或更换文字版后重新上传。图版等非文字页也需核对，元数据增强识别不能代替全文 OCR。",
+          "fulltext_review": {
+            "policy": "mixed-scan-coverage-v1",
+            "page_count": 21,
+            "pages_with_extractable_text": 1,
+            "suspect_pages": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21
+            ],
+            "requires_review": true
+          }
+        }
+      },
+      "passed": true
+    },
+    {
+      "case_id": "SS14",
+      "sha256": "d0b830982dacd3a8bdaf85583297c8f2adf3e9c25cff0e14169461be53fb1bf3",
+      "http_status": 422,
+      "expected_status": 422,
+      "result": {
+        "error": {
+          "code": "FULLTEXT_REVIEW_REQUIRED",
+          "message": "PDF 第 3–25 页疑似扫描页且缺少可用文字层，已暂停导入，未加入检索。请核对这些页面；若包含正文，请完成 OCR 或更换文字版后重新上传。图版等非文字页也需核对，元数据增强识别不能代替全文 OCR。",
+          "fulltext_review": {
+            "policy": "mixed-scan-coverage-v1",
+            "page_count": 25,
+            "pages_with_extractable_text": 2,
+            "suspect_pages": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25
+            ],
+            "requires_review": true
+          }
+        }
+      },
+      "passed": true
+    },
+    {
+      "case_id": "SS06-OCR",
+      "sha256": "f4cea8a098f6ead6f125e0c82af2fce4891908b9fa12f4a9ec7d642bd9dca7f8",
+      "http_status": 200,
+      "expected_status": 200,
+      "result": {
+        "document": {
+          "doc_id": "d_f4cea8a098f6ead6f125e0c82af2fce4891908b9fa12f4a9ec7d642bd9dca7f8",
+          "title": "Job Market Signaling",
+          "authors": [
+            "Michael Spence"
+          ],
+          "year": 1973,
+          "topics": [
+            "COL-002",
+            "社会科学",
+            "经济学"
+          ],
+          "language": "en",
+          "source_url": "https://doi.org/10.2307/1882010",
+          "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。",
+          "file_sha256": "f4cea8a098f6ead6f125e0c82af2fce4891908b9fa12f4a9ec7d642bd9dca7f8",
+          "status": "ready",
+          "error_code": null,
+          "error_message": null,
+          "page_count": 21,
+          "parser_version": "pymupdf-conservative-v3",
+          "created_at": "2026-10-19T06:12:11.717518+00:00",
+          "updated_at": "2026-10-19T06:12:12.349107+00:00",
+          "chunking_config": {
+            "count_mode": "character",
+            "max_chars": 1200,
+            "max_tokens": 400,
+            "overlap_chars": 150,
+            "overlap_tokens": 50,
+            "tokenizer_name": null,
+            "tokenizer_revision": null
+          }
+        },
+        "index_version": "idx_20261019T061212_620d86fbb339"
+      },
+      "passed": true
+    },
+    {
+      "case_id": "MQ-005-HU25",
+      "sha256": "2df595721dc5502f02d3c657426610fb612731c8022b698ae5b1968a96b92996",
+      "raw_model_year": {
+        "value": 2009,
+        "date_type": "publication",
+        "pdf_page": 1,
+        "excerpt": "DHQ: Digital Humanities Quarterly\n2009\nVolume 3 Number 4"
+      },
+      "result": {
+        "metadata": {
+          "title": "The Digital Future is Now: A Call to Action for the Humanities",
+          "authors": [
+            "Christine L. Borgman"
+          ],
+          "year": null,
+          "language": "en",
+          "source_url": "https://doi.org/10.63744/au56n57rd75j"
+        },
+        "field_sources": {
+          "title": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt": "The Digital Future is Now: A Call to Action for the Humanities"
+          },
+          "language": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt": "The Digital Future is Now: A Call to Action for the Humanities"
+          },
+          "authors": {
+            "method": "api_page_recognition",
+            "pdf_page": 1,
+            "excerpt": "Christine L. Borgman <Borgman_at_gseis_dot_ucla_dot_edu>, Professor & Presidential Chair in Information Studies, UCLA"
+          },
+          "source_url": {
+            "method": "bibliographic_lookup",
+            "provider": "crossref",
+            "record_url": "https://api.crossref.org/works/10.63744%2Fau56n57rd75j",
+            "retrieved_at": "2026-10-19T06:12:22.444242+00:00",
+            "date_type": null,
+            "excerpt": "10.63744/au56n57rd75j"
+          }
+        },
+        "warnings": [
+          "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+          "版本年份待核对：页面没有可对应到所收录版本的日期说明；已留空，可根据所收录文件核对后填写。",
+          "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序，以及年份是否对应所收录版本。",
+          "已依据题名和作者吻合的 Crossref 出版记录补全候选字段；DOI 可作为相关出版来源，年份还须与所收录版本对应，请核对后导入。",
+          "外部出版日期未能确定对应所收录版本；版本年份继续留空。相关记录仅供核对，可按文件上的日期手动填写。"
+        ],
+        "requires_confirmation": true,
+        "page_count": 20,
+        "method": "local_and_api_page_recognition",
+        "api_assistance": {
+          "status": "completed",
+          "accepted_fields": 3
+        },
+        "bibliographic_enrichment": {
+          "policy": "crossref-collected-version-v2",
+          "provider": "crossref",
+          "status": "completed",
+          "missing_before": [
+            "year",
+            "source_url"
+          ],
+          "filled_fields": [
+            "source_url"
+          ],
+          "conflicts": [],
+          "candidates": [
+            {
+              "title": "The Digital Future is Now: A Call to Action for the Humanities",
+              "authors": [
+                "Christine L. Borgman"
+              ],
+              "doi": "10.63744/au56n57rd75j",
+              "source_url": "https://doi.org/10.63744/au56n57rd75j",
+              "record_url": "https://api.crossref.org/works/10.63744%2Fau56n57rd75j",
+              "type": "journal-article",
+              "dates": [
+                {
+                  "kind": "published-online",
+                  "date_parts": [
+                    2010,
+                    3,
+                    20
+                  ],
+                  "year": 2010
+                },
+                {
+                  "kind": "published",
+                  "date_parts": [
+                    2010,
+                    3,
+                    20
+                  ],
+                  "year": 2010
+                }
+              ],
+              "selected_date": {
+                "kind": "published-online",
+                "date_parts": [
+                  2010,
+                  3,
+                  20
+                ],
+                "year": 2010
+              },
+              "match": {
+                "title": "normalized_exact",
+                "first_author": "exact",
+                "author_overlap": 1,
+                "required_overlap": 1
+              }
+            }
+          ],
+          "queried_at": "2026-10-19T06:12:22.444242+00:00",
+          "year_decision": "version_not_confirmed"
+        },
+        "document_version": {
+          "kind": "unknown",
+          "dois": []
+        },
+        "year_review": {
+          "policy": "collected-version-year-v2",
+          "status": "needs_confirmation",
+          "reason": "missing_version_context",
+          "rejected_value": 2009
+        }
+      },
+      "passed": true,
+      "acceptance": "PDF issue 2009; no auto-fill from registry online 2010; empty year allowed under the new standard"
+    }
+  ],
+  "passed": true,
+  "protected_libraries_unchanged": true,
+  "protected_snapshot_sha256": {
+    "18000": "32543215cdab74824873efdecb913700ecc75a4e030e501324155462b6794b90",
+    "19000": "b880ae3f412107420737550aec70f9e0224b176d5e0a788043e5586ec81bfadd",
+    "19010": "2e092237b64e0a078be70b4ce7d669e4cefe2d0610970417f19c01459574c025"
+  },
+  "worktree_dirty_after": false
+}
