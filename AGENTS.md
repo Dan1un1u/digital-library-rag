@@ -6,6 +6,7 @@
 - PR1（`feat/catalog-ingestion-audit`）只保留MQ-003/MQ-004及原COL-001追溯基础；PR2（`feat/ing-001-fulltext-gate`）只增加ING-001和所需COL-002独立测试基线。ING-002、MQ-005、RET-001仍是观察/开放项，不在PR2顺带修复。
 - PR1已于2026-10-19经用户授权合并至main（720f584），PR2改以main为base并同步已验收基础。审阅前检查相对base的差异，不把继承的MQ代码算成PR2新增。
 - 用户现授权依次修复COL-002发现的问题；继续按任务隔离：ING-002、RET-001分别建立独立分支、工作目录和Draft PR。可依赖未合并的前置PR，但不得混入PR2。MQ-005先依据已合入的版本年份规则验证，满足新标准则记录为已覆盖，不重复发明正式发表年要求。
+- 当前后续候选：PR3 `fix/ing-002-text-layer-review`（base PR2），PR4 `fix/mq-005-issue-year`（base PR3），PR5 `fix/ret-001-title-vectors`（base PR4）；各自工作目录与数据隔离。MQ-005复验发现正确卷期候选被过滤，故另行修复；不改写先前留空诊断。三个候选验证通过、均未合并。汇总在COL-002/follow-up-summary.md，继承测试不重复算新增。
 - 每项测试使用自己的数据、数据库、索引、输出目录和端口。模型权重与只读依赖可复用；不得复用另一任务的可变存储或覆盖其日志。历史批次和原始失败记录保持不可变。
 - `D:/digital-library-rag`已冻结为拆分前历史源码，现有18000/19000/19010相关历史实例不在本次拆分中重启或迁移。新编辑分别在`D:/digital-library-worktrees/mq-fixes`和`D:/digital-library-worktrees/ing-001`进行；不得在历史运行目录切回开发分支。
 - 测试环境须明确绑定本工作目录的源码，检查`dlrag.__path__`；正式测试绑定干净提交。目标用例与全量继承回归分开执行、分开报告，区分本工作项新增、PR新增和复用数量。
