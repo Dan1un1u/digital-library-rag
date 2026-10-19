@@ -16,6 +16,7 @@ env['LLM_API_KEY'] = ''
 env['SD_EMBEDDING_KEY'] = ''
 env.update(EMBEDDING_PROVIDER='siliconflow', LLM_PROVIDER='siliconflow',
            QA_RERANK_PROVIDER='siliconflow', METADATA_API_PROVIDER='siliconflow')
+(ROOT / 'reports').mkdir(parents=True, exist_ok=True)
 stamp = time.strftime('%Y%m%d_%H%M%S')
 xml_path = ROOT / 'reports' / f'pytest_{stamp}.xml'
 log_path = ROOT / 'reports' / f'pytest_{stamp}.txt'

@@ -23,6 +23,8 @@ CASE_FILES["MQ-005"] = ["app/tests/ingestion/test_issue_year.py", "app/tests/int
 NEW_TESTS += CASE_FILES["MQ-005"]
 CASE_FILES["RET-001"] = ["app/tests/retrieval/test_title_vectors.py"]
 NEW_TESTS += CASE_FILES["RET-001"]
+CASE_FILES["DEP-001"] = ["app/tests/integration/test_siliconflow_portability.py"]
+NEW_TESTS += CASE_FILES["DEP-001"]
 FOCUS = ["app/src/dlrag/api/services.py", "app/src/dlrag/ingestion/library.py",
          "app/src/dlrag/ingestion/parser.py", "app/src/dlrag/ingestion/chunker.py",
          "app/src/dlrag/retrieval/retriever.py", "tools/catalog_batch.py",
@@ -88,7 +90,8 @@ def main():
                             case.find("skipped").attrib.get("type") == "pytest.xfail" for case in cases)
     incremental_groups = {"COL-001": ["COL-001"], "COL-002": ["COL-002"],
                           "ING-001": ["COL-002", "ING-001"], "ING-002": ["ING-002"],
-                          "MQ-005": ["MQ-005"], "RET-001": ["RET-001"]}[args.work_item]
+                          "MQ-005": ["MQ-005"], "RET-001": ["RET-001"],
+                          "DEP-001": ["DEP-001"]}[args.work_item]
     incremental_count = sum(counts[g] for g in incremental_groups)
     summary = {"work_item": args.work_item, "scope": args.scope, "tested_code": before,
                "created_at": datetime.now(timezone.utc).isoformat(),

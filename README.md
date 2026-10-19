@@ -2,134 +2,87 @@
 
 基于 PDF 馆藏的文献检索、元数据候选识别和带原文引用的问答原型。应用使用 FastAPI 与 Streamlit，支持关键词检索、向量检索及混合检索。
 
-图文操作请先阅读[使用手册](docs/user-guide/使用手册.md)，也提供[可编辑 Word 版](docs/user-guide/专题数字图书馆使用手册.docx)。手册含14幅浏览器实拍，覆盖浏览、检索、增强识别、编目、正文审核、问答引用与视频演示顺序；版本、环境和核验记录见[文档说明](docs/user-guide/README.md)。
+真实模式沿用最初项目的硅基流动接口。成员使用自己的服务密钥；项目不需要部署本机模型服务或登录个人订阅代理。图文操作见[使用手册](docs/user-guide/使用手册.md)及[Word 版](docs/user-guide/专题数字图书馆使用手册.docx)。
 
-2026年10月19日版本提示：PR1至PR6已验收合并，PR6合并提交为`cbfc43a`；使用手册及本轮核验见[文档验收记录](docs/user-guide/acceptance-20261019.json)。下文各批次“尚未合并”“本分支PR2”和相应测试数量均保留为当时的阶段记录，不能据此判断当前合并状态或认定旧实例已部署新版本。
+| 功能 | 配置示例中的模型 | 接口 |
+| --- | --- | --- |
+| 文献与查询向量 | BAAI/bge-m3，1024 维 | `/embeddings` |
+| 查询规划与证据回答 | Qwen/Qwen3-32B | `/chat/completions` |
+| 候选与支持句重排 | Qwen/Qwen3-Reranker-4B | `/rerank` |
+| PDF 元数据增强识别 | Qwen/Qwen3-VL-8B-Instruct | `/chat/completions`，含页面图像 |
 
-当前版本已接入本机 BGE-M3 FP16 和通过 CLIProxyAPI 调用的 GPT-6 Luna。
+这些是项目预设名称；实际可调用的模型与权限以成员的服务账户为准。切换模型时须核对上下文上限，切换嵌入配置后须重建索引。
 
-| 功能 | 当前实现 |
-| --- | --- |
-| 文献解析与入库 | 按页提取、字符切分、SQLite 馆藏管理 |
-| 文献与查询向量 | 本机 BGE-M3 FP16，1024 维 |
-| 查询规划与证据回答 | GPT-6 Luna，结构化输出与引用校验 |
-| 候选重排、支持句定位、要点关联 | GPT-6 Luna 的结构化相关性评分 |
-| PDF 元数据候选识别 | 前两页图像与文字联合识别，保留人工核对 |
-| 交互界面 | 馆藏浏览、搜索问答、PDF 上传与管理 |
+## 首次安装
 
-Luna 推理使用云端服务和订阅账户的权限、额度；CLIProxyAPI 和 BGE 在本机运行。LLM 重排分数属于模型判断，需要通过正式测试集评估，不能直接等同于专用重排模型的性能。
-
-## 目录
-
-```text
-app/                    应用源码、自动测试、评估入口及原有文档
-scripts/                本机部署控制、索引重建及联调检查
-services/bge-m3/        独立 BGE 服务的部署源码快照
-services/cliproxyapi/   CLIProxyAPI 官方发行包下载校验与本机控制脚本
-tools/                  源码导出和发布前检查
-Start-Library.ps1        启动本机部署
-Run-Tests.ps1            运行离线自动测试
-```
-
-服务目录保存部署脚本，不包含第三方可执行文件、模型权重或认证文件。独立服务实际路径默认是 `D:/bge-m3-local/` 和 `D:/cliproxyapi-local/`；服务脚本及本机联调脚本含这些路径，换机器时需要调整。
-
-## 环境与离线演示
-
-应用支持 Python 3.11–3.12，现有部署使用 Python 3.12。以下命令在 Windows PowerShell 的仓库根目录执行：
+支持 Python 3.11–3.12。以下命令在 Windows PowerShell 的仓库根目录执行，路径可自行选择：
 
 ```powershell
 py -3.12 -m venv .venv
 & .\.venv\Scripts\python.exe -m pip install -e ".\app[dev]"
-
-foreach ($folder in @('logs', 'reports', 'evidence', 'runtime')) {
-    New-Item -ItemType Directory -Path $folder -Force | Out-Null
-}
 if (-not (Test-Path -LiteralPath 'app/.env')) {
     Copy-Item -LiteralPath 'app/.env.example' -Destination 'app/.env'
 }
+```
 
+`.env`、PDF 馆藏、数据库、索引、运行日志和虚拟环境均不提交 Git。新克隆不包含馆藏；空库启动后显示索引尚未就绪，需要先导入文献。
+
+## 使用硅基流动真实服务
+
+编辑本机 `app/.env`，保留示例的模型、地址和工厂配置，并至少修改：
+
+```dotenv
+APP_MODE=real
+DATA_DIR=../runtime/real
+API_BASE_URL=http://127.0.0.1:18000
+SILICONFLOW_API_KEY=<填入自己的硅基流动密钥>
+```
+
+`LLM_API_KEY` 可以留空，问答会沿用 `SILICONFLOW_API_KEY`。四项 `*_PROVIDER` 默认均为 `siliconflow`；旧配置没有这些新增字段也能使用。具体配置、原有启动方式及索引迁移见[硅基流动部署说明](docs/deployment/siliconflow.md)。
+
+```powershell
+.\Start-Library.ps1 -Mode real
+.\Status-Library.ps1 -Mode real
+.\Stop-Library.ps1 -Mode real
+```
+
+界面为 `http://127.0.0.1:18501/`，后端为 `http://127.0.0.1:18000/`。启动入口只管理本项目的后端和界面，首次启动自动创建日志与运行目录。真实模式尊重 `app/.env` 中的数据路径，进程环境变量优先；相对路径以 `app/` 为起点。
+
+## 离线演示
+
+无需服务密钥，使用合成 PDF、模拟向量和脚本问答演示流程：
+
+```powershell
 & .\.venv\Scripts\python.exe app/scripts/seed_demo.py --mode mock --data-dir "$PWD/runtime/mock"
 .\Start-Library.ps1 -Mode mock
 ```
 
-离线演示界面为 `http://127.0.0.1:18502/`，后端为 `http://127.0.0.1:18001/`。演示使用合成 PDF、明确标记的模拟向量和脚本问答，验证流程与界面。
+界面为 `http://127.0.0.1:18502/`，后端为 `http://127.0.0.1:18001/`。MOCK 始终使用独立的 `runtime/mock/`，不混入真实模式的库和密钥；模拟结果不能作为真实模型效果。
 
-## 真实模式
-
-先分别准备独立 BGE 服务与 CLIProxyAPI，并在官方登录页完成单独授权。应用配置写入本机 `app/.env`：
-
-```dotenv
-APP_MODE=real
-EMBEDDING_PROVIDER=local_bge
-EMBEDDING_BASE_URL=http://127.0.0.1:18080/v1
-EMBEDDING_MODEL=BAAI/bge-m3
-EMBEDDING_DIMENSION=1024
-EMBEDDING_REVISION=5617a9f61b028005a4858fdac845db406aefb181
-
-LLM_PROVIDER=cliproxyapi
-LLM_BASE_URL=http://127.0.0.1:8317/v1
-LLM_MODEL=gpt-6-luna
-LLM_API_KEY=<本机代理的客户端口令>
-LLM_REASONING_EFFORT=none
-LLM_CLIENT_FACTORY=dlrag.api.qa_factory:create_client
-LLM_CONTEXT_WINDOW_TOKENS=262144
-LLM_MAX_OUTPUT_TOKENS=2600
-LLM_TIMEOUT_SECONDS=120
-
-QA_RERANK_PROVIDER=llm
-QA_RERANK_MODEL=gpt-6-luna
-QA_RERANK_TIMEOUT_SECONDS=90
-METADATA_API_PROVIDER=cliproxyapi
-METADATA_API_MODEL=gpt-6-luna
-METADATA_API_TIMEOUT_SECONDS=90
-```
-
-使用 Luna 时移除 `LLM_ENABLE_THINKING`，使用独立的 `LLM_REASONING_EFFORT` 配置。导入有权使用的 PDF 后，统一重建真实向量索引，再启动：
-
-```powershell
-.\Start-Library.ps1 -Mode real
-```
-
-界面为 `http://127.0.0.1:18501/`，后端为 `http://127.0.0.1:18000/`。启动入口先确认两项本地服务就绪，再启动图书馆；未设置开机自启。
-
-本机代理口令不同于 OpenAI 平台签发的 API Key。OAuth 凭证只由 CLIProxyAPI 的独立认证目录保存，应用只接收本机代理的客户端口令。
-
-## 验证状态
-
-2026-10-18 的现有部署验证结果：
-
-- 330 项离线自动测试通过。
-- 16 项真实联调检查通过，覆盖真实向量/混合检索、Luna 文本与图像输入、LLM 重排、双语检索、带引用问答、支持句定位、要点覆盖及原文访问。
-- 已为当时馆藏的 14 篇文献、935 个片段建立本机 BGE 索引。
-
-这些是部署与开发验证；正式检索质量评测仍需人工复核数据集。仓库保留少量自制合成 PDF 作为测试夹具，实际文献和索引未上传。
-
-同日后续馆藏批次已新增用户指定的 11 篇 PDF：目前为 **25 篇、1821 个片段**，详见 [COL-001 实际批次](docs/validation/COL-001/batches/COL-001-20261018-P01/README.md)。元数据经应用外的 AI 辅助审核，用户已确认指定三项人工抽查未发现问题，其余逐篇复核未报告。按课题范围，仅将增强识别下的 MQ-003 列为确认缺陷、MQ-004 列为补全改进项，MQ-001/MQ-002 本机观察不计项目缺陷；测试范围调整及结果见 [验证说明](docs/validation/COL-001/README.md)。此前 14/935、330 项及范围调整前的 356 passed/2 xfailed 保留为历史证据。
-
-MQ-003 年份误判已有修复候选：增强输出需有出版语境及页面证据，缺少依据时留空待核对。基于干净提交 `1979f7d` 的离线回归为 **389 passed、0 xfailed**；真实 Luna 三篇只读影子预览及原错误输出回放通过，馆藏和索引未变。详见 [修复原因、验证及限制](docs/validation/COL-001/mq003-fix.md)。候选尚未合并部署，正式实例的 MQ-003 保持开放。此前 `5d49681` 的 356 passed/1 xfailed 作为历史证据保留。
-
-MQ-004 补全候选已接入预览：可选择“联网补全出版资料”，默认关闭，只向 Crossref 发送题名和前两位作者姓名，匹配唯一且作者吻合时补缺失年份及 DOI 来源，并保存出处；已有值和冲突供人工核对。基于干净提交 `bbcbe98` 的最新完整回归 **440 passed、0 xfailed**；三篇原增强候选回放及真实 Luna + Crossref 均达到预设结果，首次真实超时记录一并保留。详见 [MQ-004 分析、结果与限制](docs/validation/COL-001/mq004-enrichment.md)。此功能尚未合并部署，正式馆藏仍为 25/1821。
+## 测试与工作追溯
 
 ```powershell
 .\Run-Tests.ps1
 ```
 
-`scripts/verify_local_integration.py` 会调用真实 Luna 并使用订阅额度。它将索引文献数与实际馆藏列表核对；需要固定批次基线时，传入 `--expected-documents` 与 `--expected-chunks`。可通过 `--env-file` 指定独立部署的本机配置文件，避免将旧的 14 篇/935 片段写死在检查中。历史 16 项真实联调结果仍对应当时基线，不能算作扩充后已重新执行。
+离线测试使用合成夹具和临时库，结果保存在本工作目录的 `reports/`。测试与修复任务使用独立分支、工作目录和 PR，见[任务隔离流程](docs/workflow/test-task-isolation.md)及[入库与白盒验证流程](docs/workflow/catalog-ingestion.md)。
 
-## 数据与本机部署
+- [DEP-001 本机接入移出交付项目及硅基流动兼容验证](docs/validation/DEP-001/README.md)
+- [COL-001 用户指定馆藏与元数据修复记录](docs/validation/COL-001/README.md)
+- [COL-002 跨学科检测与后续修复记录](docs/validation/COL-002/README.md)
+- [UI-001 问答进度修复验收](docs/validation/UI-001/acceptance-20261019.json)
+- [DOC-001 原版图文手册验收](docs/user-guide/acceptance-20261019.json)
 
-2026-10-19 PR归属已拆分：**PR1为MQ-003/MQ-004及COL-001基础；本分支PR2为ING-001及COL-002测试基线**，PR2依赖PR1但差异不重复MQ修复。MQ分支独立440项重验见[PR1范围记录](docs/validation/COL-001/pr1-scope.md)。下文沿用原PR的描述属于历史记录；当前以[PR2迁移说明](docs/validation/COL-002/pr2-migration.md)和[任务隔离流程](docs/workflow/test-task-isolation.md)为准。
+PR1–PR7 已合并；历史记录中的“候选”“尚未合并”、模型名称和端口保留当时身份，不代表当前源码或旧实例的部署状态。历史验证曾使用开发者个人环境；其原始输入哈希、失败记录、截图和结果不改写，也不作为当前云端在线验收成绩。
 
-2026-10-19 新增的跨学科独立检测使用 **dev 库**：社会科学25篇、人文25篇，共892页/3262片段，可在本机 [dev 界面](http://127.0.0.1:19501/)查看；正式库仍为25篇/1821片段。50篇原件真实增强预览、外部OCR和编目、实际添加及失败证据分开保存。离线回归450项通过；真实题名检索148/150命中，发现的正文覆盖、乱码及日期口径改进均未伪装成已修复。见[50篇清单](docs/validation/COL-002/selection.md)、[独立报告](docs/validation/COL-002/README.md)和[工作量台账](docs/validation/COL-002/contributions.md)。候选未部署正式实例，原PR暂不合并。
+## 项目目录
 
-后续 **ING-001修复候选** 已在新隔离dev API19010验证：混合扫描原件暂停导入、列出需核对页码，不写部分正文/索引；已有OCR副本可导入。新增18项测试，完整468项通过，SS06真实原件和扩大检测发现的SS14均阻断；原正式库及50篇dev基线不变。见[原因、白盒路径与验证记录](docs/validation/COL-002/ING-001/README.md)。现有19501网页仍为原dev基线；候选通过实际接口和AppTest验证，独立候选网页未启动。ING-002/MQ-005/RET-001及旧数据复核仍待处理，暂不合并。
+```text
+app/                 应用源码、原有接口文档、测试与配置示例
+scripts/             项目启停、离线测试及通用检查入口
+tools/               馆藏验证与文档生成工具
+docs/deployment/     硅基流动部署说明
+docs/validation/     按工作项隔离的历史与新增验证记录
+```
 
-仓库不保存 `.env`、OAuth 凭证、GitHub 令牌、模型权重、真实 PDF 馆藏、数据库、索引、虚拟环境或运行日志。重新克隆后需要配置本机环境与数据。
-
-这份源码来自已完成本地模型接入的独立部署副本；本机运行实例仍位于：
-
-`D:/llm_exp/digital-library/workspace/deployments/lib_management_v1_20261018/`
-
-进一步操作见[本地模型使用说明](本地模型使用说明.txt)、[BGE 部署说明](services/bge-m3/README.txt)和[CLIProxyAPI 部署说明](services/cliproxyapi/README.txt)。`app/README.md` 与 `app/docs/` 保留原项目的接口、模块交接和历史版本说明。
-
-馆藏扩充使用[入库与白盒验证流程](docs/workflow/catalog-ingestion.md)和[COL-001 工作项](docs/work-items/COL-001.md)，通过独立分支、Draft PR 和提交绑定的执行证据记录贡献。实际文献批次完成并复核后再决定合并。
+个人环境的模型权重、代理程序、认证文件和接入脚本在各自本机维护，不属于项目发布内容。保留的原接口文档见 `app/README.md` 与 `app/docs/`。

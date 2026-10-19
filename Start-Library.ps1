@@ -1,10 +1,8 @@
 param([ValidateSet('real','mock','both')][string]$Mode = 'both')
 $ErrorActionPreference = 'Stop'
-if ($Mode -ne 'mock') {
-    & powershell.exe -NoProfile -ExecutionPolicy Bypass -File 'D:/cliproxyapi-local/Start-CLIProxyAPI.ps1'
-    if ($LASTEXITCODE -ne 0) { throw 'CLIProxyAPI startup failed.' }
-    & powershell.exe -NoProfile -ExecutionPolicy Bypass -File 'D:/bge-m3-local/Start-BGE.ps1'
-    if ($LASTEXITCODE -ne 0) { throw 'Local BGE startup failed.' }
+$libraryPython = Join-Path $PSScriptRoot '.venv/Scripts/python.exe'
+if (-not (Test-Path -LiteralPath $libraryPython)) {
+    throw 'Project Python environment is missing. Follow README.md to create .venv first.'
 }
-& (Join-Path $PSScriptRoot '.venv/Scripts/python.exe') (Join-Path $PSScriptRoot 'scripts/control.py') start --mode $Mode
+& $libraryPython (Join-Path $PSScriptRoot 'scripts/control.py') start --mode $Mode
 exit $LASTEXITCODE

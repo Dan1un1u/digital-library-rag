@@ -1,4 +1,4 @@
-"""Read-only real Luna/Crossref validation of HU25's journal issue year."""
+"""Read-only real SiliconFlow/Crossref validation of HU25's journal issue year."""
 import argparse, copy, hashlib, json, sys
 from pathlib import Path
 
@@ -27,7 +27,7 @@ def main():
     original=metadata_api.request_candidates;captured=[]
     def traced(*a):
         value=original(*a);captured.append(copy.deepcopy(value));return value
-    report={'code':identity,'scope':'actual HU25 PDF; live Luna + Crossref; shadow preview only, no import',
+    report={'code':identity,'scope':'actual HU25 PDF; live SiliconFlow + Crossref; shadow preview only, no import',
             'sha256':ref['source_sha256'],'provider':settings.metadata_api_provider,'model':settings.metadata_api_model,'passed':False}
     try:
         metadata_api.request_candidates=traced

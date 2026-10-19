@@ -208,13 +208,9 @@ def assemble(settings: Settings) -> Services:
         actual_chunking = settings.chunking_config.model_dump()
     try:
         from dlrag.retrieval.retriever import Retriever
-        from dlrag.retrieval.embeddings import FakeHashEmbedding, SiliconFlowEmbedding, LocalBGEEmbedding
+        from dlrag.retrieval.embeddings import FakeHashEmbedding, SiliconFlowEmbedding
         if settings.app_mode == "mock":
             backend = FakeHashEmbedding()
-            service.embedding_configured = True
-        elif settings.embedding_provider == 'local_bge':
-            backend = LocalBGEEmbedding(model=settings.embedding_model, dimension=settings.embedding_dimension,
-                                        base_url=settings.embedding_base_url, revision=settings.embedding_revision)
             service.embedding_configured = True
         else:
             if settings.embedding_revision:
@@ -252,19 +248,11 @@ def assemble(settings: Settings) -> Services:
                 module, name = settings.llm_client_factory.split(":", 1)
                 factory = getattr(importlib.import_module(module), name)
                 client = factory(settings)
-                from dlrag.qa.semantic_reranker import SiliconFlowReranker, LLMReranker
-                if settings.qa_semantic_rerank_enabled and settings.qa_rerank_provider == 'llm':
-                    from dlrag.qa.llm_client import CLIProxyLLM
-                    reranker = LLMReranker(CLIProxyLLM(
-                        api_key=settings.llm_api_key.get_secret_value(), model=settings.qa_rerank_model,
-                        base_url=settings.llm_base_url, timeout=settings.qa_rerank_timeout_seconds,
-                        max_output_tokens=6000, context_window_tokens=settings.llm_context_window_tokens,
-                        reasoning_effort=settings.llm_reasoning_effort))
-                else:
-                    reranker = SiliconFlowReranker(
+                from dlrag.qa.semantic_reranker import SiliconFlowReranker
+                reranker = SiliconFlowReranker(
                     api_key=settings.siliconflow_api_key.get_secret_value(), model=settings.qa_rerank_model,
                     base_url=settings.siliconflow_base_url, timeout=settings.qa_rerank_timeout_seconds
-                    ) if settings.qa_semantic_rerank_enabled else None
+                ) if settings.qa_semantic_rerank_enabled else None
                 service.qa = QAEngine(service.retriever, client, {
                     "planning_enabled": settings.planning_enabled, "retrieval_mode": settings.retrieval_mode,
                     "sentence_citations_required": True,

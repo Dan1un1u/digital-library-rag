@@ -16,23 +16,21 @@ class Settings(BaseSettings):
     chunking_config: ChunkingConfig = Field(default_factory=ChunkingConfig)
     max_upload_mb: int = Field(default=25, gt=0, le=500)
     metadata_api_enabled: bool = True
-    metadata_api_provider: Literal["siliconflow", "cliproxyapi"] = "siliconflow"
+    metadata_api_provider: Literal["siliconflow"] = "siliconflow"
     metadata_api_model: str = "Qwen/Qwen3-VL-8B-Instruct"
     metadata_api_timeout_seconds: float = Field(default=45, gt=0, le=180, allow_inf_nan=False)
     metadata_lookup_enabled: bool = True
     metadata_lookup_timeout_seconds: float = Field(default=10, gt=0, le=30, allow_inf_nan=False)
     api_base_url: str = "http://127.0.0.1:8000"
     embedding_model: str = "BAAI/bge-m3"
-    embedding_provider: Literal["siliconflow", "local_bge"] = "siliconflow"
-    embedding_base_url: str = "http://127.0.0.1:18080/v1"
+    embedding_provider: Literal["siliconflow"] = "siliconflow"
     embedding_revision: str | None = None
     embedding_dimension: int = Field(default=1024, gt=0)
     siliconflow_base_url: str = "https://api.siliconflow.cn/v1"
     siliconflow_api_key: SecretStr = SecretStr("")
     sd_embedding_key: SecretStr = SecretStr("")
     llm_base_url: str = ""
-    llm_provider: Literal["siliconflow", "cliproxyapi"] = "siliconflow"
-    llm_reasoning_effort: Literal["none", "low", "medium", "high"] = "none"
+    llm_provider: Literal["siliconflow"] = "siliconflow"
     llm_model: str = ""
     llm_api_key: SecretStr = SecretStr("")
     llm_timeout_seconds: float = Field(default=60, gt=0, allow_inf_nan=False)
@@ -48,7 +46,7 @@ class Settings(BaseSettings):
     qa_evidence_rerank_enabled: bool = True
     qa_semantic_rerank_enabled: bool = True
     qa_rerank_model: str = 'BAAI/bge-reranker-v2-m3'
-    qa_rerank_provider: Literal["siliconflow", "llm"] = "siliconflow"
+    qa_rerank_provider: Literal["siliconflow"] = "siliconflow"
     qa_rerank_timeout_seconds: float = Field(default=20, gt=0, allow_inf_nan=False)
     qa_reference_penalty_enabled: bool = True
     qa_neighbor_expansion_enabled: bool = True

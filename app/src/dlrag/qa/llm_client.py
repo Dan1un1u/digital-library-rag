@@ -28,13 +28,11 @@ class LLMClient(Protocol):
 
 
 class SiliconFlowLLM:
-    allow_loopback_http = False
     def __init__(self, api_key=None, model="Qwen/Qwen2.5-7B-Instruct",
                  base_url="https://api.siliconflow.cn/v1", timeout=60,
                  max_output_tokens=1000, context_window_tokens=32768, session=None, enable_thinking=None):
         p = urlparse(base_url)
-        local = p.hostname in {"127.0.0.1", "localhost", "::1"}
-        if (p.scheme != "https" and not (self.allow_loopback_http and local and p.scheme == "http")) or not p.netloc or p.username or p.password or p.query or p.fragment:
+        if p.scheme != "https" or not p.netloc or p.username or p.password or p.query or p.fragment:
             raise ProjectError("INVALID_REQUEST", "LLM 地址必须为不含凭证和参数的 HTTPS 地址")
         if not isinstance(model, str) or not model.strip():
             raise ProjectError("INVALID_REQUEST", "模型名称不能为空")
@@ -130,32 +128,6 @@ class SiliconFlowLLM:
         finally:
             record["elapsed_ms"] = round((time.perf_counter() - start) * 1000, 3)
             self.records.append(record)
-
-
-class CLIProxyLLM(SiliconFlowLLM):
-    """OpenAI chat protocol through the user's loopback-only Codex OAuth proxy."""
-    allow_loopback_http = True
-
-    def __init__(self, *args, reasoning_effort='none', **kwargs):
-        super().__init__(*args, **kwargs)
-        if urlparse(self.base_url).hostname not in {'127.0.0.1', 'localhost', '::1'}:
-            raise ProjectError('INVALID_REQUEST', 'CLIProxyAPI 必须使用本机回环地址')
-        if reasoning_effort not in {'none', 'low', 'medium', 'high'}:
-            raise ProjectError('INVALID_REQUEST', '推理等级非法')
-        self.reasoning_effort = reasoning_effort
-        self._session.trust_env = False
-
-    def build_request(self, messages):
-        return {'model': self.model, 'messages': messages, 'stream': False,
-                'max_completion_tokens': self.max_output_tokens,
-                'reasoning_effort': self.reasoning_effort,
-                'response_format': {'type': 'json_object'}}
-
-    def get_config(self):
-        config = super().get_config()
-        config.update(provider='cliproxyapi', reasoning_effort=self.reasoning_effort)
-        config.pop('enable_thinking', None)
-        return config
 
 
 class ScriptedMockLLM:

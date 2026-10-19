@@ -62,7 +62,8 @@ def build(source, destination):
     header.runs[0].font.size = Pt(8)
     footer = section.footer.paragraphs[0]
     footer.alignment = WD_ALIGN_PARAGRAPH.RIGHT
-    footer.add_run('版本 1.0  ·  ')
+    version = re.search(r'文档版本为 ([0-9.]+)', source.read_text(encoding='utf-8'))
+    footer.add_run('版本 ' + (version.group(1) if version else '1.0') + '  ·  ')
     field = OxmlElement('w:fldSimple')
     field.set(qn('w:instr'), 'PAGE')
     footer._p.append(field)

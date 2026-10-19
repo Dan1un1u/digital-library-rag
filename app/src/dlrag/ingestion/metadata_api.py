@@ -39,13 +39,11 @@ def author_supported(name, proof):
 
 def request_candidates(settings, pages, local):
     # Only the existing SiliconFlow credential is sent to its configured endpoint.
-    from dlrag.qa.llm_client import SiliconFlowLLM, CLIProxyLLM
-    proxy = settings.metadata_api_provider == 'cliproxyapi'
-    key = (settings.llm_api_key if proxy else settings.siliconflow_api_key).get_secret_value()
-    base_url = settings.llm_base_url if proxy else settings.siliconflow_base_url
+    from dlrag.qa.llm_client import SiliconFlowLLM
+    key = settings.siliconflow_api_key.get_secret_value()
+    base_url = settings.siliconflow_base_url
     # Reuse endpoint validation without sharing a stateful QA client.
-    cls = CLIProxyLLM if proxy else SiliconFlowLLM
-    client = cls(api_key=key, model=settings.metadata_api_model, base_url=base_url,
+    client = SiliconFlowLLM(api_key=key, model=settings.metadata_api_model, base_url=base_url,
                  max_output_tokens=2200, context_window_tokens=settings.llm_context_window_tokens)
     content = [{"type": "text", "text": json.dumps(
         {"pages": [{"pdf_page": p["pdf_page"], "text": p["text"]} for p in pages],
@@ -53,8 +51,7 @@ def request_candidates(settings, pages, local):
     for page in pages:
         content.extend([{"type": "text", "text": f"PDF 第 {page['pdf_page']} 页"},
                         {"type": "image_url", "image_url": {"url": page["image"]}}])
-    post = client._session.post if proxy else requests.post
-    response = post(base_url.rstrip('/') + '/chat/completions',
+    response = requests.post(base_url.rstrip('/') + '/chat/completions',
         headers={"Authorization": "Bearer " + key}, json=client.build_request(
         [{"role": "system", "content": PROMPT}, {"role": "user", "content": content}]),
         timeout=settings.metadata_api_timeout_seconds, allow_redirects=False)
@@ -112,7 +109,7 @@ def recognize_metadata(path, settings, filename=None, assist=True, progress=None
     if not assist or not settings.metadata_api_enabled or settings.app_mode != "real":
         progress("metadata_validation")
         return result
-    api_key = settings.llm_api_key if settings.metadata_api_provider == 'cliproxyapi' else settings.siliconflow_api_key
+    api_key = settings.siliconflow_api_key
     if not api_key.get_secret_value():
         result["api_assistance"] = {"status": "unavailable"}
         result["warnings"].append("API 辅助未配置，已保留本机识别结果，可手动修改。")
