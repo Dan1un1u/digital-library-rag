@@ -17,11 +17,14 @@ NEW_TESTS = ["app/tests/integration/test_ingestion_recovery.py", "app/tests/inte
              "app/tests/integration/test_bibliography_api.py", "app/tests/integration/test_domain_trial_guards.py",
              "app/tests/integration/test_fulltext_gate.py"]
 CASE_FILES = {"COL-001": NEW_TESTS[:-2], "COL-002": [NEW_TESTS[-2]], "ING-001": [NEW_TESTS[-1]]}
+CASE_FILES["ING-002"] = ["app/tests/integration/test_text_quality_gate.py"]
+NEW_TESTS += CASE_FILES["ING-002"]
 FOCUS = ["app/src/dlrag/api/services.py", "app/src/dlrag/ingestion/library.py",
          "app/src/dlrag/ingestion/parser.py", "app/src/dlrag/ingestion/chunker.py",
          "app/src/dlrag/retrieval/retriever.py", "tools/catalog_batch.py",
          "app/src/dlrag/ingestion/metadata_api.py", "app/src/dlrag/ingestion/metadata_year.py",
-         "app/src/dlrag/ingestion/bibliography.py", "app/src/dlrag/ingestion/fulltext.py"]
+         "app/src/dlrag/ingestion/bibliography.py", "app/src/dlrag/ingestion/fulltext.py",
+         "app/src/dlrag/ingestion/text_quality.py"]
 
 
 def git(*args):
@@ -79,6 +82,9 @@ def main():
               for group, files in CASE_FILES.items()}
     expected_failures = sum(case.find("skipped") is not None and
                             case.find("skipped").attrib.get("type") == "pytest.xfail" for case in cases)
+    incremental_groups = {"COL-001": ["COL-001"], "COL-002": ["COL-002"],
+                          "ING-001": ["COL-002", "ING-001"], "ING-002": ["ING-002"]}[args.work_item]
+    incremental_count = sum(counts[g] for g in incremental_groups)
     summary = {"work_item": args.work_item, "scope": args.scope, "tested_code": before,
                "created_at": datetime.now(timezone.utc).isoformat(),
                "python": sys.version.split()[0], "platform": sys.platform,
@@ -88,9 +94,10 @@ def main():
                "tests": {k: sum(int(s.attrib.get(k, 0)) for s in suites)
                          for k in ["tests", "failures", "errors", "skipped"]},
                "new_cases": new_count, "reused_cases": len(cases) - new_count,
-               "case_count_policy": "new_cases is selected work item only; PR2 increments are COL-002 plus ING-001; old reports retain original PR attribution",
-               "pr_incremental_cases": counts["COL-002"] + counts["ING-001"],
-               "pr_inherited_cases": len(cases) - counts["COL-002"] - counts["ING-001"],
+               "case_count_policy": "new_cases selects one work item; stacked PR increments use incremental_groups; old reports retain original attribution",
+               "pr_incremental_groups": incremental_groups,
+               "pr_incremental_cases": incremental_count,
+               "pr_inherited_cases": len(cases) - incremental_count,
                "case_groups": {**counts, "baseline_reused": len(cases) - sum(counts.values())},
                "expected_failures": expected_failures,
                "coverage": {}, "uncovered_focus": {}, "manual_review": "pending",

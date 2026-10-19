@@ -84,3 +84,5 @@ def require_complete_text(pages):
     if suspect:
         raise FulltextReviewRequired(suspect, len(pages),
                                      sum(bool(p["normalized_text"].strip()) for p in pages))
+    from .text_quality import require_readable_text
+    require_readable_text(pages)

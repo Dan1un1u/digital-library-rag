@@ -3,7 +3,7 @@ import re
 from collections import Counter
 from .errors import ProjectError
 
-PARSER_VERSION = 'pymupdf-conservative-v3'
+PARSER_VERSION = 'pymupdf-conservative-v4'
 
 
 def _margin_key(line):
@@ -24,6 +24,7 @@ def normalize(text):
 
 def parse_pdf(file_path):
     from .fulltext import REVIEW_DIAGNOSTIC, scan_evidence
+    from .text_quality import DIAGNOSTIC, encoding_evidence
     try:
         import fitz
     except ImportError as exc:
@@ -39,7 +40,9 @@ def parse_pdf(file_path):
         margins = Counter()
         try:
             for page in pdf:
-                raw = page.get_text('text', sort=True)
+                # Coordinate sorting can replace CID control codes with spaces.
+                # Inspect the native extraction before that evidence is lost.
+                raw = page.get_text('text')
                 blocks = page.get_text('blocks', sort=True)
                 lines = raw.splitlines()
                 # Only margin text located near the physical page edge qualifies.
@@ -80,6 +83,8 @@ def parse_pdf(file_path):
             normalized = normalize(cleaned)
             if scan_evidence(pdf[number-1], normalized) is not None:
                 diagnostics.append(REVIEW_DIAGNOSTIC)
+            if encoding_evidence(raw) is not None:
+                diagnostics.append(DIAGNOSTIC)
             result.append({'pdf_page':number, 'printed_page':None, 'raw_text':raw,
                            'normalized_text':normalized, 'diagnostics':diagnostics})
         if not any(p['normalized_text'].strip() for p in result):
