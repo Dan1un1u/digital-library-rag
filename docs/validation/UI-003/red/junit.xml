@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="4" skipped="0" tests="9" time="5.065" timestamp="2026-10-20T00:28:22.832199+08:00" hostname="DANIUNIU"><testcase classname="tests.integration.test_subject_pie_bounds" name="test_pie_stroke_fits_inside_available_plot[455-211]" time="2.118"><failure message="assert (140 + (2 / 2)) &lt;= (211 / 2)&#10; +  where 211 = min(455, 211)">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000025F11DED6D0&gt;
+plot_width = 455, plot_height = 211
+
+    @pytest.mark.parametrize('plot_width,plot_height', [(455,211), (165,211), (340,340), (180,300), (2,2)])
+    def test_pie_stroke_fits_inside_available_plot(monkeypatch, plot_width, plot_height):
+        # 455x211 and 165x211 are real legend-reduced plot sizes from the old browser UI.
+        _, spec = render_collection(monkeypatch, (1,1,1))
+        outer = spec['mark'].get('outerRadius', spec['mark'].get('radius'))
+        if isinstance(outer, dict):
+            # The emitted Vega expression uses min/max and arithmetic, shared by Python.
+            radius = eval(outer['expr'], {'__builtins__':{}},
+                          {'min':min, 'max':max, 'width':plot_width, 'height':plot_height})
+        else:
+            radius = outer
+        assert radius is not None
+        stroke = spec['mark']['strokeWidth']
+        assert 0 &lt;= radius &lt;= 140
+&gt;       assert radius + stroke / 2 &lt;= min(plot_width, plot_height) / 2
+E       assert (140 + (2 / 2)) &lt;= (211 / 2)
+E        +  where 211 = min(455, 211)
+
+app\tests\integration\test_subject_pie_bounds.py:44: AssertionError</failure></testcase><testcase classname="tests.integration.test_subject_pie_bounds" name="test_pie_stroke_fits_inside_available_plot[165-211]" time="0.269"><failure message="assert (140 + (2 / 2)) &lt;= (165 / 2)&#10; +  where 165 = min(165, 211)">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000025F42523320&gt;
+plot_width = 165, plot_height = 211
+
+    @pytest.mark.parametrize('plot_width,plot_height', [(455,211), (165,211), (340,340), (180,300), (2,2)])
+    def test_pie_stroke_fits_inside_available_plot(monkeypatch, plot_width, plot_height):
+        # 455x211 and 165x211 are real legend-reduced plot sizes from the old browser UI.
+        _, spec = render_collection(monkeypatch, (1,1,1))
+        outer = spec['mark'].get('outerRadius', spec['mark'].get('radius'))
+        if isinstance(outer, dict):
+            # The emitted Vega expression uses min/max and arithmetic, shared by Python.
+            radius = eval(outer['expr'], {'__builtins__':{}},
+                          {'min':min, 'max':max, 'width':plot_width, 'height':plot_height})
+        else:
+            radius = outer
+        assert radius is not None
+        stroke = spec['mark']['strokeWidth']
+        assert 0 &lt;= radius &lt;= 140
+&gt;       assert radius + stroke / 2 &lt;= min(plot_width, plot_height) / 2
+E       assert (140 + (2 / 2)) &lt;= (165 / 2)
+E        +  where 165 = min(165, 211)
+
+app\tests\integration\test_subject_pie_bounds.py:44: AssertionError</failure></testcase><testcase classname="tests.integration.test_subject_pie_bounds" name="test_pie_stroke_fits_inside_available_plot[340-340]" time="0.267" /><testcase classname="tests.integration.test_subject_pie_bounds" name="test_pie_stroke_fits_inside_available_plot[180-300]" time="0.298"><failure message="assert (140 + (2 / 2)) &lt;= (180 / 2)&#10; +  where 180 = min(180, 300)">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000025F425869F0&gt;
+plot_width = 180, plot_height = 300
+
+    @pytest.mark.parametrize('plot_width,plot_height', [(455,211), (165,211), (340,340), (180,300), (2,2)])
+    def test_pie_stroke_fits_inside_available_plot(monkeypatch, plot_width, plot_height):
+        # 455x211 and 165x211 are real legend-reduced plot sizes from the old browser UI.
+        _, spec = render_collection(monkeypatch, (1,1,1))
+        outer = spec['mark'].get('outerRadius', spec['mark'].get('radius'))
+        if isinstance(outer, dict):
+            # The emitted Vega expression uses min/max and arithmetic, shared by Python.
+            radius = eval(outer['expr'], {'__builtins__':{}},
+                          {'min':min, 'max':max, 'width':plot_width, 'height':plot_height})
+        else:
+            radius = outer
+        assert radius is not None
+        stroke = spec['mark']['strokeWidth']
+        assert 0 &lt;= radius &lt;= 140
+&gt;       assert radius + stroke / 2 &lt;= min(plot_width, plot_height) / 2
+E       assert (140 + (2 / 2)) &lt;= (180 / 2)
+E        +  where 180 = min(180, 300)
+
+app\tests\integration\test_subject_pie_bounds.py:44: AssertionError</failure></testcase><testcase classname="tests.integration.test_subject_pie_bounds" name="test_pie_stroke_fits_inside_available_plot[2-2]" time="0.267"><failure message="assert (140 + (2 / 2)) &lt;= (2 / 2)&#10; +  where 2 = min(2, 2)">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000025F40962BD0&gt;
+plot_width = 2, plot_height = 2
+
+    @pytest.mark.parametrize('plot_width,plot_height', [(455,211), (165,211), (340,340), (180,300), (2,2)])
+    def test_pie_stroke_fits_inside_available_plot(monkeypatch, plot_width, plot_height):
+        # 455x211 and 165x211 are real legend-reduced plot sizes from the old browser UI.
+        _, spec = render_collection(monkeypatch, (1,1,1))
+        outer = spec['mark'].get('outerRadius', spec['mark'].get('radius'))
+        if isinstance(outer, dict):
+            # The emitted Vega expression uses min/max and arithmetic, shared by Python.
+            radius = eval(outer['expr'], {'__builtins__':{}},
+                          {'min':min, 'max':max, 'width':plot_width, 'height':plot_height})
+        else:
+            radius = outer
+        assert radius is not None
+        stroke = spec['mark']['strokeWidth']
+        assert 0 &lt;= radius &lt;= 140
+&gt;       assert radius + stroke / 2 &lt;= min(plot_width, plot_height) / 2
+E       assert (140 + (2 / 2)) &lt;= (2 / 2)
+E        +  where 2 = min(2, 2)
+
+app\tests\integration\test_subject_pie_bounds.py:44: AssertionError</failure></testcase><testcase classname="tests.integration.test_subject_pie_bounds" name="test_pie_keeps_counts_palette_and_existing_layout[counts0]" time="0.272" /><testcase classname="tests.integration.test_subject_pie_bounds" name="test_pie_keeps_counts_palette_and_existing_layout[counts1]" time="0.267" /><testcase classname="tests.integration.test_subject_pie_bounds" name="test_pie_keeps_counts_palette_and_existing_layout[counts2]" time="0.274" /><testcase classname="tests.integration.test_subject_pie_bounds" name="test_empty_collection_retains_existing_message_without_pie" time="0.263" /></testsuite></testsuites>

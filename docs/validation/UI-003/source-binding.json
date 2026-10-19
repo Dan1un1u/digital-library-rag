@@ -1,0 +1,13 @@
+{
+  "base": "7d9abafc109c7a3d506e0c3b806493bbab650f26",
+  "initial_import": "65f168f45f2bf34ea204106e4e6e3250b56041a6",
+  "original_delivery_app_sha256": "e7b10f6630632b844c575498761f15a720e57fdb51a35513c044858659409344",
+  "main_ui_sha256": "97ff7fba99b9aa57117bfddb25a7129cec8b3d9e26b37d35a3803d84cd77028d",
+  "original_and_initial_and_main_pie_spec_ast_equal": true,
+  "baseline_test_commit": "23996176afdc070598cb195e1d3d022327cf05d7",
+  "fixed_test_commit": "0f15f2883dbe44b9354c870d425548dc07d2f92e",
+  "fixed_app_tree": "a4e0cb2f3f0765a150af0151bbc2bc34130773fa",
+  "production_change": "One outerRadius property only; all remaining app text is identical to main.",
+  "shared_style_unchanged": true,
+  "pr10_untouched_head": "93dc297374a9718523795f3f5a6c1520aae9b8fb"
+}

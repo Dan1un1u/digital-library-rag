@@ -1,0 +1,254 @@
+{
+  "cases": [
+    {
+      "case": "original-three-subjects",
+      "result": {
+        "background": "rgb(14, 17, 23)",
+        "chart": {
+          "height": 340,
+          "width": 449.8229370117187,
+          "x": 380,
+          "y": 219.8854217529297
+        },
+        "legend": {
+          "height": 58,
+          "width": 308,
+          "x": 380,
+          "y": 481.8854370117187
+        },
+        "marks": [
+          {
+            "bounds": {
+              "height": 210,
+              "width": 140.00045776367188,
+              "x": 464.9110107421875,
+              "y": 212.8854217529297
+            },
+            "insets": {
+              "bottom": 136,
+              "left": 83.9110107421875,
+              "right": 223.91146850585935,
+              "top": -8
+            },
+            "label": "篇数: 1; 学科: 自然科学",
+            "path": "M0,-140A140,140,0,0,0,-121.244,70L0,0Z",
+            "stroke": 2
+          },
+          {
+            "bounds": {
+              "height": 140.000732421875,
+              "width": 242.4879608154297,
+              "x": 483.66748046875,
+              "y": 352.88543701171875
+            },
+            "insets": {
+              "bottom": 65.99925231933594,
+              "left": 102.66748046875,
+              "right": 102.66749572753906,
+              "top": 132.00001525878906
+            },
+            "label": "篇数: 1; 学科: 社会科学",
+            "path": "M-121.244,70A140,140,0,0,0,121.244,70L0,0Z",
+            "stroke": 2
+          },
+          {
+            "bounds": {
+              "height": 209.99998474121097,
+              "width": 140.00048828125,
+              "x": 604.9114990234375,
+              "y": 212.88543701171875
+            },
+            "insets": {
+              "bottom": 136,
+              "left": 223.9114990234375,
+              "right": 83.91094970703125,
+              "top": -7.9999847412109375
+            },
+            "label": "篇数: 1; 学科: 哲学与人文科学",
+            "path": "M121.244,70A140,140,0,0,0,0,-140L0,0Z",
+            "stroke": 2
+          }
+        ],
+        "viewport": {
+          "height": 720,
+          "width": 1280
+        }
+      }
+    },
+    {
+      "case": "fixed-three-subjects",
+      "result": {
+        "background": "rgb(14, 17, 23)",
+        "chart": {
+          "height": 340,
+          "width": 449.8229370117187,
+          "x": 380,
+          "y": 219.8854217529297
+        },
+        "legend": {
+          "height": 58,
+          "width": 308,
+          "x": 380,
+          "y": 481.8854370117187
+        },
+        "marks": [
+          {
+            "bounds": {
+              "height": 179.24998474121094,
+              "width": 119.49996185302734,
+              "x": 485.4114990234375,
+              "y": 223.88543701171875
+            },
+            "insets": {
+              "bottom": 155.75,
+              "left": 104.4114990234375,
+              "right": 223.9114761352539,
+              "top": 3.0000152587890625
+            },
+            "label": "篇数: 1; 学科: 自然科学",
+            "path": "M0,-119.5A119.5,119.5,0,0,0,-103.49,59.75L0,0Z",
+            "stroke": 2
+          },
+          {
+            "bounds": {
+              "height": 119.49992370605467,
+              "width": 206.97998046875,
+              "x": 501.4214782714844,
+              "y": 343.38543701171875
+            },
+            "insets": {
+              "bottom": 96.00006103515624,
+              "left": 120.42147827148438,
+              "right": 120.42147827148438,
+              "top": 122.50001525878906
+            },
+            "label": "篇数: 1; 学科: 社会科学",
+            "path": "M-103.49,59.75A119.5,119.5,0,0,0,103.49,59.75L0,0Z",
+            "stroke": 2
+          },
+          {
+            "bounds": {
+              "height": 179.24998474121094,
+              "width": 119.5,
+              "x": 604.9114990234375,
+              "y": 223.88543701171875
+            },
+            "insets": {
+              "bottom": 155.75,
+              "left": 223.9114990234375,
+              "right": 104.41143798828124,
+              "top": 3.0000152587890625
+            },
+            "label": "篇数: 1; 学科: 哲学与人文科学",
+            "path": "M103.49,59.75A119.5,119.5,0,0,0,0,-119.5L0,0Z",
+            "stroke": 2
+          }
+        ],
+        "viewport": {
+          "height": 720,
+          "width": 1280
+        }
+      }
+    },
+    {
+      "case": "fixed-single-subject",
+      "result": {
+        "background": "rgb(14, 17, 23)",
+        "chart": {
+          "height": 340,
+          "width": 449.8229370117187,
+          "x": 380,
+          "y": 219.8854217529297
+        },
+        "legend": {
+          "height": 58,
+          "width": 308,
+          "x": 380,
+          "y": 481.8854370117187
+        },
+        "marks": [
+          {
+            "bounds": {
+              "height": 119.49998474121094,
+              "width": 0,
+              "x": 604.9114990234375,
+              "y": 223.88543701171875
+            },
+            "insets": {
+              "bottom": 215.5,
+              "left": 223.9114990234375,
+              "right": 223.91143798828125,
+              "top": 3.0000152587890625
+            },
+            "label": "篇数: 0; 学科: 自然科学",
+            "path": "M0,-119.5L0,0Z",
+            "stroke": 2
+          },
+          {
+            "bounds": {
+              "height": 119.49998474121094,
+              "width": 0,
+              "x": 604.9114990234375,
+              "y": 223.88543701171875
+            },
+            "insets": {
+              "bottom": 215.5,
+              "left": 223.9114990234375,
+              "right": 223.91143798828125,
+              "top": 3.0000152587890625
+            },
+            "label": "篇数: 0; 学科: 社会科学",
+            "path": "M0,-119.5L0,0Z",
+            "stroke": 2
+          },
+          {
+            "bounds": {
+              "height": 238.99998474121097,
+              "width": 239,
+              "x": 485.4114685058594,
+              "y": 223.88543701171875
+            },
+            "insets": {
+              "bottom": 96,
+              "left": 104.41146850585938,
+              "right": 104.41146850585938,
+              "top": 3.0000152587890625
+            },
+            "label": "篇数: 1; 学科: 哲学与人文科学",
+            "path": "M0,-119.5A119.5,119.5,0,1,0,0,119.5A119.5,119.5,0,1,0,0,-119.5Z",
+            "stroke": 2
+          }
+        ],
+        "viewport": {
+          "height": 720,
+          "width": 1280
+        }
+      }
+    },
+    {
+      "case": "fixed-empty-filter",
+      "result": {
+        "chart": null,
+        "viewport": {
+          "height": 720,
+          "width": 1280
+        }
+      }
+    }
+  ],
+  "measurement": "Rendered SVG path bounds relative to the SVG viewport; computed CSS stroke width included. Normal 1280x720 browser viewport.",
+  "scope": "Original delivery UI vs fixed main-based UI, same isolated mock API and synthetic documents.",
+  "different_plot_sizes": "Covered by 5 geometry regression cases; browser proof here is desktop only.",
+  "screenshots": [
+    "before-desktop.png",
+    "after-desktop.png",
+    "after-single.png",
+    "after-empty.png"
+  ],
+  "screenshot_sha256": {
+    "before-desktop.png": "2f3b17a10f3e5439104efcc828511230744a179dbd247dbf00c1bdc387048d5f",
+    "after-desktop.png": "ae700c07872c469b44ae8124331f71509674fab54ab186dfb2b06233379939e0",
+    "after-single.png": "e104d62f51aa31c30458d45e04b5a8d1574079706e1302d4899e9dccc9c78b43",
+    "after-empty.png": "dbdae42a63118b7c1dab881b282de1ae7245ef59aa0c850396d3a035a04d8412"
+  }
+}
