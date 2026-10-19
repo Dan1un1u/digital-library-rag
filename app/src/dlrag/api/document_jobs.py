@@ -72,10 +72,14 @@ class DocumentJobs:
         except Exception as exc:
             code = getattr(exc, "code", "INTERNAL_ERROR")
             # Expose known codes, never exception/provider messages or credentials.
-            code = code if code in {"INVALID_PDF", "NO_EXTRACTABLE_TEXT", "UPLOAD_TOO_LARGE", "MODEL_NOT_CONFIGURED", "EMBEDDING_UNAVAILABLE", "EMBEDDING_NOT_CONFIGURED", "EMBEDDING_INVALID_RESPONSE", "INDEX_BUILD_FAILED"} else "INTERNAL_ERROR"
+            code = code if code in {"INVALID_PDF", "NO_EXTRACTABLE_TEXT", "FULLTEXT_REVIEW_REQUIRED", "UPLOAD_TOO_LARGE", "MODEL_NOT_CONFIGURED", "EMBEDDING_UNAVAILABLE", "EMBEDDING_NOT_CONFIGURED", "EMBEDDING_INVALID_RESPONSE", "INDEX_BUILD_FAILED"} else "INTERNAL_ERROR"
             with self.lock:
                 message = ("PDF 正文没有可提取文字。增强识别用于标题和作者等信息，全文导入仍需先完成 OCR。"
                            if code == "NO_EXTRACTABLE_TEXT" else
                            "文献处理未完成，请检查 PDF 和服务配置后重试；已有馆藏仍保留。")
                 self.jobs[job_id]["error"] = {"code": code, "message": message}
+                if code == "FULLTEXT_REVIEW_REQUIRED":
+                    from dlrag.ingestion.fulltext import FulltextReviewRequired
+                    self.jobs[job_id]["error"] = (exc.public_error() if isinstance(exc, FulltextReviewRequired)
+                        else {"code": code, "message": "文献包含待核对的疑似扫描页，未加入检索。请在文献管理查看页码，完成 OCR 或更换文字版后重试。"})
                 progress("error")

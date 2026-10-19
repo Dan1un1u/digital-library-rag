@@ -23,6 +23,13 @@ def discipline(document):
     return matches[0] if len(matches) == 1 else None
 
 
+def document_status(document):
+    if document.get("error_code") == "FULLTEXT_REVIEW_REQUIRED":
+        return "待核对正文（未加入检索）"
+    return {"ready": "可阅读", "uploaded": "处理中", "parsing": "处理中",
+            "indexing": "正在建立检索", "failed": "处理失败"}.get(document["status"], document["status"])
+
+
 def domain_counts(documents):
     counts = dict.fromkeys(DOMAINS, 0)
     pending = 0
