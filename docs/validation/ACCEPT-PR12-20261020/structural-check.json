@@ -1,0 +1,37 @@
+{
+  "status": "pass",
+  "default_diff_check_exit": 2,
+  "crlf_aware_diff_check_exit": 0,
+  "base": "8174362c38fcd62b722b5133692c7e9662355b87",
+  "source_head": "d4ef5c463faebab24a2dc421f2493e20a0b028ec",
+  "before_docx_sha256": "0f0b4c2673beb26d0424b6c7e5ffad6b1d4b79344ab38459b82a1606792e66a2",
+  "docx_sha256": "d1b29fab5c6be926cd7c816607be0a36ad19fa207c77b6825217423e36a41989",
+  "builder_sha256": "a1f806b25adcbeac166b4d071b4a97b94f0ba64514a6288be1ca458d5b6e2120",
+  "font_only_ooxml_change": true,
+  "changed_ooxml_parts": [
+    "word/document.xml",
+    "word/styles.xml",
+    "word/stylesWithEffects.xml",
+    "word/settings.xml",
+    "word/webSettings.xml",
+    "word/fontTable.xml",
+    "word/theme/theme1.xml",
+    "word/numbering.xml",
+    "word/header1.xml",
+    "word/footer1.xml"
+  ],
+  "unchanged_image_count": 13,
+  "application_scripts_workflows_unchanged": true,
+  "fixed_fonts": {
+    "font_declarations": 302,
+    "explicitly_formatted_runs": 148
+  },
+  "rebuilt_fonts": {
+    "font_declarations": 302,
+    "explicitly_formatted_runs": 148
+  },
+  "normalization_idempotent": true,
+  "historical_evidence_hashes_verified": true,
+  "local_pdf_sha256": "741ea8f39efac24cac6d1e0592d1d9802e4fe2339665ec299ad40020fc15fb73",
+  "pdf_to_review": "D:\\llm_exp\\digital-library\\workspace\\documents\\user-guide\\20261020-fonts\\专题数字图书馆使用手册.pdf"
+}

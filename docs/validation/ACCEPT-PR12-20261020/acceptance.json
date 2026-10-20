@@ -1,0 +1,47 @@
+{
+  "status": "pass",
+  "reviewed_at": "2026-10-20T05:40:51.397327+00:00",
+  "pull_request": 12,
+  "base": "8174362c38fcd62b722b5133692c7e9662355b87",
+  "reviewed_source_head": "d4ef5c463faebab24a2dc421f2493e20a0b028ec",
+  "reviewed_scope": "DOC-002 Chinese font normalization in the existing manual and builder",
+  "blocking_findings": [],
+  "visual_review": {
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "missing_glyphs": false,
+    "overlap": false,
+    "clipping": false,
+    "broken_tables": false,
+    "unexpected_blank_pages": false,
+    "headers_footers_and_page_numbers": "correct"
+  },
+  "hosted_checks": {
+    "present": false,
+    "note": "No GitHub check runs or commit statuses; not reported as CI success"
+  },
+  "validation_scope": "Document OOXML/content/font checks, fresh builder run, idempotence, and all-page inspection of the existing hash-verified WPS PDF export. Application tests not rerun because application/scripts/workflows are byte-identical to main.",
+  "history_preserved": true,
+  "line_endings": {
+    "default_diff_check_exit": 2,
+    "reason": "Only CRLF line endings in four original verification JSON files",
+    "crlf_aware_diff_check_exit": 0,
+    "original_json_files_rewritten": false
+  },
+  "runtime": "No deployment, restart or catalogue changes; active release remains 8174362 / COL-005 data",
+  "review_helpers_sha256": {
+    "review_structure.py": "194a8f9491962cb3021ef21fa01ccc0a66e2096e4df5c11bf42c4c1cdaea0dc5",
+    "review_pdf.py": "20cba4e9095950b42630fc9b1d20ff4e0609a2b1cc66a4c46286e63bfcb24263"
+  }
+}
