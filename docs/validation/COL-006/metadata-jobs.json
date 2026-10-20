@@ -1,0 +1,122 @@
+[
+  {
+    "item_id": "P01",
+    "job_id": "cf22b3054c9e42bfb3fba4d30757916f",
+    "kind": "metadata",
+    "stage": "done",
+    "stages": [
+      "queued",
+      "file_received",
+      "local_reading",
+      "page_preparation",
+      "api_recognition",
+      "metadata_validation",
+      "done"
+    ],
+    "elapsed_seconds": 18.0,
+    "result_ref": "previews/P01-first.json"
+  },
+  {
+    "item_id": "P02",
+    "job_id": "5c31cde3fac94a54acefe5fc66619473",
+    "kind": "metadata",
+    "stage": "done",
+    "stages": [
+      "queued",
+      "file_received",
+      "local_reading",
+      "page_preparation",
+      "api_recognition",
+      "metadata_validation",
+      "done"
+    ],
+    "elapsed_seconds": 16.3,
+    "result_ref": "previews/P02-first.json"
+  },
+  {
+    "item_id": "P02",
+    "job_id": "9ecb4d0b9dbc4b3eaa402e6711694fea",
+    "kind": "metadata",
+    "stage": "done",
+    "stages": [
+      "queued",
+      "file_received",
+      "local_reading",
+      "page_preparation",
+      "api_recognition",
+      "metadata_validation",
+      "bibliographic_lookup",
+      "done"
+    ],
+    "elapsed_seconds": 17.6,
+    "result_ref": "previews/P02-second.json"
+  },
+  {
+    "item_id": "P03",
+    "job_id": "231d4a6345c84730ae13c5368bcd7fed",
+    "kind": "metadata",
+    "stage": "done",
+    "stages": [
+      "queued",
+      "file_received",
+      "local_reading",
+      "page_preparation",
+      "api_recognition",
+      "metadata_validation",
+      "done"
+    ],
+    "elapsed_seconds": 16.3,
+    "result_ref": "previews/P03-first.json"
+  },
+  {
+    "item_id": "P04",
+    "job_id": "bf7aa091f9094191bec5f43ced847347",
+    "kind": "metadata",
+    "stage": "done",
+    "stages": [
+      "queued",
+      "file_received",
+      "local_reading",
+      "page_preparation",
+      "api_recognition",
+      "metadata_validation",
+      "done"
+    ],
+    "elapsed_seconds": 15.4,
+    "result_ref": "previews/P04-first.json"
+  },
+  {
+    "item_id": "P05",
+    "job_id": "9163ce2eaf644c70b2c4a8c2c6730e66",
+    "kind": "metadata",
+    "stage": "done",
+    "stages": [
+      "queued",
+      "file_received",
+      "local_reading",
+      "page_preparation",
+      "api_recognition",
+      "metadata_validation",
+      "done"
+    ],
+    "elapsed_seconds": 17.0,
+    "result_ref": "previews/P05-first.json"
+  },
+  {
+    "item_id": "P06",
+    "job_id": "c20b20473eb04594b4bed1b11373d4f1",
+    "kind": "metadata",
+    "stage": "done",
+    "stages": [
+      "queued",
+      "file_received",
+      "local_reading",
+      "page_preparation",
+      "api_recognition",
+      "metadata_validation",
+      "done"
+    ],
+    "elapsed_seconds": 14.0,
+    "result_ref": "previews/P06-first.json"
+  }
+]

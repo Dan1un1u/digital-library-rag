@@ -1,0 +1,28 @@
+{
+  "source_main": "446f7b5a18b4ebdcc83638618827c802f0416be8",
+  "execution_commit": "f19f94b178afd4f1c28ab224488ad1a2415fae3b",
+  "application_tree": "5afce50909e7964ea22d5bc4a29e18dd1c59b2b4",
+  "source_binding": "Independent COL-006 worktree and Python environment; byte-identical application code to deployed main",
+  "application_code_changed": false,
+  "product_fixes": 0,
+  "new_unit_tests": 0,
+  "inherited_full_test_suite_rerun": false,
+  "real_checks": {
+    "enhanced_previews": 7,
+    "normal_async_import_jobs": 6,
+    "candidate_title_checks": 18,
+    "formal_title_checks": 18,
+    "reviewed_authors": 75,
+    "parsed_pages": 100,
+    "verified_chunk_offsets": 564,
+    "other_documents_preserved": 169
+  },
+  "job_seconds": {
+    "P01": 148.8,
+    "P02": 152.4,
+    "P03": 148.8,
+    "P04": 149.1,
+    "P05": 150.1,
+    "P06": 152.0
+  }
+}

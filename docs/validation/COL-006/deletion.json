@@ -1,0 +1,82 @@
+{
+  "old_counts": {
+    "d_604fcbd71b570f13ec0ed832c7c083728cf9b42170704f7fddd966530db96bee": {
+      "documents": 1,
+      "pages": 17,
+      "chunks": 102,
+      "document_topics": 3
+    },
+    "d_69c573c123ffd1538d432ab31040072dec01a375a4a5b7c2960a7667cb970dda": {
+      "documents": 1,
+      "pages": 16,
+      "chunks": 101,
+      "document_topics": 3
+    },
+    "d_a1dfa622dabb6a58261c9eb6367ffd4a4d51dffbf9f74e9741c1d18ad3aba967": {
+      "documents": 1,
+      "pages": 15,
+      "chunks": 92,
+      "document_topics": 3
+    },
+    "d_b9cae993bbd44a679c75aae59ae802845d0321c9e4ee163a1c77b00417371f3b": {
+      "documents": 1,
+      "pages": 12,
+      "chunks": 79,
+      "document_topics": 3
+    },
+    "d_c4eb5fe23e480decfa6f08afda0fdb0bea4d0fe5ee7fafc65f2a2d34a397ddf0": {
+      "documents": 1,
+      "pages": 16,
+      "chunks": 101,
+      "document_topics": 3
+    },
+    "d_fe437770d7c981eae9e028eacaa5c772ed0add900ed9dec54c10cfce6dfd86c3": {
+      "documents": 1,
+      "pages": 24,
+      "chunks": 89,
+      "document_topics": 3
+    }
+  },
+  "after_delete_counts": {
+    "d_604fcbd71b570f13ec0ed832c7c083728cf9b42170704f7fddd966530db96bee": {
+      "documents": 0,
+      "pages": 0,
+      "chunks": 0,
+      "document_topics": 0
+    },
+    "d_69c573c123ffd1538d432ab31040072dec01a375a4a5b7c2960a7667cb970dda": {
+      "documents": 0,
+      "pages": 0,
+      "chunks": 0,
+      "document_topics": 0
+    },
+    "d_a1dfa622dabb6a58261c9eb6367ffd4a4d51dffbf9f74e9741c1d18ad3aba967": {
+      "documents": 0,
+      "pages": 0,
+      "chunks": 0,
+      "document_topics": 0
+    },
+    "d_b9cae993bbd44a679c75aae59ae802845d0321c9e4ee163a1c77b00417371f3b": {
+      "documents": 0,
+      "pages": 0,
+      "chunks": 0,
+      "document_topics": 0
+    },
+    "d_c4eb5fe23e480decfa6f08afda0fdb0bea4d0fe5ee7fafc65f2a2d34a397ddf0": {
+      "documents": 0,
+      "pages": 0,
+      "chunks": 0,
+      "document_topics": 0
+    },
+    "d_fe437770d7c981eae9e028eacaa5c772ed0add900ed9dec54c10cfce6dfd86c3": {
+      "documents": 0,
+      "pages": 0,
+      "chunks": 0,
+      "document_topics": 0
+    }
+  },
+  "remaining_documents": 169,
+  "no_metadata_update_used": true,
+  "old_pdfs_preserved": true,
+  "private_snapshot_index": "Frozen old index retained during metadata preview only; no maintenance-copy search results are used until first normal import rebuild."
+}
