@@ -11,3 +11,5 @@
 文档维护与配图来源见[维护记录](../validation/DEP-001/manual-reader-revision.md)。
 
 首页左侧可切换中文和英文界面。语言入口与原界面保留核对见[UI-002 R2 验证](../validation/UI-002/README.md)。
+
+2026年10月20日字体修订：Word与PDF阅读版统一采用微软雅黑。修订与逐页检查记录见[DOC-002](../validation/DOC-002/README.md)。

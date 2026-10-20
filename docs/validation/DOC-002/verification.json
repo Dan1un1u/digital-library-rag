@@ -1,0 +1,63 @@
+{
+  "status": "pass",
+  "version": "1.3 font revision",
+  "before_pdf_sha256": "5925c3d0d3f03ea96db51e24936962610c24eca95058111418e31e319d0c1c04",
+  "before_pdf_fonts": [
+    "/DLGYVJ+MS-Gothic",
+    "/LNUHNF+SimSun",
+    "/QHIUOC+Consolas",
+    "/TVOIEN+Calibri-Bold",
+    "/YMVEVT+MicrosoftYaHei",
+    "/YWSWBG+MicrosoftYaHei-Bold"
+  ],
+  "after_pdf_sha256": "741ea8f39efac24cac6d1e0592d1d9802e4fe2339665ec299ad40020fc15fb73",
+  "after_pdf_fonts": {
+    "/YWSWBG+MicrosoftYaHei-Bold": {
+      "embedded": true
+    },
+    "/QHIUOC+Consolas": {
+      "embedded": true
+    },
+    "/YMVEVT+MicrosoftYaHei": {
+      "embedded": true
+    }
+  },
+  "docx_sha256": "d1b29fab5c6be926cd7c816607be0a36ad19fa207c77b6825217423e36a41989",
+  "builder_sha256": "a1f806b25adcbeac166b4d071b4a97b94f0ba64514a6288be1ca458d5b6e2120",
+  "generator_rebuild_fonts_verified": true,
+  "font_normalization_idempotent": true,
+  "pages": 11,
+  "visually_reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "review": "All pages inspected. Chinese glyphs, title, body, tables, captions and page numbers render correctly; no new clipping, overlap or empty pages.",
+  "content_and_images_unchanged": true,
+  "application_code_changed": false,
+  "page_sha256": {
+    "page-1.png": "80ceea550a18847eed47ddabebab416e5e26e2f69613b403dd6a4a528c6c753d",
+    "page-10.png": "6143ddd420c06140284aaa6b7e89a90218dd88c8f1b3dac4d6a25ee7645c1f31",
+    "page-11.png": "73854a963da8abd3d939be3dff544746ea40262441f5c23f5fd3051bf91349bc",
+    "page-2.png": "025e8aab1ee18ce82588f83f4a9d6bf846fa8112b79eea3796443083c25976f4",
+    "page-3.png": "983783210aa6accf835cad29d5f8460e2599736f8652939e866c7de87c390129",
+    "page-4.png": "a5750b52846aae094431a8fc46fab175f088d1e26f2b4273e10cda9aed3cda53",
+    "page-5.png": "13159c89c3e3decb95c4339aa73d810b176e235a7b2007d6ef35a1c3df697b09",
+    "page-6.png": "fa2a30bd0ed941807f23443c269f66b5ad061abd51bc63fa557f1c9cb699fd94",
+    "page-7.png": "7ab9b6d98165d2a7815cef5e96eb12d8ad6628e78fa29083c8a7f0f0067e341f",
+    "page-8.png": "753bea44556ae32c7868647906106ddb0b1f6e2f8b11ab6294e46e2210cbaded",
+    "page-9.png": "46140cf593c27216dc77188acad952588905f15f7d987ff007b4c20c27974560"
+  },
+  "local_deliverables": [
+    "D:\\llm_exp\\digital-library\\workspace\\documents\\user-guide\\20261020-fonts\\专题数字图书馆使用手册.docx",
+    "D:\\llm_exp\\digital-library\\workspace\\documents\\user-guide\\20261020-fonts\\专题数字图书馆使用手册.pdf"
+  ]
+}

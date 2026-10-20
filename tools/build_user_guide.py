@@ -14,6 +14,61 @@ from docx.shared import Inches, Pt, RGBColor
 from docx.enum.table import WD_CELL_VERTICAL_ALIGNMENT
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from PIL import Image
+from lxml import etree
+
+
+CHINESE_FONT = 'Microsoft YaHei'
+
+
+def configure_chinese_fonts(document):
+    """Keep theme fonts from overriding Chinese text in Word and PDF exports."""
+    namespaces = {'w': 'http://schemas.openxmlformats.org/wordprocessingml/2006/main',
+                  'a': 'http://schemas.openxmlformats.org/drawingml/2006/main'}
+    japanese_fonts = {'MS Gothic', 'MS-Gothic', 'ＭＳ ゴシック', 'MS Mincho', 'ＭＳ 明朝'}
+    for part in document.part.package.parts:
+        name = str(part.partname)
+        if not name.startswith('/word/') or not name.endswith('.xml'):
+            continue
+        element = getattr(part, '_element', None)
+        root = element if element is not None else etree.fromstring(part.blob)
+        # Include text in table cells, headers, footers and field results.
+        for run in root.findall('.//w:r', namespaces):
+            properties = run.find(qn('w:rPr'))
+            if properties is None:
+                properties = OxmlElement('w:rPr')
+                run.insert(0, properties)
+            if properties.find(qn('w:rFonts')) is None:
+                properties.insert(0, OxmlElement('w:rFonts'))
+        for fonts in root.findall('.//w:rFonts', namespaces):
+            latin = 'Consolas' if 'Consolas' in fonts.attrib.values() else CHINESE_FONT
+            for key in list(fonts.attrib):
+                if 'theme' in key.lower():
+                    del fonts.attrib[key]
+            for script in ['ascii', 'hAnsi', 'cs']:
+                fonts.set(qn('w:' + script), latin)
+            fonts.set(qn('w:eastAsia'), CHINESE_FONT)
+        for tag in ['w:lang', 'w:themeFontLang']:
+            for language in root.findall('.//' + tag, namespaces):
+                language.set(qn('w:eastAsia'), 'zh-CN')
+        for tag in ['a:latin', 'a:ea', 'a:cs']:
+            for font in root.findall('.//' + tag, namespaces):
+                font.set('typeface', CHINESE_FONT)
+        for font in root.findall('.//a:font', namespaces):
+            if font.get('script') in {'Jpan', 'Hans', 'Hant'} or font.get('typeface') in japanese_fonts:
+                font.set('typeface', CHINESE_FONT)
+        for font in list(root.findall('.//w:font', namespaces)):
+            if font.get(qn('w:name')) in japanese_fonts:
+                font.getparent().remove(font)
+        if name == '/word/fontTable.xml' and not any(
+                font.get(qn('w:name')) == CHINESE_FONT for font in root):
+            font = OxmlElement('w:font')
+            font.set(qn('w:name'), CHINESE_FONT)
+            alias = OxmlElement('w:altName')
+            alias.set(qn('w:val'), '微软雅黑')
+            font.append(alias)
+            root.append(font)
+        if element is None:
+            part._blob = etree.tostring(root, encoding='UTF-8', xml_declaration=True, standalone=True)
 
 
 def inline(paragraph, text):
@@ -36,8 +91,8 @@ def build(source, destination):
     section.header_distance, section.footer_distance = Inches(.25), Inches(.25)
     for name in ['Normal', 'Title', 'Subtitle', 'Heading 1', 'Heading 2', 'Caption']:
         style = doc.styles[name]
-        style.font.name = 'Microsoft YaHei'
-        style.element.get_or_add_rPr().get_or_add_rFonts().set(qn('w:eastAsia'), 'Microsoft YaHei')
+        style.font.name = CHINESE_FONT
+        style.element.get_or_add_rPr().get_or_add_rFonts().set(qn('w:eastAsia'), CHINESE_FONT)
         style.font.color.rgb = RGBColor(0, 0, 0)
         grid = OxmlElement('w:snapToGrid')
         grid.set(qn('w:val'), '0')
@@ -188,6 +243,7 @@ def build(source, destination):
             p.paragraph_format.first_line_indent = Inches(-.18)
         inline(p, line)
     destination.parent.mkdir(parents=True, exist_ok=True)
+    configure_chinese_fonts(doc)
     doc.save(destination)
 
 
