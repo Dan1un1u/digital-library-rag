@@ -1,0 +1,7 @@
+{
+  "tested_commit": "1447f2a8b0446f25f40f7c71726c8dc0e8d99efd",
+  "app_tree": "a78547ea47fed51710dfc95959ec2f9495115691",
+  "original_rollback_commit": "cd7ab93d6a93bfce4df8df34e47ef82007741c86",
+  "rollback_tree_equals_main": true,
+  "subsequent_changes": "Documentation, screenshots and validation records only."
+}

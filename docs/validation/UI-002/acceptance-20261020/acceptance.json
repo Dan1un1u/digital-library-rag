@@ -1,0 +1,19 @@
+{
+  "status": "pass",
+  "pr": 10,
+  "tested_head": "93dc297374a9718523795f3f5a6c1520aae9b8fb",
+  "app_tree": "a78547ea47fed51710dfc95959ec2f9495115691",
+  "target_passed": 26,
+  "full_passed": 623,
+  "source_review": [
+    "Language labels and source-page locale only; no provider or ingestion changes.",
+    "Original STYLE, 163 Streamlit controls, layout and three forms retained.",
+    "Canonical metadata and quoted source text unchanged; independent session language.",
+    "Original handbook builder unchanged; source/DOCX hashes match the 11-page rendered evidence."
+  ],
+  "blocking_findings": [],
+  "merge_authorization": "User explicitly authorized acceptance and PR10 then PR11 merge on 2026-10-20.",
+  "joint_validation": "Completed and recorded separately before merges in PR11 acceptance records.",
+  "hosted_ci": "No hosted check runs or status checks configured on the inspected head.",
+  "deployment": false
+}

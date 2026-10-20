@@ -2,7 +2,7 @@ import json
 from contextlib import contextmanager
 from pathlib import Path
 from tempfile import TemporaryDirectory
-from typing import Annotated
+from typing import Annotated, Literal
 from fastapi import APIRouter, File, Form, Query, Request, UploadFile
 from fastapi.responses import FileResponse, JSONResponse, HTMLResponse, Response
 from dlrag.shared.models import AskRequest, Chunk, Document, Feedback, Filters, Metadata, SearchRequest
@@ -179,10 +179,18 @@ def ask_progress(request: Request, job_id: str):
 
 @router.get('/sources/{chunk_id}', response_class=HTMLResponse)
 def citation_source(request: Request, chunk_id: str,
-                    span: Annotated[list[str] | None, Query()] = None, index_version: str | None = None):
+                    span: Annotated[list[str] | None, Query()] = None, index_version: str | None = None,
+                    lang: Literal['zh', 'en'] = 'zh'):
     from .sources import read_source, pdf_preview, source_html
-    chunk, highlights, path = read_source(request.app.state.services, chunk_id, span or [], index_version)
+    from dlrag.shared.i18n import use_language, error_message
+    try:
+        chunk, highlights, path = read_source(request.app.state.services, chunk_id, span or [], index_version)
+    except ProjectError as error:
+        if lang == 'en':
+            with use_language(lang):
+                raise ProjectError(error.code, error_message({'code': error.code, 'message': error.message})) from None
+        raise
     image, matched = pdf_preview(path, chunk['pdf_page'], highlights)
-    return HTMLResponse(source_html(chunk, highlights, image, matched), headers={
+    return HTMLResponse(source_html(chunk, highlights, image, matched, language=lang), headers={
         'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff',
         'Content-Security-Policy': "default-src 'none'; img-src data:; style-src 'unsafe-inline'; base-uri 'none'; frame-ancestors 'none'"})

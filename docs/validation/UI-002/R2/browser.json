@@ -1,0 +1,49 @@
+{
+  "tested_commit": "1447f2a8b0446f25f40f7c71726c8dc0e8d99efd",
+  "ui": "http://127.0.0.1:19640/",
+  "api": "http://127.0.0.1:19040",
+  "storage": "runtime/UI-002-R2/dev-library",
+  "service": "mock; synthetic PDFs; no model calls",
+  "steps": [
+    "Default Chinese homepage displays the added language selector and original dark theme.",
+    "Select English: labels change; original heading, metric and chart layout remains.",
+    "Submit keyword search through the restored query form; ranked documents and source passages render in English UI.",
+    "Open upload, select demo-4.pdf through the browser file chooser; metadata suggestions prefill.",
+    "Original upload form retains the Import document submit button; enter 2025, topics and rights note, then submit.",
+    "Manage documents lists four documents, including Neural Information Retrieval as Ready to read.",
+    "Switch to Chinese: same four documents and canonical natural-science classification display correctly.",
+    "System settings retains its original parent heading and panel structure."
+  ],
+  "new_document": {
+    "doc_id": "d_3b0eefcef05d0618f0a5fa0533eebcf46848623f27322fd3029a2f925cc8f760",
+    "file_sha256": "3b0eefcef05d0618f0a5fa0533eebcf46848623f27322fd3029a2f925cc8f760",
+    "status": "ready",
+    "page_count": 1,
+    "title": "Neural Information Retrieval",
+    "authors": [
+      "Jane Smith",
+      "Wei Chen"
+    ],
+    "year": 2025,
+    "topics": [
+      "digital libraries",
+      "retrieval",
+      "自然科学"
+    ],
+    "language": "en",
+    "source_url": null,
+    "rights_note": "Synthetic demonstration fixture"
+  },
+  "dev_snapshot_sha256": "bb74a3626e6a1c42f002cbc3d9d1488b8e166eec57a40221c1b09e218af5dcdc",
+  "screenshot_files": {
+    "home-en.png": "789a2d1dc1123f3a5fcfa86ecfcbbd15044a298b63fb32701153a763cbc2e6ee",
+    "home-zh.png": "092becbc3c6793dac5891c3836528ca787a2a7595e8107d819bc5695e313a10a",
+    "import-en.png": "128c5cfcf0821a45fbd69a9e3a9a5c746956e8f5aeb3c8072dac17316cccdffb",
+    "manage-en.png": "be7d6f3757f367cae58b26a9b283604da89dadb3dd4e9dafbe56f771681600b2",
+    "manage-zh.png": "a7d6d5249ab985c4cafa6e99baf933897b5d2f9a1273513816af85b0e9afb8f2",
+    "search-en.png": "a66c82321f62f52ddd864dbbabd047391e7430ba31c450804ef4cb8d7c633d04",
+    "settings-zh.png": "ab1bf2db431c56c4bba29056c5bc5fd80bfe8172eb9f4eb6b632dcd5f4be70a9",
+    "upload-en.png": "bc577ba26ec37a22a81de838e6aa7e70663ddebc73399e5377f711b67ca3af81"
+  },
+  "unsent_form_drafts_across_language_switch": "No new preservation behavior; original Streamlit form workflow retained."
+}

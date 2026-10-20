@@ -1,0 +1,36 @@
+{
+  "version": "1.3",
+  "source": "docs/user-guide/使用手册.md",
+  "source_sha256": "cd7f36121dd19f5b9d30ecda5425e1c5188f709bf60a264f381258be11b2c5ce",
+  "docx_sha256": "0f0b4c2673beb26d0424b6c7e5ffad6b1d4b79344ab38459b82a1606792e66a2",
+  "changes": "Only version/date, opening language-selector instructions and homepage figure. Original chapters, styles and builder retained.",
+  "renderer": "packaged render_docx.py with native WPS PDF export, 140 DPI",
+  "pages": 11,
+  "visually_reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "review": "All pages inspected; no new overflow, clipping, blank pages or detached captions.",
+  "page_sha256": {
+    "page-1.png": "b3188f639f6e7252d1cabede269621a1b401c7c102b14550d5bccfff5fa93fb8",
+    "page-10.png": "3b12792ae669c3464e7b4afbcaf832247cd7c2a746882b427c75d08d7de72151",
+    "page-11.png": "e297d29d4dd95f7028466e8e34aecd4e87debbc57edcddd6644550384e3dbfa0",
+    "page-2.png": "358324694f0be5d87d204009602369f2a4e1d6b92a485e411b419f9ad70c6e7d",
+    "page-3.png": "98f6ef26f8dbfa75087030935d550b08d39161d2de1c949ee718f9ece48dde52",
+    "page-4.png": "ea13f2c38cbb3f96f82e0e738d3834650c2d29027508ab562363899e6e32e669",
+    "page-5.png": "1cbb8fe1c340c3637c28de1253f65e7d9a84faff539ee0a608ba4f93b50a9f06",
+    "page-6.png": "1ad6d4b49cb2f56bb229353cd8af70475f57ce9866390f99803a1a86c266c6fd",
+    "page-7.png": "a0a074bbe7e9518c99057b4ff0680eeefb200523cde1132c09e65beb39284812",
+    "page-8.png": "bfbc175b41870b585b428c93c8300af180ec88c66c820947617b5e48cadf9bfd",
+    "page-9.png": "3e74418d00eb3c4d5e4da305165d1ed46dbf3b07fd1bec531af26ede0e9be477"
+  }
+}
