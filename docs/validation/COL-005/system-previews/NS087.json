@@ -1,0 +1,198 @@
+{
+  "item_id": "NS087",
+  "source_sha256": "f96939ec8dcf9403410cee17448f17e2bf1cc9a9bd13f446f847d5e11eb9a08f",
+  "deployed_commit": "8174362c38fcd62b722b5133692c7e9662355b87",
+  "preview": {
+    "metadata": {
+      "title": "The Human Connectome Project: A data acquisition perspective",
+      "authors": [
+        "D.C. Van Essen",
+        "K. Ugurbil",
+        "E. Auerbach",
+        "D. Barch",
+        "T.E.J. Behrens",
+        "R. Bucholz",
+        "A. Chang",
+        "L. Chen",
+        "M. Corbetta",
+        "S.W. Curtiss",
+        "S. Della Penna",
+        "D. Feinberg",
+        "M.F. Glasser",
+        "N. Harel",
+        "A.C. Heath",
+        "L. Larson-Prior",
+        "D. Marcus",
+        "G. Michalareas",
+        "S. Moeller",
+        "R. Oostenveld",
+        "S.E. Petersen",
+        "F. Prior",
+        "B.L. Schlaggar",
+        "S.M. Smith",
+        "A.Z. Snyder",
+        "J. Xu",
+        "E. Yacoub",
+        "WU-Minn HCP Consortium"
+      ],
+      "year": 2012,
+      "language": "en",
+      "source_url": "https://doi.org/10.1016/j.neuroimage.2012.02.018",
+      "topics": [
+        "自然科学"
+      ]
+    },
+    "field_sources": {
+      "title": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "source_url": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "language": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "authors": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "year": {
+        "method": "bibliographic_lookup",
+        "provider": "crossref",
+        "record_url": "https://api.crossref.org/works/10.1016%2Fj.neuroimage.2012.02.018",
+        "retrieved_at": "2026-10-20T05:10:56.080422+00:00",
+        "date_type": "published-print",
+        "excerpt": "[Full page excerpt retained privately]"
+      }
+    },
+    "warnings": [
+      "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+      "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序，以及年份是否对应所收录版本。",
+      "已依据题名和作者吻合的 Crossref 出版记录补全候选字段；DOI 可作为相关出版来源，年份还须与所收录版本对应，请核对后导入。"
+    ],
+    "requires_confirmation": true,
+    "page_count": 10,
+    "method": "local_and_api_page_recognition",
+    "api_assistance": {
+      "status": "completed",
+      "accepted_fields": 5
+    },
+    "bibliographic_enrichment": {
+      "policy": "crossref-collected-version-v2",
+      "provider": "crossref",
+      "status": "completed",
+      "missing_before": [
+        "year"
+      ],
+      "filled_fields": [
+        "year"
+      ],
+      "conflicts": [],
+      "candidates": [
+        {
+          "title": "The Human Connectome Project: A data acquisition perspective",
+          "authors": [
+            "D.C. Van Essen",
+            "K. Ugurbil",
+            "E. Auerbach",
+            "D. Barch",
+            "T.E.J. Behrens",
+            "R. Bucholz",
+            "A. Chang",
+            "L. Chen",
+            "M. Corbetta",
+            "S.W. Curtiss",
+            "S. Della Penna",
+            "D. Feinberg",
+            "M.F. Glasser",
+            "N. Harel",
+            "A.C. Heath",
+            "L. Larson-Prior",
+            "D. Marcus",
+            "G. Michalareas",
+            "S. Moeller",
+            "R. Oostenveld",
+            "S.E. Petersen",
+            "F. Prior",
+            "B.L. Schlaggar",
+            "S.M. Smith",
+            "A.Z. Snyder",
+            "J. Xu",
+            "E. Yacoub"
+          ],
+          "doi": "10.1016/j.neuroimage.2012.02.018",
+          "source_url": "https://doi.org/10.1016/j.neuroimage.2012.02.018",
+          "record_url": "https://api.crossref.org/works/10.1016%2Fj.neuroimage.2012.02.018",
+          "type": "journal-article",
+          "dates": [
+            {
+              "kind": "published-print",
+              "date_parts": [
+                2012,
+                10
+              ],
+              "year": 2012
+            },
+            {
+              "kind": "published",
+              "date_parts": [
+                2012,
+                10
+              ],
+              "year": 2012
+            }
+          ],
+          "selected_date": {
+            "kind": "published-print",
+            "date_parts": [
+              2012,
+              10
+            ],
+            "year": 2012
+          },
+          "match": {
+            "title": "normalized_exact",
+            "first_author": "exact",
+            "author_overlap": 27,
+            "required_overlap": 23
+          }
+        }
+      ],
+      "queried_at": "2026-10-20T05:10:56.080422+00:00",
+      "year_decision": "same_publication_version"
+    },
+    "document_version": {
+      "kind": "publication",
+      "dois": [
+        "10.1016/j.neuroimage.2012.02.018"
+      ]
+    },
+    "year_review": {
+      "policy": "crossref-collected-version-v2",
+      "status": "candidate_supported",
+      "source": "crossref",
+      "grounding": "registry_record",
+      "date_type": "published-print"
+    },
+    "discipline_classification": {
+      "status": "classified",
+      "method": "llm_page_classification",
+      "value": "自然科学",
+      "pdf_page": 1,
+      "reason": "论文主要介绍人脑连接组研究及其神经影像数据采集，属于脑科学与神经科学研究。"
+    }
+  },
+  "fulltext": {
+    "status": "eligible",
+    "pages": 10
+  },
+  "outcome": "preview_completed",
+  "elapsed_seconds": 19.52
+}

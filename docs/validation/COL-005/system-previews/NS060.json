@@ -1,0 +1,143 @@
+{
+  "item_id": "NS060",
+  "source_sha256": "144e8aa67b417442d6c57d6396276a2f366b147e90686fc65d8ac0ccd2f91780",
+  "deployed_commit": "8174362c38fcd62b722b5133692c7e9662355b87",
+  "preview": {
+    "metadata": {
+      "title": "Accelerated modern human–induced species losses: Entering the sixth mass extinction",
+      "authors": [
+        "Gerardo Ceballos",
+        "Paul R. Ehrlich",
+        "Anthony D. Barnosky",
+        "Andrés García",
+        "Robert M. Pringle",
+        "Todd M. Palmer"
+      ],
+      "year": null,
+      "language": "en",
+      "source_url": "https://doi.org/10.1126/sciadv.1400253",
+      "topics": []
+    },
+    "field_sources": {
+      "title": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "authors": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "language": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "source_url": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      }
+    },
+    "warnings": [
+      "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+      "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+      "版本年份待核对：页面没有可对应到所收录版本的日期说明；已留空，可根据所收录文件核对后填写。",
+      "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序，以及年份是否对应所收录版本。",
+      "外部出版日期未能确定对应所收录版本；版本年份继续留空。相关记录仅供核对，可按文件上的日期手动填写。"
+    ],
+    "requires_confirmation": true,
+    "page_count": 5,
+    "method": "local_and_api_page_recognition",
+    "api_assistance": {
+      "status": "completed",
+      "accepted_fields": 4
+    },
+    "bibliographic_enrichment": {
+      "policy": "crossref-collected-version-v2",
+      "provider": "crossref",
+      "status": "completed",
+      "missing_before": [
+        "year"
+      ],
+      "filled_fields": [],
+      "conflicts": [],
+      "candidates": [
+        {
+          "title": "Accelerated modern human–induced species losses: Entering the sixth mass extinction",
+          "authors": [
+            "Gerardo Ceballos",
+            "Paul R. Ehrlich",
+            "Anthony D. Barnosky",
+            "Andrés García",
+            "Robert M. Pringle",
+            "Todd M. Palmer"
+          ],
+          "doi": "10.1126/sciadv.1400253",
+          "source_url": "https://doi.org/10.1126/sciadv.1400253",
+          "record_url": "https://api.crossref.org/works/10.1126%2Fsciadv.1400253",
+          "type": "journal-article",
+          "dates": [
+            {
+              "kind": "published-print",
+              "date_parts": [
+                2015,
+                6,
+                5
+              ],
+              "year": 2015
+            },
+            {
+              "kind": "published",
+              "date_parts": [
+                2015,
+                6,
+                5
+              ],
+              "year": 2015
+            }
+          ],
+          "selected_date": {
+            "kind": "published-print",
+            "date_parts": [
+              2015,
+              6,
+              5
+            ],
+            "year": 2015
+          },
+          "match": {
+            "title": "normalized_exact",
+            "first_author": "exact",
+            "author_overlap": 6,
+            "required_overlap": 5
+          }
+        }
+      ],
+      "queried_at": "2026-10-20T05:07:32.473555+00:00",
+      "year_decision": "version_not_confirmed"
+    },
+    "document_version": {
+      "kind": "unknown",
+      "dois": []
+    },
+    "year_review": {
+      "policy": "collected-version-year-v2",
+      "status": "needs_confirmation",
+      "reason": "missing_version_context",
+      "rejected_value": 2015
+    },
+    "discipline_classification": {
+      "status": "pending",
+      "method": "unresolved",
+      "value": null
+    }
+  },
+  "fulltext": {
+    "status": "eligible",
+    "pages": 5
+  },
+  "outcome": "preview_completed",
+  "elapsed_seconds": 15.72
+}

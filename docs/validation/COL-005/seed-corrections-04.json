@@ -1,0 +1,42 @@
+[
+  {
+    "item_id": "NS033",
+    "before": [
+      "化学材料",
+      "合成化学与点击反应",
+      "Copper-free click chemistry for dynamic in vivo imaging",
+      "",
+      "10.1073/pnas.0707090104",
+      ""
+    ],
+    "after": [
+      "化学材料",
+      "合成化学与点击反应",
+      "Click Chemistry: Diverse Chemical Function from a Few Good Reactions",
+      "",
+      "10.1002/1521-3773(20010601)40:11<2004::AID-ANIE2004>3.0.CO;2-5",
+      "https://www.renyi.hu/~stipsicz/Mezo_DECEMBER/click/click.pdf"
+    ],
+    "reason": "Correct mistaken ENCODE DOI; recover original click-chemistry review from university source."
+  },
+  {
+    "item_id": "NS071",
+    "before": [
+      "分子遗传",
+      "染色质与表观遗传",
+      "The ENCODE (ENCyclopedia Of DNA Elements) Project",
+      "",
+      "10.1371/journal.pbio.0020073",
+      ""
+    ],
+    "after": [
+      "分子遗传",
+      "染色质与表观遗传",
+      "A User's Guide to the Encyclopedia of DNA Elements (ENCODE)",
+      "",
+      "10.1371/journal.pbio.1001046",
+      ""
+    ],
+    "reason": "Correct mistaken ENCODE DOI; recover original click-chemistry review from university source."
+  }
+]

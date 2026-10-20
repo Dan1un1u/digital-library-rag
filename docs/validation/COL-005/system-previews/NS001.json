@@ -1,0 +1,86 @@
+{
+  "item_id": "NS001",
+  "source_sha256": "945e278613c45ea1ab617b28c3095783d0e68958dc0546dfcfa9b42b9674fbe1",
+  "deployed_commit": "8174362c38fcd62b722b5133692c7e9662355b87",
+  "preview": {
+    "metadata": {
+      "title": "The entropy formula for the Ricci flow and its geometric applications",
+      "authors": [
+        "Grisha Perelman"
+      ],
+      "year": null,
+      "language": "en",
+      "source_url": null,
+      "topics": [
+        "自然科学"
+      ]
+    },
+    "field_sources": {
+      "title": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "authors": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "Grisha Perelman"
+      },
+      "language": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      }
+    },
+    "warnings": [
+      "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+      "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+      "版本年份待核对：页面没有可对应到所收录版本的日期说明；已留空，可根据所收录文件核对后填写。",
+      "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序，以及年份是否对应所收录版本。",
+      "书目查询未找到唯一、题名和作者均吻合的出版记录；缺失字段保持为空，请核对。"
+    ],
+    "requires_confirmation": true,
+    "page_count": 39,
+    "method": "local_and_api_page_recognition",
+    "api_assistance": {
+      "status": "completed",
+      "accepted_fields": 4
+    },
+    "bibliographic_enrichment": {
+      "policy": "crossref-collected-version-v2",
+      "provider": "crossref",
+      "status": "no_match",
+      "missing_before": [
+        "year",
+        "source_url"
+      ],
+      "filled_fields": [],
+      "conflicts": [],
+      "candidates": [],
+      "queried_at": "2026-10-20T04:59:30.664956+00:00"
+    },
+    "document_version": {
+      "kind": "manuscript",
+      "dois": []
+    },
+    "year_review": {
+      "policy": "collected-version-year-v2",
+      "status": "needs_confirmation",
+      "reason": "missing_version_context",
+      "rejected_value": 2024
+    },
+    "discipline_classification": {
+      "status": "classified",
+      "method": "llm_page_classification",
+      "value": "自然科学",
+      "pdf_page": 1,
+      "reason": "论文研究 Ricci 流及其几何应用，属于数学研究。"
+    }
+  },
+  "fulltext": {
+    "status": "eligible",
+    "pages": 39
+  },
+  "outcome": "preview_completed",
+  "elapsed_seconds": 12.44
+}

@@ -1,0 +1,11 @@
+{
+  "index_version": "idx_20261020T044716_affed36fa8b8",
+  "files": {
+    "current.json": "7c6395d7f71308e5fac04686dec6efc62c97d33e70b059bc1cff94d353f74c25",
+    "idx_20261020T044716_affed36fa8b8\\chunks.json": "55f1513015d17add06c25f891a960520ac89408afabd0ee40ead3ab37e6dd2ea",
+    "idx_20261020T044716_affed36fa8b8\\lexical.json": "ea1732014957ca5de07f198c99949b6503ca48b465940f23cfb660b70265885b",
+    "idx_20261020T044716_affed36fa8b8\\manifest.json": "5f49574879c67f7aa1827b5c6d586db17aac135e01cf1bf55c5b47f217dc913b",
+    "idx_20261020T044716_affed36fa8b8\\vectors.npy": "7c68faf85dff9eecf7124503468a85d0a3ff936b4bfdfed8e07a41bf1bfda2c3",
+    "library.sqlite": "7f0f500f04cdac88e621c1ec7f899a9e9fdaa848fdd790ba2b6334975ac62aa3"
+  }
+}

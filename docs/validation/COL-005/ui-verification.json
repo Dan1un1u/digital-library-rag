@@ -1,0 +1,46 @@
+{
+  "formal_url": "http://127.0.0.1:18501/?lang=zh",
+  "observed_total_documents": 175,
+  "observed_natural_science_documents": 118,
+  "observed_social_science_documents": 26,
+  "observed_humanities_documents": 25,
+  "legacy_unclassified_documents_preserved": 6,
+  "new_documents_all_natural_sciences": true,
+  "search": {
+    "query": "The electronic properties of graphene",
+    "mode": "hybrid",
+    "visible_document_count": 1,
+    "visible_chunk_count": 20,
+    "best_rank": 1,
+    "metadata_year": 2008,
+    "display_observation": "COL005-U01: grouped search card misses topics although stored/hit metadata is complete"
+  },
+  "served_pdf_checks": [
+    {
+      "item_id": "NS030",
+      "status": 200,
+      "bytes": 20173456,
+      "sha256": "f98314529433a4dbd03831bdb13589920eb35b436edf33666c2dc007a32aea63",
+      "exact_import_file": true
+    },
+    {
+      "item_id": "NS076",
+      "status": 200,
+      "bytes": 822892,
+      "sha256": "e6902725c8ba809f4601a1ecc3c18914d5df530bcd1ba3353584eda0228bfffc",
+      "exact_import_file": true
+    }
+  ],
+  "screenshots": [
+    "screenshots/formal-before.png",
+    "screenshots/formal-after.png",
+    "screenshots/formal-search.png"
+  ],
+  "active_deployment": {
+    "commit": "8174362c38fcd62b722b5133692c7e9662355b87",
+    "release": "library_main_20261020_8174362",
+    "source": "[private local file]",
+    "local_integration": "external; Git source unmodified"
+  },
+  "browser_returned_to_collection_overview": true
+}

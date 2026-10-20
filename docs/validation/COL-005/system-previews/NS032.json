@@ -1,0 +1,166 @@
+{
+  "item_id": "NS032",
+  "source_sha256": "f17764203551bf7f68815b61205522755d15f476ed9ad6f66e44c956f3183c8d",
+  "deployed_commit": "8174362c38fcd62b722b5133692c7e9662355b87",
+  "preview": {
+    "metadata": {
+      "title": "Band-Like Transport in High Mobility Unencapsulated Single-Layer MoS₂ Transistors",
+      "authors": [
+        "Deep Jariwala",
+        "Vinod K. Sangwan",
+        "Dattatray J. Late",
+        "James E. Johns",
+        "Vinayak P. Dravid",
+        "Tobin J. Marks",
+        "Lincoln J. Lauhon",
+        "Mark C. Hersam"
+      ],
+      "year": null,
+      "language": "en",
+      "source_url": "https://doi.org/10.1063/1.4803920",
+      "topics": [
+        "自然科学"
+      ]
+    },
+    "field_sources": {
+      "title": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "language": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "authors": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "source_url": {
+        "method": "bibliographic_lookup",
+        "provider": "crossref",
+        "record_url": "https://api.crossref.org/works/10.1063%2F1.4803920",
+        "retrieved_at": "2026-10-20T05:07:02.217715+00:00",
+        "date_type": null,
+        "excerpt": "[Full page excerpt retained privately]"
+      }
+    },
+    "warnings": [
+      "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+      "版本年份待核对：没有提供版本年份候选；已留空，可根据所收录文件核对后填写。",
+      "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序，以及年份是否对应所收录版本。",
+      "已依据题名和作者吻合的 Crossref 出版记录补全候选字段；DOI 可作为相关出版来源，年份还须与所收录版本对应，请核对后导入。",
+      "外部出版日期未能确定对应所收录版本；版本年份继续留空。相关记录仅供核对，可按文件上的日期手动填写。"
+    ],
+    "requires_confirmation": true,
+    "page_count": 16,
+    "method": "local_and_api_page_recognition",
+    "api_assistance": {
+      "status": "completed",
+      "accepted_fields": 4
+    },
+    "bibliographic_enrichment": {
+      "policy": "crossref-collected-version-v2",
+      "provider": "crossref",
+      "status": "completed",
+      "missing_before": [
+        "year",
+        "source_url"
+      ],
+      "filled_fields": [
+        "source_url"
+      ],
+      "conflicts": [],
+      "candidates": [
+        {
+          "title": "Band-like transport in high mobility unencapsulated single-layer MoS2 transistors",
+          "authors": [
+            "Deep Jariwala",
+            "Vinod K. Sangwan",
+            "Dattatray J. Late",
+            "James E. Johns",
+            "Vinayak P. Dravid",
+            "Tobin J. Marks",
+            "Lincoln J. Lauhon",
+            "Mark C. Hersam"
+          ],
+          "doi": "10.1063/1.4803920",
+          "source_url": "https://doi.org/10.1063/1.4803920",
+          "record_url": "https://api.crossref.org/works/10.1063%2F1.4803920",
+          "type": "journal-article",
+          "dates": [
+            {
+              "kind": "published-print",
+              "date_parts": [
+                2013,
+                4,
+                29
+              ],
+              "year": 2013
+            },
+            {
+              "kind": "published-online",
+              "date_parts": [
+                2013,
+                5,
+                1
+              ],
+              "year": 2013
+            },
+            {
+              "kind": "published",
+              "date_parts": [
+                2013,
+                4,
+                29
+              ],
+              "year": 2013
+            }
+          ],
+          "selected_date": {
+            "kind": "published-print",
+            "date_parts": [
+              2013,
+              4,
+              29
+            ],
+            "year": 2013
+          },
+          "match": {
+            "title": "normalized_exact",
+            "first_author": "exact",
+            "author_overlap": 8,
+            "required_overlap": 7
+          }
+        }
+      ],
+      "queried_at": "2026-10-20T05:07:02.217715+00:00",
+      "year_decision": "version_not_confirmed"
+    },
+    "document_version": {
+      "kind": "unknown",
+      "dois": []
+    },
+    "year_review": {
+      "policy": "collected-version-year-v2",
+      "status": "needs_confirmation",
+      "reason": "not_provided",
+      "rejected_value": null
+    },
+    "discipline_classification": {
+      "status": "classified",
+      "method": "llm_page_classification",
+      "value": "自然科学",
+      "pdf_page": 1,
+      "reason": "研究对象是单层二硫化钼晶体管中的电荷输运与散射机制，属于材料科学与电子器件研究。"
+    }
+  },
+  "fulltext": {
+    "status": "eligible",
+    "pages": 16
+  },
+  "outcome": "preview_completed",
+  "elapsed_seconds": 26.77
+}

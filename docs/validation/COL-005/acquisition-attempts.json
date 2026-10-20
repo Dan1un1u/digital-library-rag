@@ -1,0 +1,2855 @@
+{
+  "records": [
+    {
+      "record": "acquisition-history/NS015-01.json",
+      "item_id": "NS015",
+      "outcome": "needs_source_review",
+      "candidate_title": "Experimental Observation of the Quantum Anomalous Hall Effect in a Magnetic Topological Insulator",
+      "found_title": "$C^*$--algebras arising from group actions on the boundary of a triangle building",
+      "attempts": [
+        {
+          "url": "https://arxiv.org/abs/1302.5920",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 41402,
+          "final_url": "https://arxiv.org/abs/1302.5920"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS017-01.json",
+      "item_id": "NS017",
+      "outcome": "needs_source_review",
+      "candidate_title": "Experimental quantum teleportation",
+      "found_title": "Experimental Realization of Teleporting an Unknown Pure Quantum State via Dual Classical and Einstein-Podolski-Rosen Channels",
+      "attempts": [
+        {
+          "url": "https://arxiv.org/abs/quant-ph/9710013",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 41973,
+          "final_url": "https://arxiv.org/abs/quant-ph/9710013"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS018-01.json",
+      "item_id": "NS018",
+      "outcome": "needs_source_review",
+      "candidate_title": "Entanglement in many-body systems",
+      "found_title": "Area laws for the entanglement entropy - a review",
+      "attempts": [
+        {
+          "url": "https://arxiv.org/abs/0808.3773",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 45979,
+          "final_url": "https://arxiv.org/abs/0808.3773"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS019-01.json",
+      "item_id": "NS019",
+      "outcome": "needs_source_review",
+      "candidate_title": "Many-body localization and thermalization in quantum statistical mechanics",
+      "found_title": "Universal dynamics and renormalization in many body localized systems",
+      "attempts": [
+        {
+          "url": "https://arxiv.org/abs/1408.2834",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 41989,
+          "final_url": "https://arxiv.org/abs/1408.2834"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS023-01.json",
+      "item_id": "NS023",
+      "outcome": "needs_source_review",
+      "candidate_title": "Planck 2018 results. VI. Cosmological parameters",
+      "found_title": "Planck\n                    2018 results",
+      "attempts": [
+        {
+          "url": "https://arxiv.org/abs/1807.06209",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 78846,
+          "final_url": "https://arxiv.org/abs/1807.06209"
+        },
+        {
+          "url": "https://api.crossref.org/works/10.1051%2F0004-6361%2F201833910",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 97589,
+          "final_url": "https://api.crossref.org/works/10.1051%2F0004-6361%2F201833910"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS026-01.json",
+      "item_id": "NS026",
+      "outcome": "needs_source_review",
+      "candidate_title": "First Sagittarius A* Event Horizon Telescope Results. I. The Shadow of the Supermassive Black Hole in the Center of the Milky Way",
+      "found_title": "High-Speed Imaging Receiver Design for 6G Optical Wireless Communications: A Rate-FOV Trade-Off",
+      "attempts": [
+        {
+          "url": "https://arxiv.org/abs/2205.05626",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 45113,
+          "final_url": "https://arxiv.org/abs/2205.05626"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS026-02.json",
+      "item_id": "NS026",
+      "outcome": "needs_source_review",
+      "candidate_title": "First Sagittarius A* Event Horizon Telescope Results. I. The Shadow of the Supermassive Black Hole in the Center of the Milky Way",
+      "found_title": "High-Speed Imaging Receiver Design for 6G Optical Wireless Communications: A Rate-FOV Trade-Off",
+      "attempts": [
+        {
+          "url": "https://arxiv.org/abs/2205.05626",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 45113,
+          "final_url": "https://arxiv.org/abs/2205.05626"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS030-01.json",
+      "item_id": "NS030",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "The electronic properties of graphene",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://arxiv.org/abs/0709.1163",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 43576,
+          "final_url": "https://arxiv.org/abs/0709.1163"
+        },
+        {
+          "url": "https://api.crossref.org/works/10.1103%2FRevModPhys.81.109",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 49257,
+          "final_url": "https://api.crossref.org/works/10.1103%2FRevModPhys.81.109"
+        },
+        {
+          "url": "https://arxiv.org/pdf/0709.1163",
+          "status": 200,
+          "content_type": "application/pdf",
+          "bytes": 2610697,
+          "final_url": "https://arxiv.org/pdf/0709.1163"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS030-02.json",
+      "item_id": "NS030",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "The electronic properties of graphene",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://arxiv.org/abs/0709.1163",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 43576,
+          "final_url": "https://arxiv.org/abs/0709.1163"
+        },
+        {
+          "url": "https://api.crossref.org/works/10.1103%2FRevModPhys.81.109",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 49257,
+          "final_url": "https://api.crossref.org/works/10.1103%2FRevModPhys.81.109"
+        },
+        {
+          "url": "https://arxiv.org/pdf/0709.1163",
+          "status": 200,
+          "content_type": "application/pdf",
+          "bytes": 2610697,
+          "final_url": "https://arxiv.org/pdf/0709.1163"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS030-03.json",
+      "item_id": "NS030",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "The electronic properties of graphene",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://arxiv.org/abs/0709.1163",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 43576,
+          "final_url": "https://arxiv.org/abs/0709.1163"
+        },
+        {
+          "url": "https://api.crossref.org/works/10.1103%2FRevModPhys.81.109",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 49257,
+          "final_url": "https://api.crossref.org/works/10.1103%2FRevModPhys.81.109"
+        },
+        {
+          "url": "https://arxiv.org/pdf/0709.1163",
+          "status": 200,
+          "content_type": "application/pdf",
+          "bytes": 2610697,
+          "final_url": "https://arxiv.org/pdf/0709.1163"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS032-01.json",
+      "item_id": "NS032",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Single-layer MoS2 transistors",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1038%2Fnnano.2010.279",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 16349,
+          "final_url": "https://api.crossref.org/works/10.1038%2Fnnano.2010.279"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 7117,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fnnano.2010.279&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://www.nature.com/articles/nnano.2010.279.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 332616,
+          "final_url": "https://www.nature.com/articles/nnano.2010.279"
+        },
+        {
+          "url": "http://www.nature.com/articles/nnano.2010.279.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 332616,
+          "final_url": "https://www.nature.com/articles/nnano.2010.279"
+        },
+        {
+          "url": "https://infoscience.epfl.ch/record/164049/files/NatNano 6 135 (2011) Schwierz.pdf",
+          "status": 405,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 2117,
+          "final_url": "https://infoscience.epfl.ch/record/164049/files/NatNano%206%20135%20(2011)%20Schwierz.pdf"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS032-02.json",
+      "item_id": "NS032",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Single-layer MoS2 transistors",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1038%2Fnnano.2010.279",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 16349,
+          "final_url": "https://api.crossref.org/works/10.1038%2Fnnano.2010.279"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 7117,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fnnano.2010.279&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://www.nature.com/articles/nnano.2010.279.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 332616,
+          "final_url": "https://www.nature.com/articles/nnano.2010.279"
+        },
+        {
+          "url": "http://www.nature.com/articles/nnano.2010.279.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 332616,
+          "final_url": "https://www.nature.com/articles/nnano.2010.279"
+        },
+        {
+          "url": "https://infoscience.epfl.ch/record/164049/files/NatNano 6 135 (2011) Schwierz.pdf",
+          "status": 405,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 2117,
+          "final_url": "https://infoscience.epfl.ch/record/164049/files/NatNano%206%20135%20(2011)%20Schwierz.pdf"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS033-01.json",
+      "item_id": "NS033",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Click Chemistry: Diverse Chemical Function from a Few Good Reactions",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://moodle2.units.it/pluginfile.php/297534/mod_resource/content/1/ACIE_2001_2005_Click_Chemistry.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 63962,
+          "final_url": "https://moodle2.units.it/pluginfile.php/297534/mod_resource/content/1/ACIE_2001_2005_Click_Chemistry.pdf"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS033-02.json",
+      "item_id": "NS033",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Click Chemistry: Diverse Chemical Function from a Few Good Reactions",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://moodle2.units.it/pluginfile.php/297534/mod_resource/content/1/ACIE_2001_2005_Click_Chemistry.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 63962,
+          "final_url": "https://moodle2.units.it/pluginfile.php/297534/mod_resource/content/1/ACIE_2001_2005_Click_Chemistry.pdf"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS033-03.json",
+      "item_id": "NS033",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Copper-free click chemistry for dynamic in vivo imaging",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1073%2Fpnas.0707090104",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 7405,
+          "final_url": "https://api.crossref.org/works/10.1073%2Fpnas.0707090104"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 7516,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1073%2Fpnas.0707090104&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC2040404.1/PMC2040404.1.json",
+          "status": 404,
+          "content_type": "application/xml",
+          "bytes": 321,
+          "final_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC2040404.1/PMC2040404.1.json"
+        },
+        {
+          "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC2040404.2/PMC2040404.2.json",
+          "status": 404,
+          "content_type": "application/xml",
+          "bytes": 321,
+          "final_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC2040404.2/PMC2040404.2.json"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS033-04.json",
+      "item_id": "NS033",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Click Chemistry: Diverse Chemical Function from a Few Good Reactions",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1002%2F1521-3773%2820010601%2940%3A11%3C2004%3A%3AAID-ANIE2004%3E3.0.CO%3B2-5",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 55920,
+          "final_url": "https://api.crossref.org/works/10.1002%2F1521-3773%2820010601%2940%3A11%3C2004%3A%3AAID-ANIE2004%3E3.0.CO%3B2-5"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 3465,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1002%2F1521-3773%2820010601%2940%3A11%3C2004%3A%3AAID-ANIE2004%3E3.0.CO%3B2-5&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://www.renyi.hu/~stipsicz/Mezo_DECEMBER/click/click.pdf",
+          "error": "ProxyError"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS033-05.json",
+      "item_id": "NS033",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Click Chemistry: Diverse Chemical Function from a Few Good Reactions",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1002%2F1521-3773%2820010601%2940%3A11%3C2004%3A%3AAID-ANIE2004%3E3.0.CO%3B2-5",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 55920,
+          "final_url": "https://api.crossref.org/works/10.1002%2F1521-3773%2820010601%2940%3A11%3C2004%3A%3AAID-ANIE2004%3E3.0.CO%3B2-5"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 3465,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1002%2F1521-3773%2820010601%2940%3A11%3C2004%3A%3AAID-ANIE2004%3E3.0.CO%3B2-5&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://www.renyi.hu/~stipsicz/Mezo_DECEMBER/click/click.pdf",
+          "error": "ReadTimeout"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS041-01.json",
+      "item_id": "NS041",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "A new high-accuracy global digital elevation model",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1002%2F2017GL072874",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 13470,
+          "final_url": "https://api.crossref.org/works/10.1002%2F2017GL072874"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 186,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1002%2F2017GL072874&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1002%2F2017GL072874",
+          "status": 400,
+          "content_type": "text/plain",
+          "bytes": 0,
+          "final_url": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1002%2F2017GL072874"
+        },
+        {
+          "url": "http://api.wiley.com/onlinelibrary/chorus/v1/articles/10.1002%2F2017GL072874",
+          "status": 404,
+          "content_type": "application/json",
+          "bytes": 215,
+          "final_url": "http://api.wiley.com/onlinelibrary/chorus/v1/articles/10.1002%2F2017GL072874"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS041-02.json",
+      "item_id": "NS041",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "A new high-accuracy global digital elevation model",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1002%2F2017GL072874",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 13470,
+          "final_url": "https://api.crossref.org/works/10.1002%2F2017GL072874"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 186,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1002%2F2017GL072874&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1002%2F2017GL072874",
+          "status": 400,
+          "content_type": "text/plain",
+          "bytes": 0,
+          "final_url": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1002%2F2017GL072874"
+        },
+        {
+          "url": "http://api.wiley.com/onlinelibrary/chorus/v1/articles/10.1002%2F2017GL072874",
+          "status": 404,
+          "content_type": "application/json",
+          "bytes": 215,
+          "final_url": "http://api.wiley.com/onlinelibrary/chorus/v1/articles/10.1002%2F2017GL072874"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS041-03.json",
+      "item_id": "NS041",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "A new high-accuracy global digital elevation model",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1002%2F2017GL072874",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 13470,
+          "final_url": "https://api.crossref.org/works/10.1002%2F2017GL072874"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 186,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1002%2F2017GL072874&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://bibliotecadigital.ciren.cl/bitstream/handle/20.500.13082/32775/2017GL072874.pdf?isAllowed=y&sequence=1",
+          "status": 200,
+          "content_type": "text/html",
+          "bytes": 43732,
+          "final_url": "https://bibliotecadigital.ciren.cl/bitstream/handle/20.500.13082/32775/2017GL072874.pdf?isAllowed=y&sequence=1"
+        },
+        {
+          "url": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1002%2F2017GL072874",
+          "status": 400,
+          "content_type": "text/plain",
+          "bytes": 0,
+          "final_url": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1002%2F2017GL072874"
+        },
+        {
+          "url": "http://api.wiley.com/onlinelibrary/chorus/v1/articles/10.1002%2F2017GL072874",
+          "status": 404,
+          "content_type": "application/json",
+          "bytes": 215,
+          "final_url": "http://api.wiley.com/onlinelibrary/chorus/v1/articles/10.1002%2F2017GL072874"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS042-01.json",
+      "item_id": "NS042",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "The Generic Mapping Tools Version 6",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1029%2F2019GC008515",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 9313,
+          "final_url": "https://api.crossref.org/works/10.1029%2F2019GC008515"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 186,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1029%2F2019GC008515&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1029%2F2019GC008515",
+          "status": 400,
+          "content_type": "text/plain",
+          "bytes": 0,
+          "final_url": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1029%2F2019GC008515"
+        },
+        {
+          "url": "https://onlinelibrary.wiley.com/doi/pdf/10.1029/2019GC008515",
+          "status": 403,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 5636,
+          "final_url": "https://onlinelibrary.wiley.com/doi/pdf/10.1029/2019GC008515"
+        },
+        {
+          "url": "https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2019GC008515",
+          "status": 403,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 5665,
+          "final_url": "https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2019GC008515"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS042-02.json",
+      "item_id": "NS042",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "The Generic Mapping Tools Version 6",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1029%2F2019GC008515",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 9313,
+          "final_url": "https://api.crossref.org/works/10.1029%2F2019GC008515"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 186,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1029%2F2019GC008515&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1029%2F2019GC008515",
+          "status": 400,
+          "content_type": "text/plain",
+          "bytes": 0,
+          "final_url": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1029%2F2019GC008515"
+        },
+        {
+          "url": "https://onlinelibrary.wiley.com/doi/pdf/10.1029/2019GC008515",
+          "status": 403,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 5636,
+          "final_url": "https://onlinelibrary.wiley.com/doi/pdf/10.1029/2019GC008515"
+        },
+        {
+          "url": "https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2019GC008515",
+          "status": 403,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 5665,
+          "final_url": "https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2019GC008515"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS045-01.json",
+      "item_id": "NS045",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Comparing global seismic tomography models using varimax principal component analysis",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.5194%2Fse-12-1601-2021",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 25977,
+          "final_url": "https://api.crossref.org/works/10.5194%2Fse-12-1601-2021"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 189,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.5194%2Fse-12-1601-2021&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://se.copernicus.org/articles/12/1601/2021/se-12-1601-2021.pdf",
+          "status": 200,
+          "content_type": "application/pdf",
+          "bytes": 49733639,
+          "final_url": "https://se.copernicus.org/articles/12/1601/2021/se-12-1601-2021.pdf"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS045-02.json",
+      "item_id": "NS045",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Comparing global seismic tomography models using varimax principal component analysis",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.5194%2Fse-12-1601-2021",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 25977,
+          "final_url": "https://api.crossref.org/works/10.5194%2Fse-12-1601-2021"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 189,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.5194%2Fse-12-1601-2021&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://se.copernicus.org/articles/12/1601/2021/se-12-1601-2021.pdf",
+          "status": 200,
+          "content_type": "application/pdf",
+          "bytes": 49733639,
+          "final_url": "https://se.copernicus.org/articles/12/1601/2021/se-12-1601-2021.pdf"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS058-01.json",
+      "item_id": "NS058",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "The biomass distribution on Earth",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1073%2Fpnas.1711842115",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 24372,
+          "final_url": "https://api.crossref.org/works/10.1073%2Fpnas.1711842115"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 6749,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1073%2Fpnas.1711842115&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://www.pnas.org/content/pnas/115/25/6506.full.pdf",
+          "status": 403,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 5640,
+          "final_url": "https://www.pnas.org/content/pnas/115/25/6506.full.pdf"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS060-01.json",
+      "item_id": "NS060",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Accelerated modern human-induced species losses: Entering the sixth mass extinction",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1126%2Fsciadv.1400253",
+          "status": 429,
+          "content_type": null,
+          "bytes": 0,
+          "final_url": "https://api.crossref.org/works/10.1126%2Fsciadv.1400253"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 5937,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1126%2Fsciadv.1400253&format=json&resultType=core&pageSize=3"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS061-01.json",
+      "item_id": "NS061",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Mapping tree density at a global scale",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1038%2Fnature14967",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 21617,
+          "final_url": "https://api.crossref.org/works/10.1038%2Fnature14967"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 16000,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fnature14967&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://www.nature.com/articles/nature14967.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 438171,
+          "final_url": "https://www.nature.com/articles/nature14967"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS061-02.json",
+      "item_id": "NS061",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Mapping tree density at a global scale",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1038%2Fnature14967",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 21617,
+          "final_url": "https://api.crossref.org/works/10.1038%2Fnature14967"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 16000,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fnature14967&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://www.nature.com/articles/nature14967.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 438175,
+          "final_url": "https://www.nature.com/articles/nature14967"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS061-03.json",
+      "item_id": "NS061",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Mapping tree density at a global scale",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1038%2Fnature14967",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 21617,
+          "final_url": "https://api.crossref.org/works/10.1038%2Fnature14967"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 16000,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fnature14967&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://paul.zhdk.ch/pluginfile.php/90734/mod_resource/content/3/Crowther-2015%20%281%29.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 37480,
+          "final_url": "https://paul.zhdk.ch/login/index.php"
+        },
+        {
+          "url": "https://www.nature.com/articles/nature14967.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 438175,
+          "final_url": "https://www.nature.com/articles/nature14967"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS061-04.json",
+      "item_id": "NS061",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Mapping tree density at a global scale",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1038%2Fnature14967",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 21617,
+          "final_url": "https://api.crossref.org/works/10.1038%2Fnature14967"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 16000,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fnature14967&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://paul.zhdk.ch/pluginfile.php/90734/mod_resource/content/3/Crowther-2015%20%281%29.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 37480,
+          "final_url": "https://paul.zhdk.ch/login/index.php"
+        },
+        {
+          "url": "https://www.nature.com/articles/nature14967.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 438175,
+          "final_url": "https://www.nature.com/articles/nature14967"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS061-05.json",
+      "item_id": "NS061",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Mapping tree density at a global scale",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1038%2Fnature14967",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 21617,
+          "final_url": "https://api.crossref.org/works/10.1038%2Fnature14967"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 16000,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fnature14967&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://www.crowtherlab.com/wp-content/uploads/2019/06/Crowther-2015.pdf",
+          "status": 200,
+          "content_type": "text/html",
+          "bytes": 114,
+          "final_url": "https://www.crowtherlab.com/wp-content/uploads/2019/06/Crowther-2015.pdf"
+        },
+        {
+          "url": "https://www.nature.com/articles/nature14967.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 438175,
+          "final_url": "https://www.nature.com/articles/nature14967"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS062-01.json",
+      "item_id": "NS062",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Global effects of land use on local terrestrial biodiversity",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1038%2Fnature14324",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 161013,
+          "final_url": "https://api.crossref.org/works/10.1038%2Fnature14324"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 19240,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fnature14324&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://www.nature.com/articles/nature14324.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 989338,
+          "final_url": "https://www.nature.com/articles/nature14324"
+        },
+        {
+          "url": "http://www.nature.com/articles/nature14324.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 989338,
+          "final_url": "https://www.nature.com/articles/nature14324"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS062-02.json",
+      "item_id": "NS062",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Global effects of land use on local terrestrial biodiversity",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1038%2Fnature14324",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 161013,
+          "final_url": "https://api.crossref.org/works/10.1038%2Fnature14324"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 19240,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fnature14324&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://www.nature.com/articles/nature14324.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 989338,
+          "final_url": "https://www.nature.com/articles/nature14324"
+        },
+        {
+          "url": "http://www.nature.com/articles/nature14324.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 989338,
+          "final_url": "https://www.nature.com/articles/nature14324"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS063-01.json",
+      "item_id": "NS063",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Biodiversity loss and its impact on humanity",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1038%2Fnature11148",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 40256,
+          "final_url": "https://api.crossref.org/works/10.1038%2Fnature11148"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 6046,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fnature11148&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://www.nature.com/articles/nature11148.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 449530,
+          "final_url": "https://www.nature.com/articles/nature11148"
+        },
+        {
+          "url": "http://www.nature.com/articles/nature11148.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 449528,
+          "final_url": "https://www.nature.com/articles/nature11148"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS063-02.json",
+      "item_id": "NS063",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Biodiversity loss and its impact on humanity",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1038%2Fnature11148",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 40256,
+          "final_url": "https://api.crossref.org/works/10.1038%2Fnature11148"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 6046,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fnature11148&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://www.nature.com/articles/nature11148.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 449528,
+          "final_url": "https://www.nature.com/articles/nature11148"
+        },
+        {
+          "url": "http://www.nature.com/articles/nature11148.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 449528,
+          "final_url": "https://www.nature.com/articles/nature11148"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS063-03.json",
+      "item_id": "NS063",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Biodiversity loss and its impact on humanity",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1038%2Fnature11148",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 40256,
+          "final_url": "https://api.crossref.org/works/10.1038%2Fnature11148"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 6046,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fnature11148&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://ir.xtbg.ac.cn/bitstream/353005/9757/2/Biodiversity%20loss%20and%20its%20impact%20on%20humanity.pdf",
+          "error": "SSLError"
+        },
+        {
+          "url": "https://www.nature.com/articles/nature11148.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 449528,
+          "final_url": "https://www.nature.com/articles/nature11148"
+        },
+        {
+          "url": "http://www.nature.com/articles/nature11148.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 449528,
+          "final_url": "https://www.nature.com/articles/nature11148"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS063-04.json",
+      "item_id": "NS063",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Biodiversity loss and its impact on humanity",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1038%2Fnature11148",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 40256,
+          "final_url": "https://api.crossref.org/works/10.1038%2Fnature11148"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 6046,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fnature11148&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://ir.xtbg.ac.cn/bitstream/353005/9757/2/Biodiversity%20loss%20and%20its%20impact%20on%20humanity.pdf",
+          "error": "SSLError"
+        },
+        {
+          "url": "https://www.nature.com/articles/nature11148.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 449528,
+          "final_url": "https://www.nature.com/articles/nature11148"
+        },
+        {
+          "url": "http://www.nature.com/articles/nature11148.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 449528,
+          "final_url": "https://www.nature.com/articles/nature11148"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS064-01.json",
+      "item_id": "NS064",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Maximum entropy modeling of species geographic distributions",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1016%2Fj.ecolmodel.2005.03.026",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 28923,
+          "final_url": "https://api.crossref.org/works/10.1016%2Fj.ecolmodel.2005.03.026"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 197,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1016%2Fj.ecolmodel.2005.03.026&format=json&resultType=core&pageSize=3"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS064-02.json",
+      "item_id": "NS064",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Maximum entropy modeling of species geographic distributions",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1016%2Fj.ecolmodel.2005.03.026",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 28923,
+          "final_url": "https://api.crossref.org/works/10.1016%2Fj.ecolmodel.2005.03.026"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 197,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1016%2Fj.ecolmodel.2005.03.026&format=json&resultType=core&pageSize=3"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS065-01.json",
+      "item_id": "NS065",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Molecular Structure of Nucleic Acids: A Structure for Deoxyribose Nucleic Acid",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1038%2F171737a0",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 4482,
+          "final_url": "https://api.crossref.org/works/10.1038%2F171737a0"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 2503,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2F171737a0&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://www.nature.com/articles/171737a0.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 246629,
+          "final_url": "https://www.nature.com/articles/171737a0"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS065-02.json",
+      "item_id": "NS065",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Molecular Structure of Nucleic Acids: A Structure for Deoxyribose Nucleic Acid",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1038%2F171737a0",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 4482,
+          "final_url": "https://api.crossref.org/works/10.1038%2F171737a0"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 2503,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2F171737a0&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://www.nature.com/articles/171737a0.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 246631,
+          "final_url": "https://www.nature.com/articles/171737a0"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS065-03.json",
+      "item_id": "NS065",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Molecular Structure of Nucleic Acids: A Structure for Deoxyribose Nucleic Acid",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1038%2F171737a0",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 4482,
+          "final_url": "https://api.crossref.org/works/10.1038%2F171737a0"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 2503,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2F171737a0&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://web.eecs.umich.edu/~ryanph/jhu/cs718/spring18/project/dna.pdf",
+          "error": "SSLError"
+        },
+        {
+          "url": "https://www.nature.com/articles/171737a0.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 246631,
+          "final_url": "https://www.nature.com/articles/171737a0"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS066-01.json",
+      "item_id": "NS066",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "The replication of DNA in Escherichia coli",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1073%2Fpnas.44.7.671",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 7125,
+          "final_url": "https://api.crossref.org/works/10.1073%2Fpnas.44.7.671"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 2669,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1073%2Fpnas.44.7.671&format=json&resultType=core&pageSize=3"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS066-02.json",
+      "item_id": "NS066",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "The replication of DNA in Escherichia coli",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1073%2Fpnas.44.7.671",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 7125,
+          "final_url": "https://api.crossref.org/works/10.1073%2Fpnas.44.7.671"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 2669,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1073%2Fpnas.44.7.671&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC528642.1/PMC528642.1.json",
+          "status": 404,
+          "content_type": "application/xml",
+          "bytes": 319,
+          "final_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC528642.1/PMC528642.1.json"
+        },
+        {
+          "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC528642.2/PMC528642.2.json",
+          "status": 404,
+          "content_type": "application/xml",
+          "bytes": 319,
+          "final_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC528642.2/PMC528642.2.json"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS068-01.json",
+      "item_id": "NS068",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "A programmable dual-RNA-guided DNA endonuclease in adaptive bacterial immunity",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1126%2Fscience.1225829",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 10228,
+          "final_url": "https://api.crossref.org/works/10.1126%2Fscience.1225829"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 7159,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1126%2Fscience.1225829&format=json&resultType=core&pageSize=3"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS068-02.json",
+      "item_id": "NS068",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "A programmable dual-RNA-guided DNA endonuclease in adaptive bacterial immunity",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1126%2Fscience.1225829",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 10228,
+          "final_url": "https://api.crossref.org/works/10.1126%2Fscience.1225829"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 7159,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1126%2Fscience.1225829&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6286148.1/PMC6286148.1.json",
+          "status": 404,
+          "content_type": "application/xml",
+          "bytes": 301,
+          "final_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6286148.1/PMC6286148.1.json"
+        },
+        {
+          "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6286148.2/PMC6286148.2.json",
+          "status": 404,
+          "content_type": "application/xml",
+          "bytes": 301,
+          "final_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6286148.2/PMC6286148.2.json"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS068-03.json",
+      "item_id": "NS068",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "A programmable dual-RNA-guided DNA endonuclease in adaptive bacterial immunity",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1126%2Fscience.1225829",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 10228,
+          "final_url": "https://api.crossref.org/works/10.1126%2Fscience.1225829"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 7159,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1126%2Fscience.1225829&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6286148.1/PMC6286148.1.json",
+          "status": 404,
+          "content_type": "application/xml",
+          "bytes": 301,
+          "final_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6286148.1/PMC6286148.1.json"
+        },
+        {
+          "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6286148.2/PMC6286148.2.json",
+          "status": 404,
+          "content_type": "application/xml",
+          "bytes": 301,
+          "final_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6286148.2/PMC6286148.2.json"
+        },
+        {
+          "url": "https://www.kinampark.com/T-Polymers/files/All%20References/Jinek%202012%2C%20A%20Programmable%20dual-RNA%E2%80%93guided%20DNA%20endonuclease%20in%20adaptive%20bacterial%20immunity.pdf",
+          "error": "SSLError"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS068-04.json",
+      "item_id": "NS068",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "A programmable dual-RNA-guided DNA endonuclease in adaptive bacterial immunity",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1126%2Fscience.1225829",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 10228,
+          "final_url": "https://api.crossref.org/works/10.1126%2Fscience.1225829"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 7159,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1126%2Fscience.1225829&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6286148.1/PMC6286148.1.json",
+          "status": 404,
+          "content_type": "application/xml",
+          "bytes": 321,
+          "final_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6286148.1/PMC6286148.1.json"
+        },
+        {
+          "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6286148.2/PMC6286148.2.json",
+          "status": 404,
+          "content_type": "application/xml",
+          "bytes": 321,
+          "final_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6286148.2/PMC6286148.2.json"
+        },
+        {
+          "url": "https://kinampark.com/T-Polymers/files/All%20References/Jinek%202012%2C%20A%20Programmable%20dual-RNA%E2%80%93guided%20DNA%20endonuclease%20in%20adaptive%20bacterial%20immunity.pdf",
+          "error": "SSLError"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS070-01.json",
+      "item_id": "NS070",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "RNA-Seq: a revolutionary tool for transcriptomics",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1038%2Fnrg2484",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 17961,
+          "final_url": "https://api.crossref.org/works/10.1038%2Fnrg2484"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 4902,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fnrg2484&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://www.nature.com/articles/nrg2484.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 330303,
+          "final_url": "https://www.nature.com/articles/nrg2484"
+        },
+        {
+          "url": "http://www.nature.com/articles/nrg2484.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 330303,
+          "final_url": "https://www.nature.com/articles/nrg2484"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS070-02.json",
+      "item_id": "NS070",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "RNA-Seq: a revolutionary tool for transcriptomics",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1038%2Fnrg2484",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 17961,
+          "final_url": "https://api.crossref.org/works/10.1038%2Fnrg2484"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 4902,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fnrg2484&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC2949280.1/PMC2949280.1.json",
+          "status": 200,
+          "content_type": "binary/octet-stream",
+          "bytes": 573,
+          "final_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC2949280.1/PMC2949280.1.json"
+        },
+        {
+          "url": "https://www.nature.com/articles/nrg2484.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 330303,
+          "final_url": "https://www.nature.com/articles/nrg2484"
+        },
+        {
+          "url": "http://www.nature.com/articles/nrg2484.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 330303,
+          "final_url": "https://www.nature.com/articles/nrg2484"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS071-01.json",
+      "item_id": "NS071",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Transposition of native chromatin for fast and sensitive epigenomic profiling of open chromatin, DNA-binding proteins and nucleosome position",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1038%2Fnmeth.2688",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 16514,
+          "final_url": "https://api.crossref.org/works/10.1038%2Fnmeth.2688"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 7369,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fnmeth.2688&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://www.nature.com/articles/nmeth.2688.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 346096,
+          "final_url": "https://www.nature.com/articles/nmeth.2688"
+        },
+        {
+          "url": "http://www.nature.com/articles/nmeth.2688.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 346098,
+          "final_url": "https://www.nature.com/articles/nmeth.2688"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS071-02.json",
+      "item_id": "NS071",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Transposition of native chromatin for fast and sensitive epigenomic profiling of open chromatin, DNA-binding proteins and nucleosome position",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1038%2Fnmeth.2688",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 16514,
+          "final_url": "https://api.crossref.org/works/10.1038%2Fnmeth.2688"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 7369,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fnmeth.2688&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3959825.1/PMC3959825.1.json",
+          "status": 200,
+          "content_type": "binary/octet-stream",
+          "bytes": 618,
+          "final_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3959825.1/PMC3959825.1.json"
+        },
+        {
+          "url": "https://www.nature.com/articles/nmeth.2688.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 346098,
+          "final_url": "https://www.nature.com/articles/nmeth.2688"
+        },
+        {
+          "url": "http://www.nature.com/articles/nmeth.2688.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 346098,
+          "final_url": "https://www.nature.com/articles/nmeth.2688"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS071-03.json",
+      "item_id": "NS071",
+      "outcome": "needs_source_review",
+      "candidate_title": "The ENCODE (ENCyclopedia Of DNA Elements) Project",
+      "found_title": "Protein Nanomachines",
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1371%2Fjournal.pbio.0020073",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 3641,
+          "final_url": "https://api.crossref.org/works/10.1371%2Fjournal.pbio.0020073"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS072-01.json",
+      "item_id": "NS072",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "A draft map of the human proteome",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1038%2Fnature13302",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 28428,
+          "final_url": "https://api.crossref.org/works/10.1038%2Fnature13302"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 32546,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fnature13302&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://www.nature.com/articles/nature13302.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 587356,
+          "final_url": "https://www.nature.com/articles/nature13302"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS073-01.json",
+      "item_id": "NS073",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "RNA velocity of single cells",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1038%2Fs41586-018-0414-6",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 14533,
+          "final_url": "https://api.crossref.org/works/10.1038%2Fs41586-018-0414-6"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 16121,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fs41586-018-0414-6&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-018-0414-6.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 407640,
+          "final_url": "https://www.nature.com/articles/s41586-018-0414-6"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS075-01.json",
+      "item_id": "NS075",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Safety and Efficacy of the BNT162b2 mRNA Covid-19 Vaccine",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1056%2FNEJMoa2034577",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 39931,
+          "final_url": "https://api.crossref.org/works/10.1056%2FNEJMoa2034577"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 62499,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1056%2FNEJMoa2034577&format=json&resultType=core&pageSize=3"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS077-01.json",
+      "item_id": "NS077",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "The PRISMA 2020 statement: an updated guideline for reporting systematic reviews",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1136%2Fbmj.n71",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 14486,
+          "final_url": "https://api.crossref.org/works/10.1136%2Fbmj.n71"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 12848,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1136%2Fbmj.n71&format=json&resultType=core&pageSize=3"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS077-02.json",
+      "item_id": "NS077",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "The PRISMA 2020 statement: an updated guideline for reporting systematic reviews",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1136%2Fbmj.n71",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 14486,
+          "final_url": "https://api.crossref.org/works/10.1136%2Fbmj.n71"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 12848,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1136%2Fbmj.n71&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8005924.1/PMC8005924.1.json",
+          "status": 200,
+          "content_type": "binary/octet-stream",
+          "bytes": 873,
+          "final_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8005924.1/PMC8005924.1.json"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS077-03.json",
+      "item_id": "NS077",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "The PRISMA 2020 statement: an updated guideline for reporting systematic reviews",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1136%2Fbmj.n71",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 14486,
+          "final_url": "https://api.crossref.org/works/10.1136%2Fbmj.n71"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 12848,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1136%2Fbmj.n71&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8005924.1/PMC8005924.1.json",
+          "status": 200,
+          "content_type": "binary/octet-stream",
+          "bytes": 873,
+          "final_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8005924.1/PMC8005924.1.json"
+        },
+        {
+          "url": "https://www.bmj.com/content/bmj/372/bmj.n71.full.pdf",
+          "status": 403,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 5614,
+          "final_url": "https://www.bmj.com/content/bmj/372/bmj.n71.full.pdf"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS079-01.json",
+      "item_id": "NS079",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Global age-sex-specific fertility, mortality, healthy life expectancy, and population estimates in 204 countries and territories, 1950-2019: a comprehensive demographic analysis for the Global Burden of Disease Study 2019",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1016%2FS0140-6736%2820%2930977-6",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 127246,
+          "final_url": "https://api.crossref.org/works/10.1016%2FS0140-6736%2820%2930977-6"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 195,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1016%2FS0140-6736%2820%2930977-6&format=json&resultType=core&pageSize=3"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS079-02.json",
+      "item_id": "NS079",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Global age-sex-specific fertility, mortality, healthy life expectancy, and population estimates in 204 countries and territories, 1950-2019: a comprehensive demographic analysis for the Global Burden of Disease Study 2019",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1016%2FS0140-6736%2820%2930977-6",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 127246,
+          "final_url": "https://api.crossref.org/works/10.1016%2FS0140-6736%2820%2930977-6"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 195,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1016%2FS0140-6736%2820%2930977-6&format=json&resultType=core&pageSize=3"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS079-03.json",
+      "item_id": "NS079",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Burden of Depressive Disorders by Country, Sex, Age, and Year: Findings from the Global Burden of Disease Study 2010",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1371%2Fjournal.pmed.1001547",
+          "status": 429,
+          "content_type": null,
+          "bytes": 0,
+          "final_url": "https://api.crossref.org/works/10.1371%2Fjournal.pmed.1001547"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 7540,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1371%2Fjournal.pmed.1001547&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3818162.1/PMC3818162.1.json",
+          "status": 200,
+          "content_type": "binary/octet-stream",
+          "bytes": 1928,
+          "final_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3818162.1/PMC3818162.1.json"
+        },
+        {
+          "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3818162.1/PMC3818162.1.pdf?md5=ed3147ad89863faa90ec73e96445231f",
+          "status": 200,
+          "content_type": "binary/octet-stream",
+          "bytes": 1803237,
+          "final_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3818162.1/PMC3818162.1.pdf?md5=ed3147ad89863faa90ec73e96445231f"
+        },
+        {
+          "url": "https://journals.plos.org/plosmedicine/article/file?id=10.1371/journal.pmed.1001547&type=printable",
+          "status": 200,
+          "content_type": "application/pdf",
+          "bytes": 1803237,
+          "final_url": "https://journals.plos.org/plosmedicine/article/file?id=10.1371/journal.pmed.1001547&type=printable"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS080-01.json",
+      "item_id": "NS080",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "General cardiovascular risk profile for use in primary care: the Framingham Heart Study",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1161%2FCIRCULATIONAHA.107.699579",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 13521,
+          "final_url": "https://api.crossref.org/works/10.1161%2FCIRCULATIONAHA.107.699579"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 6487,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1161%2FCIRCULATIONAHA.107.699579&format=json&resultType=core&pageSize=3"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS080-02.json",
+      "item_id": "NS080",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "General cardiovascular risk profile for use in primary care: the Framingham Heart Study",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1161%2FCIRCULATIONAHA.107.699579",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 13521,
+          "final_url": "https://api.crossref.org/works/10.1161%2FCIRCULATIONAHA.107.699579"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 6487,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1161%2FCIRCULATIONAHA.107.699579&format=json&resultType=core&pageSize=3"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS080-03.json",
+      "item_id": "NS080",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "General cardiovascular risk profile for use in primary care: the Framingham Heart Study",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1161%2FCIRCULATIONAHA.107.699579",
+          "status": 429,
+          "content_type": null,
+          "bytes": 0,
+          "final_url": "https://api.crossref.org/works/10.1161%2FCIRCULATIONAHA.107.699579"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 6487,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1161%2FCIRCULATIONAHA.107.699579&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://www.ahajournals.org/doi/pdf/10.1161/circulationaha.107.699579?download=true",
+          "status": 403,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 5770,
+          "final_url": "https://www.ahajournals.org/doi/pdf/10.1161/circulationaha.107.699579?download=true"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS080-04.json",
+      "item_id": "NS080",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "General cardiovascular risk profile for use in primary care: the Framingham Heart Study",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1161%2FCIRCULATIONAHA.107.699579",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 13521,
+          "final_url": "https://api.crossref.org/works/10.1161%2FCIRCULATIONAHA.107.699579"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 6487,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1161%2FCIRCULATIONAHA.107.699579&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://scispace.com/pdf/general-cardiovascular-risk-profile-for-use-in-primary-care-3o2jjgr182.pdf",
+          "status": 403,
+          "content_type": "text/html",
+          "bytes": 919,
+          "final_url": "https://scispace.com/pdf/general-cardiovascular-risk-profile-for-use-in-primary-care-3o2jjgr182.pdf"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS081-01.json",
+      "item_id": "NS081",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Mortality in relation to smoking: 50 years' observations on male British doctors",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1136%2Fbmj.38142.554479.AE",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 2797,
+          "final_url": "https://api.crossref.org/works/10.1136%2Fbmj.38142.554479.AE"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 7326,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1136%2Fbmj.38142.554479.AE&format=json&resultType=core&pageSize=3"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS081-02.json",
+      "item_id": "NS081",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Mortality in relation to smoking: 50 years' observations on male British doctors",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1136%2Fbmj.38142.554479.AE",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 2797,
+          "final_url": "https://api.crossref.org/works/10.1136%2Fbmj.38142.554479.AE"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 7326,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1136%2Fbmj.38142.554479.AE&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC437139.1/PMC437139.1.json",
+          "status": 404,
+          "content_type": "application/xml",
+          "bytes": 299,
+          "final_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC437139.1/PMC437139.1.json"
+        },
+        {
+          "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC437139.2/PMC437139.2.json",
+          "status": 404,
+          "content_type": "application/xml",
+          "bytes": 299,
+          "final_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC437139.2/PMC437139.2.json"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS081-03.json",
+      "item_id": "NS081",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Mortality in relation to smoking: 50 years' observations on male British doctors",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1136%2Fbmj.38142.554479.AE",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 2797,
+          "final_url": "https://api.crossref.org/works/10.1136%2Fbmj.38142.554479.AE"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 7326,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1136%2Fbmj.38142.554479.AE&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC437139.1/PMC437139.1.json",
+          "status": 404,
+          "content_type": "application/xml",
+          "bytes": 319,
+          "final_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC437139.1/PMC437139.1.json"
+        },
+        {
+          "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC437139.2/PMC437139.2.json",
+          "status": 404,
+          "content_type": "application/xml",
+          "bytes": 319,
+          "final_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC437139.2/PMC437139.2.json"
+        },
+        {
+          "url": "https://www.bmj.com/content/bmj/328/7455/1519.full.pdf",
+          "status": 403,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 5599,
+          "final_url": "https://www.bmj.com/content/bmj/328/7455/1519.full.pdf"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS083-01.json",
+      "item_id": "NS083",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "A quantitative description of membrane current and its application to conduction and excitation in nerve",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1113%2Fjphysiol.1952.sp004764",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 3004,
+          "final_url": "https://api.crossref.org/works/10.1113%2Fjphysiol.1952.sp004764"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 2119,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1113%2Fjphysiol.1952.sp004764&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1113%2Fjphysiol.1952.sp004764",
+          "status": 400,
+          "content_type": "text/plain",
+          "bytes": 0,
+          "final_url": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1113%2Fjphysiol.1952.sp004764"
+        },
+        {
+          "url": "https://onlinelibrary.wiley.com/doi/pdf/10.1113/jphysiol.1952.sp004764",
+          "status": 403,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 5687,
+          "final_url": "https://onlinelibrary.wiley.com/doi/pdf/10.1113/jphysiol.1952.sp004764"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS083-02.json",
+      "item_id": "NS083",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "A quantitative description of membrane current and its application to conduction and excitation in nerve",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1113%2Fjphysiol.1952.sp004764",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 3004,
+          "final_url": "https://api.crossref.org/works/10.1113%2Fjphysiol.1952.sp004764"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 2119,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1113%2Fjphysiol.1952.sp004764&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1113%2Fjphysiol.1952.sp004764",
+          "status": 400,
+          "content_type": "text/plain",
+          "bytes": 0,
+          "final_url": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1113%2Fjphysiol.1952.sp004764"
+        },
+        {
+          "url": "https://onlinelibrary.wiley.com/doi/pdf/10.1113/jphysiol.1952.sp004764",
+          "status": 403,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 5687,
+          "final_url": "https://onlinelibrary.wiley.com/doi/pdf/10.1113/jphysiol.1952.sp004764"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS084-01.json",
+      "item_id": "NS084",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Long-lasting potentiation of synaptic transmission in the dentate area of the anaesthetized rabbit following stimulation of the perforant path",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1113%2Fjphysiol.1973.sp010273",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 4849,
+          "final_url": "https://api.crossref.org/works/10.1113%2Fjphysiol.1973.sp010273"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 5314,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1113%2Fjphysiol.1973.sp010273&format=json&resultType=core&pageSize=3"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS084-02.json",
+      "item_id": "NS084",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Long-lasting potentiation of synaptic transmission in the dentate area of the anaesthetized rabbit following stimulation of the perforant path",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1113%2Fjphysiol.1973.sp010273",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 4849,
+          "final_url": "https://api.crossref.org/works/10.1113%2Fjphysiol.1973.sp010273"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 5314,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1113%2Fjphysiol.1973.sp010273&format=json&resultType=core&pageSize=3"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS086-01.json",
+      "item_id": "NS086",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "A default mode of brain function",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1073%2Fpnas.98.2.676",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 11267,
+          "final_url": "https://api.crossref.org/works/10.1073%2Fpnas.98.2.676"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 7759,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1073%2Fpnas.98.2.676&format=json&resultType=core&pageSize=3"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS086-02.json",
+      "item_id": "NS086",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "A default mode of brain function",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1073%2Fpnas.98.2.676",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 11267,
+          "final_url": "https://api.crossref.org/works/10.1073%2Fpnas.98.2.676"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 7759,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1073%2Fpnas.98.2.676&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC14647.1/PMC14647.1.json",
+          "status": 404,
+          "content_type": "application/xml",
+          "bytes": 317,
+          "final_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC14647.1/PMC14647.1.json"
+        },
+        {
+          "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC14647.2/PMC14647.2.json",
+          "status": 404,
+          "content_type": "application/xml",
+          "bytes": 317,
+          "final_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC14647.2/PMC14647.2.json"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS086-03.json",
+      "item_id": "NS086",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "A default mode of brain function",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1073%2Fpnas.98.2.676",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 11267,
+          "final_url": "https://api.crossref.org/works/10.1073%2Fpnas.98.2.676"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 7759,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1073%2Fpnas.98.2.676&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC14647.1/PMC14647.1.json",
+          "status": 404,
+          "content_type": "application/xml",
+          "bytes": 317,
+          "final_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC14647.1/PMC14647.1.json"
+        },
+        {
+          "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC14647.2/PMC14647.2.json",
+          "status": 404,
+          "content_type": "application/xml",
+          "bytes": 317,
+          "final_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC14647.2/PMC14647.2.json"
+        },
+        {
+          "url": "https://www.wisebrain.org/media/Papers/DefaultMode.pdf",
+          "status": 404,
+          "content_type": "text/html",
+          "bytes": 146,
+          "final_url": "https://www.wisebrain.org/media/Papers/DefaultMode.pdf"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS087-01.json",
+      "item_id": "NS087",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "The Human Connectome Project: A data acquisition perspective",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1016%2Fj.neuroimage.2012.02.018",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 25290,
+          "final_url": "https://api.crossref.org/works/10.1016%2Fj.neuroimage.2012.02.018"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 8316,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1016%2Fj.neuroimage.2012.02.018&format=json&resultType=core&pageSize=3"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS087-02.json",
+      "item_id": "NS087",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "The Human Connectome Project: A data acquisition perspective",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1016%2Fj.neuroimage.2012.02.018",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 25290,
+          "final_url": "https://api.crossref.org/works/10.1016%2Fj.neuroimage.2012.02.018"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 8316,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1016%2Fj.neuroimage.2012.02.018&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3606888.1/PMC3606888.1.json",
+          "status": 200,
+          "content_type": "binary/octet-stream",
+          "bytes": 598,
+          "final_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3606888.1/PMC3606888.1.json"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS091-01.json",
+      "item_id": "NS091",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Solutions for a cultivated planet",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1038%2Fnature10452",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 32976,
+          "final_url": "https://api.crossref.org/works/10.1038%2Fnature10452"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 6863,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fnature10452&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://www.nature.com/articles/nature10452.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 444702,
+          "final_url": "https://www.nature.com/articles/nature10452"
+        },
+        {
+          "url": "http://www.nature.com/articles/nature10452.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 444702,
+          "final_url": "https://www.nature.com/articles/nature10452"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS091-02.json",
+      "item_id": "NS091",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Solutions for a cultivated planet",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1038%2Fnature10452",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 32976,
+          "final_url": "https://api.crossref.org/works/10.1038%2Fnature10452"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 6863,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fnature10452&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://www.nature.com/articles/nature10452.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 444702,
+          "final_url": "https://www.nature.com/articles/nature10452"
+        },
+        {
+          "url": "http://www.nature.com/articles/nature10452.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 444702,
+          "final_url": "https://www.nature.com/articles/nature10452"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS091-03.json",
+      "item_id": "NS091",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Solutions for a cultivated planet",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1038%2Fnature10452",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 32976,
+          "final_url": "https://api.crossref.org/works/10.1038%2Fnature10452"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 6863,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fnature10452&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://escholarship.org/content/qt6xw5g085/qt6xw5g085.pdf",
+          "status": 403,
+          "content_type": "text/html",
+          "bytes": 919,
+          "final_url": "https://escholarship.org/content/qt6xw5g085/qt6xw5g085.pdf"
+        },
+        {
+          "url": "https://www.nature.com/articles/nature10452.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 444702,
+          "final_url": "https://www.nature.com/articles/nature10452"
+        },
+        {
+          "url": "http://www.nature.com/articles/nature10452.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 444702,
+          "final_url": "https://www.nature.com/articles/nature10452"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS091-04.json",
+      "item_id": "NS091",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Solutions for a cultivated planet",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1038%2Fnature10452",
+          "status": 429,
+          "content_type": null,
+          "bytes": 0,
+          "final_url": "https://api.crossref.org/works/10.1038%2Fnature10452"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 6863,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fnature10452&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://escholarship.org/content/qt6xw5g085/qt6xw5g085.pdf",
+          "status": 403,
+          "content_type": "text/html",
+          "bytes": 919,
+          "final_url": "https://escholarship.org/content/qt6xw5g085/qt6xw5g085.pdf"
+        },
+        {
+          "url": "https://www.nature.com/articles/nature10452.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 444702,
+          "final_url": "https://www.nature.com/articles/nature10452"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS094-01.json",
+      "item_id": "NS094",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Reducing food's environmental impacts through producers and consumers",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1126%2Fscience.aaq0216",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 25464,
+          "final_url": "https://api.crossref.org/works/10.1126%2Fscience.aaq0216"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 4665,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1126%2Fscience.aaq0216&format=json&resultType=core&pageSize=3"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS094-02.json",
+      "item_id": "NS094",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Reducing food's environmental impacts through producers and consumers",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1126%2Fscience.aaq0216",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 25464,
+          "final_url": "https://api.crossref.org/works/10.1126%2Fscience.aaq0216"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 4665,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1126%2Fscience.aaq0216&format=json&resultType=core&pageSize=3"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS097-01.json",
+      "item_id": "NS097",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Two-equation eddy-viscosity turbulence models for engineering applications",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.2514%2F3.12149",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 4688,
+          "final_url": "https://api.crossref.org/works/10.2514%2F3.12149"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 181,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.2514%2F3.12149&format=json&resultType=core&pageSize=3"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS097-02.json",
+      "item_id": "NS097",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Two-equation eddy-viscosity turbulence models for engineering applications",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.2514%2F3.12149",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 4688,
+          "final_url": "https://api.crossref.org/works/10.2514%2F3.12149"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 181,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.2514%2F3.12149&format=json&resultType=core&pageSize=3"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS098-01.json",
+      "item_id": "NS098",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Isogeometric analysis: CAD, finite elements, NURBS, exact geometry and mesh refinement",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1016%2Fj.cma.2004.10.008",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 26037,
+          "final_url": "https://api.crossref.org/works/10.1016%2Fj.cma.2004.10.008"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 191,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1016%2Fj.cma.2004.10.008&format=json&resultType=core&pageSize=3"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS098-02.json",
+      "item_id": "NS098",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Isogeometric analysis: CAD, finite elements, NURBS, exact geometry and mesh refinement",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1016%2Fj.cma.2004.10.008",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 26037,
+          "final_url": "https://api.crossref.org/works/10.1016%2Fj.cma.2004.10.008"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 191,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1016%2Fj.cma.2004.10.008&format=json&resultType=core&pageSize=3"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS099-01.json",
+      "item_id": "NS099",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Issues and challenges facing rechargeable lithium batteries",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1038%2F35104644",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 25622,
+          "final_url": "https://api.crossref.org/works/10.1038%2F35104644"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 2699,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2F35104644&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://www.nature.com/articles/35104644.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 355954,
+          "final_url": "https://www.nature.com/articles/35104644"
+        },
+        {
+          "url": "http://www.nature.com/articles/35104644.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 355952,
+          "final_url": "https://www.nature.com/articles/35104644"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS099-02.json",
+      "item_id": "NS099",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Issues and challenges facing rechargeable lithium batteries",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1038%2F35104644",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 25622,
+          "final_url": "https://api.crossref.org/works/10.1038%2F35104644"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 2699,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2F35104644&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://www.nature.com/articles/35104644.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 355952,
+          "final_url": "https://www.nature.com/articles/35104644"
+        },
+        {
+          "url": "http://www.nature.com/articles/35104644.pdf",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 355952,
+          "final_url": "https://www.nature.com/articles/35104644"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS100-01.json",
+      "item_id": "NS100",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Efficient hybrid solar cells based on meso-superstructured organometal halide perovskites",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1126%2Fscience.1228604",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 7937,
+          "final_url": "https://api.crossref.org/works/10.1126%2Fscience.1228604"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 3838,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1126%2Fscience.1228604&format=json&resultType=core&pageSize=3"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS100-02.json",
+      "item_id": "NS100",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Efficient hybrid solar cells based on meso-superstructured organometal halide perovskites",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1126%2Fscience.1228604",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 7937,
+          "final_url": "https://api.crossref.org/works/10.1126%2Fscience.1228604"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 3838,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1126%2Fscience.1228604&format=json&resultType=core&pageSize=3"
+        }
+      ]
+    },
+    {
+      "record": "acquisition-history/NS100-03.json",
+      "item_id": "NS100",
+      "outcome": "full_text_unavailable",
+      "candidate_title": "Efficient hybrid solar cells based on meso-superstructured organometal halide perovskites",
+      "found_title": null,
+      "attempts": [
+        {
+          "url": "https://api.crossref.org/works/10.1126%2Fscience.1228604",
+          "status": 200,
+          "content_type": "application/json",
+          "bytes": 7937,
+          "final_url": "https://api.crossref.org/works/10.1126%2Fscience.1228604"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 3838,
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1126%2Fscience.1228604&format=json&resultType=core&pageSize=3"
+        },
+        {
+          "url": "https://citeseerx.ist.psu.edu/document?doi=a68cb661e14446bef48ddd4417fdec169bbb1e40&repid=rep1&type=pdf",
+          "error": "ReadTimeout"
+        }
+      ]
+    }
+  ],
+  "note": "Source/identifier retrieval problems are collection preparation issues, not product defects."
+}

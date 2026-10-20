@@ -1,0 +1,149 @@
+{
+  "item_id": "NS064",
+  "source_sha256": "bfde6d24007487e7e27f466fe260e96beec8702829f19679cd8b12d51c200d2f",
+  "deployed_commit": "8174362c38fcd62b722b5133692c7e9662355b87",
+  "preview": {
+    "metadata": {
+      "title": "Maximum entropy modeling of species geographic distributions",
+      "authors": [
+        "Steven J. Phillips",
+        "Robert P. Anderson",
+        "Robert E. Schapire"
+      ],
+      "year": 2006,
+      "language": "en",
+      "source_url": "https://doi.org/10.1016/j.ecolmodel.2005.03.026",
+      "topics": [
+        "自然科学"
+      ]
+    },
+    "field_sources": {
+      "title": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "source_url": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "language": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "authors": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "Steven J. Phillips, Robert P. Anderson, Robert E. Schapire"
+      },
+      "year": {
+        "method": "bibliographic_lookup",
+        "provider": "crossref",
+        "record_url": "https://api.crossref.org/works/10.1016%2Fj.ecolmodel.2005.03.026",
+        "retrieved_at": "2026-10-20T05:07:48.285489+00:00",
+        "date_type": "published-print",
+        "excerpt": "[Full page excerpt retained privately]"
+      }
+    },
+    "warnings": [
+      "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+      "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序，以及年份是否对应所收录版本。",
+      "已依据题名和作者吻合的 Crossref 出版记录补全候选字段；DOI 可作为相关出版来源，年份还须与所收录版本对应，请核对后导入。"
+    ],
+    "requires_confirmation": true,
+    "page_count": 29,
+    "method": "local_and_api_page_recognition",
+    "api_assistance": {
+      "status": "completed",
+      "accepted_fields": 5
+    },
+    "bibliographic_enrichment": {
+      "policy": "crossref-collected-version-v2",
+      "provider": "crossref",
+      "status": "completed",
+      "missing_before": [
+        "year"
+      ],
+      "filled_fields": [
+        "year"
+      ],
+      "conflicts": [],
+      "candidates": [
+        {
+          "title": "Maximum entropy modeling of species geographic distributions",
+          "authors": [
+            "Steven J. Phillips",
+            "Robert P. Anderson",
+            "Robert E. Schapire"
+          ],
+          "doi": "10.1016/j.ecolmodel.2005.03.026",
+          "source_url": "https://doi.org/10.1016/j.ecolmodel.2005.03.026",
+          "record_url": "https://api.crossref.org/works/10.1016%2Fj.ecolmodel.2005.03.026",
+          "type": "journal-article",
+          "dates": [
+            {
+              "kind": "published-print",
+              "date_parts": [
+                2006,
+                1
+              ],
+              "year": 2006
+            },
+            {
+              "kind": "published",
+              "date_parts": [
+                2006,
+                1
+              ],
+              "year": 2006
+            }
+          ],
+          "selected_date": {
+            "kind": "published-print",
+            "date_parts": [
+              2006,
+              1
+            ],
+            "year": 2006
+          },
+          "match": {
+            "title": "normalized_exact",
+            "first_author": "exact",
+            "author_overlap": 3,
+            "required_overlap": 3
+          }
+        }
+      ],
+      "queried_at": "2026-10-20T05:07:48.285489+00:00",
+      "year_decision": "same_publication_version"
+    },
+    "document_version": {
+      "kind": "publication",
+      "dois": [
+        "10.1016/j.ecolmodel.2005.03.026"
+      ]
+    },
+    "year_review": {
+      "policy": "crossref-collected-version-v2",
+      "status": "candidate_supported",
+      "source": "crossref",
+      "grounding": "registry_record",
+      "date_type": "published-print"
+    },
+    "discipline_classification": {
+      "status": "classified",
+      "method": "llm_page_classification",
+      "value": "自然科学",
+      "pdf_page": 1,
+      "reason": "研究主题是利用最大熵方法建模物种地理分布，属于生态学及计算建模领域。"
+    }
+  },
+  "fulltext": {
+    "status": "eligible",
+    "pages": 29
+  },
+  "outcome": "preview_completed",
+  "elapsed_seconds": 17.91
+}

@@ -1,0 +1,102 @@
+[
+  {
+    "item_id": "NS068",
+    "before": [
+      "分子遗传",
+      "基因编辑",
+      "A programmable dual-RNA-guided DNA endonuclease in adaptive bacterial immunity",
+      "",
+      "10.1126/science.1225829",
+      ""
+    ],
+    "after": [
+      "分子遗传",
+      "基因编辑",
+      "A programmable dual-RNA-guided DNA endonuclease in adaptive bacterial immunity",
+      "",
+      "10.1126/science.1225829",
+      "https://www.kinampark.com/T-Polymers/files/All%20References/Jinek%202012%2C%20A%20Programmable%20dual-RNA%E2%80%93guided%20DNA%20endonuclease%20in%20adaptive%20bacterial%20immunity.pdf"
+    ],
+    "reason": "Locate original full-text paper at author/institution/teaching archive; select accessible GBD study."
+  },
+  {
+    "item_id": "NS079",
+    "before": [
+      "医学公共健康",
+      "全球疾病负担",
+      "Global age-sex-specific fertility, mortality, healthy life expectancy, and population estimates in 204 countries and territories, 1950-2019: a comprehensive demographic analysis for the Global Burden of Disease Study 2019",
+      "",
+      "10.1016/S0140-6736(20)30977-6",
+      ""
+    ],
+    "after": [
+      "医学公共健康",
+      "全球疾病负担",
+      "Burden of Depressive Disorders by Country, Sex, Age, and Year: Findings from the Global Burden of Disease Study 2010",
+      "",
+      "10.1371/journal.pmed.1001547",
+      ""
+    ],
+    "reason": "Locate original full-text paper at author/institution/teaching archive; select accessible GBD study."
+  },
+  {
+    "item_id": "NS080",
+    "before": [
+      "医学公共健康",
+      "心血管风险预测",
+      "General cardiovascular risk profile for use in primary care: the Framingham Heart Study",
+      "",
+      "10.1161/CIRCULATIONAHA.107.699579",
+      ""
+    ],
+    "after": [
+      "医学公共健康",
+      "心血管风险预测",
+      "General cardiovascular risk profile for use in primary care: the Framingham Heart Study",
+      "",
+      "10.1161/CIRCULATIONAHA.107.699579",
+      "https://www.ahajournals.org/doi/pdf/10.1161/circulationaha.107.699579?download=true"
+    ],
+    "reason": "Locate original full-text paper at author/institution/teaching archive; select accessible GBD study."
+  },
+  {
+    "item_id": "NS086",
+    "before": [
+      "神经科学",
+      "脑功能网络",
+      "A default mode of brain function",
+      "",
+      "10.1073/pnas.98.2.676",
+      ""
+    ],
+    "after": [
+      "神经科学",
+      "脑功能网络",
+      "A default mode of brain function",
+      "",
+      "10.1073/pnas.98.2.676",
+      "https://www.wisebrain.org/media/Papers/DefaultMode.pdf"
+    ],
+    "reason": "Locate original full-text paper at author/institution/teaching archive; select accessible GBD study."
+  },
+  {
+    "item_id": "NS087",
+    "before": [
+      "神经科学",
+      "人类连接组",
+      "The Human Connectome Project: A data acquisition perspective",
+      "",
+      "10.1016/j.neuroimage.2012.02.018",
+      ""
+    ],
+    "after": [
+      "神经科学",
+      "人类连接组",
+      "The Human Connectome Project: A data acquisition perspective",
+      "",
+      "10.1016/j.neuroimage.2012.02.018",
+      "https://www.ebrain.pitt.edu/wp-content/uploads/2020/04/2020-01-10-essen-et-al.pdf"
+    ],
+    "reason": "Locate original full-text paper at author/institution/teaching archive; select accessible GBD study."
+  }
+]

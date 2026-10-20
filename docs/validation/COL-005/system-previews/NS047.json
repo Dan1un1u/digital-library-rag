@@ -1,0 +1,98 @@
+{
+  "item_id": "NS047",
+  "source_sha256": "18afb897efa30806a38e9009d0c824daf23694382eaf3c6079c140d0e810b870",
+  "deployed_commit": "8174362c38fcd62b722b5133692c7e9662355b87",
+  "preview": {
+    "metadata": {
+      "title": "The Global Streamflow Indices and Metadata Archive (GSIM) – Part 1: The production of a daily streamflow archive and metadata",
+      "authors": [
+        "Hong Xuan Do",
+        "Lukas Gudmundsson",
+        "Michael Leonard",
+        "Seth Westra"
+      ],
+      "year": 2018,
+      "language": "en",
+      "source_url": "https://doi.org/10.5194/essd-10-765-2018",
+      "topics": [
+        "自然科学"
+      ]
+    },
+    "field_sources": {
+      "title": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "year": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]",
+        "date_type": "revision",
+        "context": "[Full page excerpt retained privately]",
+        "grounding": "page_text"
+      },
+      "source_url": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "language": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "authors": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "Hong Xuan Do¹, Lukas Gudmundsson², Michael Leonard¹, and Seth Westra¹"
+      }
+    },
+    "warnings": [
+      "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+      "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序，以及年份是否对应所收录版本。"
+    ],
+    "requires_confirmation": true,
+    "page_count": 21,
+    "method": "local_and_api_page_recognition",
+    "api_assistance": {
+      "status": "completed",
+      "accepted_fields": 6
+    },
+    "bibliographic_enrichment": {
+      "policy": "crossref-collected-version-v2",
+      "provider": "crossref",
+      "status": "not_needed",
+      "missing_before": [],
+      "filled_fields": [],
+      "conflicts": [],
+      "candidates": []
+    },
+    "document_version": {
+      "kind": "unknown",
+      "dois": [
+        "10.5194/essd-10-765-2018"
+      ]
+    },
+    "year_review": {
+      "policy": "collected-version-year-v2",
+      "status": "candidate_supported",
+      "source": "api",
+      "date_type": "revision",
+      "grounding": "page_text"
+    },
+    "discipline_classification": {
+      "status": "classified",
+      "method": "llm_page_classification",
+      "value": "自然科学",
+      "pdf_page": 1,
+      "reason": "论文介绍全球河流流量资料档案及其水文研究用途，主要属于自然科学。"
+    }
+  },
+  "fulltext": {
+    "status": "eligible",
+    "pages": 21
+  },
+  "outcome": "preview_completed",
+  "elapsed_seconds": 14.83
+}

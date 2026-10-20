@@ -1,0 +1,108 @@
+{
+  "item_id": "NS059",
+  "source_sha256": "888c929659a8841dea7ea6c8a884ad2e5cf0ecc1501b996cad17c5474f038266",
+  "deployed_commit": "8174362c38fcd62b722b5133692c7e9662355b87",
+  "preview": {
+    "metadata": {
+      "title": "More than 75 percent decline over 27 years in total flying insect biomass in protected areas",
+      "authors": [
+        "Caspar A. Hallmann",
+        "Martin Sorg",
+        "Eelke Jongejans",
+        "Henk Siepel",
+        "Nick Hofland",
+        "Heinz Schwan",
+        "Werner Stenmans",
+        "Andreas Müller",
+        "Hubert Sumser",
+        "Thomas Hörren",
+        "Dave Goulson",
+        "Hans de Kroon"
+      ],
+      "year": 2017,
+      "language": "en",
+      "source_url": "https://doi.org/10.1371/journal.pone.0185809",
+      "topics": [
+        "自然科学"
+      ]
+    },
+    "field_sources": {
+      "title": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "authors": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "year": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]",
+        "date_type": "publication",
+        "context": "[Full page excerpt retained privately]",
+        "grounding": "page_text"
+      },
+      "source_url": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "language": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      }
+    },
+    "warnings": [
+      "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+      "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+      "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序，以及年份是否对应所收录版本。"
+    ],
+    "requires_confirmation": true,
+    "page_count": 21,
+    "method": "local_and_api_page_recognition",
+    "api_assistance": {
+      "status": "completed",
+      "accepted_fields": 6
+    },
+    "bibliographic_enrichment": {
+      "policy": "crossref-collected-version-v2",
+      "provider": "crossref",
+      "status": "not_needed",
+      "missing_before": [],
+      "filled_fields": [],
+      "conflicts": [],
+      "candidates": []
+    },
+    "document_version": {
+      "kind": "publication",
+      "dois": [
+        "10.1371/journal",
+        "10.1371/journal.pone.0185809"
+      ]
+    },
+    "year_review": {
+      "policy": "collected-version-year-v2",
+      "status": "candidate_supported",
+      "source": "api",
+      "date_type": "publication",
+      "grounding": "page_text"
+    },
+    "discipline_classification": {
+      "status": "classified",
+      "method": "llm_page_classification",
+      "value": "自然科学",
+      "pdf_page": 1,
+      "reason": "研究飞行昆虫生物量的长期变化及生态影响，属于生态学研究。"
+    }
+  },
+  "fulltext": {
+    "status": "eligible",
+    "pages": 21
+  },
+  "outcome": "preview_completed",
+  "elapsed_seconds": 14.58
+}

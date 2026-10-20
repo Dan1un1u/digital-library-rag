@@ -1,0 +1,95 @@
+{
+  "item_id": "NS007",
+  "source_sha256": "691caf636ed1203cba485a2c12117d8f6ca2ec92b3666b48e15529e51ed98d8a",
+  "deployed_commit": "8174362c38fcd62b722b5133692c7e9662355b87",
+  "preview": {
+    "metadata": {
+      "title": "The No-U-Turn Sampler: Adaptively Setting Path Lengths in Hamiltonian Monte Carlo",
+      "authors": [
+        "Matthew D. Hoffman",
+        "Andrew Gelman"
+      ],
+      "year": 2011,
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/1111.4246",
+      "topics": [
+        "自然科学"
+      ]
+    },
+    "field_sources": {
+      "title": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "authors": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "source_url": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "language": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "year": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]",
+        "date_type": "version",
+        "context": "[Full page excerpt retained privately]",
+        "grounding": "page_text"
+      }
+    },
+    "warnings": [
+      "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+      "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+      "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序，以及年份是否对应所收录版本。"
+    ],
+    "requires_confirmation": true,
+    "page_count": 30,
+    "method": "local_and_api_page_recognition",
+    "api_assistance": {
+      "status": "completed",
+      "accepted_fields": 6
+    },
+    "bibliographic_enrichment": {
+      "policy": "crossref-collected-version-v2",
+      "provider": "crossref",
+      "status": "not_needed",
+      "missing_before": [],
+      "filled_fields": [],
+      "conflicts": [],
+      "candidates": []
+    },
+    "document_version": {
+      "kind": "manuscript",
+      "dois": []
+    },
+    "year_review": {
+      "policy": "collected-version-year-v2",
+      "status": "candidate_supported",
+      "source": "api",
+      "date_type": "version",
+      "grounding": "page_text"
+    },
+    "discipline_classification": {
+      "status": "classified",
+      "method": "llm_page_classification",
+      "value": "自然科学",
+      "pdf_page": 1,
+      "reason": "论文研究蒙特卡洛采样算法及其在统计计算中的方法，属于自然科学。"
+    }
+  },
+  "fulltext": {
+    "status": "eligible",
+    "pages": 30
+  },
+  "outcome": "preview_completed",
+  "elapsed_seconds": 12.92
+}

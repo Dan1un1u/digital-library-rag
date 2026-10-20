@@ -1,0 +1,188 @@
+{
+  "item_id": "NS016",
+  "source_sha256": "96ba03bbfa27ea6a9ab5f1795cb62166948a6de4d8da84f9f43044bb5ab58838",
+  "deployed_commit": "8174362c38fcd62b722b5133692c7e9662355b87",
+  "preview": {
+    "metadata": {
+      "title": "Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer",
+      "authors": [
+        "Peter W. Shor"
+      ],
+      "year": null,
+      "language": "en",
+      "source_url": null,
+      "topics": [
+        "自然科学"
+      ]
+    },
+    "field_sources": {
+      "title": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "authors": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "Peter W. Shor"
+      },
+      "language": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      }
+    },
+    "warnings": [
+      "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+      "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+      "版本年份待核对：页面没有可对应到所收录版本的日期说明；已留空，可根据所收录文件核对后填写。",
+      "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序，以及年份是否对应所收录版本。",
+      "书目查询未找到唯一、题名和作者均吻合的出版记录；缺失字段保持为空，请核对。"
+    ],
+    "requires_confirmation": true,
+    "page_count": 28,
+    "method": "local_and_api_page_recognition",
+    "api_assistance": {
+      "status": "completed",
+      "accepted_fields": 3
+    },
+    "bibliographic_enrichment": {
+      "policy": "crossref-collected-version-v2",
+      "provider": "crossref",
+      "status": "ambiguous",
+      "missing_before": [
+        "year",
+        "source_url"
+      ],
+      "filled_fields": [],
+      "conflicts": [],
+      "candidates": [
+        {
+          "title": "Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer",
+          "authors": [
+            "Peter W. Shor"
+          ],
+          "doi": "10.1137/s0036144598347011",
+          "source_url": "https://doi.org/10.1137/s0036144598347011",
+          "record_url": "https://api.crossref.org/works/10.1137%2Fs0036144598347011",
+          "type": "journal-article",
+          "dates": [
+            {
+              "kind": "published-print",
+              "date_parts": [
+                1999,
+                1
+              ],
+              "year": 1999
+            },
+            {
+              "kind": "published-online",
+              "date_parts": [
+                2006,
+                8,
+                4
+              ],
+              "year": 2006
+            },
+            {
+              "kind": "published",
+              "date_parts": [
+                1999,
+                1
+              ],
+              "year": 1999
+            }
+          ],
+          "selected_date": {
+            "kind": "published-print",
+            "date_parts": [
+              1999,
+              1
+            ],
+            "year": 1999
+          },
+          "match": {
+            "title": "normalized_exact",
+            "first_author": "exact",
+            "author_overlap": 1,
+            "required_overlap": 1
+          }
+        },
+        {
+          "title": "Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer",
+          "authors": [
+            "Peter W. Shor"
+          ],
+          "doi": "10.1137/s0097539795293172",
+          "source_url": "https://doi.org/10.1137/s0097539795293172",
+          "record_url": "https://api.crossref.org/works/10.1137%2Fs0097539795293172",
+          "type": "journal-article",
+          "dates": [
+            {
+              "kind": "published-print",
+              "date_parts": [
+                1997,
+                10
+              ],
+              "year": 1997
+            },
+            {
+              "kind": "published-online",
+              "date_parts": [
+                2006,
+                7,
+                28
+              ],
+              "year": 2006
+            },
+            {
+              "kind": "published",
+              "date_parts": [
+                1997,
+                10
+              ],
+              "year": 1997
+            }
+          ],
+          "selected_date": {
+            "kind": "published-print",
+            "date_parts": [
+              1997,
+              10
+            ],
+            "year": 1997
+          },
+          "match": {
+            "title": "normalized_exact",
+            "first_author": "exact",
+            "author_overlap": 1,
+            "required_overlap": 1
+          }
+        }
+      ],
+      "queried_at": "2026-10-20T05:00:21.363233+00:00"
+    },
+    "document_version": {
+      "kind": "manuscript",
+      "dois": []
+    },
+    "year_review": {
+      "policy": "collected-version-year-v2",
+      "status": "needs_confirmation",
+      "reason": "missing_version_context",
+      "rejected_value": 1996
+    },
+    "discipline_classification": {
+      "status": "classified",
+      "method": "keyword",
+      "value": "自然科学"
+    }
+  },
+  "fulltext": {
+    "status": "requires_review",
+    "code": "TEXT_LAYER_REVIEW_REQUIRED",
+    "message": "PDF 第 17 页的文字层疑似编码异常，已暂停导入，未加入检索。请对照原页核对正文，完成 OCR 或更换可正确提取文字的版本后重新上传。增强元数据识别不能修复正文文字层。"
+  },
+  "outcome": "preview_completed",
+  "elapsed_seconds": 11.27
+}

@@ -1,0 +1,122 @@
+{
+  "item_id": "NS031",
+  "source_sha256": "ef4d58088ab681af8f9342102ed5462486dcd5bc98232f666651b3aa35d746d9",
+  "deployed_commit": "8174362c38fcd62b722b5133692c7e9662355b87",
+  "preview": {
+    "metadata": {
+      "title": "QUANTUM ESPRESSO: a modular and open-source software project for quantum simulations of materials",
+      "authors": [
+        "Paolo Giannozzi",
+        "Stefano Baroni",
+        "Nicola Bonini",
+        "Matteo Calandra",
+        "Roberto Car",
+        "Carlo Cavazzoni",
+        "Davide Ceresoli",
+        "Guido L. Chiarotti",
+        "Matteo Cococcioni",
+        "Ismaila Dabo",
+        "Andrea Dal Corso",
+        "Stefano Fabris",
+        "Guido Fratesi",
+        "Stefano de Gironcoli",
+        "Ralph Gebauer",
+        "Uwe Gerstmann",
+        "Christos Gougoussis",
+        "Anton Kokalj",
+        "Michele Lazzeri",
+        "Layla Martin-Samos",
+        "Nicola Marzari",
+        "Francesco Mauri",
+        "Riccardo Mazzarello",
+        "Stefano Paolini",
+        "Alfredo Pasquarello",
+        "Lorenzo Paulatto",
+        "Carlo Sbraccia",
+        "Sandro Scandolo",
+        "Gabriele Sclauzero",
+        "Ari P. Seitsonen",
+        "Alexander Smogunov",
+        "Paolo Umari",
+        "Renata M. Wentzcovitch"
+      ],
+      "year": 2009,
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/0906.2569",
+      "topics": []
+    },
+    "field_sources": {
+      "title": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "authors": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "source_url": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "language": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "year": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]",
+        "date_type": "version",
+        "context": "[Full page excerpt retained privately]",
+        "grounding": "page_text"
+      }
+    },
+    "warnings": [
+      "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+      "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+      "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序，以及年份是否对应所收录版本。"
+    ],
+    "requires_confirmation": true,
+    "page_count": 36,
+    "method": "local_and_api_page_recognition",
+    "api_assistance": {
+      "status": "completed",
+      "accepted_fields": 5
+    },
+    "bibliographic_enrichment": {
+      "policy": "crossref-collected-version-v2",
+      "provider": "crossref",
+      "status": "not_needed",
+      "missing_before": [],
+      "filled_fields": [],
+      "conflicts": [],
+      "candidates": []
+    },
+    "document_version": {
+      "kind": "manuscript",
+      "dois": []
+    },
+    "year_review": {
+      "policy": "collected-version-year-v2",
+      "status": "candidate_supported",
+      "source": "api",
+      "date_type": "version",
+      "grounding": "page_text"
+    },
+    "discipline_classification": {
+      "status": "pending",
+      "method": "unresolved",
+      "value": null
+    }
+  },
+  "fulltext": {
+    "status": "eligible",
+    "pages": 36
+  },
+  "outcome": "preview_completed",
+  "elapsed_seconds": 20.48
+}

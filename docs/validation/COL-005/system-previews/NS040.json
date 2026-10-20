@@ -1,0 +1,112 @@
+{
+  "item_id": "NS040",
+  "source_sha256": "2ee4775f297fdc5010756ed2b65eea976f390e120771769aee87ef4552592000",
+  "deployed_commit": "8174362c38fcd62b722b5133692c7e9662355b87",
+  "preview": {
+    "metadata": {
+      "title": "The Global Ocean Data Analysis Project version 2 (GLODAPv2) – an internally consistent data product for the world ocean",
+      "authors": [
+        "Are Olsen",
+        "Robert M. Key",
+        "Steven van Heuven",
+        "Siv K. Lauvset",
+        "Anton Velo",
+        "Xiaohua Lin",
+        "Carsten Schirnick",
+        "Alex Kozyr",
+        "Toste Tanhua",
+        "Mario Hoppema",
+        "Sara Jutterström",
+        "Reiner Steinfeldt",
+        "Emil Jeansson",
+        "Masao Ishii",
+        "Fiz F. Pérez",
+        "Toru Suzuki"
+      ],
+      "year": 2016,
+      "language": "en",
+      "source_url": "https://doi.org/10.5194/essd-8-297-2016",
+      "topics": [
+        "自然科学"
+      ]
+    },
+    "field_sources": {
+      "title": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "authors": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "year": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]",
+        "date_type": "revision",
+        "context": "[Full page excerpt retained privately]",
+        "grounding": "page_text"
+      },
+      "source_url": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "language": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      }
+    },
+    "warnings": [
+      "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+      "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+      "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序，以及年份是否对应所收录版本。"
+    ],
+    "requires_confirmation": true,
+    "page_count": 27,
+    "method": "local_and_api_page_recognition",
+    "api_assistance": {
+      "status": "completed",
+      "accepted_fields": 6
+    },
+    "bibliographic_enrichment": {
+      "policy": "crossref-collected-version-v2",
+      "provider": "crossref",
+      "status": "not_needed",
+      "missing_before": [],
+      "filled_fields": [],
+      "conflicts": [],
+      "candidates": []
+    },
+    "document_version": {
+      "kind": "unknown",
+      "dois": [
+        "10.3334/cdiac/otg.ndp093_glodapv2",
+        "10.5194/essd-8-297-2016"
+      ]
+    },
+    "year_review": {
+      "policy": "collected-version-year-v2",
+      "status": "candidate_supported",
+      "source": "api",
+      "date_type": "revision",
+      "grounding": "page_text"
+    },
+    "discipline_classification": {
+      "status": "classified",
+      "method": "llm_page_classification",
+      "value": "自然科学",
+      "pdf_page": 1,
+      "reason": "文献介绍全球海洋数据产品及其质量控制，主要研究对象是海洋观测数据。"
+    }
+  },
+  "fulltext": {
+    "status": "eligible",
+    "pages": 27
+  },
+  "outcome": "preview_completed",
+  "elapsed_seconds": 16.53
+}

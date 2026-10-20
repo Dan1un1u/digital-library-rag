@@ -1,0 +1,97 @@
+{
+  "item_id": "NS096",
+  "source_sha256": "442bcef21b04c007628c452e21b3122296e76fee727b1fc766e7d2b666ec3634",
+  "deployed_commit": "8174362c38fcd62b722b5133692c7e9662355b87",
+  "preview": {
+    "metadata": {
+      "title": "ORB-SLAM: a Versatile and Accurate Monocular SLAM System",
+      "authors": [
+        "Raúl Mur-Artal",
+        "J. M. M. Montiel",
+        "Juan D. Tardós"
+      ],
+      "year": 2015,
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/1502.00956",
+      "topics": [
+        "自然科学"
+      ]
+    },
+    "field_sources": {
+      "source_url": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "language": {
+        "method": "api_page_recognition",
+        "pdf_page": 2,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "title": {
+        "method": "api_page_recognition",
+        "pdf_page": 2,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "authors": {
+        "method": "api_page_recognition",
+        "pdf_page": 2,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "year": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]",
+        "date_type": "version",
+        "context": "[Full page excerpt retained privately]",
+        "grounding": "page_text"
+      }
+    },
+    "warnings": [
+      "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+      "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序，以及年份是否对应所收录版本。"
+    ],
+    "requires_confirmation": true,
+    "page_count": 18,
+    "method": "local_and_api_page_recognition",
+    "api_assistance": {
+      "status": "completed",
+      "accepted_fields": 6
+    },
+    "bibliographic_enrichment": {
+      "policy": "crossref-collected-version-v2",
+      "provider": "crossref",
+      "status": "not_needed",
+      "missing_before": [],
+      "filled_fields": [],
+      "conflicts": [],
+      "candidates": []
+    },
+    "document_version": {
+      "kind": "manuscript",
+      "dois": [
+        "10.1109/tro.2015.2463671"
+      ]
+    },
+    "year_review": {
+      "policy": "collected-version-year-v2",
+      "status": "candidate_supported",
+      "source": "api",
+      "date_type": "version",
+      "grounding": "page_text"
+    },
+    "discipline_classification": {
+      "status": "classified",
+      "method": "llm_page_classification",
+      "value": "自然科学",
+      "pdf_page": 2,
+      "reason": "研究单目视觉 SLAM 系统，属于计算机与机器人技术领域。"
+    }
+  },
+  "fulltext": {
+    "status": "eligible",
+    "pages": 18
+  },
+  "outcome": "preview_completed",
+  "elapsed_seconds": 15.12
+}

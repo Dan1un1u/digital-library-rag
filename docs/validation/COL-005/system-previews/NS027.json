@@ -1,0 +1,180 @@
+{
+  "item_id": "NS027",
+  "source_sha256": "5edf2da6f5ff6438649e818e82ea86c7a168fbe1294fa165a252f9640b24e039",
+  "deployed_commit": "8174362c38fcd62b722b5133692c7e9662355b87",
+  "preview": {
+    "metadata": {
+      "title": "Observational Evidence from Supernovae for an Accelerating Universe and a Cosmological Constant",
+      "authors": [
+        "Adam G. Riess",
+        "Alexei V. Filippenko",
+        "Peter Challis",
+        "Alejandro Clocchiatti",
+        "Alan Diercks",
+        "Peter M. Garnavich",
+        "Ron L. Gilliland",
+        "Craig J. Hogan",
+        "Saurabh Jha",
+        "Robert P. Kirshner",
+        "B. Leibundgut",
+        "M. M. Phillips",
+        "David Reiss",
+        "Brian P. Schmidt",
+        "Robert A. Schommer",
+        "R. Chris Smith",
+        "J. Spyromilio",
+        "Christopher Stubbs",
+        "Nicholas B. Suntzeff",
+        "John Tonry"
+      ],
+      "year": null,
+      "language": "en",
+      "source_url": "https://doi.org/10.1086/300499",
+      "topics": [
+        "自然科学"
+      ]
+    },
+    "field_sources": {
+      "title": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "authors": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "language": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "source_url": {
+        "method": "bibliographic_lookup",
+        "provider": "crossref",
+        "record_url": "https://api.crossref.org/works/10.1086%2F300499",
+        "retrieved_at": "2026-10-20T05:00:57.069913+00:00",
+        "date_type": null,
+        "excerpt": "[Full page excerpt retained privately]"
+      }
+    },
+    "warnings": [
+      "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+      "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+      "版本年份待核对：页面没有可对应到所收录版本的日期说明；已留空，可根据所收录文件核对后填写。",
+      "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序，以及年份是否对应所收录版本。",
+      "已依据题名和作者吻合的 Crossref 出版记录补全候选字段；DOI 可作为相关出版来源，年份还须与所收录版本对应，请核对后导入。",
+      "外部出版日期未能确定对应所收录版本；版本年份继续留空。相关记录仅供核对，可按文件上的日期手动填写。"
+    ],
+    "requires_confirmation": true,
+    "page_count": 72,
+    "method": "local_and_api_page_recognition",
+    "api_assistance": {
+      "status": "completed",
+      "accepted_fields": 4
+    },
+    "bibliographic_enrichment": {
+      "policy": "crossref-collected-version-v2",
+      "provider": "crossref",
+      "status": "completed",
+      "missing_before": [
+        "year",
+        "source_url"
+      ],
+      "filled_fields": [
+        "source_url"
+      ],
+      "conflicts": [],
+      "candidates": [
+        {
+          "title": "Observational Evidence from Supernovae for an Accelerating Universe and a Cosmological Constant",
+          "authors": [
+            "Adam G. Riess",
+            "Alexei V. Filippenko",
+            "Peter Challis",
+            "Alejandro Clocchiatti",
+            "Alan Diercks",
+            "Peter M. Garnavich",
+            "Ron L. Gilliland",
+            "Craig J. Hogan",
+            "Saurabh Jha",
+            "Robert P. Kirshner",
+            "B. Leibundgut",
+            "M. M. Phillips",
+            "David Reiss",
+            "Brian P. Schmidt",
+            "Robert A. Schommer",
+            "R. Chris Smith",
+            "J. Spyromilio",
+            "Christopher Stubbs",
+            "Nicholas B. Suntzeff",
+            "John Tonry"
+          ],
+          "doi": "10.1086/300499",
+          "source_url": "https://doi.org/10.1086/300499",
+          "record_url": "https://api.crossref.org/works/10.1086%2F300499",
+          "type": "journal-article",
+          "dates": [
+            {
+              "kind": "published-print",
+              "date_parts": [
+                1998,
+                9
+              ],
+              "year": 1998
+            },
+            {
+              "kind": "published",
+              "date_parts": [
+                1998,
+                9
+              ],
+              "year": 1998
+            }
+          ],
+          "selected_date": {
+            "kind": "published-print",
+            "date_parts": [
+              1998,
+              9
+            ],
+            "year": 1998
+          },
+          "match": {
+            "title": "normalized_exact",
+            "first_author": "exact",
+            "author_overlap": 20,
+            "required_overlap": 16
+          }
+        }
+      ],
+      "queried_at": "2026-10-20T05:00:57.069913+00:00",
+      "year_decision": "version_not_confirmed"
+    },
+    "document_version": {
+      "kind": "manuscript",
+      "dois": []
+    },
+    "year_review": {
+      "policy": "collected-version-year-v2",
+      "status": "needs_confirmation",
+      "reason": "missing_version_context",
+      "rejected_value": 1998
+    },
+    "discipline_classification": {
+      "status": "classified",
+      "method": "llm_page_classification",
+      "value": "自然科学",
+      "pdf_page": 2,
+      "reason": "研究高红移超新星观测及宇宙学参数，属于天文学与宇宙学研究。"
+    }
+  },
+  "fulltext": {
+    "status": "requires_review",
+    "code": "TEXT_LAYER_REVIEW_REQUIRED",
+    "message": "PDF 第 51、60–72 页的文字层疑似编码异常，已暂停导入，未加入检索。请对照原页核对正文，完成 OCR 或更换可正确提取文字的版本后重新上传。增强元数据识别不能修复正文文字层。"
+  },
+  "outcome": "preview_completed",
+  "elapsed_seconds": 17.62
+}

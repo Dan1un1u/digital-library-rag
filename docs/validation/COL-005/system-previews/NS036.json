@@ -1,0 +1,169 @@
+{
+  "item_id": "NS036",
+  "source_sha256": "843e87c69970c2259ced11ebbd96760fbe6d5d8df08c03f3eac7fe4be2ccbc13",
+  "deployed_commit": "8174362c38fcd62b722b5133692c7e9662355b87",
+  "preview": {
+    "metadata": {
+      "title": "The Chemistry Development Kit (CDK) v2.0: atom typing, depiction, molecular formulas, and substructure searching",
+      "authors": [
+        "Egon L. Willighagen",
+        "John W. Mayfield",
+        "Jonathan Alvarsson",
+        "Arvid Berg",
+        "Lars Carlsson",
+        "Nina Jeliazkova",
+        "Stefan Kuhn",
+        "Tomáš Pluskal",
+        "Miquel Rojas-Chertó",
+        "Ola Spjuth",
+        "Gilleain Torrance",
+        "Chris T. Evelo",
+        "Rajarshi Guha",
+        "Christoph Steinbeck"
+      ],
+      "year": null,
+      "language": "en",
+      "source_url": "https://doi.org/10.1186/s13321-017-0220-4",
+      "topics": [
+        "自然科学"
+      ]
+    },
+    "field_sources": {
+      "title": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "authors": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "language": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "source_url": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      }
+    },
+    "warnings": [
+      "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+      "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+      "版本年份待核对：候选年份与当前版本的日期依据不一致；已留空，可根据所收录文件核对后填写。",
+      "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序，以及年份是否对应所收录版本。",
+      "外部出版日期未能确定对应所收录版本；版本年份继续留空。相关记录仅供核对，可按文件上的日期手动填写。"
+    ],
+    "requires_confirmation": true,
+    "page_count": 19,
+    "method": "local_and_api_page_recognition",
+    "api_assistance": {
+      "status": "completed",
+      "accepted_fields": 4
+    },
+    "bibliographic_enrichment": {
+      "policy": "crossref-collected-version-v2",
+      "provider": "crossref",
+      "status": "completed",
+      "missing_before": [
+        "year"
+      ],
+      "filled_fields": [],
+      "conflicts": [],
+      "candidates": [
+        {
+          "title": "The Chemistry Development Kit (CDK) v2.0: atom typing, depiction, molecular formulas, and substructure searching",
+          "authors": [
+            "Egon L. Willighagen",
+            "John W. Mayfield",
+            "Jonathan Alvarsson",
+            "Arvid Berg",
+            "Lars Carlsson",
+            "Nina Jeliazkova",
+            "Stefan Kuhn",
+            "Tomáš Pluskal",
+            "Miquel Rojas-Chertó",
+            "Ola Spjuth",
+            "Gilleain Torrance",
+            "Chris T. Evelo",
+            "Rajarshi Guha",
+            "Christoph Steinbeck"
+          ],
+          "doi": "10.1186/s13321-017-0220-4",
+          "source_url": "https://doi.org/10.1186/s13321-017-0220-4",
+          "record_url": "https://api.crossref.org/works/10.1186%2Fs13321-017-0220-4",
+          "type": "journal-article",
+          "dates": [
+            {
+              "kind": "published-print",
+              "date_parts": [
+                2017,
+                12
+              ],
+              "year": 2017
+            },
+            {
+              "kind": "published-online",
+              "date_parts": [
+                2017,
+                6,
+                6
+              ],
+              "year": 2017
+            },
+            {
+              "kind": "published",
+              "date_parts": [
+                2017,
+                6,
+                6
+              ],
+              "year": 2017
+            }
+          ],
+          "selected_date": {
+            "kind": "published-online",
+            "date_parts": [
+              2017,
+              6,
+              6
+            ],
+            "year": 2017
+          },
+          "match": {
+            "title": "normalized_exact",
+            "first_author": "exact",
+            "author_overlap": 14,
+            "required_overlap": 12
+          }
+        }
+      ],
+      "queried_at": "2026-10-20T05:01:37.400129+00:00",
+      "year_decision": "version_not_confirmed"
+    },
+    "document_version": {
+      "kind": "unknown",
+      "dois": []
+    },
+    "year_review": {
+      "policy": "collected-version-year-v2",
+      "status": "needs_confirmation",
+      "reason": "year_not_supported",
+      "rejected_value": 2017
+    },
+    "discipline_classification": {
+      "status": "classified",
+      "method": "keyword",
+      "value": "自然科学"
+    }
+  },
+  "fulltext": {
+    "status": "eligible",
+    "pages": 19
+  },
+  "outcome": "preview_completed",
+  "elapsed_seconds": 16.25
+}

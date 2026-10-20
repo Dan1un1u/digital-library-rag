@@ -1,0 +1,42 @@
+[
+  {
+    "item_id": "NS045",
+    "before": [
+      "地球科学",
+      "地震层析模型比较",
+      "Comparing global seismic tomography models using varimax principal component analysis",
+      "",
+      "10.5194/se-12-1601-2021",
+      "https://se.copernicus.org/articles/12/1601/2021/se-12-1601-2021.pdf"
+    ],
+    "after": [
+      "地球科学",
+      "地震层析模型比较",
+      "The GEM Global Active Faults Database",
+      "",
+      "10.1177/8755293020944182",
+      "https://rocksandwater.net/pdfs/styron_pagani_gaf_spectra_accepted.pdf"
+    ],
+    "reason": "Replace oversized tomography PDF with author-hosted fault database study; use accessible landmark 2012 perovskite study."
+  },
+  {
+    "item_id": "NS100",
+    "before": [
+      "工程能源",
+      "光伏能源",
+      "Efficient hybrid solar cells based on meso-superstructured organometal halide perovskites",
+      "",
+      "10.1126/science.1228604",
+      "https://citeseerx.ist.psu.edu/document?doi=a68cb661e14446bef48ddd4417fdec169bbb1e40&repid=rep1&type=pdf"
+    ],
+    "after": [
+      "工程能源",
+      "光伏能源",
+      "Lead Iodide Perovskite Sensitized All-Solid-State Submicron Thin Film Mesoscopic Solar Cell with Efficiency Exceeding 9%",
+      "",
+      "10.1038/srep00591",
+      ""
+    ],
+    "reason": "Replace oversized tomography PDF with author-hosted fault database study; use accessible landmark 2012 perovskite study."
+  }
+]

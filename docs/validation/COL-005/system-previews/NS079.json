@@ -1,0 +1,103 @@
+{
+  "item_id": "NS079",
+  "source_sha256": "7b153cb84078b68c637ebd6514bf290ac7d66000ace22086db5ad860a5f8ccd4",
+  "deployed_commit": "8174362c38fcd62b722b5133692c7e9662355b87",
+  "preview": {
+    "metadata": {
+      "title": "Burden of Depressive Disorders by Country, Sex, Age, and Year: Findings from the Global Burden of Disease Study 2010",
+      "authors": [
+        "Alize J. Ferrari",
+        "Fiona J. Charlson",
+        "Rosana E. Norman",
+        "Scott B. Patten",
+        "Greg Freedman",
+        "Christopher J.L. Murray",
+        "Theo Vos",
+        "Harvey A. Whiteford"
+      ],
+      "year": 2013,
+      "language": "en",
+      "source_url": "https://doi.org/10.1371/journal.pmed.1001547",
+      "topics": [
+        "社会科学"
+      ]
+    },
+    "field_sources": {
+      "title": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "authors": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "year": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]",
+        "date_type": "publication",
+        "context": "[Full page excerpt retained privately]",
+        "grounding": "page_text"
+      },
+      "source_url": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "language": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      }
+    },
+    "warnings": [
+      "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+      "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+      "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序，以及年份是否对应所收录版本。"
+    ],
+    "requires_confirmation": true,
+    "page_count": 12,
+    "method": "local_and_api_page_recognition",
+    "api_assistance": {
+      "status": "completed",
+      "accepted_fields": 6
+    },
+    "bibliographic_enrichment": {
+      "policy": "crossref-collected-version-v2",
+      "provider": "crossref",
+      "status": "not_needed",
+      "missing_before": [],
+      "filled_fields": [],
+      "conflicts": [],
+      "candidates": []
+    },
+    "document_version": {
+      "kind": "publication",
+      "dois": [
+        "10.1371/journal.pmed.1001547"
+      ]
+    },
+    "year_review": {
+      "policy": "collected-version-year-v2",
+      "status": "candidate_supported",
+      "source": "api",
+      "date_type": "publication",
+      "grounding": "page_text"
+    },
+    "discipline_classification": {
+      "status": "classified",
+      "method": "llm_page_classification",
+      "value": "社会科学",
+      "pdf_page": 1,
+      "reason": "研究关注抑郁障碍的疾病负担及其在人群、地区和年龄等维度的分布，主要属于公共卫生与社会健康研究。"
+    }
+  },
+  "fulltext": {
+    "status": "eligible",
+    "pages": 12
+  },
+  "outcome": "preview_completed",
+  "elapsed_seconds": 17.7
+}

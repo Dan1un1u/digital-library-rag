@@ -1,0 +1,262 @@
+[
+  {
+    "item_id": "NS026",
+    "before": [
+      "天文宇宙",
+      "银河中心观测",
+      "First Sagittarius A* Event Horizon Telescope Results. I. The Shadow of the Supermassive Black Hole in the Center of the Milky Way",
+      "2205.05626",
+      "",
+      ""
+    ],
+    "after": [
+      "天文宇宙",
+      "银河中心观测",
+      "First Sagittarius A* Event Horizon Telescope Results. I. The Shadow of the Supermassive Black Hole in the Center of the Milky Way",
+      "2311.08680",
+      "10.3847/2041-8213/ac6674",
+      "https://open.bu.edu/server/api/core/bitstreams/22388e8f-07fb-465c-98d9-37e5b84eb01f/content"
+    ],
+    "reason": "Correct primary identifier/add institution-hosted full text; replace unavailable full text within the same disciplinary quota."
+  },
+  {
+    "item_id": "NS032",
+    "before": [
+      "化学材料",
+      "半导体材料器件",
+      "Single-layer MoS2 transistors",
+      "",
+      "10.1038/nnano.2010.279",
+      ""
+    ],
+    "after": [
+      "化学材料",
+      "半导体材料器件",
+      "Band-Like Transport in High Mobility Unencapsulated Single-Layer MoS2 Transistors",
+      "1304.5567",
+      "",
+      ""
+    ],
+    "reason": "Correct primary identifier/add institution-hosted full text; replace unavailable full text within the same disciplinary quota."
+  },
+  {
+    "item_id": "NS041",
+    "before": [
+      "地球科学",
+      "陆地遥感与高程",
+      "A new high-accuracy global digital elevation model",
+      "",
+      "10.1002/2017GL072874",
+      ""
+    ],
+    "after": [
+      "地球科学",
+      "陆地遥感与高程",
+      "A new high-accuracy global digital elevation model",
+      "",
+      "10.1002/2017GL072874",
+      "https://bibliotecadigital.ciren.cl/bitstream/handle/20.500.13082/32775/2017GL072874.pdf?isAllowed=y&sequence=1"
+    ],
+    "reason": "Correct primary identifier/add institution-hosted full text; replace unavailable full text within the same disciplinary quota."
+  },
+  {
+    "item_id": "NS042",
+    "before": [
+      "地球科学",
+      "地学制图与空间分析",
+      "The Generic Mapping Tools Version 6",
+      "",
+      "10.1029/2019GC008515",
+      ""
+    ],
+    "after": [
+      "地球科学",
+      "地学制图与空间分析",
+      "The Generic Mapping Tools Version 6",
+      "",
+      "10.1029/2019GC008515",
+      "https://repository.library.noaa.gov/view/noaa/45245/noaa_45245_DS1.pdf"
+    ],
+    "reason": "Correct primary identifier/add institution-hosted full text; replace unavailable full text within the same disciplinary quota."
+  },
+  {
+    "item_id": "NS064",
+    "before": [
+      "生态进化",
+      "物种地理分布模型",
+      "Maximum entropy modeling of species geographic distributions",
+      "",
+      "10.1016/j.ecolmodel.2005.03.026",
+      ""
+    ],
+    "after": [
+      "生态进化",
+      "物种地理分布模型",
+      "Maximum entropy modeling of species geographic distributions",
+      "",
+      "10.1016/j.ecolmodel.2005.03.026",
+      "https://www.whoi.edu/cms/files/phillips_etal_2006_53467.pdf"
+    ],
+    "reason": "Correct primary identifier/add institution-hosted full text; replace unavailable full text within the same disciplinary quota."
+  },
+  {
+    "item_id": "NS065",
+    "before": [
+      "分子遗传",
+      "DNA结构",
+      "Molecular Structure of Nucleic Acids: A Structure for Deoxyribose Nucleic Acid",
+      "",
+      "10.1038/171737a0",
+      ""
+    ],
+    "after": [
+      "分子遗传",
+      "DNA结构",
+      "Molecular Structure of Nucleic Acids: A Structure for Deoxyribose Nucleic Acid",
+      "",
+      "10.1038/171737a0",
+      "https://web.eecs.umich.edu/~ryanph/jhu/cs718/spring18/project/dna.pdf"
+    ],
+    "reason": "Correct primary identifier/add institution-hosted full text; replace unavailable full text within the same disciplinary quota."
+  },
+  {
+    "item_id": "NS070",
+    "before": [
+      "分子遗传",
+      "转录组测量",
+      "RNA-Seq: a revolutionary tool for transcriptomics",
+      "",
+      "10.1038/nrg2484",
+      ""
+    ],
+    "after": [
+      "分子遗传",
+      "转录组测量",
+      "Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2",
+      "",
+      "10.1186/s13059-014-0550-8",
+      ""
+    ],
+    "reason": "Correct primary identifier/add institution-hosted full text; replace unavailable full text within the same disciplinary quota."
+  },
+  {
+    "item_id": "NS071",
+    "before": [
+      "分子遗传",
+      "染色质与表观遗传",
+      "Transposition of native chromatin for fast and sensitive epigenomic profiling of open chromatin, DNA-binding proteins and nucleosome position",
+      "",
+      "10.1038/nmeth.2688",
+      ""
+    ],
+    "after": [
+      "分子遗传",
+      "染色质与表观遗传",
+      "The ENCODE (ENCyclopedia Of DNA Elements) Project",
+      "",
+      "10.1371/journal.pbio.0020073",
+      ""
+    ],
+    "reason": "Correct primary identifier/add institution-hosted full text; replace unavailable full text within the same disciplinary quota."
+  },
+  {
+    "item_id": "NS077",
+    "before": [
+      "医学公共健康",
+      "系统综述报告规范",
+      "The PRISMA 2020 statement: an updated guideline for reporting systematic reviews",
+      "",
+      "10.1136/bmj.n71",
+      ""
+    ],
+    "after": [
+      "医学公共健康",
+      "系统综述报告规范",
+      "The PRISMA 2020 statement: an updated guideline for reporting systematic reviews",
+      "",
+      "10.1136/bmj.n71",
+      "https://www.bmj.com/content/bmj/372/bmj.n71.full.pdf"
+    ],
+    "reason": "Correct primary identifier/add institution-hosted full text; replace unavailable full text within the same disciplinary quota."
+  },
+  {
+    "item_id": "NS081",
+    "before": [
+      "医学公共健康",
+      "长期队列与吸烟危害",
+      "Mortality in relation to smoking: 50 years' observations on male British doctors",
+      "",
+      "10.1136/bmj.38142.554479.AE",
+      ""
+    ],
+    "after": [
+      "医学公共健康",
+      "长期队列与吸烟危害",
+      "Mortality in relation to smoking: 50 years' observations on male British doctors",
+      "",
+      "10.1136/bmj.38142.554479.AE",
+      "https://www.bmj.com/content/bmj/328/7455/1519.full.pdf"
+    ],
+    "reason": "Correct primary identifier/add institution-hosted full text; replace unavailable full text within the same disciplinary quota."
+  },
+  {
+    "item_id": "NS083",
+    "before": [
+      "神经科学",
+      "神经电生理",
+      "A quantitative description of membrane current and its application to conduction and excitation in nerve",
+      "",
+      "10.1113/jphysiol.1952.sp004764",
+      ""
+    ],
+    "after": [
+      "神经科学",
+      "神经电生理",
+      "A quantitative description of membrane current and its application to conduction and excitation in nerve",
+      "",
+      "10.1113/jphysiol.1952.sp004764",
+      "https://materias.df.uba.ar/dnla2019c1/files/2019/03/hodgkin1952.pdf"
+    ],
+    "reason": "Correct primary identifier/add institution-hosted full text; replace unavailable full text within the same disciplinary quota."
+  },
+  {
+    "item_id": "NS098",
+    "before": [
+      "工程能源",
+      "工程数值模拟",
+      "Isogeometric analysis: CAD, finite elements, NURBS, exact geometry and mesh refinement",
+      "",
+      "10.1016/j.cma.2004.10.008",
+      ""
+    ],
+    "after": [
+      "工程能源",
+      "工程数值模拟",
+      "Isogeometric analysis: CAD, finite elements, NURBS, exact geometry and mesh refinement",
+      "",
+      "10.1016/j.cma.2004.10.008",
+      "https://hal.archives-ouvertes.fr/hal-01513346/document"
+    ],
+    "reason": "Correct primary identifier/add institution-hosted full text; replace unavailable full text within the same disciplinary quota."
+  },
+  {
+    "item_id": "NS099",
+    "before": [
+      "工程能源",
+      "电化学储能",
+      "Issues and challenges facing rechargeable lithium batteries",
+      "",
+      "10.1038/35104644",
+      ""
+    ],
+    "after": [
+      "工程能源",
+      "电化学储能",
+      "A reflection on lithium-ion battery cathode chemistry",
+      "",
+      "10.1038/s41467-020-15355-0",
+      ""
+    ],
+    "reason": "Correct primary identifier/add institution-hosted full text; replace unavailable full text within the same disciplinary quota."
+  }
+]

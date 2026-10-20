@@ -1,0 +1,142 @@
+{
+  "item_id": "NS097",
+  "source_sha256": "620781aec340929b02c704651c8187c2547cab8e3f7d3e196e036a8d91e0c87b",
+  "deployed_commit": "8174362c38fcd62b722b5133692c7e9662355b87",
+  "preview": {
+    "metadata": {
+      "title": "Two-Equation Eddy-Viscosity Turbulence Models for Engineering Applications",
+      "authors": [
+        "F. R. Menter"
+      ],
+      "year": 1994,
+      "language": "en",
+      "source_url": "https://doi.org/10.2514/3.12149",
+      "topics": []
+    },
+    "field_sources": {
+      "title": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "authors": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "F. R. Menter*"
+      },
+      "language": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "source_url": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "year": {
+        "method": "bibliographic_lookup",
+        "provider": "crossref",
+        "record_url": "https://api.crossref.org/works/10.2514%2F3.12149",
+        "retrieved_at": "2026-10-20T05:12:38.080189+00:00",
+        "date_type": "published-print",
+        "excerpt": "[Full page excerpt retained privately]"
+      }
+    },
+    "warnings": [
+      "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+      "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+      "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序，以及年份是否对应所收录版本。",
+      "已依据题名和作者吻合的 Crossref 出版记录补全候选字段；DOI 可作为相关出版来源，年份还须与所收录版本对应，请核对后导入。"
+    ],
+    "requires_confirmation": true,
+    "page_count": 8,
+    "method": "local_and_api_page_recognition",
+    "api_assistance": {
+      "status": "completed",
+      "accepted_fields": 4
+    },
+    "bibliographic_enrichment": {
+      "policy": "crossref-collected-version-v2",
+      "provider": "crossref",
+      "status": "completed",
+      "missing_before": [
+        "year"
+      ],
+      "filled_fields": [
+        "year"
+      ],
+      "conflicts": [],
+      "candidates": [
+        {
+          "title": "Two-equation eddy-viscosity turbulence models for engineering applications",
+          "authors": [
+            "F. R. Menter"
+          ],
+          "doi": "10.2514/3.12149",
+          "source_url": "https://doi.org/10.2514/3.12149",
+          "record_url": "https://api.crossref.org/works/10.2514%2F3.12149",
+          "type": "journal-article",
+          "dates": [
+            {
+              "kind": "published-print",
+              "date_parts": [
+                1994,
+                8
+              ],
+              "year": 1994
+            },
+            {
+              "kind": "published",
+              "date_parts": [
+                1994,
+                8
+              ],
+              "year": 1994
+            }
+          ],
+          "selected_date": {
+            "kind": "published-print",
+            "date_parts": [
+              1994,
+              8
+            ],
+            "year": 1994
+          },
+          "match": {
+            "title": "normalized_exact",
+            "first_author": "exact",
+            "author_overlap": 1,
+            "required_overlap": 1
+          }
+        }
+      ],
+      "queried_at": "2026-10-20T05:12:38.080189+00:00",
+      "year_decision": "same_publication_version"
+    },
+    "document_version": {
+      "kind": "publication",
+      "dois": [
+        "10.2514/3.12149"
+      ]
+    },
+    "year_review": {
+      "policy": "crossref-collected-version-v2",
+      "status": "candidate_supported",
+      "source": "crossref",
+      "grounding": "registry_record",
+      "date_type": "published-print"
+    },
+    "discipline_classification": {
+      "status": "pending",
+      "method": "unresolved",
+      "value": null
+    }
+  },
+  "fulltext": {
+    "status": "eligible",
+    "pages": 8
+  },
+  "outcome": "preview_completed",
+  "elapsed_seconds": 13.62
+}

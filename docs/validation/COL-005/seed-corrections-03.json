@@ -1,0 +1,202 @@
+[
+  {
+    "item_id": "NS033",
+    "before": [
+      "化学材料",
+      "合成化学与点击反应",
+      "Click Chemistry: Diverse Chemical Function from a Few Good Reactions",
+      "",
+      "",
+      " https://moodle2.units.it/pluginfile.php/297534/mod_resource/content/1/ACIE_2001_2005_Click_Chemistry.pdf"
+    ],
+    "after": [
+      "化学材料",
+      "合成化学与点击反应",
+      "Copper-free click chemistry for dynamic in vivo imaging",
+      "",
+      "10.1073/pnas.0707090104",
+      ""
+    ],
+    "reason": "Use institution full text or same-field accessible representative work."
+  },
+  {
+    "item_id": "NS041",
+    "before": [
+      "地球科学",
+      "陆地遥感与高程",
+      "A new high-accuracy global digital elevation model",
+      "",
+      "10.1002/2017GL072874",
+      "https://bibliotecadigital.ciren.cl/bitstream/handle/20.500.13082/32775/2017GL072874.pdf?isAllowed=y&sequence=1"
+    ],
+    "after": [
+      "地球科学",
+      "陆地遥感与高程",
+      "SoilGrids250m: Global gridded soil information based on machine learning",
+      "",
+      "10.1371/journal.pone.0169748",
+      ""
+    ],
+    "reason": "Use institution full text or same-field accessible representative work."
+  },
+  {
+    "item_id": "NS061",
+    "before": [
+      "生态进化",
+      "森林生态",
+      "Mapping tree density at a global scale",
+      "",
+      "10.1038/nature14967",
+      ""
+    ],
+    "after": [
+      "生态进化",
+      "森林生态",
+      "Mapping tree density at a global scale",
+      "",
+      "10.1038/nature14967",
+      "https://paul.zhdk.ch/pluginfile.php/90734/mod_resource/content/3/Crowther-2015%20%281%29.pdf"
+    ],
+    "reason": "Use institution full text or same-field accessible representative work."
+  },
+  {
+    "item_id": "NS062",
+    "before": [
+      "生态进化",
+      "土地利用与生物多样性",
+      "Global effects of land use on local terrestrial biodiversity",
+      "",
+      "10.1038/nature14324",
+      ""
+    ],
+    "after": [
+      "生态进化",
+      "土地利用与生物多样性",
+      "Global effects of land use on local terrestrial biodiversity",
+      "",
+      "10.1038/nature14324",
+      "https://discovery.ucl.ac.uk/id/eprint/1464937/1/Newbold%20etal%202015%20Nature%20Submitted.pdf"
+    ],
+    "reason": "Use institution full text or same-field accessible representative work."
+  },
+  {
+    "item_id": "NS063",
+    "before": [
+      "生态进化",
+      "生态系统功能",
+      "Biodiversity loss and its impact on humanity",
+      "",
+      "10.1038/nature11148",
+      ""
+    ],
+    "after": [
+      "生态进化",
+      "生态系统功能",
+      "Biodiversity loss and its impact on humanity",
+      "",
+      "10.1038/nature11148",
+      "https://ir.xtbg.ac.cn/bitstream/353005/9757/2/Biodiversity%20loss%20and%20its%20impact%20on%20humanity.pdf"
+    ],
+    "reason": "Use institution full text or same-field accessible representative work."
+  },
+  {
+    "item_id": "NS066",
+    "before": [
+      "分子遗传",
+      "DNA复制机制",
+      "The replication of DNA in Escherichia coli",
+      "",
+      "10.1073/pnas.44.7.671",
+      ""
+    ],
+    "after": [
+      "分子遗传",
+      "DNA复制机制",
+      "The replication of DNA in Escherichia coli",
+      "",
+      "10.1073/pnas.44.7.671",
+      "https://authors.library.caltech.edu/records/pggy5-n0t48/files/MESpnas58.pdf"
+    ],
+    "reason": "Use institution full text or same-field accessible representative work."
+  },
+  {
+    "item_id": "NS077",
+    "before": [
+      "医学公共健康",
+      "系统综述报告规范",
+      "The PRISMA 2020 statement: an updated guideline for reporting systematic reviews",
+      "",
+      "10.1136/bmj.n71",
+      "https://www.bmj.com/content/bmj/372/bmj.n71.full.pdf"
+    ],
+    "after": [
+      "医学公共健康",
+      "系统综述报告规范",
+      "The PRISMA 2020 statement: An updated guideline for reporting systematic reviews",
+      "",
+      "10.1371/journal.pmed.1003583",
+      ""
+    ],
+    "reason": "Use institution full text or same-field accessible representative work."
+  },
+  {
+    "item_id": "NS081",
+    "before": [
+      "医学公共健康",
+      "长期队列与吸烟危害",
+      "Mortality in relation to smoking: 50 years' observations on male British doctors",
+      "",
+      "10.1136/bmj.38142.554479.AE",
+      "https://www.bmj.com/content/bmj/328/7455/1519.full.pdf"
+    ],
+    "after": [
+      "医学公共健康",
+      "长期队列与吸烟危害",
+      "Mortality in relation to smoking: 50 years' observations on male British doctors",
+      "",
+      "10.1136/bmj.38142.554479.AE",
+      "https://gas.ndph.ox.ac.uk/deathsfromsmoking/download%20files/Original%20research/Mortality%20in%20relation%20to%20smoking%2050%20years%20observations%20on%20male%20British%20doctors.pdf"
+    ],
+    "reason": "Use institution full text or same-field accessible representative work."
+  },
+  {
+    "item_id": "NS091",
+    "before": [
+      "农业植物食品",
+      "农业土地可持续性",
+      "Solutions for a cultivated planet",
+      "",
+      "10.1038/nature10452",
+      ""
+    ],
+    "after": [
+      "农业植物食品",
+      "农业土地可持续性",
+      "Solutions for a cultivated planet",
+      "",
+      "10.1038/nature10452",
+      "https://escholarship.org/content/qt6xw5g085/qt6xw5g085.pdf"
+    ],
+    "reason": "Use institution full text or same-field accessible representative work."
+  },
+  {
+    "item_id": "NS094",
+    "before": [
+      "农业植物食品",
+      "食品系统环境足迹",
+      "Reducing food's environmental impacts through producers and consumers",
+      "",
+      "10.1126/science.aaq0216",
+      ""
+    ],
+    "after": [
+      "农业植物食品",
+      "食品系统环境足迹",
+      "Reducing food's environmental impacts through producers and consumers",
+      "",
+      "10.1126/science.aaq0216",
+      "https://ora.ox.ac.uk/objects/uuid:b0b53649-5e93-4415-bf07-6b0b1227172f/files/m13e577c73b56987e9c3e8eeb47ca6e74"
+    ],
+    "reason": "Use institution full text or same-field accessible representative work."
+  }
+]
