@@ -1,0 +1,10 @@
+{
+  "pages": 11,
+  "pdf_fonts": [
+    "/QHIUOC+Consolas",
+    "/YMVEVT+MicrosoftYaHei",
+    "/YWSWBG+MicrosoftYaHei-Bold"
+  ],
+  "no_ms_gothic": true,
+  "renderer": "packaged render_docx.py with WPS PDF export at 140 DPI"
+}

@@ -1,0 +1,22 @@
+{
+  "before_docx_sha256": "0f0b4c2673beb26d0424b6c7e5ffad6b1d4b79344ab38459b82a1606792e66a2",
+  "after_docx_sha256": "d1b29fab5c6be926cd7c816607be0a36ad19fa207c77b6825217423e36a41989",
+  "text_unchanged": true,
+  "embedded_images_unchanged": true,
+  "chinese_font": "Microsoft YaHei",
+  "code_font": "Consolas",
+  "japanese_font_references_removed": true,
+  "theme_font_overrides_removed": true,
+  "changed_ooxml_parts": [
+    "word/document.xml",
+    "word/styles.xml",
+    "word/stylesWithEffects.xml",
+    "word/settings.xml",
+    "word/webSettings.xml",
+    "word/fontTable.xml",
+    "word/theme/theme1.xml",
+    "word/numbering.xml",
+    "word/header1.xml",
+    "word/footer1.xml"
+  ]
+}
