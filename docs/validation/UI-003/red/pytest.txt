@@ -1,0 +1,119 @@
+FF.FF....                                                                [100%]
+================================== FAILURES ===================================
+_____________ test_pie_stroke_fits_inside_available_plot[455-211] _____________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000025F11DED6D0>
+plot_width = 455, plot_height = 211
+
+    @pytest.mark.parametrize('plot_width,plot_height', [(455,211), (165,211), (340,340), (180,300), (2,2)])
+    def test_pie_stroke_fits_inside_available_plot(monkeypatch, plot_width, plot_height):
+        # 455x211 and 165x211 are real legend-reduced plot sizes from the old browser UI.
+        _, spec = render_collection(monkeypatch, (1,1,1))
+        outer = spec['mark'].get('outerRadius', spec['mark'].get('radius'))
+        if isinstance(outer, dict):
+            # The emitted Vega expression uses min/max and arithmetic, shared by Python.
+            radius = eval(outer['expr'], {'__builtins__':{}},
+                          {'min':min, 'max':max, 'width':plot_width, 'height':plot_height})
+        else:
+            radius = outer
+        assert radius is not None
+        stroke = spec['mark']['strokeWidth']
+        assert 0 <= radius <= 140
+>       assert radius + stroke / 2 <= min(plot_width, plot_height) / 2
+E       assert (140 + (2 / 2)) <= (211 / 2)
+E        +  where 211 = min(455, 211)
+
+app\tests\integration\test_subject_pie_bounds.py:44: AssertionError
+---------------------------- Captured stderr call -----------------------------
+2026-10-20 00:28:23.574 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+_____________ test_pie_stroke_fits_inside_available_plot[165-211] _____________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000025F42523320>
+plot_width = 165, plot_height = 211
+
+    @pytest.mark.parametrize('plot_width,plot_height', [(455,211), (165,211), (340,340), (180,300), (2,2)])
+    def test_pie_stroke_fits_inside_available_plot(monkeypatch, plot_width, plot_height):
+        # 455x211 and 165x211 are real legend-reduced plot sizes from the old browser UI.
+        _, spec = render_collection(monkeypatch, (1,1,1))
+        outer = spec['mark'].get('outerRadius', spec['mark'].get('radius'))
+        if isinstance(outer, dict):
+            # The emitted Vega expression uses min/max and arithmetic, shared by Python.
+            radius = eval(outer['expr'], {'__builtins__':{}},
+                          {'min':min, 'max':max, 'width':plot_width, 'height':plot_height})
+        else:
+            radius = outer
+        assert radius is not None
+        stroke = spec['mark']['strokeWidth']
+        assert 0 <= radius <= 140
+>       assert radius + stroke / 2 <= min(plot_width, plot_height) / 2
+E       assert (140 + (2 / 2)) <= (165 / 2)
+E        +  where 165 = min(165, 211)
+
+app\tests\integration\test_subject_pie_bounds.py:44: AssertionError
+---------------------------- Captured stderr call -----------------------------
+2026-10-20 00:28:25.705 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+_____________ test_pie_stroke_fits_inside_available_plot[180-300] _____________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000025F425869F0>
+plot_width = 180, plot_height = 300
+
+    @pytest.mark.parametrize('plot_width,plot_height', [(455,211), (165,211), (340,340), (180,300), (2,2)])
+    def test_pie_stroke_fits_inside_available_plot(monkeypatch, plot_width, plot_height):
+        # 455x211 and 165x211 are real legend-reduced plot sizes from the old browser UI.
+        _, spec = render_collection(monkeypatch, (1,1,1))
+        outer = spec['mark'].get('outerRadius', spec['mark'].get('radius'))
+        if isinstance(outer, dict):
+            # The emitted Vega expression uses min/max and arithmetic, shared by Python.
+            radius = eval(outer['expr'], {'__builtins__':{}},
+                          {'min':min, 'max':max, 'width':plot_width, 'height':plot_height})
+        else:
+            radius = outer
+        assert radius is not None
+        stroke = spec['mark']['strokeWidth']
+        assert 0 <= radius <= 140
+>       assert radius + stroke / 2 <= min(plot_width, plot_height) / 2
+E       assert (140 + (2 / 2)) <= (180 / 2)
+E        +  where 180 = min(180, 300)
+
+app\tests\integration\test_subject_pie_bounds.py:44: AssertionError
+---------------------------- Captured stderr call -----------------------------
+2026-10-20 00:28:26.246 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+_______________ test_pie_stroke_fits_inside_available_plot[2-2] _______________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000025F40962BD0>
+plot_width = 2, plot_height = 2
+
+    @pytest.mark.parametrize('plot_width,plot_height', [(455,211), (165,211), (340,340), (180,300), (2,2)])
+    def test_pie_stroke_fits_inside_available_plot(monkeypatch, plot_width, plot_height):
+        # 455x211 and 165x211 are real legend-reduced plot sizes from the old browser UI.
+        _, spec = render_collection(monkeypatch, (1,1,1))
+        outer = spec['mark'].get('outerRadius', spec['mark'].get('radius'))
+        if isinstance(outer, dict):
+            # The emitted Vega expression uses min/max and arithmetic, shared by Python.
+            radius = eval(outer['expr'], {'__builtins__':{}},
+                          {'min':min, 'max':max, 'width':plot_width, 'height':plot_height})
+        else:
+            radius = outer
+        assert radius is not None
+        stroke = spec['mark']['strokeWidth']
+        assert 0 <= radius <= 140
+>       assert radius + stroke / 2 <= min(plot_width, plot_height) / 2
+E       assert (140 + (2 / 2)) <= (2 / 2)
+E        +  where 2 = min(2, 2)
+
+app\tests\integration\test_subject_pie_bounds.py:44: AssertionError
+---------------------------- Captured stderr call -----------------------------
+2026-10-20 00:28:26.548 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+============================== warnings summary ===============================
+..\..\llm_exp\digital-library\workspace\deployments\lib_management_v1_20261018\.venv\Lib\site-packages\fastapi\testclient.py:1
+  D:\llm_exp\digital-library\workspace\deployments\lib_management_v1_20261018\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: D:\digital-library-worktrees\ui-003-pie-clipping\reports\UI-003\red\junit.xml -
+=========================== short test summary info ===========================
+FAILED app\tests\integration\test_subject_pie_bounds.py::test_pie_stroke_fits_inside_available_plot[455-211]
+FAILED app\tests\integration\test_subject_pie_bounds.py::test_pie_stroke_fits_inside_available_plot[165-211]
+FAILED app\tests\integration\test_subject_pie_bounds.py::test_pie_stroke_fits_inside_available_plot[180-300]
+FAILED app\tests\integration\test_subject_pie_bounds.py::test_pie_stroke_fits_inside_available_plot[2-2]
+4 failed, 5 passed, 1 warning in 5.07s
