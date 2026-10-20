@@ -1,0 +1,30 @@
+{
+  "outcome": "completed",
+  "batch_id": "COL-006-20261020-SIX",
+  "plan_sha256": "504b16464ab42025408b4d90208a165f1c02128a64b4e2eeb02dfa9809f634c8",
+  "completed_utc": "2026-10-20T06:34:44.237643+00:00",
+  "deployed_commit": "446f7b5a18b4ebdcc83638618827c802f0416be8",
+  "tooling_commit": "f19f94b178afd4f1c28ab224488ad1a2415fae3b",
+  "formal_url": "http://127.0.0.1:18501/",
+  "formal_documents": 175,
+  "formal_chunks": 16699,
+  "removed_and_recreated": 6,
+  "automatic_natural_science_classifications": 6,
+  "pending_classification": 0,
+  "domain_counts": {
+    "自然科学": 124,
+    "社会科学": 26,
+    "哲学与人文科学": 25
+  },
+  "other_documents_unchanged": 169,
+  "other_catalogues_unchanged": 8,
+  "candidate_title_checks": 18,
+  "formal_title_checks": 18,
+  "all_original_hashes_preserved": true,
+  "new_record_proof": "deletion.json + absent-api.json + import job IDs + changed created_at",
+  "observations": [
+    "Ascend initial enhanced preview retained one author; second enhanced preview recovered all 18. External bibliographic enrichment returned not_needed and filled no fields. Original failed preview retained; no product fix."
+  ],
+  "last_event_sha256": "140ef464cc591cf9b0d345682d37623691addb128561be3e722426f43d527f22",
+  "storage": "Original PDFs, backups, database, indexes and machine-specific model wiring retained outside Git."
+}

@@ -1,0 +1,10 @@
+{
+  "sample_documents": 6,
+  "expected_authors": 75,
+  "first_pass_complete_author_lists": 5,
+  "first_pass_returned_author_names": 58,
+  "first_pass_correct_automatic_classifications": 6,
+  "after_one_re_recognition_complete_author_lists": 6,
+  "manual_author_value_corrections": 0,
+  "source_review": "Assistant inspected the six PDF first pages and all author orders; these counts describe only this selected six-PDF sample."
+}

@@ -1,0 +1,21 @@
+[
+  {
+    "category": "local maintenance harness",
+    "first_start": "failed before service ready",
+    "reason": "Copied local server inferred its private configuration directory from the new task folder instead of the deployment folder; BGE revision guard rejected missing configuration.",
+    "adjustment": "Explicit deployment root outside Git, while source remains bound to the COL-006 worktree.",
+    "original_log": "logs/col006_api_20261020_141250.log",
+    "product_source_changed": false,
+    "formal_data_changed": false
+  },
+  {
+    "category": "local verification helper, not product",
+    "first_import_job": "29c645ba14334c9cafed9e73cdaef5ca",
+    "product_result": "done, document ready",
+    "helper_error": "KeyError created_at: compact baseline API snapshot intentionally omits audit timestamps",
+    "adjustment": "Read audit timestamps from pre-operation SQLite backup and resume existing completed job; no duplicate POST",
+    "original_receipt": "ingestion-receipt-attempt1.json",
+    "original_script": "ingest-attempt1.py",
+    "product_source_changed": false
+  }
+]

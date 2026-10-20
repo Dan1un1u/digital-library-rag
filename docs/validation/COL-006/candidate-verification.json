@@ -1,0 +1,241 @@
+{
+  "status": "passed",
+  "completed_at": "2026-10-20T06:33:51.266547+00:00",
+  "documents": 175,
+  "pending": 0,
+  "domain_counts": {
+    "自然科学": 124,
+    "社会科学": 26,
+    "哲学与人文科学": 25
+  },
+  "manifest": {
+    "index_version": "idx_20261020T063256_77704a846374",
+    "contract_version": "1.0",
+    "built_at": "2026-10-20T06:32:56.333872+00:00",
+    "embedding_model": "BAAI/bge-m3",
+    "embedding_revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "dimension": 1024,
+    "normalized": true,
+    "chunking_config": {
+      "count_mode": "character",
+      "tokenizer_name": null,
+      "tokenizer_revision": null,
+      "max_tokens": 400,
+      "overlap_tokens": 50,
+      "max_chars": 1200,
+      "overlap_chars": 150
+    },
+    "tokenizer": null,
+    "document_count": 175,
+    "chunk_count": 16699,
+    "corpus_hash": "e991fd62b72f3a96f44b45c3f2601e6152c010a67b4002f0194d60c77c326478",
+    "lexical_tokenizer": "nfkc-casefold-cjk-bigram-v1",
+    "retrieval_config": {
+      "candidate_k": 20,
+      "rrf_k": 60,
+      "normalize_embeddings": true,
+      "bm25_k1": 1.5,
+      "bm25_b": 0.75,
+      "vector_text_policy": "document-title-prefix-v1"
+    },
+    "artifacts": {
+      "chunks.json": "e991fd62b72f3a96f44b45c3f2601e6152c010a67b4002f0194d60c77c326478",
+      "lexical.json": "419156af633304c0d40cc45c2c09b9aac45fe252a964727de6fdd9bded087f70",
+      "vectors.npy": "e9a5a798e1fe194cf7607cf1db2136f304f8618c3bc01c082eeacfa03bc943ea"
+    }
+  },
+  "items": [
+    {
+      "item_id": "P01",
+      "doc_id": "d_604fcbd71b570f13ec0ed832c7c083728cf9b42170704f7fddd966530db96bee",
+      "author_count": 20,
+      "year": 2026,
+      "discipline": "自然科学",
+      "pages": 17,
+      "chunks": 102,
+      "created_at": "2026-10-20T06:16:39.871044+00:00",
+      "old_created_at": "2026-10-18T15:31:22.616137+00:00",
+      "parser_version": "pymupdf-conservative-v4",
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ],
+      "pdf_hash_preserved": true,
+      "offsets_verified": true
+    },
+    {
+      "item_id": "P02",
+      "doc_id": "d_69c573c123ffd1538d432ab31040072dec01a375a4a5b7c2960a7667cb970dda",
+      "author_count": 18,
+      "year": 2025,
+      "discipline": "自然科学",
+      "pages": 16,
+      "chunks": 101,
+      "created_at": "2026-10-20T06:20:21.253896+00:00",
+      "old_created_at": "2026-10-18T15:31:00.475413+00:00",
+      "parser_version": "pymupdf-conservative-v4",
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ],
+      "pdf_hash_preserved": true,
+      "offsets_verified": true
+    },
+    {
+      "item_id": "P03",
+      "doc_id": "d_a1dfa622dabb6a58261c9eb6367ffd4a4d51dffbf9f74e9741c1d18ad3aba967",
+      "author_count": 7,
+      "year": 2026,
+      "discipline": "自然科学",
+      "pages": 15,
+      "chunks": 92,
+      "created_at": "2026-10-20T06:22:54.420299+00:00",
+      "old_created_at": "2026-10-18T15:32:29.115567+00:00",
+      "parser_version": "pymupdf-conservative-v4",
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ],
+      "pdf_hash_preserved": true,
+      "offsets_verified": true
+    },
+    {
+      "item_id": "P04",
+      "doc_id": "d_b9cae993bbd44a679c75aae59ae802845d0321c9e4ee163a1c77b00417371f3b",
+      "author_count": 9,
+      "year": 2020,
+      "discipline": "自然科学",
+      "pages": 12,
+      "chunks": 79,
+      "created_at": "2026-10-20T06:25:24.671796+00:00",
+      "old_created_at": "2026-10-18T15:31:11.541341+00:00",
+      "parser_version": "pymupdf-conservative-v4",
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ],
+      "pdf_hash_preserved": true,
+      "offsets_verified": true
+    },
+    {
+      "item_id": "P05",
+      "doc_id": "d_c4eb5fe23e480decfa6f08afda0fdb0bea4d0fe5ee7fafc65f2a2d34a397ddf0",
+      "author_count": 12,
+      "year": 2026,
+      "discipline": "自然科学",
+      "pages": 16,
+      "chunks": 101,
+      "created_at": "2026-10-20T06:27:55.086388+00:00",
+      "old_created_at": "2026-10-18T15:33:17.651423+00:00",
+      "parser_version": "pymupdf-conservative-v4",
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ],
+      "pdf_hash_preserved": true,
+      "offsets_verified": true
+    },
+    {
+      "item_id": "P06",
+      "doc_id": "d_fe437770d7c981eae9e028eacaa5c772ed0add900ed9dec54c10cfce6dfd86c3",
+      "author_count": 9,
+      "year": 2025,
+      "discipline": "自然科学",
+      "pages": 24,
+      "chunks": 89,
+      "created_at": "2026-10-20T06:30:25.326341+00:00",
+      "old_created_at": "2026-10-18T15:33:00.438483+00:00",
+      "parser_version": "pymupdf-conservative-v4",
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ],
+      "pdf_hash_preserved": true,
+      "offsets_verified": true
+    }
+  ],
+  "searches": 18,
+  "search_hits": 18,
+  "other_document_rows_unchanged": 169,
+  "all_175_original_files_unchanged": true,
+  "protected_original_formal_and_eight_other_instances_unchanged": true,
+  "sqlite_integrity": "ok"
+}
