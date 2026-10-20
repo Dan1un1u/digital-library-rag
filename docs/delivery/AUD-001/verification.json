@@ -1,0 +1,120 @@
+{
+  "work_item": "AUD-001",
+  "as_of": "2026-10-20T15:03:44.738508+08:00",
+  "initial_commit": "65f168f45f2bf34ea204106e4e6e3250b56041a6",
+  "production_main": "446f7b5a18b4ebdcc83638618827c802f0416be8",
+  "workbooks": [
+    {
+      "file": "测试清单.xlsx",
+      "bytes": 59338,
+      "sha256": "22b0f16993eb4c56ba8b58c702342672fbe8614ce8aad9d9fe467d82cac07ea9",
+      "sheets": [
+        {
+          "name": "测试清单",
+          "data_rows": 31,
+          "frozen_rows": 8,
+          "frozen_columns": 2,
+          "filter": true,
+          "native_hyperlinks": 29
+        },
+        {
+          "name": "自动化用例",
+          "data_rows": 632,
+          "frozen_rows": 8,
+          "frozen_columns": 2,
+          "filter": true,
+          "native_hyperlinks": 632
+        },
+        {
+          "name": "待办与边界",
+          "data_rows": 11,
+          "frozen_rows": 8,
+          "frozen_columns": 2,
+          "filter": true,
+          "native_hyperlinks": 10
+        }
+      ],
+      "native_hyperlinks": 671,
+      "formula_errors": 0,
+      "summary_values": {
+        "B6": 322,
+        "D6": 632,
+        "F6": 11
+      }
+    },
+    {
+      "file": "交付物清单.xlsx",
+      "bytes": 35132,
+      "sha256": "04ceda8d2b389758e265bf74ac2771cd6be58562d09646452c6e0caa9c7d85ae",
+      "sheets": [
+        {
+          "name": "交付物清单",
+          "data_rows": 27,
+          "frozen_rows": 8,
+          "frozen_columns": 2,
+          "filter": true,
+          "native_hyperlinks": 26
+        },
+        {
+          "name": "文件差异",
+          "data_rows": 426,
+          "frozen_rows": 8,
+          "frozen_columns": 2,
+          "filter": true,
+          "native_hyperlinks": 426
+        },
+        {
+          "name": "版本核对",
+          "data_rows": 22,
+          "frozen_rows": 8,
+          "frozen_columns": 2,
+          "filter": true,
+          "native_hyperlinks": 0
+        }
+      ],
+      "native_hyperlinks": 452,
+      "formula_errors": 0,
+      "summary_values": {
+        "B6": 27,
+        "D6": 426,
+        "F6": 175
+      }
+    }
+  ],
+  "counts": {
+    "test_items": 31,
+    "expanded_cases": 632,
+    "new_cases": 322,
+    "initial_retained_cases": 310,
+    "pending_items": 11,
+    "deliverables": 27,
+    "diff_paths": 426
+  },
+  "unique_expanded_testcases": 632,
+  "new_expanded_cases": 322,
+  "initial_retained_cases": 310,
+  "initial_local_only_cases_migrated_out": 20,
+  "historical_regression_rerun_this_task": false,
+  "historical_tested_commit": "1973b4135c90877ab90b15e55d21d56e21d9674f",
+  "current_app_source_and_test_trees_equal_historical_tested_commit": true,
+  "application_code_changed": false,
+  "live_catalogue_changed": false,
+  "application_restarted": false,
+  "native_excel_application_tested": false,
+  "native_excel_note": "XLSX package, formula caches, native hyperlink relationships, panes and filters checked; all six artifact-rendered sheets visually reviewed.",
+  "visual_review": {
+    "sheets_reviewed": 6,
+    "chinese_font": "Microsoft YaHei",
+    "missing_glyphs": false,
+    "clipped_headers": false,
+    "hyperlink_labels_readable": true
+  },
+  "public_files_sha256": {
+    "deployed-source-hashes.json": "e3094992119f5850293b2958111e15e7de514424fe6959bbf8c81daabd38d646",
+    "formal-ui.png": "53ba716007d5bb8563baa7a365488aa3f2ec778bb27eb8f8c390e02164f7a351",
+    "inventory.json": "9d7f8edeaced6dbe12a4527d31ddbc4b9278456bed987105e6eb07debddb3952",
+    "sync-check.json": "312493520fe089b5b59e2a636edaa959dc4f41f53d0ba5357fac29cdf701fa6d",
+    "交付物清单.xlsx": "04ceda8d2b389758e265bf74ac2771cd6be58562d09646452c6e0caa9c7d85ae",
+    "测试清单.xlsx": "22b0f16993eb4c56ba8b58c702342672fbe8614ce8aad9d9fe467d82cac07ea9"
+  }
+}
