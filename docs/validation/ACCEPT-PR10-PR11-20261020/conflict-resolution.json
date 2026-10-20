@@ -1,0 +1,14 @@
+{
+  "files": [
+    "AGENTS.md",
+    "app/src/dlrag/ui/app.py",
+    "scripts/run_catalog_checks.py"
+  ],
+  "app": "PR10 interface plus exactly PR11 outerRadius expression; no other application changes.",
+  "runner": "Register both independent test groups and preserve their attribution.",
+  "instructions": "Keep latest acceptance authorization and both historical work item instructions.",
+  "parents": [
+    "ad131b8",
+    "6835e52"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "status": "pass",
+  "blocking_findings": [],
+  "merge_order": [
+    10,
+    11
+  ],
+  "pr10_app_tree": "a78547ea47fed51710dfc95959ec2f9495115691",
+  "pr10_runner_blob": "a55059f9ce548fbc3371638ea919d14a6b2c310e",
+  "combined_test_commit": "1973b4135c90877ab90b15e55d21d56e21d9674f",
+  "combined_app_tree": "5afce50909e7964ea22d5bc4a29e18dd1c59b2b4",
+  "combined_runner_blob": "e068a421df569a1704d8346d0d8ea6bd0eddd8cc",
+  "pr10_target_passed": 26,
+  "pr10_full_passed": 623,
+  "combined_target_ui002": 26,
+  "combined_target_ui003": 9,
+  "combined_full_passed": 632,
+  "protected_libraries_unchanged": 7,
+  "browser": "pass",
+  "manual": "Original 11-page rendered evidence and source/DOCX hashes verified.",
+  "review": "Production union equals PR10 plus the one outerRadius change from PR11; all original styling/forms remain.",
+  "hosted_ci": "No hosted checks configured; fresh local tests and browser checks provide evidence.",
+  "deployment": false,
+  "created_at": "2026-10-20T03:41:44.482136+00:00",
+  "pr10_merge_commit": "d43d075ba19d705506fce1743c16eaac77b66410",
+  "review_candidate_commit": "47d8f65257124273746fb339faed2cc8fab73c7e",
+  "review_candidate_tree": "ef0b91512a402edb460a96c1237451c4498846a5",
+  "original_ui003_head": "6835e524e1813e23c5589bea4106c777ae0469f8",
+  "history_integration": "Normal merge of the actual PR10 main commit after the joint test; app tree and runner blob remain equal to tested source.",
+  "subsequent_changes": "Validation documents and screenshots only; verify exact source trees again at the merge boundary."
+}

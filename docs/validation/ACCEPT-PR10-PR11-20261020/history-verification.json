@@ -1,0 +1,61 @@
+{
+  "historical_records": [
+    {
+      "file": "D:\\digital-library-worktrees\\accept-pr10-pr11\\docs\\validation\\UI-002\\R2\\full\\summary.json",
+      "commit": "1447f2a8b0446f25f40f7c71726c8dc0e8d99efd",
+      "tests": {
+        "tests": 623,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "hashes_verified": true
+    },
+    {
+      "file": "D:\\digital-library-worktrees\\accept-pr10-pr11\\docs\\validation\\UI-002\\R2\\target\\summary.json",
+      "commit": "1447f2a8b0446f25f40f7c71726c8dc0e8d99efd",
+      "tests": {
+        "tests": 26,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "hashes_verified": true
+    },
+    {
+      "file": "D:\\digital-library-worktrees\\ui-003-pie-clipping\\docs\\validation\\UI-003\\full\\summary.json",
+      "commit": "0f15f2883dbe44b9354c870d425548dc07d2f92e",
+      "tests": {
+        "tests": 606,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "hashes_verified": true
+    },
+    {
+      "file": "D:\\digital-library-worktrees\\ui-003-pie-clipping\\docs\\validation\\UI-003\\red\\summary.json",
+      "commit": "23996176afdc070598cb195e1d3d022327cf05d7",
+      "tests": {
+        "tests": 9,
+        "failures": 4,
+        "errors": 0,
+        "skipped": 0
+      },
+      "hashes_verified": true
+    },
+    {
+      "file": "D:\\digital-library-worktrees\\ui-003-pie-clipping\\docs\\validation\\UI-003\\target\\summary.json",
+      "commit": "0f15f2883dbe44b9354c870d425548dc07d2f92e",
+      "tests": {
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "hashes_verified": true
+    }
+  ],
+  "manual_source_and_docx_hashes_verified": true,
+  "manual_original_11_page_render_evidence_retained": true
+}
