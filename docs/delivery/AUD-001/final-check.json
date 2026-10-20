@@ -1,0 +1,20 @@
+{
+  "main": "446f7b5a18b4ebdcc83638618827c802f0416be8",
+  "catalogue_documents": 175,
+  "metadata_equal_start": true,
+  "index_version_unchanged": true,
+  "application_diff": false,
+  "staged_paths": [
+    "AGENTS.md",
+    "docs/delivery/AUD-001/README.md",
+    "docs/delivery/AUD-001/deployed-source-hashes.json",
+    "docs/delivery/AUD-001/formal-ui.png",
+    "docs/delivery/AUD-001/inventory.json",
+    "docs/delivery/AUD-001/sync-check.json",
+    "docs/delivery/AUD-001/verification.json",
+    "docs/delivery/AUD-001/交付物清单.xlsx",
+    "docs/delivery/AUD-001/测试清单.xlsx",
+    "docs/work-items/AUD-001.md"
+  ],
+  "output_copies_identical": true
+}

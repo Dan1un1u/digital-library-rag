@@ -1,0 +1,101 @@
+{
+  "checked_at": "2026-10-20T15:03:44.738508+08:00",
+  "initial_git_commit": "65f168f45f2bf34ea204106e4e6e3250b56041a6",
+  "main": "446f7b5a18b4ebdcc83638618827c802f0416be8",
+  "local_main": "446f7b5a18b4ebdcc83638618827c802f0416be8",
+  "origin_main": "446f7b5a18b4ebdcc83638618827c802f0416be8",
+  "ahead": 0,
+  "behind": 0,
+  "deployed_commit": "446f7b5a18b4ebdcc83638618827c802f0416be8",
+  "deployed_source_files_verified": 583,
+  "source_mismatches": [],
+  "database_counts": {
+    "documents": 175,
+    "pages": 4037,
+    "chunks": 16699,
+    "document_topics": 455
+  },
+  "document_states": {
+    "ready": 175
+  },
+  "index_version": "idx_20261020T063256_77704a846374",
+  "manifest_document_count": 175,
+  "manifest_chunk_count": 16699,
+  "github_hosted_checks": {
+    "check_runs": [],
+    "statuses": [],
+    "hosted_checks_present": false
+  },
+  "record_branches": [
+    {
+      "pr": 16,
+      "branch": "chore/col-006-six-reimport",
+      "local_head": "f551205054df25cb1ffc341cbd9f11e767a0a101",
+      "github_head": "f551205054df25cb1ffc341cbd9f11e767a0a101",
+      "equal": true,
+      "merged": false,
+      "draft": true
+    },
+    {
+      "pr": 15,
+      "branch": "chore/col-005-natural-sciences-100",
+      "local_head": "ef123e3f9a8541dac60c51edb4e26426ef8470a8",
+      "github_head": "ef123e3f9a8541dac60c51edb4e26426ef8470a8",
+      "equal": true,
+      "merged": false,
+      "draft": true
+    },
+    {
+      "pr": 14,
+      "branch": "chore/col-004-rural-reimport",
+      "local_head": "570fe1c097d62c182093cd47a6cae5eb00fc3f2a",
+      "github_head": "570fe1c097d62c182093cd47a6cae5eb00fc3f2a",
+      "equal": true,
+      "merged": false,
+      "draft": true
+    },
+    {
+      "pr": 13,
+      "branch": "chore/col-003-formal-hss",
+      "local_head": "a346b8fbc2e8d1a7ff3e3042a7d23b3a0bbd70b6",
+      "github_head": "a346b8fbc2e8d1a7ff3e3042a7d23b3a0bbd70b6",
+      "equal": true,
+      "merged": false,
+      "draft": true
+    }
+  ],
+  "data_sync_scope": "Application source equals GitHub main. PDFs, live SQLite, indexes, credentials and local model wiring are local assets, not Git-synchronized.",
+  "initial_to_main_counts": {
+    "A": 360,
+    "M": 29,
+    "D": 37
+  },
+  "diff_category_counts": {
+    "工程配置": 9,
+    "产品代码": 54,
+    "自动化测试": 25,
+    "文档及验证记录": 312,
+    "工具与运行脚本": 26
+  },
+  "local_main_before_update": "65f168f45f2bf34ea204106e4e6e3250b56041a6",
+  "local_main_update": "Fast-forward only; no commit created or pushed to main.",
+  "runtime_process_binding": {
+    "api_port": 18000,
+    "api_pid": 44524,
+    "ui_port": 18501,
+    "ui_pid": 14792,
+    "api_uses_current_active_data": true,
+    "ui_source_in_hash_verified_release": true,
+    "backend_source_binding": "release.source.app via external loader; project files unmodified"
+  },
+  "browser": {
+    "tab": "1",
+    "url": "http://127.0.0.1:18501/?lang=zh",
+    "documents": 175,
+    "natural": 124,
+    "social": 26,
+    "humanities": 25,
+    "pending": 0,
+    "screenshot": "formal-ui.png"
+  }
+}
