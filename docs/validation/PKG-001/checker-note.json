@@ -1,0 +1,11 @@
+{
+  "attempt": "R01",
+  "result": "checker assertion failed",
+  "stage": "application-smoke category counts",
+  "expected_ui_counts": {"自然科学": 124, "社会科学": 26, "哲学与人文科学": 25},
+  "observed_explicit_tags": {"自然科学": 107, "社会科学": 26, "哲学与人文科学": 25},
+  "legacy_records_without_explicit_domain": 17,
+  "cause": "Checker counted only explicit domain tags. The application intentionally also applies rule_discipline to legacy records, giving the 17 legacy computer-science records their displayed natural-science category.",
+  "action": "Keep the failed checker result and its database copy; use the application's existing rule_discipline for the independent R2 check. No application, corpus or ZIP change.",
+  "product_defect": false
+}
