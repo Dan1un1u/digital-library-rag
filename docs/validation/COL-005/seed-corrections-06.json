@@ -1,0 +1,82 @@
+[
+  {
+    "item_id": "NS033",
+    "before": [
+      "化学材料",
+      "合成化学与点击反应",
+      "Click Chemistry: Diverse Chemical Function from a Few Good Reactions",
+      "",
+      "10.1002/1521-3773(20010601)40:11<2004::AID-ANIE2004>3.0.CO;2-5",
+      "https://www.renyi.hu/~stipsicz/Mezo_DECEMBER/click/click.pdf"
+    ],
+    "after": [
+      "化学材料",
+      "合成化学与点击反应",
+      "Click Chemistry: Diverse Chemical Function from a Few Good Reactions",
+      "",
+      "10.1002/1521-3773(20010601)40:11<2004::AID-ANIE2004>3.0.CO;2-5",
+      "https://image.sciencenet.cn/olddata/kexue.com.cn/blog/admin/images/upfiles/20071016223955724940.pdf"
+    ],
+    "reason": "Find original paper full text in alternative archive; keep publisher/DOI metadata authority."
+  },
+  {
+    "item_id": "NS063",
+    "before": [
+      "生态进化",
+      "生态系统功能",
+      "Biodiversity loss and its impact on humanity",
+      "",
+      "10.1038/nature11148",
+      "https://ir.xtbg.ac.cn/bitstream/353005/9757/2/Biodiversity%20loss%20and%20its%20impact%20on%20humanity.pdf"
+    ],
+    "after": [
+      "生态进化",
+      "生态系统功能",
+      "Biodiversity loss and its impact on humanity",
+      "",
+      "10.1038/nature11148",
+      "https://mahb.stanford.edu/wp-content/uploads/2012/06/Nature-2012-Cardinale.pdf"
+    ],
+    "reason": "Find original paper full text in alternative archive; keep publisher/DOI metadata authority."
+  },
+  {
+    "item_id": "NS086",
+    "before": [
+      "神经科学",
+      "脑功能网络",
+      "A default mode of brain function",
+      "",
+      "10.1073/pnas.98.2.676",
+      "https://www.wisebrain.org/media/Papers/DefaultMode.pdf"
+    ],
+    "after": [
+      "神经科学",
+      "脑功能网络",
+      "A default mode of brain function",
+      "",
+      "10.1073/pnas.98.2.676",
+      "https://mriquestions.com/uploads/3/4/5/7/34572113/raichle_default_mode_pnas_pq000676.pdf"
+    ],
+    "reason": "Find original paper full text in alternative archive; keep publisher/DOI metadata authority."
+  },
+  {
+    "item_id": "NS100",
+    "before": [
+      "工程能源",
+      "光伏能源",
+      "Efficient hybrid solar cells based on meso-superstructured organometal halide perovskites",
+      "",
+      "10.1126/science.1228604",
+      ""
+    ],
+    "after": [
+      "工程能源",
+      "光伏能源",
+      "Efficient hybrid solar cells based on meso-superstructured organometal halide perovskites",
+      "",
+      "10.1126/science.1228604",
+      "https://citeseerx.ist.psu.edu/document?doi=a68cb661e14446bef48ddd4417fdec169bbb1e40&repid=rep1&type=pdf"
+    ],
+    "reason": "Find original paper full text in alternative archive; keep publisher/DOI metadata authority."
+  }
+]

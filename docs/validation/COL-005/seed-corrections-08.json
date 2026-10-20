@@ -1,0 +1,102 @@
+[
+  {
+    "item_id": "NS061",
+    "before": [
+      "生态进化",
+      "森林生态",
+      "Mapping tree density at a global scale",
+      "",
+      "10.1038/nature14967",
+      "https://www.crowtherlab.com/wp-content/uploads/2019/06/Crowther-2015.pdf"
+    ],
+    "after": [
+      "生态进化",
+      "森林生态",
+      "Global terrestrial Human Footprint maps for 1993 and 2009",
+      "",
+      "10.1038/sdata.2016.67",
+      ""
+    ],
+    "reason": "Within-field representative full-text replacement after inaccessible original; add university/repository full-text source."
+  },
+  {
+    "item_id": "NS068",
+    "before": [
+      "分子遗传",
+      "基因编辑",
+      "A programmable dual-RNA-guided DNA endonuclease in adaptive bacterial immunity",
+      "",
+      "10.1126/science.1225829",
+      "https://kinampark.com/T-Polymers/files/All%20References/Jinek%202012%2C%20A%20Programmable%20dual-RNA%E2%80%93guided%20DNA%20endonuclease%20in%20adaptive%20bacterial%20immunity.pdf"
+    ],
+    "after": [
+      "分子遗传",
+      "基因编辑",
+      "CRISPR/Cas9-mediated gene editing in human tripronuclear zygotes",
+      "",
+      "10.1007/s13238-015-0153-5",
+      ""
+    ],
+    "reason": "Within-field representative full-text replacement after inaccessible original; add university/repository full-text source."
+  },
+  {
+    "item_id": "NS084",
+    "before": [
+      "神经科学",
+      "突触可塑性",
+      "Long-lasting potentiation of synaptic transmission in the dentate area of the anaesthetized rabbit following stimulation of the perforant path",
+      "",
+      "10.1113/jphysiol.1973.sp010273",
+      ""
+    ],
+    "after": [
+      "神经科学",
+      "突触可塑性",
+      "Long-lasting potentiation of synaptic transmission in the dentate area of the unanaesthetized rabbit following stimulation of the perforant path",
+      "",
+      "10.1113/jphysiol.1973.sp010274",
+      "https://tmedwin.net/~ucgbarg/res/GM73_JP232_357.pdf"
+    ],
+    "reason": "Within-field representative full-text replacement after inaccessible original; add university/repository full-text source."
+  },
+  {
+    "item_id": "NS091",
+    "before": [
+      "农业植物食品",
+      "农业土地可持续性",
+      "Solutions for a cultivated planet",
+      "",
+      "10.1038/nature10452",
+      "https://escholarship.org/content/qt6xw5g085/qt6xw5g085.pdf"
+    ],
+    "after": [
+      "农业植物食品",
+      "农业土地可持续性",
+      "Solutions for a cultivated planet",
+      "",
+      "10.1038/nature10452",
+      "https://faculty.washington.edu/timbillo/Readings%20and%20documents/CO2%20and%20Forests%20readings/Foley%20et%20al.%20Nature%202011%20Cultivated%20planet.pdf"
+    ],
+    "reason": "Within-field representative full-text replacement after inaccessible original; add university/repository full-text source."
+  },
+  {
+    "item_id": "NS097",
+    "before": [
+      "工程能源",
+      "计算流体力学",
+      "Two-equation eddy-viscosity turbulence models for engineering applications",
+      "",
+      "10.2514/3.12149",
+      ""
+    ],
+    "after": [
+      "工程能源",
+      "计算流体力学",
+      "Two-equation eddy-viscosity turbulence models for engineering applications",
+      "",
+      "10.2514/3.12149",
+      "https://zenodo.org/records/1235949/files/article.pdf?download=1"
+    ],
+    "reason": "Within-field representative full-text replacement after inaccessible original; add university/repository full-text source."
+  }
+]

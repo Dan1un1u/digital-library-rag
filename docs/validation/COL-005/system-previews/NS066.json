@@ -1,0 +1,82 @@
+{
+  "item_id": "NS066",
+  "source_sha256": "22e8a28eeb1a71fce63223d045cd2fe0ebcbe2b99094c4dcddc90b30bbbd60cc",
+  "deployed_commit": "8174362c38fcd62b722b5133692c7e9662355b87",
+  "preview": {
+    "metadata": {
+      "title": "THE REPLICATION OF DNA IN ESCHERICHIA COLI",
+      "authors": [
+        "Matthew Meselson",
+        "Franklin W. Stahl"
+      ],
+      "year": null,
+      "language": "en",
+      "source_url": null,
+      "topics": []
+    },
+    "field_sources": {
+      "title": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "language": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "authors": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "BY MATTHEW MESELSON AND FRANKLIN W. STAHL"
+      }
+    },
+    "warnings": [
+      "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+      "版本年份待核对：摘录无法与所指页面的正文证据对应；已留空，可根据所收录文件核对后填写。",
+      "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序，以及年份是否对应所收录版本。",
+      "书目查询未找到唯一、题名和作者均吻合的出版记录；缺失字段保持为空，请核对。"
+    ],
+    "requires_confirmation": true,
+    "page_count": 12,
+    "method": "local_and_api_page_recognition",
+    "api_assistance": {
+      "status": "completed",
+      "accepted_fields": 3
+    },
+    "bibliographic_enrichment": {
+      "policy": "crossref-collected-version-v2",
+      "provider": "crossref",
+      "status": "no_match",
+      "missing_before": [
+        "year",
+        "source_url"
+      ],
+      "filled_fields": [],
+      "conflicts": [],
+      "candidates": [],
+      "queried_at": "2026-10-20T05:07:44.516066+00:00"
+    },
+    "document_version": {
+      "kind": "unknown",
+      "dois": []
+    },
+    "year_review": {
+      "policy": "collected-version-year-v2",
+      "status": "needs_confirmation",
+      "reason": "excerpt_not_on_page",
+      "rejected_value": 1958
+    },
+    "discipline_classification": {
+      "status": "pending",
+      "method": "unresolved",
+      "value": null
+    }
+  },
+  "fulltext": {
+    "status": "eligible",
+    "pages": 12
+  },
+  "outcome": "preview_completed",
+  "elapsed_seconds": 12.19
+}

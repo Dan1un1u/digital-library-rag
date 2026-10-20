@@ -1,0 +1,145 @@
+{
+  "item_id": "NS028",
+  "source_sha256": "1d44239a33f07e8bb371f543eccf2554a06e95b2632f452996295c5a21a114e4",
+  "deployed_commit": "8174362c38fcd62b722b5133692c7e9662355b87",
+  "preview": {
+    "metadata": {
+      "title": "THE THREE-DIMENSIONAL POWER SPECTRUM OF GALAXIES FROM THE SLOAN DIGITAL SKY SURVEY",
+      "authors": [
+        "Max Tegmark",
+        "Michael R. Blanton",
+        "Michael A. Strauss",
+        "Fiona Hoyle",
+        "David Schlegel",
+        "Roman Scoccimarro",
+        "Michael S. Vogeley",
+        "David H. Weinberg",
+        "Idit Zehavi",
+        "Andreas Berlind",
+        "Tamás Budavari",
+        "Andrew Connolly",
+        "Daniel J. Eisenstein",
+        "Douglas Finkbeiner",
+        "Joshua A. Frieman",
+        "James E. Gunn",
+        "Andrew J. S. Hamilton",
+        "Lam Hui",
+        "Bhuvnesh Jain",
+        "David Johnston",
+        "Stephen Kent",
+        "Huan Lin",
+        "Reiko Nakajima",
+        "Robert C. Nichol",
+        "Jeremiah P. Ostriker",
+        "Adrian Pope",
+        "Ryan Scranton",
+        "Uroš Seljak",
+        "Ravi K. Sheth",
+        "Albert Stebbins",
+        "Alexander S. Szalay",
+        "István Szapudi",
+        "Licia Verde",
+        "Yongzhong Xu",
+        "James Annis",
+        "Neta A. Bahcall",
+        "J. Brinkmann",
+        "Scott Burles",
+        "Francisco J. Castander",
+        "Istvan Csabai",
+        "Jon Loveday",
+        "Mamoru Doi",
+        "Masataka Fukugita",
+        "J. Richard Gott III",
+        "Greg Hennessy",
+        "David W. Hogg",
+        "Željko Ivezić",
+        "Gillian R. Knapp",
+        "Don Q. Lamb",
+        "Brian C. Lee",
+        "Robert H. Lupton",
+        "Timothy A. McKay",
+        "Peter Kunszt",
+        "Jeffrey A. Munn",
+        "Liam O’Connell",
+        "John Peoples",
+        "Jeffrey R. Pier",
+        "Michael Richmond",
+        "Constance Rockosi",
+        "Donald P. Schneider",
+        "Christopher Stoughton",
+        "Douglas L. Tucker",
+        "Daniel E. Vanden Berk",
+        "Brian Yanny",
+        "Donald G. York"
+      ],
+      "year": null,
+      "language": "en",
+      "source_url": null,
+      "topics": []
+    },
+    "field_sources": {
+      "language": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "title": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "authors": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      }
+    },
+    "warnings": [
+      "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+      "版本年份待核对：页面没有可对应到所收录版本的日期说明；已留空，可根据所收录文件核对后填写。",
+      "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序，以及年份是否对应所收录版本。",
+      "书目查询未找到唯一、题名和作者均吻合的出版记录；缺失字段保持为空，请核对。"
+    ],
+    "requires_confirmation": true,
+    "page_count": 40,
+    "method": "local_and_api_page_recognition",
+    "api_assistance": {
+      "status": "completed",
+      "accepted_fields": 3
+    },
+    "bibliographic_enrichment": {
+      "policy": "crossref-collected-version-v2",
+      "provider": "crossref",
+      "status": "no_match",
+      "missing_before": [
+        "year",
+        "source_url"
+      ],
+      "filled_fields": [],
+      "conflicts": [],
+      "candidates": [],
+      "queried_at": "2026-10-20T05:01:26.142347+00:00"
+    },
+    "document_version": {
+      "kind": "manuscript",
+      "dois": []
+    },
+    "year_review": {
+      "policy": "collected-version-year-v2",
+      "status": "needs_confirmation",
+      "reason": "missing_version_context",
+      "rejected_value": 2003
+    },
+    "discipline_classification": {
+      "status": "pending",
+      "method": "unresolved",
+      "value": null
+    }
+  },
+  "fulltext": {
+    "status": "eligible",
+    "pages": 40
+  },
+  "outcome": "preview_completed",
+  "elapsed_seconds": 35.0
+}

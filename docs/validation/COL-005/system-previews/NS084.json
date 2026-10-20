@@ -1,0 +1,150 @@
+{
+  "item_id": "NS084",
+  "source_sha256": "d71f95f1b10752fafb8c524064195c7ff3747fa339bdfc7f3590265a0213c93a",
+  "deployed_commit": "8174362c38fcd62b722b5133692c7e9662355b87",
+  "preview": {
+    "metadata": {
+      "title": "LONG-LASTING POTENTIATION OF SYNAPTIC TRANSMISSION IN THE DENTATE AREA OF THE UNANAESTHETIZED RABBIT FOLLOWING STIMULATION OF THE PERFORANT PATH",
+      "authors": [
+        "T. V. P. Bliss",
+        "A. R. Gardner-Medwin"
+      ],
+      "year": null,
+      "language": "en",
+      "source_url": "https://doi.org/10.1113/jphysiol.1973.sp010274",
+      "topics": [
+        "自然科学"
+      ]
+    },
+    "field_sources": {
+      "title": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "language": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "authors": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "BY T. V. P. BLISS AND A. R. GARDNER-MEDWIN"
+      },
+      "source_url": {
+        "method": "bibliographic_lookup",
+        "provider": "crossref",
+        "record_url": "https://api.crossref.org/works/10.1113%2Fjphysiol.1973.sp010274",
+        "retrieved_at": "2026-10-20T05:12:24.344011+00:00",
+        "date_type": null,
+        "excerpt": "[Full page excerpt retained privately]"
+      }
+    },
+    "warnings": [
+      "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+      "版本年份待核对：摘录无法与所指页面的正文证据对应；已留空，可根据所收录文件核对后填写。",
+      "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序，以及年份是否对应所收录版本。",
+      "已依据题名和作者吻合的 Crossref 出版记录补全候选字段；DOI 可作为相关出版来源，年份还须与所收录版本对应，请核对后导入。",
+      "外部出版日期未能确定对应所收录版本；版本年份继续留空。相关记录仅供核对，可按文件上的日期手动填写。"
+    ],
+    "requires_confirmation": true,
+    "page_count": 18,
+    "method": "local_and_api_page_recognition",
+    "api_assistance": {
+      "status": "completed",
+      "accepted_fields": 4
+    },
+    "bibliographic_enrichment": {
+      "policy": "crossref-collected-version-v2",
+      "provider": "crossref",
+      "status": "completed",
+      "missing_before": [
+        "year",
+        "source_url"
+      ],
+      "filled_fields": [
+        "source_url"
+      ],
+      "conflicts": [],
+      "candidates": [
+        {
+          "title": "Long‐lasting potentiation of synaptic transmission in the dentate area of the unanaesthetized rabbit following stimulation of the perforant path",
+          "authors": [
+            "T. V. P. Bliss",
+            "A. R. Gardner‐Medwin"
+          ],
+          "doi": "10.1113/jphysiol.1973.sp010274",
+          "source_url": "https://doi.org/10.1113/jphysiol.1973.sp010274",
+          "record_url": "https://api.crossref.org/works/10.1113%2Fjphysiol.1973.sp010274",
+          "type": "journal-article",
+          "dates": [
+            {
+              "kind": "published-print",
+              "date_parts": [
+                1973,
+                7
+              ],
+              "year": 1973
+            },
+            {
+              "kind": "published-online",
+              "date_parts": [
+                1973,
+                7
+              ],
+              "year": 1973
+            },
+            {
+              "kind": "published",
+              "date_parts": [
+                1973,
+                7
+              ],
+              "year": 1973
+            }
+          ],
+          "selected_date": {
+            "kind": "published-print",
+            "date_parts": [
+              1973,
+              7
+            ],
+            "year": 1973
+          },
+          "match": {
+            "title": "normalized_exact",
+            "first_author": "exact",
+            "author_overlap": 2,
+            "required_overlap": 2
+          }
+        }
+      ],
+      "queried_at": "2026-10-20T05:12:24.344011+00:00",
+      "year_decision": "version_not_confirmed"
+    },
+    "document_version": {
+      "kind": "unknown",
+      "dois": []
+    },
+    "year_review": {
+      "policy": "collected-version-year-v2",
+      "status": "needs_confirmation",
+      "reason": "excerpt_not_on_page",
+      "rejected_value": 1973
+    },
+    "discipline_classification": {
+      "status": "classified",
+      "method": "llm_page_classification",
+      "value": "自然科学",
+      "pdf_page": 1,
+      "reason": "研究对象是兔海马齿状区的突触传递及其生理变化，属于神经生理学。"
+    }
+  },
+  "fulltext": {
+    "status": "eligible",
+    "pages": 18
+  },
+  "outcome": "preview_completed",
+  "elapsed_seconds": 13.56
+}

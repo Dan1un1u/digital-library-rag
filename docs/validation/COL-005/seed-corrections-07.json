@@ -1,0 +1,62 @@
+[
+  {
+    "item_id": "NS061",
+    "before": [
+      "生态进化",
+      "森林生态",
+      "Mapping tree density at a global scale",
+      "",
+      "10.1038/nature14967",
+      "https://paul.zhdk.ch/pluginfile.php/90734/mod_resource/content/3/Crowther-2015%20%281%29.pdf"
+    ],
+    "after": [
+      "生态进化",
+      "森林生态",
+      "Mapping tree density at a global scale",
+      "",
+      "10.1038/nature14967",
+      "https://www.crowtherlab.com/wp-content/uploads/2019/06/Crowther-2015.pdf"
+    ],
+    "reason": "Try original author PDF and original-paper archive copies after inaccessible hosts."
+  },
+  {
+    "item_id": "NS068",
+    "before": [
+      "分子遗传",
+      "基因编辑",
+      "A programmable dual-RNA-guided DNA endonuclease in adaptive bacterial immunity",
+      "",
+      "10.1126/science.1225829",
+      "https://www.kinampark.com/T-Polymers/files/All%20References/Jinek%202012%2C%20A%20Programmable%20dual-RNA%E2%80%93guided%20DNA%20endonuclease%20in%20adaptive%20bacterial%20immunity.pdf"
+    ],
+    "after": [
+      "分子遗传",
+      "基因编辑",
+      "A programmable dual-RNA-guided DNA endonuclease in adaptive bacterial immunity",
+      "",
+      "10.1126/science.1225829",
+      "https://kinampark.com/T-Polymers/files/All%20References/Jinek%202012%2C%20A%20Programmable%20dual-RNA%E2%80%93guided%20DNA%20endonuclease%20in%20adaptive%20bacterial%20immunity.pdf"
+    ],
+    "reason": "Try original author PDF and original-paper archive copies after inaccessible hosts."
+  },
+  {
+    "item_id": "NS080",
+    "before": [
+      "医学公共健康",
+      "心血管风险预测",
+      "General cardiovascular risk profile for use in primary care: the Framingham Heart Study",
+      "",
+      "10.1161/CIRCULATIONAHA.107.699579",
+      "https://www.ahajournals.org/doi/pdf/10.1161/circulationaha.107.699579?download=true"
+    ],
+    "after": [
+      "医学公共健康",
+      "心血管风险预测",
+      "General cardiovascular risk profile for use in primary care: the Framingham Heart Study",
+      "",
+      "10.1161/CIRCULATIONAHA.107.699579",
+      "https://scispace.com/pdf/general-cardiovascular-risk-profile-for-use-in-primary-care-3o2jjgr182.pdf"
+    ],
+    "reason": "Try original author PDF and original-paper archive copies after inaccessible hosts."
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "item_id": "NS015",
+    "original_seed": [
+      "基础物理",
+      "量子反常霍尔效应",
+      "Experimental Observation of the Quantum Anomalous Hall Effect in a Magnetic Topological Insulator",
+      "1302.5920",
+      "",
+      ""
+    ],
+    "corrected_seed": [
+      "基础物理",
+      "量子反常霍尔效应",
+      "Experimental Observation of the Quantum Anomalous Hall Effect in a Magnetic Topological Insulator",
+      "1605.08829",
+      "",
+      ""
+    ],
+    "basis": "primary arXiv record; source identity correction during curation, not a product metadata defect"
+  },
+  {
+    "item_id": "NS017",
+    "original_seed": [
+      "基础物理",
+      "量子通信",
+      "Experimental quantum teleportation",
+      "quant-ph/9710013",
+      "",
+      ""
+    ],
+    "corrected_seed": [
+      "基础物理",
+      "量子通信",
+      "Experimental Realization of Teleporting an Unknown Pure Quantum State via Dual Classical and Einstein-Podolski-Rosen Channels",
+      "quant-ph/9710013",
+      "",
+      ""
+    ],
+    "basis": "primary arXiv record; source identity correction during curation, not a product metadata defect"
+  },
+  {
+    "item_id": "NS018",
+    "original_seed": [
+      "基础物理",
+      "量子多体纠缠",
+      "Entanglement in many-body systems",
+      "0808.3773",
+      "",
+      ""
+    ],
+    "corrected_seed": [
+      "基础物理",
+      "量子多体纠缠",
+      "Area laws for the entanglement entropy - a review",
+      "0808.3773",
+      "",
+      ""
+    ],
+    "basis": "primary arXiv record; source identity correction during curation, not a product metadata defect"
+  },
+  {
+    "item_id": "NS019",
+    "original_seed": [
+      "基础物理",
+      "非平衡统计物理",
+      "Many-body localization and thermalization in quantum statistical mechanics",
+      "1408.2834",
+      "",
+      ""
+    ],
+    "corrected_seed": [
+      "基础物理",
+      "非平衡统计物理",
+      "Many-body localization and thermalization in quantum statistical mechanics",
+      "1404.0686",
+      "",
+      ""
+    ],
+    "basis": "primary arXiv record; source identity correction during curation, not a product metadata defect"
+  },
+  {
+    "item_id": "NS024",
+    "original_seed": [
+      "天文宇宙",
+      "宇宙微波背景",
+      "Nine-Year Wilkinson Microwave Anisotropy Probe Observations: Cosmological Parameter Results",
+      "1212.5225",
+      "",
+      ""
+    ],
+    "corrected_seed": [
+      "天文宇宙",
+      "宇宙微波背景",
+      "Nine-Year Wilkinson Microwave Anisotropy Probe (WMAP) Observations: Final Maps and Results",
+      "1212.5225",
+      "",
+      ""
+    ],
+    "basis": "primary arXiv record; source identity correction during curation, not a product metadata defect"
+  }
+]

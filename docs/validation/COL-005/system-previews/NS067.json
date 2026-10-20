@@ -1,0 +1,94 @@
+{
+  "item_id": "NS067",
+  "source_sha256": "aee149ceeb35e16c6a68b4c4c2788f9411e2b1c6bd64aab9fbbd06740e1b9e05",
+  "deployed_commit": "8174362c38fcd62b722b5133692c7e9662355b87",
+  "preview": {
+    "metadata": {
+      "title": "Initial sequencing and analysis of the human genome",
+      "authors": [
+        "International Human Genome Sequencing Consortium"
+      ],
+      "year": 2001,
+      "language": "en",
+      "source_url": null,
+      "topics": [
+        "自然科学"
+      ]
+    },
+    "field_sources": {
+      "title": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "authors": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "International Human Genome Sequencing Consortium*"
+      },
+      "year": {
+        "method": "document_date_candidate",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]",
+        "date_type": "copyright",
+        "context": "[Full page excerpt retained privately]",
+        "grounding": "page_text"
+      },
+      "language": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      }
+    },
+    "warnings": [
+      "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+      "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+      "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序，以及年份是否对应所收录版本。",
+      "外部书目查询未完成，已保留识别结果；可稍后重试或手工补充。"
+    ],
+    "requires_confirmation": true,
+    "page_count": 62,
+    "method": "local_and_api_page_recognition",
+    "api_assistance": {
+      "status": "completed",
+      "accepted_fields": 4
+    },
+    "bibliographic_enrichment": {
+      "policy": "crossref-collected-version-v2",
+      "provider": "crossref",
+      "status": "failed",
+      "missing_before": [
+        "source_url"
+      ],
+      "filled_fields": [],
+      "conflicts": [],
+      "candidates": [],
+      "queried_at": "2026-10-20T05:03:42.441828+00:00",
+      "error_code": "TIMEOUT"
+    },
+    "document_version": {
+      "kind": "unknown",
+      "dois": []
+    },
+    "year_review": {
+      "policy": "collected-version-year-v2",
+      "status": "candidate_supported",
+      "source": "validated_seed",
+      "date_type": "copyright",
+      "rejected_api_reason": "year_not_supported"
+    },
+    "discipline_classification": {
+      "status": "classified",
+      "method": "llm_page_classification",
+      "value": "自然科学",
+      "pdf_page": 1,
+      "reason": "研究内容是人类基因组测序及数据分析，属于生物学领域。"
+    }
+  },
+  "fulltext": {
+    "status": "eligible",
+    "pages": 62
+  },
+  "outcome": "preview_completed",
+  "elapsed_seconds": 15.88
+}

@@ -1,0 +1,274 @@
+{
+  "item_id": "NS065",
+  "source_sha256": "591d2ff358977c52e83af8305a15fd76f1487a86a28db6c6e3851ca095a0809b",
+  "deployed_commit": "8174362c38fcd62b722b5133692c7e9662355b87",
+  "preview": {
+    "metadata": {
+      "title": "MOLECULAR STRUCTURE OF NUCLEIC ACIDS: A Structure for Deoxyribose Nucleic Acid",
+      "authors": [
+        "J.D. Watson",
+        "F.H. C. Crick"
+      ],
+      "year": null,
+      "language": "en",
+      "source_url": null,
+      "topics": []
+    },
+    "field_sources": {
+      "title": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "authors": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "J.D. WATSON F.H. C. CRICK"
+      },
+      "language": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      }
+    },
+    "warnings": [
+      "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+      "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+      "版本年份待核对：页面没有可对应到所收录版本的日期说明；已留空，可根据所收录文件核对后填写。",
+      "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序，以及年份是否对应所收录版本。",
+      "书目查询未找到唯一、题名和作者均吻合的出版记录；缺失字段保持为空，请核对。"
+    ],
+    "requires_confirmation": true,
+    "page_count": 1,
+    "method": "local_and_api_page_recognition",
+    "api_assistance": {
+      "status": "completed",
+      "accepted_fields": 3
+    },
+    "bibliographic_enrichment": {
+      "policy": "crossref-collected-version-v2",
+      "provider": "crossref",
+      "status": "ambiguous",
+      "missing_before": [
+        "year",
+        "source_url"
+      ],
+      "filled_fields": [],
+      "conflicts": [],
+      "candidates": [
+        {
+          "title": "Molecular Structure of Nucleic Acids: A Structure for Deoxyribose Nucleic Acid",
+          "authors": [
+            "J. D. WATSON",
+            "F. H. C. CRICK"
+          ],
+          "doi": "10.1038/248765a0",
+          "source_url": "https://doi.org/10.1038/248765a0",
+          "record_url": "https://api.crossref.org/works/10.1038%2F248765a0",
+          "type": "journal-article",
+          "dates": [
+            {
+              "kind": "published-print",
+              "date_parts": [
+                1974,
+                4,
+                26
+              ],
+              "year": 1974
+            },
+            {
+              "kind": "published",
+              "date_parts": [
+                1974,
+                4,
+                26
+              ],
+              "year": 1974
+            }
+          ],
+          "selected_date": {
+            "kind": "published-print",
+            "date_parts": [
+              1974,
+              4,
+              26
+            ],
+            "year": 1974
+          },
+          "match": {
+            "title": "normalized_exact",
+            "first_author": "exact",
+            "author_overlap": 2,
+            "required_overlap": 2
+          }
+        },
+        {
+          "title": "Molecular Structure Of Nucleic Acids: A Structure for Deoxyribose Nucleic Acid",
+          "authors": [
+            "J.D. Watson",
+            "F.H.C. Crick"
+          ],
+          "doi": "10.1176/appi.ajp.160.4.623",
+          "source_url": "https://doi.org/10.1176/appi.ajp.160.4.623",
+          "record_url": "https://api.crossref.org/works/10.1176%2Fappi.ajp.160.4.623",
+          "type": "journal-article",
+          "dates": [
+            {
+              "kind": "published-print",
+              "date_parts": [
+                2003,
+                4,
+                1
+              ],
+              "year": 2003
+            },
+            {
+              "kind": "published",
+              "date_parts": [
+                2003,
+                4,
+                1
+              ],
+              "year": 2003
+            }
+          ],
+          "selected_date": {
+            "kind": "published-print",
+            "date_parts": [
+              2003,
+              4,
+              1
+            ],
+            "year": 2003
+          },
+          "match": {
+            "title": "normalized_exact",
+            "first_author": "exact",
+            "author_overlap": 2,
+            "required_overlap": 2
+          }
+        },
+        {
+          "title": "Molecular structure of nucleic acids: A structure for deoxyribose nucleic acid",
+          "authors": [
+            "J. D. Watson",
+            "F. H. C. Crick"
+          ],
+          "doi": "10.1007/bf02834980",
+          "source_url": "https://doi.org/10.1007/bf02834980",
+          "record_url": "https://api.crossref.org/works/10.1007%2Fbf02834980",
+          "type": "journal-article",
+          "dates": [
+            {
+              "kind": "published-print",
+              "date_parts": [
+                2004,
+                11
+              ],
+              "year": 2004
+            },
+            {
+              "kind": "published",
+              "date_parts": [
+                2004,
+                11
+              ],
+              "year": 2004
+            }
+          ],
+          "selected_date": {
+            "kind": "published-print",
+            "date_parts": [
+              2004,
+              11
+            ],
+            "year": 2004
+          },
+          "match": {
+            "title": "normalized_exact",
+            "first_author": "exact",
+            "author_overlap": 2,
+            "required_overlap": 2
+          }
+        },
+        {
+          "title": "Molecular Structure of Nucleic Acids: A Structure for Deoxyribose Nucleic Acid",
+          "authors": [
+            "J. D. WATSON",
+            "F. H. C. CRICK"
+          ],
+          "doi": "10.1038/171737a0",
+          "source_url": "https://doi.org/10.1038/171737a0",
+          "record_url": "https://api.crossref.org/works/10.1038%2F171737a0",
+          "type": "journal-article",
+          "dates": [
+            {
+              "kind": "published-print",
+              "date_parts": [
+                1953,
+                4,
+                25
+              ],
+              "year": 1953
+            },
+            {
+              "kind": "published-online",
+              "date_parts": [
+                1953,
+                4,
+                25
+              ],
+              "year": 1953
+            },
+            {
+              "kind": "published",
+              "date_parts": [
+                1953,
+                4,
+                25
+              ],
+              "year": 1953
+            }
+          ],
+          "selected_date": {
+            "kind": "published-print",
+            "date_parts": [
+              1953,
+              4,
+              25
+            ],
+            "year": 1953
+          },
+          "match": {
+            "title": "normalized_exact",
+            "first_author": "exact",
+            "author_overlap": 2,
+            "required_overlap": 2
+          }
+        }
+      ],
+      "queried_at": "2026-10-20T05:10:15.239848+00:00"
+    },
+    "document_version": {
+      "kind": "unknown",
+      "dois": []
+    },
+    "year_review": {
+      "policy": "collected-version-year-v2",
+      "status": "needs_confirmation",
+      "reason": "missing_version_context",
+      "rejected_value": 1953
+    },
+    "discipline_classification": {
+      "status": "pending",
+      "method": "unresolved",
+      "value": null
+    }
+  },
+  "fulltext": {
+    "status": "eligible",
+    "pages": 1
+  },
+  "outcome": "preview_completed",
+  "elapsed_seconds": 11.8
+}

@@ -1,0 +1,182 @@
+{
+  "item_id": "NS053",
+  "source_sha256": "1e3c0487ab9c8b890fdbb60144c0a7c29bdb594913d8b343d4033e2a5d48726b",
+  "deployed_commit": "8174362c38fcd62b722b5133692c7e9662355b87",
+  "preview": {
+    "metadata": {
+      "title": "The Global Methane Budget 2000–2017",
+      "authors": [
+        "Marielle Saunois",
+        "Ann R. Stavert",
+        "Ben Poulter",
+        "Philippe Bousquet",
+        "Josep G. Canadell",
+        "Robert B. Jackson",
+        "Peter A. Raymond",
+        "Edward J. Dlugokencky",
+        "Sander Houweling",
+        "Prabir K. Patra",
+        "Philippe Ciais",
+        "Vivek K. Arora",
+        "David Bastviken",
+        "Peter Bergamaschi",
+        "Donald R. Blake",
+        "Gordon Brailsford",
+        "Lori Bruhwiler",
+        "Kimberly M. Carlson",
+        "Mark Carrol",
+        "Simona Castaldi",
+        "Naveen Chandra",
+        "Cyril Crevoisier",
+        "Patrick M. Crill",
+        "Kristofer Covey",
+        "Charles L. Curry",
+        "Giuseppe Etiope",
+        "Christian Frankenberg",
+        "Nicola Gedney",
+        "Michaela I. Hegglin",
+        "Lena Höglund-Isaksson",
+        "Gustaf Hugelius",
+        "Misa Ishizawa",
+        "Akihiko Ito",
+        "Greet Janssens-Maenhout",
+        "Katherine M. Jensen",
+        "Fortunat Joos",
+        "Thomas Kleinen",
+        "Paul B. Krummel",
+        "Ray L. Langenfelds",
+        "Goulven G. Laruelle",
+        "Licheng Liu",
+        "Toshinobu Machida",
+        "Shamil Maksyutov",
+        "Kyle C. McDonald",
+        "Joe McNorton",
+        "Paul A. Miller",
+        "Joe R. Melton",
+        "Isamu Morino",
+        "Jurek Müller",
+        "Fabiola Murguia-Flores",
+        "Vaishali Naik",
+        "Yosuke Niwa",
+        "Sergio Noce",
+        "Simon O’Doherty",
+        "Robert J. Parker",
+        "Changhui Peng",
+        "Shushi Peng",
+        "Glen P. Peters",
+        "Catherine Prigent",
+        "Ronald Prinn",
+        "Michel Ramonet",
+        "Pierre Regnier",
+        "William J. Riley",
+        "Judith A. Rosentreter",
+        "Arjo Segers",
+        "Isobel J. Simpson",
+        "Hao Shi",
+        "Steven J. Smith",
+        "L. Paul Steele",
+        "Brett F. Thornton",
+        "Hanqin Tian",
+        "Yasunori Tohjima",
+        "Francesco N. Tubiello",
+        "Aki Tsuruta",
+        "Nicolas Viovy",
+        "Apostolos Voulgarakis",
+        "Thomas S. Weber",
+        "Michiel van Weele",
+        "Guido R. van der Werf",
+        "Ray F. Weiss",
+        "Doug Worthy",
+        "Debra Wunch",
+        "Yi Yin",
+        "Yukio Yoshida",
+        "Wenxin Zhang",
+        "Zhen Zhang",
+        "Yuanhong Zhao",
+        "Bo Zheng",
+        "Qing Zhu",
+        "Qiuan Zhu",
+        "Qianlai Zhuang"
+      ],
+      "year": null,
+      "language": "en",
+      "source_url": "https://doi.org/10.5194/essd-12-1561-2020",
+      "topics": [
+        "自然科学"
+      ]
+    },
+    "field_sources": {
+      "title": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "authors": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "source_url": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      },
+      "language": {
+        "method": "api_page_recognition",
+        "pdf_page": 1,
+        "excerpt": "[Full page excerpt retained privately]"
+      }
+    },
+    "warnings": [
+      "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+      "作者候选可能因多行、分栏或 PDF 元数据不完整而遗漏，请核对完整名单和顺序。",
+      "版本年份待核对：候选年份与当前版本的日期依据不一致；已留空，可根据所收录文件核对后填写。",
+      "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序，以及年份是否对应所收录版本。",
+      "书目查询未找到唯一、题名和作者均吻合的出版记录；缺失字段保持为空，请核对。"
+    ],
+    "requires_confirmation": true,
+    "page_count": 63,
+    "method": "local_and_api_page_recognition",
+    "api_assistance": {
+      "status": "completed",
+      "accepted_fields": 5
+    },
+    "bibliographic_enrichment": {
+      "policy": "crossref-collected-version-v2",
+      "provider": "crossref",
+      "status": "no_match",
+      "missing_before": [
+        "year"
+      ],
+      "filled_fields": [],
+      "conflicts": [],
+      "candidates": [],
+      "queried_at": "2026-10-20T05:03:20.031487+00:00"
+    },
+    "document_version": {
+      "kind": "unknown",
+      "dois": [
+        "10.5194/essd-12-1561-2020"
+      ]
+    },
+    "year_review": {
+      "policy": "collected-version-year-v2",
+      "status": "needs_confirmation",
+      "reason": "year_not_supported",
+      "rejected_value": 2020
+    },
+    "discipline_classification": {
+      "status": "classified",
+      "method": "llm_page_classification",
+      "value": "自然科学",
+      "pdf_page": 1,
+      "reason": "研究主题为全球甲烷收支，属于地球系统与环境科学研究。"
+    }
+  },
+  "fulltext": {
+    "status": "eligible",
+    "pages": 63
+  },
+  "outcome": "preview_completed",
+  "elapsed_seconds": 42.62
+}
