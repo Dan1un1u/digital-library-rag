@@ -1,0 +1,80 @@
+{
+  "metadata": {
+    "title": "企业化经营何以推动新型农村集体经济有效运行？——基于甘肃省前进牧业的案例研究",
+    "authors": [
+      "范志雄",
+      "程名望",
+      "徐辉"
+    ],
+    "year": null,
+    "language": "zh",
+    "source_url": "https://doi.org/10.19744/j.cnki.11-1235/f.2026.0128",
+    "topics": [
+      "社会科学"
+    ]
+  },
+  "field_sources": {
+    "title": {
+      "method": "api_page_recognition",
+      "pdf_page": 1,
+      "excerpt": "企业化经营何以推动新型农村集体经济有效运行？——基于甘肃省前进牧业的案例研究"
+    },
+    "source_url": {
+      "method": "api_page_recognition",
+      "pdf_page": 1,
+      "excerpt": "DOI:10.19744/j.cnki.11-1235/f.2026.0128"
+    },
+    "language": {
+      "method": "api_page_recognition",
+      "pdf_page": 1,
+      "excerpt": "关键词：新型农村集体经济 企业化经营 特色农业产业 乡村产业振兴"
+    },
+    "authors": {
+      "method": "api_page_recognition",
+      "pdf_page": 1,
+      "excerpt": "范志雄 程名望 徐 辉"
+    }
+  },
+  "warnings": [
+    "自动识别结果仅供预填，请核对后再导入；未识别的字段留空。",
+    "版本年份待核对：页面没有可对应到所收录版本的日期说明；已留空，可根据所收录文件核对后填写。",
+    "已结合前两页图像进行 API 辅助识别；所有字段仍为待核对候选，尤其请核对作者顺序，以及年份是否对应所收录版本。",
+    "书目查询未找到唯一、题名和作者均吻合的出版记录；缺失字段保持为空，请核对。"
+  ],
+  "requires_confirmation": true,
+  "page_count": 29,
+  "method": "local_and_api_page_recognition",
+  "api_assistance": {
+    "status": "completed",
+    "accepted_fields": 4
+  },
+  "bibliographic_enrichment": {
+    "policy": "crossref-collected-version-v2",
+    "provider": "crossref",
+    "status": "no_match",
+    "missing_before": [
+      "year"
+    ],
+    "filled_fields": [],
+    "conflicts": [],
+    "candidates": [],
+    "queried_at": "2026-10-20T04:43:39.870002+00:00"
+  },
+  "document_version": {
+    "kind": "unknown",
+    "dois": [
+      "10.19744/j.cnki.11-1235/f.2026.0128"
+    ]
+  },
+  "year_review": {
+    "policy": "collected-version-year-v2",
+    "status": "needs_confirmation",
+    "reason": "missing_version_context",
+    "rejected_value": 2026
+  },
+  "discipline_classification": {
+    "status": "classified",
+    "method": "keyword",
+    "value": "社会科学"
+  }
+}

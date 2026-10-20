@@ -1,0 +1,29 @@
+{
+  "doc_id": "d_1a99079778b2174feda37473878bc82da1ed0699c77a2cbeb11de408844189c9",
+  "title": "企业化经营何以推动新型农村集体经济有效运行",
+  "authors": [],
+  "year": null,
+  "topics": [
+    "社会科学"
+  ],
+  "language": "zh",
+  "source_url": "https://doi.org/10.19744/j.cnki.11-1235/f.2026.0128",
+  "rights_note": "待人工确认",
+  "file_sha256": "1a99079778b2174feda37473878bc82da1ed0699c77a2cbeb11de408844189c9",
+  "status": "ready",
+  "error_code": null,
+  "error_message": null,
+  "page_count": 29,
+  "parser_version": "pymupdf-conservative-v2",
+  "created_at": "2026-10-18T09:37:35.789834+00:00",
+  "updated_at": "2026-10-18T09:37:50.143583+00:00",
+  "chunking_config": {
+    "count_mode": "character",
+    "max_chars": 1200,
+    "max_tokens": 400,
+    "overlap_chars": 150,
+    "overlap_tokens": 50,
+    "tokenizer_name": null,
+    "tokenizer_revision": null
+  }
+}

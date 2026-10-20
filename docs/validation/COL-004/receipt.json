@@ -1,0 +1,158 @@
+{
+  "batch_id": "COL-004-20261020-RURAL",
+  "deployed_commit": "8174362c38fcd62b722b5133692c7e9662355b87",
+  "outcome": "completed",
+  "doc_id": "d_1a99079778b2174feda37473878bc82da1ed0699c77a2cbeb11de408844189c9",
+  "old_record": {
+    "doc_id": "d_1a99079778b2174feda37473878bc82da1ed0699c77a2cbeb11de408844189c9",
+    "title": "企业化经营何以推动新型农村集体经济有效运行",
+    "authors": [],
+    "year": null,
+    "topics": [
+      "社会科学"
+    ],
+    "language": "zh",
+    "source_url": "https://doi.org/10.19744/j.cnki.11-1235/f.2026.0128",
+    "rights_note": "待人工确认",
+    "file_sha256": "1a99079778b2174feda37473878bc82da1ed0699c77a2cbeb11de408844189c9",
+    "status": "ready",
+    "error_code": null,
+    "error_message": null,
+    "page_count": 29,
+    "parser_version": "pymupdf-conservative-v2",
+    "created_at": "2026-10-18T09:37:35.789834+00:00",
+    "updated_at": "2026-10-18T09:37:50.143583+00:00",
+    "chunking_config": {
+      "count_mode": "character",
+      "max_chars": 1200,
+      "max_tokens": 400,
+      "overlap_chars": 150,
+      "overlap_tokens": 50,
+      "tokenizer_name": null,
+      "tokenizer_revision": null
+    }
+  },
+  "system_preview_ref": "fresh-system-preview.json",
+  "agent_review_ref": "agent-review.json",
+  "new_record": {
+    "doc_id": "d_1a99079778b2174feda37473878bc82da1ed0699c77a2cbeb11de408844189c9",
+    "file_sha256": "1a99079778b2174feda37473878bc82da1ed0699c77a2cbeb11de408844189c9",
+    "title": "企业化经营何以推动新型农村集体经济有效运行？——基于甘肃省前进牧业的案例研究",
+    "year": 2026,
+    "language": "zh",
+    "source_url": "https://doi.org/10.19744/j.cnki.11-1235/f.2026.0128",
+    "rights_note": "待人工确认",
+    "status": "ready",
+    "error_code": null,
+    "error_message": null,
+    "page_count": 29,
+    "parser_version": "pymupdf-conservative-v4",
+    "created_at": "2026-10-20T04:46:31.437247+00:00",
+    "updated_at": "2026-10-20T04:47:16.881571+00:00",
+    "authors": [
+      "范志雄",
+      "程名望",
+      "徐辉"
+    ],
+    "topics": [
+      "社会科学"
+    ],
+    "chunking_config": {
+      "count_mode": "character",
+      "max_chars": 1200,
+      "max_tokens": 400,
+      "overlap_chars": 150,
+      "overlap_tokens": 50,
+      "tokenizer_name": null,
+      "tokenizer_revision": null
+    }
+  },
+  "deletion": {
+    "old_counts": {
+      "documents": 1,
+      "pages": 29,
+      "chunks": 73,
+      "document_topics": 1
+    },
+    "after_delete_counts": {
+      "documents": 0,
+      "pages": 0,
+      "chunks": 0,
+      "document_topics": 0
+    },
+    "old_record_absent_before_ingest": true,
+    "original_preserved_sha256": "1a99079778b2174feda37473878bc82da1ed0699c77a2cbeb11de408844189c9"
+  },
+  "manifest": {
+    "index_version": "idx_20261020T044716_affed36fa8b8",
+    "contract_version": "1.0",
+    "built_at": "2026-10-20T04:47:16.638287+00:00",
+    "embedding_model": "BAAI/bge-m3",
+    "embedding_revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "dimension": 1024,
+    "normalized": true,
+    "chunking_config": {
+      "count_mode": "character",
+      "tokenizer_name": null,
+      "tokenizer_revision": null,
+      "max_tokens": 400,
+      "overlap_tokens": 50,
+      "max_chars": 1200,
+      "overlap_chars": 150
+    },
+    "tokenizer": null,
+    "document_count": 75,
+    "chunk_count": 5144,
+    "corpus_hash": "55f1513015d17add06c25f891a960520ac89408afabd0ee40ead3ab37e6dd2ea",
+    "embedding_backend": {
+      "base_url": "http://127.0.0.1:18080/v1",
+      "dimension": 1024,
+      "encoding_format": "float",
+      "input_preprocessing": "original-text-v1;fp16;cls;l2-float32",
+      "model": "BAAI/bge-m3",
+      "provider": "local-bge-fp16",
+      "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+      "revision_pinned": true
+    },
+    "lexical_tokenizer": "nfkc-casefold-cjk-bigram-v1",
+    "retrieval_config": {
+      "candidate_k": 20,
+      "rrf_k": 60,
+      "normalize_embeddings": true,
+      "bm25_k1": 1.5,
+      "bm25_b": 0.75,
+      "vector_text_policy": "document-title-prefix-v1"
+    },
+    "artifacts": {
+      "chunks.json": "55f1513015d17add06c25f891a960520ac89408afabd0ee40ead3ab37e6dd2ea",
+      "lexical.json": "ea1732014957ca5de07f198c99949b6503ca48b465940f23cfb660b70265885b",
+      "vectors.npy": "7c68faf85dff9eecf7124503468a85d0a3ff936b4bfdfed8e07a41bf1bfda2c3"
+    }
+  },
+  "new_pages": 29,
+  "new_chunks": 73,
+  "searches": [
+    {
+      "mode": "keyword",
+      "found_in_top5": true,
+      "rank": 1
+    },
+    {
+      "mode": "vector",
+      "found_in_top5": true,
+      "rank": 1
+    },
+    {
+      "mode": "hybrid",
+      "found_in_top5": true,
+      "rank": 1
+    }
+  ],
+  "other_74_unchanged": true,
+  "last_event_sha256": "cd505cd4561b17b8a8390b25683780b932d5a7d47b84f2342d48189fd59b49ff",
+  "defect": "MQ-007 remains open; year manually completed",
+  "completed_utc": "2026-10-20T04:48:13.516184+00:00",
+  "formal_documents": 75,
+  "other_catalogues_unchanged": true,
+  "formal_url": "http://127.0.0.1:18501/"
+}

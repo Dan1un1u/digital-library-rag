@@ -1,0 +1,16 @@
+{
+  "old_counts": {
+    "documents": 1,
+    "pages": 29,
+    "chunks": 73,
+    "document_topics": 1
+  },
+  "after_delete_counts": {
+    "documents": 0,
+    "pages": 0,
+    "chunks": 0,
+    "document_topics": 0
+  },
+  "old_record_absent_before_ingest": true,
+  "original_preserved_sha256": "1a99079778b2174feda37473878bc82da1ed0699c77a2cbeb11de408844189c9"
+}

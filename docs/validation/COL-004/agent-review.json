@@ -1,0 +1,63 @@
+{
+  "reviewer": "assistant; agent-assisted PDF inspection, not user human approval",
+  "basis": {
+    "pdf_page": 1,
+    "excerpt": "《管理世界》\n2026 年第9 期",
+    "date_type": "issue"
+  },
+  "system_metadata": {
+    "title": "企业化经营何以推动新型农村集体经济有效运行？——基于甘肃省前进牧业的案例研究",
+    "authors": [
+      "范志雄",
+      "程名望",
+      "徐辉"
+    ],
+    "year": null,
+    "language": "zh",
+    "source_url": "https://doi.org/10.19744/j.cnki.11-1235/f.2026.0128",
+    "topics": [
+      "社会科学"
+    ]
+  },
+  "final_metadata": {
+    "title": "企业化经营何以推动新型农村集体经济有效运行？——基于甘肃省前进牧业的案例研究",
+    "authors": [
+      "范志雄",
+      "程名望",
+      "徐辉"
+    ],
+    "year": 2026,
+    "topics": [
+      "社会科学"
+    ],
+    "language": "zh",
+    "source_url": "https://doi.org/10.19744/j.cnki.11-1235/f.2026.0128",
+    "rights_note": "待人工确认"
+  },
+  "manual_changes": {
+    "year": {
+      "system": null,
+      "final": 2026
+    }
+  },
+  "defect": {
+    "id": "MQ-007",
+    "status": "open, reproduced, no product fix",
+    "year_review": {
+      "policy": "collected-version-year-v2",
+      "status": "needs_confirmation",
+      "reason": "missing_version_context",
+      "rejected_value": 2026
+    },
+    "date_evidence_first_two_pages": [
+      {
+        "page": 1,
+        "date_evidence": []
+      },
+      {
+        "page": 2,
+        "date_evidence": []
+      }
+    ]
+  }
+}
