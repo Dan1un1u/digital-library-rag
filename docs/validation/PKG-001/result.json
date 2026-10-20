@@ -1,0 +1,45 @@
+{
+  "work_item": "PKG-001",
+  "source_commit": "446f7b5a18b4ebdcc83638618827c802f0416be8",
+  "archive_filename": "数字图书馆_负责人更新包_175篇_20261020.zip",
+  "bytes": 534874130,
+  "sha256": "833f67dc2e2a8ecd084bfcc031f302e93e2f7f113047b0e339b62374ca0f46f0",
+  "archive_entries": 972,
+  "source_files_verified": 583,
+  "tables": {
+    "documents": {
+      "rows": 175,
+      "sha256": "fc33b493ded163543bee1048b9ea3969f61fd97004a49571faa7c4c59864fac0"
+    },
+    "document_topics": {
+      "rows": 455,
+      "sha256": "f648e375ecc646c8a12000b68d55ba6201dcdc19b5475ba917b0df10f5f2ba9e"
+    },
+    "pages": {
+      "rows": 4037,
+      "sha256": "638566091b145584bae466edd142bc7870afb1cc2061fab2fe1fa6eb93ce7e40"
+    },
+    "chunks": {
+      "rows": 16699,
+      "sha256": "bee7afc1302c6af194bf24933aec9bc5e042c1eb6fd1d844474e26c706ffe40b"
+    }
+  },
+  "pdf_files_verified": 175,
+  "sqlite_integrity": "ok",
+  "foreign_key_errors": 0,
+  "extracted_file_sha256": "all matched",
+  "zip_crc": "all entries read through extraction",
+  "siliconflow_contract_regression": {
+    "tests": 18,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "new_test_cases": 0,
+  "reused_test_cases": 18,
+  "known_credential_references_checked": 4,
+  "credential_findings": 0,
+  "index_included": false,
+  "real_cloud_requests": 0,
+  "elapsed_seconds": 54.67
+}

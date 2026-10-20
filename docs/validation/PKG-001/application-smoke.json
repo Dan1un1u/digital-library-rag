@@ -1,0 +1,39 @@
+{
+  "source_commit": "446f7b5a18b4ebdcc83638618827c802f0416be8",
+  "tested_source": "actual extracted owner-update ZIP",
+  "source_binding_verified": true,
+  "original_env_example_sha256": "b137dbb25e58781e174f19a2a83b744e6649b1aa754498af7ba10674daf23244",
+  "original_env_accepted": true,
+  "handoff_env_accepted": true,
+  "all_four_providers": "siliconflow",
+  "service_url": "https://api.siliconflow.cn/v1",
+  "document_api_count": 175,
+  "all_documents_ready": true,
+  "rebuild_candidate_chunks": 16699,
+  "chunking_config_compatible": true,
+  "categories": {
+    "自然科学": 124,
+    "社会科学": 26,
+    "哲学与人文科学": 25
+  },
+  "original_pdf_downloads": [
+    {
+      "discipline": "自然科学",
+      "doc_id": "d_01c5fd543f01f6bba1891ad8d0803211cb7f7fff130668e50a3df21057b9f1d7",
+      "sha256_match": true
+    },
+    {
+      "discipline": "社会科学",
+      "doc_id": "d_16a36994ac7047aa9dfbc196ae9c0453c4c947a72c71b70684b24e6ab15a70de",
+      "sha256_match": true
+    },
+    {
+      "discipline": "哲学与人文科学",
+      "doc_id": "d_0085c704946dc1e35e736b83c6cf55d48fd7209b6574535c5886404e223cd090",
+      "sha256_match": true
+    }
+  ],
+  "before_index_rebuild": "expected INDEX_NOT_READY; library and PDF reading available",
+  "real_cloud_requests": 0,
+  "cloud_rebuild_performed": false
+}
