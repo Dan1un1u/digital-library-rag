@@ -1,0 +1,658 @@
+{
+  "status": "ready",
+  "mode": "real",
+  "manifest": {
+    "index_version": "idx_20261020T043216_16b873ed4945",
+    "contract_version": "1.0",
+    "built_at": "2026-10-20T04:32:16.623009+00:00",
+    "embedding_model": "BAAI/bge-m3",
+    "embedding_revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "dimension": 1024,
+    "normalized": true,
+    "chunking_config": {
+      "count_mode": "character",
+      "tokenizer_name": null,
+      "tokenizer_revision": null,
+      "max_tokens": 400,
+      "overlap_tokens": 50,
+      "max_chars": 1200,
+      "overlap_chars": 150
+    },
+    "tokenizer": null,
+    "document_count": 25,
+    "chunk_count": 1821,
+    "corpus_hash": "124a3610097b0f8ad8f0e70c35a871c9a1f8a415957d413b286c729e87a4ad44",
+    "artifacts": {
+      "chunks.json": "124a3610097b0f8ad8f0e70c35a871c9a1f8a415957d413b286c729e87a4ad44",
+      "lexical.json": "db4f2ba71f70601dcf1a6c98169b1f7b17225d47b13ed595f9e5346ba756931f",
+      "vectors.npy": "01c2dbeb7f7355000a23539dfbc342a82f073e7061d18ce446b28efeb41771fd"
+    },
+    "embedding_backend": {
+      "base_url": "http://127.0.0.1:18080/v1",
+      "dimension": 1024,
+      "encoding_format": "float",
+      "input_preprocessing": "original-text-v1;fp16;cls;l2-float32",
+      "model": "BAAI/bge-m3",
+      "provider": "local-bge-fp16",
+      "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+      "revision_pinned": true
+    },
+    "lexical_tokenizer": "nfkc-casefold-cjk-bigram-v1",
+    "retrieval_config": {
+      "bm25_b": 0.75,
+      "bm25_k1": 1.5,
+      "candidate_k": 20,
+      "normalize_embeddings": true,
+      "rrf_k": 60,
+      "vector_text_policy": "document-title-prefix-v1"
+    }
+  },
+  "active_models": {
+    "embedding": "BAAI/bge-m3",
+    "llm": "gpt-6-luna",
+    "semantic_reranker": "gpt-6-luna",
+    "qa_engine": "dlrag.qa.engine.QAEngine"
+  },
+  "documents": [
+    {
+      "doc_id": "d_053756b54e2d3462d4690b3aed489c962f17df7c3531865e47374c4a651f526c",
+      "file_sha256": "053756b54e2d3462d4690b3aed489c962f17df7c3531865e47374c4a651f526c",
+      "status": "ready",
+      "page_count": 17,
+      "title": "Longformer: The Long-Document Transformer",
+      "authors": [
+        "Iz Beltagy",
+        "Matthew E. Peters",
+        "Arman Cohan"
+      ],
+      "year": 2020,
+      "topics": [
+        "arXiv实验",
+        "长文本机制"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2004.05150",
+      "rights_note": "arXiv公开原始论文，仅用于本地阅读及解析实验；再分发权限待核验。"
+    },
+    {
+      "doc_id": "d_1925755aeb627123d1a63c66f02e5aa2432f7e92751a02bea7c8c3b6bbb6ec33",
+      "file_sha256": "1925755aeb627123d1a63c66f02e5aa2432f7e92751a02bea7c8c3b6bbb6ec33",
+      "status": "ready",
+      "page_count": 24,
+      "title": "BEIR: A Heterogenous Benchmark for Zero-shot Evaluation of Information Retrieval Models",
+      "authors": [
+        "Thakur, Nandan",
+        "Reimers, Nils",
+        "Rücklé, Andreas",
+        "Srivastava, Abhishek",
+        "Gurevych, Iryna"
+      ],
+      "year": 2021,
+      "topics": [
+        "arXiv实验"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2104.08663",
+      "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "doc_id": "d_1a99079778b2174feda37473878bc82da1ed0699c77a2cbeb11de408844189c9",
+      "file_sha256": "1a99079778b2174feda37473878bc82da1ed0699c77a2cbeb11de408844189c9",
+      "status": "ready",
+      "page_count": 29,
+      "title": "企业化经营何以推动新型农村集体经济有效运行",
+      "authors": [],
+      "year": null,
+      "topics": [
+        "社会科学"
+      ],
+      "language": "zh",
+      "source_url": "https://doi.org/10.19744/j.cnki.11-1235/f.2026.0128",
+      "rights_note": "待人工确认"
+    },
+    {
+      "doc_id": "d_23e3249e9a1e75418d82efecab0ea8c4d033b89c93742f63208d47ce01f21233",
+      "file_sha256": "23e3249e9a1e75418d82efecab0ea8c4d033b89c93742f63208d47ce01f21233",
+      "status": "ready",
+      "page_count": 19,
+      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "authors": [
+        "Lewis, Patrick",
+        "Perez, Ethan",
+        "Piktus, Aleksandra",
+        "Petroni, Fabio",
+        "Karpukhin, Vladimir",
+        "Goyal, Naman",
+        "Küttler, Heinrich",
+        "Lewis, Mike",
+        "Yih, Wen-tau",
+        "Rocktäschel, Tim",
+        "Riedel, Sebastian",
+        "Kiela, Douwe"
+      ],
+      "year": 2020,
+      "topics": [
+        "arXiv实验"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2005.11401",
+      "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+    },
+    {
+      "doc_id": "d_2e487d9b96e3c2e5e286d843e98a066adc0442faa3a6e8ddbd1771221bf9ae14",
+      "file_sha256": "2e487d9b96e3c2e5e286d843e98a066adc0442faa3a6e8ddbd1771221bf9ae14",
+      "status": "ready",
+      "page_count": 10,
+      "title": "ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT",
+      "authors": [
+        "Khattab, Omar",
+        "Zaharia, Matei"
+      ],
+      "year": 2020,
+      "topics": [
+        "arXiv实验"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2004.12832",
+      "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+    },
+    {
+      "doc_id": "d_3ce49518cec441989d8ad594e8dc8d8094507e0f5b0096d77926a2daf5d9c0b6",
+      "file_sha256": "3ce49518cec441989d8ad594e8dc8d8094507e0f5b0096d77926a2daf5d9c0b6",
+      "status": "ready",
+      "page_count": 15,
+      "title": "I-LLM: Efficient Integer-Only Inference for Fully-Quantized Low-Bit Large Language Models",
+      "authors": [
+        "Xing Hu",
+        "Yuan Cheng",
+        "Dawei Yang",
+        "Zhihang Yuan",
+        "Jiangyong Yu",
+        "Chen Xu",
+        "Sifan Zhou"
+      ],
+      "year": 2024,
+      "topics": [
+        "Integer quantization",
+        "LLM inference",
+        "Post-training quantization"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2405.17849",
+      "rights_note": "用户指定本地 PDF，用于本机课程项目和研究测试；保留原权利声明，开放再分发许可未作推断，待人工核对。"
+    },
+    {
+      "doc_id": "d_3e67fc1a9977715acf722d85f0b7d124b03715e975f6310a4d6c12094190912f",
+      "file_sha256": "3e67fc1a9977715acf722d85f0b7d124b03715e975f6310a4d6c12094190912f",
+      "status": "ready",
+      "page_count": 13,
+      "title": "Dense Passage Retrieval for Open-Domain Question Answering",
+      "authors": [
+        "Karpukhin, Vladimir",
+        "Oğuz, Barlas",
+        "Min, Sewon",
+        "Lewis, Patrick",
+        "Wu, Ledell",
+        "Edunov, Sergey",
+        "Chen, Danqi",
+        "Yih, Wen-tau"
+      ],
+      "year": 2020,
+      "topics": [
+        "arXiv实验"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2004.04906",
+      "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+    },
+    {
+      "doc_id": "d_604fcbd71b570f13ec0ed832c7c083728cf9b42170704f7fddd966530db96bee",
+      "file_sha256": "604fcbd71b570f13ec0ed832c7c083728cf9b42170704f7fddd966530db96bee",
+      "status": "ready",
+      "page_count": 17,
+      "title": "ENEC: A Lossless AI Model Compression Method Enabling Fast Inference on Ascend NPUs",
+      "authors": [
+        "Jinwu Yang",
+        "Jiaan Wu",
+        "Zedong Liu",
+        "Xinyang Ma",
+        "Hairui Zhao",
+        "Yida Gu",
+        "Yuanhong Huang",
+        "Xingchen Liu",
+        "Wenjing Huang",
+        "Zheng Wei",
+        "Jing Xing",
+        "Yili Ma",
+        "Qingyi Zhang",
+        "Baoyi An",
+        "Zhongzhe Hu",
+        "Shaoteng Liu",
+        "Xia Zhu",
+        "Jiaxun Lu",
+        "Guangming Tan",
+        "Dingwen Tao"
+      ],
+      "year": 2026,
+      "topics": [
+        "Ascend NPU",
+        "LLM inference",
+        "Lossless compression"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2604.03298",
+      "rights_note": "用户指定本地 PDF，用于本机课程项目和研究测试；保留原权利声明，开放再分发许可未作推断，待人工核对。"
+    },
+    {
+      "doc_id": "d_61c834540be91dd009398499ac91097bc15697c3b766e3c14f57155438cd4aa7",
+      "file_sha256": "61c834540be91dd009398499ac91097bc15697c3b766e3c14f57155438cd4aa7",
+      "status": "ready",
+      "page_count": 4,
+      "title": "人工智能体检系统在健康管理中心的应用",
+      "authors": [
+        "张理纯"
+      ],
+      "year": 2020,
+      "topics": [
+        "自然科学"
+      ],
+      "language": "mixed",
+      "source_url": null,
+      "rights_note": "待人工确认"
+    },
+    {
+      "doc_id": "d_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1",
+      "file_sha256": "653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1",
+      "status": "ready",
+      "page_count": 18,
+      "title": "Lost in the Middle: How Language Models Use Long Contexts",
+      "authors": [
+        "Liu, Nelson F.",
+        "Lin, Kevin",
+        "Hewitt, John",
+        "Paranjape, Ashwin",
+        "Bevilacqua, Michele",
+        "Petroni, Fabio",
+        "Liang, Percy"
+      ],
+      "year": 2023,
+      "topics": [
+        "arXiv实验"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2307.03172",
+      "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+    },
+    {
+      "doc_id": "d_69c573c123ffd1538d432ab31040072dec01a375a4a5b7c2960a7667cb970dda",
+      "file_sha256": "69c573c123ffd1538d432ab31040072dec01a375a4a5b7c2960a7667cb970dda",
+      "status": "ready",
+      "page_count": 16,
+      "title": "Squeezing Operator Performance Potential for the Ascend Architecture",
+      "authors": [
+        "Yuhang Zhou",
+        "Zhibin Wang",
+        "Guyue Liu",
+        "Shipeng Li",
+        "Xi Lin",
+        "Zibo Wang",
+        "Yongzhong Wang",
+        "Fuchun Wei",
+        "Jingyi Zhang",
+        "Zhiheng Hu",
+        "Yanlin Liu",
+        "Chunsheng Li",
+        "Ziyang Zhang",
+        "Yaoyuan Wang",
+        "Bin Zhou",
+        "Wanchun Dou",
+        "Guihai Chen",
+        "Chen Tian"
+      ],
+      "year": 2025,
+      "topics": [
+        "AI accelerators",
+        "Ascend NPU",
+        "Performance modeling"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1145/3676641.3716243",
+      "rights_note": "用户指定本地 PDF，用于本机课程项目和研究测试；保留原权利声明，开放再分发许可未作推断，待人工核对。"
+    },
+    {
+      "doc_id": "d_7407131fd633561d8eab8701e43ca81061960b6642ae180eb86a3f367b2b8408",
+      "file_sha256": "7407131fd633561d8eab8701e43ca81061960b6642ae180eb86a3f367b2b8408",
+      "status": "ready",
+      "page_count": 21,
+      "title": "Unsupervised Dense Information Retrieval with Contrastive Learning",
+      "authors": [
+        "Izacard, Gautier",
+        "Caron, Mathilde",
+        "Hosseini, Lucas",
+        "Riedel, Sebastian",
+        "Bojanowski, Piotr",
+        "Joulin, Armand",
+        "Grave, Edouard"
+      ],
+      "year": 2021,
+      "topics": [
+        "arXiv实验"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2112.09118",
+      "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "doc_id": "d_92366d22fc0521350d6cbe0ad72bcee754f90e88181d7b4a8e2adb1e7e594fec",
+      "file_sha256": "92366d22fc0521350d6cbe0ad72bcee754f90e88181d7b4a8e2adb1e7e594fec",
+      "status": "ready",
+      "page_count": 11,
+      "title": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks",
+      "authors": [
+        "Reimers, Nils",
+        "Gurevych, Iryna"
+      ],
+      "year": 2019,
+      "topics": [
+        "arXiv实验"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/1908.10084",
+      "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "doc_id": "d_959d1cd83e6e32b2433b478269635e0982267998da370a2653bb0d87f444ad6d",
+      "file_sha256": "959d1cd83e6e32b2433b478269635e0982267998da370a2653bb0d87f444ad6d",
+      "status": "ready",
+      "page_count": 12,
+      "title": "EQ-ViT: Algorithm-Hardware Co-Design for End-to-End Acceleration of Real-Time Vision Transformer Inference on Versal ACAP Architecture",
+      "authors": [
+        "Peiyan Dong",
+        "Jinming Zhuang",
+        "Zhuoping Yang",
+        "Shixin Ji",
+        "Yanyu Li",
+        "Dongkuan Xu",
+        "Heng Huang",
+        "Jingtong Hu",
+        "Alex K. Jones",
+        "Yiyu Shi",
+        "Yanzhi Wang",
+        "Peipei Zhou"
+      ],
+      "year": 2024,
+      "topics": [
+        "FPGA",
+        "Integer quantization",
+        "Vision Transformers"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1109/TCAD.2024.3443692",
+      "rights_note": "用户指定本地 PDF，用于本机课程项目和研究测试；保留原权利声明，开放再分发许可未作推断，待人工核对。"
+    },
+    {
+      "doc_id": "d_a1dfa622dabb6a58261c9eb6367ffd4a4d51dffbf9f74e9741c1d18ad3aba967",
+      "file_sha256": "a1dfa622dabb6a58261c9eb6367ffd4a4d51dffbf9f74e9741c1d18ad3aba967",
+      "status": "ready",
+      "page_count": 15,
+      "title": "Is Your NPU Ready for LLMs? Dissecting the Hidden Efficiency Bottlenecks in Mobile LLM Inference",
+      "authors": [
+        "Guanyu Cai",
+        "Ruiming Tian",
+        "Lang Yang",
+        "Zhouhong Ren",
+        "Jinliang Yuan",
+        "Lingkun Li",
+        "Jiliang Wang"
+      ],
+      "year": 2026,
+      "topics": [
+        "Mobile LLM",
+        "NPU",
+        "Performance measurement"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2607.05475",
+      "rights_note": "用户指定本地 PDF，用于本机课程项目和研究测试；保留原权利声明，开放再分发许可未作推断，待人工核对。"
+    },
+    {
+      "doc_id": "d_b9cae993bbd44a679c75aae59ae802845d0321c9e4ee163a1c77b00417371f3b",
+      "file_sha256": "b9cae993bbd44a679c75aae59ae802845d0321c9e4ee163a1c77b00417371f3b",
+      "status": "ready",
+      "page_count": 12,
+      "title": "CSB-RNN: A Faster-than-Realtime RNN Acceleration Framework with Compressed Structured Blocks",
+      "authors": [
+        "Runbin Shi",
+        "Peiyan Dong",
+        "Tong Geng",
+        "Yuhao Ding",
+        "Xiaolong Ma",
+        "Hayden K.-H. So",
+        "Martin Herbordt",
+        "Ang Li",
+        "Yanzhi Wang"
+      ],
+      "year": 2020,
+      "topics": [
+        "FPGA",
+        "RNN acceleration",
+        "Structured pruning"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1145/3392717.3392749",
+      "rights_note": "用户指定本地 PDF，用于本机课程项目和研究测试；保留原权利声明，开放再分发许可未作推断，待人工核对。"
+    },
+    {
+      "doc_id": "d_bbfd0e6e5573959a3fc78ce26824f9943fbadcd45375885aa67b1a9588bc3392",
+      "file_sha256": "bbfd0e6e5573959a3fc78ce26824f9943fbadcd45375885aa67b1a9588bc3392",
+      "status": "ready",
+      "page_count": 14,
+      "title": "PackQViT: Faster Sub-8-bit Vision Transformers via Full and Packed Quantization on the Mobile",
+      "authors": [
+        "Peiyan Dong",
+        "Lei Lu",
+        "Chao Wu",
+        "Cheng Lyu",
+        "Geng Yuan",
+        "Hao Tang",
+        "Yanzhi Wang"
+      ],
+      "year": 2023,
+      "topics": [
+        "Mobile inference",
+        "Sub-8-bit quantization",
+        "Vision Transformers"
+      ],
+      "language": "en",
+      "source_url": "https://papers.neurips.cc/paper_files/paper/2023/hash/1c92edb990a05f2269f0cc3afbb4c952-Abstract-Conference.html",
+      "rights_note": "用户指定本地 PDF，用于本机课程项目和研究测试；保留原权利声明，开放再分发许可未作推断，待人工核对。"
+    },
+    {
+      "doc_id": "d_bdfaa68d8984f0dc02beaca527b76f207d99b666d31d1da728ee0728182df697",
+      "file_sha256": "bdfaa68d8984f0dc02beaca527b76f207d99b666d31d1da728ee0728182df697",
+      "status": "ready",
+      "page_count": 15,
+      "title": "Attention Is All You Need",
+      "authors": [
+        "Ashish Vaswani",
+        "Noam Shazeer",
+        "Niki Parmar",
+        "Jakob Uszkoreit",
+        "Llion Jones",
+        "Aidan N. Gomez",
+        "Lukasz Kaiser",
+        "Illia Polosukhin"
+      ],
+      "year": 2017,
+      "topics": [
+        "arXiv实验",
+        "长文本机制"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/1706.03762",
+      "rights_note": "arXiv公开原始论文，仅用于本地阅读及解析实验；再分发权限待核验。"
+    },
+    {
+      "doc_id": "d_bfd15786180a6546e5bf1361fe42356a884517a6497c27ef6994f444be75e91f",
+      "file_sha256": "bfd15786180a6546e5bf1361fe42356a884517a6497c27ef6994f444be75e91f",
+      "status": "ready",
+      "page_count": 24,
+      "title": "MTEB: Massive Text Embedding Benchmark",
+      "authors": [
+        "Muennighoff, Niklas",
+        "Tazi, Nouamane",
+        "Magne, Loïc",
+        "Reimers, Nils"
+      ],
+      "year": 2022,
+      "topics": [
+        "arXiv实验"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2210.07316",
+      "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+    },
+    {
+      "doc_id": "d_c4eb5fe23e480decfa6f08afda0fdb0bea4d0fe5ee7fafc65f2a2d34a397ddf0",
+      "file_sha256": "c4eb5fe23e480decfa6f08afda0fdb0bea4d0fe5ee7fafc65f2a2d34a397ddf0",
+      "status": "ready",
+      "page_count": 16,
+      "title": "XY-Serve: End-to-End Versatile Production Serving for Dynamic LLM Workloads",
+      "authors": [
+        "Mingcong Song",
+        "Xinru Tang",
+        "Fengfan Hou",
+        "Jing Li",
+        "Wei Wei",
+        "Yipeng Ma",
+        "Runqiu Xiao",
+        "Hongjie Si",
+        "Dingcheng Jiang",
+        "Shouyi Yin",
+        "Yang Hu",
+        "Guoping Long"
+      ],
+      "year": 2026,
+      "topics": [
+        "Ascend NPU",
+        "Dynamic workloads",
+        "LLM serving"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1145/3760250.3762228",
+      "rights_note": "用户提供本地 PDF；PDF 第1页明确标注 Creative Commons Attribution 4.0 International License (CC BY 4.0)。"
+    },
+    {
+      "doc_id": "d_dc0ae3c5584ed146beee122e6a9ad9c48547dde048d53e9be8435d8f1d354531",
+      "file_sha256": "dc0ae3c5584ed146beee122e6a9ad9c48547dde048d53e9be8435d8f1d354531",
+      "status": "ready",
+      "page_count": 11,
+      "title": "Precise Zero-Shot Dense Retrieval without Relevance Labels",
+      "authors": [
+        "Gao, Luyu",
+        "Ma, Xueguang",
+        "Lin, Jimmy",
+        "Callan, Jamie"
+      ],
+      "year": 2022,
+      "topics": [
+        "arXiv实验"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2212.10496",
+      "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+    },
+    {
+      "doc_id": "d_e791451960e47e69b0241d7656c6c61ce40b7c3beff92c944e163e5c3bc54c1a",
+      "file_sha256": "e791451960e47e69b0241d7656c6c61ce40b7c3beff92c944e163e5c3bc54c1a",
+      "status": "ready",
+      "page_count": 5,
+      "title": "SPLADE: Sparse Lexical and Expansion Model for First Stage Ranking",
+      "authors": [
+        "Formal, Thibault",
+        "Piwowarski, Benjamin",
+        "Clinchant, Stéphane"
+      ],
+      "year": 2021,
+      "topics": [
+        "arXiv实验"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2107.05720",
+      "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://creativecommons.org/licenses/by-nc-sa/4.0/"
+    },
+    {
+      "doc_id": "d_f459188e745318a07d8aebb6b685f785125e8ae1d936e0fe250789a86afcc7f9",
+      "file_sha256": "f459188e745318a07d8aebb6b685f785125e8ae1d936e0fe250789a86afcc7f9",
+      "status": "ready",
+      "page_count": 10,
+      "title": "FQ-ViT: Post-Training Quantization for Fully Quantized Vision Transformer",
+      "authors": [
+        "Yang Lin",
+        "Tianyu Zhang",
+        "Peiqin Sun",
+        "Zheng Li",
+        "Shuchang Zhou"
+      ],
+      "year": 2022,
+      "topics": [
+        "Integer quantization",
+        "Post-training quantization",
+        "Vision Transformers"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.24963/ijcai.2022/164",
+      "rights_note": "用户指定本地 PDF，用于本机课程项目和研究测试；保留原权利声明，开放再分发许可未作推断，待人工核对。"
+    },
+    {
+      "doc_id": "d_f6009b06362bbcf30b543118761f00b9b6893787d8f94a9ecfc2e589aa777b60",
+      "file_sha256": "f6009b06362bbcf30b543118761f00b9b6893787d8f94a9ecfc2e589aa777b60",
+      "status": "ready",
+      "page_count": 15,
+      "title": "I-BERT: Integer-only BERT Quantization",
+      "authors": [
+        "Sehoon Kim",
+        "Amir Gholami",
+        "Zhewei Yao",
+        "Michael W. Mahoney",
+        "Kurt Keutzer"
+      ],
+      "year": 2021,
+      "topics": [
+        "BERT",
+        "Integer quantization",
+        "Transformer inference"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2101.01321",
+      "rights_note": "用户指定本地 PDF，用于本机课程项目和研究测试；保留原权利声明，开放再分发许可未作推断，待人工核对。"
+    },
+    {
+      "doc_id": "d_fe437770d7c981eae9e028eacaa5c772ed0add900ed9dec54c10cfce6dfd86c3",
+      "file_sha256": "fe437770d7c981eae9e028eacaa5c772ed0add900ed9dec54c10cfce6dfd86c3",
+      "status": "ready",
+      "page_count": 24,
+      "title": "SpinQuant: LLM Quantization with Learned Rotations",
+      "authors": [
+        "Zechun Liu",
+        "Changsheng Zhao",
+        "Igor Fedorov",
+        "Bilge Soran",
+        "Dhruv Choudhary",
+        "Raghuraman Krishnamoorthi",
+        "Vikas Chandra",
+        "Yuandong Tian",
+        "Tijmen Blankevoort"
+      ],
+      "year": 2025,
+      "topics": [
+        "LLM inference",
+        "Learned rotations",
+        "Post-training quantization"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2405.16406",
+      "rights_note": "用户指定本地 PDF，用于本机课程项目和研究测试；保留原权利声明，开放再分发许可未作推断，待人工核对。"
+    }
+  ]
+}
