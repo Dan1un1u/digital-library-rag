@@ -1,0 +1,434 @@
+[
+  {
+    "item_id": "HU08",
+    "source_sha256": "7872906c3e225ab15a16bf2d4cd64d85b5b2767113d2c451af8cd7fd21b2c36a",
+    "method": "external Windows OCR en-US; no LLM-generated body text",
+    "human_review": "not_claimed",
+    "raster_dpi": 200,
+    "source_render_embedded_losslessly": true,
+    "page_renders": [
+      {
+        "page": 1,
+        "source_raster_sha256": "fdcfec97e46daca32e3edf218f43f6cc67f72d60ccfbcb83ea2ca9dde2333cfa",
+        "width": 2200,
+        "height": 1700
+      },
+      {
+        "page": 2,
+        "source_raster_sha256": "1bad359a08ffc333f82171b842d0785cb11388370dc46b72252d4e690a14abf7",
+        "width": 2200,
+        "height": 1700
+      },
+      {
+        "page": 3,
+        "source_raster_sha256": "99f1d2f43374583dd2626a3bb5f2d43bc9b197e23d87207e5528626f0a64b9e5",
+        "width": 2200,
+        "height": 1700
+      },
+      {
+        "page": 4,
+        "source_raster_sha256": "af0c9f780923741b90448db8ca44791b308bf5dff318057de06105a80daf56f8",
+        "width": 2200,
+        "height": 1700
+      },
+      {
+        "page": 5,
+        "source_raster_sha256": "0bb32eb4aeb7a0b478636f75002c8e648304f58630f02df709337e5ef3c74e45",
+        "width": 2200,
+        "height": 1700
+      },
+      {
+        "page": 6,
+        "source_raster_sha256": "566867de29e75e31650d4fd2a0f2f094dba1aaaeafcf048c73c86c32382740b5",
+        "width": 2200,
+        "height": 1700
+      },
+      {
+        "page": 7,
+        "source_raster_sha256": "c1a5004be7c0a35df45aa858bcd40231b396af0f6adb30e10783d27d91b4dd55",
+        "width": 2200,
+        "height": 1700
+      },
+      {
+        "page": 8,
+        "source_raster_sha256": "df6e8ec12e8a9c1e3d064cadad20996515a95065ac8c6397c749653e7567d0d9",
+        "width": 2200,
+        "height": 1700
+      },
+      {
+        "page": 9,
+        "source_raster_sha256": "ba40ca2585268e708e9e96fe9fc95c33141f99921ae2ecfbee299522e1f0f988",
+        "width": 2200,
+        "height": 1700
+      },
+      {
+        "page": 10,
+        "source_raster_sha256": "4c34980919700b339b42ff36dbda9cd2d6e29847ad3e547fa47cb8597069a5d4",
+        "width": 2200,
+        "height": 1700
+      },
+      {
+        "page": 11,
+        "source_raster_sha256": "7ed4688256f82ae216b005053fbe817072d1d8301be01a607442861fba889000",
+        "width": 2200,
+        "height": 1700
+      },
+      {
+        "page": 12,
+        "source_raster_sha256": "a62783f3d717fe4b270d91ba34e5feef5a4bfb3b4370d4ba291a1b0fb9f316ed",
+        "width": 2200,
+        "height": 1700
+      },
+      {
+        "page": 13,
+        "source_raster_sha256": "f98b4072ed60f0e2356a87e032b0c33ca8d6a031873a8249713e997a9d4e1f82",
+        "width": 2200,
+        "height": 1700
+      },
+      {
+        "page": 14,
+        "source_raster_sha256": "743db8a817779543a07b5688f0c2dfb8d1100feaf6995165436dd394c7bd3744",
+        "width": 2200,
+        "height": 1700
+      },
+      {
+        "page": 15,
+        "source_raster_sha256": "8d23a10fb43c9a67773c0932902307f7609c403d8c888199afa891d6a863c07f",
+        "width": 2200,
+        "height": 1700
+      },
+      {
+        "page": 16,
+        "source_raster_sha256": "817a9b90b9a86abcd3d8f722d05f37f151a05af6ccba5a9f8f06e7fb14f5e9f9",
+        "width": 2200,
+        "height": 1700
+      }
+    ],
+    "ocr_result": [
+      {
+        "pdf_page": 1,
+        "ocr_words": 436
+      },
+      {
+        "pdf_page": 2,
+        "ocr_words": 614
+      },
+      {
+        "pdf_page": 3,
+        "ocr_words": 636
+      },
+      {
+        "pdf_page": 4,
+        "ocr_words": 601
+      },
+      {
+        "pdf_page": 5,
+        "ocr_words": 644
+      },
+      {
+        "pdf_page": 6,
+        "ocr_words": 649
+      },
+      {
+        "pdf_page": 7,
+        "ocr_words": 638
+      },
+      {
+        "pdf_page": 8,
+        "ocr_words": 629
+      },
+      {
+        "pdf_page": 9,
+        "ocr_words": 625
+      },
+      {
+        "pdf_page": 10,
+        "ocr_words": 648
+      },
+      {
+        "pdf_page": 11,
+        "ocr_words": 672
+      },
+      {
+        "pdf_page": 12,
+        "ocr_words": 674
+      },
+      {
+        "pdf_page": 13,
+        "ocr_words": 659
+      },
+      {
+        "pdf_page": 14,
+        "ocr_words": 704
+      },
+      {
+        "pdf_page": 15,
+        "ocr_words": 672
+      },
+      {
+        "pdf_page": 16,
+        "ocr_words": 415
+      }
+    ],
+    "import_sha256": "d887e0caaf1ee713c0f87b9bdae8b4fffa4053e626c42aa1b009953aa7e23bbc",
+    "page_count": 16,
+    "visible_ocr_layer_preserves_working_pdf_rendering": true,
+    "created_utc": "2026-10-20T04:41:15.267312+00:00"
+  },
+  {
+    "item_id": "SS14",
+    "source_sha256": "d0b830982dacd3a8bdaf85583297c8f2adf3e9c25cff0e14169461be53fb1bf3",
+    "method": "external Windows OCR en-US; no LLM-generated body text",
+    "human_review": "not_claimed",
+    "body_pages_requiring_ocr": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "raw_page_inspection": [
+      {
+        "pdf_page": 1,
+        "characters": 881,
+        "has_images": true
+      },
+      {
+        "pdf_page": 2,
+        "characters": 158,
+        "has_images": true
+      },
+      {
+        "pdf_page": 3,
+        "characters": 94,
+        "has_images": true
+      },
+      {
+        "pdf_page": 4,
+        "characters": 94,
+        "has_images": true
+      },
+      {
+        "pdf_page": 5,
+        "characters": 94,
+        "has_images": true
+      },
+      {
+        "pdf_page": 6,
+        "characters": 94,
+        "has_images": true
+      },
+      {
+        "pdf_page": 7,
+        "characters": 94,
+        "has_images": true
+      },
+      {
+        "pdf_page": 8,
+        "characters": 94,
+        "has_images": true
+      },
+      {
+        "pdf_page": 9,
+        "characters": 94,
+        "has_images": true
+      },
+      {
+        "pdf_page": 10,
+        "characters": 94,
+        "has_images": true
+      },
+      {
+        "pdf_page": 11,
+        "characters": 94,
+        "has_images": true
+      },
+      {
+        "pdf_page": 12,
+        "characters": 94,
+        "has_images": true
+      },
+      {
+        "pdf_page": 13,
+        "characters": 94,
+        "has_images": true
+      },
+      {
+        "pdf_page": 14,
+        "characters": 94,
+        "has_images": true
+      },
+      {
+        "pdf_page": 15,
+        "characters": 94,
+        "has_images": true
+      },
+      {
+        "pdf_page": 16,
+        "characters": 94,
+        "has_images": true
+      },
+      {
+        "pdf_page": 17,
+        "characters": 94,
+        "has_images": true
+      },
+      {
+        "pdf_page": 18,
+        "characters": 94,
+        "has_images": true
+      },
+      {
+        "pdf_page": 19,
+        "characters": 94,
+        "has_images": true
+      },
+      {
+        "pdf_page": 20,
+        "characters": 94,
+        "has_images": true
+      },
+      {
+        "pdf_page": 21,
+        "characters": 94,
+        "has_images": true
+      },
+      {
+        "pdf_page": 22,
+        "characters": 94,
+        "has_images": true
+      },
+      {
+        "pdf_page": 23,
+        "characters": 94,
+        "has_images": true
+      },
+      {
+        "pdf_page": 24,
+        "characters": 94,
+        "has_images": true
+      },
+      {
+        "pdf_page": 25,
+        "characters": 94,
+        "has_images": true
+      }
+    ],
+    "ocr_result": [
+      {
+        "pdf_page": 3,
+        "ocr_words": 522
+      },
+      {
+        "pdf_page": 4,
+        "ocr_words": 571
+      },
+      {
+        "pdf_page": 5,
+        "ocr_words": 508
+      },
+      {
+        "pdf_page": 6,
+        "ocr_words": 512
+      },
+      {
+        "pdf_page": 7,
+        "ocr_words": 532
+      },
+      {
+        "pdf_page": 8,
+        "ocr_words": 544
+      },
+      {
+        "pdf_page": 9,
+        "ocr_words": 517
+      },
+      {
+        "pdf_page": 10,
+        "ocr_words": 501
+      },
+      {
+        "pdf_page": 11,
+        "ocr_words": 471
+      },
+      {
+        "pdf_page": 12,
+        "ocr_words": 542
+      },
+      {
+        "pdf_page": 13,
+        "ocr_words": 519
+      },
+      {
+        "pdf_page": 14,
+        "ocr_words": 496
+      },
+      {
+        "pdf_page": 15,
+        "ocr_words": 496
+      },
+      {
+        "pdf_page": 16,
+        "ocr_words": 527
+      },
+      {
+        "pdf_page": 17,
+        "ocr_words": 548
+      },
+      {
+        "pdf_page": 18,
+        "ocr_words": 516
+      },
+      {
+        "pdf_page": 19,
+        "ocr_words": 521
+      },
+      {
+        "pdf_page": 20,
+        "ocr_words": 509
+      },
+      {
+        "pdf_page": 21,
+        "ocr_words": 552
+      },
+      {
+        "pdf_page": 22,
+        "ocr_words": 518
+      },
+      {
+        "pdf_page": 23,
+        "ocr_words": 478
+      },
+      {
+        "pdf_page": 24,
+        "ocr_words": 388
+      },
+      {
+        "pdf_page": 25,
+        "ocr_words": 403
+      }
+    ],
+    "import_sha256": "62e45bc4d526acf9320f30a18d4757c3b3dfb5edabf6e9bf39fabbc3e2c10f20",
+    "page_count": 25,
+    "visible_ocr_layer_preserves_working_pdf_rendering": true,
+    "created_utc": "2026-10-20T04:41:59.330299+00:00"
+  }
+]
