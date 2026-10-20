@@ -1,0 +1,24 @@
+{
+  "pr": 10,
+  "head": "ad131b88141366b2124e9c96196aedc508cd4f82",
+  "main_before": "7d9abafc109c7a3d506e0c3b806493bbab650f26",
+  "predicted_tree": "4c883e14e6924016771dfeb9101ca1424effb201",
+  "checks": {
+    "check_runs": [],
+    "statuses": [],
+    "hosted_checks_present": false
+  },
+  "reviews": {},
+  "changed_files": 40,
+  "time": "2026-10-20T03:40:27.372572+00:00",
+  "source_matches_tested": true,
+  "merged": true,
+  "url": "https://github.com/Dan1un1u/digital-library-rag/pull/10",
+  "merged_at": "2026-10-20T03:40:27Z",
+  "merge_commit": "d43d075ba19d705506fce1743c16eaac77b66410",
+  "actual_tree": "4c883e14e6924016771dfeb9101ca1424effb201",
+  "tree_verified": true,
+  "parents_verified": true,
+  "method": "merge",
+  "deployed": false
+}

@@ -1,0 +1,22 @@
+........................................................................ [ 11%]
+........................................................................ [ 23%]
+........................................................................ [ 35%]
+........................................................................ [ 47%]
+........................................................................ [ 59%]
+........................................................................ [ 71%]
+........................................................................ [ 83%]
+........................................................................ [ 95%]
+..............................                                           [100%]
+============================== warnings summary ===============================
+..\..\llm_exp\digital-library\workspace\deployments\lib_management_v1_20261018\.venv\Lib\site-packages\fastapi\testclient.py:1
+  D:\llm_exp\digital-library\workspace\deployments\lib_management_v1_20261018\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+tests/integration/test_api.py::test_real_pdf_pipeline_and_duplicate
+tests/integration/test_discipline_ingestion.py::test_duplicate_keeps_selected_discipline_and_index
+  D:\digital-library-worktrees\ui-003-pie-clipping\app\src\dlrag\ingestion\library.py:29: UserWarning: Duplicate PDF: existing metadata retained
+    document = self.register_document(file_path, metadata)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: D:\digital-library-worktrees\ui-003-pie-clipping\reports\UI-003\full\junit.xml -
+606 passed, 3 warnings in 47.42s

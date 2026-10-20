@@ -1,0 +1,159 @@
+{
+  "pie_cases": [
+    {
+      "case": "combined-chinese-pie",
+      "result": {
+        "background": "rgb(14, 17, 23)",
+        "chart": {
+          "height": 340,
+          "width": 449.8229370117187,
+          "x": 380,
+          "y": 555.8854370117188
+        },
+        "legend": {
+          "height": 58,
+          "width": 308,
+          "x": 380,
+          "y": 817.8854370117188
+        },
+        "marks": [
+          {
+            "bounds": {
+              "height": 179.25,
+              "width": 119.49996185302734,
+              "x": 485.4114990234375,
+              "y": 559.8854370117188
+            },
+            "insets": {
+              "bottom": 155.75,
+              "left": 104.4114990234375,
+              "right": 223.9114761352539,
+              "top": 3
+            },
+            "label": "篇数: 1; 学科: 自然科学",
+            "path": "M0,-119.5A119.5,119.5,0,0,0,-103.49,59.75L0,0Z",
+            "stroke": 2
+          },
+          {
+            "bounds": {
+              "height": 119.49992370605467,
+              "width": 206.97998046875,
+              "x": 501.4214782714844,
+              "y": 679.3854370117188
+            },
+            "insets": {
+              "bottom": 96.00007629394533,
+              "left": 120.42147827148438,
+              "right": 120.42147827148438,
+              "top": 122.5
+            },
+            "label": "篇数: 1; 学科: 社会科学",
+            "path": "M-103.49,59.75A119.5,119.5,0,0,0,103.49,59.75L0,0Z",
+            "stroke": 2
+          },
+          {
+            "bounds": {
+              "height": 179.25,
+              "width": 119.5,
+              "x": 604.9114990234375,
+              "y": 559.8854370117188
+            },
+            "insets": {
+              "bottom": 155.75,
+              "left": 223.9114990234375,
+              "right": 104.41143798828124,
+              "top": 3
+            },
+            "label": "篇数: 1; 学科: 哲学与人文科学",
+            "path": "M103.49,59.75A119.5,119.5,0,0,0,0,-119.5L0,0Z",
+            "stroke": 2
+          }
+        ],
+        "viewport": {
+          "height": 720,
+          "width": 1280
+        }
+      }
+    },
+    {
+      "case": "combined-english-pie",
+      "result": {
+        "background": "rgb(14, 17, 23)",
+        "chart": {
+          "height": 340,
+          "width": 449.8229370117187,
+          "x": 380,
+          "y": 213.8854217529297
+        },
+        "legend": {
+          "height": 58,
+          "width": 442,
+          "x": 380,
+          "y": 475.8854370117187
+        },
+        "marks": [
+          {
+            "bounds": {
+              "height": 179.24998474121094,
+              "width": 119.49996185302734,
+              "x": 485.4114990234375,
+              "y": 217.88543701171875
+            },
+            "insets": {
+              "bottom": 155.75,
+              "left": 104.4114990234375,
+              "right": 223.9114761352539,
+              "top": 3.0000152587890625
+            },
+            "label": "Documents: 1; Subject: Natural sciences",
+            "path": "M0,-119.5A119.5,119.5,0,0,0,-103.49,59.75L0,0Z",
+            "stroke": 2
+          },
+          {
+            "bounds": {
+              "height": 119.49992370605467,
+              "width": 206.97998046875,
+              "x": 501.4214782714844,
+              "y": 337.38543701171875
+            },
+            "insets": {
+              "bottom": 96.00006103515624,
+              "left": 120.42147827148438,
+              "right": 120.42147827148438,
+              "top": 122.50001525878906
+            },
+            "label": "Documents: 1; Subject: Social sciences",
+            "path": "M-103.49,59.75A119.5,119.5,0,0,0,103.49,59.75L0,0Z",
+            "stroke": 2
+          },
+          {
+            "bounds": {
+              "height": 179.24998474121094,
+              "width": 119.5,
+              "x": 604.9114990234375,
+              "y": 217.88543701171875
+            },
+            "insets": {
+              "bottom": 155.75,
+              "left": 223.9114990234375,
+              "right": 104.41143798828124,
+              "top": 3.0000152587890625
+            },
+            "label": "Documents: 1; Subject: Philosophy and humanities",
+            "path": "M103.49,59.75A119.5,119.5,0,0,0,0,-119.5L0,0Z",
+            "stroke": 2
+          }
+        ],
+        "viewport": {
+          "height": 720,
+          "width": 1280
+        }
+      }
+    }
+  ],
+  "english_search_form": true,
+  "english_qa": true,
+  "english_source": true,
+  "original_upload_form": true,
+  "notes": "Browser checks use the independent mock service. The scripted answer and PDF text stay unchanged; source controls use English. No PDF was imported during acceptance."
+}

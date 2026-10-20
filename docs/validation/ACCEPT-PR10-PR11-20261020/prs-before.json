@@ -1,0 +1,45 @@
+{
+  "main": "7d9abafc109c7a3d506e0c3b806493bbab650f26",
+  "prs": [
+    {
+      "number": 10,
+      "url": "https://github.com/Dan1un1u/digital-library-rag/pull/10",
+      "node_id": "PR_kwDOVOeNYc8AAAABJXBRgA",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "mergeable": true,
+      "head": "93dc297374a9718523795f3f5a6c1520aae9b8fb",
+      "branch": "feat/ui-002-bilingual",
+      "base": "7d9abafc109c7a3d506e0c3b806493bbab650f26",
+      "base_branch": "main",
+      "checks": {
+        "check_runs": [],
+        "statuses": [],
+        "hosted_checks_present": false
+      },
+      "reviews": {},
+      "title": "feat: 保持原有界面的中英文文本切换（UI-002）"
+    },
+    {
+      "number": 11,
+      "url": "https://github.com/Dan1un1u/digital-library-rag/pull/11",
+      "node_id": "PR_kwDOVOeNYc8AAAABJYC41g",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "mergeable": true,
+      "head": "6835e524e1813e23c5589bea4106c777ae0469f8",
+      "branch": "fix/ui-003-pie-clipping",
+      "base": "7d9abafc109c7a3d506e0c3b806493bbab650f26",
+      "base_branch": "main",
+      "checks": {
+        "check_runs": [],
+        "statuses": [],
+        "hosted_checks_present": false
+      },
+      "reviews": {},
+      "title": "fix: 修复原有学科饼图顶部裁切（UI-003）"
+    }
+  ]
+}
