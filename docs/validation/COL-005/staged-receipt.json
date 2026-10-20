@@ -1,0 +1,758 @@
+{
+  "batch_id": "COL-005-20261020-NATURAL100",
+  "plan_sha256": "e6f1db7fb0d1d8d8d088ffe1fbb61685f70bd42db30fc697cd6e8638a816c932",
+  "deployed_commit": "8174362c38fcd62b722b5133692c7e9662355b87",
+  "tooling_commit": "5526b9de90fc4541351547b1db2ac5e87abf59a8",
+  "execution": "core batch maintenance; 100 parses, one rebuild; no HTTP job ids",
+  "backup_ref": "COL-005-20261020/backup-manifest.json",
+  "items": [
+    {
+      "item_id": "NS001",
+      "doc_id": "d_945e278613c45ea1ab617b28c3095783d0e68958dc0546dfcfa9b42b9674fbe1",
+      "sha256": "945e278613c45ea1ab617b28c3095783d0e68958dc0546dfcfa9b42b9674fbe1",
+      "page_count": 39,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS002",
+      "doc_id": "d_6290421ec45e459a16a5ecad86d1162eecfed9f2c2646c7b2728f0503de8f706",
+      "sha256": "6290421ec45e459a16a5ecad86d1162eecfed9f2c2646c7b2728f0503de8f706",
+      "page_count": 22,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS003",
+      "doc_id": "d_5ec71073cf6b5e6c1b655308803036d22116cb7021df68dbae3db04cd6eaede2",
+      "sha256": "5ec71073cf6b5e6c1b655308803036d22116cb7021df68dbae3db04cd6eaede2",
+      "page_count": 39,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS004",
+      "doc_id": "d_a468b52ebd895e46f851b80f4aa10c8ef5dc7123e8564a69f809d43b868831cf",
+      "sha256": "a468b52ebd895e46f851b80f4aa10c8ef5dc7123e8564a69f809d43b868831cf",
+      "page_count": 15,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS005",
+      "doc_id": "d_d5d99d95b3d9657de6413f4c26d635238103ef9cf1a28ff1b7fde531cf11f6be",
+      "sha256": "d5d99d95b3d9657de6413f4c26d635238103ef9cf1a28ff1b7fde531cf11f6be",
+      "page_count": 74,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS006",
+      "doc_id": "d_ef701bb9e898e25f05bd215d616ac08c56bea99f4bab7c297c8a38cff4014e9e",
+      "sha256": "ef701bb9e898e25f05bd215d616ac08c56bea99f4bab7c297c8a38cff4014e9e",
+      "page_count": 32,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS007",
+      "doc_id": "d_691caf636ed1203cba485a2c12117d8f6ca2ec92b3666b48e15529e51ed98d8a",
+      "sha256": "691caf636ed1203cba485a2c12117d8f6ca2ec92b3666b48e15529e51ed98d8a",
+      "page_count": 30,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS008",
+      "doc_id": "d_82dc947b1beef2b9334a16dcfadf9a46ef0908f28cb5666fb5516b25493e5179",
+      "sha256": "82dc947b1beef2b9334a16dcfadf9a46ef0908f28cb5666fb5516b25493e5179",
+      "page_count": 60,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS009",
+      "doc_id": "d_5e089d7cbf3d39f694cba052bd290dcec9aa46995b026b9cc10d623e0410df0b",
+      "sha256": "5e089d7cbf3d39f694cba052bd290dcec9aa46995b026b9cc10d623e0410df0b",
+      "page_count": 132,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS010",
+      "doc_id": "d_939b3d7d96af9aa1d1ac750b22847a8b4383ad4369f81e783c7a665cdb3c7c02",
+      "sha256": "939b3d7d96af9aa1d1ac750b22847a8b4383ad4369f81e783c7a665cdb3c7c02",
+      "page_count": 19,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS011",
+      "doc_id": "d_e038215492b06a5f79bab24098c0004c75b0588f99724d8ea2345a6ece0bd53b",
+      "sha256": "e038215492b06a5f79bab24098c0004c75b0588f99724d8ea2345a6ece0bd53b",
+      "page_count": 38,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS012",
+      "doc_id": "d_b24f67a66b6756d48474b6c8df8d0ce723f61ffa154cbe662312698f6f801dc2",
+      "sha256": "b24f67a66b6756d48474b6c8df8d0ce723f61ffa154cbe662312698f6f801dc2",
+      "page_count": 42,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS013",
+      "doc_id": "d_a6e9792af68208e5822f815cd2c1bf8d85e779ab66e38ac99104d0b5ec1d27d7",
+      "sha256": "a6e9792af68208e5822f815cd2c1bf8d85e779ab66e38ac99104d0b5ec1d27d7",
+      "page_count": 55,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS014",
+      "doc_id": "d_ff2b899367bfde76fef40a61fd42e3c12406227eb0466b5250a594f3d3ba5b2c",
+      "sha256": "ff2b899367bfde76fef40a61fd42e3c12406227eb0466b5250a594f3d3ba5b2c",
+      "page_count": 23,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS015",
+      "doc_id": "d_0f461b563b25a8c21a04ae7ebc1e1fa2d73949b52913cf1e4bc19b08f1031f76",
+      "sha256": "0f461b563b25a8c21a04ae7ebc1e1fa2d73949b52913cf1e4bc19b08f1031f76",
+      "page_count": 15,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS016",
+      "doc_id": "d_e72475d363fa6f836e8bb0bbd43a2a11c0faf3af1d3da0b2244686b2826188ea",
+      "sha256": "e72475d363fa6f836e8bb0bbd43a2a11c0faf3af1d3da0b2244686b2826188ea",
+      "page_count": 28,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS017",
+      "doc_id": "d_815a153636fdb222c4c47283fe1da8707e6da3858e0dfaa5f2b3215501938028",
+      "sha256": "815a153636fdb222c4c47283fe1da8707e6da3858e0dfaa5f2b3215501938028",
+      "page_count": 18,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS018",
+      "doc_id": "d_1c1487079c535ef4b4a56aeb7c6b0107d50df09cf051f590342df5442ceec0c8",
+      "sha256": "1c1487079c535ef4b4a56aeb7c6b0107d50df09cf051f590342df5442ceec0c8",
+      "page_count": 28,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS019",
+      "doc_id": "d_ce333a49d89c41f7d4a0292507b53170160a555a67b67ce3e4b7ac453ca09662",
+      "sha256": "ce333a49d89c41f7d4a0292507b53170160a555a67b67ce3e4b7ac453ca09662",
+      "page_count": 38,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS020",
+      "doc_id": "d_314964ac38477f8f231c10e0fbb046bed7fc12ded7cad5ad5e7c2bd510da5c40",
+      "sha256": "314964ac38477f8f231c10e0fbb046bed7fc12ded7cad5ad5e7c2bd510da5c40",
+      "page_count": 80,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS021",
+      "doc_id": "d_e5e864c23d015b69be17e5b5d51b5b462d2829353a867513414b6728f54589c4",
+      "sha256": "e5e864c23d015b69be17e5b5d51b5b462d2829353a867513414b6728f54589c4",
+      "page_count": 16,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS022",
+      "doc_id": "d_0fcadae9d35e72c6c903ce6466e105e6ea84358397384a88471080acfbd2d024",
+      "sha256": "0fcadae9d35e72c6c903ce6466e105e6ea84358397384a88471080acfbd2d024",
+      "page_count": 18,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS023",
+      "doc_id": "d_8e172730faf07c9f4ff3fdcc7043f76ed67df6f76066d47df30d693025b6ce77",
+      "sha256": "8e172730faf07c9f4ff3fdcc7043f76ed67df6f76066d47df30d693025b6ce77",
+      "page_count": 73,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS024",
+      "doc_id": "d_5c6c6dba0319142109745ae20c60e85149aad6c78ab9bac9a04a2c0a737de432",
+      "sha256": "5c6c6dba0319142109745ae20c60e85149aad6c78ab9bac9a04a2c0a737de432",
+      "page_count": 177,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS025",
+      "doc_id": "d_be6604770bb0d0a6c2a81071518e89d5bc2f9b460f91390518804e0a1f454472",
+      "sha256": "be6604770bb0d0a6c2a81071518e89d5bc2f9b460f91390518804e0a1f454472",
+      "page_count": 17,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS026",
+      "doc_id": "d_d69f07360e986449d074e71869049bad0f26a1c5f793453d7adf714b9e259629",
+      "sha256": "d69f07360e986449d074e71869049bad0f26a1c5f793453d7adf714b9e259629",
+      "page_count": 21,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS027",
+      "doc_id": "d_698ad9eb84960a1c64c492acaddffa40186234604051f92bbf7900b08740f968",
+      "sha256": "698ad9eb84960a1c64c492acaddffa40186234604051f92bbf7900b08740f968",
+      "page_count": 72,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS028",
+      "doc_id": "d_1d44239a33f07e8bb371f543eccf2554a06e95b2632f452996295c5a21a114e4",
+      "sha256": "1d44239a33f07e8bb371f543eccf2554a06e95b2632f452996295c5a21a114e4",
+      "page_count": 40,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS029",
+      "doc_id": "d_eae1b7c8c60ca6ef036aff539b8ea91f21d3129ecae8ce70f3f89c44a95d69f7",
+      "sha256": "eae1b7c8c60ca6ef036aff539b8ea91f21d3129ecae8ce70f3f89c44a95d69f7",
+      "page_count": 5,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS030",
+      "doc_id": "d_f98314529433a4dbd03831bdb13589920eb35b436edf33666c2dc007a32aea63",
+      "sha256": "f98314529433a4dbd03831bdb13589920eb35b436edf33666c2dc007a32aea63",
+      "page_count": 55,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS031",
+      "doc_id": "d_ef4d58088ab681af8f9342102ed5462486dcd5bc98232f666651b3aa35d746d9",
+      "sha256": "ef4d58088ab681af8f9342102ed5462486dcd5bc98232f666651b3aa35d746d9",
+      "page_count": 36,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS032",
+      "doc_id": "d_f17764203551bf7f68815b61205522755d15f476ed9ad6f66e44c956f3183c8d",
+      "sha256": "f17764203551bf7f68815b61205522755d15f476ed9ad6f66e44c956f3183c8d",
+      "page_count": 16,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS033",
+      "doc_id": "d_f7d5be90b7b166c5afb74db7a89f35e2218ae22667118adee2590b07a0d1edfb",
+      "sha256": "f7d5be90b7b166c5afb74db7a89f35e2218ae22667118adee2590b07a0d1edfb",
+      "page_count": 18,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS034",
+      "doc_id": "d_710cf454523fef56c470478df4bd263548c966f4b5f60c655b3f3d770d648dcb",
+      "sha256": "710cf454523fef56c470478df4bd263548c966f4b5f60c655b3f3d770d648dcb",
+      "page_count": 14,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS035",
+      "doc_id": "d_6b9cc7a4836af78d4f3355c4dd8f255537632651d1bd6f2dfbb5517ec2f0c3d0",
+      "sha256": "6b9cc7a4836af78d4f3355c4dd8f255537632651d1bd6f2dfbb5517ec2f0c3d0",
+      "page_count": 17,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS036",
+      "doc_id": "d_843e87c69970c2259ced11ebbd96760fbe6d5d8df08c03f3eac7fe4be2ccbc13",
+      "sha256": "843e87c69970c2259ced11ebbd96760fbe6d5d8df08c03f3eac7fe4be2ccbc13",
+      "page_count": 19,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS037",
+      "doc_id": "d_2ff41a0c1e7fd88d5e37a1923e7ee7d012e9fad89a6941943d67e85620aaed71",
+      "sha256": "2ff41a0c1e7fd88d5e37a1923e7ee7d012e9fad89a6941943d67e85620aaed71",
+      "page_count": 30,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS038",
+      "doc_id": "d_5c537d6464ed412a4464066ffcd0153bc76221573e90b0ae024d0de4d6573cfc",
+      "sha256": "5c537d6464ed412a4464066ffcd0153bc76221573e90b0ae024d0de4d6573cfc",
+      "page_count": 11,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS039",
+      "doc_id": "d_c1a5f9487021246f6934c754630fd66bd5b25138f8dd5304e4885a31b92825ba",
+      "sha256": "c1a5f9487021246f6934c754630fd66bd5b25138f8dd5304e4885a31b92825ba",
+      "page_count": 19,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS040",
+      "doc_id": "d_2ee4775f297fdc5010756ed2b65eea976f390e120771769aee87ef4552592000",
+      "sha256": "2ee4775f297fdc5010756ed2b65eea976f390e120771769aee87ef4552592000",
+      "page_count": 27,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS041",
+      "doc_id": "d_4de9170a1e582fdc6145312000f4b3fd1ae373a3745e98e312819a084e939319",
+      "sha256": "4de9170a1e582fdc6145312000f4b3fd1ae373a3745e98e312819a084e939319",
+      "page_count": 40,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS042",
+      "doc_id": "d_f5cf5eb88dec2fb4275f3af2c4fd7557d904af4b0928cb62b58f77269a261a5f",
+      "sha256": "f5cf5eb88dec2fb4275f3af2c4fd7557d904af4b0928cb62b58f77269a261a5f",
+      "page_count": 10,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS043",
+      "doc_id": "d_8c866881257d9d744becb6a788229e9b96015d099025b14f16ad83bcb780139f",
+      "sha256": "8c866881257d9d744becb6a788229e9b96015d099025b14f16ad83bcb780139f",
+      "page_count": 20,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS044",
+      "doc_id": "d_e2138f11aeeb220412fcbb6f234947e1a3a75007eeef7e8d490f9ca883b384cc",
+      "sha256": "e2138f11aeeb220412fcbb6f234947e1a3a75007eeef7e8d490f9ca883b384cc",
+      "page_count": 22,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS045",
+      "doc_id": "d_8cb6a284493ed67e949b0af9d03e6b97c65a4e70f178dcaf3cd79b22f6697109",
+      "sha256": "8cb6a284493ed67e949b0af9d03e6b97c65a4e70f178dcaf3cd79b22f6697109",
+      "page_count": 17,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS046",
+      "doc_id": "d_39e560d813722971573477fce5095f142740d175ab1a00ca44704181607c0394",
+      "sha256": "39e560d813722971573477fce5095f142740d175ab1a00ca44704181607c0394",
+      "page_count": 21,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS047",
+      "doc_id": "d_18afb897efa30806a38e9009d0c824daf23694382eaf3c6079c140d0e810b870",
+      "sha256": "18afb897efa30806a38e9009d0c824daf23694382eaf3c6079c140d0e810b870",
+      "page_count": 21,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS048",
+      "doc_id": "d_cd1169a233d5552ff574288541f2a9a08218d4bbd5f9a38e7abb669a6bf15471",
+      "sha256": "cd1169a233d5552ff574288541f2a9a08218d4bbd5f9a38e7abb669a6bf15471",
+      "page_count": 13,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS049",
+      "doc_id": "d_d05535561fec1a353637b48967b5a439d253e9f513624895a0a6ba97d99601ee",
+      "sha256": "d05535561fec1a353637b48967b5a439d253e9f513624895a0a6ba97d99601ee",
+      "page_count": 22,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS050",
+      "doc_id": "d_a6282c64fac4f35ffcb5a97c0aba948dfa9220e53ece56c9d4995c3c1aa28ff7",
+      "sha256": "a6282c64fac4f35ffcb5a97c0aba948dfa9220e53ece56c9d4995c3c1aa28ff7",
+      "page_count": 22,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS051",
+      "doc_id": "d_1f4b1dd27a2b52e587c2605f221de01a1159da8c898cd313edd3cf61f9be7e1f",
+      "sha256": "1f4b1dd27a2b52e587c2605f221de01a1159da8c898cd313edd3cf61f9be7e1f",
+      "page_count": 35,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS052",
+      "doc_id": "d_c25d6d4642cd1cb2052df1c7b6abbb4969bd6262a1191ce92bec686d42423caa",
+      "sha256": "c25d6d4642cd1cb2052df1c7b6abbb4969bd6262a1191ce92bec686d42423caa",
+      "page_count": 69,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS053",
+      "doc_id": "d_1e3c0487ab9c8b890fdbb60144c0a7c29bdb594913d8b343d4033e2a5d48726b",
+      "sha256": "1e3c0487ab9c8b890fdbb60144c0a7c29bdb594913d8b343d4033e2a5d48726b",
+      "page_count": 63,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS054",
+      "doc_id": "d_7b8ee4236167238ddd928b04f4c2cb0ca3793d0a1dbadbaaee56047af0bb212a",
+      "sha256": "7b8ee4236167238ddd928b04f4c2cb0ca3793d0a1dbadbaaee56047af0bb212a",
+      "page_count": 20,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS055",
+      "doc_id": "d_074c66c5ef6b158fe1aa30103f6d3c5708bc5881898bc34a7f01206999848d7c",
+      "sha256": "074c66c5ef6b158fe1aa30103f6d3c5708bc5881898bc34a7f01206999848d7c",
+      "page_count": 12,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS056",
+      "doc_id": "d_9530bcc90ac80dfa2d10fa86d8001584d72b1ac8fc69664d50c8715b6b83af09",
+      "sha256": "9530bcc90ac80dfa2d10fa86d8001584d72b1ac8fc69664d50c8715b6b83af09",
+      "page_count": 28,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS057",
+      "doc_id": "d_d4f53cb333623b0f6e4c5ea3288e753abfbc2ff2efbdef262c64b9d1fb67b51b",
+      "sha256": "d4f53cb333623b0f6e4c5ea3288e753abfbc2ff2efbdef262c64b9d1fb67b51b",
+      "page_count": 8,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS058",
+      "doc_id": "d_5b74e21941f3d995d4da3c9ad6e23b6d9df4207a8189cea6e132b2d340284f90",
+      "sha256": "5b74e21941f3d995d4da3c9ad6e23b6d9df4207a8189cea6e132b2d340284f90",
+      "page_count": 6,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS059",
+      "doc_id": "d_888c929659a8841dea7ea6c8a884ad2e5cf0ecc1501b996cad17c5474f038266",
+      "sha256": "888c929659a8841dea7ea6c8a884ad2e5cf0ecc1501b996cad17c5474f038266",
+      "page_count": 21,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS060",
+      "doc_id": "d_144e8aa67b417442d6c57d6396276a2f366b147e90686fc65d8ac0ccd2f91780",
+      "sha256": "144e8aa67b417442d6c57d6396276a2f366b147e90686fc65d8ac0ccd2f91780",
+      "page_count": 5,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS061",
+      "doc_id": "d_b63b534e85b3c8c19be1b43461da96112c59d492c74fbf798d356a4cec06271e",
+      "sha256": "b63b534e85b3c8c19be1b43461da96112c59d492c74fbf798d356a4cec06271e",
+      "page_count": 10,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS062",
+      "doc_id": "d_295aa5e04a48b08051b9cbc55ebc73f52ae9ef73a03dfac5356fad2c7cd187c4",
+      "sha256": "295aa5e04a48b08051b9cbc55ebc73f52ae9ef73a03dfac5356fad2c7cd187c4",
+      "page_count": 93,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS063",
+      "doc_id": "d_fe02adcefeb9bc9c03737a062027cf88ba4ae0ab5b7352b87fa0a4d8f0d18317",
+      "sha256": "fe02adcefeb9bc9c03737a062027cf88ba4ae0ab5b7352b87fa0a4d8f0d18317",
+      "page_count": 9,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS064",
+      "doc_id": "d_bfde6d24007487e7e27f466fe260e96beec8702829f19679cd8b12d51c200d2f",
+      "sha256": "bfde6d24007487e7e27f466fe260e96beec8702829f19679cd8b12d51c200d2f",
+      "page_count": 29,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS065",
+      "doc_id": "d_591d2ff358977c52e83af8305a15fd76f1487a86a28db6c6e3851ca095a0809b",
+      "sha256": "591d2ff358977c52e83af8305a15fd76f1487a86a28db6c6e3851ca095a0809b",
+      "page_count": 1,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS066",
+      "doc_id": "d_22e8a28eeb1a71fce63223d045cd2fe0ebcbe2b99094c4dcddc90b30bbbd60cc",
+      "sha256": "22e8a28eeb1a71fce63223d045cd2fe0ebcbe2b99094c4dcddc90b30bbbd60cc",
+      "page_count": 12,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS067",
+      "doc_id": "d_aee149ceeb35e16c6a68b4c4c2788f9411e2b1c6bd64aab9fbbd06740e1b9e05",
+      "sha256": "aee149ceeb35e16c6a68b4c4c2788f9411e2b1c6bd64aab9fbbd06740e1b9e05",
+      "page_count": 62,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS068",
+      "doc_id": "d_d251c425f730e9bc2e4d1fd5f1555ae342bb4e2a95005c2cf8237f9c4a44da27",
+      "sha256": "d251c425f730e9bc2e4d1fd5f1555ae342bb4e2a95005c2cf8237f9c4a44da27",
+      "page_count": 10,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS069",
+      "doc_id": "d_6eae057a9faf4f671c3101e0745ed704460c6d3dec77243dfd3a9f2d2ab68970",
+      "sha256": "6eae057a9faf4f671c3101e0745ed704460c6d3dec77243dfd3a9f2d2ab68970",
+      "page_count": 12,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS070",
+      "doc_id": "d_bf6e86ec8bea5834bce478b907bf527af76fcecfa31680c0ae8291ab1f915572",
+      "sha256": "bf6e86ec8bea5834bce478b907bf527af76fcecfa31680c0ae8291ab1f915572",
+      "page_count": 21,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS071",
+      "doc_id": "d_b03fe1f0b44cac29f4f02ed11809f951641b7c3b15669525ef57f15ede7176bf",
+      "sha256": "b03fe1f0b44cac29f4f02ed11809f951641b7c3b15669525ef57f15ede7176bf",
+      "page_count": 21,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS072",
+      "doc_id": "d_6d7bea5547054bd37d90780b9dbb201165018f9faab6a3a21608cb621cfa4bd3",
+      "sha256": "6d7bea5547054bd37d90780b9dbb201165018f9faab6a3a21608cb621cfa4bd3",
+      "page_count": 32,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS073",
+      "doc_id": "d_a017fcc201f83f1b90cd1e96ae3775b1b7b6c71200c0b4c91f6b50fed2496dee",
+      "sha256": "a017fcc201f83f1b90cd1e96ae3775b1b7b6c71200c0b4c91f6b50fed2496dee",
+      "page_count": 36,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS074",
+      "doc_id": "d_671ee7169981b369cc767e480b321a42a4675c451f65823379ae44d911ee613e",
+      "sha256": "671ee7169981b369cc767e480b321a42a4675c451f65823379ae44d911ee613e",
+      "page_count": 20,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS075",
+      "doc_id": "d_3247c3198e4540ac14cb6272ef4a19e8d006013582b060cb4e356e9989b49ac4",
+      "sha256": "3247c3198e4540ac14cb6272ef4a19e8d006013582b060cb4e356e9989b49ac4",
+      "page_count": 13,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS076",
+      "doc_id": "d_e6902725c8ba809f4601a1ecc3c18914d5df530bcd1ba3353584eda0228bfffc",
+      "sha256": "e6902725c8ba809f4601a1ecc3c18914d5df530bcd1ba3353584eda0228bfffc",
+      "page_count": 14,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS077",
+      "doc_id": "d_a09df7b2977b925736d0dd7bf0087d8e918a6bbdf52cb7af1246965dd06663a7",
+      "sha256": "a09df7b2977b925736d0dd7bf0087d8e918a6bbdf52cb7af1246965dd06663a7",
+      "page_count": 15,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS078",
+      "doc_id": "d_685c0757b18763cba6fd5b311fd4389c83b21e5535b567afe10d64c257136309",
+      "sha256": "685c0757b18763cba6fd5b311fd4389c83b21e5535b567afe10d64c257136309",
+      "page_count": 7,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS079",
+      "doc_id": "d_7b153cb84078b68c637ebd6514bf290ac7d66000ace22086db5ad860a5f8ccd4",
+      "sha256": "7b153cb84078b68c637ebd6514bf290ac7d66000ace22086db5ad860a5f8ccd4",
+      "page_count": 12,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS080",
+      "doc_id": "d_01c5fd543f01f6bba1891ad8d0803211cb7f7fff130668e50a3df21057b9f1d7",
+      "sha256": "01c5fd543f01f6bba1891ad8d0803211cb7f7fff130668e50a3df21057b9f1d7",
+      "page_count": 13,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS081",
+      "doc_id": "d_f12664ded44e4e27e7b8390d46578104772d79989f856a27cc1c7fc08374d929",
+      "sha256": "f12664ded44e4e27e7b8390d46578104772d79989f856a27cc1c7fc08374d929",
+      "page_count": 9,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS082",
+      "doc_id": "d_cfeeea2b4be5ff20d6fabb187ef334a56649c49dbc08726f40ea9d0377df84e9",
+      "sha256": "cfeeea2b4be5ff20d6fabb187ef334a56649c49dbc08726f40ea9d0377df84e9",
+      "page_count": 20,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS083",
+      "doc_id": "d_4e8ad32bc53f5572f8e6c64a84762ab7164527500be5bd838ee02f78e7ca30ce",
+      "sha256": "4e8ad32bc53f5572f8e6c64a84762ab7164527500be5bd838ee02f78e7ca30ce",
+      "page_count": 45,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS084",
+      "doc_id": "d_d71f95f1b10752fafb8c524064195c7ff3747fa339bdfc7f3590265a0213c93a",
+      "sha256": "d71f95f1b10752fafb8c524064195c7ff3747fa339bdfc7f3590265a0213c93a",
+      "page_count": 18,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS085",
+      "doc_id": "d_896710f3a25d3f5307a57d4cf13992514c87cd646b2e509ede6285f8724eb21d",
+      "sha256": "896710f3a25d3f5307a57d4cf13992514c87cd646b2e509ede6285f8724eb21d",
+      "page_count": 4,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS086",
+      "doc_id": "d_3774498dc1f98412299f388da5c6d36bd1cd5ae5f04959158c055756c1ad4d39",
+      "sha256": "3774498dc1f98412299f388da5c6d36bd1cd5ae5f04959158c055756c1ad4d39",
+      "page_count": 7,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS087",
+      "doc_id": "d_f96939ec8dcf9403410cee17448f17e2bf1cc9a9bd13f446f847d5e11eb9a08f",
+      "sha256": "f96939ec8dcf9403410cee17448f17e2bf1cc9a9bd13f446f847d5e11eb9a08f",
+      "page_count": 10,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS088",
+      "doc_id": "d_27a598c5c538d7c1e9a1e4e60ae081483313db298736e84645dc561cf5e83ef7",
+      "sha256": "27a598c5c538d7c1e9a1e4e60ae081483313db298736e84645dc561cf5e83ef7",
+      "page_count": 22,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS089",
+      "doc_id": "d_43fc21d7ee0416f7985746a8ff63040674b616b18e14f7aa276e9f55f76d1f79",
+      "sha256": "43fc21d7ee0416f7985746a8ff63040674b616b18e14f7aa276e9f55f76d1f79",
+      "page_count": 8,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS090",
+      "doc_id": "d_6dfdef683deebc40fb63f223e37e3061852615185c43706e541f6b2ded05afd4",
+      "sha256": "6dfdef683deebc40fb63f223e37e3061852615185c43706e541f6b2ded05afd4",
+      "page_count": 9,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS091",
+      "doc_id": "d_549383e1c47f1e0dcafd162cc5216cb0a3c958cf4431f92a10904ee796e30563",
+      "sha256": "549383e1c47f1e0dcafd162cc5216cb0a3c958cf4431f92a10904ee796e30563",
+      "page_count": 6,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS092",
+      "doc_id": "d_d911d3b12adccbc08353a5639cd6d2eb3928e5d328d1ee6dbe7926c2645ebbcb",
+      "sha256": "d911d3b12adccbc08353a5639cd6d2eb3928e5d328d1ee6dbe7926c2645ebbcb",
+      "page_count": 7,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS093",
+      "doc_id": "d_afdd7981753a6bbb5f1d63c196535e68062bc565873e82fe24ae3c0541a7764d",
+      "sha256": "afdd7981753a6bbb5f1d63c196535e68062bc565873e82fe24ae3c0541a7764d",
+      "page_count": 6,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS094",
+      "doc_id": "d_45e3639da5f9b59184566363d5364ca502060a735eb7c9f4d8a999f92da50fe1",
+      "sha256": "45e3639da5f9b59184566363d5364ca502060a735eb7c9f4d8a999f92da50fe1",
+      "page_count": 32,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS095",
+      "doc_id": "d_56ecc7028476a5dd58cbb4969dad490e38e412db19337f74071d9a65527da7c8",
+      "sha256": "56ecc7028476a5dd58cbb4969dad490e38e412db19337f74071d9a65527da7c8",
+      "page_count": 6,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS096",
+      "doc_id": "d_442bcef21b04c007628c452e21b3122296e76fee727b1fc766e7d2b666ec3634",
+      "sha256": "442bcef21b04c007628c452e21b3122296e76fee727b1fc766e7d2b666ec3634",
+      "page_count": 18,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS097",
+      "doc_id": "d_620781aec340929b02c704651c8187c2547cab8e3f7d3e196e036a8d91e0c87b",
+      "sha256": "620781aec340929b02c704651c8187c2547cab8e3f7d3e196e036a8d91e0c87b",
+      "page_count": 8,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS098",
+      "doc_id": "d_8f58cc3b4cfe49a8c36835c9713073be754427a1d9e2d7a1bf5761796f2d34e5",
+      "sha256": "8f58cc3b4cfe49a8c36835c9713073be754427a1d9e2d7a1bf5761796f2d34e5",
+      "page_count": 62,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS099",
+      "doc_id": "d_d9eda9687c2df0c0dd6b83410000bf37723c35cda7fc6e24a4a30255254f2832",
+      "sha256": "d9eda9687c2df0c0dd6b83410000bf37723c35cda7fc6e24a4a30255254f2832",
+      "page_count": 9,
+      "status_after_parse": "indexing"
+    },
+    {
+      "item_id": "NS100",
+      "doc_id": "d_ac0ac25e158d8d06ab4f9e7ae88301876e73736a95d8dec8105613a727679ac4",
+      "sha256": "ac0ac25e158d8d06ab4f9e7ae88301876e73736a95d8dec8105613a727679ac4",
+      "page_count": 7,
+      "status_after_parse": "indexing"
+    }
+  ],
+  "manifest": {
+    "index_version": "idx_20261020T052919_78bcbe22c8a4",
+    "contract_version": "1.0",
+    "built_at": "2026-10-20T05:29:19.781118+00:00",
+    "embedding_model": "BAAI/bge-m3",
+    "embedding_revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "dimension": 1024,
+    "normalized": true,
+    "chunking_config": {
+      "count_mode": "character",
+      "tokenizer_name": null,
+      "tokenizer_revision": null,
+      "max_tokens": 400,
+      "overlap_tokens": 50,
+      "max_chars": 1200,
+      "overlap_chars": 150
+    },
+    "tokenizer": null,
+    "document_count": 175,
+    "chunk_count": 16699,
+    "corpus_hash": "9b9e70754821314abeff9be1dd3f880454b648e0874183534a2303bb17331c9d",
+    "embedding_backend": {
+      "base_url": "http://127.0.0.1:18080/v1",
+      "dimension": 1024,
+      "encoding_format": "float",
+      "input_preprocessing": "original-text-v1;fp16;cls;l2-float32",
+      "model": "BAAI/bge-m3",
+      "provider": "local-bge-fp16",
+      "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+      "revision_pinned": true
+    },
+    "lexical_tokenizer": "nfkc-casefold-cjk-bigram-v1",
+    "retrieval_config": {
+      "candidate_k": 20,
+      "rrf_k": 60,
+      "normalize_embeddings": true,
+      "bm25_k1": 1.5,
+      "bm25_b": 0.75,
+      "vector_text_policy": "document-title-prefix-v1"
+    },
+    "artifacts": {
+      "chunks.json": "9b9e70754821314abeff9be1dd3f880454b648e0874183534a2303bb17331c9d",
+      "lexical.json": "e3ba2621a086f37de7187a966c6c0112a4f84d857b5456191c793da803bcfbf9",
+      "vectors.npy": "e9a5a798e1fe194cf7607cf1db2136f304f8618c3bc01c082eeacfa03bc943ea"
+    }
+  },
+  "outcome": "staged",
+  "last_event_sha256": "5bd37ded64f039956e9969af188fc6e8a6c33518076db9b0fd3c62b2f16fe9da"
+}

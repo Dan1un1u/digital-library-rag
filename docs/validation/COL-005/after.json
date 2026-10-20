@@ -1,0 +1,4631 @@
+{
+  "status": "ready",
+  "mode": "real",
+  "manifest": {
+    "index_version": "idx_20261020T052919_78bcbe22c8a4",
+    "contract_version": "1.0",
+    "built_at": "2026-10-20T05:29:19.781118+00:00",
+    "embedding_model": "BAAI/bge-m3",
+    "embedding_revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "dimension": 1024,
+    "normalized": true,
+    "chunking_config": {
+      "count_mode": "character",
+      "tokenizer_name": null,
+      "tokenizer_revision": null,
+      "max_tokens": 400,
+      "overlap_tokens": 50,
+      "max_chars": 1200,
+      "overlap_chars": 150
+    },
+    "tokenizer": null,
+    "document_count": 175,
+    "chunk_count": 16699,
+    "corpus_hash": "9b9e70754821314abeff9be1dd3f880454b648e0874183534a2303bb17331c9d",
+    "artifacts": {
+      "chunks.json": "9b9e70754821314abeff9be1dd3f880454b648e0874183534a2303bb17331c9d",
+      "lexical.json": "e3ba2621a086f37de7187a966c6c0112a4f84d857b5456191c793da803bcfbf9",
+      "vectors.npy": "e9a5a798e1fe194cf7607cf1db2136f304f8618c3bc01c082eeacfa03bc943ea"
+    },
+    "embedding_backend": {
+      "base_url": "http://127.0.0.1:18080/v1",
+      "dimension": 1024,
+      "encoding_format": "float",
+      "input_preprocessing": "original-text-v1;fp16;cls;l2-float32",
+      "model": "BAAI/bge-m3",
+      "provider": "local-bge-fp16",
+      "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+      "revision_pinned": true
+    },
+    "lexical_tokenizer": "nfkc-casefold-cjk-bigram-v1",
+    "retrieval_config": {
+      "bm25_b": 0.75,
+      "bm25_k1": 1.5,
+      "candidate_k": 20,
+      "normalize_embeddings": true,
+      "rrf_k": 60,
+      "vector_text_policy": "document-title-prefix-v1"
+    }
+  },
+  "active_models": {
+    "embedding": "BAAI/bge-m3",
+    "llm": "gpt-6-luna",
+    "semantic_reranker": "gpt-6-luna",
+    "qa_engine": "dlrag.qa.engine.QAEngine"
+  },
+  "documents": [
+    {
+      "doc_id": "d_0085c704946dc1e35e736b83c6cf55d48fd7209b6574535c5886404e223cd090",
+      "file_sha256": "0085c704946dc1e35e736b83c6cf55d48fd7209b6574535c5886404e223cd090",
+      "status": "ready",
+      "page_count": 22,
+      "title": "Humanities Approaches to Graphical Display",
+      "authors": [
+        "Johanna Drucker"
+      ],
+      "year": 2011,
+      "topics": [
+        "哲学与人文科学",
+        "数字人文"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.63744/r4ysrh7ae534",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_01c5fd543f01f6bba1891ad8d0803211cb7f7fff130668e50a3df21057b9f1d7",
+      "file_sha256": "01c5fd543f01f6bba1891ad8d0803211cb7f7fff130668e50a3df21057b9f1d7",
+      "status": "ready",
+      "page_count": 13,
+      "title": "General Cardiovascular Risk Profile for Use in Primary Care: The Framingham Heart Study",
+      "authors": [
+        "Ralph B. D’Agostino",
+        "Ramachandran S. Vasan",
+        "Michael J. Pencina",
+        "Philip A. Wolf",
+        "Mark Cobain",
+        "Joseph M. Massaro",
+        "William B. Kannel"
+      ],
+      "year": 2008,
+      "topics": [
+        "医学公共健康",
+        "心血管风险预测",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1161/CIRCULATIONAHA.107.699579",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_02b2c4e61fa10c94232031d5a1b60be0319f3b5d7c0b8a719683855ad6d1e205",
+      "file_sha256": "02b2c4e61fa10c94232031d5a1b60be0319f3b5d7c0b8a719683855ad6d1e205",
+      "status": "ready",
+      "page_count": 25,
+      "title": "Two Dogmas of Empiricism",
+      "authors": [
+        "W. V. Quine"
+      ],
+      "year": 1951,
+      "topics": [
+        "分析哲学",
+        "哲学与人文科学"
+      ],
+      "language": "en",
+      "source_url": "https://cla.csulb.edu/departments/philosophy/wp-content/uploads/2025/05/Quine-1951-two-dogmas-of-empiricism.pdf",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_053756b54e2d3462d4690b3aed489c962f17df7c3531865e47374c4a651f526c",
+      "file_sha256": "053756b54e2d3462d4690b3aed489c962f17df7c3531865e47374c4a651f526c",
+      "status": "ready",
+      "page_count": 17,
+      "title": "Longformer: The Long-Document Transformer",
+      "authors": [
+        "Iz Beltagy",
+        "Matthew E. Peters",
+        "Arman Cohan"
+      ],
+      "year": 2020,
+      "topics": [
+        "arXiv实验",
+        "长文本机制"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2004.05150",
+      "rights_note": "arXiv公开原始论文，仅用于本地阅读及解析实验；再分发权限待核验。"
+    },
+    {
+      "doc_id": "d_07152dc9a5e458389bfe7aed56eb453280dcef8efcb4db5f9bf6ad542df6edb8",
+      "file_sha256": "07152dc9a5e458389bfe7aed56eb453280dcef8efcb4db5f9bf6ad542df6edb8",
+      "status": "ready",
+      "page_count": 8,
+      "title": "Tradition and the Individual Talent",
+      "authors": [
+        "T. S. Eliot"
+      ],
+      "year": 1982,
+      "topics": [
+        "哲学与人文科学",
+        "文化研究"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.2307/1567048",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_074c66c5ef6b158fe1aa30103f6d3c5708bc5881898bc34a7f01206999848d7c",
+      "file_sha256": "074c66c5ef6b158fe1aa30103f6d3c5708bc5881898bc34a7f01206999848d7c",
+      "status": "ready",
+      "page_count": 12,
+      "title": "Present and future Köppen-Geiger climate classification maps at 1-km resolution",
+      "authors": [
+        "Hylke E. Beck",
+        "Niklaus E. Zimmermann",
+        "Tim R. McVicar",
+        "Noemi Vergopolan",
+        "Alexis Berg",
+        "Eric F. Wood"
+      ],
+      "year": 2018,
+      "topics": [
+        "气候分区",
+        "环境气候",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1038/sdata.2018.214",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_0f461b563b25a8c21a04ae7ebc1e1fa2d73949b52913cf1e4bc19b08f1031f76",
+      "file_sha256": "0f461b563b25a8c21a04ae7ebc1e1fa2d73949b52913cf1e4bc19b08f1031f76",
+      "status": "ready",
+      "page_count": 15,
+      "title": "Experimental observation of the quantum anomalous Hall effect in a magnetic topological insulator",
+      "authors": [
+        "Chang, Cui-Zu",
+        "Zhang, Jinsong",
+        "Feng, Xiao",
+        "Shen, Jie",
+        "Zhang, Zuocheng",
+        "Guo, Minghua",
+        "Li, Kang",
+        "Ou, Yunbo",
+        "Wei, Pang",
+        "Wang, Li-Li",
+        "Ji, Zhong-Qing",
+        "Feng, Yang",
+        "Ji, Shuaihua",
+        "Chen, Xi",
+        "Jia, Jinfeng",
+        "Dai, Xi",
+        "Fang, Zhong",
+        "Zhang, Shou-Cheng",
+        "He, Ke",
+        "Wang, Yayu",
+        "Lu, Li",
+        "Ma, Xu-Cun",
+        "Xu, Qi-Kun"
+      ],
+      "year": 2013,
+      "topics": [
+        "基础物理",
+        "自然科学",
+        "量子反常霍尔效应"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/1605.08829",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_0fcadae9d35e72c6c903ce6466e105e6ea84358397384a88471080acfbd2d024",
+      "file_sha256": "0fcadae9d35e72c6c903ce6466e105e6ea84358397384a88471080acfbd2d024",
+      "status": "ready",
+      "page_count": 18,
+      "title": "GW170817: Observation of Gravitational Waves from a Binary Neutron Star Inspiral",
+      "authors": [
+        "LIGO Scientific Collaboration",
+        "Virgo Collaboration"
+      ],
+      "year": 2017,
+      "topics": [
+        "多信使天文学",
+        "天文宇宙",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/1710.05832",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_1217bc72fc5a2ffbbb95c852319ae29c8f674b288c27725c74db48ef161f2ee4",
+      "file_sha256": "1217bc72fc5a2ffbbb95c852319ae29c8f674b288c27725c74db48ef161f2ee4",
+      "status": "ready",
+      "page_count": 17,
+      "title": "What Is It Like to Be a Bat?",
+      "authors": [
+        "Thomas Nagel"
+      ],
+      "year": 1974,
+      "topics": [
+        "哲学与人文科学",
+        "心灵哲学"
+      ],
+      "language": "en",
+      "source_url": "https://philosophy.uconn.edu/wp-content/uploads/sites/365/2020/03/Nagel-What-is-it-like-to-be-a-bat.pdf",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_144e8aa67b417442d6c57d6396276a2f366b147e90686fc65d8ac0ccd2f91780",
+      "file_sha256": "144e8aa67b417442d6c57d6396276a2f366b147e90686fc65d8ac0ccd2f91780",
+      "status": "ready",
+      "page_count": 5,
+      "title": "Accelerated modern human–induced species losses: Entering the sixth mass extinction",
+      "authors": [
+        "Gerardo Ceballos",
+        "Paul R. Ehrlich",
+        "Anthony D. Barnosky",
+        "Andrés García",
+        "Robert M. Pringle",
+        "Todd M. Palmer"
+      ],
+      "year": 2015,
+      "topics": [
+        "灭绝与保护生物学",
+        "生态进化",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1126/sciadv.1400253",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_16a36994ac7047aa9dfbc196ae9c0453c4c947a72c71b70684b24e6ab15a70de",
+      "file_sha256": "16a36994ac7047aa9dfbc196ae9c0453c4c947a72c71b70684b24e6ab15a70de",
+      "status": "ready",
+      "page_count": 9,
+      "title": "Judgment under Uncertainty: Heuristics and Biases",
+      "authors": [
+        "Amos Tversky",
+        "Daniel Kahneman"
+      ],
+      "year": 1974,
+      "topics": [
+        "决策心理学",
+        "社会科学"
+      ],
+      "language": "en",
+      "source_url": "https://fbaum.unc.edu/teaching/articles/Science_1973_JudgmentUnderUncertainty.pdf",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_17190882a4d6dc069d2fb62aa27e2c9240045dfdf65e377fff383036c9c129bf",
+      "file_sha256": "17190882a4d6dc069d2fb62aa27e2c9240045dfdf65e377fff383036c9c129bf",
+      "status": "ready",
+      "page_count": 9,
+      "title": "The Spiral of Silence: A Theory of Public Opinion",
+      "authors": [
+        "Elisabeth Noelle-Neumann"
+      ],
+      "year": 1974,
+      "topics": [
+        "传播学",
+        "社会科学"
+      ],
+      "language": "en",
+      "source_url": "https://vnecas.wordpress.com/wp-content/uploads/2010/03/spiral_of_silence.pdf",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_18afb897efa30806a38e9009d0c824daf23694382eaf3c6079c140d0e810b870",
+      "file_sha256": "18afb897efa30806a38e9009d0c824daf23694382eaf3c6079c140d0e810b870",
+      "status": "ready",
+      "page_count": 21,
+      "title": "The Global Streamflow Indices and Metadata Archive (GSIM) – Part 1: The production of a daily streamflow archive and metadata",
+      "authors": [
+        "Hong Xuan Do",
+        "Lukas Gudmundsson",
+        "Michael Leonard",
+        "Seth Westra"
+      ],
+      "year": 2018,
+      "topics": [
+        "全球径流资料",
+        "地球科学",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.5194/essd-10-765-2018",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_18d802e069a081d192a5ca7d57135e4433c372fd1ed891681e4e68d0689b0e37",
+      "file_sha256": "18d802e069a081d192a5ca7d57135e4433c372fd1ed891681e4e68d0689b0e37",
+      "status": "ready",
+      "page_count": 15,
+      "title": "The 2 Sigma Problem: The Search for Methods of Group Instruction as Effective as One-to-One Tutoring",
+      "authors": [
+        "Benjamin S. Bloom"
+      ],
+      "year": 1984,
+      "topics": [
+        "教育学",
+        "社会科学"
+      ],
+      "language": "en",
+      "source_url": "https://web.mit.edu/5.95/readings/bloom-two-sigma.pdf",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_1925755aeb627123d1a63c66f02e5aa2432f7e92751a02bea7c8c3b6bbb6ec33",
+      "file_sha256": "1925755aeb627123d1a63c66f02e5aa2432f7e92751a02bea7c8c3b6bbb6ec33",
+      "status": "ready",
+      "page_count": 24,
+      "title": "BEIR: A Heterogenous Benchmark for Zero-shot Evaluation of Information Retrieval Models",
+      "authors": [
+        "Thakur, Nandan",
+        "Reimers, Nils",
+        "Rücklé, Andreas",
+        "Srivastava, Abhishek",
+        "Gurevych, Iryna"
+      ],
+      "year": 2021,
+      "topics": [
+        "arXiv实验"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2104.08663",
+      "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "doc_id": "d_1a468da1fc2a64cb7f197ff4a826b53dd7741660beae254a05f249b6c84c3254",
+      "file_sha256": "1a468da1fc2a64cb7f197ff4a826b53dd7741660beae254a05f249b6c84c3254",
+      "status": "ready",
+      "page_count": 7,
+      "title": "The Problem of Abortion and the Doctrine of the Double Effect",
+      "authors": [
+        "Philippa Foot"
+      ],
+      "year": 1967,
+      "topics": [
+        "伦理学",
+        "哲学与人文科学"
+      ],
+      "language": "en",
+      "source_url": "https://sites.pitt.edu/~mthompso/readings/foot.pdf",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_1a91e33d3c2cf64e91a8af2381bfe7fb3d1eefca6bc5996519d5852432a9c136",
+      "file_sha256": "1a91e33d3c2cf64e91a8af2381bfe7fb3d1eefca6bc5996519d5852432a9c136",
+      "status": "ready",
+      "page_count": 35,
+      "title": "The Work of Art in the Age of Mechanical Reproduction",
+      "authors": [
+        "Walter Benjamin"
+      ],
+      "year": null,
+      "topics": [
+        "哲学与人文科学",
+        "艺术理论"
+      ],
+      "language": "en",
+      "source_url": "https://www.eng.utah.edu/~cs5789/handouts/Benjamin.pdf",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_1a99079778b2174feda37473878bc82da1ed0699c77a2cbeb11de408844189c9",
+      "file_sha256": "1a99079778b2174feda37473878bc82da1ed0699c77a2cbeb11de408844189c9",
+      "status": "ready",
+      "page_count": 29,
+      "title": "企业化经营何以推动新型农村集体经济有效运行？——基于甘肃省前进牧业的案例研究",
+      "authors": [
+        "范志雄",
+        "程名望",
+        "徐辉"
+      ],
+      "year": 2026,
+      "topics": [
+        "社会科学"
+      ],
+      "language": "zh",
+      "source_url": "https://doi.org/10.19744/j.cnki.11-1235/f.2026.0128",
+      "rights_note": "待人工确认"
+    },
+    {
+      "doc_id": "d_1c1487079c535ef4b4a56aeb7c6b0107d50df09cf051f590342df5442ceec0c8",
+      "file_sha256": "1c1487079c535ef4b4a56aeb7c6b0107d50df09cf051f590342df5442ceec0c8",
+      "status": "ready",
+      "page_count": 28,
+      "title": "Area laws for the entanglement entropy – a review",
+      "authors": [
+        "Eisert, J.",
+        "Cramer, M.",
+        "Plenio, M. B."
+      ],
+      "year": 2010,
+      "topics": [
+        "基础物理",
+        "自然科学",
+        "量子多体纠缠"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/0808.3773v4",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_1d44239a33f07e8bb371f543eccf2554a06e95b2632f452996295c5a21a114e4",
+      "file_sha256": "1d44239a33f07e8bb371f543eccf2554a06e95b2632f452996295c5a21a114e4",
+      "status": "ready",
+      "page_count": 40,
+      "title": "THE THREE-DIMENSIONAL POWER SPECTRUM OF GALAXIES FROM THE SLOAN DIGITAL SKY SURVEY",
+      "authors": [
+        "Max Tegmark",
+        "Michael R. Blanton",
+        "Michael A. Strauss",
+        "Fiona Hoyle",
+        "David Schlegel",
+        "Roman Scoccimarro",
+        "Michael S. Vogeley",
+        "David H. Weinberg",
+        "Idit Zehavi",
+        "Andreas Berlind",
+        "Tamas Budavari",
+        "Andrew Connolly",
+        "Daniel J. Eisenstein",
+        "Douglas Finkbeiner",
+        "Joshua A. Frieman",
+        "James E. Gunn",
+        "Andrew J. S. Hamilton",
+        "Lam Hui",
+        "Bhuvnesh Jain",
+        "David Johnston",
+        "Stephen Kent",
+        "Huan Lin",
+        "Reiko Nakajima",
+        "Robert C. Nichol",
+        "Jeremiah P. Ostriker",
+        "Adrian Pope",
+        "Ryan Scranton",
+        "Uroš Seljak",
+        "Ravi K. Sheth",
+        "Albert Stebbins",
+        "Alexander S. Szalay",
+        "Istvan Szapudi",
+        "Licia Verde",
+        "Yongzhong Xu",
+        "James Annis",
+        "Neta A. Bahcall",
+        "J. Brinkmann",
+        "Scott Burles",
+        "Francisco J. Castander",
+        "Istvan Csabai",
+        "Jon Loveday",
+        "Mamoru Doi",
+        "Masataka Fukugita",
+        "J. Richard Gott III",
+        "Greg Hennessy",
+        "David W. Hogg",
+        "Željko Ivezić",
+        "Gillian R. Knapp",
+        "Don Q. Lamb",
+        "Brian C. Lee",
+        "Robert H. Lupton",
+        "Timothy A. McKay",
+        "Peter Kunszt",
+        "Jeffrey A. Munn",
+        "Liam O’Connell",
+        "John Peoples",
+        "Jeffrey R. Pier",
+        "Michael Richmond",
+        "Constance Rockosi",
+        "Donald P. Schneider",
+        "Christopher Stoughton",
+        "Douglas L. Tucker",
+        "Daniel E. Vanden Berk",
+        "Brian Yanny",
+        "Donald G. York",
+        "(For the SDSS Collaboration)"
+      ],
+      "year": 2003,
+      "topics": [
+        "天文宇宙",
+        "星系大尺度结构",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/astro-ph/0310725v2",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_1e3c0487ab9c8b890fdbb60144c0a7c29bdb594913d8b343d4033e2a5d48726b",
+      "file_sha256": "1e3c0487ab9c8b890fdbb60144c0a7c29bdb594913d8b343d4033e2a5d48726b",
+      "status": "ready",
+      "page_count": 63,
+      "title": "The Global Methane Budget 2000–2017",
+      "authors": [
+        "Marielle Saunois",
+        "Ann R. Stavert",
+        "Ben Poulter",
+        "Philippe Bousquet",
+        "Josep G. Canadell",
+        "Robert B. Jackson",
+        "Peter A. Raymond",
+        "Edward J. Dlugokencky",
+        "Sander Houweling",
+        "Prabir K. Patra",
+        "Philippe Ciais",
+        "Vivek K. Arora",
+        "David Bastviken",
+        "Peter Bergamaschi",
+        "Donald R. Blake",
+        "Gordon Brailsford",
+        "Lori Bruhwiler",
+        "Kimberly M. Carlson",
+        "Mark Carrol",
+        "Simona Castaldi",
+        "Naveen Chandra",
+        "Cyril Crevoisier",
+        "Patrick M. Crill",
+        "Kristofer Covey",
+        "Charles L. Curry",
+        "Giuseppe Etiope",
+        "Christian Frankenberg",
+        "Nicola Gedney",
+        "Michaela I. Hegglin",
+        "Lena Höglund-Isaksson",
+        "Gustaf Hugelius",
+        "Misa Ishizawa",
+        "Akihiko Ito",
+        "Greet Janssens-Maenhout",
+        "Katherine M. Jensen",
+        "Fortunat Joos",
+        "Thomas Kleinen",
+        "Paul B. Krummel",
+        "Ray L. Langenfelds",
+        "Goulven G. Laruelle",
+        "Licheng Liu",
+        "Toshinobu Machida",
+        "Shamil Maksyutov",
+        "Kyle C. McDonald",
+        "Joe McNorton",
+        "Paul A. Miller",
+        "Joe R. Melton",
+        "Isamu Morino",
+        "Jurek Müller",
+        "Fabiola Murguia-Flores",
+        "Vaishali Naik",
+        "Yosuke Niwa",
+        "Sergio Noce",
+        "Simon O'Doherty",
+        "Robert J. Parker",
+        "Changhui Peng",
+        "Shushi Peng",
+        "Glen P. Peters",
+        "Catherine Prigent",
+        "Ronald Prinn",
+        "Michel Ramonet",
+        "Pierre Regnier",
+        "William J. Riley",
+        "Judith A. Rosentreter",
+        "Arjo Segers",
+        "Isobel J. Simpson",
+        "Hao Shi",
+        "Steven J. Smith",
+        "L. Paul Steele",
+        "Brett F. Thornton",
+        "Hanqin Tian",
+        "Yasunori Tohjima",
+        "Francesco N. Tubiello",
+        "Aki Tsuruta",
+        "Nicolas Viovy",
+        "Apostolos Voulgarakis",
+        "Thomas S. Weber",
+        "Michiel van Weele",
+        "Guido R. van der Werf",
+        "Ray F. Weiss",
+        "Doug Worthy",
+        "Debra Wunch",
+        "Yi Yin",
+        "Yukio Yoshida",
+        "Wenxin Zhang",
+        "Zhen Zhang",
+        "Yuanhong Zhao",
+        "Bo Zheng",
+        "Qing Zhu",
+        "Qiuan Zhu",
+        "Qianlai Zhuang"
+      ],
+      "year": 2020,
+      "topics": [
+        "温室气体排放",
+        "环境气候",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.5194/essd-12-1561-2020",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_1f4b1dd27a2b52e587c2605f221de01a1159da8c898cd313edd3cf61f9be7e1f",
+      "file_sha256": "1f4b1dd27a2b52e587c2605f221de01a1159da8c898cd313edd3cf61f9be7e1f",
+      "status": "ready",
+      "page_count": 35,
+      "title": "ERA5-Land: a state-of-the-art global reanalysis dataset for land applications",
+      "authors": [
+        "Joaquín Muñoz-Sabater",
+        "Emanuel Dutra",
+        "Anna Agustí-Panareda",
+        "Clément Albergel",
+        "Gabriele Arduini",
+        "Gianpaolo Balsamo",
+        "Souhail Boussetta",
+        "Margarita Choulga",
+        "Shaun Harrigan",
+        "Hans Hersbach",
+        "Brecht Martens",
+        "Diego G. Miralles",
+        "María Piles",
+        "Nemesio J. Rodríguez-Fernández",
+        "Ervin Zsoter",
+        "Carlo Buontempo",
+        "Jean-Noël Thépaut"
+      ],
+      "year": 2021,
+      "topics": [
+        "环境气候",
+        "自然科学",
+        "陆面再分析"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.5194/essd-13-4349-2021",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_22e8a28eeb1a71fce63223d045cd2fe0ebcbe2b99094c4dcddc90b30bbbd60cc",
+      "file_sha256": "22e8a28eeb1a71fce63223d045cd2fe0ebcbe2b99094c4dcddc90b30bbbd60cc",
+      "status": "ready",
+      "page_count": 12,
+      "title": "THE REPLICATION OF DNA IN ESCHERICHIA COLI",
+      "authors": [
+        "Matthew Meselson",
+        "Franklin W. Stahl"
+      ],
+      "year": 1958,
+      "topics": [
+        "DNA复制机制",
+        "分子遗传",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1073/pnas.44.7.671",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_23e3249e9a1e75418d82efecab0ea8c4d033b89c93742f63208d47ce01f21233",
+      "file_sha256": "23e3249e9a1e75418d82efecab0ea8c4d033b89c93742f63208d47ce01f21233",
+      "status": "ready",
+      "page_count": 19,
+      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "authors": [
+        "Lewis, Patrick",
+        "Perez, Ethan",
+        "Piktus, Aleksandra",
+        "Petroni, Fabio",
+        "Karpukhin, Vladimir",
+        "Goyal, Naman",
+        "Küttler, Heinrich",
+        "Lewis, Mike",
+        "Yih, Wen-tau",
+        "Rocktäschel, Tim",
+        "Riedel, Sebastian",
+        "Kiela, Douwe"
+      ],
+      "year": 2020,
+      "topics": [
+        "arXiv实验"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2005.11401",
+      "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+    },
+    {
+      "doc_id": "d_25a759e477649c0c9d7a10109cba854e453fa7027181fd7cbf2612a70f3ae79f",
+      "file_sha256": "25a759e477649c0c9d7a10109cba854e453fa7027181fd7cbf2612a70f3ae79f",
+      "status": "ready",
+      "page_count": 21,
+      "title": "The Nature of the Firm",
+      "authors": [
+        "R. H. Coase"
+      ],
+      "year": 1937,
+      "topics": [
+        "社会科学",
+        "经济学"
+      ],
+      "language": "en",
+      "source_url": "https://msuweb.montclair.edu/~lebelp/coasenatfirmec1937.pdf",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_27a598c5c538d7c1e9a1e4e60ae081483313db298736e84645dc561cf5e83ef7",
+      "file_sha256": "27a598c5c538d7c1e9a1e4e60ae081483313db298736e84645dc561cf5e83ef7",
+      "status": "ready",
+      "page_count": 22,
+      "title": "An information integration theory of consciousness",
+      "authors": [
+        "Giulio Tononi"
+      ],
+      "year": 2004,
+      "topics": [
+        "意识理论",
+        "神经科学",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1186/1471-2202-5-42",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_28795793f06084d0f159e720011cd25e938bb375d185bb478155279a473d86b3",
+      "file_sha256": "28795793f06084d0f159e720011cd25e938bb375d185bb478155279a473d86b3",
+      "status": "ready",
+      "page_count": 15,
+      "title": "Conjectures on World Literature",
+      "authors": [
+        "Franco Moretti"
+      ],
+      "year": 2000,
+      "topics": [
+        "哲学与人文科学",
+        "比较文学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.64590/hxj",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_295aa5e04a48b08051b9cbc55ebc73f52ae9ef73a03dfac5356fad2c7cd187c4",
+      "file_sha256": "295aa5e04a48b08051b9cbc55ebc73f52ae9ef73a03dfac5356fad2c7cd187c4",
+      "status": "ready",
+      "page_count": 93,
+      "title": "Global land-use impacts on local terrestrial biodiversity",
+      "authors": [
+        "Tim Newbold",
+        "Lawrence N. Hudson",
+        "Samantha L. L. Hill",
+        "Sara Contu",
+        "Igor Lysenko",
+        "Rebecca A. Senior",
+        "Luca Börger",
+        "Dominic J. Bennett",
+        "Argyrios Choimes",
+        "Ben Collen",
+        "Julie Day",
+        "Adriana De Palma",
+        "Sandra Díaz",
+        "Susy Echeverria-Londoño",
+        "Melanie J. Edgar",
+        "Anat Feldman",
+        "Morgan Garon",
+        "Michelle L. K. Harrison",
+        "Tamera Alhusseini",
+        "Daniel J. Ingram",
+        "Yuval Itescu",
+        "Jens Kattge",
+        "Victoria Kemp",
+        "Lucinda Kirkpatrick",
+        "Michael Kleyer",
+        "David Laginha Pinto Correia",
+        "Callum D. Martin",
+        "Shai Meiri",
+        "Maria Novosolov",
+        "Yuan Pan",
+        "Helen R. P. Phillips",
+        "Drew W. Purves",
+        "Alexandra Robinson",
+        "Jake Simpson",
+        "Sean L. Tuck",
+        "Evan Weiher",
+        "Hannah J. White",
+        "Robert M. Ewers",
+        "Georgina M. Mace",
+        "Jörn P. W. Scharlemann",
+        "Andy Purvis"
+      ],
+      "year": 2015,
+      "topics": [
+        "土地利用与生物多样性",
+        "生态进化",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://discovery.ucl.ac.uk/id/eprint/1464937/",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。馆内为外部OCR处理副本，原始PDF及派生记录均保留。"
+    },
+    {
+      "doc_id": "d_29ba7bac3df28009170eef8f7b6c006ed991fb011942214c0af22858ae7e5f84",
+      "file_sha256": "29ba7bac3df28009170eef8f7b6c006ed991fb011942214c0af22858ae7e5f84",
+      "status": "ready",
+      "page_count": 45,
+      "title": "The Problem of Social Cost",
+      "authors": [
+        "R. H. Coase"
+      ],
+      "year": 1960,
+      "topics": [
+        "社会科学",
+        "经济学"
+      ],
+      "language": "en",
+      "source_url": "https://sites.socsci.uci.edu/~jkbrueck/course%20readings/Econ%20272B%20readings/coase.pdf",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_2df595721dc5502f02d3c657426610fb612731c8022b698ae5b1968a96b92996",
+      "file_sha256": "2df595721dc5502f02d3c657426610fb612731c8022b698ae5b1968a96b92996",
+      "status": "ready",
+      "page_count": 20,
+      "title": "The Digital Future Is Now: A Call to Action for the Humanities",
+      "authors": [
+        "Christine L. Borgman"
+      ],
+      "year": 2009,
+      "topics": [
+        "哲学与人文科学",
+        "数字人文"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.63744/au56n57rd75j",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_2e2bc0d66c93f830ca3c8a33c08a70095a2148da04f7ca4da64bb316ac6a5909",
+      "file_sha256": "2e2bc0d66c93f830ca3c8a33c08a70095a2148da04f7ca4da64bb316ac6a5909",
+      "status": "ready",
+      "page_count": 12,
+      "title": "Alternate Possibilities and Moral Responsibility",
+      "authors": [
+        "Harry G. Frankfurt"
+      ],
+      "year": 1969,
+      "topics": [
+        "伦理学",
+        "哲学与人文科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.2307/2023833",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_2e487d9b96e3c2e5e286d843e98a066adc0442faa3a6e8ddbd1771221bf9ae14",
+      "file_sha256": "2e487d9b96e3c2e5e286d843e98a066adc0442faa3a6e8ddbd1771221bf9ae14",
+      "status": "ready",
+      "page_count": 10,
+      "title": "ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT",
+      "authors": [
+        "Khattab, Omar",
+        "Zaharia, Matei"
+      ],
+      "year": 2020,
+      "topics": [
+        "arXiv实验"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2004.12832",
+      "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+    },
+    {
+      "doc_id": "d_2ee4775f297fdc5010756ed2b65eea976f390e120771769aee87ef4552592000",
+      "file_sha256": "2ee4775f297fdc5010756ed2b65eea976f390e120771769aee87ef4552592000",
+      "status": "ready",
+      "page_count": 27,
+      "title": "The Global Ocean Data Analysis Project version 2 (GLODAPv2) – an internally consistent data product for the world ocean",
+      "authors": [
+        "Are Olsen",
+        "Robert M. Key",
+        "Steven van Heuven",
+        "Siv K. Lauvset",
+        "Anton Velo",
+        "Xiaohua Lin",
+        "Carsten Schirnick",
+        "Alex Kozyr",
+        "Toste Tanhua",
+        "Mario Hoppema",
+        "Sara Jutterström",
+        "Reiner Steinfeldt",
+        "Emil Jeansson",
+        "Masao Ishii",
+        "Fiz F. Pérez",
+        "Toru Suzuki"
+      ],
+      "year": 2016,
+      "topics": [
+        "地球科学",
+        "海洋生物地球化学",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.5194/essd-8-297-2016",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_2ff41a0c1e7fd88d5e37a1923e7ee7d012e9fad89a6941943d67e85620aaed71",
+      "file_sha256": "2ff41a0c1e7fd88d5e37a1923e7ee7d012e9fad89a6941943d67e85620aaed71",
+      "status": "ready",
+      "page_count": 30,
+      "title": "ANI-1: An extensible neural network potential with DFT accuracy at force field computational cost",
+      "authors": [
+        "Smith, Justin S.",
+        "Isayev, Olexandr",
+        "Roitberg, Adrian E."
+      ],
+      "year": 2017,
+      "topics": [
+        "分子势能面",
+        "化学材料",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/1610.08935",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_314964ac38477f8f231c10e0fbb046bed7fc12ded7cad5ad5e7c2bd510da5c40",
+      "file_sha256": "314964ac38477f8f231c10e0fbb046bed7fc12ded7cad5ad5e7c2bd510da5c40",
+      "status": "ready",
+      "page_count": 80,
+      "title": "Many-Body Physics with Ultracold Gases",
+      "authors": [
+        "Bloch, Immanuel",
+        "Dalibard, Jean",
+        "Zwerger, Wilhelm"
+      ],
+      "year": 2008,
+      "topics": [
+        "基础物理",
+        "自然科学",
+        "超冷原子"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1103/RevModPhys.80.885",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。馆内为外部OCR处理副本，原始PDF及派生记录均保留。"
+    },
+    {
+      "doc_id": "d_3247c3198e4540ac14cb6272ef4a19e8d006013582b060cb4e356e9989b49ac4",
+      "file_sha256": "3247c3198e4540ac14cb6272ef4a19e8d006013582b060cb4e356e9989b49ac4",
+      "status": "ready",
+      "page_count": 13,
+      "title": "Safety and Efficacy of the BNT162b2 mRNA Covid-19 Vaccine",
+      "authors": [
+        "Fernando P. Polack",
+        "Stephen J. Thomas",
+        "Nicholas Kitchin",
+        "Judith Absalon",
+        "Alejandra Gurtman",
+        "Stephen Lockhart",
+        "John L. Perez",
+        "Gonzalo Pérez Marc",
+        "Edson D. Moreira",
+        "Cristiano Zerbini",
+        "Ruth Bailey",
+        "Kena A. Swanson",
+        "Satrajit Roychoudhury",
+        "Kenneth Koury",
+        "Ping Li",
+        "Warren V. Kalina",
+        "David Cooper",
+        "Robert W. Frenck",
+        "Laura L. Hammitt",
+        "Özlem Türeci",
+        "Haylene Nell",
+        "Axel Schaefer",
+        "Serhat Ünal",
+        "Dina B. Tresnan",
+        "Susan Mather",
+        "Philip R. Dormitzer",
+        "Uğur Şahin",
+        "Kathrin U. Jansen",
+        "William C. Gruber"
+      ],
+      "year": 2020,
+      "topics": [
+        "医学公共健康",
+        "疫苗随机试验",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1056/NEJMoa2034577",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_3774498dc1f98412299f388da5c6d36bd1cd5ae5f04959158c055756c1ad4d39",
+      "file_sha256": "3774498dc1f98412299f388da5c6d36bd1cd5ae5f04959158c055756c1ad4d39",
+      "status": "ready",
+      "page_count": 7,
+      "title": "A default mode of brain function",
+      "authors": [
+        "Marcus E. Raichle",
+        "Ann Mary MacLeod",
+        "Abraham Z. Snyder",
+        "William J. Powers",
+        "Debra A. Gusnard",
+        "Gordon L. Shulman"
+      ],
+      "year": 2001,
+      "topics": [
+        "神经科学",
+        "脑功能网络",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1073/pnas.98.2.676",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_39e560d813722971573477fce5095f142740d175ab1a00ca44704181607c0394",
+      "file_sha256": "39e560d813722971573477fce5095f142740d175ab1a00ca44704181607c0394",
+      "status": "ready",
+      "page_count": 21,
+      "title": "The CAMELS data set: catchment attributes and meteorology for large-sample studies",
+      "authors": [
+        "Nans Addor",
+        "Andrew J. Newman",
+        "Naoki Mizukami",
+        "Martyn P. Clark"
+      ],
+      "year": 2017,
+      "topics": [
+        "地球科学",
+        "流域水文",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.5194/hess-21-5293-2017",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_3c3ee049ab5d7336b14e06bcb2770d980521c94bac9e5c7d3407ac8c14665df4",
+      "file_sha256": "3c3ee049ab5d7336b14e06bcb2770d980521c94bac9e5c7d3407ac8c14665df4",
+      "status": "ready",
+      "page_count": 9,
+      "title": "Behavioral Study of Obedience",
+      "authors": [
+        "Stanley Milgram"
+      ],
+      "year": 1963,
+      "topics": [
+        "社会心理学",
+        "社会科学"
+      ],
+      "language": "en",
+      "source_url": "https://irbmember.web.unc.edu/wp-content/uploads/sites/7878/2017/01/1963_Milgram_BehavioralStudy.pdf",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_3ce49518cec441989d8ad594e8dc8d8094507e0f5b0096d77926a2daf5d9c0b6",
+      "file_sha256": "3ce49518cec441989d8ad594e8dc8d8094507e0f5b0096d77926a2daf5d9c0b6",
+      "status": "ready",
+      "page_count": 15,
+      "title": "I-LLM: Efficient Integer-Only Inference for Fully-Quantized Low-Bit Large Language Models",
+      "authors": [
+        "Xing Hu",
+        "Yuan Cheng",
+        "Dawei Yang",
+        "Zhihang Yuan",
+        "Jiangyong Yu",
+        "Chen Xu",
+        "Sifan Zhou"
+      ],
+      "year": 2024,
+      "topics": [
+        "Integer quantization",
+        "LLM inference",
+        "Post-training quantization"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2405.17849",
+      "rights_note": "用户指定本地 PDF，用于本机课程项目和研究测试；保留原权利声明，开放再分发许可未作推断，待人工核对。"
+    },
+    {
+      "doc_id": "d_3e67fc1a9977715acf722d85f0b7d124b03715e975f6310a4d6c12094190912f",
+      "file_sha256": "3e67fc1a9977715acf722d85f0b7d124b03715e975f6310a4d6c12094190912f",
+      "status": "ready",
+      "page_count": 13,
+      "title": "Dense Passage Retrieval for Open-Domain Question Answering",
+      "authors": [
+        "Karpukhin, Vladimir",
+        "Oğuz, Barlas",
+        "Min, Sewon",
+        "Lewis, Patrick",
+        "Wu, Ledell",
+        "Edunov, Sergey",
+        "Chen, Danqi",
+        "Yih, Wen-tau"
+      ],
+      "year": 2020,
+      "topics": [
+        "arXiv实验"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2004.04906",
+      "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+    },
+    {
+      "doc_id": "d_43fc21d7ee0416f7985746a8ff63040674b616b18e14f7aa276e9f55f76d1f79",
+      "file_sha256": "43fc21d7ee0416f7985746a8ff63040674b616b18e14f7aa276e9f55f76d1f79",
+      "status": "ready",
+      "page_count": 8,
+      "title": "Yield Trends Are Insufficient to Double Global Crop Production by 2050",
+      "authors": [
+        "Deepak K. Ray",
+        "Nathaniel D. Mueller",
+        "Paul C. West",
+        "Jonathan A. Foley"
+      ],
+      "year": 2013,
+      "topics": [
+        "农业植物食品",
+        "粮食增产趋势",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1371/journal.pone.0066428",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_442bcef21b04c007628c452e21b3122296e76fee727b1fc766e7d2b666ec3634",
+      "file_sha256": "442bcef21b04c007628c452e21b3122296e76fee727b1fc766e7d2b666ec3634",
+      "status": "ready",
+      "page_count": 18,
+      "title": "ORB-SLAM: a Versatile and Accurate Monocular SLAM System",
+      "authors": [
+        "Mur-Artal, Raul",
+        "Montiel, J. M. M.",
+        "Tardos, Juan D."
+      ],
+      "year": 2015,
+      "topics": [
+        "工程能源",
+        "机器人定位与建图",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/1502.00956v2",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_45e3639da5f9b59184566363d5364ca502060a735eb7c9f4d8a999f92da50fe1",
+      "file_sha256": "45e3639da5f9b59184566363d5364ca502060a735eb7c9f4d8a999f92da50fe1",
+      "status": "ready",
+      "page_count": 32,
+      "title": "Reducing food’s environmental impacts through producers and consumers",
+      "authors": [
+        "J. Poore",
+        "T. Nemecek"
+      ],
+      "year": 2018,
+      "topics": [
+        "农业植物食品",
+        "自然科学",
+        "食品系统环境足迹"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1126/science.aaq0216",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_4a2ef0aaf355711963a61313fa6df400d084ddc23f291c42a902ee954db82306",
+      "file_sha256": "4a2ef0aaf355711963a61313fa6df400d084ddc23f291c42a902ee954db82306",
+      "status": "ready",
+      "page_count": 13,
+      "title": "A Genealogy of Distant Reading",
+      "authors": [
+        "Ted Underwood"
+      ],
+      "year": 2017,
+      "topics": [
+        "哲学与人文科学",
+        "数字人文"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.63744/ktwb2atwsbep",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_4b24a13a22b5ba1b29f04f7b6e90d5b01c17bb55dd9f347d5e49bd6935f8645a",
+      "file_sha256": "4b24a13a22b5ba1b29f04f7b6e90d5b01c17bb55dd9f347d5e49bd6935f8645a",
+      "status": "ready",
+      "page_count": 8,
+      "title": "Cognitive Consequences of Forced Compliance",
+      "authors": [
+        "Leon Festinger",
+        "James M. Carlsmith"
+      ],
+      "year": 1959,
+      "topics": [
+        "社会心理学",
+        "社会科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1037/h0041593",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_4de9170a1e582fdc6145312000f4b3fd1ae373a3745e98e312819a084e939319",
+      "file_sha256": "4de9170a1e582fdc6145312000f4b3fd1ae373a3745e98e312819a084e939319",
+      "status": "ready",
+      "page_count": 40,
+      "title": "SoilGrids250m: Global gridded soil information based on machine learning",
+      "authors": [
+        "Tomislav Hengl",
+        "Jorge Mendes de Jesus",
+        "Gerard B. M. Heuvelink",
+        "Maria Ruiperez Gonzalez",
+        "Milan Kilibarda",
+        "Aleksandar Blagotić",
+        "Wei Shangguan",
+        "Marvin N. Wright",
+        "Xiaoyuan Geng",
+        "Bernhard Bauer-Marschallinger",
+        "Mario Antonio Guevara",
+        "Rodrigo Vargas",
+        "Robert A. MacMillan",
+        "Niels H. Batjes",
+        "Johan G. B. Leenaars",
+        "Eloi Ribeiro",
+        "Ichsani Wheeler",
+        "Stephan Mantel",
+        "Bas Kempen"
+      ],
+      "year": 2017,
+      "topics": [
+        "地球科学",
+        "自然科学",
+        "陆地遥感与高程"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1371/journal.pone.0169748",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_4e8ad32bc53f5572f8e6c64a84762ab7164527500be5bd838ee02f78e7ca30ce",
+      "file_sha256": "4e8ad32bc53f5572f8e6c64a84762ab7164527500be5bd838ee02f78e7ca30ce",
+      "status": "ready",
+      "page_count": 45,
+      "title": "A quantitative description of membrane current and its application to conduction and excitation in nerve",
+      "authors": [
+        "A. L. Hodgkin",
+        "A. F. Huxley"
+      ],
+      "year": 1952,
+      "topics": [
+        "神经电生理",
+        "神经科学",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1113/jphysiol.1952.sp004764",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_549383e1c47f1e0dcafd162cc5216cb0a3c958cf4431f92a10904ee796e30563",
+      "file_sha256": "549383e1c47f1e0dcafd162cc5216cb0a3c958cf4431f92a10904ee796e30563",
+      "status": "ready",
+      "page_count": 6,
+      "title": "Solutions for a cultivated planet",
+      "authors": [
+        "Jonathan A. Foley",
+        "Navin Ramankutty",
+        "Kate A. Brauman",
+        "Emily S. Cassidy",
+        "James S. Gerber",
+        "Matt Johnston",
+        "Nathaniel D. Mueller",
+        "Christine O’Connell",
+        "Deepak K. Ray",
+        "Paul C. West",
+        "Christian Balzer",
+        "Elena M. Bennett",
+        "Stephen R. Carpenter",
+        "Jason Hill",
+        "Chad Monfreda",
+        "Stephen Polasky",
+        "Johan Rockström",
+        "John Sheehan",
+        "Stefan Siebert",
+        "David Tilman",
+        "David P. M. Zaks"
+      ],
+      "year": 2011,
+      "topics": [
+        "农业土地可持续性",
+        "农业植物食品",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1038/nature10452",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_56ecc7028476a5dd58cbb4969dad490e38e412db19337f74071d9a65527da7c8",
+      "file_sha256": "56ecc7028476a5dd58cbb4969dad490e38e412db19337f74071d9a65527da7c8",
+      "status": "ready",
+      "page_count": 6,
+      "title": "ROS: an open-source Robot Operating System",
+      "authors": [
+        "Morgan Quigley",
+        "Brian Gerkey",
+        "Ken Conley",
+        "Josh Faust",
+        "Tully Foote",
+        "Jeremy Leibs",
+        "Eric Berger",
+        "Rob Wheeler",
+        "Andrew Ng"
+      ],
+      "year": 2009,
+      "topics": [
+        "工程能源",
+        "机器人系统",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://ai.stanford.edu/~ang/papers/icraoss09-ROS.pdf",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_591d2ff358977c52e83af8305a15fd76f1487a86a28db6c6e3851ca095a0809b",
+      "file_sha256": "591d2ff358977c52e83af8305a15fd76f1487a86a28db6c6e3851ca095a0809b",
+      "status": "ready",
+      "page_count": 1,
+      "title": "MOLECULAR STRUCTURE OF NUCLEIC ACIDS: A Structure for Deoxyribose Nucleic Acid",
+      "authors": [
+        "J. D. WATSON",
+        "F. H. C. CRICK"
+      ],
+      "year": 1953,
+      "topics": [
+        "DNA结构",
+        "分子遗传",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1038/171737a0",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_5b74e21941f3d995d4da3c9ad6e23b6d9df4207a8189cea6e132b2d340284f90",
+      "file_sha256": "5b74e21941f3d995d4da3c9ad6e23b6d9df4207a8189cea6e132b2d340284f90",
+      "status": "ready",
+      "page_count": 6,
+      "title": "The biomass distribution on Earth",
+      "authors": [
+        "Yinon M. Bar-On",
+        "Rob Phillips",
+        "Ron Milo"
+      ],
+      "year": 2018,
+      "topics": [
+        "生态进化",
+        "生物量与碳储量",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1073/pnas.1711842115",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_5c537d6464ed412a4464066ffcd0153bc76221573e90b0ae024d0de4d6573cfc",
+      "file_sha256": "5c537d6464ed412a4464066ffcd0153bc76221573e90b0ae024d0de4d6573cfc",
+      "status": "ready",
+      "page_count": 11,
+      "title": "SchNet: A continuous-filter convolutional neural network for modeling quantum interactions",
+      "authors": [
+        "Schütt, Kristof T.",
+        "Kindermans, Pieter-Jan",
+        "Sauceda, Huziel E.",
+        "Chmiela, Stefan",
+        "Tkatchenko, Alexandre",
+        "Müller, Klaus-Robert"
+      ],
+      "year": 2017,
+      "topics": [
+        "化学材料",
+        "自然科学",
+        "量子相互作用建模"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/1706.08566v5",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_5c6c6dba0319142109745ae20c60e85149aad6c78ab9bac9a04a2c0a737de432",
+      "file_sha256": "5c6c6dba0319142109745ae20c60e85149aad6c78ab9bac9a04a2c0a737de432",
+      "status": "ready",
+      "page_count": 177,
+      "title": "Nine-Year Wilkinson Microwave Anisotropy Probe (WMAP) Observations: Final Maps and Results",
+      "authors": [
+        "Bennett, C. L.",
+        "Larson, D.",
+        "Weiland, J. L.",
+        "Jarosik, N.",
+        "Hinshaw, G.",
+        "Odegard, N.",
+        "Smith, K. M.",
+        "Hill, R. S.",
+        "Gold, B.",
+        "Halpern, M.",
+        "Komatsu, E.",
+        "Nolta, M. R.",
+        "Page, L.",
+        "Spergel, D. N.",
+        "Wollack, E.",
+        "Dunkley, J.",
+        "Kogut, A.",
+        "Limon, M.",
+        "Meyer, S. S.",
+        "Tucker, G. S.",
+        "Wright, E. L."
+      ],
+      "year": 2013,
+      "topics": [
+        "天文宇宙",
+        "宇宙微波背景",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/1212.5225v3",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_5ca70a6d9fdc37a22d0e0aa97a6318e39684257d3e07cd44c5c72dafa610c712",
+      "file_sha256": "5ca70a6d9fdc37a22d0e0aa97a6318e39684257d3e07cd44c5c72dafa610c712",
+      "status": "ready",
+      "page_count": 17,
+      "title": "Actions, Reasons, and Causes",
+      "authors": [
+        "Donald Davidson"
+      ],
+      "year": 1963,
+      "topics": [
+        "哲学与人文科学",
+        "行动哲学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.2307/2023177",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_5e089d7cbf3d39f694cba052bd290dcec9aa46995b026b9cc10d623e0410df0b",
+      "file_sha256": "5e089d7cbf3d39f694cba052bd290dcec9aa46995b026b9cc10d623e0410df0b",
+      "status": "ready",
+      "page_count": 132,
+      "title": "Community Detection and Stochastic Block Models",
+      "authors": [
+        "Abbe, Emmanuel"
+      ],
+      "year": 2023,
+      "topics": [
+        "数学统计",
+        "自然科学",
+        "随机图与群体结构"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/1703.10146v3",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。馆内为外部OCR处理副本，原始PDF及派生记录均保留。"
+    },
+    {
+      "doc_id": "d_5ec71073cf6b5e6c1b655308803036d22116cb7021df68dbae3db04cd6eaede2",
+      "file_sha256": "5ec71073cf6b5e6c1b655308803036d22116cb7021df68dbae3db04cd6eaede2",
+      "status": "ready",
+      "page_count": 39,
+      "title": "Robust Uncertainty Principles: Exact Signal Reconstruction from Highly Incomplete Frequency Information",
+      "authors": [
+        "Candes, Emmanuel",
+        "Romberg, Justin",
+        "Tao, Terence"
+      ],
+      "year": 2004,
+      "topics": [
+        "压缩感知",
+        "数学统计",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/math/0409186v1",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_604fcbd71b570f13ec0ed832c7c083728cf9b42170704f7fddd966530db96bee",
+      "file_sha256": "604fcbd71b570f13ec0ed832c7c083728cf9b42170704f7fddd966530db96bee",
+      "status": "ready",
+      "page_count": 17,
+      "title": "ENEC: A Lossless AI Model Compression Method Enabling Fast Inference on Ascend NPUs",
+      "authors": [
+        "Jinwu Yang",
+        "Jiaan Wu",
+        "Zedong Liu",
+        "Xinyang Ma",
+        "Hairui Zhao",
+        "Yida Gu",
+        "Yuanhong Huang",
+        "Xingchen Liu",
+        "Wenjing Huang",
+        "Zheng Wei",
+        "Jing Xing",
+        "Yili Ma",
+        "Qingyi Zhang",
+        "Baoyi An",
+        "Zhongzhe Hu",
+        "Shaoteng Liu",
+        "Xia Zhu",
+        "Jiaxun Lu",
+        "Guangming Tan",
+        "Dingwen Tao"
+      ],
+      "year": 2026,
+      "topics": [
+        "Ascend NPU",
+        "LLM inference",
+        "Lossless compression"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2604.03298",
+      "rights_note": "用户指定本地 PDF，用于本机课程项目和研究测试；保留原权利声明，开放再分发许可未作推断，待人工核对。"
+    },
+    {
+      "doc_id": "d_61c834540be91dd009398499ac91097bc15697c3b766e3c14f57155438cd4aa7",
+      "file_sha256": "61c834540be91dd009398499ac91097bc15697c3b766e3c14f57155438cd4aa7",
+      "status": "ready",
+      "page_count": 4,
+      "title": "人工智能体检系统在健康管理中心的应用",
+      "authors": [
+        "张理纯"
+      ],
+      "year": 2020,
+      "topics": [
+        "自然科学"
+      ],
+      "language": "mixed",
+      "source_url": null,
+      "rights_note": "待人工确认"
+    },
+    {
+      "doc_id": "d_620781aec340929b02c704651c8187c2547cab8e3f7d3e196e036a8d91e0c87b",
+      "file_sha256": "620781aec340929b02c704651c8187c2547cab8e3f7d3e196e036a8d91e0c87b",
+      "status": "ready",
+      "page_count": 8,
+      "title": "Two-Equation Eddy-Viscosity Turbulence Models for Engineering Applications",
+      "authors": [
+        "F. R. Menter"
+      ],
+      "year": 1994,
+      "topics": [
+        "工程能源",
+        "自然科学",
+        "计算流体力学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.2514/3.12149",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_6290421ec45e459a16a5ecad86d1162eecfed9f2c2646c7b2728f0503de8f706",
+      "file_sha256": "6290421ec45e459a16a5ecad86d1162eecfed9f2c2646c7b2728f0503de8f706",
+      "status": "ready",
+      "page_count": 22,
+      "title": "Ricci flow with surgery on three-manifolds",
+      "authors": [
+        "Perelman, Grisha"
+      ],
+      "year": 2003,
+      "topics": [
+        "几何分析",
+        "数学统计",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/math/0303109v1",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_62e45bc4d526acf9320f30a18d4757c3b3dfb5edabf6e9bf39fabbc3e2c10f20",
+      "file_sha256": "62e45bc4d526acf9320f30a18d4757c3b3dfb5edabf6e9bf39fabbc3e2c10f20",
+      "status": "ready",
+      "page_count": 25,
+      "title": "A Theory of Social Comparison Processes",
+      "authors": [
+        "Leon Festinger"
+      ],
+      "year": 1954,
+      "topics": [
+        "社会心理学",
+        "社会科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1177/001872675400700202",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1",
+      "file_sha256": "653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1",
+      "status": "ready",
+      "page_count": 18,
+      "title": "Lost in the Middle: How Language Models Use Long Contexts",
+      "authors": [
+        "Liu, Nelson F.",
+        "Lin, Kevin",
+        "Hewitt, John",
+        "Paranjape, Ashwin",
+        "Bevilacqua, Michele",
+        "Petroni, Fabio",
+        "Liang, Percy"
+      ],
+      "year": 2023,
+      "topics": [
+        "arXiv实验"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2307.03172",
+      "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+    },
+    {
+      "doc_id": "d_6547515f0880f0f103d7b83c0052fd98fb0987973f705df6b3c11cc98a32950a",
+      "file_sha256": "6547515f0880f0f103d7b83c0052fd98fb0987973f705df6b3c11cc98a32950a",
+      "status": "ready",
+      "page_count": 6,
+      "title": "What Is an Author?",
+      "authors": [
+        "Michel Foucault"
+      ],
+      "year": null,
+      "topics": [
+        "哲学与人文科学",
+        "文学理论"
+      ],
+      "language": "en",
+      "source_url": "https://case.edu/affil/sce/authorship/Foucault.pdf",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_671ee7169981b369cc767e480b321a42a4675c451f65823379ae44d911ee613e",
+      "file_sha256": "671ee7169981b369cc767e480b321a42a4675c451f65823379ae44d911ee613e",
+      "status": "ready",
+      "page_count": 20,
+      "title": "A global reference for human genetic variation",
+      "authors": [
+        "The 1000 Genomes Project Consortium"
+      ],
+      "year": 2015,
+      "topics": [
+        "人群遗传变异",
+        "分子遗传",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1038/nature15393",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_685c0757b18763cba6fd5b311fd4389c83b21e5535b567afe10d64c257136309",
+      "file_sha256": "685c0757b18763cba6fd5b311fd4389c83b21e5535b567afe10d64c257136309",
+      "status": "ready",
+      "page_count": 7,
+      "title": "CONSORT 2010 Statement: Updated Guidelines for Reporting Parallel Group Randomised Trials",
+      "authors": [
+        "Kenneth F. Schulz",
+        "Douglas G. Altman",
+        "David Moher",
+        "for the CONSORT Group"
+      ],
+      "year": 2010,
+      "topics": [
+        "医学公共健康",
+        "自然科学",
+        "随机试验报告规范"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1371/journal.pmed.1000251",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_691caf636ed1203cba485a2c12117d8f6ca2ec92b3666b48e15529e51ed98d8a",
+      "file_sha256": "691caf636ed1203cba485a2c12117d8f6ca2ec92b3666b48e15529e51ed98d8a",
+      "status": "ready",
+      "page_count": 30,
+      "title": "The No-U-Turn Sampler: Adaptively Setting Path Lengths in Hamiltonian Monte Carlo",
+      "authors": [
+        "Hoffman, Matthew D.",
+        "Gelman, Andrew"
+      ],
+      "year": 2011,
+      "topics": [
+        "数学统计",
+        "自然科学",
+        "蒙特卡洛统计"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/1111.4246v1",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_698ad9eb84960a1c64c492acaddffa40186234604051f92bbf7900b08740f968",
+      "file_sha256": "698ad9eb84960a1c64c492acaddffa40186234604051f92bbf7900b08740f968",
+      "status": "ready",
+      "page_count": 72,
+      "title": "Observational Evidence from Supernovae for an Accelerating Universe and a Cosmological Constant",
+      "authors": [
+        "Riess, Adam G.",
+        "Filippenko, Alexei V.",
+        "Challis, Peter",
+        "Clocchiattia, Alejandro",
+        "Diercks, Alan",
+        "Garnavich, Peter M.",
+        "Gilliland, Ron L.",
+        "Hogan, Craig J.",
+        "Jha, Saurabh",
+        "Kirshner, Robert P.",
+        "Leibundgut, B.",
+        "Phillips, M. M.",
+        "Reiss, David",
+        "Schmidt, Brian P.",
+        "Schommer, Robert A.",
+        "Smith, R. Chris",
+        "Spyromilio, J.",
+        "Stubbs, Christopher",
+        "Suntzeff, Nicholas B.",
+        "Tonry, John"
+      ],
+      "year": 1998,
+      "topics": [
+        "天文宇宙",
+        "自然科学",
+        "超新星与宇宙加速"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/astro-ph/9805201v1",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。馆内为外部OCR处理副本，原始PDF及派生记录均保留。"
+    },
+    {
+      "doc_id": "d_69c573c123ffd1538d432ab31040072dec01a375a4a5b7c2960a7667cb970dda",
+      "file_sha256": "69c573c123ffd1538d432ab31040072dec01a375a4a5b7c2960a7667cb970dda",
+      "status": "ready",
+      "page_count": 16,
+      "title": "Squeezing Operator Performance Potential for the Ascend Architecture",
+      "authors": [
+        "Yuhang Zhou",
+        "Zhibin Wang",
+        "Guyue Liu",
+        "Shipeng Li",
+        "Xi Lin",
+        "Zibo Wang",
+        "Yongzhong Wang",
+        "Fuchun Wei",
+        "Jingyi Zhang",
+        "Zhiheng Hu",
+        "Yanlin Liu",
+        "Chunsheng Li",
+        "Ziyang Zhang",
+        "Yaoyuan Wang",
+        "Bin Zhou",
+        "Wanchun Dou",
+        "Guihai Chen",
+        "Chen Tian"
+      ],
+      "year": 2025,
+      "topics": [
+        "AI accelerators",
+        "Ascend NPU",
+        "Performance modeling"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1145/3676641.3716243",
+      "rights_note": "用户指定本地 PDF，用于本机课程项目和研究测试；保留原权利声明，开放再分发许可未作推断，待人工核对。"
+    },
+    {
+      "doc_id": "d_6a7a9b63805126ab22fcfe50f23b84e6b7d5d2fcda1ec4d08eb0127887b86a9d",
+      "file_sha256": "6a7a9b63805126ab22fcfe50f23b84e6b7d5d2fcda1ec4d08eb0127887b86a9d",
+      "status": "ready",
+      "page_count": 15,
+      "title": "Operationalizing: or, the Function of Measurement in Modern Literary Theory",
+      "authors": [
+        "Franco Moretti"
+      ],
+      "year": 2013,
+      "topics": [
+        "哲学与人文科学",
+        "数字人文"
+      ],
+      "language": "en",
+      "source_url": "https://litlab.stanford.edu/assets/pdf/LiteraryLabPamphlet6.pdf",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_6b9cc7a4836af78d4f3355c4dd8f255537632651d1bd6f2dfbb5517ec2f0c3d0",
+      "file_sha256": "6b9cc7a4836af78d4f3355c4dd8f255537632651d1bd6f2dfbb5517ec2f0c3d0",
+      "status": "ready",
+      "page_count": 17,
+      "title": "Avogadro: an advanced semantic chemical editor, visualization, and analysis platform",
+      "authors": [
+        "Marcus D Hanwell",
+        "Donald E Curtis",
+        "David C Lonie",
+        "Tim Vandermeersch",
+        "Eva Zurek",
+        "Geoffrey R Hutchison"
+      ],
+      "year": 2012,
+      "topics": [
+        "分子结构可视化",
+        "化学材料",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1186/1758-2946-4-17",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_6d7bea5547054bd37d90780b9dbb201165018f9faab6a3a21608cb621cfa4bd3",
+      "file_sha256": "6d7bea5547054bd37d90780b9dbb201165018f9faab6a3a21608cb621cfa4bd3",
+      "status": "ready",
+      "page_count": 32,
+      "title": "A draft map of the human proteome",
+      "authors": [
+        "Min-Sik Kim",
+        "Sneha M. Pinto",
+        "Derese Getnet",
+        "Raja Sekhar Nirujogi",
+        "Srikanth S. Manda",
+        "Raghothama Chaerkady",
+        "Anil K. Madugundu",
+        "Dhanashree S. Kelkar",
+        "Ruth Isserlin",
+        "Shobhit Jain",
+        "Joji K. Thomas",
+        "Babylakshmi Muthusamy",
+        "Pamela Leal-Rojas",
+        "Praveen Kumar",
+        "Nandini A. Sahasrabuddhe",
+        "Lavanya Balakrishnan",
+        "Jayshree Advani",
+        "Bijesh George",
+        "Santosh Renuse",
+        "Lakshmi Dhevi N. Selvan",
+        "Arun H. Patil",
+        "Vishalakshi Nanjappa",
+        "Aneesha Radhakrishnan",
+        "Samarjeet Prasad",
+        "Tejaswini Subbannayya",
+        "Rajesh Raju",
+        "Manish Kumar",
+        "Sreelakshmi K. Sreenivasamurthy",
+        "Arivusudar Marimuthu",
+        "Gajanan J. Sathe",
+        "Sandip Chavan",
+        "Keshava K. Datta",
+        "Yashwanth Subbannayya",
+        "Apeksha Sahu",
+        "Soujanya D. Yelamanchi",
+        "Savita Jayaram",
+        "Pavithra Rajagopalan",
+        "Jyoti Sharma",
+        "Krishna R. Murthy",
+        "Nazia Syed",
+        "Renu Goel",
+        "Aafaque A. Khan",
+        "Sartaj Ahmad",
+        "Gourav Dey",
+        "Keshav Mudgal",
+        "Aditi Chatterjee",
+        "Tai-Chung Huang",
+        "Jun Zhong",
+        "Xinyan Wu",
+        "Patrick G. Shaw",
+        "Donald Freed",
+        "Muhammad S. Zahari",
+        "Kanchan K. Mukherjee",
+        "Subramanian Shankar",
+        "Anita Mahadevan",
+        "Henry Lam",
+        "Christopher J. Mitchell",
+        "Susarla Krishna Shankar",
+        "Parthasarathy Satishchandra",
+        "John T. Schroeder",
+        "Ravi Sirdeshmukh",
+        "Anirban Maitra",
+        "Steven D. Leach",
+        "Charles G. Drake",
+        "Marc K. Halushka",
+        "T. S. Keshava Prasad",
+        "Ralph H. Hruban",
+        "Candace L. Kerr",
+        "Gary D. Bader",
+        "Christine A. Iacobuzio-Donahue",
+        "Harsha Gowda",
+        "Akhilesh Pandey"
+      ],
+      "year": 2014,
+      "topics": [
+        "分子遗传",
+        "自然科学",
+        "蛋白质组学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1038/nature13302",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_6dfdef683deebc40fb63f223e37e3061852615185c43706e541f6b2ded05afd4",
+      "file_sha256": "6dfdef683deebc40fb63f223e37e3061852615185c43706e541f6b2ded05afd4",
+      "status": "ready",
+      "page_count": 9,
+      "title": "Climate variation explains a third of global crop yield variability",
+      "authors": [
+        "Deepak K Ray",
+        "James S Gerber",
+        "Graham K MacDonald",
+        "Paul C West"
+      ],
+      "year": 2015,
+      "topics": [
+        "农业植物食品",
+        "农业气候影响",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1038/ncomms6989",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_6eae057a9faf4f671c3101e0745ed704460c6d3dec77243dfd3a9f2d2ab68970",
+      "file_sha256": "6eae057a9faf4f671c3101e0745ed704460c6d3dec77243dfd3a9f2d2ab68970",
+      "status": "ready",
+      "page_count": 12,
+      "title": "Highly accurate protein structure prediction with AlphaFold",
+      "authors": [
+        "John Jumper",
+        "Richard Evans",
+        "Alexander Pritzel",
+        "Tim Green",
+        "Michael Figurnov",
+        "Olaf Ronneberger",
+        "Kathryn Tunyasuvunakool",
+        "Russ Bates",
+        "Augustin Žídek",
+        "Anna Potapenko",
+        "Alex Bridgland",
+        "Clemens Meyer",
+        "Simon A. A. Kohl",
+        "Andrew J. Ballard",
+        "Andrew Cowie",
+        "Bernardino Romera-Paredes",
+        "Stanislav Nikolov",
+        "Rishub Jain",
+        "Jonas Adler",
+        "Trevor Back",
+        "Stig Petersen",
+        "David Reiman",
+        "Ellen Clancy",
+        "Michal Zielinski",
+        "Martin Steinegger",
+        "Michalina Pacholska",
+        "Tamas Berghammer",
+        "Sebastian Bodenstein",
+        "David Silver",
+        "Oriol Vinyals",
+        "Andrew W. Senior",
+        "Koray Kavukcuoglu",
+        "Pushmeet Kohli",
+        "Demis Hassabis"
+      ],
+      "year": 2021,
+      "topics": [
+        "分子遗传",
+        "自然科学",
+        "蛋白质结构"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1038/s41586-021-03819-2",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_710cf454523fef56c470478df4bd263548c966f4b5f60c655b3f3d770d648dcb",
+      "file_sha256": "710cf454523fef56c470478df4bd263548c966f4b5f60c655b3f3d770d648dcb",
+      "status": "ready",
+      "page_count": 14,
+      "title": "Open Babel: An open chemical toolbox",
+      "authors": [
+        "Noel M O'Boyle",
+        "Michael Banck",
+        "Craig A James",
+        "Chris Morley",
+        "Tim Vandermeersch",
+        "Geoffrey R Hutchison"
+      ],
+      "year": 2011,
+      "topics": [
+        "化学信息学",
+        "化学材料",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1186/1758-2946-3-33",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_7407131fd633561d8eab8701e43ca81061960b6642ae180eb86a3f367b2b8408",
+      "file_sha256": "7407131fd633561d8eab8701e43ca81061960b6642ae180eb86a3f367b2b8408",
+      "status": "ready",
+      "page_count": 21,
+      "title": "Unsupervised Dense Information Retrieval with Contrastive Learning",
+      "authors": [
+        "Izacard, Gautier",
+        "Caron, Mathilde",
+        "Hosseini, Lucas",
+        "Riedel, Sebastian",
+        "Bojanowski, Piotr",
+        "Joulin, Armand",
+        "Grave, Edouard"
+      ],
+      "year": 2021,
+      "topics": [
+        "arXiv实验"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2112.09118",
+      "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "doc_id": "d_770b53e35e8043fcaa4dd170bce420d4902dee280facaa5363bb48817a179f58",
+      "file_sha256": "770b53e35e8043fcaa4dd170bce420d4902dee280facaa5363bb48817a179f58",
+      "status": "ready",
+      "page_count": 14,
+      "title": "The Market for Lemons: Quality Uncertainty and the Market Mechanism",
+      "authors": [
+        "George A. Akerlof"
+      ],
+      "year": 1970,
+      "topics": [
+        "社会科学",
+        "经济学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.2307/1879431",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_7b153cb84078b68c637ebd6514bf290ac7d66000ace22086db5ad860a5f8ccd4",
+      "file_sha256": "7b153cb84078b68c637ebd6514bf290ac7d66000ace22086db5ad860a5f8ccd4",
+      "status": "ready",
+      "page_count": 12,
+      "title": "Burden of Depressive Disorders by Country, Sex, Age, and Year: Findings from the Global Burden of Disease Study 2010",
+      "authors": [
+        "Alize J. Ferrari",
+        "Fiona J. Charlson",
+        "Rosana E. Norman",
+        "Scott B. Patten",
+        "Greg Freedman",
+        "Christopher J.L. Murray",
+        "Theo Vos",
+        "Harvey A. Whiteford"
+      ],
+      "year": 2013,
+      "topics": [
+        "全球疾病负担",
+        "医学公共健康",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1371/journal.pmed.1001547",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_7b8ee4236167238ddd928b04f4c2cb0ca3793d0a1dbadbaaee56047af0bb212a",
+      "file_sha256": "7b8ee4236167238ddd928b04f4c2cb0ca3793d0a1dbadbaaee56047af0bb212a",
+      "status": "ready",
+      "page_count": 20,
+      "title": "Climatologies at high resolution for the earth’s land surface areas",
+      "authors": [
+        "Dirk Nikolaus Karger",
+        "Olaf Conrad",
+        "Jürgen Böhner",
+        "Tobias Kawohl",
+        "Holger Kreft",
+        "Rodrigo Wilber Soria-Auza",
+        "Niklaus E. Zimmermann",
+        "H. Peter Linder",
+        "Michael Kessler"
+      ],
+      "year": 2017,
+      "topics": [
+        "环境气候",
+        "自然科学",
+        "高分辨率气候"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1038/sdata.2017.122",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_7dc707e45cb48cf2bf4e9af57539403ffd07511d4ed15a0dcf2a3e0c6d9d4395",
+      "file_sha256": "7dc707e45cb48cf2bf4e9af57539403ffd07511d4ed15a0dcf2a3e0c6d9d4395",
+      "status": "ready",
+      "page_count": 32,
+      "title": "Justice as Fairness",
+      "authors": [
+        "John Rawls"
+      ],
+      "year": 1958,
+      "topics": [
+        "哲学与人文科学",
+        "政治哲学"
+      ],
+      "language": "en",
+      "source_url": "https://philosophyandlaw.org/Syllabi/Philosophers/Rawls/JusticeAsFairness.pdf",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_815a153636fdb222c4c47283fe1da8707e6da3858e0dfaa5f2b3215501938028",
+      "file_sha256": "815a153636fdb222c4c47283fe1da8707e6da3858e0dfaa5f2b3215501938028",
+      "status": "ready",
+      "page_count": 18,
+      "title": "Experimental Realization of Teleporting an Unknown Pure Quantum State via Dual Classical and Einstein-Podolski-Rosen Channels",
+      "authors": [
+        "Boschi, D.",
+        "Branca, S.",
+        "De Martini, F.",
+        "Hardy, L.",
+        "Popescu, S."
+      ],
+      "year": 1997,
+      "topics": [
+        "基础物理",
+        "自然科学",
+        "量子通信"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/quant-ph/9710013v1",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_82dc947b1beef2b9334a16dcfadf9a46ef0908f28cb5666fb5516b25493e5179",
+      "file_sha256": "82dc947b1beef2b9334a16dcfadf9a46ef0908f28cb5666fb5516b25493e5179",
+      "status": "ready",
+      "page_count": 60,
+      "title": "A Conceptual Introduction to Hamiltonian Monte Carlo",
+      "authors": [
+        "Betancourt, Michael"
+      ],
+      "year": 2018,
+      "topics": [
+        "数学统计",
+        "概率计算",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/1701.02434v2",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。馆内为外部OCR处理副本，原始PDF及派生记录均保留。"
+    },
+    {
+      "doc_id": "d_83b462acc625a49ff41c1d5bad2e40777911b7af8e71aeccabd8f4872bc47e69",
+      "file_sha256": "83b462acc625a49ff41c1d5bad2e40777911b7af8e71aeccabd8f4872bc47e69",
+      "status": "ready",
+      "page_count": 18,
+      "title": "Bowling Alone: America's Declining Social Capital",
+      "authors": [
+        "Robert D. Putnam"
+      ],
+      "year": 1995,
+      "topics": [
+        "政治社会学",
+        "社会科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1353/jod.1995.0002",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_843e87c69970c2259ced11ebbd96760fbe6d5d8df08c03f3eac7fe4be2ccbc13",
+      "file_sha256": "843e87c69970c2259ced11ebbd96760fbe6d5d8df08c03f3eac7fe4be2ccbc13",
+      "status": "ready",
+      "page_count": 19,
+      "title": "The Chemistry Development Kit (CDK) v2.0: atom typing, depiction, molecular formulas, and substructure searching",
+      "authors": [
+        "Egon L. Willighagen",
+        "John W. Mayfield",
+        "Jonathan Alvarsson",
+        "Arvid Berg",
+        "Lars Carlsson",
+        "Nina Jeliazkova",
+        "Stefan Kuhn",
+        "Tomáš Pluskal",
+        "Miquel Rojas-Chertó",
+        "Ola Spjuth",
+        "Gilleain Torrance",
+        "Chris T. Evelo",
+        "Rajarshi Guha",
+        "Christoph Steinbeck"
+      ],
+      "year": 2017,
+      "topics": [
+        "分子表示与化学分析",
+        "化学材料",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1186/s13321-017-0220-4",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_85891749cd948bdeadb145cbe49f2677834b387c917e11ca80a9adb17bc104e5",
+      "file_sha256": "85891749cd948bdeadb145cbe49f2677834b387c917e11ca80a9adb17bc104e5",
+      "status": "ready",
+      "page_count": 27,
+      "title": "Microhistory: Two or Three Things That I Know about It",
+      "authors": [
+        "Carlo Ginzburg"
+      ],
+      "year": 1993,
+      "topics": [
+        "史学方法",
+        "哲学与人文科学"
+      ],
+      "language": "en",
+      "source_url": "https://eclass.duth.gr/modules/document/file.php/KOM03267/Ginzburg%20Microhistory.pdf",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_888c929659a8841dea7ea6c8a884ad2e5cf0ecc1501b996cad17c5474f038266",
+      "file_sha256": "888c929659a8841dea7ea6c8a884ad2e5cf0ecc1501b996cad17c5474f038266",
+      "status": "ready",
+      "page_count": 21,
+      "title": "More than 75 percent decline over 27 years in total flying insect biomass in protected areas",
+      "authors": [
+        "Caspar A. Hallmann",
+        "Martin Sorg",
+        "Eelke Jongejans",
+        "Henk Siepel",
+        "Nick Hofland",
+        "Heinz Schwan",
+        "Werner Stenmans",
+        "Andreas Müller",
+        "Hubert Sumser",
+        "Thomas Hörren",
+        "Dave Goulson",
+        "Hans de Kroon"
+      ],
+      "year": 2017,
+      "topics": [
+        "昆虫种群变化",
+        "生态进化",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1371/journal.pone.0185809",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_896710f3a25d3f5307a57d4cf13992514c87cd646b2e509ede6285f8724eb21d",
+      "file_sha256": "896710f3a25d3f5307a57d4cf13992514c87cd646b2e509ede6285f8724eb21d",
+      "status": "ready",
+      "page_count": 4,
+      "title": "Simple Model of Spiking Neurons",
+      "authors": [
+        "E.M. Izhikevich"
+      ],
+      "year": 2003,
+      "topics": [
+        "神经科学",
+        "自然科学",
+        "计算神经元"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1109/TNN.2003.820440",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_8c866881257d9d744becb6a788229e9b96015d099025b14f16ad83bcb780139f",
+      "file_sha256": "8c866881257d9d744becb6a788229e9b96015d099025b14f16ad83bcb780139f",
+      "status": "ready",
+      "page_count": 20,
+      "title": "GOCO06s – a satellite-only global gravity field model",
+      "authors": [
+        "Andreas Kvas",
+        "Jan Martin Brockmann",
+        "Sandro Krauss",
+        "Till Schubert",
+        "Thomas Gruber",
+        "Ulrich Meyer",
+        "Torsten Mayer-Gürr",
+        "Wolf-Dieter Schuh",
+        "Adrian Jäggi",
+        "Roland Pail"
+      ],
+      "year": 2021,
+      "topics": [
+        "卫星重力与大地测量",
+        "地球科学",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.5194/essd-13-99-2021",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_8cb6a284493ed67e949b0af9d03e6b97c65a4e70f178dcaf3cd79b22f6697109",
+      "file_sha256": "8cb6a284493ed67e949b0af9d03e6b97c65a4e70f178dcaf3cd79b22f6697109",
+      "status": "ready",
+      "page_count": 17,
+      "title": "The GEM Global Active Faults Database (GAF-DB)",
+      "authors": [
+        "Richard Styron",
+        "Marco Pagani"
+      ],
+      "year": 2020,
+      "topics": [
+        "地球科学",
+        "地震层析模型比较",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1177/8755293020944182",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_8e172730faf07c9f4ff3fdcc7043f76ed67df6f76066d47df30d693025b6ce77",
+      "file_sha256": "8e172730faf07c9f4ff3fdcc7043f76ed67df6f76066d47df30d693025b6ce77",
+      "status": "ready",
+      "page_count": 73,
+      "title": "Planck 2018 results. VI. Cosmological parameters",
+      "authors": [
+        "Planck Collaboration"
+      ],
+      "year": 2021,
+      "topics": [
+        "天文宇宙",
+        "宇宙学参数",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/1807.06209v4",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_8f58cc3b4cfe49a8c36835c9713073be754427a1d9e2d7a1bf5761796f2d34e5",
+      "file_sha256": "8f58cc3b4cfe49a8c36835c9713073be754427a1d9e2d7a1bf5761796f2d34e5",
+      "status": "ready",
+      "page_count": 62,
+      "title": "Isogeometric analysis: CAD, finite elements, NURBS, exact geometry and mesh refinement",
+      "authors": [
+        "T.J.R. Hughes",
+        "J.A. Cottrell",
+        "Y. Bazilevs"
+      ],
+      "year": 2005,
+      "topics": [
+        "工程数值模拟",
+        "工程能源",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1016/j.cma.2004.10.008",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。馆内为外部OCR处理副本，原始PDF及派生记录均保留。"
+    },
+    {
+      "doc_id": "d_92366d22fc0521350d6cbe0ad72bcee754f90e88181d7b4a8e2adb1e7e594fec",
+      "file_sha256": "92366d22fc0521350d6cbe0ad72bcee754f90e88181d7b4a8e2adb1e7e594fec",
+      "status": "ready",
+      "page_count": 11,
+      "title": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks",
+      "authors": [
+        "Reimers, Nils",
+        "Gurevych, Iryna"
+      ],
+      "year": 2019,
+      "topics": [
+        "arXiv实验"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/1908.10084",
+      "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "doc_id": "d_939b3d7d96af9aa1d1ac750b22847a8b4383ad4369f81e783c7a665cdb3c7c02",
+      "file_sha256": "939b3d7d96af9aa1d1ac750b22847a8b4383ad4369f81e783c7a665cdb3c7c02",
+      "status": "ready",
+      "page_count": 19,
+      "title": "Random graphs with arbitrary degree distributions and their applications",
+      "authors": [
+        "Newman, M. E. J.",
+        "Strogatz, S. H.",
+        "Watts, D. J."
+      ],
+      "year": 2001,
+      "topics": [
+        "复杂网络数学",
+        "数学统计",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/cond-mat/0007235v2",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_945e278613c45ea1ab617b28c3095783d0e68958dc0546dfcfa9b42b9674fbe1",
+      "file_sha256": "945e278613c45ea1ab617b28c3095783d0e68958dc0546dfcfa9b42b9674fbe1",
+      "status": "ready",
+      "page_count": 39,
+      "title": "The entropy formula for the Ricci flow and its geometric applications",
+      "authors": [
+        "Perelman, Grisha"
+      ],
+      "year": 2002,
+      "topics": [
+        "几何与拓扑",
+        "数学统计",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/math/0211159v1",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_9530bcc90ac80dfa2d10fa86d8001584d72b1ac8fc69664d50c8715b6b83af09",
+      "file_sha256": "9530bcc90ac80dfa2d10fa86d8001584d72b1ac8fc69664d50c8715b6b83af09",
+      "status": "ready",
+      "page_count": 28,
+      "title": "The Atmospheric Chemistry and Climate Model Intercomparison Project (ACCMIP): overview and description of models, simulations and climate diagnostics",
+      "authors": [
+        "J.-F. Lamarque",
+        "D. T. Shindell",
+        "B. Josse",
+        "P. J. Young",
+        "I. Cionni",
+        "V. Eyring",
+        "D. Bergmann",
+        "P. Cameron-Smith",
+        "W. J. Collins",
+        "R. Doherty",
+        "S. Dalsoren",
+        "G. Faluvegi",
+        "G. Folberth",
+        "S. J. Ghan",
+        "L. W. Horowitz",
+        "Y. H. Lee",
+        "I. A. MacKenzie",
+        "T. Nagashima",
+        "V. Naik",
+        "D. Plummer",
+        "M. Righi",
+        "S. T. Rumbold",
+        "M. Schulz",
+        "R. B. Skeie",
+        "D. S. Stevenson",
+        "S. Strode",
+        "K. Sudo",
+        "S. Szopa",
+        "A. Voulgarakis",
+        "G. Zeng"
+      ],
+      "year": 2013,
+      "topics": [
+        "大气化学",
+        "环境气候",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.5194/gmd-6-179-2013",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_959d1cd83e6e32b2433b478269635e0982267998da370a2653bb0d87f444ad6d",
+      "file_sha256": "959d1cd83e6e32b2433b478269635e0982267998da370a2653bb0d87f444ad6d",
+      "status": "ready",
+      "page_count": 12,
+      "title": "EQ-ViT: Algorithm-Hardware Co-Design for End-to-End Acceleration of Real-Time Vision Transformer Inference on Versal ACAP Architecture",
+      "authors": [
+        "Peiyan Dong",
+        "Jinming Zhuang",
+        "Zhuoping Yang",
+        "Shixin Ji",
+        "Yanyu Li",
+        "Dongkuan Xu",
+        "Heng Huang",
+        "Jingtong Hu",
+        "Alex K. Jones",
+        "Yiyu Shi",
+        "Yanzhi Wang",
+        "Peipei Zhou"
+      ],
+      "year": 2024,
+      "topics": [
+        "FPGA",
+        "Integer quantization",
+        "Vision Transformers"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1109/TCAD.2024.3443692",
+      "rights_note": "用户指定本地 PDF，用于本机课程项目和研究测试；保留原权利声明，开放再分发许可未作推断，待人工核对。"
+    },
+    {
+      "doc_id": "d_95fc1cb4a84cf1c563b8085c0c8adca9f44c0162ae343368c688c1f5b64e5209",
+      "file_sha256": "95fc1cb4a84cf1c563b8085c0c8adca9f44c0162ae343368c688c1f5b64e5209",
+      "status": "ready",
+      "page_count": 8,
+      "title": "The Matthew Effect in Science",
+      "authors": [
+        "Robert K. Merton"
+      ],
+      "year": 1968,
+      "topics": [
+        "社会科学",
+        "科学社会学"
+      ],
+      "language": "en",
+      "source_url": "https://garfield.library.upenn.edu/merton/matthew1.pdf",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_98f36f74ec226569b5dd9923f26dd1cd3ab4ec34233693d23c7afe8dd884b62e",
+      "file_sha256": "98f36f74ec226569b5dd9923f26dd1cd3ab4ec34233693d23c7afe8dd884b62e",
+      "status": "ready",
+      "page_count": 7,
+      "title": "The Tragedy of the Commons",
+      "authors": [
+        "Garrett Hardin"
+      ],
+      "year": 1968,
+      "topics": [
+        "环境治理",
+        "社会科学"
+      ],
+      "language": "en",
+      "source_url": "https://faculty.lsu.edu/kharms/files/hardin_1968.pdf",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_9b3975b5f7aeb38cb758a9fec97a3f9f3d861c56eef2277e4c3d4b112da421a4",
+      "file_sha256": "9b3975b5f7aeb38cb758a9fec97a3f9f3d861c56eef2277e4c3d4b112da421a4",
+      "status": "ready",
+      "page_count": 28,
+      "title": "Computing Machinery and Intelligence",
+      "authors": [
+        "A. M. Turing"
+      ],
+      "year": 1950,
+      "topics": [
+        "人工智能哲学",
+        "哲学与人文科学"
+      ],
+      "language": "en",
+      "source_url": "https://ebiquity.umbc.edu/get/a/publication/1389.pdf",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_9eb820f5c942abbfa68d6fc6be43eb88720d62d0779854952c38949060b736a6",
+      "file_sha256": "9eb820f5c942abbfa68d6fc6be43eb88720d62d0779854952c38949060b736a6",
+      "status": "ready",
+      "page_count": 3,
+      "title": "Is Justified True Belief Knowledge?",
+      "authors": [
+        "Edmund L. Gettier"
+      ],
+      "year": 1963,
+      "topics": [
+        "哲学与人文科学",
+        "认识论"
+      ],
+      "language": "en",
+      "source_url": "https://courses.physics.illinois.edu/phys419/sp2021/Gettier.pdf",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_a017fcc201f83f1b90cd1e96ae3775b1b7b6c71200c0b4c91f6b50fed2496dee",
+      "file_sha256": "a017fcc201f83f1b90cd1e96ae3775b1b7b6c71200c0b4c91f6b50fed2496dee",
+      "status": "ready",
+      "page_count": 36,
+      "title": "RNA velocity of single cells",
+      "authors": [
+        "Gioele La Manno",
+        "Ruslan Soldatov",
+        "Amit Zeisel",
+        "Emelie Braun",
+        "Hannah Hochgerner",
+        "Viktor Petukhov",
+        "Katja Lidschreiber",
+        "Maria E. Kastriti",
+        "Peter Lönnerberg",
+        "Alessandro Furlan",
+        "Jean Fan",
+        "Lars E. Borm",
+        "Zehua Liu",
+        "David van Bruggen",
+        "Jimin Guo",
+        "Xiaoling He",
+        "Roger Barker",
+        "Erik Sundström",
+        "Gonçalo Castelo-Branco",
+        "Patrick Cramer",
+        "Igor Adameyko",
+        "Sten Linnarsson",
+        "Peter V. Kharchenko"
+      ],
+      "year": 2018,
+      "topics": [
+        "分子遗传",
+        "单细胞动态",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1038/s41586-018-0414-6",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_a067b12208421a545448d08ec93064af19f7e5702dfa2ed41791bf1093c13ab5",
+      "file_sha256": "a067b12208421a545448d08ec93064af19f7e5702dfa2ed41791bf1093c13ab5",
+      "status": "ready",
+      "page_count": 29,
+      "title": "Prospect Theory: An Analysis of Decision under Risk",
+      "authors": [
+        "Daniel Kahneman",
+        "Amos Tversky"
+      ],
+      "year": 1979,
+      "topics": [
+        "社会科学",
+        "经济学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.2307/1914185",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_a09df7b2977b925736d0dd7bf0087d8e918a6bbdf52cb7af1246965dd06663a7",
+      "file_sha256": "a09df7b2977b925736d0dd7bf0087d8e918a6bbdf52cb7af1246965dd06663a7",
+      "status": "ready",
+      "page_count": 15,
+      "title": "The PRISMA 2020 statement: An updated guideline for reporting systematic reviews",
+      "authors": [
+        "Matthew J. Page",
+        "Joanne E. McKenzie",
+        "Patrick M. Bossuyt",
+        "Isabelle Boutron",
+        "Tammy C. Hoffmann",
+        "Cynthia D. Mulrow",
+        "Larissa Shamseer",
+        "Jennifer M. Tetzlaff",
+        "Elie A. Akl",
+        "Sue E. Brennan",
+        "Roger Chou",
+        "Julie Glanville",
+        "Jeremy M. Grimshaw",
+        "Asbjørn Hróbjartsson",
+        "Manoj M. Lalu",
+        "Tianjing Li",
+        "Elizabeth W. Loder",
+        "Evan Mayo-Wilson",
+        "Steve McDonald",
+        "Luke A. McGuinness",
+        "Lesley A. Stewart",
+        "James Thomas",
+        "Andrea C. Tricco",
+        "Vivian A. Welch",
+        "Penny Whiting",
+        "David Moher"
+      ],
+      "year": 2021,
+      "topics": [
+        "医学公共健康",
+        "系统综述报告规范",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1371/journal.pmed.1003583",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_a0dcfce4aab13d67bcdbe93fb9a81302c519609461807aa257fb45abff1b99ca",
+      "file_sha256": "a0dcfce4aab13d67bcdbe93fb9a81302c519609461807aa257fb45abff1b99ca",
+      "status": "ready",
+      "page_count": 15,
+      "title": "The Iron Cage Revisited: Institutional Isomorphism and Collective Rationality in Organizational Fields",
+      "authors": [
+        "Paul J. DiMaggio",
+        "Walter W. Powell"
+      ],
+      "year": 1983,
+      "topics": [
+        "社会科学",
+        "组织社会学"
+      ],
+      "language": "en",
+      "source_url": "https://courses.umass.edu/marta/schmgmt802-marta/DiMaggio%26PowellASRtheironcagerevisited1983.pdf",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_a1dfa622dabb6a58261c9eb6367ffd4a4d51dffbf9f74e9741c1d18ad3aba967",
+      "file_sha256": "a1dfa622dabb6a58261c9eb6367ffd4a4d51dffbf9f74e9741c1d18ad3aba967",
+      "status": "ready",
+      "page_count": 15,
+      "title": "Is Your NPU Ready for LLMs? Dissecting the Hidden Efficiency Bottlenecks in Mobile LLM Inference",
+      "authors": [
+        "Guanyu Cai",
+        "Ruiming Tian",
+        "Lang Yang",
+        "Zhouhong Ren",
+        "Jinliang Yuan",
+        "Lingkun Li",
+        "Jiliang Wang"
+      ],
+      "year": 2026,
+      "topics": [
+        "Mobile LLM",
+        "NPU",
+        "Performance measurement"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2607.05475",
+      "rights_note": "用户指定本地 PDF，用于本机课程项目和研究测试；保留原权利声明，开放再分发许可未作推断，待人工核对。"
+    },
+    {
+      "doc_id": "d_a35ec14b257ebf55843910a1571ddcea0f30ae45397edbd6eff5221afbe2f31a",
+      "file_sha256": "a35ec14b257ebf55843910a1571ddcea0f30ae45397edbd6eff5221afbe2f31a",
+      "status": "ready",
+      "page_count": 23,
+      "title": "The Value of Narrativity in the Representation of Reality",
+      "authors": [
+        "Hayden White"
+      ],
+      "year": 1980,
+      "topics": [
+        "史学理论",
+        "哲学与人文科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1086/448086",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_a468b52ebd895e46f851b80f4aa10c8ef5dc7123e8564a69f809d43b868831cf",
+      "file_sha256": "a468b52ebd895e46f851b80f4aa10c8ef5dc7123e8564a69f809d43b868831cf",
+      "status": "ready",
+      "page_count": 15,
+      "title": "Message Passing Algorithms for Compressed Sensing",
+      "authors": [
+        "Donoho, David L.",
+        "Maleki, Arian",
+        "Montanari, Andrea"
+      ],
+      "year": 2009,
+      "topics": [
+        "数学统计",
+        "统计推断与信号恢复",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/0907.3574v1",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_a6282c64fac4f35ffcb5a97c0aba948dfa9220e53ece56c9d4995c3c1aa28ff7",
+      "file_sha256": "a6282c64fac4f35ffcb5a97c0aba948dfa9220e53ece56c9d4995c3c1aa28ff7",
+      "status": "ready",
+      "page_count": 22,
+      "title": "The Scenario Model Intercomparison Project (ScenarioMIP) for CMIP6",
+      "authors": [
+        "Brian C. O'Neill",
+        "Claudia Tebaldi",
+        "Detlef P. van Vuuren",
+        "Veronika Eyring",
+        "Pierre Friedlingstein",
+        "George Hurtt",
+        "Reto Knutti",
+        "Elmar Kriegler",
+        "Jean-Francois Lamarque",
+        "Jason Lowe",
+        "Gerald A. Meehl",
+        "Richard Moss",
+        "Keywan Riahi",
+        "Benjamin M. Sanderson"
+      ],
+      "year": 2016,
+      "topics": [
+        "气候未来情景",
+        "环境气候",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.5194/gmd-9-3461-2016",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_a6e9792af68208e5822f815cd2c1bf8d85e779ab66e38ac99104d0b5ec1d27d7",
+      "file_sha256": "a6e9792af68208e5822f815cd2c1bf8d85e779ab66e38ac99104d0b5ec1d27d7",
+      "status": "ready",
+      "page_count": 55,
+      "title": "Topological insulators and superconductors",
+      "authors": [
+        "Qi, Xiao-Liang",
+        "Zhang, Shou-Cheng"
+      ],
+      "year": 2010,
+      "topics": [
+        "基础物理",
+        "拓扑物态",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/1008.2026v1",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_ac0ac25e158d8d06ab4f9e7ae88301876e73736a95d8dec8105613a727679ac4",
+      "file_sha256": "ac0ac25e158d8d06ab4f9e7ae88301876e73736a95d8dec8105613a727679ac4",
+      "status": "ready",
+      "page_count": 7,
+      "title": "Lead Iodide Perovskite Sensitized All-Solid-State Submicron Thin Film Mesoscopic Solar Cell with Efficiency Exceeding 9%",
+      "authors": [
+        "Hui-Seon Kim",
+        "Chang-Ryul Lee",
+        "Jeong-Hyeok Im",
+        "Ki-Beom Lee",
+        "Thomas Moehl",
+        "Arianna Marchioro",
+        "Soo-Jin Moon",
+        "Robin Humphry-Baker",
+        "Jun-Ho Yum",
+        "Jacques E. Moser",
+        "Michael Grätzel",
+        "Nam-Gyu Park"
+      ],
+      "year": 2012,
+      "topics": [
+        "光伏能源",
+        "工程能源",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1038/srep00591",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_aee149ceeb35e16c6a68b4c4c2788f9411e2b1c6bd64aab9fbbd06740e1b9e05",
+      "file_sha256": "aee149ceeb35e16c6a68b4c4c2788f9411e2b1c6bd64aab9fbbd06740e1b9e05",
+      "status": "ready",
+      "page_count": 62,
+      "title": "Initial sequencing and analysis of the human genome",
+      "authors": [
+        "International Human Genome Sequencing Consortium"
+      ],
+      "year": 2001,
+      "topics": [
+        "人类基因组",
+        "分子遗传",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1038/35057062",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_afdd7981753a6bbb5f1d63c196535e68062bc565873e82fe24ae3c0541a7764d",
+      "file_sha256": "afdd7981753a6bbb5f1d63c196535e68062bc565873e82fe24ae3c0541a7764d",
+      "status": "ready",
+      "page_count": 6,
+      "title": "Genome sequence of the palaeopolyploid soybean",
+      "authors": [
+        "Jeremy Schmutz",
+        "Steven B. Cannon",
+        "Jessica Schlueter",
+        "Jianxin Ma",
+        "Therese Mitros",
+        "William Nelson",
+        "David L. Hyten",
+        "Qijian Song",
+        "Jay J. Thelen",
+        "Jianlin Cheng",
+        "Dong Xu",
+        "Uffe Hellsten",
+        "Gregory D. May",
+        "Yeisoo Yu",
+        "Tetsuya Sakurai",
+        "Taishi Umezawa",
+        "Madan K. Bhattacharyya",
+        "Devinder Sandhu",
+        "Babu Valliyodan",
+        "Erika Lindquist",
+        "Myron Peto",
+        "David Grant",
+        "Shengqiang Shu",
+        "David Goodstein",
+        "Kerrie Barry",
+        "Montona Futrell-Griggs",
+        "Brian Abernathy",
+        "Jianchang Du",
+        "Zhixi Tian",
+        "Liucun Zhu",
+        "Navdeep Gill",
+        "Trupti Joshi",
+        "Marc Libault",
+        "Anand Sethuraman",
+        "Xue-Cheng Zhang",
+        "Kazuo Shinozaki",
+        "Henry T. Nguyen",
+        "Rod A. Wing",
+        "Perry Cregan",
+        "James Specht",
+        "Jane Grimwood",
+        "Dan Rokhsar",
+        "Gary Stacey",
+        "Randy C. Shoemaker",
+        "Scott A. Jackson"
+      ],
+      "year": 2010,
+      "topics": [
+        "农业植物食品",
+        "自然科学",
+        "豆科作物基因组"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1038/nature08670",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_b03fe1f0b44cac29f4f02ed11809f951641b7c3b15669525ef57f15ede7176bf",
+      "file_sha256": "b03fe1f0b44cac29f4f02ed11809f951641b7c3b15669525ef57f15ede7176bf",
+      "status": "ready",
+      "page_count": 21,
+      "title": "A User’s Guide to the Encyclopedia of DNA Elements (ENCODE)",
+      "authors": [
+        "The ENCODE Project Consortium"
+      ],
+      "year": 2011,
+      "topics": [
+        "分子遗传",
+        "染色质与表观遗传",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1371/journal.pbio.1001046",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。馆内为外部OCR处理副本，原始PDF及派生记录均保留。"
+    },
+    {
+      "doc_id": "d_b24f67a66b6756d48474b6c8df8d0ce723f61ffa154cbe662312698f6f801dc2",
+      "file_sha256": "b24f67a66b6756d48474b6c8df8d0ce723f61ffa154cbe662312698f6f801dc2",
+      "status": "ready",
+      "page_count": 42,
+      "title": "Observation of a new boson at a mass of 125 GeV with the CMS experiment at the LHC",
+      "authors": [
+        "The CMS Collaboration"
+      ],
+      "year": 2013,
+      "topics": [
+        "基础物理",
+        "自然科学",
+        "高能实验独立验证"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/1207.7235v2",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_b47a470393348a951bbd861901c84fb17f21a85aa00243c6599e75d86b69b70f",
+      "file_sha256": "b47a470393348a951bbd861901c84fb17f21a85aa00243c6599e75d86b69b70f",
+      "status": "ready",
+      "page_count": 22,
+      "title": "Concept Misformation in Comparative Politics",
+      "authors": [
+        "Giovanni Sartori"
+      ],
+      "year": 1970,
+      "topics": [
+        "比较政治学",
+        "社会科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.2307/1958356",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_b618a02846c134d37eeb4ca5c05520f0bb281c401cd6b0707964a17f7d98c84f",
+      "file_sha256": "b618a02846c134d37eeb4ca5c05520f0bb281c401cd6b0707964a17f7d98c84f",
+      "status": "ready",
+      "page_count": 31,
+      "title": "Economic Action and Social Structure: The Problem of Embeddedness",
+      "authors": [
+        "Mark Granovetter"
+      ],
+      "year": 1985,
+      "topics": [
+        "社会学",
+        "社会科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.31430/aryo6512",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_b63b534e85b3c8c19be1b43461da96112c59d492c74fbf798d356a4cec06271e",
+      "file_sha256": "b63b534e85b3c8c19be1b43461da96112c59d492c74fbf798d356a4cec06271e",
+      "status": "ready",
+      "page_count": 10,
+      "title": "Data Descriptor: Global terrestrial Human Footprint maps for 1993 and 2009",
+      "authors": [
+        "Oscar Venter",
+        "Eric W Sanderson",
+        "Ainhoa Magrach",
+        "James R Allan",
+        "Jutta Beher",
+        "Kendall R Jones",
+        "Hugh P Possingham",
+        "William F Laurance",
+        "Peter Wood",
+        "Balázs M Fekete",
+        "Marc A Levy",
+        "James E M Watson"
+      ],
+      "year": 2016,
+      "topics": [
+        "森林生态",
+        "生态进化",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1038/sdata.2016.67",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_b9cae993bbd44a679c75aae59ae802845d0321c9e4ee163a1c77b00417371f3b",
+      "file_sha256": "b9cae993bbd44a679c75aae59ae802845d0321c9e4ee163a1c77b00417371f3b",
+      "status": "ready",
+      "page_count": 12,
+      "title": "CSB-RNN: A Faster-than-Realtime RNN Acceleration Framework with Compressed Structured Blocks",
+      "authors": [
+        "Runbin Shi",
+        "Peiyan Dong",
+        "Tong Geng",
+        "Yuhao Ding",
+        "Xiaolong Ma",
+        "Hayden K.-H. So",
+        "Martin Herbordt",
+        "Ang Li",
+        "Yanzhi Wang"
+      ],
+      "year": 2020,
+      "topics": [
+        "FPGA",
+        "RNN acceleration",
+        "Structured pruning"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1145/3392717.3392749",
+      "rights_note": "用户指定本地 PDF，用于本机课程项目和研究测试；保留原权利声明，开放再分发许可未作推断，待人工核对。"
+    },
+    {
+      "doc_id": "d_bbfd0e6e5573959a3fc78ce26824f9943fbadcd45375885aa67b1a9588bc3392",
+      "file_sha256": "bbfd0e6e5573959a3fc78ce26824f9943fbadcd45375885aa67b1a9588bc3392",
+      "status": "ready",
+      "page_count": 14,
+      "title": "PackQViT: Faster Sub-8-bit Vision Transformers via Full and Packed Quantization on the Mobile",
+      "authors": [
+        "Peiyan Dong",
+        "Lei Lu",
+        "Chao Wu",
+        "Cheng Lyu",
+        "Geng Yuan",
+        "Hao Tang",
+        "Yanzhi Wang"
+      ],
+      "year": 2023,
+      "topics": [
+        "Mobile inference",
+        "Sub-8-bit quantization",
+        "Vision Transformers"
+      ],
+      "language": "en",
+      "source_url": "https://papers.neurips.cc/paper_files/paper/2023/hash/1c92edb990a05f2269f0cc3afbb4c952-Abstract-Conference.html",
+      "rights_note": "用户指定本地 PDF，用于本机课程项目和研究测试；保留原权利声明，开放再分发许可未作推断，待人工核对。"
+    },
+    {
+      "doc_id": "d_bdfaa68d8984f0dc02beaca527b76f207d99b666d31d1da728ee0728182df697",
+      "file_sha256": "bdfaa68d8984f0dc02beaca527b76f207d99b666d31d1da728ee0728182df697",
+      "status": "ready",
+      "page_count": 15,
+      "title": "Attention Is All You Need",
+      "authors": [
+        "Ashish Vaswani",
+        "Noam Shazeer",
+        "Niki Parmar",
+        "Jakob Uszkoreit",
+        "Llion Jones",
+        "Aidan N. Gomez",
+        "Lukasz Kaiser",
+        "Illia Polosukhin"
+      ],
+      "year": 2017,
+      "topics": [
+        "arXiv实验",
+        "长文本机制"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/1706.03762",
+      "rights_note": "arXiv公开原始论文，仅用于本地阅读及解析实验；再分发权限待核验。"
+    },
+    {
+      "doc_id": "d_be2b05758ad2299b097b17af0a506d20fcfd8309aa20175b39d61f481a5d88c1",
+      "file_sha256": "be2b05758ad2299b097b17af0a506d20fcfd8309aa20175b39d61f481a5d88c1",
+      "status": "ready",
+      "page_count": 29,
+      "title": "Quantitative Formalism: An Experiment",
+      "authors": [
+        "Sarah Allison",
+        "Ryan Heuser",
+        "Matthew Jockers",
+        "Franco Moretti",
+        "Michael Witmore"
+      ],
+      "year": 2011,
+      "topics": [
+        "哲学与人文科学",
+        "文学研究方法"
+      ],
+      "language": "en",
+      "source_url": "https://litlab.stanford.edu/assets/pdf/LiteraryLabPamphlet1.pdf",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_be6604770bb0d0a6c2a81071518e89d5bc2f9b460f91390518804e0a1f454472",
+      "file_sha256": "be6604770bb0d0a6c2a81071518e89d5bc2f9b460f91390518804e0a1f454472",
+      "status": "ready",
+      "page_count": 17,
+      "title": "First M87 Event Horizon Telescope Results. I. The Shadow of the Supermassive Black Hole",
+      "authors": [
+        "The Event Horizon Telescope Collaboration"
+      ],
+      "year": 2019,
+      "topics": [
+        "天文宇宙",
+        "自然科学",
+        "黑洞成像"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/1906.11238",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_bf6e86ec8bea5834bce478b907bf527af76fcecfa31680c0ae8291ab1f915572",
+      "file_sha256": "bf6e86ec8bea5834bce478b907bf527af76fcecfa31680c0ae8291ab1f915572",
+      "status": "ready",
+      "page_count": 21,
+      "title": "Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2",
+      "authors": [
+        "Michael I Love",
+        "Wolfgang Huber",
+        "Simon Anders"
+      ],
+      "year": 2014,
+      "topics": [
+        "分子遗传",
+        "自然科学",
+        "转录组测量"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1186/s13059-014-0550-8",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_bfd15786180a6546e5bf1361fe42356a884517a6497c27ef6994f444be75e91f",
+      "file_sha256": "bfd15786180a6546e5bf1361fe42356a884517a6497c27ef6994f444be75e91f",
+      "status": "ready",
+      "page_count": 24,
+      "title": "MTEB: Massive Text Embedding Benchmark",
+      "authors": [
+        "Muennighoff, Niklas",
+        "Tazi, Nouamane",
+        "Magne, Loïc",
+        "Reimers, Nils"
+      ],
+      "year": 2022,
+      "topics": [
+        "arXiv实验"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2210.07316",
+      "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+    },
+    {
+      "doc_id": "d_bfde6d24007487e7e27f466fe260e96beec8702829f19679cd8b12d51c200d2f",
+      "file_sha256": "bfde6d24007487e7e27f466fe260e96beec8702829f19679cd8b12d51c200d2f",
+      "status": "ready",
+      "page_count": 29,
+      "title": "Maximum entropy modeling of species geographic distributions",
+      "authors": [
+        "Steven J. Phillips",
+        "Robert P. Anderson",
+        "Robert E. Schapire"
+      ],
+      "year": 2006,
+      "topics": [
+        "物种地理分布模型",
+        "生态进化",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1016/j.ecolmodel.2005.03.026",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_c0b38a214463d00781f21783de700fcd647675a04d6481ab87d583f91fe31810",
+      "file_sha256": "c0b38a214463d00781f21783de700fcd647675a04d6481ab87d583f91fe31810",
+      "status": "ready",
+      "page_count": 6,
+      "title": "The Framing of Decisions and the Psychology of Choice",
+      "authors": [
+        "Amos Tversky",
+        "Daniel Kahneman"
+      ],
+      "year": 1981,
+      "topics": [
+        "决策心理学",
+        "社会科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1126/science.7455683",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_c1a5f9487021246f6934c754630fd66bd5b25138f8dd5304e4885a31b92825ba",
+      "file_sha256": "c1a5f9487021246f6934c754630fd66bd5b25138f8dd5304e4885a31b92825ba",
+      "status": "ready",
+      "page_count": 19,
+      "title": "Bedmap2: improved ice bed, surface and thickness datasets for Antarctica",
+      "authors": [
+        "P. Fretwell",
+        "H. D. Pritchard",
+        "D. G. Vaughan",
+        "J. L. Bamber",
+        "N. E. Barrand",
+        "R. Bell",
+        "C. Bianchi",
+        "R. G. Bingham",
+        "D. D. Blankenship",
+        "G. Casassa",
+        "G. Catania",
+        "D. Callens",
+        "H. Conway",
+        "A. J. Cook",
+        "H. F. J. Corr",
+        "D. Damaske",
+        "V. Damm",
+        "F. Ferraccioli",
+        "R. Forsberg",
+        "S. Fujita",
+        "Y. Gim",
+        "P. Gogineni",
+        "J. A. Griggs",
+        "R. C. A. Hindmarsh",
+        "P. Holmlund",
+        "J. W. Holt",
+        "R. W. Jacobel",
+        "A. Jenkins",
+        "W. Jokat",
+        "T. Jordan",
+        "E. C. King",
+        "J. Kohler",
+        "W. Krabill",
+        "M. Riger-Kusk",
+        "K. A. Langley",
+        "G. Leitchenkov",
+        "C. Leuschen",
+        "B. P. Luyendyk",
+        "K. Matsuoka",
+        "J. Mouginot",
+        "F. O. Nitsche",
+        "Y. Nogi",
+        "O. A. Nost",
+        "S. V. Popov",
+        "E. Rignot",
+        "D. M. Rippin",
+        "A. Rivera",
+        "J. Roberts",
+        "N. Ross",
+        "M. J. Siegert",
+        "A. M. Smith",
+        "D. Steinhage",
+        "M. Studinger",
+        "B. Sun",
+        "B. K. Tinto",
+        "B. C. Welch",
+        "D. Wilson",
+        "D. A. Young",
+        "C. Xiangbin",
+        "A. Zirizzotti"
+      ],
+      "year": 2013,
+      "topics": [
+        "冰川与南极地形",
+        "地球科学",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.5194/tc-7-375-2013",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_c25d6d4642cd1cb2052df1c7b6abbb4969bd6262a1191ce92bec686d42423caa",
+      "file_sha256": "c25d6d4642cd1cb2052df1c7b6abbb4969bd6262a1191ce92bec686d42423caa",
+      "status": "ready",
+      "page_count": 69,
+      "title": "Global Carbon Budget 2023",
+      "authors": [
+        "Pierre Friedlingstein",
+        "Michael O'Sullivan",
+        "Matthew W. Jones",
+        "Robbie M. Andrew",
+        "Dorothee C. E. Bakker",
+        "Judith Hauck",
+        "Peter Landschützer",
+        "Corinne Le Quéré",
+        "Ingrid T. Luijkx",
+        "Glen P. Peters",
+        "Wouter Peters",
+        "Julia Pongratz",
+        "Clemens Schwingshackl",
+        "Stephen Sitch",
+        "Josep G. Canadell",
+        "Philippe Ciais",
+        "Robert B. Jackson",
+        "Simone R. Alin",
+        "Peter Anthoni",
+        "Leticia Barbero",
+        "Nicholas R. Bates",
+        "Meike Becker",
+        "Nicolas Bellouin",
+        "Bertrand Decharme",
+        "Laurent Bopp",
+        "Ida Bagus Mandhara Brasika",
+        "Patricia Cadule",
+        "Matthew A. Chamberlain",
+        "Naveen Chandra",
+        "Thi-Tuyet-Trang Chau",
+        "Frédéric Chevallier",
+        "Louise P. Chini",
+        "Margot Cronin",
+        "Xinyu Dou",
+        "Kazutaka Enyo",
+        "Wiley Evans",
+        "Stefanie Falk",
+        "Richard A. Feely",
+        "Liang Feng",
+        "Daniel J. Ford",
+        "Thomas Gasser",
+        "Josefine Ghattas",
+        "Thanos Gkritzalis",
+        "Giacomo Grassi",
+        "Luke Gregor",
+        "Nicolas Gruber",
+        "Özgür Gürses",
+        "Ian Harris",
+        "Matthew Hefner",
+        "Jens Heinke",
+        "Richard A. Houghton",
+        "George C. Hurtt",
+        "Yosuke Iida",
+        "Tatiana Ilyina",
+        "Andrew R. Jacobson",
+        "Atul Jain",
+        "Tereza Jarníková",
+        "Annika Jersild",
+        "Fei Jiang",
+        "Zhe Jin",
+        "Fortunat Joos",
+        "Etsushi Kato",
+        "Ralph F. Keeling",
+        "Daniel Kennedy",
+        "Kees Klein Goldewijk",
+        "Jürgen Knauer",
+        "Jan Ivar Korsbakken",
+        "Arne Körtzinger",
+        "Xin Lan",
+        "Nathalie Lefèvre",
+        "Hongmei Li",
+        "Junjie Liu",
+        "Zhiqiang Liu",
+        "Lei Ma",
+        "Greg Marland",
+        "Nicolas Mayot",
+        "Patrick C. McGuire",
+        "Galen A. McKinley",
+        "Gesa Meyer",
+        "Eric J. Morgan",
+        "David R. Munro",
+        "Shin-Ichiro Nakaoka",
+        "Yosuke Niwa",
+        "Kevin M. O'Brien",
+        "Are Olsen",
+        "Abdirahman M. Omar",
+        "Tsuneo Ono",
+        "Melf Paulsen",
+        "Denis Pierrot",
+        "Katie Pocock",
+        "Benjamin Poulter",
+        "Carter M. Powis",
+        "Gregor Rehder",
+        "Laure Resplandy",
+        "Eddy Robertson",
+        "Christian Rödenbeck",
+        "Thais M. Rosan",
+        "Jörg Schwinger",
+        "Roland Séférian",
+        "T. Luke Smallman",
+        "Stephen M. Smith",
+        "Reinel Sospedra-Alfonso",
+        "Qing Sun",
+        "Adrienne J. Sutton",
+        "Colm Sweeney",
+        "Shintaro Takao",
+        "Pieter P. Tans",
+        "Hanqin Tian",
+        "Bronte Tilbrook",
+        "Hiroyuki Tsujino",
+        "Francesco Tubiello",
+        "Guido R. van der Werf",
+        "Erik van Ooijen",
+        "Rik Wanninkhof",
+        "Michio Watanabe",
+        "Cathy Wimart-Rousseau",
+        "Dongxu Yang",
+        "Xiaojuan Yang",
+        "Wenping Yuan",
+        "Xu Yue",
+        "Sönke Zaehle",
+        "Jiye Zeng",
+        "Bo Zheng"
+      ],
+      "year": 2023,
+      "topics": [
+        "全球碳循环",
+        "环境气候",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.5194/essd-15-5301-2023",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_c310cdbe1fecbf7146ddb8a54b87df462988644eed61ce3cda545bbddd5f3704",
+      "file_sha256": "c310cdbe1fecbf7146ddb8a54b87df462988644eed61ce3cda545bbddd5f3704",
+      "status": "ready",
+      "page_count": 11,
+      "title": "The Historical Text as Literary Artifact",
+      "authors": [
+        "Hayden White"
+      ],
+      "year": 1978,
+      "topics": [
+        "史学理论",
+        "哲学与人文科学"
+      ],
+      "language": "en",
+      "source_url": "https://spot.colorado.edu/~klages/7119/hayden%20white.pdf",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_c3b7756cd1b754fd5669b6bd2863a7cd40bfdf9d3db7f94ff25128996c7227ff",
+      "file_sha256": "c3b7756cd1b754fd5669b6bd2863a7cd40bfdf9d3db7f94ff25128996c7227ff",
+      "status": "ready",
+      "page_count": 24,
+      "title": "Gender: A Useful Category of Historical Analysis",
+      "authors": [
+        "Joan W. Scott"
+      ],
+      "year": 1986,
+      "topics": [
+        "哲学与人文科学",
+        "性别史"
+      ],
+      "language": "en",
+      "source_url": "https://warwick.ac.uk/fac/arts/history/students/modules/archive/sexuality_and_the_body/bibliography/joan_scott_gender_1986.pdf",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_c4eb5fe23e480decfa6f08afda0fdb0bea4d0fe5ee7fafc65f2a2d34a397ddf0",
+      "file_sha256": "c4eb5fe23e480decfa6f08afda0fdb0bea4d0fe5ee7fafc65f2a2d34a397ddf0",
+      "status": "ready",
+      "page_count": 16,
+      "title": "XY-Serve: End-to-End Versatile Production Serving for Dynamic LLM Workloads",
+      "authors": [
+        "Mingcong Song",
+        "Xinru Tang",
+        "Fengfan Hou",
+        "Jing Li",
+        "Wei Wei",
+        "Yipeng Ma",
+        "Runqiu Xiao",
+        "Hongjie Si",
+        "Dingcheng Jiang",
+        "Shouyi Yin",
+        "Yang Hu",
+        "Guoping Long"
+      ],
+      "year": 2026,
+      "topics": [
+        "Ascend NPU",
+        "Dynamic workloads",
+        "LLM serving"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1145/3760250.3762228",
+      "rights_note": "用户提供本地 PDF；PDF 第1页明确标注 Creative Commons Attribution 4.0 International License (CC BY 4.0)。"
+    },
+    {
+      "doc_id": "d_cd1169a233d5552ff574288541f2a9a08218d4bbd5f9a38e7abb669a6bf15471",
+      "file_sha256": "cd1169a233d5552ff574288541f2a9a08218d4bbd5f9a38e7abb669a6bf15471",
+      "status": "ready",
+      "page_count": 13,
+      "title": "The International Bathymetric Chart of the Southern Ocean Version 2",
+      "authors": [
+        "Boris Dorschel",
+        "Laura Hehemann",
+        "Sacha Viquerat",
+        "Fynn Warnke",
+        "Simon Dreutter",
+        "Yvonne Schulze Tenberge",
+        "Daniela Accettella",
+        "Lu An",
+        "Felipe Barrios",
+        "Evgenia Bazhenova",
+        "Jenny Black",
+        "Fernando Bohoyo",
+        "Craig Davey",
+        "Laura De Santis",
+        "Carlota Escutia Dotti",
+        "Alice C. Fremand",
+        "Peter T. Fretwell",
+        "Jenny A. Gales",
+        "Jinyao Gao",
+        "Luca Gasperini",
+        "Jamin S. Greenbaum",
+        "Jennifer Henderson Jencks",
+        "Kelly Hogan",
+        "Jong Kuk Hong",
+        "Martin Jakobsson",
+        "Laura Jensen",
+        "Johnathan Kool",
+        "Sergei Larin",
+        "Robert D. Larter",
+        "German Leitchenkov",
+        "Benoît Loubrieu",
+        "Kevin Mackay",
+        "Larry Mayer",
+        "Romain Millan",
+        "Mathieu Morlighem",
+        "Francisco Navidad",
+        "Frank O. Nitsche",
+        "Yoshifumi Nogi",
+        "Cécile Pertuisot",
+        "Alexandra L. Post",
+        "Hamish D. Pritchard",
+        "Autun Purser",
+        "Michele Rebesco",
+        "Eric Rignot",
+        "Jason L. Roberts",
+        "Marzia Rovere",
+        "Ivan Ryzhov",
+        "Chiara Sauli",
+        "Thierry Schmitt",
+        "Alessandro Silvano",
+        "Jodie Smith",
+        "Helen Snaith",
+        "Alex J. Tate",
+        "Kirsty Tinto",
+        "Philippe Vandenbossche",
+        "Pauline Weatherall",
+        "Paul Wintersteller",
+        "Chunguo Yang",
+        "Tao Zhang",
+        "Jan Erik Arndt"
+      ],
+      "year": 2022,
+      "topics": [
+        "南大洋海底地形",
+        "地球科学",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1038/s41597-022-01366-7",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_ce333a49d89c41f7d4a0292507b53170160a555a67b67ce3e4b7ac453ca09662",
+      "file_sha256": "ce333a49d89c41f7d4a0292507b53170160a555a67b67ce3e4b7ac453ca09662",
+      "status": "ready",
+      "page_count": 38,
+      "title": "Many-body localization and thermalization in quantum statistical mechanics",
+      "authors": [
+        "Nandkishore, Rahul",
+        "Huse, David A."
+      ],
+      "year": 2014,
+      "topics": [
+        "基础物理",
+        "自然科学",
+        "非平衡统计物理"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/1404.0686v2",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_cfeeea2b4be5ff20d6fabb187ef334a56649c49dbc08726f40ea9d0377df84e9",
+      "file_sha256": "cfeeea2b4be5ff20d6fabb187ef334a56649c49dbc08726f40ea9d0377df84e9",
+      "status": "ready",
+      "page_count": 20,
+      "title": "A pneumonia outbreak associated with a new coronavirus of probable bat origin",
+      "authors": [
+        "Peng Zhou",
+        "Xing-Lou Yang",
+        "Xian-Guang Wang",
+        "Ben Hu",
+        "Lei Zhang",
+        "Wei Zhang",
+        "Hao-Rui Si",
+        "Yan Zhu",
+        "Bei Li",
+        "Chao-Lin Huang",
+        "Hui-Dong Chen",
+        "Jing Chen",
+        "Yun Luo",
+        "Hua Guo",
+        "Ren-Di Jiang",
+        "Mei-Qin Liu",
+        "Ying Chen",
+        "Xu-Rui Shen",
+        "Xi Wang",
+        "Xiao-Shuang Zheng",
+        "Kai Zhao",
+        "Quan-Jiao Chen",
+        "Fei Deng",
+        "Lin-Lin Liu",
+        "Bing Yan",
+        "Fa-Xian Zhan",
+        "Yan-Yi Wang",
+        "Geng-Fu Xiao",
+        "Zheng-Li Shi"
+      ],
+      "year": 2020,
+      "topics": [
+        "医学公共健康",
+        "新发传染病",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1038/s41586-020-2012-7",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_d05535561fec1a353637b48967b5a439d253e9f513624895a0a6ba97d99601ee",
+      "file_sha256": "d05535561fec1a353637b48967b5a439d253e9f513624895a0a6ba97d99601ee",
+      "status": "ready",
+      "page_count": 22,
+      "title": "Overview of the Coupled Model Intercomparison Project Phase 6 (CMIP6) experimental design and organization",
+      "authors": [
+        "Veronika Eyring",
+        "Sandrine Bony",
+        "Gerald A. Meehl",
+        "Catherine A. Senior",
+        "Bjorn Stevens",
+        "Ronald J. Stouffer",
+        "Karl E. Taylor"
+      ],
+      "year": 2016,
+      "topics": [
+        "气候模式比较",
+        "环境气候",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.5194/gmd-9-1937-2016",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_d149877b4245a53b757b8f81c54fb947c96a74cb58e2367ec2c63166a2fceedb",
+      "file_sha256": "d149877b4245a53b757b8f81c54fb947c96a74cb58e2367ec2c63166a2fceedb",
+      "status": "ready",
+      "page_count": 16,
+      "title": "The Meaning of the Digital Humanities",
+      "authors": [
+        "Alan Liu"
+      ],
+      "year": 2013,
+      "topics": [
+        "哲学与人文科学",
+        "数字人文"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1632/pmla.2013.128.2.409",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_d251c425f730e9bc2e4d1fd5f1555ae342bb4e2a95005c2cf8237f9c4a44da27",
+      "file_sha256": "d251c425f730e9bc2e4d1fd5f1555ae342bb4e2a95005c2cf8237f9c4a44da27",
+      "status": "ready",
+      "page_count": 10,
+      "title": "CRISPR/Cas9-mediated gene editing in human tripronuclear zygotes",
+      "authors": [
+        "Puping Liang",
+        "Yanwen Xu",
+        "Xiya Zhang",
+        "Chenhui Ding",
+        "Rui Huang",
+        "Zhen Zhang",
+        "Jie Lv",
+        "Xiaowei Xie",
+        "Yuxi Chen",
+        "Yujing Li",
+        "Ying Sun",
+        "Yaofu Bai",
+        "Zhou Songyang",
+        "Wenbin Ma",
+        "Canquan Zhou",
+        "Junjiu Huang"
+      ],
+      "year": 2015,
+      "topics": [
+        "分子遗传",
+        "基因编辑",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1007/s13238-015-0153-5",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_d4f53cb333623b0f6e4c5ea3288e753abfbc2ff2efbdef262c64b9d1fb67b51b",
+      "file_sha256": "d4f53cb333623b0f6e4c5ea3288e753abfbc2ff2efbdef262c64b9d1fb67b51b",
+      "status": "ready",
+      "page_count": 8,
+      "title": "How Many Species Are There on Earth and in the Ocean?",
+      "authors": [
+        "Camilo Mora",
+        "Derek P. Tittensor",
+        "Sina Adl",
+        "Alastair G. B. Simpson",
+        "Boris Worm"
+      ],
+      "year": 2011,
+      "topics": [
+        "物种多样性估计",
+        "生态进化",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1371/journal.pbio.1001127",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_d5d99d95b3d9657de6413f4c26d635238103ef9cf1a28ff1b7fde531cf11f6be",
+      "file_sha256": "d5d99d95b3d9657de6413f4c26d635238103ef9cf1a28ff1b7fde531cf11f6be",
+      "status": "ready",
+      "page_count": 74,
+      "title": "FINDING STRUCTURE WITH RANDOMNESS: PROBABILISTIC ALGORITHMS FOR CONSTRUCTING APPROXIMATE MATRIX DECOMPOSITIONS",
+      "authors": [
+        "Halko, Nathan",
+        "Martinsson, Per-Gunnar",
+        "Tropp, Joel A."
+      ],
+      "year": 2010,
+      "topics": [
+        "数学统计",
+        "自然科学",
+        "随机数值线性代数"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/0909.4061v2",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_d69f07360e986449d074e71869049bad0f26a1c5f793453d7adf714b9e259629",
+      "file_sha256": "d69f07360e986449d074e71869049bad0f26a1c5f793453d7adf714b9e259629",
+      "status": "ready",
+      "page_count": 21,
+      "title": "First Sagittarius A* Event Horizon Telescope Results. I. The Shadow of the Supermassive Black Hole in the Center of the Milky Way",
+      "authors": [
+        "The Event Horizon Telescope Collaboration"
+      ],
+      "year": 2022,
+      "topics": [
+        "天文宇宙",
+        "自然科学",
+        "银河中心观测"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2311.08680",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_d71f95f1b10752fafb8c524064195c7ff3747fa339bdfc7f3590265a0213c93a",
+      "file_sha256": "d71f95f1b10752fafb8c524064195c7ff3747fa339bdfc7f3590265a0213c93a",
+      "status": "ready",
+      "page_count": 18,
+      "title": "LONG-LASTING POTENTIATION OF SYNAPTIC TRANSMISSION IN THE DENTATE AREA OF THE UNANAESTHETIZED RABBIT FOLLOWING STIMULATION OF THE PERFORANT PATH",
+      "authors": [
+        "T. V. P. Bliss",
+        "A. R. Gardner‐Medwin"
+      ],
+      "year": 1973,
+      "topics": [
+        "神经科学",
+        "突触可塑性",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1113/jphysiol.1973.sp010274",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_d85e51aac35ae7985daf2c0a272fec36463a5c15a3d94c530d164a6c0f758d3a",
+      "file_sha256": "d85e51aac35ae7985daf2c0a272fec36463a5c15a3d94c530d164a6c0f758d3a",
+      "status": "ready",
+      "page_count": 17,
+      "title": "Minds, Brains, and Programs",
+      "authors": [
+        "John R. Searle"
+      ],
+      "year": 1980,
+      "topics": [
+        "哲学与人文科学",
+        "心灵哲学"
+      ],
+      "language": "en",
+      "source_url": "https://artscimedia.case.edu/wp-content/uploads/2013/07/14182625/Searle-Minds-Brains-and-Programs.pdf",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_d887e0caaf1ee713c0f87b9bdae8b4fffa4053e626c42aa1b009953aa7e23bbc",
+      "file_sha256": "d887e0caaf1ee713c0f87b9bdae8b4fffa4053e626c42aa1b009953aa7e23bbc",
+      "status": "ready",
+      "page_count": 16,
+      "title": "Modern Moral Philosophy",
+      "authors": [
+        "G. E. M. Anscombe"
+      ],
+      "year": 1958,
+      "topics": [
+        "伦理学",
+        "哲学与人文科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1017/s0031819100037943",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_d911d3b12adccbc08353a5639cd6d2eb3928e5d328d1ee6dbe7926c2645ebbcb",
+      "file_sha256": "d911d3b12adccbc08353a5639cd6d2eb3928e5d328d1ee6dbe7926c2645ebbcb",
+      "status": "ready",
+      "page_count": 7,
+      "title": "The tomato genome sequence provides insights into fleshy fruit evolution",
+      "authors": [
+        "The Tomato Genome Consortium"
+      ],
+      "year": 2012,
+      "topics": [
+        "作物基因组",
+        "农业植物食品",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1038/nature11119",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_d9eda9687c2df0c0dd6b83410000bf37723c35cda7fc6e24a4a30255254f2832",
+      "file_sha256": "d9eda9687c2df0c0dd6b83410000bf37723c35cda7fc6e24a4a30255254f2832",
+      "status": "ready",
+      "page_count": 9,
+      "title": "A reflection on lithium-ion battery cathode chemistry",
+      "authors": [
+        "Arumugam Manthiram"
+      ],
+      "year": 2020,
+      "topics": [
+        "工程能源",
+        "电化学储能",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1038/s41467-020-15355-0",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_dc0ae3c5584ed146beee122e6a9ad9c48547dde048d53e9be8435d8f1d354531",
+      "file_sha256": "dc0ae3c5584ed146beee122e6a9ad9c48547dde048d53e9be8435d8f1d354531",
+      "status": "ready",
+      "page_count": 11,
+      "title": "Precise Zero-Shot Dense Retrieval without Relevance Labels",
+      "authors": [
+        "Gao, Luyu",
+        "Ma, Xueguang",
+        "Lin, Jimmy",
+        "Callan, Jamie"
+      ],
+      "year": 2022,
+      "topics": [
+        "arXiv实验"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2212.10496",
+      "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+    },
+    {
+      "doc_id": "d_de7e14007cef3173941883aa00bad549f04ff1d6811b758788a0aae79d5b6d93",
+      "file_sha256": "de7e14007cef3173941883aa00bad549f04ff1d6811b758788a0aae79d5b6d93",
+      "status": "ready",
+      "page_count": 30,
+      "title": "A Contribution to the Theory of Economic Growth",
+      "authors": [
+        "Robert M. Solow"
+      ],
+      "year": 1956,
+      "topics": [
+        "社会科学",
+        "经济学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.2307/1884513",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_e038215492b06a5f79bab24098c0004c75b0588f99724d8ea2345a6ece0bd53b",
+      "file_sha256": "e038215492b06a5f79bab24098c0004c75b0588f99724d8ea2345a6ece0bd53b",
+      "status": "ready",
+      "page_count": 38,
+      "title": "Observation of a New Particle in the Search for the Standard Model Higgs Boson with the ATLAS Detector at the LHC",
+      "authors": [
+        "The ATLAS Collaboration"
+      ],
+      "year": 2012,
+      "topics": [
+        "基础物理",
+        "自然科学",
+        "高能粒子物理"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/1207.7214v2",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_e14779081a999b49dfdde8fe7078fcef65a282d4e6374a037269083d063a1ec3",
+      "file_sha256": "e14779081a999b49dfdde8fe7078fcef65a282d4e6374a037269083d063a1ec3",
+      "status": "ready",
+      "page_count": 11,
+      "title": "Self-Determination Theory and the Facilitation of Intrinsic Motivation, Social Development, and Well-Being",
+      "authors": [
+        "Richard M. Ryan",
+        "Edward L. Deci"
+      ],
+      "year": 2000,
+      "topics": [
+        "教育心理学",
+        "社会科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1037/0003-066X.55.1.68",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_e2138f11aeeb220412fcbb6f234947e1a3a75007eeef7e8d490f9ca883b384cc",
+      "file_sha256": "e2138f11aeeb220412fcbb6f234947e1a3a75007eeef7e8d490f9ca883b384cc",
+      "status": "ready",
+      "page_count": 22,
+      "title": "Seismic waveform tomography of the central and eastern Mediterranean upper mantle",
+      "authors": [
+        "Nienke Blom",
+        "Alexey Gokhberg",
+        "Andreas Fichtner"
+      ],
+      "year": 2020,
+      "topics": [
+        "地幔成像与板块构造",
+        "地球科学",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.5194/se-11-669-2020",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_e45bf45563f24ebd14bc1b9e57b61f293cd9146660871d4297fd450de593c2e8",
+      "file_sha256": "e45bf45563f24ebd14bc1b9e57b61f293cd9146660871d4297fd450de593c2e8",
+      "status": "ready",
+      "page_count": 27,
+      "title": "Social Capital in the Creation of Human Capital",
+      "authors": [
+        "James S. Coleman"
+      ],
+      "year": 1988,
+      "topics": [
+        "社会学",
+        "社会科学"
+      ],
+      "language": "en",
+      "source_url": "https://faculty.washington.edu/matsueda/courses/587/readings/Coleman%201988.pdf",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_e5e864c23d015b69be17e5b5d51b5b462d2829353a867513414b6728f54589c4",
+      "file_sha256": "e5e864c23d015b69be17e5b5d51b5b462d2829353a867513414b6728f54589c4",
+      "status": "ready",
+      "page_count": 16,
+      "title": "Observation of Gravitational Waves from a Binary Black Hole Merger",
+      "authors": [
+        "LIGO Scientific Collaboration",
+        "Virgo Collaboration"
+      ],
+      "year": 2016,
+      "topics": [
+        "天文宇宙",
+        "引力波观测",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/1602.03837",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_e6902725c8ba809f4601a1ecc3c18914d5df530bcd1ba3353584eda0228bfffc",
+      "file_sha256": "e6902725c8ba809f4601a1ecc3c18914d5df530bcd1ba3353584eda0228bfffc",
+      "status": "ready",
+      "page_count": 14,
+      "title": "A Randomized Trial of Intensive versus Standard Blood-Pressure Control",
+      "authors": [
+        "The SPRINT Research Group"
+      ],
+      "year": 2015,
+      "topics": [
+        "医学公共健康",
+        "自然科学",
+        "高血压随机试验"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1056/NEJMoa1511939",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_e72475d363fa6f836e8bb0bbd43a2a11c0faf3af1d3da0b2244686b2826188ea",
+      "file_sha256": "e72475d363fa6f836e8bb0bbd43a2a11c0faf3af1d3da0b2244686b2826188ea",
+      "status": "ready",
+      "page_count": 28,
+      "title": "Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer",
+      "authors": [
+        "Shor, Peter W."
+      ],
+      "year": 1996,
+      "topics": [
+        "基础物理",
+        "自然科学",
+        "量子算法"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/quant-ph/9508027v2",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。馆内为外部OCR处理副本，原始PDF及派生记录均保留。"
+    },
+    {
+      "doc_id": "d_e78b964422f38b33b43ea55b6a480ce4254701b25ab4e469e4fec651b1ad29b8",
+      "file_sha256": "e78b964422f38b33b43ea55b6a480ce4254701b25ab4e469e4fec651b1ad29b8",
+      "status": "ready",
+      "page_count": 12,
+      "title": "The Agenda-Setting Function of Mass Media",
+      "authors": [
+        "Maxwell E. McCombs",
+        "Donald L. Shaw"
+      ],
+      "year": 1972,
+      "topics": [
+        "传播学",
+        "社会科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1086/267990",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_e791451960e47e69b0241d7656c6c61ce40b7c3beff92c944e163e5c3bc54c1a",
+      "file_sha256": "e791451960e47e69b0241d7656c6c61ce40b7c3beff92c944e163e5c3bc54c1a",
+      "status": "ready",
+      "page_count": 5,
+      "title": "SPLADE: Sparse Lexical and Expansion Model for First Stage Ranking",
+      "authors": [
+        "Formal, Thibault",
+        "Piwowarski, Benjamin",
+        "Clinchant, Stéphane"
+      ],
+      "year": 2021,
+      "topics": [
+        "arXiv实验"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2107.05720",
+      "rights_note": "arXiv公开下载，仅用于本地解析实验；再分发权限待核验。页面许可：http://creativecommons.org/licenses/by-nc-sa/4.0/"
+    },
+    {
+      "doc_id": "d_e7dcb442ae83a10574f26d52b05c0a09ce23b3ec837ae7ef935b54cc383212a2",
+      "file_sha256": "e7dcb442ae83a10574f26d52b05c0a09ce23b3ec837ae7ef935b54cc383212a2",
+      "status": "ready",
+      "page_count": 12,
+      "title": "Democracy with Adjectives: Conceptual Innovation in Comparative Research",
+      "authors": [
+        "David Collier",
+        "Steven Levitsky"
+      ],
+      "year": 1997,
+      "topics": [
+        "比较政治学",
+        "社会科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1353/wp.1997.0009",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_eae1b7c8c60ca6ef036aff539b8ea91f21d3129ecae8ce70f3f89c44a95d69f7",
+      "file_sha256": "eae1b7c8c60ca6ef036aff539b8ea91f21d3129ecae8ce70f3f89c44a95d69f7",
+      "status": "ready",
+      "page_count": 5,
+      "title": "Electric Field Effect in Atomically Thin Carbon Films",
+      "authors": [
+        "Novoselov, K. S.",
+        "Geim, A. K.",
+        "Morozov, S. V.",
+        "Jiang, D.",
+        "Zhang, Y.",
+        "Dubonos, S. V.",
+        "Grigorieva, I. V.",
+        "Firsov, A. A."
+      ],
+      "year": 2004,
+      "topics": [
+        "二维碳材料",
+        "化学材料",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/cond-mat/0410550",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_ee8c6c83448890881931f6e926fbcd65f57a06982610eb549039b4fd3084b255",
+      "file_sha256": "ee8c6c83448890881931f6e926fbcd65f57a06982610eb549039b4fd3084b255",
+      "status": "ready",
+      "page_count": 6,
+      "title": "The Death of the Author",
+      "authors": [
+        "Roland Barthes"
+      ],
+      "year": null,
+      "topics": [
+        "哲学与人文科学",
+        "文学理论"
+      ],
+      "language": "en",
+      "source_url": "https://writing.upenn.edu/~taransky/Barthes.pdf",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_ef4d58088ab681af8f9342102ed5462486dcd5bc98232f666651b3aa35d746d9",
+      "file_sha256": "ef4d58088ab681af8f9342102ed5462486dcd5bc98232f666651b3aa35d746d9",
+      "status": "ready",
+      "page_count": 36,
+      "title": "QUANTUM ESPRESSO: a modular and open-source software project for quantum simulations of materials",
+      "authors": [
+        "Giannozzi, P.",
+        "Baroni, S.",
+        "Bonini, N.",
+        "Calandra, M.",
+        "Car, R.",
+        "Cavazzoni, C.",
+        "Ceresoli, D.",
+        "Chiarotti, G. L.",
+        "Cococcioni, m.",
+        "Dabo, I.",
+        "Corso, A. Dal",
+        "Fabris, S.",
+        "Fratesi, G.",
+        "de Gironcoli, S.",
+        "Gebauer, R.",
+        "Gerstmann, U.",
+        "Gougoussis, C.",
+        "Kokalj, A.",
+        "Lazzeri, M.",
+        "Martin-Samos, L.",
+        "Marzari, N.",
+        "Mauri, F.",
+        "Mazzarello, R.",
+        "Paolini, S.",
+        "Pasquarello, A.",
+        "Paulatto, L.",
+        "Sbraccia, C.",
+        "Scandolo, S.",
+        "Sclauzero, G.",
+        "Seitsonen, A. P.",
+        "Smogunov, A.",
+        "Umari, P.",
+        "Wentzcovitch, R. M."
+      ],
+      "year": 2009,
+      "topics": [
+        "化学材料",
+        "第一性原理计算",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/0906.2569v2",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_ef701bb9e898e25f05bd215d616ac08c56bea99f4bab7c297c8a38cff4014e9e",
+      "file_sha256": "ef701bb9e898e25f05bd215d616ac08c56bea99f4bab7c297c8a38cff4014e9e",
+      "status": "ready",
+      "page_count": 32,
+      "title": "A Tutorial on Spectral Clustering",
+      "authors": [
+        "von Luxburg, Ulrike"
+      ],
+      "year": 2007,
+      "topics": [
+        "数学统计",
+        "自然科学",
+        "谱理论与聚类"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/0711.0189v1",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_f12664ded44e4e27e7b8390d46578104772d79989f856a27cc1c7fc08374d929",
+      "file_sha256": "f12664ded44e4e27e7b8390d46578104772d79989f856a27cc1c7fc08374d929",
+      "status": "ready",
+      "page_count": 9,
+      "title": "Mortality in relation to smoking: 50 years’ observations on male British doctors",
+      "authors": [
+        "Richard Doll",
+        "Richard Peto",
+        "Jillian Boreham",
+        "Isabelle Sutherland"
+      ],
+      "year": 2004,
+      "topics": [
+        "医学公共健康",
+        "自然科学",
+        "长期队列与吸烟危害"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1136/bmj.38142.554479.AE",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_f17764203551bf7f68815b61205522755d15f476ed9ad6f66e44c956f3183c8d",
+      "file_sha256": "f17764203551bf7f68815b61205522755d15f476ed9ad6f66e44c956f3183c8d",
+      "status": "ready",
+      "page_count": 16,
+      "title": "Band-Like Transport in High Mobility Unencapsulated Single-Layer MoS2 Transistors",
+      "authors": [
+        "Jariwala, Deep",
+        "Sangwan, Vinod K.",
+        "Late, Dattatray J.",
+        "Johns, James E.",
+        "Dravid, Vinayak P.",
+        "Marks, Tobin J.",
+        "Lauhon, Lincoln J.",
+        "Hersam, Mark C."
+      ],
+      "year": 2013,
+      "topics": [
+        "化学材料",
+        "半导体材料器件",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/1304.5567",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_f459188e745318a07d8aebb6b685f785125e8ae1d936e0fe250789a86afcc7f9",
+      "file_sha256": "f459188e745318a07d8aebb6b685f785125e8ae1d936e0fe250789a86afcc7f9",
+      "status": "ready",
+      "page_count": 10,
+      "title": "FQ-ViT: Post-Training Quantization for Fully Quantized Vision Transformer",
+      "authors": [
+        "Yang Lin",
+        "Tianyu Zhang",
+        "Peiqin Sun",
+        "Zheng Li",
+        "Shuchang Zhou"
+      ],
+      "year": 2022,
+      "topics": [
+        "Integer quantization",
+        "Post-training quantization",
+        "Vision Transformers"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.24963/ijcai.2022/164",
+      "rights_note": "用户指定本地 PDF，用于本机课程项目和研究测试；保留原权利声明，开放再分发许可未作推断，待人工核对。"
+    },
+    {
+      "doc_id": "d_f4cea8a098f6ead6f125e0c82af2fce4891908b9fa12f4a9ec7d642bd9dca7f8",
+      "file_sha256": "f4cea8a098f6ead6f125e0c82af2fce4891908b9fa12f4a9ec7d642bd9dca7f8",
+      "status": "ready",
+      "page_count": 21,
+      "title": "Job Market Signaling",
+      "authors": [
+        "Michael Spence"
+      ],
+      "year": 1973,
+      "topics": [
+        "社会科学",
+        "经济学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.2307/1882010",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_f5cf5eb88dec2fb4275f3af2c4fd7557d904af4b0928cb62b58f77269a261a5f",
+      "file_sha256": "f5cf5eb88dec2fb4275f3af2c4fd7557d904af4b0928cb62b58f77269a261a5f",
+      "status": "ready",
+      "page_count": 10,
+      "title": "The Generic Mapping Tools Version 6",
+      "authors": [
+        "P. Wessel",
+        "J. F. Luis",
+        "L. Uieda",
+        "R. Scharroo",
+        "F. Wobbe",
+        "W. H. F. Smith",
+        "D. Tian"
+      ],
+      "year": 2019,
+      "topics": [
+        "地学制图与空间分析",
+        "地球科学",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1029/2019GC008515",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_f6009b06362bbcf30b543118761f00b9b6893787d8f94a9ecfc2e589aa777b60",
+      "file_sha256": "f6009b06362bbcf30b543118761f00b9b6893787d8f94a9ecfc2e589aa777b60",
+      "status": "ready",
+      "page_count": 15,
+      "title": "I-BERT: Integer-only BERT Quantization",
+      "authors": [
+        "Sehoon Kim",
+        "Amir Gholami",
+        "Zhewei Yao",
+        "Michael W. Mahoney",
+        "Kurt Keutzer"
+      ],
+      "year": 2021,
+      "topics": [
+        "BERT",
+        "Integer quantization",
+        "Transformer inference"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2101.01321",
+      "rights_note": "用户指定本地 PDF，用于本机课程项目和研究测试；保留原权利声明，开放再分发许可未作推断，待人工核对。"
+    },
+    {
+      "doc_id": "d_f7c9a70e46eb1e585a82226c3ad90215a94973f8fb307d6c042b51566baf0550",
+      "file_sha256": "f7c9a70e46eb1e585a82226c3ad90215a94973f8fb307d6c042b51566baf0550",
+      "status": "ready",
+      "page_count": 22,
+      "title": "A Behavioral Approach to the Rational Choice Theory of Collective Action: Presidential Address, American Political Science Association, 1997",
+      "authors": [
+        "Elinor Ostrom"
+      ],
+      "year": 1998,
+      "topics": [
+        "政治学",
+        "社会科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.2307/2585925",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_f7d5be90b7b166c5afb74db7a89f35e2218ae22667118adee2590b07a0d1edfb",
+      "file_sha256": "f7d5be90b7b166c5afb74db7a89f35e2218ae22667118adee2590b07a0d1edfb",
+      "status": "ready",
+      "page_count": 18,
+      "title": "Click Chemistry: Diverse Chemical Function from a Few Good Reactions",
+      "authors": [
+        "Hartmuth C. Kolb",
+        "M. G. Finn",
+        "K. Barry Sharpless"
+      ],
+      "year": 2001,
+      "topics": [
+        "化学材料",
+        "合成化学与点击反应",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1002/1521-3773(20010601)40:11<2004::AID-ANIE2004>3.0.CO;2-5",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。馆内为外部OCR处理副本，原始PDF及派生记录均保留。"
+    },
+    {
+      "doc_id": "d_f96939ec8dcf9403410cee17448f17e2bf1cc9a9bd13f446f847d5e11eb9a08f",
+      "file_sha256": "f96939ec8dcf9403410cee17448f17e2bf1cc9a9bd13f446f847d5e11eb9a08f",
+      "status": "ready",
+      "page_count": 10,
+      "title": "The Human Connectome Project: A data acquisition perspective",
+      "authors": [
+        "D.C. Van Essen",
+        "K. Ugurbil",
+        "E. Auerbach",
+        "D. Barch",
+        "T.E.J. Behrens",
+        "R. Bucholz",
+        "A. Chang",
+        "L. Chen",
+        "M. Corbetta",
+        "S.W. Curtiss",
+        "S. Della Penna",
+        "D. Feinberg",
+        "M.F. Glasser",
+        "N. Harel",
+        "A.C. Heath",
+        "L. Larson-Prior",
+        "D. Marcus",
+        "G. Michalareas",
+        "S. Moeller",
+        "R. Oostenveld",
+        "S.E. Petersen",
+        "F. Prior",
+        "B.L. Schlaggar",
+        "S.M. Smith",
+        "A.Z. Snyder",
+        "J. Xu",
+        "E. Yacoub"
+      ],
+      "year": 2012,
+      "topics": [
+        "人类连接组",
+        "神经科学",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1016/j.neuroimage.2012.02.018",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_f98314529433a4dbd03831bdb13589920eb35b436edf33666c2dc007a32aea63",
+      "file_sha256": "f98314529433a4dbd03831bdb13589920eb35b436edf33666c2dc007a32aea63",
+      "status": "ready",
+      "page_count": 55,
+      "title": "The electronic properties of graphene",
+      "authors": [
+        "Neto, A. H. Castro",
+        "Guinea, F.",
+        "Peres, N. M. R.",
+        "Novoselov, K. S.",
+        "Geim, A. K."
+      ],
+      "year": 2008,
+      "topics": [
+        "化学材料",
+        "石墨烯电子结构",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/0709.1163v2",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。馆内为外部OCR处理副本，原始PDF及派生记录均保留。"
+    },
+    {
+      "doc_id": "d_fa9e32cc3eb85c4c2745a9dce0673f2fe1d9bc2264c96c61c0b7957d5fce53de",
+      "file_sha256": "fa9e32cc3eb85c4c2745a9dce0673f2fe1d9bc2264c96c61c0b7957d5fce53de",
+      "status": "ready",
+      "page_count": 22,
+      "title": "The Strength of Weak Ties",
+      "authors": [
+        "Mark S. Granovetter"
+      ],
+      "year": 1973,
+      "topics": [
+        "社会学",
+        "社会科学"
+      ],
+      "language": "en",
+      "source_url": "https://snap.stanford.edu/class/cs224w-readings/granovetter73weakties.pdf",
+      "rights_note": "公开可获取的学术资料；仅用于本地课程研究与程序测试，不推定再分发授权。"
+    },
+    {
+      "doc_id": "d_fe02adcefeb9bc9c03737a062027cf88ba4ae0ab5b7352b87fa0a4d8f0d18317",
+      "file_sha256": "fe02adcefeb9bc9c03737a062027cf88ba4ae0ab5b7352b87fa0a4d8f0d18317",
+      "status": "ready",
+      "page_count": 9,
+      "title": "Biodiversity loss and its impact on humanity",
+      "authors": [
+        "Bradley J Cardinale",
+        "J Emmett Duffy",
+        "Andrew Gonzalez",
+        "David U Hooper",
+        "Charles Perrings",
+        "Patrick Venail",
+        "Anita Narwani",
+        "Georgina M Mace",
+        "David Tilman",
+        "David A Wardle",
+        "Ann P Kinzig",
+        "Gretchen C Daily",
+        "Michel Loreau",
+        "James B Grace",
+        "Anne Larigauderie",
+        "Diane S Srivastava",
+        "Shahid Naeem"
+      ],
+      "year": 2012,
+      "topics": [
+        "生态系统功能",
+        "生态进化",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://doi.org/10.1038/nature11148",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    },
+    {
+      "doc_id": "d_fe437770d7c981eae9e028eacaa5c772ed0add900ed9dec54c10cfce6dfd86c3",
+      "file_sha256": "fe437770d7c981eae9e028eacaa5c772ed0add900ed9dec54c10cfce6dfd86c3",
+      "status": "ready",
+      "page_count": 24,
+      "title": "SpinQuant: LLM Quantization with Learned Rotations",
+      "authors": [
+        "Zechun Liu",
+        "Changsheng Zhao",
+        "Igor Fedorov",
+        "Bilge Soran",
+        "Dhruv Choudhary",
+        "Raghuraman Krishnamoorthi",
+        "Vikas Chandra",
+        "Yuandong Tian",
+        "Tijmen Blankevoort"
+      ],
+      "year": 2025,
+      "topics": [
+        "LLM inference",
+        "Learned rotations",
+        "Post-training quantization"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/2405.16406",
+      "rights_note": "用户指定本地 PDF，用于本机课程项目和研究测试；保留原权利声明，开放再分发许可未作推断，待人工核对。"
+    },
+    {
+      "doc_id": "d_ff2b899367bfde76fef40a61fd42e3c12406227eb0466b5250a594f3d3ba5b2c",
+      "file_sha256": "ff2b899367bfde76fef40a61fd42e3c12406227eb0466b5250a594f3d3ba5b2c",
+      "status": "ready",
+      "page_count": 23,
+      "title": "Topological Insulators",
+      "authors": [
+        "Hasan, M. Z.",
+        "Kane, C. L."
+      ],
+      "year": 2010,
+      "topics": [
+        "凝聚态理论",
+        "基础物理",
+        "自然科学"
+      ],
+      "language": "en",
+      "source_url": "https://arxiv.org/abs/1002.3895v2",
+      "rights_note": "原文版权与使用范围见来源页面及PDF许可；本地课程研究收录。"
+    }
+  ]
+}

@@ -1,0 +1,2310 @@
+{
+  "items": [
+    {
+      "item_id": "NS001",
+      "doc_id": "d_945e278613c45ea1ab617b28c3095783d0e68958dc0546dfcfa9b42b9674fbe1",
+      "pages": 39,
+      "chunks": 100,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS002",
+      "doc_id": "d_6290421ec45e459a16a5ecad86d1162eecfed9f2c2646c7b2728f0503de8f706",
+      "pages": 22,
+      "chunks": 79,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS003",
+      "doc_id": "d_5ec71073cf6b5e6c1b655308803036d22116cb7021df68dbae3db04cd6eaede2",
+      "pages": 39,
+      "chunks": 93,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS004",
+      "doc_id": "d_a468b52ebd895e46f851b80f4aa10c8ef5dc7123e8564a69f809d43b868831cf",
+      "pages": 15,
+      "chunks": 83,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS005",
+      "doc_id": "d_d5d99d95b3d9657de6413f4c26d635238103ef9cf1a28ff1b7fde531cf11f6be",
+      "pages": 74,
+      "chunks": 242,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS006",
+      "doc_id": "d_ef701bb9e898e25f05bd215d616ac08c56bea99f4bab7c297c8a38cff4014e9e",
+      "pages": 32,
+      "chunks": 123,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS007",
+      "doc_id": "d_691caf636ed1203cba485a2c12117d8f6ca2ec92b3666b48e15529e51ed98d8a",
+      "pages": 30,
+      "chunks": 90,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS008",
+      "doc_id": "d_82dc947b1beef2b9334a16dcfadf9a46ef0908f28cb5666fb5516b25493e5179",
+      "pages": 60,
+      "chunks": 160,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS009",
+      "doc_id": "d_5e089d7cbf3d39f694cba052bd290dcec9aa46995b026b9cc10d623e0410df0b",
+      "pages": 132,
+      "chunks": 319,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS010",
+      "doc_id": "d_939b3d7d96af9aa1d1ac750b22847a8b4383ad4369f81e783c7a665cdb3c7c02",
+      "pages": 19,
+      "chunks": 95,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS011",
+      "doc_id": "d_e038215492b06a5f79bab24098c0004c75b0588f99724d8ea2345a6ece0bd53b",
+      "pages": 38,
+      "chunks": 199,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS012",
+      "doc_id": "d_b24f67a66b6756d48474b6c8df8d0ce723f61ffa154cbe662312698f6f801dc2",
+      "pages": 42,
+      "chunks": 125,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS013",
+      "doc_id": "d_a6e9792af68208e5822f815cd2c1bf8d85e779ab66e38ac99104d0b5ec1d27d7",
+      "pages": 55,
+      "chunks": 316,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS014",
+      "doc_id": "d_ff2b899367bfde76fef40a61fd42e3c12406227eb0466b5250a594f3d3ba5b2c",
+      "pages": 23,
+      "chunks": 134,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 5
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS015",
+      "doc_id": "d_0f461b563b25a8c21a04ae7ebc1e1fa2d73949b52913cf1e4bc19b08f1031f76",
+      "pages": 15,
+      "chunks": 26,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS016",
+      "doc_id": "d_e72475d363fa6f836e8bb0bbd43a2a11c0faf3af1d3da0b2244686b2826188ea",
+      "pages": 28,
+      "chunks": 101,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS017",
+      "doc_id": "d_815a153636fdb222c4c47283fe1da8707e6da3858e0dfaa5f2b3215501938028",
+      "pages": 18,
+      "chunks": 25,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS018",
+      "doc_id": "d_1c1487079c535ef4b4a56aeb7c6b0107d50df09cf051f590342df5442ceec0c8",
+      "pages": 28,
+      "chunks": 176,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS019",
+      "doc_id": "d_ce333a49d89c41f7d4a0292507b53170160a555a67b67ce3e4b7ac453ca09662",
+      "pages": 38,
+      "chunks": 96,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS020",
+      "doc_id": "d_314964ac38477f8f231c10e0fbb046bed7fc12ded7cad5ad5e7c2bd510da5c40",
+      "pages": 80,
+      "chunks": 458,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS021",
+      "doc_id": "d_e5e864c23d015b69be17e5b5d51b5b462d2829353a867513414b6728f54589c4",
+      "pages": 16,
+      "chunks": 87,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS022",
+      "doc_id": "d_0fcadae9d35e72c6c903ce6466e105e6ea84358397384a88471080acfbd2d024",
+      "pages": 18,
+      "chunks": 96,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS023",
+      "doc_id": "d_8e172730faf07c9f4ff3fdcc7043f76ed67df6f76066d47df30d693025b6ce77",
+      "pages": 73,
+      "chunks": 469,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS024",
+      "doc_id": "d_5c6c6dba0319142109745ae20c60e85149aad6c78ab9bac9a04a2c0a737de432",
+      "pages": 177,
+      "chunks": 470,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS025",
+      "doc_id": "d_be6604770bb0d0a6c2a81071518e89d5bc2f9b460f91390518804e0a1f454472",
+      "pages": 17,
+      "chunks": 125,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS026",
+      "doc_id": "d_d69f07360e986449d074e71869049bad0f26a1c5f793453d7adf714b9e259629",
+      "pages": 21,
+      "chunks": 143,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS027",
+      "doc_id": "d_698ad9eb84960a1c64c492acaddffa40186234604051f92bbf7900b08740f968",
+      "pages": 72,
+      "chunks": 184,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS028",
+      "doc_id": "d_1d44239a33f07e8bb371f543eccf2554a06e95b2632f452996295c5a21a114e4",
+      "pages": 40,
+      "chunks": 199,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS029",
+      "doc_id": "d_eae1b7c8c60ca6ef036aff539b8ea91f21d3129ecae8ce70f3f89c44a95d69f7",
+      "pages": 5,
+      "chunks": 19,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS030",
+      "doc_id": "d_f98314529433a4dbd03831bdb13589920eb35b436edf33666c2dc007a32aea63",
+      "pages": 55,
+      "chunks": 240,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS031",
+      "doc_id": "d_ef4d58088ab681af8f9342102ed5462486dcd5bc98232f666651b3aa35d746d9",
+      "pages": 36,
+      "chunks": 139,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS032",
+      "doc_id": "d_f17764203551bf7f68815b61205522755d15f476ed9ad6f66e44c956f3183c8d",
+      "pages": 16,
+      "chunks": 25,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS033",
+      "doc_id": "d_f7d5be90b7b166c5afb74db7a89f35e2218ae22667118adee2590b07a0d1edfb",
+      "pages": 18,
+      "chunks": 102,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS034",
+      "doc_id": "d_710cf454523fef56c470478df4bd263548c966f4b5f60c655b3f3d770d648dcb",
+      "pages": 14,
+      "chunks": 81,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS035",
+      "doc_id": "d_6b9cc7a4836af78d4f3355c4dd8f255537632651d1bd6f2dfbb5517ec2f0c3d0",
+      "pages": 17,
+      "chunks": 72,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS036",
+      "doc_id": "d_843e87c69970c2259ced11ebbd96760fbe6d5d8df08c03f3eac7fe4be2ccbc13",
+      "pages": 19,
+      "chunks": 86,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS037",
+      "doc_id": "d_2ff41a0c1e7fd88d5e37a1923e7ee7d012e9fad89a6941943d67e85620aaed71",
+      "pages": 30,
+      "chunks": 68,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS038",
+      "doc_id": "d_5c537d6464ed412a4464066ffcd0153bc76221573e90b0ae024d0de4d6573cfc",
+      "pages": 11,
+      "chunks": 40,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS039",
+      "doc_id": "d_c1a5f9487021246f6934c754630fd66bd5b25138f8dd5304e4885a31b92825ba",
+      "pages": 19,
+      "chunks": 98,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS040",
+      "doc_id": "d_2ee4775f297fdc5010756ed2b65eea976f390e120771769aee87ef4552592000",
+      "pages": 27,
+      "chunks": 133,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS041",
+      "doc_id": "d_4de9170a1e582fdc6145312000f4b3fd1ae373a3745e98e312819a084e939319",
+      "pages": 40,
+      "chunks": 129,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS042",
+      "doc_id": "d_f5cf5eb88dec2fb4275f3af2c4fd7557d904af4b0928cb62b58f77269a261a5f",
+      "pages": 10,
+      "chunks": 45,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS043",
+      "doc_id": "d_8c866881257d9d744becb6a788229e9b96015d099025b14f16ad83bcb780139f",
+      "pages": 20,
+      "chunks": 99,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS044",
+      "doc_id": "d_e2138f11aeeb220412fcbb6f234947e1a3a75007eeef7e8d490f9ca883b384cc",
+      "pages": 22,
+      "chunks": 90,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS045",
+      "doc_id": "d_8cb6a284493ed67e949b0af9d03e6b97c65a4e70f178dcaf3cd79b22f6697109",
+      "pages": 17,
+      "chunks": 68,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS046",
+      "doc_id": "d_39e560d813722971573477fce5095f142740d175ab1a00ca44704181607c0394",
+      "pages": 21,
+      "chunks": 95,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS047",
+      "doc_id": "d_18afb897efa30806a38e9009d0c824daf23694382eaf3c6079c140d0e810b870",
+      "pages": 21,
+      "chunks": 99,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS048",
+      "doc_id": "d_cd1169a233d5552ff574288541f2a9a08218d4bbd5f9a38e7abb669a6bf15471",
+      "pages": 13,
+      "chunks": 62,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS049",
+      "doc_id": "d_d05535561fec1a353637b48967b5a439d253e9f513624895a0a6ba97d99601ee",
+      "pages": 22,
+      "chunks": 121,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS050",
+      "doc_id": "d_a6282c64fac4f35ffcb5a97c0aba948dfa9220e53ece56c9d4995c3c1aa28ff7",
+      "pages": 22,
+      "chunks": 119,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS051",
+      "doc_id": "d_1f4b1dd27a2b52e587c2605f221de01a1159da8c898cd313edd3cf61f9be7e1f",
+      "pages": 35,
+      "chunks": 179,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS052",
+      "doc_id": "d_c25d6d4642cd1cb2052df1c7b6abbb4969bd6262a1191ce92bec686d42423caa",
+      "pages": 69,
+      "chunks": 389,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS053",
+      "doc_id": "d_1e3c0487ab9c8b890fdbb60144c0a7c29bdb594913d8b343d4033e2a5d48726b",
+      "pages": 63,
+      "chunks": 382,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS054",
+      "doc_id": "d_7b8ee4236167238ddd928b04f4c2cb0ca3793d0a1dbadbaaee56047af0bb212a",
+      "pages": 20,
+      "chunks": 79,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS055",
+      "doc_id": "d_074c66c5ef6b158fe1aa30103f6d3c5708bc5881898bc34a7f01206999848d7c",
+      "pages": 12,
+      "chunks": 40,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS056",
+      "doc_id": "d_9530bcc90ac80dfa2d10fa86d8001584d72b1ac8fc69664d50c8715b6b83af09",
+      "pages": 28,
+      "chunks": 120,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS057",
+      "doc_id": "d_d4f53cb333623b0f6e4c5ea3288e753abfbc2ff2efbdef262c64b9d1fb67b51b",
+      "pages": 8,
+      "chunks": 45,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS058",
+      "doc_id": "d_5b74e21941f3d995d4da3c9ad6e23b6d9df4207a8189cea6e132b2d340284f90",
+      "pages": 6,
+      "chunks": 50,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS059",
+      "doc_id": "d_888c929659a8841dea7ea6c8a884ad2e5cf0ecc1501b996cad17c5474f038266",
+      "pages": 21,
+      "chunks": 76,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS060",
+      "doc_id": "d_144e8aa67b417442d6c57d6396276a2f366b147e90686fc65d8ac0ccd2f91780",
+      "pages": 5,
+      "chunks": 38,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS061",
+      "doc_id": "d_b63b534e85b3c8c19be1b43461da96112c59d492c74fbf798d356a4cec06271e",
+      "pages": 10,
+      "chunks": 49,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS062",
+      "doc_id": "d_295aa5e04a48b08051b9cbc55ebc73f52ae9ef73a03dfac5356fad2c7cd187c4",
+      "pages": 93,
+      "chunks": 178,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS063",
+      "doc_id": "d_fe02adcefeb9bc9c03737a062027cf88ba4ae0ab5b7352b87fa0a4d8f0d18317",
+      "pages": 9,
+      "chunks": 82,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS064",
+      "doc_id": "d_bfde6d24007487e7e27f466fe260e96beec8702829f19679cd8b12d51c200d2f",
+      "pages": 29,
+      "chunks": 146,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS065",
+      "doc_id": "d_591d2ff358977c52e83af8305a15fd76f1487a86a28db6c6e3851ca095a0809b",
+      "pages": 1,
+      "chunks": 7,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS066",
+      "doc_id": "d_22e8a28eeb1a71fce63223d045cd2fe0ebcbe2b99094c4dcddc90b30bbbd60cc",
+      "pages": 12,
+      "chunks": 36,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS067",
+      "doc_id": "d_aee149ceeb35e16c6a68b4c4c2788f9411e2b1c6bd64aab9fbbd06740e1b9e05",
+      "pages": 62,
+      "chunks": 465,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS068",
+      "doc_id": "d_d251c425f730e9bc2e4d1fd5f1555ae342bb4e2a95005c2cf8237f9c4a44da27",
+      "pages": 10,
+      "chunks": 50,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS069",
+      "doc_id": "d_6eae057a9faf4f671c3101e0745ed704460c6d3dec77243dfd3a9f2d2ab68970",
+      "pages": 12,
+      "chunks": 88,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS070",
+      "doc_id": "d_bf6e86ec8bea5834bce478b907bf527af76fcecfa31680c0ae8291ab1f915572",
+      "pages": 21,
+      "chunks": 108,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS071",
+      "doc_id": "d_b03fe1f0b44cac29f4f02ed11809f951641b7c3b15669525ef57f15ede7176bf",
+      "pages": 21,
+      "chunks": 126,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS072",
+      "doc_id": "d_6d7bea5547054bd37d90780b9dbb201165018f9faab6a3a21608cb621cfa4bd3",
+      "pages": 32,
+      "chunks": 87,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS073",
+      "doc_id": "d_a017fcc201f83f1b90cd1e96ae3775b1b7b6c71200c0b4c91f6b50fed2496dee",
+      "pages": 36,
+      "chunks": 91,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS074",
+      "doc_id": "d_671ee7169981b369cc767e480b321a42a4675c451f65823379ae44d911ee613e",
+      "pages": 20,
+      "chunks": 105,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS075",
+      "doc_id": "d_3247c3198e4540ac14cb6272ef4a19e8d006013582b060cb4e356e9989b49ac4",
+      "pages": 13,
+      "chunks": 57,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS076",
+      "doc_id": "d_e6902725c8ba809f4601a1ecc3c18914d5df530bcd1ba3353584eda0228bfffc",
+      "pages": 14,
+      "chunks": 67,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS077",
+      "doc_id": "d_a09df7b2977b925736d0dd7bf0087d8e918a6bbdf52cb7af1246965dd06663a7",
+      "pages": 15,
+      "chunks": 67,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS078",
+      "doc_id": "d_685c0757b18763cba6fd5b311fd4389c83b21e5535b567afe10d64c257136309",
+      "pages": 7,
+      "chunks": 41,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS079",
+      "doc_id": "d_7b153cb84078b68c637ebd6514bf290ac7d66000ace22086db5ad860a5f8ccd4",
+      "pages": 12,
+      "chunks": 69,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS080",
+      "doc_id": "d_01c5fd543f01f6bba1891ad8d0803211cb7f7fff130668e50a3df21057b9f1d7",
+      "pages": 13,
+      "chunks": 67,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS081",
+      "doc_id": "d_f12664ded44e4e27e7b8390d46578104772d79989f856a27cc1c7fc08374d929",
+      "pages": 9,
+      "chunks": 60,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS082",
+      "doc_id": "d_cfeeea2b4be5ff20d6fabb187ef334a56649c49dbc08726f40ea9d0377df84e9",
+      "pages": 20,
+      "chunks": 57,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS083",
+      "doc_id": "d_4e8ad32bc53f5572f8e6c64a84762ab7164527500be5bd838ee02f78e7ca30ce",
+      "pages": 45,
+      "chunks": 115,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS084",
+      "doc_id": "d_d71f95f1b10752fafb8c524064195c7ff3747fa339bdfc7f3590265a0213c93a",
+      "pages": 18,
+      "chunks": 49,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS085",
+      "doc_id": "d_896710f3a25d3f5307a57d4cf13992514c87cd646b2e509ede6285f8724eb21d",
+      "pages": 4,
+      "chunks": 24,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS086",
+      "doc_id": "d_3774498dc1f98412299f388da5c6d36bd1cd5ae5f04959158c055756c1ad4d39",
+      "pages": 7,
+      "chunks": 48,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS087",
+      "doc_id": "d_f96939ec8dcf9403410cee17448f17e2bf1cc9a9bd13f446f847d5e11eb9a08f",
+      "pages": 10,
+      "chunks": 83,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS088",
+      "doc_id": "d_27a598c5c538d7c1e9a1e4e60ae081483313db298736e84645dc561cf5e83ef7",
+      "pages": 22,
+      "chunks": 133,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS089",
+      "doc_id": "d_43fc21d7ee0416f7985746a8ff63040674b616b18e14f7aa276e9f55f76d1f79",
+      "pages": 8,
+      "chunks": 51,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS090",
+      "doc_id": "d_6dfdef683deebc40fb63f223e37e3061852615185c43706e541f6b2ded05afd4",
+      "pages": 9,
+      "chunks": 60,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS091",
+      "doc_id": "d_549383e1c47f1e0dcafd162cc5216cb0a3c958cf4431f92a10904ee796e30563",
+      "pages": 6,
+      "chunks": 54,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS092",
+      "doc_id": "d_d911d3b12adccbc08353a5639cd6d2eb3928e5d328d1ee6dbe7926c2645ebbcb",
+      "pages": 7,
+      "chunks": 62,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS093",
+      "doc_id": "d_afdd7981753a6bbb5f1d63c196535e68062bc565873e82fe24ae3c0541a7764d",
+      "pages": 6,
+      "chunks": 48,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS094",
+      "doc_id": "d_45e3639da5f9b59184566363d5364ca502060a735eb7c9f4d8a999f92da50fe1",
+      "pages": 32,
+      "chunks": 66,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS095",
+      "doc_id": "d_56ecc7028476a5dd58cbb4969dad490e38e412db19337f74071d9a65527da7c8",
+      "pages": 6,
+      "chunks": 33,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS096",
+      "doc_id": "d_442bcef21b04c007628c452e21b3122296e76fee727b1fc766e7d2b666ec3634",
+      "pages": 18,
+      "chunks": 95,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS097",
+      "doc_id": "d_620781aec340929b02c704651c8187c2547cab8e3f7d3e196e036a8d91e0c87b",
+      "pages": 8,
+      "chunks": 48,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS098",
+      "doc_id": "d_8f58cc3b4cfe49a8c36835c9713073be754427a1d9e2d7a1bf5761796f2d34e5",
+      "pages": 62,
+      "chunks": 141,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS099",
+      "doc_id": "d_d9eda9687c2df0c0dd6b83410000bf37723c35cda7fc6e24a4a30255254f2832",
+      "pages": 9,
+      "chunks": 57,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "item_id": "NS100",
+      "doc_id": "d_ac0ac25e158d8d06ab4f9e7ae88301876e73736a95d8dec8105613a727679ac4",
+      "pages": 7,
+      "chunks": 44,
+      "searches": [
+        {
+          "mode": "keyword",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "vector",
+          "found_in_top5": true,
+          "rank": 1
+        },
+        {
+          "mode": "hybrid",
+          "found_in_top5": true,
+          "rank": 1
+        }
+      ]
+    }
+  ],
+  "sqlite_integrity": "ok",
+  "old_document_rows_unchanged": true,
+  "all_ready": true,
+  "source_offsets_verified": true,
+  "title_checks": 300,
+  "title_hits": 300
+}

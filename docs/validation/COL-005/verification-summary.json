@@ -1,0 +1,95 @@
+{
+  "work_item": "COL-005",
+  "deployed_commit": "8174362c38fcd62b722b5133692c7e9662355b87",
+  "event_chain_verified": true,
+  "events": 304,
+  "last_event_sha256": "5bd37ded64f039956e9969af188fc6e8a6c33518076db9b0fd3c62b2f16fe9da",
+  "unchanged_other_catalogues": {
+    "18001": {
+      "before_sha256": "c2a1c8ed96f272a2f647b7ad057a8d6f8910947e6697e11ae4927ad9dc27be31",
+      "after_sha256": "c2a1c8ed96f272a2f647b7ad057a8d6f8910947e6697e11ae4927ad9dc27be31",
+      "documents": 2,
+      "unchanged": true
+    },
+    "19000": {
+      "before_sha256": "b880ae3f412107420737550aec70f9e0224b176d5e0a788043e5586ec81bfadd",
+      "after_sha256": "b880ae3f412107420737550aec70f9e0224b176d5e0a788043e5586ec81bfadd",
+      "documents": 50,
+      "unchanged": true
+    },
+    "19010": {
+      "before_sha256": "2e092237b64e0a078be70b4ce7d669e4cefe2d0610970417f19c01459574c025",
+      "after_sha256": "2e092237b64e0a078be70b4ce7d669e4cefe2d0610970417f19c01459574c025",
+      "documents": 6,
+      "unchanged": true
+    },
+    "19020": {
+      "before_sha256": "51e42753c0a28640338fea30c0ff92e46546fafc3fa9ca1c57cf6742ec6496e3",
+      "after_sha256": "51e42753c0a28640338fea30c0ff92e46546fafc3fa9ca1c57cf6742ec6496e3",
+      "documents": 6,
+      "unchanged": true
+    },
+    "19032": {
+      "before_sha256": "e979b8cf4a1b32f16ef9b3da21c5c16c678496b605e8fd681334bbef33633d21",
+      "after_sha256": "e979b8cf4a1b32f16ef9b3da21c5c16c678496b605e8fd681334bbef33633d21",
+      "documents": 6,
+      "unchanged": true
+    },
+    "19040": {
+      "before_sha256": "bb74a3626e6a1c42f002cbc3d9d1488b8e166eec57a40221c1b09e218af5dcdc",
+      "after_sha256": "bb74a3626e6a1c42f002cbc3d9d1488b8e166eec57a40221c1b09e218af5dcdc",
+      "documents": 4,
+      "unchanged": true
+    },
+    "19050": {
+      "before_sha256": "1fecd8af03483fc92c10e85093aea2b332b7a3f2cecfe8e05bd6eaf9ab563ec6",
+      "after_sha256": "1fecd8af03483fc92c10e85093aea2b332b7a3f2cecfe8e05bd6eaf9ab563ec6",
+      "documents": 3,
+      "unchanged": true
+    },
+    "19060": {
+      "before_sha256": "7ee6105692f5b0cb1519ae7248ce2d103e995cbc35f19efbd72bc5ecd8f3e4bc",
+      "after_sha256": "7ee6105692f5b0cb1519ae7248ce2d103e995cbc35f19efbd72bc5ecd8f3e4bc",
+      "documents": 3,
+      "unchanged": true
+    }
+  },
+  "application_source_unchanged": true,
+  "source_zip_sha256": "270bd2acf47f1daf3da57f30fa9858df150fc122a98fd50707115de8359cd668",
+  "local_execution_script_hashes": {
+    "acquire.py": "9efaa4c7385a9ba2e7b82853c0e9c203945bca960aec8958a2abd4b35010f3a1",
+    "adapt_bulk.py": "c50b1c93fcb114e5d9ed2d5853a58e0539a341ce976033de3f3bac98834bc041",
+    "admit_reviewed_source.py": "5cd0c451c06f70a9d4a7b2c22a61b49e997d43825ed8bfa734267fe1c482993f",
+    "alternate_versions.py": "337e88c7ea590bfcd7443d053a30e188c36829987a367a86f391d9795a49854d",
+    "archive.py": "99a3967a0b466238dbae549a8b9513eb11ddbaf1c5a936a565596c54384105aa",
+    "bulk_accession.py": "d1310b381860e4b62b8adca06acf995806c643aeb54831e85491e2bb6e87e1a3",
+    "compact_text_streams.py": "e6037f37a65afb03ee9cebdfab8be0ceda8623fc17586acc23ef97c091592fac",
+    "create_pr.py": "1cb8119bef02c0a6a07e0dfa427a6d184ddc63b37105696d163a34015165c32e",
+    "downsample_derivative.py": "d04dae8941bdc6b166699f2267db175ef7f73c9cbf6e6ddafc1bd95a491c2fab",
+    "final_checks.py": "4c8712cc8cad4126c83b98df743fbf199e6bbd4f76bac32bf619a0366060cb47",
+    "finalize_graphene.py": "ba42384a61c307b4e1e8e24e6c2cf539d3d6e3276d50a66844b27d0870a422c9",
+    "finish_derivatives.py": "0cb2091d3e80ce02190293363d95663903035e887c43615e80233379cc42cf8d",
+    "freeze.py": "f45834e4f493b7608abd74776b8c3e761ed3c2ac850bdde852df1688ddd4a888",
+    "identity_review.py": "315ae6ddd9b2384a8ba8c6624af281210db65d055693dd1de231ec68c8182ab7",
+    "inspect_batch.py": "c85340fd8225bc44d8b2c133c4a3064155b9d68d20a2d748e860fff642e36c0a",
+    "jpeg_access_copies.py": "32b3d137e7156357e3d416e78ab72f433f51e298af8c26a75794646dc9c2ae8d",
+    "preview.py": "c1bc91c0de42f0079fa06b37e66f6298758655ea8f265d719e37f83cbbbc1316",
+    "preview_alternate.py": "b0ef357d8b7d204ac2c8593ee88a64deb1e57ee24b224d2127410a9ba2771044",
+    "primary_links.py": "f72154908a485136b4158bb52550480727e96355655fb75d2180415328e72c06",
+    "probe_sources.py": "b277c27b9ccb897fb531a63b1d070b499a3fad7fd0afb753b96d5b1a4784c14a",
+    "repair_pdfs.py": "ccb0cded7096e7a3bd4ef2ea02c7ae6a4f49704e8393cff98a7efa91f1b94299",
+    "replace_sprint.py": "637870d03b5a9032afcbbe2ed9c4f94f09ca93f583ce3acf70ee2fea503b9ade",
+    "update_sources.py": "6345bddaade66214be57144ca381ef3b3a8d8c00d4f3208a7659ec1f1a927172",
+    "update_sources03.py": "3183af8caa9c0f01e8417e499893ec2eca3770279de8ad2c4d7108cb9902421c",
+    "update_sources04.py": "0b53603790fb57cc7b455e003442c86e7f661c59d599699db7e62c2d4a7ceadf",
+    "update_sources05.py": "a0814cea9817862dd16d196fdae6443828fda18c3339fe412a33e6c52d3cb3ed",
+    "update_sources06.py": "2cc31d99d534e600c3c8f038b036c10ff113d00c0ac389e561bce3efe56569d9",
+    "update_sources07.py": "6802bca85e64215494567752db96476d16dcda80e6a2270d249a9f943facba7b",
+    "update_sources08.py": "e6e476264b01f2d49a7c9b9c214db861ed5572f3f46c81219049380051cb0f70",
+    "update_sources09.py": "24f43bf92efa522b3acf19e232a22db8510231ff1fc0372c7812a0a661c0095d",
+    "verify_old_files.py": "a3655cb9683de3ea71276864fe45d00f46c3030a080eafe4c9b73f9894245a3f",
+    "write_observations.py": "a446ed8393545ee09b95e4bb291ce8b26ff6fb6b88affc8229d95e445032f24c"
+  },
+  "old_75_documents_and_pdfs_unchanged": true,
+  "human_review": "Assistant source review and focused visual checks only; no user human review claimed"
+}

@@ -36,7 +36,7 @@
 | NS030 | 化学材料 | 石墨烯电子结构 | 2008 | [The electronic properties of graphene](https://arxiv.org/abs/0709.1163v2) | 55 |
 | NS031 | 化学材料 | 第一性原理计算 | 2009 | [QUANTUM ESPRESSO: a modular and open-source software project for quantum simulations of materials](https://arxiv.org/abs/0906.2569v2) | 36 |
 | NS032 | 化学材料 | 半导体材料器件 | 2013 | [Band-Like Transport in High Mobility Unencapsulated Single-Layer MoS2 Transistors](https://arxiv.org/abs/1304.5567) | 16 |
-| NS033 | 化学材料 | 合成化学与点击反应 | 2001 | [Click Chemistry: Diverse Chemical Function from a Few Good Reactions](https://doi.org/10.1002/1521-3773(20010601)40:11<2004::AID-ANIE2004>3.0.CO;2-5) | 18 |
+| NS033 | 化学材料 | 合成化学与点击反应 | 2001 | [Click Chemistry: Diverse Chemical Function from a Few Good Reactions](https://doi.org/10.1002/1521-3773%2820010601%2940:11%3C2004::AID-ANIE2004%3E3.0.CO%3B2-5) | 18 |
 | NS034 | 化学材料 | 化学信息学 | 2011 | [Open Babel: An open chemical toolbox](https://doi.org/10.1186/1758-2946-3-33) | 14 |
 | NS035 | 化学材料 | 分子结构可视化 | 2012 | [Avogadro: an advanced semantic chemical editor, visualization, and analysis platform](https://doi.org/10.1186/1758-2946-4-17) | 17 |
 | NS036 | 化学材料 | 分子表示与化学分析 | 2017 | [The Chemistry Development Kit (CDK) v2.0: atom typing, depiction, molecular formulas, and substructure searching](https://doi.org/10.1186/s13321-017-0220-4) | 19 |

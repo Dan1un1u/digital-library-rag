@@ -643,6 +643,47 @@
       "temporary_resolution": "未入正式库。保留rejected/NS076-correspondence及原增强识别结果，改从UAB作者机构取得14页原始论文，并重新运行增强识别；M01在正确原文上仍复现。",
       "correct_source_url": "https://www.uab.edu/medicine/dom/images/files/SPRINT_Research_Group_Randomized_Trial_of_Intensive_vs_Standard_BP_Control_SPRINT_NEJM_26Nov2015_Vol373_Iss22.pdf",
       "application_code_changed": false
+    },
+    {
+      "id": "COL005-U01",
+      "kind": "search_card_display_defect",
+      "status": "open_unfixed",
+      "title": "检索结果卡片显示主题未标注，底层文献主题实际齐全",
+      "item_id": "NS030",
+      "hit_document": {
+        "title": "The electronic properties of graphene",
+        "authors": [
+          "Neto, A. H. Castro",
+          "Guinea, F.",
+          "Peres, N. M. R.",
+          "Novoselov, K. S.",
+          "Geim, A. K."
+        ],
+        "year": 2008,
+        "topics": [
+          "化学材料",
+          "石墨烯电子结构",
+          "自然科学"
+        ],
+        "language": "en"
+      },
+      "grouped_document": {
+        "doc_id": "d_f98314529433a4dbd03831bdb13589920eb35b436edf33666c2dc007a32aea63",
+        "title": "The electronic properties of graphene",
+        "authors": [
+          "Neto, A. H. Castro",
+          "Guinea, F.",
+          "Peres, N. M. R.",
+          "Novoselov, K. S.",
+          "Geim, A. K."
+        ],
+        "year": 2008,
+        "best_rank": 1
+      },
+      "finding": "搜索API的hits[].chunk.document包含topics，但汇总documents[]不带topics；界面doc_card读取汇总对象后显示主题未标注。实际存储与馆藏分类正确。",
+      "ui_evidence": "screenshots/formal-search.png",
+      "temporary_resolution": "临时从馆藏分类页核对主题；保留正确编目数据，展示问题待后续独立修复。",
+      "application_code_changed": false
     }
   ],
   "no_automatic_application_fixes": true
