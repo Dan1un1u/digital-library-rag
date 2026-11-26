@@ -146,12 +146,12 @@ def draw_progress(job):
             st.caption(t('请在左侧阅读回答；原文证据可展开核对。'))
 
 
-def start_ask(body, clarification_choice=None):
+def start_ask(body, clarification=None):
     st.session_state.pop("last_progress", None)
     st.session_state["pending_ask"] = {
         "body": body, "job_id": None, "submission_id": uuid4().hex, "deadline": time.monotonic() + 300,
         "query_values": {key: st.session_state[key] for key in ("query_question", "query_action", "query_mode")},
-        "clarification_choice": clarification_choice,
+        "clarification": clarification,
     }
     # Render disabled controls before starting the request.
     st.rerun()
@@ -197,7 +197,7 @@ def complete_ask(pending, answer):
         st.session_state.pop("last_progress", None)
         st.session_state["ask_failure"] = {
             "submission_id": pending["submission_id"], "error": answer["_failure"],
-            "clarification_choice": pending["clarification_choice"],
+            "clarification": pending["clarification"],
         }
     else:
         st.session_state["answer"] = answer
@@ -227,18 +227,28 @@ def show_answer(answer, pending):
         if failure:
             clarification_form += "_" + failure["submission_id"]
         choice_key = clarification_form + "_choice"
+        detail_key = clarification_form + "_detail"
         busy = pending is not None
-        previous_choice = (pending or failure or {}).get("clarification_choice")
-        if previous_choice is not None and (busy or choice_key not in st.session_state):
-            st.session_state[choice_key] = previous_choice
+        saved = (pending or failure or {}).get("clarification")
+        if saved:
+            for key, value in ((choice_key, saved["option"]), (detail_key, saved["detail"])):
+                if value is not None and (busy or key not in st.session_state):
+                    st.session_state[key] = value
         # A delayed submit from an old prompt or failed attempt must not fire a new form.
         with st.form(clarification_form):
             options = answer["clarification_options"]
-            choice = (st.radio(t('请选择'), options, key=choice_key, disabled=busy) if options
-                      else st.text_input(t('补充说明'), key=choice_key, disabled=busy))
-            if st.form_submit_button(t('补充后重新提问'), disabled=busy) and not busy and choice:
-                start_ask({"question": clarified_question(plan["original_query"], choice),
-                           "filters": st.session_state.get("answer_filters", filters), "history": []}, choice)
+            option = st.radio(t('请选择'), options, index=None, key=choice_key, disabled=busy) if options else None
+            detail = st.text_input(t('补充说明'), key=detail_key, disabled=busy,
+                                   placeholder=t('填写你指的领域或想了解的具体问题'),
+                                   help=t('填写后，以你的补充说明继续提问。') if options else None)
+            if st.form_submit_button(t('补充后重新提问'), disabled=busy) and not busy:
+                clarification = detail.strip() or option
+                if clarification:
+                    start_ask({"question": clarified_question(plan["original_query"], clarification),
+                               "filters": st.session_state.get("answer_filters", filters), "history": []},
+                              {"option": option, "detail": detail})
+                else:
+                    st.warning(t('请选择一个选项或填写补充说明。'))
     elif status == "insufficient_evidence":
         st.warning(t('当前馆藏证据不足，无法据此给出可靠结论。'))
     numbers = citation_numbers(answer)
