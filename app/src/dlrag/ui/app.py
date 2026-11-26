@@ -4,6 +4,7 @@ import hashlib
 import os
 import time
 from urllib.parse import quote
+from uuid import uuid4
 
 import streamlit as st
 from dotenv import dotenv_values
@@ -25,11 +26,15 @@ st.caption(t('查找文献 · 依据原文提问 · 核对每一条引用'))
 base = os.environ.get("API_BASE_URL") or dotenv_values(".env").get("API_BASE_URL") or "http://127.0.0.1:8000"
 
 
+def show_api_failure(error):
+    st.error(error_message(error))
+    st.caption(t('错误标识：') + error["code"])
+
+
 def api(method, path, **kwargs):
     value = call_api(base, method, path, **kwargs)
     if "_failure" in value:
-        st.error(error_message(value["_failure"]))
-        st.caption(t('错误标识：') + value["_failure"]["code"])
+        show_api_failure(value["_failure"])
         return None
     return value
 
@@ -152,30 +157,61 @@ def idle_progress():
             st.caption(t('提交问答后，这里会显示后台实际处理阶段。'))
 
 
-def ask_with_progress(body):
+def start_ask(body, clarification_choice=None):
     st.session_state.pop("last_progress", None)
-    draw_progress({"job_id": str(time.monotonic_ns()), "stage": "queued", "stages": [], "elapsed_seconds": 0})
-    value = api("POST", "/ask/jobs", json=body)
-    if not value:
-        idle_progress()
-        return None
-    deadline = time.monotonic() + 300
-    while time.monotonic() < deadline:
-        job = api("GET", "/ask/jobs/" + value["job_id"])
-        if not job:
-            st.session_state.pop("last_progress", None)
-            idle_progress()
-            return None
+    st.session_state["pending_ask"] = {
+        "body": body, "job_id": None, "submission_id": uuid4().hex, "deadline": time.monotonic() + 300,
+        "query_values": {key: st.session_state[key] for key in ("query_question", "query_action", "query_mode")},
+        "clarification_choice": clarification_choice,
+    }
+    # Render disabled controls before starting the request.
+    st.rerun()
+
+
+def ask_with_progress(pending):
+    if time.monotonic() >= pending["deadline"]:
+        return {"_failure": None}
+    job_id = pending["job_id"]
+    if job_id is None:
+        draw_progress({"stage": "queued", "stages": [], "elapsed_seconds": 0})
+        value = call_api(base, "POST", "/ask/jobs", json=pending["body"],
+                         headers={"Idempotency-Key": pending["submission_id"]})
+        if "_failure" in value:
+            return value
+        job_id = value["job_id"]
+        # A widget event can rerun the script while we wait. Resume the same job.
+        st.session_state["pending_ask"] = {**pending, "job_id": job_id}
+
+    while time.monotonic() < pending["deadline"]:
+        job = call_api(base, "GET", "/ask/jobs/" + job_id)
+        if "_failure" in job:
+            return job
         st.session_state["last_progress"] = job
         draw_progress(job)
         if job["answer"] is not None:
             return job["answer"]
         time.sleep(0.5)
-    st.warning(t('本次等待超过 5 分钟，请检查后端状态。任务可能仍在后台处理。'))
-    return None
+    return {"_failure": None}
 
 
-def show_answer(answer):
+def complete_ask(pending):
+    answer = ask_with_progress(pending)
+    if "_failure" in answer:
+        st.session_state.pop("last_progress", None)
+        st.session_state["ask_failure"] = {
+            "submission_id": pending["submission_id"], "error": answer["_failure"],
+            "clarification_choice": pending["clarification_choice"],
+        }
+    else:
+        st.session_state["answer"] = answer
+        st.session_state["answer_filters"] = pending["body"]["filters"]
+        st.session_state.pop("ask_failure", None)
+        st.session_state.pop("selected_evidence", None)
+    del st.session_state["pending_ask"]
+    st.rerun()
+
+
+def show_answer(answer, pending):
     st.session_state["last_request_id"] = answer["request_id"]
     plan = answer["query_plan"]
     with st.expander(t('系统理解'), expanded=False):
@@ -189,16 +225,23 @@ def show_answer(answer):
         st.caption(t('错误标识：') + answer["error"]["code"])
     elif status == "needs_clarification":
         st.info(answer["clarification_question"])
-        with st.form("clarification"):
+        clarification_form = "clarification_" + answer["request_id"]
+        failure = st.session_state.get("ask_failure")
+        if failure:
+            clarification_form += "_" + failure["submission_id"]
+        choice_key = clarification_form + "_choice"
+        busy = pending is not None
+        previous_choice = (pending or failure or {}).get("clarification_choice")
+        if previous_choice is not None and (busy or choice_key not in st.session_state):
+            st.session_state[choice_key] = previous_choice
+        # A delayed submit from an old prompt or failed attempt must not fire a new form.
+        with st.form(clarification_form):
             options = answer["clarification_options"]
-            choice = st.radio(t('请选择'), options) if options else st.text_input(t('补充说明'))
-            if st.form_submit_button(t('补充后重新提问')) and choice:
-                value = ask_with_progress({"question": clarified_question(plan["original_query"], choice),
-                                           "filters": st.session_state.get("answer_filters", filters), "history": []})
-                if value:
-                    st.session_state["answer"] = value
-                    st.session_state.pop("selected_evidence", None)
-                    st.rerun()
+            choice = (st.radio(t('请选择'), options, key=choice_key, disabled=busy) if options
+                      else st.text_input(t('补充说明'), key=choice_key, disabled=busy))
+            if st.form_submit_button(t('补充后重新提问'), disabled=busy) and not busy and choice:
+                start_ask({"question": clarified_question(plan["original_query"], choice),
+                           "filters": st.session_state.get("answer_filters", filters), "history": []}, choice)
     elif status == "insufficient_evidence":
         st.warning(t('当前馆藏证据不足，无法据此给出可靠结论。'))
     numbers = citation_numbers(answer)
@@ -310,24 +353,30 @@ if page == "馆藏展示":
 elif page == "搜索与问答":
     answer_column, progress_column = st.columns([3.4, 1.25])
     progress_target = progress_column.empty()
+    pending = st.session_state.get("pending_ask")
+    busy = pending is not None
+    if busy:
+        # Streamlit discards incoming widget values when controls are disabled.
+        st.session_state.update(pending["query_values"])
     if st.session_state.get("last_progress"):
         draw_progress(st.session_state["last_progress"])
     else:
         idle_progress()
     with answer_column:
         st.subheader(t('搜索与问答'))
+        st.session_state.setdefault("query_mode", "hybrid")
         with st.form("query"):
-            question = st.text_area(t('想查找或了解什么？'), max_chars=2000, key='query_question')
+            question = st.text_area(t('想查找或了解什么？'), max_chars=2000, key='query_question', disabled=busy)
             actions = ["搜索", "题名或作者", "问答"]
-            action = st.radio(t('操作'), actions, horizontal=True, key='query_action', format_func=widget_labels(actions))
-            mode = st.selectbox(t('搜索方式'), ["keyword", "vector", "hybrid"], index=2,
+            action = st.radio(t('操作'), actions, horizontal=True, key='query_action',
+                              format_func=widget_labels(actions), disabled=busy)
+            mode = st.selectbox(t('搜索方式'), ["keyword", "vector", "hybrid"], index=None,
                                 format_func={"keyword": t('关键词检索'), "vector": t('语义检索'), "hybrid": t('混合检索')}.get,
-                                help=t('用于“搜索”操作。题名或作者直接查馆藏，问答自动组织检索。'), key='query_mode')
-            submitted = st.form_submit_button(t('提交'), on_click=reset_question, args=(st.session_state,))
-        if submitted:
-            st.session_state.pop("answer", None)
-            st.session_state.pop("search_result", None)
-            st.session_state.pop("selected_evidence", None)
+                                help=t('用于“搜索”操作。题名或作者直接查馆藏，问答自动组织检索。'), key='query_mode', disabled=busy)
+            submitted = st.form_submit_button(t('提交'), disabled=busy)
+        if submitted and not busy:
+            reset_question(st.session_state)
+            idle_progress()
             if action == "搜索":
                 value = api("POST", "/search", json={"query": question, "filters": filters, "mode": mode, "top_k": 20})
                 if value:
@@ -338,10 +387,7 @@ elif page == "搜索与问答":
                 if value:
                     st.session_state["search_result"] = value
             else:
-                value = ask_with_progress({"question": question, "filters": filters, "history": []})
-                if value:
-                    st.session_state["answer"] = value
-                    st.session_state["answer_filters"] = filters
+                start_ask({"question": question, "filters": filters, "history": []})
         result = st.session_state.get("search_result")
         if result:
             hits = result.get("hits")
@@ -362,7 +408,14 @@ elif page == "搜索与问答":
                     st.link_button(t('打开该页'), base.rstrip("/") + f"/documents/{chunk['doc_id']}/file#page={chunk['pdf_page']}")
                     st.caption(t('页号按 PDF 文件计数；定位由浏览器决定，未实现高亮。'))
         if st.session_state.get("answer"):
-            show_answer(st.session_state["answer"])
+            show_answer(st.session_state["answer"], pending)
+        if busy:
+            complete_ask(pending)
+        elif failure := st.session_state.get("ask_failure"):
+            if failure["error"] is not None:
+                show_api_failure(failure["error"])
+            else:
+                st.warning(t('本次等待超过 5 分钟，请检查后端状态。任务可能仍在后台处理。'))
 else:
     st.subheader(t('上传与管理'))
     if section == "批量入库":
