@@ -365,7 +365,7 @@ elif page == "搜索与问答":
             actions = ["搜索", "题名或作者", "问答"]
             action = st.radio(t('操作'), actions, horizontal=True, key='query_action',
                               format_func=widget_labels(actions), disabled=busy)
-            mode = st.selectbox(t('搜索方式'), ["keyword", "vector", "hybrid"], index=2,
+            mode = st.selectbox(t('搜索方式'), ["keyword", "vector", "hybrid"], index=None if busy else 2,
                                 format_func={"keyword": t('关键词检索'), "vector": t('语义检索'), "hybrid": t('混合检索')}.get,
                                 help=t('用于“搜索”操作。题名或作者直接查馆藏，问答自动组织检索。'), key='query_mode', disabled=busy)
             submitted = st.form_submit_button(t('提交'), disabled=busy)

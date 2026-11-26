@@ -55,6 +55,7 @@ def test_clarification_is_submitted_once_and_resumes_polling(client, imported, m
     app = AppTest.from_file(str(APP), default_timeout=15).run()
     app.radio(key="navigation_page").set_value("搜索与问答").run()
     app.radio(key="query_action").set_value("问答")
+    app.selectbox(key="query_mode").set_value("vector")
     app.text_input(key="filter_year_from").set_value("2024")
     app.text_area(key="query_question").set_value(QUESTION)
     next(b for b in app.button if b.label == "提交").click().run()
@@ -72,6 +73,7 @@ def test_clarification_is_submitted_once_and_resumes_polling(client, imported, m
     old_submit = next(b for b in app.button if b.label == "提交")
     old_confirm.click().run()
     visible_choice = choice_widget().value
+    assert app.selectbox(key="query_mode").value == "vector"
     disabled = (choice_widget().proto.disabled,
                 next(b for b in app.button if b.label == CONFIRM).proto.disabled,
                 next(b for b in app.button if b.label == "提交").proto.disabled)
@@ -92,6 +94,7 @@ def test_clarification_is_submitted_once_and_resumes_polling(client, imported, m
     assert not app.exception
     assert app.radio(key="query_action").value == "问答"
     assert app.text_area(key="query_question").value == QUESTION
+    assert app.selectbox(key="query_mode").value == "vector"
     assert polls == ["follow-up-1"] * 4
     assert len(follow_ups) == 1
     assert not next(b for b in app.button if b.label == "提交").proto.disabled
