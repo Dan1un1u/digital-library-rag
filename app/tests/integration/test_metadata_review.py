@@ -8,7 +8,7 @@ from fastapi.testclient import TestClient
 from streamlit.testing.v1 import AppTest
 
 from dlrag.api.main import create_app
-from dlrag.api.services import assemble
+from dlrag.api.services import Services, assemble
 from dlrag.shared.config import Settings
 from scripts.seed_demo import create_pdf
 
@@ -71,18 +71,67 @@ def test_failure_keeps_original_metadata_and_index(catalogue, monkeypatch):
     assert service.manifest()["index_version"] == previous
 
 
-def test_recover_from_crash_after_index_publication_before_database_commit(catalogue):
-    client, service, old = catalogue
+@pytest.mark.parametrize("startup", ["assembled", "injected", "injected_retry"])
+def test_recover_from_crash_after_index_publication_before_database_commit(catalogue, startup, monkeypatch):
+    _, service, old = catalogue
     from dlrag.api.metadata_review import prepare_recovery
     current = service.manifest()["index_version"]
     prepare_recovery(service.settings.index_dir, old["doc_id"], old["updated_at"], "uncommitted", current)
     chunks = service.library.list_chunks()
     chunks[0]["document"]["authors"] = ["Uncommitted author"]
     assert service.retriever.build(chunks)["index_version"] != current
-    restarted = assemble(service.settings)
-    assert restarted.manifest()["index_version"] == current
-    assert restarted.library.get_document(old["doc_id"])["authors"] == old["authors"]
+    if startup.startswith("injected"):
+        from dlrag.ingestion.library import LibraryStore
+        from dlrag.retrieval.retriever import Retriever
 
+        settings = service.settings
+        library = LibraryStore(settings.db_path, settings.files_dir)
+        retriever = Retriever(settings.index_dir, service.retriever.backend, service.retriever.settings)
+        retriever.load()
+        assert retriever.get_manifest()["index_version"] != current
+        restarted = Services(settings, library=library, retriever=retriever)
+        if startup == "injected_retry":
+            def unavailable():
+                raise OSError("simulated transient reload error")
+
+            with monkeypatch.context() as patch:
+                patch.setattr(retriever, "load", unavailable)
+                with pytest.raises(OSError, match="simulated transient reload error"):
+                    create_app(services=restarted)
+            assert (settings.index_dir / ".pending-metadata-review.json").exists()
+        app = create_app(services=restarted)
+    else:
+        app = create_app(service.settings)
+
+    with TestClient(app) as client:
+        detail = client.get(f"/documents/{old['doc_id']}").json()["document"]
+        search = client.post("/search", json={"query": "adult education", "mode": "keyword"}).json()
+        assert search["index_version"] == current
+        assert search["hits"][0]["chunk"]["document"]["authors"] == detail["authors"] == old["authors"]
+    assert not (service.settings.index_dir / ".pending-metadata-review.json").exists()
+
+
+
+def test_injected_startup_keeps_the_committed_revision(catalogue):
+    from dlrag.api.metadata_review import prepare_recovery
+    from dlrag.retrieval.retriever import Retriever
+
+    client, service, old = catalogue
+    settings = service.settings
+    retriever = Retriever(settings.index_dir, service.retriever.backend, service.retriever.settings)
+    previous = retriever.load()["index_version"]
+    response = client.patch(f"/documents/{old['doc_id']}/metadata", json=correction(old))
+    assert response.status_code == 200
+    saved = response.json()
+    assert saved["index_version"] != previous
+    intent = prepare_recovery(settings.index_dir, old["doc_id"], old["updated_at"],
+                              saved["document"]["updated_at"], previous)
+    injected = Services(settings, library=service.library, retriever=retriever)
+    with TestClient(create_app(services=injected)) as restarted:
+        result = restarted.post("/search", json={"query": "adult education", "mode": "keyword"}).json()
+        assert result["index_version"] == saved["index_version"]
+        assert result["hits"][0]["chunk"]["document"]["authors"] == saved["document"]["authors"]
+    assert not intent.exists()
 
 def test_existing_version_one_database_migrates_without_reingestion(catalogue):
     _, service, old = catalogue

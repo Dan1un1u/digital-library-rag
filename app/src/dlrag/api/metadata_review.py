@@ -25,7 +25,7 @@ def prepare_recovery(index_dir, doc_id, before, after, previous_index):
     return path
 
 
-def recover_review(library, index_dir):
+def recover_review(library, index_dir, *, reload_index=None):
     index_dir = Path(index_dir)
     intent = index_dir / _RECOVERY_FILE
     if not intent.is_file():
@@ -41,6 +41,9 @@ def recover_review(library, index_dir):
         if not pointer.exists() or json.loads(pointer.read_text(encoding="utf-8")) != previous:
             _write_atomic(pointer, previous)
             restored = True
+    if reload_index is not None:
+        # Keep the intent if loading fails so an injected service can retry safely.
+        reload_index()
     intent.unlink()
     return restored
 

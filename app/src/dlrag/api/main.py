@@ -16,6 +16,12 @@ def create_app(settings=None, services=None):
     from .ask_jobs import AskJobs
     from .document_jobs import DocumentJobs
     service = services or assemble(settings)
+    if services is not None and service.library is not None and service.retriever is not None:
+        # An injected retriever may have loaded an index from an interrupted revision.
+        from .metadata_review import recover_review
+
+        with service.lock:
+            recover_review(service.library, service.settings.index_dir, reload_index=service.retriever.load)
     jobs = AskJobs(service)
     document_jobs = DocumentJobs(service)
     @asynccontextmanager
