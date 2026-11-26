@@ -48,6 +48,39 @@ def test_progress_and_health_reads_work_while_corpus_lock_is_held(client, servic
     assert job["answer"]["evidence"]
 
 
+def test_health_reads_manifest_during_qa_embedding(client, services, imported, monkeypatch):
+    entered, release = threading.Event(), threading.Event()
+    original_ask = services.qa.ask
+    original_encode = services.retriever._encode
+
+    def delayed_encode(texts, dimension):
+        entered.set()
+        assert release.wait(6)
+        return original_encode(texts, dimension)
+
+    def ask_with_retrieval(request, progress):
+        progress("retrieval")
+        assert services.retriever.search(request["question"], mode="vector")
+        return original_ask(request)
+
+    monkeypatch.setattr(services.retriever, "_encode", delayed_encode)
+    monkeypatch.setattr(services.qa, "ask_with_progress", ask_with_retrieval, raising=False)
+    with ThreadPoolExecutor(max_workers=1) as pool:
+        try:
+            response = client.post("/ask/jobs", json={"question": "BM25"})
+            assert response.status_code == 202
+            job_id = response.json()["job_id"]
+            assert entered.wait(2)
+            health = pool.submit(client.get, "/health").result(timeout=1)
+            assert health.status_code == 200
+            assert health.json()["index_version"] == imported["index_version"]
+            assert client.get(f"/ask/jobs/{job_id}").json()["stage"] == "retrieval"
+        finally:
+            release.set()
+
+    assert wait_done(client, job_id)["answer"]["status"] == "answered"
+
+
 def test_queue_capacity_and_safe_exception(client, services, imported):
     jobs = client.app.state.ask_jobs
     jobs.capacity = 1

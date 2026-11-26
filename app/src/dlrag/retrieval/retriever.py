@@ -345,8 +345,9 @@ class Retriever:
             return copy.deepcopy(manifest)
 
     def get_manifest(self) -> dict | None:
-        with self._lock:
-            return copy.deepcopy(self._snapshot[3]) if self._snapshot is not None else None
+        # Build and load publish by replacing the snapshot. Its manifest is immutable after publication.
+        snapshot = self._snapshot
+        return copy.deepcopy(snapshot[3]) if snapshot is not None else None
 
     def get_chunk_ids(self) -> set[str]:
         """评估入口用于校验标注编号；不替代人工语义复核。"""
