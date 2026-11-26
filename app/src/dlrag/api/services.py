@@ -88,7 +88,7 @@ class Services:
         return boundary(IndexManifest, value) if value else None
 
     def health(self):
-        # The retriever copies its index manifest under its own lock. Model work need not block health reads.
+        # Read the published index snapshot without waiting for model work.
         manifest = self.manifest()
         ready = bool(self.library and self.retriever and self.qa and manifest
                      and self.embedding_configured and self.llm_configured)
