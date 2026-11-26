@@ -3,8 +3,9 @@ import httpx
 
 
 def call_api(base, method, path, **kwargs):
+    timeout = 2 if path == "/ask/jobs" or path.startswith("/ask/jobs/") else 300
     try:
-        response = httpx.request(method, base.rstrip("/") + path, timeout=300, trust_env=False, **kwargs)
+        response = httpx.request(method, base.rstrip("/") + path, timeout=timeout, trust_env=False, **kwargs)
         data = response.json()
         if response.is_error and not (path == "/ask" and data.get("status") == "error"):
             return {"_failure": data.get("error", {"code": "SERVICE_ERROR", "message": "服务未能处理请求"})}

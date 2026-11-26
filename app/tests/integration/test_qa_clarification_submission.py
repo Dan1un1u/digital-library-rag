@@ -5,6 +5,7 @@ import pytest
 import streamlit as st
 from streamlit.testing.v1 import AppTest
 
+from qa_ui import wait_for_ui_answer
 from test_ask_jobs import wait_done
 
 
@@ -40,11 +41,8 @@ def test_clarification_is_submitted_once_and_resumes_polling(client, imported, m
             stage = "done"
             if job_id != "initial":
                 polls.append(job_id)
-                if len(polls) == 1:
+                if len(polls) <= 3:
                     stage, answer = "evidence_selection", None
-                if len(polls) in (2, 3):
-                    # Stop this render while the job is in flight, like a browser rerun.
-                    st.stop()
                 if fail_poll and len(polls) == 4:
                     return {"_failure": {"code": "CONNECTION_ERROR", "message": "测试连接中断"}}
             return {"job_id": job_id, "stage": stage, "stages": ["queued", stage],
@@ -59,6 +57,7 @@ def test_clarification_is_submitted_once_and_resumes_polling(client, imported, m
     app.text_input(key="filter_year_from").set_value("2024")
     app.text_area(key="query_question").set_value(QUESTION)
     next(b for b in app.button if b.label == "提交").click().run()
+    wait_for_ui_answer(app)
 
     app.text_input(key="filter_year_from").set_value("2020").run()
     label = "请选择" if options else "补充说明"
@@ -72,6 +71,7 @@ def test_clarification_is_submitted_once_and_resumes_polling(client, imported, m
     old_confirm = next(b for b in app.button if b.label == CONFIRM)
     old_submit = next(b for b in app.button if b.label == "提交")
     old_confirm.click().run()
+    app.run()
     visible_choice = choice_widget().value
     assert app.selectbox(key="query_mode").value == "vector"
     disabled = (choice_widget().proto.disabled,
@@ -91,7 +91,7 @@ def test_clarification_is_submitted_once_and_resumes_polling(client, imported, m
 
     old_confirm.set_value(False)
     old_submit.click().run()
-    assert not app.exception
+    wait_for_ui_answer(app)
     assert app.radio(key="query_action").value == "问答"
     assert app.text_area(key="query_question").value == QUESTION
     assert app.selectbox(key="query_mode").value == "vector"
@@ -106,6 +106,7 @@ def test_clarification_is_submitted_once_and_resumes_polling(client, imported, m
         old_confirm.click().run()
         assert len(follow_ups) == 1
         next(b for b in app.button if b.label == CONFIRM).click().run()
+        wait_for_ui_answer(app)
         assert len(follow_ups) == 2
         assert follow_ups[1][1] != follow_ups[0][1]
         assert not app.error
@@ -133,7 +134,7 @@ def test_rerun_before_post_response_reuses_accepted_job(client, imported, monkey
     app.text_area(key="query_question").set_value("BM25")
     next(b for b in app.button if b.label == "提交").click().run()
     assert len(submissions) == 1
-    app.run()
+    wait_for_ui_answer(app)
 
     assert not app.exception
     assert len(submissions) == 2

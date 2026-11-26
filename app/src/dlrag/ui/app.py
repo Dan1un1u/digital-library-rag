@@ -14,7 +14,7 @@ from dlrag.ui.library import DOMAINS, STYLE, cover_card, discipline, domain_coun
 from dlrag.ui.state import reset_question, reset_upload, reset_view
 from dlrag.ui.metadata_review import render_metadata_review
 from dlrag.ui.document_recovery import render_document_recovery
-from dlrag.shared.i18n import t, labels as widget_labels, error_message, system_message
+from dlrag.shared.i18n import t, labels as widget_labels, error_message, system_message, get_language, use_language
 from dlrag.ui.language import language_selector
 from dlrag.ui.batch_upload import render_batch_upload
 
@@ -121,40 +121,29 @@ def doc_card(doc):
         st.write(t('来源：'), doc["source_url"])
 
 
-progress_target = None
-STAGES = {"queued": t('排队等待'), "waiting": t('等待馆藏读取'), "planning": t('理解问题与生成中英文检索词'),
-          "retrieval": t('检索相关文献'), "evidence_selection": t('重排并选择正文及相邻证据'),
-          "generation": t('模型正在整合回答'), "repair": t('修复回答格式与引用'), "validation": t('核验引用与问题要点覆盖'),
-          "citation_grounding": t('定位支持回答的原文句子'),
-          "coverage_check": t('核对回答与问题要点的关联'),
-          "done": t('处理完成'), "error": t('处理失败')}
+STAGES = {"queued": '排队等待', "waiting": '等待馆藏读取', "planning": '理解问题与生成中英文检索词',
+          "retrieval": '检索相关文献', "evidence_selection": '重排并选择正文及相邻证据',
+          "generation": '模型正在整合回答', "repair": '修复回答格式与引用', "validation": '核验引用与问题要点覆盖',
+          "citation_grounding": '定位支持回答的原文句子',
+          "coverage_check": '核对回答与问题要点的关联',
+          "done": '处理完成', "error": '处理失败'}
 
 
 def draw_progress(job):
-    if progress_target is None:
-        return
-    progress_target.empty()
-    # Static status blocks are replaced on every poll, including repeated stages.
-    # Clearing a placeholder does not release explicit keys within the same run.
-    with progress_target.container(border=True):
+    with st.container(border=True):
         st.markdown(t('**回答进度**'))
-        st.write(STAGES.get(job["stage"], job["stage"]))
+        if job is None:
+            st.caption(t('提交问答后，这里会显示后台实际处理阶段。'))
+            return
+        st.write(t(STAGES.get(job["stage"], job["stage"])))
         st.caption(t('已用时 {p0:.1f} 秒', p0=job['elapsed_seconds']))
         for stage in dict.fromkeys(job.get("stages", [])):
             if stage != job["stage"]:
-                st.caption("✓ " + STAGES.get(stage, stage))
+                st.caption("✓ " + t(STAGES.get(stage, stage)))
         if job["stage"] in {"generation", "repair"}:
             st.caption(t('正在等待模型返回，期间会持续更新用时。'))
         if job["stage"] == "done":
             st.caption(t('请在左侧阅读回答；原文证据可展开核对。'))
-
-
-def idle_progress():
-    if progress_target is not None:
-        progress_target.empty()
-        with progress_target.container(border=True):
-            st.markdown(t('**回答进度**'))
-            st.caption(t('提交问答后，这里会显示后台实际处理阶段。'))
 
 
 def start_ask(body, clarification_choice=None):
@@ -168,34 +157,42 @@ def start_ask(body, clarification_choice=None):
     st.rerun()
 
 
-def ask_with_progress(pending):
+def advance_ask(pending):
     if time.monotonic() >= pending["deadline"]:
-        return {"_failure": None}
+        complete_ask(pending, {"_failure": None})
+        return
     job_id = pending["job_id"]
     if job_id is None:
-        draw_progress({"stage": "queued", "stages": [], "elapsed_seconds": 0})
         value = call_api(base, "POST", "/ask/jobs", json=pending["body"],
                          headers={"Idempotency-Key": pending["submission_id"]})
         if "_failure" in value:
-            return value
-        job_id = value["job_id"]
-        # A widget event can rerun the script while we wait. Resume the same job.
-        st.session_state["pending_ask"] = {**pending, "job_id": job_id}
+            complete_ask(pending, value)
+        else:
+            st.session_state["pending_ask"] = {**pending, "job_id": value["job_id"]}
+        return
 
-    while time.monotonic() < pending["deadline"]:
-        job = call_api(base, "GET", "/ask/jobs/" + job_id)
-        if "_failure" in job:
-            return job
-        st.session_state["last_progress"] = job
+    job = call_api(base, "GET", "/ask/jobs/" + job_id)
+    if "_failure" in job:
+        complete_ask(pending, job)
+        return
+    st.session_state["last_progress"] = job
+    if job["answer"] is not None:
+        complete_ask(pending, job["answer"])
+
+
+def show_ask_progress(language):
+    # One request per fragment run, so waiting never keeps the full page in a rerun.
+    with use_language(language):
+        pending = st.session_state.get("pending_ask")
+        if pending:
+            advance_ask(pending)
+        job = st.session_state.get("last_progress")
+        if pending and job is None:
+            job = {"stage": "queued", "stages": [], "elapsed_seconds": 0}
         draw_progress(job)
-        if job["answer"] is not None:
-            return job["answer"]
-        time.sleep(0.5)
-    return {"_failure": None}
 
 
-def complete_ask(pending):
-    answer = ask_with_progress(pending)
+def complete_ask(pending, answer):
     if "_failure" in answer:
         st.session_state.pop("last_progress", None)
         st.session_state["ask_failure"] = {
@@ -352,16 +349,11 @@ if page == "馆藏展示":
                     st.markdown(cover_card(doc, base), unsafe_allow_html=True)
 elif page == "搜索与问答":
     answer_column, progress_column = st.columns([3.4, 1.25])
-    progress_target = progress_column.empty()
     pending = st.session_state.get("pending_ask")
     busy = pending is not None
     if busy:
         # Streamlit discards incoming widget values when controls are disabled.
         st.session_state.update(pending["query_values"])
-    if st.session_state.get("last_progress"):
-        draw_progress(st.session_state["last_progress"])
-    else:
-        idle_progress()
     with answer_column:
         st.subheader(t('搜索与问答'))
         st.session_state.setdefault("query_mode", "hybrid")
@@ -376,7 +368,6 @@ elif page == "搜索与问答":
             submitted = st.form_submit_button(t('提交'), disabled=busy)
         if submitted and not busy:
             reset_question(st.session_state)
-            idle_progress()
             if action == "搜索":
                 value = api("POST", "/search", json={"query": question, "filters": filters, "mode": mode, "top_k": 20})
                 if value:
@@ -409,13 +400,14 @@ elif page == "搜索与问答":
                     st.caption(t('页号按 PDF 文件计数；定位由浏览器决定，未实现高亮。'))
         if st.session_state.get("answer"):
             show_answer(st.session_state["answer"], pending)
-        if busy:
-            complete_ask(pending)
-        elif failure := st.session_state.get("ask_failure"):
+        if not busy and (failure := st.session_state.get("ask_failure")):
             if failure["error"] is not None:
                 show_api_failure(failure["error"])
             else:
                 st.warning(t('本次等待超过 5 分钟，请检查后端状态。任务可能仍在后台处理。'))
+    with progress_column:
+        render_progress = st.fragment(show_ask_progress, run_every=0.5 if busy else None)
+        render_progress(get_language())
 else:
     st.subheader(t('上传与管理'))
     if section == "批量入库":

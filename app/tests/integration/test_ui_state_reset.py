@@ -4,6 +4,7 @@ import streamlit as st
 from streamlit.testing.v1 import AppTest
 
 from dlrag.ui.state import reset_question, reset_upload, reset_view
+from qa_ui import wait_for_ui_answer
 
 
 def test_scoped_resets_preserve_navigation_and_preferences():
@@ -38,12 +39,14 @@ def test_new_submission_and_navigation_clear_old_progress(client, imported, monk
     next(w for w in app.radio if w.label == '操作').set_value('问答')
     app.text_area[0].set_value('BM25')
     next(w for w in app.button if w.label == '提交').click().run()
+    wait_for_ui_answer(app)
     assert not app.exception
     first_id = app.session_state['last_progress']['job_id']
     next(w for w in app.button if '查看原文' in w.label).click().run()
     assert app.session_state['selected_evidence'] == 'ev_1'
     app.text_area[0].set_value('什么是 BM25')
     next(w for w in app.button if w.label == '提交').click().run()
+    wait_for_ui_answer(app)
     assert not app.exception
     assert app.session_state['last_progress']['job_id'] != first_id
     assert submissions == ['BM25', '什么是 BM25']

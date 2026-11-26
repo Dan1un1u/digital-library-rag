@@ -3,6 +3,7 @@ import json
 from pathlib import Path
 import pytest
 from streamlit.testing.v1 import AppTest
+from qa_ui import wait_for_ui_answer
 from scripts.run_evaluation import collect, evaluate, percentiles, validate_dataset
 from dlrag.ui.client import citation_numbers, clarified_question
 
@@ -73,6 +74,7 @@ def test_streamlit_pages_and_question_citation(client, imported, monkeypatch):
     app.text_area[0].set_value("BM25")
     next(widget for widget in app.radio if widget.label == "操作").set_value("问答")
     next(widget for widget in app.button if widget.label == "提交").click().run()
+    wait_for_ui_answer(app)
     assert not app.exception
     assert any("查看原文" in button.label for button in app.button)
     assert any('<sup><a href=' in item.value and '/sources/' in item.value for item in app.markdown)
