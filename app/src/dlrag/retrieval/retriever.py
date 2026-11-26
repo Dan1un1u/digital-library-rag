@@ -288,6 +288,10 @@ class Retriever:
                 if stage.exists():
                     shutil.rmtree(stage)
 
+    def invalidate_snapshot(self):
+        with self._lock:
+            self._snapshot = None
+
     def load(self) -> dict:
         with self._lock:
             try:

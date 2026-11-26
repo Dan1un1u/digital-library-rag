@@ -264,12 +264,20 @@ class LibraryStore:
         return str(path) if path.is_file() else None
 
     def set_document_status(self, doc_id, status, error=None):
+        self.set_documents_status([doc_id], status, error)
+
+    def set_documents_status(self, doc_ids, status, error=None):
         if status not in ('uploaded','parsing','indexing','ready','failed'):
             raise ProjectError('INVALID_REQUEST', 'Invalid status')
         with self._connect() as db:
-            if status in ('ready','indexing') and not db.execute('SELECT 1 FROM chunks WHERE doc_id=?', (doc_id,)).fetchone():
-                raise ProjectError('INVALID_REQUEST', 'Cannot serve a document without chunks')
-            cursor = db.execute('UPDATE documents SET status=?,error_code=?,error_message=?,updated_at=? WHERE doc_id=?',
-                (status,(error or {}).get('code'),(error or {}).get('message'),datetime.now(timezone.utc).isoformat(),doc_id))
-            if cursor.rowcount != 1:
-                raise ProjectError('NOT_FOUND', doc_id)
+            db.execute('BEGIN IMMEDIATE')
+            for doc_id in doc_ids:
+                if status in ('ready','indexing') and not db.execute(
+                        'SELECT 1 FROM chunks WHERE doc_id=?', (doc_id,)).fetchone():
+                    raise ProjectError('INVALID_REQUEST', 'Cannot serve a document without chunks')
+                cursor = db.execute(
+                    'UPDATE documents SET status=?,error_code=?,error_message=?,updated_at=? WHERE doc_id=?',
+                    (status, (error or {}).get('code'), (error or {}).get('message'),
+                     datetime.now(timezone.utc).isoformat(), doc_id))
+                if cursor.rowcount != 1:
+                    raise ProjectError('NOT_FOUND', doc_id)

@@ -1,5 +1,7 @@
 """Batch isolation, recovery, and exact incrementality through the normal entry points."""
+import hashlib
 import json
+import sqlite3
 import time
 from pathlib import Path
 
@@ -8,7 +10,7 @@ from fastapi.testclient import TestClient
 import pytest
 
 from dlrag.api.main import create_app
-from dlrag.api.services import assemble
+from dlrag.api.services import Services, assemble
 from dlrag.retrieval.retriever import Retriever
 from dlrag.shared.config import Settings
 from scripts.seed_demo import create_pdf
@@ -18,7 +20,7 @@ from scripts.seed_demo import create_pdf
 def library(tmp_path):
     root = tmp_path / "library"
     service = assemble(Settings(app_mode="mock", data_dir=root, _env_file=None))
-    with TestClient(create_app(services=service)) as client:
+    with TestClient(create_app(services=service), raise_server_exceptions=False) as client:
         yield client, service
 
 
@@ -101,6 +103,92 @@ def test_failed_batch_retries_from_parsed_documents(library, tmp_path, monkeypat
     assert len(service.library.list_documents()) == 2
     assert retry["index_version"] != previous
 
+
+
+@pytest.mark.parametrize("failure", ["statement", "commit"])
+@pytest.mark.parametrize("has_old_index", [True, False])
+def test_ready_write_failure_preserves_publication_and_retries(library, tmp_path, has_old_index, failure):
+    client, service = library
+    previous = None
+    if has_old_index:
+        previous = service.ingest(str(pdf(tmp_path, "previous baseline")), metadata("previous baseline"))["index_version"]
+    pointer = service.settings.index_dir / "current.json"
+    previous_pointer = pointer.read_bytes() if has_old_index else None
+    entries = [(pdf(tmp_path, name), metadata(name)) for name in ("QuasarProof", "NebulaProof")]
+    ids = {"d_" + hashlib.sha256(item.read_bytes()).hexdigest() for item, _ in entries}
+    failed = max(ids)
+    with sqlite3.connect(service.settings.db_path) as db:
+        if failure == "commit":
+            db.execute("CREATE TABLE test_parent (id TEXT PRIMARY KEY)")
+            db.execute("CREATE TABLE test_child (id TEXT REFERENCES test_parent(id) DEFERRABLE INITIALLY DEFERRED)")
+            fault = "INSERT INTO test_child VALUES (NEW.doc_id);"
+        else:
+            fault = "SELECT RAISE(ABORT, 'simulated status write rejection');"
+        db.execute(f"""
+            CREATE TRIGGER fail_second_ready BEFORE UPDATE OF status ON documents
+            WHEN NEW.status = 'ready' AND NEW.doc_id = '{failed}'
+            BEGIN {fault} END
+        """)
+
+    result = send_batch(client, entries)
+    assert result["index_error"]
+    assert {item["status"] for item in result["items"]} == {"indexing"}
+    assert {item["doc_id"] for item in result["items"]} == ids
+    assert result["index_version"] == client.get("/health").json()["index_version"] == previous
+    catalogue = client.get("/documents").json()["documents"]
+    assert not ({row["doc_id"] for row in catalogue} & ids)
+    found = client.post("/search", json={"query": "QuasarProof NebulaProof", "mode": "keyword"})
+    if has_old_index:
+        assert pointer.read_bytes() == previous_pointer
+        assert found.status_code == 200 and found.json()["index_version"] == previous
+        assert not ({row["doc_id"] for row in found.json()["documents"]} & ids)
+    else:
+        assert found.status_code == 503
+        assert not pointer.exists()
+
+    # Parsed data remain retryable and the successful retry publishes both documents.
+    with sqlite3.connect(service.settings.db_path) as db:
+        db.execute("DROP TRIGGER fail_second_ready")
+    retry = send_batch(client, entries)
+    assert {item["status"] for item in retry["items"]} == {"ready"}
+    assert {item["doc_id"] for item in retry["items"]} == ids
+    assert retry["index_version"] == client.get("/health").json()["index_version"]
+    assert ids <= {row["doc_id"] for row in client.get("/documents").json()["documents"]}
+
+
+@pytest.mark.parametrize("startup", ["assembled", "injected"])
+@pytest.mark.parametrize("committed", [False, True])
+def test_restart_reconciles_an_interrupted_index_publication(library, tmp_path, startup, committed):
+    from dlrag.api.index_publication import prepare_index_publication
+    from dlrag.ingestion.library import LibraryStore
+
+    _, service = library
+    previous = service.ingest(str(pdf(tmp_path, "prior article")), metadata("prior article"))["index_version"]
+    settings = service.settings
+    entry = pdf(tmp_path, "RestartCase")
+    parsed = service.library.ingest_pdf(str(entry), metadata("RestartCase"), settings.chunking_config.model_dump())
+    new_doc_id = parsed["doc_id"]
+    intent = prepare_index_publication(settings.index_dir, [new_doc_id])
+    written = service.retriever.build(service.library.list_chunks(include_indexing=True))["index_version"]
+    assert written != previous
+    if committed:
+        service.library.set_documents_status([new_doc_id], "ready")
+
+    if startup == "injected":
+        store = LibraryStore(settings.db_path, settings.files_dir)
+        retriever = Retriever(settings.index_dir, service.retriever.backend, service.retriever.settings)
+        retriever.load()
+        assert retriever.get_manifest()["index_version"] == written
+        app = create_app(services=Services(settings, library=store, retriever=retriever))
+    else:
+        app = create_app(settings)
+    with TestClient(app) as client:
+        catalogue = client.get("/documents").json()["documents"]
+        hits = client.post("/search", json={"query": "RestartCase", "mode": "keyword"}).json()
+        assert (new_doc_id in {row["doc_id"] for row in catalogue}) == committed
+        assert (new_doc_id in {row["doc_id"] for row in hits["documents"]}) == committed
+        assert hits["index_version"] == (written if committed else previous)
+    assert not intent.exists()
 
 def test_reload_reuses_vectors_and_reencodes_changed_title(library, tmp_path, monkeypatch):
     _, service = library

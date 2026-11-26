@@ -3,6 +3,8 @@ from __future__ import annotations
 
 import importlib
 import json
+import logging
+import sqlite3
 import threading
 from datetime import datetime, timezone
 from pathlib import Path
@@ -12,6 +14,10 @@ from dlrag.shared.config import Settings
 from dlrag.shared.models import AnswerResponse, Chunk, Document, IndexManifest, RetrievalHit, error_answer
 from dlrag.shared.disciplines import DisciplineError, require_discipline
 from dlrag.ingestion.errors import ProjectError as IngestionError
+from .index_publication import prepare_index_publication, recover_index_publication
+
+
+logger = logging.getLogger(__name__)
 
 
 class ProjectError(Exception):
@@ -53,6 +59,20 @@ class Services:
         self.issues = list(issues or [])
         self.embedding_configured, self.llm_configured = embedding_configured, llm_configured
         self.lock = threading.RLock()
+        if library is not None and retriever is not None:
+            self._recover_index_publication()
+
+    def _recover_index_publication(self):
+        try:
+            recovered = recover_index_publication(self.library, self.settings.index_dir)
+        except Exception:
+            # Do not serve a speculative snapshot when the recovery record cannot be reconciled.
+            self.retriever.invalidate_snapshot()
+            raise
+        if recovered:
+            self.retriever.invalidate_snapshot()
+            if (self.settings.index_dir / "current.json").exists():
+                self.retriever.load()
 
     def require(self, name):
         value = getattr(self, name)
@@ -87,22 +107,34 @@ class Services:
     def rebuild(self):
         with self.lock:
             store, retriever = self.require("library"), self.require("retriever")
+            self._recover_index_publication()
             candidates = store.list_chunks(include_indexing=True)
             for chunk in candidates:
                 boundary(Chunk, chunk)
             pending_ids = {c["doc_id"] for c in candidates}
-            pending = [d for d in store.list_documents(include_nonready=True)
+            pending = [d["doc_id"] for d in store.list_documents(include_nonready=True)
                        if d["doc_id"] in pending_ids and d["status"] == "indexing"]
+            intent = prepare_index_publication(self.settings.index_dir, pending) if pending else None
             try:
                 manifest = boundary(IndexManifest, retriever.build(candidates))
+                if pending:
+                    store.set_documents_status(pending, "ready")
             except Exception as exc:
-                info = {"code": getattr(exc, "code", "INDEX_BUILD_FAILED"),
-                        "message": "索引重建失败；旧有效索引保持服务，请修复配置后重试。"}
-                for doc in pending:
-                    store.set_document_status(doc["doc_id"], "indexing", info)
+                if intent is not None:
+                    self._recover_index_publication()
+                    info = {"code": getattr(exc, "code", "INDEX_BUILD_FAILED"),
+                            "message": "索引发布未完成，文献保留在待索引状态。"}
+                    try:
+                        store.set_documents_status(pending, "indexing", info)
+                    except sqlite3.Error:
+                        logger.warning("Unable to record indexing diagnostics for rolled-back documents")
                 raise
-            for doc in pending:
-                store.set_document_status(doc["doc_id"], "ready")
+            if intent is not None:
+                try:
+                    intent.unlink()
+                except OSError:
+                    # The database committed. Startup can remove the remaining intent safely.
+                    logger.warning("Committed index publication left a recovery record to clean up")
             self.issues = [i for i in self.issues if i.get("component") != "index"]
             return manifest
 
@@ -164,8 +196,12 @@ class Services:
                 try:
                     manifest = self.rebuild()
                 except Exception:
-                    index_error = {"code": "INDEX_BUILD_FAILED",
-                                   "message": "索引生成失败。已保留旧索引，可重新提交本批。"}
+                    manifest = self.manifest()
+                    index_error = {
+                        "code": "INDEX_BUILD_FAILED",
+                        "message": "索引发布失败，当前仍可使用原索引。可重新提交本批。" if manifest
+                        else "索引暂不可用。可在服务恢复后重新提交本批。",
+                    }
             if progress:
                 progress("document_saving")
             for item in items:
@@ -270,6 +306,8 @@ def assemble(settings: Settings) -> Services:
                                            dimension=settings.embedding_dimension,
                                            base_url=settings.siliconflow_base_url)
             service.embedding_configured = bool(key)
+        if service.library is not None:
+            recover_index_publication(service.library, settings.index_dir)
         service.retriever = Retriever(str(settings.index_dir), backend,
                                      {"candidate_k": 20, "rrf_k": 60, "normalize_embeddings": True,
                                       "chunking_config": actual_chunking})
