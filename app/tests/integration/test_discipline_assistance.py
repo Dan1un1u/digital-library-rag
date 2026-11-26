@@ -163,7 +163,7 @@ def test_upload_page_prefills_llm_selection_and_displays_its_source(client, serv
     app.sidebar.radio[0].set_value('上传与管理').run()
     assert not app.exception
     assert app.selectbox(key='upload_domain').value == '自然科学'
-    assert any('LLM 辅助分类' in w.value for w in app.markdown)
+    assert any('识别方式：LLM 辅助分类' in w.value for w in app.caption)
 
 
 def test_classification_timeout_leaves_an_editable_pending_preview(client, services, monkeypatch):

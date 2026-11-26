@@ -138,7 +138,7 @@ def test_ui_lookup_opt_in_and_external_evidence_render(client, imported, monkeyp
     next(w for w in app.button if w.label == "重新识别文献信息").click().run()
     assert not app.exception and seen[-1] is True
     assert app.text_input(key="upload_year").value == "2024"
-    assert any("外部出版记录" in w.value for w in app.markdown)
+    assert any("识别方式：外部出版记录" in w.value for w in app.caption)
     assert any("published-print: 2024" in c.value for c in app.caption)
     assert app.text_input(key="upload_year").label == "版本年份（可留空）"
     assert any("日期依据：印刷出版日期" in c.value for c in app.caption)
