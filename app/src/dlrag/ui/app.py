@@ -360,12 +360,13 @@ elif page == "搜索与问答":
         idle_progress()
     with answer_column:
         st.subheader(t('搜索与问答'))
+        st.session_state.setdefault("query_mode", "hybrid")
         with st.form("query"):
             question = st.text_area(t('想查找或了解什么？'), max_chars=2000, key='query_question', disabled=busy)
             actions = ["搜索", "题名或作者", "问答"]
             action = st.radio(t('操作'), actions, horizontal=True, key='query_action',
                               format_func=widget_labels(actions), disabled=busy)
-            mode = st.selectbox(t('搜索方式'), ["keyword", "vector", "hybrid"], index=None if busy else 2,
+            mode = st.selectbox(t('搜索方式'), ["keyword", "vector", "hybrid"], index=None,
                                 format_func={"keyword": t('关键词检索'), "vector": t('语义检索'), "hybrid": t('混合检索')}.get,
                                 help=t('用于“搜索”操作。题名或作者直接查馆藏，问答自动组织检索。'), key='query_mode', disabled=busy)
             submitted = st.form_submit_button(t('提交'), disabled=busy)
