@@ -223,32 +223,107 @@ def test_two_bibliography_paragraphs_are_not_mistaken_for_mechanism_body():
     assert reference_features(body)[0] is False
 
 
-def test_simple_generation_does_not_need_to_emit_coverage_or_sentence_numbers():
-    plan,value=demo_outputs('BM25','answered');plan['answer_requirements']=['是什么？']
-    class Ranker:
-        model='test'
-        def rerank(self,query,hits):
-            result=copy.deepcopy(hits)
-            for h in result:
-                h['semantic_relevance']=.9
-                h.setdefault('local_rerank',{})['score']=.9
-                h['scores']['rerank']=.9
-            return result
-    llm=ScriptedMockLLM([plan,value])
-    r=QAEngine(FakeRetriever(),llm,{'sentence_citations_required':True},reranker=Ranker()).ask({'question':'BM25'})
-    assert r['status']=='answered' and len(llm.calls)==2
-    assert llm.calls[1][1]['answer_format']=='simple'
-    assert r['coverage'][0]['claim_indices']==[1]
-    assert r['claims'][0]['citations'][0]['highlights']
+class RecordingReranker:
+    model = "test"
+
+    def __init__(self):
+        self.calls = []
+        self.batches = []
+
+    @staticmethod
+    def rank(hits):
+        result = copy.deepcopy(hits)
+        for hit in result:
+            hit["semantic_relevance"] = .9
+            hit.setdefault("local_rerank", {})["score"] = .9
+            hit["scores"]["rerank"] = .9
+        return result
+
+    def rerank(self, query, hits):
+        self.calls.append((query, len(hits)))
+        return self.rank(hits)
+
+    def rerank_many(self, tasks):
+        self.batches.append([(query, len(hits)) for query, hits in tasks])
+        return [self.rank(hits) for _, hits in tasks]
 
 
-def test_coverage_mapping_reports_weak_association_as_gap():
-    from dlrag.qa.coverage import map_coverage
-    value=demo_outputs('BM25','answered')[1]
-    class Ranker:
-        def rerank(self,query,hits):
-            rows=copy.deepcopy(hits)
-            for h in rows:h['semantic_relevance']=.1
-            return rows
-    row=map_coverage(value,['如何训练？'],Ranker())[0]
-    assert row['claim_indices']==[] and row['gap']
+def test_generation_preserves_partial_scope_without_another_model_call():
+    plan, value = demo_outputs("BM25", "answered")
+    requirement = "BM25 和一般向量量化如何工作？"
+    plan["answer_requirements"] = [requirement]
+    scope = {"requirement": requirement, "claim_indices": [1],
+             "gap": "本次证据只解释 BM25，缺少一般向量量化的流程。"}
+    value["coverage"] = [scope]
+    ranker, stages = RecordingReranker(), []
+    llm = ScriptedMockLLM([plan, value])
+    result = QAEngine(FakeRetriever(), llm, {"sentence_citations_required": True},
+                      reranker=ranker).ask({"question": "BM25"}, progress=stages.append)
+
+    assert result["status"] == "answered" and len(llm.calls) == 2
+    assert llm.calls[1][1]["answer_format"] == "simple"
+    assert result["coverage"] == [scope]
+    assert result["claims"][0]["citations"][0]["highlights"]
+    assert "coverage_check" not in stages and len(ranker.batches) == 1  # The grounding batch.
+
+
+@pytest.mark.parametrize("coverage", [None, [{"requirement": "如何工作？", "claim_indices": [2], "gap": ""}]])
+def test_missing_or_invalid_optional_scope_keeps_the_grounded_answer(coverage):
+    plan, value = demo_outputs("BM25", "answered")
+    plan["answer_requirements"] = ["如何工作？"]
+    if coverage is not None:
+        value["coverage"] = coverage
+    llm = ScriptedMockLLM([plan, value])
+    ranker = RecordingReranker()
+    result = QAEngine(FakeRetriever(), llm, {"sentence_citations_required": True},
+                      reranker=ranker).ask({"question": "BM25"})
+
+    assert result["status"] == "answered" and result["coverage"] == []
+    assert len(llm.calls) == 2 and len(ranker.batches) == 1
+    assert result["claims"][0]["citations"][0]["highlights"]
+
+
+def test_question_and_mechanism_share_one_batch_when_supported():
+    from dlrag.qa.semantic_reranker import rank_question_and_mechanism
+
+    ranker = RecordingReranker()
+    hits = FakeRetriever().search("question")
+    result = rank_question_and_mechanism(ranker, "question", "mechanism", hits)
+
+    assert ranker.calls == []
+    assert ranker.batches == [[("question", 1), ("Find explanations of the following mechanisms: mechanism", 1)]]
+    assert result[0]["aspect_scores"] == {"question": .9, "mechanism": .9}
+
+
+@pytest.mark.parametrize("intent,expected", [("explain", 4), ("compare", 8)])
+def test_semantic_shortlist_uses_local_ranking_without_truncating_comparisons(intent, expected):
+    from dlrag.qa.demo import demo_chunk
+
+    question = "BM25 如何工作？"
+
+    class DistinctQueries(FakeRetriever):
+        def search(self, query, filters=None, mode="hybrid", top_k=20):
+            hits = super().search(query, filters, mode, top_k)
+            if query != question:
+                for hit in hits:
+                    hit["chunk"]["chunk_id"] += "_other"
+                    hit["chunk"]["doc_id"] += "_other"
+            return hits
+
+    chunks = []
+    for n in range(4):
+        chunk = demo_chunk()
+        chunk.update(chunk_id=f"test_{n}", pdf_page=n + 1, text=f"BM25 explanation number {n}.")
+        chunk.update(page_char_end=len(chunk["text"]), char_count=len(chunk["text"]))
+        chunks.append(chunk)
+    plan, value = demo_outputs(question, "answered")
+    plan.update(intent=intent, english_query="lexical matching scoring")
+    value["claims"][0]["evidence_chunk_ids"] = ["source_1"]
+    ranker = RecordingReranker()
+    response = QAEngine(DistinctQueries(chunks), ScriptedMockLLM([plan, value]),
+                        {"retrieval_top_k": 4, "max_evidence_chunks": 2}, reranker=ranker).ask({"question": question})
+
+    assert response["status"] == "answered"
+    assert response["diagnostics"]["retrieved_unique_chunks"] == 8
+    assert ranker.calls[0][1] == expected
+    assert response["diagnostics"]["selected_chunks"] == 2

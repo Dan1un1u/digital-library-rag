@@ -221,12 +221,16 @@ def show_answer(answer):
             st.caption(t('回答范围：') + limitation)
         if answer.get('coverage'):
             with st.expander(t('问题要点与回答范围')):
-                for row in answer['coverage']:
-                    st.write(row['requirement'])
-                    if row['claim_indices']:
-                        st.caption(t('可对照正文中的相关说明') + (t('；仍有缺口：') + row['gap'] if row['gap'] else ''))
-                    else:
-                        st.caption(t('资料缺口：') + row['gap'])
+                by_number = dict(enumerate(answer["claims"], 1))
+                for row in answer["coverage"]:
+                    st.write(row["requirement"])
+                    for index in row["claim_indices"]:
+                        claim = by_number.get(index)
+                        if claim:
+                            st.markdown(claim_html(claim, answer["evidence"], numbers, base, answer["index_version"]),
+                                        unsafe_allow_html=True)
+                    if row["gap"].strip():
+                        st.caption(t('资料缺口：') + row["gap"])
         st.markdown(t('**核对原文**'))
         for eid in numbers:
             if st.button(t('[{p0}] 查看原文', p0=numbers[eid]), key="cite_" + eid):

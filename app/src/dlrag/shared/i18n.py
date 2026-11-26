@@ -91,7 +91,6 @@ MESSAGES = {
     '当前馆藏证据不足，无法据此给出可靠结论。': 'The collection does not contain enough evidence for a reliable answer.',
     '检索去重 {p0} 个片段 · 重排候选 {p1} 个 · 选入上下文 {p2} 个 · 最终引用 {p3} 个': '{p0} unique passages · {p1} ranking candidates · {p2} context passages · {p3} cited passages',
     '### 回答': '### Answer', '回答范围：': 'Scope: ', '问题要点与回答范围': 'Question coverage and answer scope',
-    '可对照正文中的相关说明': 'See the corresponding explanation in the answer', '；仍有缺口：': '; remaining gap: ',
     '资料缺口：': 'Missing evidence: ', '**核对原文**': '**Check the sources**', '[{p0}] 查看原文': '[{p0}] View source',
     '[{p0}] {p1} · PDF 第 {p2} 页': '[{p0}] {p1} · PDF page {p2}',
     '此回答未包含句子定位信息，重新提问后可使用句子高亮。': 'This answer has no sentence locations. Ask again to enable sentence highlights.',

@@ -22,20 +22,3 @@ def validate_coverage(value, requirements):
         used.update(indices)
     if used != set(range(1,len(value['claims'])+1)):
         invalid('存在未回应任何问题要点的结论')
-
-
-def map_coverage(value, requirements, reranker):
-    """Map facets to generated statements; semantic association, not a fact-check score."""
-    rows = []
-    candidates = [{'rank':i,'chunk':{'chunk_id':str(i),'text':claim['text']},'scores':{}}
-                  for i,claim in enumerate(value['claims'],1)]
-    ranked_tasks = (reranker.rerank_many([(requirement, candidates) for requirement in requirements])
-                    if callable(getattr(reranker, 'rerank_many', None)) else
-                    [reranker.rerank(requirement, candidates) for requirement in requirements])
-    for requirement, ranked in zip(requirements, ranked_tasks):
-        top = ranked[0]
-        score = top['semantic_relevance']
-        indices = [int(top['chunk']['chunk_id'])] if score >= .35 else []
-        gap = '' if score >= .65 else ('本次回答只部分回应此要点。' if indices else '本次回答尚未直接说明此要点。')
-        rows.append({'requirement':requirement,'claim_indices':indices,'gap':gap})
-    return rows
