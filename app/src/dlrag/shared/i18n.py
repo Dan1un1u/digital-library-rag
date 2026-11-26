@@ -40,6 +40,16 @@ MESSAGES = {
     '浏览所属学科': 'Browse by subject', '当前显示 {p0} 篇文献': 'Documents shown: {p0}',
     '暂无已分类文献，上传时可指定所属学科。': 'No classified documents yet. Choose a subject when importing a document.',
     '暂无可用文献，请在“上传与管理”添加 PDF。': 'No documents yet. Add a PDF in Upload and manage.',
+    '质量复核与纠错': 'Metadata review and correction', '仅显示建议复核的文献': 'Show only suggested reviews',
+    '选择已入库文献': 'Select a catalogue record', '作者字段为空': 'No authors recorded',
+    '作者名单含重复项': 'Duplicate author entries', '作者字段与题名文字重合': 'Author text overlaps the title',
+    '请确认所属学科': 'Check the subject', '请核对 PDF 版本年份': 'Check the year of this PDF version',
+    '证据页（可选）': 'Evidence page (optional)', '证据页 {p0}': 'Evidence page {p0}',
+    '复核说明（可选）': 'Review note (optional)', '保存修订': 'Save correction',
+    '版本年份须为整数。': 'Enter a whole year.', '正在保存修订并更新检索…': 'Saving the correction and updating search…',
+    '修订记录': 'Revision history', '版本年份': 'Version year', '学科与主题': 'Subject and topics',
+    '字段': 'Field', '修改前': 'Before', '修改后': 'After',
+    '已保存文献修订。': 'Correction saved.', '文献字段没有变化。': 'The metadata is already up to date.',
     '精选馆藏推荐 · 封面采用文献 PDF 首页，点击封面阅读原文。当前未统计阅读热度，展示顺序不代表访问量排名。': 'Browse selected documents by their PDF covers. Select a cover to read the original. The order does not represent readership rankings.',
     '阅读原文 ↗': 'Read original ↗', '阅读原文': 'Read original', 'PDF 首页': 'PDF first page',
     '想查找或了解什么？': 'What would you like to find or understand?', '操作': 'Action', '搜索': 'Search', '问答': 'Q&A',
@@ -159,6 +169,7 @@ def labels(options):
 
 
 ERRORS = {
+    'METADATA_CONFLICT': 'This record has changed. Refresh it before saving.',
     'INVALID_REQUEST': 'Check the required fields, year range and search parameters.',
     'UNSUPPORTED_FILE': 'Only PDF files are supported.', 'UPLOAD_TOO_LARGE': 'The file exceeds the configured upload limit.',
     'INVALID_PDF': 'The PDF could not be read. Use a nonempty, unencrypted PDF.',

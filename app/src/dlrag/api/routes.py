@@ -10,6 +10,7 @@ from dlrag.shared.models import AskRequest, Chunk, Document, Feedback, Filters, 
 from dlrag.shared.disciplines import DisciplineError, require_discipline
 from dlrag.ingestion.catalogue import find_catalogue_records
 from .services import ProjectError, boundary, http_status
+from dlrag.ingestion.metadata_review import MetadataCorrection, review_issues
 
 router = APIRouter()
 
@@ -159,6 +160,28 @@ def document(request: Request, doc_id: str):
         if not doc:
             raise ProjectError("NOT_FOUND", "文献不存在")
         return {"document": boundary(Document, doc)}
+
+
+@router.get("/documents/metadata/review")
+def metadata_review_queue(request: Request):
+    service = request.app.state.services
+    with service.lock:
+        library = service.require("library")
+        return {"records": [{"document": boundary(Document, document),
+                             "issues": review_issues(document, library.get_page(document["doc_id"], 1))}
+                            for document in library.list_documents()]}
+
+
+@router.patch("/documents/{doc_id}/metadata")
+def correct_metadata(request: Request, doc_id: str, correction: MetadataCorrection):
+    from .metadata_review import correct_and_publish
+    return correct_and_publish(request.app.state.services, doc_id, correction)
+
+
+@router.get("/documents/{doc_id}/metadata/revisions")
+def metadata_revisions(request: Request, doc_id: str):
+    with request.app.state.services.lock:
+        return {"revisions": request.app.state.services.require("library").metadata_history(doc_id)}
 
 
 @router.get("/documents/{doc_id}/file")

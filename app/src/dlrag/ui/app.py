@@ -11,6 +11,7 @@ from dlrag.ui.client import call_api, citation_numbers, clarified_question
 from dlrag.ui.citations import claim_html, marked_text, source_url
 from dlrag.ui.library import DOMAINS, STYLE, cover_card, discipline, domain_counts, document_status, display_topics
 from dlrag.ui.state import reset_question, reset_upload, reset_view
+from dlrag.ui.metadata_review import render_metadata_review
 from dlrag.shared.i18n import t, labels as widget_labels, error_message, system_message
 from dlrag.ui.language import language_selector
 from dlrag.ui.batch_upload import render_batch_upload
@@ -380,6 +381,7 @@ else:
                 st.json(health["manifest"])
         st.stop()
     if section == "文献管理":
+        render_metadata_review(api, base)
         st.caption(t('查看已上传文献及其处理状态。'))
         result = api("GET", "/documents", params={"include_nonready": "true"})
         if result:

@@ -29,6 +29,8 @@ class ProjectError(Exception):
 def http_status(code):
     if code in {"NOT_FOUND", "FILE_NOT_FOUND"}:
         return 404
+    if code == "METADATA_CONFLICT":
+        return 409
     if code == "UPLOAD_TOO_LARGE":
         return 413
     if code == "UNSUPPORTED_FILE":
@@ -105,7 +107,10 @@ class Services:
                     if self.settings.app_mode == "mock" else None}
 
     def rebuild(self):
+        from .metadata_review import recover_service_review
+
         with self.lock:
+            recover_service_review(self)
             store, retriever = self.require("library"), self.require("retriever")
             self._recover_index_publication()
             candidates = store.list_chunks(include_indexing=True)
@@ -312,6 +317,9 @@ def assemble(settings: Settings) -> Services:
                                      {"candidate_k": 20, "rrf_k": 60, "normalize_embeddings": True,
                                       "chunking_config": actual_chunking})
         try:
+            from .metadata_review import recover_review
+            if service.library:
+                recover_review(service.library, settings.index_dir)
             service.retriever.load()
         except Exception as exc:
             service.issues.append({"component": "index", "code": getattr(exc, "code", "INDEX_NOT_READY"),

@@ -1,0 +1,32 @@
+{
+  "before": {
+    "tested_commit": "83e0eafdc0a20a8ac3d4c3c91a835a8243249dfc",
+    "pr": 20,
+    "original_index": "idx_20261126T055441_8780841f741b",
+    "interrupted_index": "idx_20261126T055441_8e9784c1f691",
+    "serving_index": "idx_20261126T055441_8e9784c1f691",
+    "detail_authors": [
+      "Accepted Author"
+    ],
+    "search_authors": [
+      "Uncommitted Author"
+    ],
+    "recovery_marker_exists": true,
+    "pointer_matches_original": false
+  },
+  "after": {
+    "tested_commit": "424ebd483f90ce25f1b1b7d52ff850f95cb139d3",
+    "pr": 20,
+    "original_index": "idx_20261126T055442_343e0397a0dc",
+    "interrupted_index": "idx_20261126T055442_dff54bfe3cbe",
+    "serving_index": "idx_20261126T055442_343e0397a0dc",
+    "detail_authors": [
+      "Accepted Author"
+    ],
+    "search_authors": [
+      "Accepted Author"
+    ],
+    "recovery_marker_exists": false,
+    "pointer_matches_original": true
+  }
+}
