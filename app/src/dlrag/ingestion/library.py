@@ -17,11 +17,13 @@ class LibraryStore:
         self.files_dir.mkdir(parents=True, exist_ok=True)
         with self._connect() as db:
             version = db.execute('PRAGMA user_version').fetchone()[0]
-            if version not in (0, 1):
+            if version not in (0, 1, 2):
                 raise ProjectError('SCHEMA_VERSION_UNSUPPORTED', str(version))
             if version == 0:
                 db.executescript(Path(__file__).with_name('schema.sql').read_text())
                 db.execute('PRAGMA user_version = 1')
+            if version < 2:
+                db.executescript(Path(__file__).with_name('schema_metadata_reviews.sql').read_text(encoding='utf-8'))
 
     def ingest_pdf(self, file_path: str, metadata: dict, options: dict) -> dict:
         from .chunker import normalize_config
@@ -262,6 +264,49 @@ class LibraryStore:
         if not path.is_relative_to(self.files_dir):
             raise ProjectError('INVALID_REQUEST', 'File path escapes controlled directory')
         return str(path) if path.is_file() else None
+
+    @contextmanager
+    def correct_metadata(self, doc_id, correction):
+        from dlrag.shared.disciplines import DOMAINS
+
+        with self._connect() as db:
+            db.execute("BEGIN IMMEDIATE")
+            original = self._document(db, db.execute("SELECT * FROM documents WHERE doc_id=?", (doc_id,)).fetchone())
+            if original is None:
+                raise ProjectError("NOT_FOUND", "文献不存在。")
+            if original["status"] != "ready":
+                raise ProjectError("INVALID_REQUEST", "文献就绪后可修订元数据。")
+            if original["updated_at"] != correction.expected_updated_at:
+                raise ProjectError("METADATA_CONFLICT", "记录已更新，请刷新后再保存。")
+            if correction.evidence_page is not None and correction.evidence_page > original["page_count"]:
+                raise ProjectError("INVALID_REQUEST", "证据页超出 PDF 页数。")
+            before = {key: original[key] for key in ("authors", "year", "topics")}
+            topics = sorted({correction.discipline, *(tag for tag in original["topics"] if tag not in DOMAINS)})
+            after = {"authors": correction.authors, "year": correction.year, "topics": topics}
+            if before == after:
+                yield original, None
+                return
+            now = datetime.now(timezone.utc).isoformat()
+            db.execute("UPDATE documents SET authors_json=?,year=?,updated_at=? WHERE doc_id=?",
+                       (json.dumps(after["authors"], ensure_ascii=False), after["year"], now, doc_id))
+            db.execute("DELETE FROM document_topics WHERE doc_id=?", (doc_id,))
+            db.executemany("INSERT INTO document_topics VALUES (?,?)", [(doc_id, topic) for topic in topics])
+            cursor = db.execute(
+                """INSERT INTO metadata_revisions
+                    (doc_id,before_json,after_json,evidence_page,note,reviewed_at)
+                    VALUES (?,?,?,?,?,?)""",
+                (doc_id, json.dumps(before, ensure_ascii=False), json.dumps(after, ensure_ascii=False),
+                 correction.evidence_page, correction.note, now))
+            yield {**original, **after, "updated_at": now}, cursor.lastrowid
+
+    def metadata_history(self, doc_id):
+        with self._connect() as db:
+            if not db.execute("SELECT 1 FROM documents WHERE doc_id=?", (doc_id,)).fetchone():
+                raise ProjectError("NOT_FOUND", "文献不存在。")
+            rows = db.execute("SELECT * FROM metadata_revisions WHERE doc_id=? ORDER BY revision_id DESC", (doc_id,))
+            return [{"revision_id": row["revision_id"], "before": json.loads(row["before_json"]),
+                     "after": json.loads(row["after_json"]), "evidence_page": row["evidence_page"],
+                     "source": "manual_review", "note": row["note"], "reviewed_at": row["reviewed_at"]} for row in rows]
 
     def set_document_status(self, doc_id, status, error=None):
         if status not in ('uploaded','parsing','indexing','ready','failed'):
