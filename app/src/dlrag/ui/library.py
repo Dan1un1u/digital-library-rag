@@ -16,6 +16,17 @@ def display_topics(topics):
     return (", " if get_language() == "en" else "、").join(t(x) if x in DOMAINS else x for x in topics)
 
 
+def preview_discipline(preview):
+    if not preview:
+        return None
+    classification = preview.get("discipline_classification")
+    return classification["value"] if classification else discipline(preview["metadata"])
+
+
+def editable_topics(metadata):
+    return ", ".join(topic for topic in metadata.get("topics", []) if topic not in DOMAINS)
+
+
 def domain_counts(documents):
     counts = dict.fromkeys(DOMAINS, 0)
     pending = 0

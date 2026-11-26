@@ -68,6 +68,35 @@ def test_vision_enriches_scanned_pdf_without_ingesting(settings, tmp_path, monke
     assert seen == ['api']
 
 
+def test_enhanced_preview_keeps_only_grounded_topic_terms(client, services, monkeypatch):
+    from pydantic import SecretStr
+    from test_metadata_upload import paper_bytes
+
+    services.settings.app_mode = "real"
+    services.settings.siliconflow_api_key = SecretStr("offline-metadata-fixture")
+    quote = "This paper describes BM25 and semantic retrieval methods."
+    suggested = [
+        {"value": "BM25", "pdf_page": 1, "excerpt": quote},
+        {"value": "bm25", "pdf_page": 1, "excerpt": quote},
+        {"value": "semantic retrieval", "pdf_page": 1, "excerpt": quote},
+        {"value": "Language modeling", "pdf_page": 1, "excerpt": "This paper describes Language modeling."},
+        {"value": "Evidence Search", "pdf_page": 1, "excerpt": quote},
+        {"value": "BM25", "pdf_page": 2, "excerpt": quote},
+        {"value": "自然科学", "pdf_page": 1, "excerpt": "自然科学"},
+    ]
+    monkeypatch.setattr("dlrag.ingestion.metadata_api.request_candidates",
+                        lambda *_: {"topics": suggested})
+    response = client.post("/documents/metadata/jobs",
+                           files={"file": ("example.pdf", paper_bytes(title="Library Retrieval"), "application/pdf")})
+    assert response.status_code == 202
+    job = wait_job(client, response.json()["job_id"])
+    assert job["stage"] == "done"
+    assert job["result"]["metadata"]["topics"] == ["自然科学", "BM25", "semantic retrieval"]
+    assert job["result"]["topic_sources"] == [suggested[0], suggested[2]]
+    assert job["result"]["api_assistance"] == {"status": "completed", "accepted_fields": 1}
+    assert not services.library.list_documents(include_nonready=True)
+
+
 def test_api_failure_is_safe_and_local_fields_survive(settings, pdf, monkeypatch):
     from pydantic import SecretStr
     settings.app_mode = 'real'

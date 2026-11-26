@@ -7,7 +7,7 @@ import streamlit as st
 
 from dlrag.shared.batch_limits import MAX_BATCH_FILES, MAX_BATCH_MIB
 from dlrag.shared.i18n import error_message, labels, system_message, t
-from dlrag.ui.library import DOMAINS, discipline
+from dlrag.ui.library import DOMAINS, editable_topics, preview_discipline
 
 
 def render_batch_upload(submit_job, base, max_upload_mb):
@@ -53,10 +53,10 @@ def render_batch_upload(submit_job, base, max_upload_mb):
                                        key=prefix + "_authors")
                 year = st.text_input(t("版本年份（可留空）"), value=str(fields.get("year") or ""),
                                      key=prefix + "_year")
-                domain = discipline(fields)
+                domain = preview_discipline(preview)
                 subject = st.selectbox(t("所属学科"), DOMAINS, index=DOMAINS.index(domain) if domain in DOMAINS else None,
                                        format_func=labels(DOMAINS), key=prefix + "_domain")
-                topics = st.text_input(t("主题（逗号分隔）"), key=prefix + "_topics")
+                topics = st.text_input(t("主题（逗号分隔）"), value=editable_topics(fields), key=prefix + "_topics")
                 reviewed.append((selected, title, authors, year, subject, topics, fields))
         submitted = st.form_submit_button(t("发布本批文献"))
     if submitted:
