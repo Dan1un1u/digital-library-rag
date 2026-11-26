@@ -150,7 +150,7 @@ class Services:
                     seen.add(chunk["doc_id"])
                     doc = chunk["document"]
                     documents.append({"doc_id": chunk["doc_id"], "title": doc["title"],
-                                      "authors": doc["authors"], "year": doc["year"],
+                                      "authors": doc["authors"], "year": doc["year"], "topics": doc["topics"],
                                       "best_rank": hit["rank"], "preview": chunk["text"][:300]})
             return {"hits": hits, "documents": documents, "index_version": manifest["index_version"]}
 

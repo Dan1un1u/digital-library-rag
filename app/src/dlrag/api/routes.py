@@ -7,6 +7,7 @@ from fastapi import APIRouter, File, Form, Query, Request, UploadFile
 from fastapi.responses import FileResponse, JSONResponse, HTMLResponse, Response
 from dlrag.shared.models import AskRequest, Chunk, Document, Feedback, Filters, Metadata, SearchRequest
 from dlrag.shared.disciplines import DisciplineError, require_discipline
+from dlrag.ingestion.catalogue import find_catalogue_records
 from .services import ProjectError, boundary, http_status
 
 router = APIRouter()
@@ -107,11 +108,16 @@ def document_progress(request: Request, job_id: str):
 
 @router.get("/documents")
 def documents(request: Request, year_from: int | None = None, year_to: int | None = None,
-              topics: Annotated[list[str] | None, Query()] = None, include_nonready: bool = False):
+              topics: Annotated[list[str] | None, Query()] = None, include_nonready: bool = False,
+              catalogue_query: Annotated[str | None, Query(min_length=1, max_length=2000)] = None):
     service = request.app.state.services
     filters = Filters(year_from=year_from, year_to=year_to, topics=topics or []).model_dump()
     with service.lock:
         docs = service.require("library").list_documents(filters, include_nonready=include_nonready)
+        if catalogue_query is not None:
+            if not catalogue_query.strip():
+                raise ProjectError("INVALID_REQUEST", "请输入题名或作者。")
+            docs = find_catalogue_records(docs, catalogue_query)
         return {"documents": [boundary(Document, d) for d in docs]}
 
 

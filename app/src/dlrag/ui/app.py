@@ -310,10 +310,11 @@ elif page == "搜索与问答":
         st.subheader(t('搜索与问答'))
         with st.form("query"):
             question = st.text_area(t('想查找或了解什么？'), max_chars=2000, key='query_question')
-            action = st.radio(t('操作'), ["搜索", "问答"], horizontal=True, key='query_action', format_func=widget_labels(["搜索", "问答"]))
+            actions = ["搜索", "题名或作者", "问答"]
+            action = st.radio(t('操作'), actions, horizontal=True, key='query_action', format_func=widget_labels(actions))
             mode = st.selectbox(t('搜索方式'), ["keyword", "vector", "hybrid"], index=2,
                                 format_func={"keyword": t('关键词检索'), "vector": t('语义检索'), "hybrid": t('混合检索')}.get,
-                                help=t('用于“搜索”操作；问答会自动组织检索。'), key='query_mode')
+                                help=t('用于“搜索”操作。题名或作者直接查馆藏，问答自动组织检索。'), key='query_mode')
             submitted = st.form_submit_button(t('提交'), on_click=reset_question, args=(st.session_state,))
         if submitted:
             st.session_state.pop("answer", None)
@@ -323,6 +324,11 @@ elif page == "搜索与问答":
                 value = api("POST", "/search", json={"query": question, "filters": filters, "mode": mode, "top_k": 20})
                 if value:
                     st.session_state["search_result"] = value
+            elif action == "题名或作者":
+                params = {key: value for key, value in filters.items() if value is not None}
+                value = api("GET", "/documents", params={**params, "catalogue_query": question})
+                if value:
+                    st.session_state["search_result"] = value
             else:
                 value = ask_with_progress({"question": question, "filters": filters, "history": []})
                 if value:
@@ -330,13 +336,18 @@ elif page == "搜索与问答":
                     st.session_state["answer_filters"] = filters
         result = st.session_state.get("search_result")
         if result:
-            st.caption(t('{p0} 篇文献 · {p1} 个片段', p0=len(result['documents']), p1=len(result['hits'])))
+            hits = result.get("hits")
+            st.caption(t('当前显示 {p0} 篇文献', p0=len(result['documents'])) if hits is None else
+                       t('{p0} 篇文献 · {p1} 个片段', p0=len(result['documents']), p1=len(hits)))
             for doc in result["documents"]:
                 with st.container(border=True):
                     doc_card(doc)
-                    st.caption(t('最佳排名：{p0}', p0=doc['best_rank']))
-                    st.write(doc["preview"])
-            for hit in result["hits"]:
+                    if hits is None:
+                        st.link_button(t('阅读原文'), base.rstrip("/") + f"/documents/{quote(doc['doc_id'], safe='')}/file")
+                    else:
+                        st.caption(t('最佳排名：{p0}', p0=doc['best_rank']))
+                        st.write(doc["preview"])
+            for hit in hits or []:
                 chunk = hit["chunk"]
                 with st.expander(t('片段 {p0} · {p1} · PDF 第 {p2} 页', p0=hit['rank'], p1=chunk['document']['title'], p2=chunk['pdf_page'])):
                     st.write(chunk["text"])
