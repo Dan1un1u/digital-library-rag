@@ -230,7 +230,12 @@ def test_batch_manage_page_reviews_two_pdfs_and_submits_once(library, tmp_path, 
         if method == "POST":
             posted.append(path)
         response = client.request(method, path, **kwargs)
-        return {"_failure": response.json()["error"]} if response.is_error else response.json()
+        data = response.json()
+        if response.is_error:
+            return {"_failure": data["error"]}
+        if path.startswith("/document-jobs/") and data["stage"] == "done" and "metadata" in data["result"]:
+            data["result"]["metadata"]["topics"] = ["自然科学", "BM25"]
+        return data
     monkeypatch.setattr("dlrag.ui.client.call_api", call_api)
     app = AppTest.from_file(str(Path(__file__).parents[2] / "src/dlrag/ui/app.py"), default_timeout=15)
     app.query_params["lang"] = "en"
@@ -238,6 +243,9 @@ def test_batch_manage_page_reviews_two_pdfs_and_submits_once(library, tmp_path, 
     app.sidebar.radio[0].set_value("上传与管理").run()
     app.sidebar.radio[1].set_value("批量入库").run()
     next(button for button in app.button if button.label == "Extract metadata for this batch").click().run()
+    topic_fields = [value for value in app.text_input if (value.key or "").endswith("_topics")]
+    assert [field.value for field in topic_fields] == ["BM25", "BM25"]
+    topic_fields[0].set_value("Reviewed batch topic")
     for index, field in enumerate([value for value in app.text_input if value.label == "Title"]):
         field.set_value(f"Confirmed paper {index+1}")
     for field in [value for value in app.selectbox if value.label == "Subject area"]:
@@ -246,4 +254,7 @@ def test_batch_manage_page_reviews_two_pdfs_and_submits_once(library, tmp_path, 
     assert not app.exception
     assert posted.count("/documents/metadata/jobs") == 2
     assert posted.count("/documents/batch/jobs") == 1
-    assert {row["title"] for row in service.library.list_documents()} == {"Confirmed paper 1", "Confirmed paper 2"}
+    documents = {row["title"]: row for row in service.library.list_documents()}
+    assert set(documents) == {"Confirmed paper 1", "Confirmed paper 2"}
+    assert set(documents["Confirmed paper 1"]["topics"]) == {"自然科学", "Reviewed batch topic"}
+    assert set(documents["Confirmed paper 2"]["topics"]) == {"自然科学", "BM25"}

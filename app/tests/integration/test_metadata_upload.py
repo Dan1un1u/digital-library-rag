@@ -42,7 +42,15 @@ def test_preview_file_validation_and_cleanup(client, services):
     assert not list((services.settings.data_dir / "tmp").iterdir())
 
 
-def test_ui_prefills_keeps_edits_and_resets_for_new_file(client, monkeypatch):
+def test_ui_prefills_keeps_edits_and_resets_for_new_file(client, services, monkeypatch):
+    from pydantic import SecretStr
+
+    services.settings.app_mode = "real"
+    services.settings.siliconflow_api_key = SecretStr("offline-metadata-fixture")
+    quote = "This paper describes BM25 and semantic retrieval methods."
+    topics = [{"value": "BM25", "pdf_page": 1, "excerpt": quote},
+              {"value": "semantic retrieval", "pdf_page": 1, "excerpt": quote}]
+    monkeypatch.setattr("dlrag.ingestion.metadata_api.request_candidates", lambda *_: {"topics": topics})
     calls = []
     def local_api(base, method, path, **kwargs):
         calls.append(path)
@@ -59,12 +67,20 @@ def test_ui_prefills_keeps_edits_and_resets_for_new_file(client, monkeypatch):
     assert not app.exception
     assert app.text_input(key="upload_title").value == "Original title"
     assert app.text_area(key="upload_authors").value == "Doe, Jane\nJohn Smith"
+    assert app.text_input(key="upload_topics").value == "BM25, semantic retrieval"
+    panel = next(item for item in app.expander if item.label == "识别结果与来源")
+    assert "**主题建议**" in [item.value for item in panel.markdown]
+    assert "BM25、semantic retrieval" in [item.value for item in panel.markdown]
+    assert "BM25（PDF 第 1 页）" in [item.value for item in panel.caption]
+    assert quote in [item.value for item in panel.caption]
+    assert all(" · " not in item.value for item in panel.caption)
+    app.text_input(key="upload_topics").set_value("Reviewed topic")
     app.text_input(key="upload_title").set_value("My corrected title")
     app.selectbox(key="upload_domain").set_value("社会科学")
     next(w for w in app.button if w.label == "导入文献").click().run()
     assert not app.exception
     assert client.get("/documents").json()["documents"][0]["title"] == "My corrected title"
-    assert "社会科学" in client.get("/documents").json()["documents"][0]["topics"]
+    assert set(client.get("/documents").json()["documents"][0]["topics"]) == {"社会科学", "Reviewed topic"}
     assert calls.count("/documents/metadata/jobs") == 1
     next_data = paper_bytes(title="New document title", author="Bob Jones")
     selection["file"] = SimpleNamespace(name="second.pdf", getvalue=lambda: next_data)
@@ -72,6 +88,7 @@ def test_ui_prefills_keeps_edits_and_resets_for_new_file(client, monkeypatch):
     assert not app.exception
     assert app.text_input(key="upload_title").value == "New document title"
     assert app.text_area(key="upload_authors").value == "Bob Jones"
+    assert app.text_input(key="upload_topics").value == "BM25, semantic retrieval"
     assert app.selectbox(key="upload_domain").value is None
     assert calls.count("/documents/metadata/jobs") == 2
     selection["file"] = None

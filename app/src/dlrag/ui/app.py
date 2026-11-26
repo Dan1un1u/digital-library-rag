@@ -10,7 +10,7 @@ import streamlit as st
 from dotenv import dotenv_values
 from dlrag.ui.client import call_api, citation_numbers, clarified_question
 from dlrag.ui.citations import claim_html, marked_text, source_url
-from dlrag.ui.library import DOMAINS, STYLE, cover_card, discipline, domain_counts, document_status, display_topics
+from dlrag.ui.library import DOMAINS, STYLE, cover_card, discipline, domain_counts, document_status, display_topics, editable_topics, preview_discipline
 from dlrag.ui.state import reset_question, reset_upload, reset_view
 from dlrag.ui.metadata_review import render_metadata_review
 from dlrag.ui.document_recovery import render_document_recovery
@@ -481,25 +481,37 @@ else:
             values = dict(upload_title=metadata.get("title") or "", upload_authors="\n".join(metadata.get("authors", [])),
                           upload_year=str(metadata["year"]) if metadata.get("year") is not None else "",
                           upload_language=metadata.get("language", "unknown"), upload_source=metadata.get("source_url") or "",
-                          upload_topics="", upload_rights="待人工确认", upload_domain=discipline(metadata))
+                          upload_topics=editable_topics(metadata), upload_rights="待人工确认", upload_domain=preview_discipline(preview))
             for key, value in values.items():
                 st.session_state[key] = value
         preview = st.session_state.get("upload_preview")
         if preview:
             with st.expander(t('识别结果与来源'), expanded=True):
-                for warning in preview["warnings"]:
-                    st.caption(system_message(warning))
                 classification = preview.get("discipline_classification", {})
+                st.markdown(f"**{t('所属学科')}**")
                 if classification.get("status") == "classified":
                     method = {"keyword": t('关键词匹配'), "explicit": t('已有学科标签'),
                               "llm_page_classification": t('LLM 辅助分类')}.get(classification["method"], t('自动分类'))
-                    st.write(t('所属学科：') + t(classification["value"]) + "（" + method + "）")
+                    st.write(t(classification["value"]))
+                    st.caption(t('识别方式：') + method)
                     if classification.get("excerpt"):
-                        st.caption(t('PDF 第 {p0} 页 · ', p0=classification['pdf_page']) + classification["excerpt"])
+                        st.caption(t('PDF 第 {p0} 页', p0=classification["pdf_page"]))
+                        st.caption(classification["excerpt"])
                     if classification.get("reason"):
                         st.caption(classification["reason"])
                 else:
                     st.caption(t('暂未确定所属学科，可在下方选择，或开启增强识别后重新识别。'))
+
+                st.markdown(f"**{t('主题建议')}**")
+                suggested = [tag for tag in preview["metadata"].get("topics", []) if tag not in DOMAINS]
+                if suggested:
+                    st.write(display_topics(suggested))
+                    for origin in preview.get("topic_sources", []):
+                        st.caption(t('{p0}（PDF 第 {p1} 页）', p0=origin["value"], p1=origin["pdf_page"]))
+                        st.caption(origin["excerpt"])
+                else:
+                    st.caption(t('未找到可核对的主题，可在下方填写。'))
+
                 labels = {"title": t('标题'), "authors": t('作者'), "year": t('版本年份'), "language": t('语言'), "source_url": t('来源')}
                 methods = {"pdf_metadata": t('PDF 自带信息'), "first_page_layout": t('首页标题排版'),
                            "first_page_text": t('首页文字'), "document_date_candidate": t('正文日期候选'),
@@ -507,7 +519,8 @@ else:
                            "api_page_recognition": t('API 页面识别（待核对）'),
                            "bibliographic_lookup": t('外部出版记录（待核对）')}
                 for field, origin in preview["field_sources"].items():
-                    st.write(labels[field] + "：" + methods[origin["method"]])
+                    st.markdown(f"**{labels[field]}**")
+                    st.caption(t('识别方式：') + methods[origin["method"]])
                     if field == "year" and origin.get("date_type"):
                         date_labels = {"issue": t('卷期年份'), "version": t('文件版本戳'), "revision": t('修订日期'), "preprint": t('预印本公开日期'),
                                        "submission": t('投稿日期'), "acceptance": t('接收日期'), "publication": t('出版日期'),
@@ -515,7 +528,8 @@ else:
                                        "published-online": t('在线出版日期'), "published": t('出版日期')}
                         st.caption(t('日期依据：') + date_labels.get(origin["date_type"], origin["date_type"]))
                     if origin["method"] == "api_page_recognition":
-                        st.caption(t('PDF 第 {p0} 页 · ', p0=origin['pdf_page']) + origin["excerpt"])
+                        st.caption(t('PDF 第 {p0} 页', p0=origin["pdf_page"]))
+                        st.caption(origin["excerpt"])
                     elif origin["method"] == "bibliographic_lookup":
                         st.caption(origin["excerpt"])
                         st.link_button(t('查看该字段的出版记录'), origin["record_url"], key="metadata_origin_" + field)
@@ -530,6 +544,8 @@ else:
                     for conflict in enrichment["conflicts"]:
                         st.write(labels[conflict["field"]] + t('：当前为 ') + str(conflict["existing"])
                                  + t('，出版记录为 ') + str(conflict["external"]))
+                for warning in preview["warnings"]:
+                    st.caption(system_message(warning))
     if st.session_state.get("upload_success"):
         st.success(st.session_state.pop("upload_success"))
     if "upload_rights" not in st.session_state:
