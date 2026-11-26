@@ -12,6 +12,7 @@ from dlrag.ui.citations import claim_html, marked_text, source_url
 from dlrag.ui.library import DOMAINS, STYLE, cover_card, discipline, domain_counts, document_status, display_topics
 from dlrag.ui.state import reset_question, reset_upload, reset_view
 from dlrag.ui.metadata_review import render_metadata_review
+from dlrag.ui.document_recovery import render_document_recovery
 from dlrag.shared.i18n import t, labels as widget_labels, error_message, system_message
 from dlrag.ui.language import language_selector
 from dlrag.ui.batch_upload import render_batch_upload
@@ -385,12 +386,15 @@ else:
         st.caption(t('查看已上传文献及其处理状态。'))
         result = api("GET", "/documents", params={"include_nonready": "true"})
         if result:
+            recovered = render_document_recovery(api, document_with_progress, base,
+                                                   health["configuration"]["max_upload_mb"], result["documents"])
             st.caption(t('共 {p0} 篇文献', p0=len(result['documents'])))
             for doc in result["documents"]:
                 with st.container(border=True):
                     doc_card(doc)
-                    st.caption(t('所属学科：') + t(discipline(doc) or "待分类") + t(' · 状态：') + document_status(doc))
-                    if doc.get("error_code"):
+                    status = t("已有修正版") if doc["doc_id"] in recovered else document_status(doc)
+                    st.caption(t('所属学科：') + t(discipline(doc) or "待分类") + t(' · 状态：') + status)
+                    if doc.get("error_code") and doc["doc_id"] not in recovered:
                         st.error(error_message({"code":doc["error_code"], "message":doc.get("error_message") or "文献处理未完成"}))
                     st.link_button(t('阅读原文'), base.rstrip("/") + f"/documents/{quote(doc['doc_id'], safe='')}/file")
         st.stop()
