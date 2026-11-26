@@ -256,7 +256,7 @@ class QAEngine:
                                     claim.pop('evidence_sentences',None)
                         validated = validate_answer(normalized, selected, require_sentence_refs=s["sentence_citations_required"] and not self.reranker)
                         if not self.reranker:
-                            validate_coverage(validated, requirements)
+                            validated['coverage'] = validate_coverage(validated, requirements)
                         return validated
                     except ProjectError as e:
                         if e.code != "OUTPUT_VALIDATION_FAILED" or attempt == s["max_answer_repairs"]:
@@ -281,7 +281,7 @@ class QAEngine:
                     r['limitations'].append('句子定位服务暂不可用，本次保留片段引用，可打开原文核对。')
                 if requirements:
                     try:
-                        validate_coverage(value, requirements)
+                        value['coverage'] = validate_coverage(value, requirements)
                     except ProjectError:
                         # Optional scope metadata must not trigger an extra model call or hide a valid answer.
                         value.pop("coverage", None)

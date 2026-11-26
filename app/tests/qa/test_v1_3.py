@@ -254,7 +254,7 @@ def test_generation_preserves_partial_scope_without_another_model_call():
     plan["answer_requirements"] = [requirement]
     scope = {"requirement": requirement, "claim_indices": [1],
              "gap": "本次证据只解释 BM25，缺少一般向量量化的流程。"}
-    value["coverage"] = [scope]
+    value["coverage"] = [{"requirement_index": 1, "claim_indices": [1], "gap": scope["gap"]}]
     ranker, stages = RecordingReranker(), []
     llm = ScriptedMockLLM([plan, value])
     result = QAEngine(FakeRetriever(), llm, {"sentence_citations_required": True},
@@ -267,7 +267,11 @@ def test_generation_preserves_partial_scope_without_another_model_call():
     assert "coverage_check" not in stages and len(ranker.batches) == 1  # The grounding batch.
 
 
-@pytest.mark.parametrize("coverage", [None, [{"requirement": "如何工作？", "claim_indices": [2], "gap": ""}]])
+@pytest.mark.parametrize("coverage", [
+    None,
+    [{"requirement": "如何工作？", "claim_indices": [2], "gap": ""}],
+    [{"requirement_index": 2, "claim_indices": [1], "gap": ""}],
+])
 def test_missing_or_invalid_optional_scope_keeps_the_grounded_answer(coverage):
     plan, value = demo_outputs("BM25", "answered")
     plan["answer_requirements"] = ["如何工作？"]
