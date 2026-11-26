@@ -15,8 +15,13 @@ CHOICES = ["向量检索中的旋转量化", "机器学习中的旋转量化"]
 CONFIRM = "补充后重新提问"
 
 
-@pytest.mark.parametrize("options,fail_poll", [(CHOICES, False), ([], True)], ids=["choice", "text-retry"])
-def test_clarification_is_submitted_once_and_resumes_polling(client, imported, monkeypatch, options, fail_poll):
+@pytest.mark.parametrize("options,fail_poll,custom_mode", [
+    (CHOICES, False, None),
+    ([], True, None),
+    (CHOICES, False, "only"),
+    (CHOICES, True, "override"),
+], ids=["choice", "text-retry", "custom-only", "custom-overrides-and-retries"])
+def test_clarification_is_submitted_once_and_resumes_polling(client, imported, monkeypatch, options, fail_poll, custom_mode):
     result = client.post("/ask", json={"question": "BM25"}).json()
     assert result["status"] == "answered"
     clarification = {
@@ -60,11 +65,19 @@ def test_clarification_is_submitted_once_and_resumes_polling(client, imported, m
     wait_for_ui_answer(app)
 
     app.text_input(key="filter_year_from").set_value("2020").run()
-    label = "请选择" if options else "补充说明"
-    choice = CHOICES[1]
+    use_radio = options and not custom_mode
+    label = "请选择" if use_radio else "补充说明"
+    choice = "大语言模型的 4 位权重量化里，旋转为什么能减少离群值？" if custom_mode else CHOICES[1]
+
+    if custom_mode == "only":
+        next(b for b in app.button if b.label == CONFIRM).click().run()
+        assert not follow_ups
+        assert any("请选择一个选项或填写补充说明" in item.value for item in app.warning)
+    elif custom_mode == "override":
+        next(r for r in app.radio if r.label == "请选择").set_value(CHOICES[0])
 
     def choice_widget():
-        widgets = app.radio if options else app.text_input
+        widgets = app.radio if use_radio else app.text_input
         return next(w for w in widgets if w.label == label)
 
     old_choice = choice_widget().set_value(choice)
@@ -102,6 +115,8 @@ def test_clarification_is_submitted_once_and_resumes_polling(client, imported, m
         assert any("测试连接中断" in item.value for item in app.error)
         assert not choice_widget().proto.disabled
         assert choice_widget().value == choice
+        if custom_mode == "override":
+            assert next(r for r in app.radio if r.label == "请选择").value == CHOICES[0]
         old_submit.set_value(False)
         old_confirm.click().run()
         assert len(follow_ups) == 1
