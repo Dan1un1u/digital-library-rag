@@ -9,6 +9,7 @@ from dlrag.ui.state import reset_question, reset_upload, reset_view
 def test_scoped_resets_preserve_navigation_and_preferences():
     state = {'last_progress': {'stage': 'done'}, 'answer': {}, 'search_result': {},
              'selected_evidence': 'old', 'answer_filters': {}, 'last_request_id': 'old',
+             'pending_ask': {}, 'ask_failure': {},
              'upload_pdf': object(), 'upload_title': 'Old', 'upload_preview': {},
              'upload_fingerprint': 'old', 'upload_success': 'old',
              'navigation_page': '上传与管理', 'preference': True}

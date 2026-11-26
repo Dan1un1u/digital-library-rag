@@ -3,7 +3,7 @@ from contextlib import contextmanager
 from pathlib import Path
 from tempfile import TemporaryDirectory
 from typing import Annotated, Literal
-from fastapi import APIRouter, File, Form, Query, Request, UploadFile
+from fastapi import APIRouter, File, Form, Header, Query, Request, UploadFile
 from fastapi.responses import FileResponse, JSONResponse, HTMLResponse, Response
 from dlrag.shared.batch_limits import MAX_BATCH_FILES, MAX_BATCH_MIB
 from dlrag.shared.models import AskRequest, Chunk, Document, Feedback, Filters, Metadata, SearchRequest
@@ -250,8 +250,9 @@ def feedback(request: Request, body: Feedback):
 
 
 @router.post("/ask/jobs", status_code=202)
-def submit_ask(request: Request, body: AskRequest):
-    return request.app.state.ask_jobs.submit(body)
+def submit_ask(request: Request, body: AskRequest,
+               idempotency_key: Annotated[str | None, Header(min_length=1, max_length=128)] = None):
+    return request.app.state.ask_jobs.submit(body, idempotency_key)
 
 
 @router.get("/ask/jobs/{job_id}")

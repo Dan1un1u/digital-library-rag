@@ -1,5 +1,6 @@
 """Transient UI state must not leak across pages or independent tasks."""
-QUESTION_STATE = ("last_progress", "answer", "search_result", "selected_evidence", "answer_filters", "last_request_id")
+QUESTION_STATE = ("last_progress", "answer", "search_result", "selected_evidence",
+                  "answer_filters", "last_request_id", "pending_ask", "ask_failure")
 
 
 def reset_question(state):

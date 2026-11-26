@@ -1,5 +1,6 @@
 """Bounded, in-memory jobs; progress reads never acquire the corpus lock."""
 import copy
+import hashlib
 import threading
 import time
 import uuid
@@ -19,9 +20,19 @@ class AskJobs:
     def close(self):
         self.executor.shutdown(wait=False, cancel_futures=True)
 
-    def submit(self, request):
+    def submit(self, request, idempotency_key=None):
+        fingerprint = hashlib.sha256(request.model_dump_json().encode()).hexdigest() if idempotency_key else None
         with self.lock:
             now = time.monotonic()
+            if idempotency_key:
+                for job in self.jobs.values():
+                    if job["idempotency_key"] != idempotency_key:
+                        continue
+                    if job["answer"] is not None and now - job["updated"] > self.ttl:
+                        continue
+                    if job["fingerprint"] != fingerprint:
+                        raise ProjectError("INVALID_REQUEST", "同一提交标识不能用于不同的问答请求。")
+                    return {"job_id": job["job_id"]}
             completed = sorted((j for j in self.jobs.values() if j["answer"] is not None), key=lambda j: j["updated"])
             for job in completed:
                 if now - job["updated"] > self.ttl or len(self.jobs) >= self.retention:
@@ -29,7 +40,8 @@ class AskJobs:
             if sum(j["answer"] is None for j in self.jobs.values()) >= self.capacity:
                 raise ProjectError("MODEL_UNAVAILABLE", "问答队列已满，请稍后重试。")
             job_id = uuid.uuid4().hex
-            self.jobs[job_id] = dict(job_id=job_id, stage="queued", answer=None, created=now, updated=now, stages=["queued"])
+            self.jobs[job_id] = dict(job_id=job_id, stage="queued", answer=None, created=now, updated=now,
+                                     stages=["queued"], idempotency_key=idempotency_key, fingerprint=fingerprint)
             self.executor.submit(self._run, job_id, request)
             return {"job_id": job_id}
 
