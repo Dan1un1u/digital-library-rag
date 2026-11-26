@@ -1,0 +1,66 @@
+{
+  "code_commit": "53fa987bf3dc38d0b45383fe37cea14ef2b903aa",
+  "mode": "mock encoder; real PDF parsing and catalogue/search/revision APIs",
+  "sample_construction": "Replayed known bad metadata as accessioned values on copies of the real PDFs.",
+  "records": [
+    {
+      "sample": "SPRINT",
+      "pdf_sha256": "e6902725c8ba809f4601a1ecc3c18914d5df530bcd1ba3353584eda0228bfffc",
+      "review_queue_http": 200,
+      "initial_issues": [
+        "AUTHOR_MATCHES_TITLE"
+      ],
+      "patch_http": 200,
+      "authors_before": 1,
+      "authors_after": 1,
+      "first_author_before": "Standard Blood-Pressure Control",
+      "first_author_after": "The SPRINT Research Group",
+      "year_before": 2015,
+      "year_after": 2015,
+      "doc_id_and_pdf_preserved": true,
+      "chunks_preserved": true,
+      "chunk_count": 67,
+      "history_entries": 1,
+      "evidence_page": 1,
+      "search_matches_displayed_metadata": true
+    },
+    {
+      "sample": "Ascend",
+      "pdf_sha256": "69c573c123ffd1538d432ab31040072dec01a375a4a5b7c2960a7667cb970dda",
+      "review_queue_http": 200,
+      "initial_issues": [],
+      "patch_http": 200,
+      "authors_before": 1,
+      "authors_after": 18,
+      "first_author_before": "Yuhang Zhou",
+      "first_author_after": "Yuhang Zhou",
+      "year_before": 2025,
+      "year_after": 2025,
+      "doc_id_and_pdf_preserved": true,
+      "chunks_preserved": true,
+      "chunk_count": 101,
+      "history_entries": 1,
+      "evidence_page": 1,
+      "search_matches_displayed_metadata": true
+    },
+    {
+      "sample": "MQ-007",
+      "pdf_sha256": "1a99079778b2174feda37473878bc82da1ed0699c77a2cbeb11de408844189c9",
+      "review_queue_http": 200,
+      "initial_issues": [],
+      "patch_http": 200,
+      "authors_before": 3,
+      "authors_after": 3,
+      "first_author_before": "范志雄",
+      "first_author_after": "范志雄",
+      "year_before": null,
+      "year_after": 2026,
+      "doc_id_and_pdf_preserved": true,
+      "chunks_preserved": true,
+      "chunk_count": 73,
+      "history_entries": 1,
+      "evidence_page": 1,
+      "search_matches_displayed_metadata": true
+    }
+  ]
+}
