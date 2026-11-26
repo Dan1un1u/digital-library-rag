@@ -232,12 +232,14 @@ def test_management_ui_can_review_page_and_submit(client, tmp_path, monkeypatch,
     app.sidebar.radio[0].set_value("上传与管理").run()
     app.sidebar.radio[1].set_value("文献管理").run()
     assert any(expander.label == panel for expander in app.expander)
+    app.session_state["recovery_panel"] = True
     app.selectbox(key="recovery_document").set_value(original_id).run()
     assert not app.exception
     assert any(link.proto.url.endswith(f"/{original_id}/file#page=2") for link in app.get("link_button"))
     next(button for button in app.button if button.label == action).click().run()
     assert not app.exception
     assert any(message.value == success for message in app.success)
+    assert next(expander for expander in app.expander if expander.label == panel).proto.expanded
     assert any(link.proto.url.endswith(f"/{doc_id(repaired)}/file") for link in app.get("link_button"))
     assert not any(button.label == action for button in app.button)
     assert cases(client)[0]["status"] == "recovered"

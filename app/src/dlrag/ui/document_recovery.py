@@ -19,7 +19,7 @@ def render_document_recovery(api, submit_job, base, max_upload_mb, documents):
     cases = {case["original"]["doc_id"]: case for case in result["cases"]}
     recovered = {doc_id for doc_id, case in cases.items() if case["status"] == "recovered"}
 
-    with st.expander(t("入库失败恢复")):
+    with st.expander(t("入库失败恢复"), key="recovery_panel", on_change="rerun"):
         if st.session_state.pop("recovery_saved", False):
             st.success(t("修正版已入库，可在馆藏中检索。"))
         doc_id = st.selectbox(t("选择待恢复文献或查看记录"), list(cases), index=None,
