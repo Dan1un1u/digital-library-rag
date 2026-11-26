@@ -23,7 +23,7 @@ def normalize(text):
 
 
 def parse_pdf(file_path):
-    from .fulltext import REVIEW_DIAGNOSTIC, scan_evidence
+    from .fulltext import NoExtractableText, REVIEW_DIAGNOSTIC, scan_evidence
     from .text_quality import DIAGNOSTIC, encoding_evidence
     try:
         import fitz
@@ -88,6 +88,5 @@ def parse_pdf(file_path):
             result.append({'pdf_page':number, 'printed_page':None, 'raw_text':raw,
                            'normalized_text':normalized, 'diagnostics':diagnostics})
         if not any(p['normalized_text'].strip() for p in result):
-            reasons = sorted({d for p in result for d in p['diagnostics']})
-            raise ProjectError('NO_EXTRACTABLE_TEXT', 'No usable text; ' + ', '.join(reasons))
+            raise NoExtractableText(result)
         return result

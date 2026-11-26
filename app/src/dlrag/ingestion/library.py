@@ -7,6 +7,7 @@ from contextlib import contextmanager
 from datetime import datetime, timezone
 from pathlib import Path
 from .errors import ProjectError
+from .recovery import RECOVERABLE_TEXT_ERRORS, legacy_suspect_pages, validate_replacement
 
 
 class LibraryStore:
@@ -17,18 +18,20 @@ class LibraryStore:
         self.files_dir.mkdir(parents=True, exist_ok=True)
         with self._connect() as db:
             version = db.execute('PRAGMA user_version').fetchone()[0]
-            if version not in (0, 1, 2):
+            if version not in (0, 1, 2, 3):
                 raise ProjectError('SCHEMA_VERSION_UNSUPPORTED', str(version))
             if version == 0:
                 db.executescript(Path(__file__).with_name('schema.sql').read_text())
                 db.execute('PRAGMA user_version = 1')
             if version < 2:
                 db.executescript(Path(__file__).with_name('schema_metadata_reviews.sql').read_text(encoding='utf-8'))
+            if version < 3:
+                db.executescript(Path(__file__).with_name('schema_document_recovery.sql').read_text(encoding='utf-8'))
 
-    def ingest_pdf(self, file_path: str, metadata: dict, options: dict) -> dict:
+    def ingest_pdf(self, file_path: str, metadata: dict, options: dict, *, replaces=None) -> dict:
         from .chunker import normalize_config
         config = normalize_config(options)
-        document = self.register_document(file_path, metadata)
+        document = self.register_document(file_path, metadata, replaces=replaces)
         doc_id = document['doc_id']
         if document['chunking_config'] is not None:
             if document['chunking_config'] != config:
@@ -51,7 +54,7 @@ class LibraryStore:
     def _parse_document(self, doc_id, config):
         from .parser import parse_pdf, PARSER_VERSION
         from .chunker import chunk_pages
-        from .fulltext import require_complete_text
+        from .fulltext import FulltextReviewRequired, NoExtractableText, require_complete_text
         self.set_document_status(doc_id, 'parsing')
         try:
             file_path = self.get_file_path(doc_id)
@@ -63,7 +66,10 @@ class LibraryStore:
             self.save_parsed_content(doc_id, pages, chunks, config, PARSER_VERSION)
         except Exception as exc:
             error = exc if isinstance(exc, ProjectError) else ProjectError('INGESTION_FAILED', str(exc))
-            self.set_document_status(doc_id, 'failed', {'code':error.code, 'message':error.message})
+            failure = {'code': error.code, 'message': error.message}
+            if isinstance(error, (FulltextReviewRequired, NoExtractableText)):
+                failure['fulltext_review'] = error.review
+            self.set_document_status(doc_id, 'failed', failure)
             if error is exc:
                 raise
             raise error from exc
@@ -92,7 +98,7 @@ class LibraryStore:
         result.pop('file_relpath')
         return result
 
-    def register_document(self, file_path: str, metadata: dict) -> dict:
+    def register_document(self, file_path: str, metadata: dict, *, replaces=None) -> dict:
         """Register/copy a source file; parsing subsequently fills pages/chunks."""
         allowed = {'title', 'authors', 'year', 'topics', 'language', 'source_url', 'rights_note'}
         if not isinstance(metadata, dict) or set(metadata) - allowed:
@@ -127,9 +133,11 @@ class LibraryStore:
             with self._connect() as db:
                 db.execute('BEGIN IMMEDIATE')
                 existing = db.execute('SELECT * FROM documents WHERE file_sha256=?', (digest,)).fetchone()
+                if replaces is not None:
+                    validate_replacement(db, replaces, doc_id, existing is not None)
                 if existing:
                     result = self._document(db, existing)
-                    if any(result.get(k) != v for k, v in metadata.items()):
+                    if replaces is None and any(result.get(k) != v for k, v in metadata.items()):
                         warnings.warn('Duplicate PDF: existing metadata retained', stacklevel=2)
                     return result
                 if target.exists():
@@ -148,6 +156,10 @@ class LibraryStore:
                      language,metadata.get('source_url'),metadata.get('rights_note') or '待人工确认',now,now))
                 db.executemany('INSERT INTO document_topics VALUES (?,?)',
                                [(doc_id, t) for t in sorted(set(metadata.get('topics', [])))])
+                if replaces is not None:
+                    db.execute('''INSERT INTO document_replacements
+                               (replacement_doc_id, original_doc_id, submitted_at) VALUES (?,?,?)''',
+                               (doc_id, replaces, now))
                 return self._document(db, db.execute('SELECT * FROM documents WHERE doc_id=?', (doc_id,)).fetchone())
         except Exception:
             if copied:
@@ -308,6 +320,38 @@ class LibraryStore:
                      "after": json.loads(row["after_json"]), "evidence_page": row["evidence_page"],
                      "source": "manual_review", "note": row["note"], "reviewed_at": row["reviewed_at"]} for row in rows]
 
+    def list_recovery_cases(self):
+        with self._connect() as db:
+            db.execute("BEGIN")
+            originals = db.execute("""
+                SELECT d.* FROM documents d
+                WHERE d.status='failed' AND d.error_code IN (?,?,?)
+                AND NOT EXISTS (SELECT 1 FROM document_replacements r WHERE r.replacement_doc_id=d.doc_id)
+                ORDER BY d.created_at DESC, d.doc_id
+            """, RECOVERABLE_TEXT_ERRORS)
+            cases = []
+            for row in originals:
+                original = self._document(db, row)
+                attempts = []
+                for entry in db.execute("""
+                    SELECT d.*, r.submitted_at FROM document_replacements r
+                    JOIN documents d ON d.doc_id=r.replacement_doc_id
+                    WHERE r.original_doc_id=? ORDER BY r.submitted_at, d.doc_id
+                """, (original["doc_id"],)):
+                    document = self._document(db, entry)
+                    submitted_at = document.pop("submitted_at")
+                    attempts.append({"document": document, "submitted_at": submitted_at,
+                                     "suspect_pages": self._suspect_pages(db, document)})
+                status = "recovered" if any(a["document"]["status"] == "ready" for a in attempts) else "pending"
+                cases.append({"original": original, "status": status, "attempts": attempts,
+                              "suspect_pages": self._suspect_pages(db, original)})
+            return cases
+
+    def _suspect_pages(self, db, document):
+        review = db.execute("SELECT review_json FROM document_fulltext_reviews WHERE doc_id=?",
+                            (document["doc_id"],)).fetchone()
+        return json.loads(review["review_json"])["suspect_pages"] if review else legacy_suspect_pages(document)
+
     def set_document_status(self, doc_id, status, error=None):
         self.set_documents_status([doc_id], status, error)
 
@@ -326,3 +370,11 @@ class LibraryStore:
                      datetime.now(timezone.utc).isoformat(), doc_id))
                 if cursor.rowcount != 1:
                     raise ProjectError('NOT_FOUND', doc_id)
+                review = (error or {}).get("fulltext_review")
+                if status == "failed" and review is not None:
+                    db.execute("""
+                        INSERT INTO document_fulltext_reviews (doc_id, review_json) VALUES (?,?)
+                        ON CONFLICT (doc_id) DO UPDATE SET review_json=excluded.review_json
+                    """, (doc_id, json.dumps(review)))
+                elif status in ("parsing", "failed"):
+                    db.execute("DELETE FROM document_fulltext_reviews WHERE doc_id=?", (doc_id,))

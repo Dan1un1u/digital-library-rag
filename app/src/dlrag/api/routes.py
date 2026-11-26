@@ -103,6 +103,22 @@ def import_job(request: Request, file: Annotated[UploadFile, File()], metadata_j
         file.file.close()
 
 
+@router.post("/documents/{doc_id}/recovery/jobs", status_code=202)
+def replacement_job(request: Request, doc_id: str, file: Annotated[UploadFile, File()],
+                    metadata_json: Annotated[str, Form()] = "{}"):
+    try:
+        try:
+            raw = json.loads(metadata_json)
+        except (ValueError, TypeError):
+            raise ProjectError("INVALID_REQUEST", "metadata_json 必须是 JSON 对象") from None
+        metadata = Metadata.model_validate(raw).model_dump(exclude_unset=True)
+        with temporary_pdf(file, request.app.state.services) as path:
+            return request.app.state.document_jobs.submit(path.read_bytes(), file.filename,
+                                                          kind="recovery", metadata=metadata, replaces=doc_id)
+    finally:
+        file.file.close()
+
+
 @router.post("/documents/batch/jobs", status_code=202)
 def batch_job(request: Request, files: Annotated[list[UploadFile], File()],
               metadata_json: Annotated[str, Form()]):
@@ -135,6 +151,13 @@ def batch_job(request: Request, files: Annotated[list[UploadFile], File()],
 @router.get("/document-jobs/{job_id}")
 def document_progress(request: Request, job_id: str):
     return request.app.state.document_jobs.get(job_id)
+
+
+@router.get("/document-recoveries")
+def document_recoveries(request: Request):
+    service = request.app.state.services
+    with service.lock:
+        return {"cases": service.require("library").list_recovery_cases()}
 
 
 @router.get("/documents")

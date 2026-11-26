@@ -47,6 +47,22 @@ MESSAGES = {
     '证据页（可选）': 'Evidence page (optional)', '证据页 {p0}': 'Evidence page {p0}',
     '复核说明（可选）': 'Review note (optional)', '保存修订': 'Save correction',
     '版本年份须为整数。': 'Enter a whole year.', '正在保存修订并更新检索…': 'Saving the correction and updating search…',
+    '入库失败恢复': 'Failed import recovery',
+    '选择待恢复文献或查看记录': 'Select a document or view its recovery history',
+    '待恢复': 'Awaiting recovery', '已恢复': 'Recovered', '已有修正版': 'Replacement available',
+    '打开失败原件': 'Open failed original', '问题页（PDF 页码）': 'Problem pages (PDF page numbers)',
+    '这条记录没有页码，请打开原件核对。': 'No page numbers were recorded. Open the original to review it.',
+    '修正版记录': 'Replacement history', '打开已提交的修正版': 'Open submitted replacement',
+    '对原件完成 OCR，或准备同一文献的可读 PDF。提交前请核对修正版的题名、作者和版本年份。':
+        'Run OCR on the original or find a readable PDF of the same document. Check its title, authors, and version year before submitting.',
+    '修正版 PDF（单份最大 {p0} MB）': 'Replacement PDF (up to {p0} MB)',
+    '提交修正版并重新验证': 'Submit and revalidate replacement',
+    '请填写修正版标题。': 'Enter the replacement title.',
+    '修正版已入库，可在馆藏中检索。': 'The replacement was added and can now be found in search.',
+    '已有修正版等待处理。如需重试，请重新提交同一份 PDF。':
+        'A replacement is awaiting processing. To retry, resubmit the same PDF.',
+    'PDF 没有可提取正文，请先进行 OCR 或准备可提取文字的 PDF。':
+        'The PDF has no extractable body text. Run OCR or find a text-based copy.',
     '修订记录': 'Revision history', '版本年份': 'Version year', '学科与主题': 'Subject and topics',
     '字段': 'Field', '修改前': 'Before', '修改后': 'After',
     '已保存文献修订。': 'Correction saved.', '文献字段没有变化。': 'The metadata is already up to date.',
@@ -169,6 +185,11 @@ def labels(options):
 
 
 ERRORS = {
+    'RECOVERY_NOT_AVAILABLE': 'A replacement can only be submitted for an original awaiting full-text review.',
+    'REPLACEMENT_UNCHANGED': 'This PDF is identical to the original. Choose an OCR copy or corrected PDF.',
+    'REPLACEMENT_ALREADY_STORED': 'This PDF is already in the catalogue or linked to another recovery case.',
+    'RECOVERY_ALREADY_RESOLVED': 'This case already has a searchable replacement.',
+    'RECOVERY_IN_PROGRESS': 'A replacement is already being processed. If indexing failed, resubmit the same PDF.',
     'METADATA_CONFLICT': 'This record has changed. Refresh it before saving.',
     'INVALID_REQUEST': 'Check the required fields, year range and search parameters.',
     'UNSUPPORTED_FILE': 'Only PDF files are supported.', 'UPLOAD_TOO_LARGE': 'The file exceeds the configured upload limit.',

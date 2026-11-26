@@ -79,6 +79,16 @@ class FulltextReviewRequired(ProjectError):
         return {"code": self.code, "message": self.message, "fulltext_review": self.review}
 
 
+class NoExtractableText(ProjectError):
+    def __init__(self, pages):
+        reasons = sorted({reason for page in pages for reason in page["diagnostics"]})
+        self.review = {"page_count": len(pages), "suspect_pages": [
+            page["pdf_page"] for page in pages
+            if REVIEW_DIAGNOSTIC in page["diagnostics"]
+        ]}
+        super().__init__("NO_EXTRACTABLE_TEXT", "No usable text; " + ", ".join(reasons))
+
+
 def require_complete_text(pages):
     suspect = [p["pdf_page"] for p in pages if REVIEW_DIAGNOSTIC in p.get("diagnostics", [])]
     if suspect:

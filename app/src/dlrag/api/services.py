@@ -11,9 +11,10 @@ from pathlib import Path
 
 from pydantic import ValidationError
 from dlrag.shared.config import Settings
-from dlrag.shared.models import AnswerResponse, Chunk, Document, IndexManifest, RetrievalHit, error_answer
+from dlrag.shared.models import AnswerResponse, Chunk, Document, IndexManifest, Metadata, RetrievalHit, error_answer
 from dlrag.shared.disciplines import DisciplineError, require_discipline
 from dlrag.ingestion.errors import ProjectError as IngestionError
+from dlrag.ingestion.recovery import RECOVERY_MESSAGES
 from .index_publication import prepare_index_publication, recover_index_publication
 
 
@@ -143,26 +144,32 @@ class Services:
             self.issues = [i for i in self.issues if i.get("component") != "index"]
             return manifest
 
-    def _prepare_import(self, path, metadata):
+    def _prepare_import(self, path, metadata, *, replaces=None):
         try:
             require_discipline(metadata)
         except DisciplineError as error:
             raise ProjectError(error.code, error.message) from None
         store = self.require("library")
-        doc = boundary(Document, store.ingest_pdf(path, metadata, self.settings.chunking_config.model_dump()))
+        options = {"replaces": replaces} if replaces is not None else {}
+        doc = boundary(Document, store.ingest_pdf(path, metadata, self.settings.chunking_config.model_dump(), **options))
         if doc["status"] == "failed":
             raise ProjectError(doc["error_code"] or "INVALID_PDF", doc["error_message"] or "解析失败")
         if doc["status"] not in ("indexing", "ready"):
             raise ProjectError("INDEX_NOT_READY", "文献尚未完成解析")
         return doc
 
-    def ingest(self, path: str, metadata: dict, progress=None):
+    def ingest(self, path: str, metadata: dict, progress=None, *, replaces=None):
         if progress:
             progress("waiting")
         with self.lock:
             if progress:
                 progress("document_parsing")
-            doc = self._prepare_import(path, metadata)
+            if replaces is not None:
+                original = self.require("library").get_document(replaces)
+                if original is None:
+                    raise ProjectError("RECOVERY_NOT_AVAILABLE", RECOVERY_MESSAGES["RECOVERY_NOT_AVAILABLE"])
+                metadata = {**{field: original[field] for field in Metadata.model_fields}, **metadata}
+            doc = self._prepare_import(path, metadata, replaces=replaces)
             # 同一文件已 ready 且有效索引存在时，无需再次全量构建。
             manifest = self.manifest()
             if doc["status"] != "ready" or not manifest:
