@@ -205,6 +205,30 @@ class Retriever:
         return {**{key: self.settings[key] for key in ("candidate_k", "rrf_k", "normalize_embeddings", "bm25_k1", "bm25_b")},
                 "vector_text_policy": VECTOR_TEXT_POLICY}
 
+    def _build_vectors(self, chunks, backend_config, chunking):
+        dimension = backend_config.get("dimension")
+        texts = [vector_text(chunk) for chunk in chunks]
+        if self._snapshot is None:
+            return self._encode(texts, dimension)
+        previous_chunks, previous_vectors, _, manifest = self._snapshot
+        if (manifest["embedding_backend"] != backend_config
+                or manifest["chunking_config"] != chunking
+                or manifest["normalized"] != self.settings["normalize_embeddings"]
+                or manifest["retrieval_config"].get("vector_text_policy") != VECTOR_TEXT_POLICY):
+            return self._encode(texts, dimension)
+        positions = {chunk["chunk_id"]: index for index, chunk in enumerate(previous_chunks)}
+        vectors = np.empty((len(chunks), previous_vectors.shape[1]), dtype=np.float32)
+        changed = []
+        for index, (chunk, text) in enumerate(zip(chunks, texts)):
+            old = positions.get(chunk["chunk_id"])
+            if old is not None and text == vector_text(previous_chunks[old]):
+                vectors[index] = previous_vectors[old]
+            else:
+                changed.append(index)
+        if changed:
+            vectors[changed] = self._encode([texts[index] for index in changed], vectors.shape[1])
+        return vectors
+
     def build(self, chunks: list[dict]) -> dict:
         with self._lock:
             chunks = validate_chunks(chunks)
@@ -218,7 +242,7 @@ class Retriever:
             try:
                 dimension = backend_config.get("dimension")
                 if chunks:
-                    vectors = self._encode([vector_text(c) for c in chunks], dimension)
+                    vectors = self._build_vectors(chunks, backend_config, chunking)
                     dimension = vectors.shape[1]
                 else:
                     if isinstance(dimension, bool) or not isinstance(dimension, int) or dimension < 1:
@@ -263,6 +287,10 @@ class Retriever:
             finally:
                 if stage.exists():
                     shutil.rmtree(stage)
+
+    def invalidate_snapshot(self):
+        with self._lock:
+            self._snapshot = None
 
     def load(self) -> dict:
         with self._lock:

@@ -221,8 +221,15 @@ def test_original_interface_structure_and_style_are_unchanged():
     import ast,hashlib
     from dlrag.ui.library import STYLE
     tree=ast.parse(Path(APP).read_text(encoding='utf-8'))
+    # The batch page has its own UI test. Its exit skips the legacy upload form.
+    batch_page = next(node for node in ast.walk(tree) if isinstance(node, ast.If)
+                      and ast.unparse(node.test) == "section == '批量入库'")
+    batch_exit = batch_page.body[-1].value
+    assert ast.unparse(batch_exit) == 'st.stop()'
     calls=[]
     for node in ast.walk(tree):
+        if node is batch_exit:
+            continue
         if isinstance(node,ast.Call):
             name=ast.unparse(node.func)
             if name.startswith('st.') and not name.startswith('st.session_state.'):

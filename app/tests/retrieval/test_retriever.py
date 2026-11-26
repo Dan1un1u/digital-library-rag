@@ -138,8 +138,9 @@ def test_failed_embedding_build_preserves_disk_and_memory(tmp_path, sample):
     previous = retriever.build(sample)
     before = retriever.search("BM25", mode="keyword")
     backend.fail = True
+    changed = [{**chunk, "document": {**chunk["document"], "title": "Needs a new embedding"}} for chunk in sample]
     with pytest.raises(ProjectError):
-        retriever.build(sample)
+        retriever.build(changed)
     assert retriever.get_manifest() == previous
     assert retriever.search("BM25", mode="keyword") == before
     assert make(tmp_path, backend).load() == previous

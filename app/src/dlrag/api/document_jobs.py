@@ -57,15 +57,24 @@ class DocumentJobs:
             root = self.services.settings.data_dir / "tmp"
             root.mkdir(parents=True, exist_ok=True)
             with TemporaryDirectory(dir=root) as folder:
-                path = Path(folder) / "upload.pdf"
-                path.write_bytes(data)
-                del data
-                if kind == "metadata":
-                    from dlrag.ingestion.metadata_api import recognize_metadata
-                    options = {"lookup": True} if lookup else {}
-                    result = recognize_metadata(path, self.services.settings, filename=filename, assist=assist, progress=progress, **options)
+                if kind == "batch":
+                    entries = []
+                    for index, (raw, metadata) in enumerate(data):
+                        path = Path(folder) / f"{index}.pdf"
+                        path.write_bytes(raw)
+                        entries.append((str(path), metadata))
+                    del data
+                    result = self.services.ingest_batch(entries, progress=progress)
                 else:
-                    result = self.services.ingest(str(path), metadata, progress=progress)
+                    path = Path(folder) / "upload.pdf"
+                    path.write_bytes(data)
+                    del data
+                    if kind == "metadata":
+                        from dlrag.ingestion.metadata_api import recognize_metadata
+                        options = {"lookup": True} if lookup else {}
+                        result = recognize_metadata(path, self.services.settings, filename=filename, assist=assist, progress=progress, **options)
+                    else:
+                        result = self.services.ingest(str(path), metadata, progress=progress)
             with self.lock:
                 self.jobs[job_id]["result"] = result
                 progress("done")
