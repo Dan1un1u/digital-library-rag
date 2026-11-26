@@ -7,7 +7,34 @@ import streamlit as st
 
 from dlrag.shared.batch_limits import MAX_BATCH_FILES, MAX_BATCH_MIB
 from dlrag.shared.i18n import error_message, labels, system_message, t
+from dlrag.ui import client
 from dlrag.ui.library import DOMAINS, editable_topics, preview_discipline
+
+
+def _ready_matches(base, first_by_digest):
+    matches = {}
+    for digest, index in first_by_digest.items():
+        record = client.call_api(base, "GET", f"/documents/d_{digest}").get("document", {})
+        if record.get("status") == "ready":
+            matches[index] = record["doc_id"]
+    return matches
+
+
+def _original_link(base, doc_id):
+    st.link_button(t("阅读原文"), base.rstrip("/") + f"/documents/{quote(doc_id, safe='')}/file")
+
+
+def _show_skipped(signature, existing, copies, base):
+    if not (existing or copies):
+        return
+    with st.expander(t("已跳过的文件（{p0}）", p0=len(existing) + len(copies)), expanded=True):
+        for index in sorted(existing.keys() | copies.keys()):
+            st.write(signature[index][0])
+            if index in existing:
+                st.caption(t("这份 PDF 已在馆藏。"))
+                _original_link(base, existing[index])
+            else:
+                st.caption(t("与同批的 {p0} 内容相同。", p0=signature[copies[index]][0]))
 
 
 def render_batch_upload(submit_job, base, max_upload_mb):
@@ -26,22 +53,40 @@ def render_batch_upload(submit_job, base, max_upload_mb):
         st.warning(t("已超出本批文件数量或大小限制。"))
         return
     signature = tuple((file.name, hashlib.sha256(value).hexdigest()) for file, value in zip(files, raw))
+    first_by_digest, copies = {}, {}
+    for index, (_, digest) in enumerate(signature):
+        first = first_by_digest.setdefault(digest, index)
+        if index != first:
+            copies[index] = first
     review = st.session_state.get("batch_review")
-    if not review or review["signature"] != signature:
-        review = dict(signature=signature, previews=None, generation=0, result=None)
+    if not review or review["signature"] != signature or "existing" not in review:
+        review = dict(signature=signature, previews=None, generation=0, result=None,
+                      existing=_ready_matches(base, first_by_digest))
         st.session_state["batch_review"] = review
-    if st.button(t("识别本批文献")):
-        review["previews"] = [submit_job("/documents/metadata/jobs",
-            files={"file": (file.name, value, "application/pdf")},
-            data={"use_api": str(assist).lower(), "use_lookup": str(assist and lookup).lower()})
-            for file, value in zip(files, raw)]
+    recognize = st.button(t("识别本批文献"), disabled=len(review["existing"]) == len(first_by_digest))
+    if recognize:
+        review["existing"] = _ready_matches(base, first_by_digest)
+    existing = review["existing"]
+    _show_skipped(signature, existing, copies, base)
+    candidates = [index for index in first_by_digest.values() if index not in existing]
+    if not candidates:
+        st.info(t("本批没有需要入库的文件。"))
+        return
+    if recognize:
+        review["previews"] = {
+            index: submit_job("/documents/metadata/jobs",
+                              files={"file": (files[index].name, raw[index], "application/pdf")},
+                              data={"use_api": str(assist).lower(), "use_lookup": str(assist and lookup).lower()})
+            for index in candidates
+        }
         review["generation"] += 1
         review["result"] = None
     if review["previews"] is None:
         return
     with st.form("batch_review_form"):
         reviewed = []
-        for index, (file, preview) in enumerate(zip(files, review["previews"])):
+        for index, preview in review["previews"].items():
+            file = files[index]
             fields = (preview or {}).get("metadata", {})
             prefix = f"batch_{review['generation']}_{index}_{signature[index][1]}"
             with st.expander(file.name, expanded=True):
@@ -57,7 +102,7 @@ def render_batch_upload(submit_job, base, max_upload_mb):
                 subject = st.selectbox(t("所属学科"), DOMAINS, index=DOMAINS.index(domain) if domain in DOMAINS else None,
                                        format_func=labels(DOMAINS), key=prefix + "_domain")
                 topics = st.text_input(t("主题（逗号分隔）"), value=editable_topics(fields), key=prefix + "_topics")
-                reviewed.append((selected, title, authors, year, subject, topics, fields))
+                reviewed.append((index, selected, title, authors, year, subject, topics, fields))
         submitted = st.form_submit_button(t("发布本批文献"))
     if submitted:
         _submit_reviewed_batch(submit_job, files, raw, reviewed, review)
@@ -69,17 +114,21 @@ def render_batch_upload(submit_job, base, max_upload_mb):
             with st.container(border=True):
                 st.write(name)
                 if item["status"] == "ready":
-                    st.success(t("可阅读"))
-                    st.link_button(t("阅读原文"), base.rstrip("/") + f"/documents/{quote(item['doc_id'], safe='')}/file")
+                    if item.get("already_in_catalogue"):
+                        st.info(t("这份 PDF 已在馆藏。"))
+                    else:
+                        st.success(t("可阅读"))
+                    _original_link(base, item["doc_id"])
                 elif item["error"]:
                     st.error(error_message(item["error"]))
 
 
 def _submit_reviewed_batch(submit_job, files, raw, reviewed, review):
     names, metadata, uploads = [], [], []
-    for file, content, (selected, title, authors, year, domain, topics, fields) in zip(files, raw, reviewed):
+    for index, selected, title, authors, year, domain, topics, fields in reviewed:
         if not selected:
             continue
+        file = files[index]
         try:
             year_value = int(year.strip()) if year.strip() else None
         except ValueError:
@@ -94,7 +143,7 @@ def _submit_reviewed_batch(submit_job, files, raw, reviewed, review):
                          "year": year_value, "topics": [domain, *[tag for tag in tags if tag and tag not in DOMAINS]],
                          "language": fields.get("language") or "unknown", "source_url": fields.get("source_url")})
         names.append(file.name)
-        uploads.append(("files", (file.name, content, "application/pdf")))
+        uploads.append(("files", (file.name, raw[index], "application/pdf")))
     if not uploads:
         st.error(t("请至少选择一份文献。"))
         return

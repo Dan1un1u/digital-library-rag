@@ -194,7 +194,10 @@ class Services:
             for path, metadata in entries:
                 try:
                     doc = self._prepare_import(path, metadata)
-                    items.append({"doc_id": doc["doc_id"], "status": doc["status"], "error": None})
+                    item = {"doc_id": doc["doc_id"], "status": doc["status"], "error": None}
+                    if doc["status"] == "ready":
+                        item["already_in_catalogue"] = True
+                    items.append(item)
                 except FulltextReviewRequired as exc:
                     items.append({"doc_id": None, "status": "failed", "error": exc.public_error()})
                 except (ProjectError, IngestionError) as exc:
