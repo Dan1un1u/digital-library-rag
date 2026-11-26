@@ -86,7 +86,10 @@ class Services:
                     if self.settings.app_mode == "mock" else None}
 
     def rebuild(self):
+        from .metadata_review import recover_service_review
+
         with self.lock:
+            recover_service_review(self)
             store, retriever = self.require("library"), self.require("retriever")
             candidates = store.list_chunks(include_indexing=True)
             for chunk in candidates:

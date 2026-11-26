@@ -4,12 +4,14 @@ If a process exits between index publication and SQLite commit, SQLite rolls
 back. The durable intent records which previous pointer to restore on startup.
 """
 import json
+import logging
 import os
 from pathlib import Path
 
 from dlrag.ingestion.errors import ProjectError
 from dlrag.retrieval.retriever import write_json
 
+logger = logging.getLogger(__name__)
 _RECOVERY_FILE = ".pending-metadata-review.json"
 
 
@@ -29,23 +31,29 @@ def recover_review(library, index_dir, *, reload_index=None):
     index_dir = Path(index_dir)
     intent = index_dir / _RECOVERY_FILE
     if not intent.is_file():
-        return False
+        return
     record = json.loads(intent.read_text(encoding="utf-8"))
     document = library.get_document(record["doc_id"])
     if document is None or document["updated_at"] not in {record["before"], record["after"]}:
         raise ProjectError("INDEX_BUILD_FAILED", "无法核对未完成的元数据修订，请从一致备份恢复。")
-    restored = False
     if document["updated_at"] == record["before"]:
         pointer = index_dir / "current.json"
         previous = {"index_version": record["previous_index"]}
         if not pointer.exists() or json.loads(pointer.read_text(encoding="utf-8")) != previous:
             _write_atomic(pointer, previous)
-            restored = True
     if reload_index is not None:
-        # Keep the intent if loading fails so an injected service can retry safely.
+        # Keep the record until the corresponding index is active in this service.
         reload_index()
     intent.unlink()
-    return restored
+
+
+def recover_service_review(service):
+    retriever = service.require("retriever")
+    try:
+        recover_review(service.require("library"), service.settings.index_dir, reload_index=retriever.load)
+    except Exception:
+        retriever.invalidate_snapshot()
+        raise
 
 
 def correct_and_publish(service, doc_id, correction):
@@ -54,8 +62,7 @@ def correct_and_publish(service, doc_id, correction):
 
     library, retriever = service.require("library"), service.require("retriever")
     with service.lock:
-        if recover_review(library, service.settings.index_dir):
-            retriever.load()
+        recover_service_review(service)
         current = service.manifest()
         if not current:
             raise ProjectError("INDEX_NOT_READY", "请先加载馆藏索引，再保存元数据修订。")
@@ -77,7 +84,14 @@ def correct_and_publish(service, doc_id, correction):
                     current = boundary(IndexManifest, retriever.build(candidate))
                 result = {"document": boundary(Document, document), "revision_id": revision_id,
                           "index_version": current["index_version"]}
-        finally:
-            if intent is not None and recover_review(library, service.settings.index_dir):
-                retriever.load()
+        except Exception:
+            if intent is not None:
+                recover_service_review(service)
+            raise
+        if intent is not None:
+            try:
+                intent.unlink()
+            except OSError:
+                # SQLite has committed. A later recovery can clear this record safely.
+                logger.warning("Committed metadata revision left a recovery record to clean up")
         return result

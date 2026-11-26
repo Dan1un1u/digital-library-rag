@@ -1,6 +1,7 @@
 """Post-accession catalogue review, correction, and publication consistency."""
 import json
 import sqlite3
+from contextlib import closing
 from pathlib import Path
 
 import pytest
@@ -70,6 +71,53 @@ def test_failure_keeps_original_metadata_and_index(catalogue, monkeypatch):
     assert client.get(path + "/revisions").json()["revisions"] == []
     assert service.manifest()["index_version"] == previous
 
+
+
+@pytest.mark.parametrize("next_write", ["correction", "import"])
+def test_live_rollback_keeps_search_unavailable_until_the_committed_index_loads(
+    catalogue, monkeypatch, tmp_path, next_write
+):
+    client, service, old = catalogue
+    path = f"/documents/{old['doc_id']}/metadata"
+    # An SQLite transaction may reject the commit after the index has been published.
+    with closing(sqlite3.connect(service.settings.db_path)) as db, db:
+        db.execute("CREATE TABLE test_parent (id TEXT PRIMARY KEY)")
+        db.execute("CREATE TABLE test_child (id TEXT REFERENCES test_parent(id) DEFERRABLE INITIALLY DEFERRED)")
+        db.execute("""
+            CREATE TRIGGER fail_revision_commit AFTER UPDATE OF authors_json ON documents
+            BEGIN INSERT INTO test_child VALUES (NEW.doc_id); END
+        """)
+
+    def unreadable_index():
+        raise OSError("simulated transient index read failure")
+
+    with monkeypatch.context() as patch:
+        patch.setattr(service.retriever, "load", unreadable_index)
+        assert client.patch(path, json=correction(old)).status_code == 500
+    assert client.get(f"/documents/{old['doc_id']}").json()["document"]["authors"] == old["authors"]
+    query = {"query": "adult education", "mode": "keyword"}
+    assert client.post("/search", json=query).status_code == 503
+    marker_path = service.settings.index_dir / ".pending-metadata-review.json"
+    assert marker_path.exists()
+
+    if next_write == "correction":
+        with closing(sqlite3.connect(service.settings.db_path)) as db, db:
+            db.execute("DROP TRIGGER fail_revision_commit")
+        accepted = client.patch(path, json=correction(old))
+        assert accepted.status_code == 200
+        search = client.post("/search", json=query).json()
+        assert search["hits"][0]["chunk"]["document"]["authors"] == accepted.json()["document"]["authors"]
+    else:
+        extra = tmp_path / "later.pdf"
+        create_pdf(extra, ["LaterAcquisition describes a separate topic."])
+        added = client.post("/documents", files={"file": (extra.name, extra.read_bytes(), "application/pdf")},
+                            data={"metadata_json": json.dumps({"title": "LaterAcquisition", "topics": ["自然科学"]})})
+        assert added.status_code == 200
+        new_doc_id = added.json()["document"]["doc_id"]
+        with TestClient(create_app(service.settings)) as restarted:
+            search = restarted.post("/search", json={"query": "LaterAcquisition", "mode": "keyword"}).json()
+            assert new_doc_id in {hit["doc_id"] for hit in search["documents"]}
+    assert not marker_path.exists()
 
 @pytest.mark.parametrize("startup", ["assembled", "injected", "injected_retry"])
 def test_recover_from_crash_after_index_publication_before_database_commit(catalogue, startup, monkeypatch):
