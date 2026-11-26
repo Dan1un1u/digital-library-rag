@@ -323,7 +323,7 @@ def test_batch_skips_existing_pdfs_and_same_content_copies(library, tmp_path, mo
     titles = [item for item in app.text_input if (item.key or "").endswith("_title")]
     titles[0].set_value("First manually reviewed")
     titles[1].set_value("Second manually reviewed")
-    for item in app.selectbox:
+    for item in (field for field in app.selectbox if (field.key or "").endswith("_domain")):
         item.set_value("自然科学")
     next(button for button in app.button if button.label == publish).click().run()
     assert not app.exception
@@ -343,7 +343,7 @@ def test_batch_marks_record_added_elsewhere_during_review(library, tmp_path, mon
     path = pdf(tmp_path, "concurrent deposit")
     app, posts = open_batch_app(client, monkeypatch, [path], "zh")
     next(button for button in app.button if button.label == "识别本批文献").click().run()
-    app.selectbox[0].set_value("自然科学")
+    next(field for field in app.selectbox if (field.key or "").endswith("_domain")).set_value("自然科学")
     other = service.ingest(str(path), metadata("From another session"))["document"]
     version = service.manifest()["index_version"]
     next(button for button in app.button if button.label == "发布本批文献").click().run()
