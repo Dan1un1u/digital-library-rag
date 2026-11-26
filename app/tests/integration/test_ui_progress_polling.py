@@ -50,3 +50,31 @@ def test_submission_failure_restores_idle_progress_without_duplicate_key(client,
     assert not app.exception
     assert any('测试服务不可用' in w.value for w in app.error)
     assert any('提交问答后' in w.value for w in app.caption)
+
+
+
+@pytest.mark.parametrize("language,title", [
+    ("zh", "问题要点与回答范围"),
+    ("en", "Question coverage and answer scope"),
+])
+def test_question_scope_shows_linked_claim_and_specific_gap(client, imported, monkeypatch, language, title):
+    def local_api(base, method, path, **kwargs):
+        return client.request(method, path, **kwargs).json()
+
+    monkeypatch.setattr("dlrag.ui.client.call_api", local_api)
+    answer = client.post("/ask", json={"question": "BM25"}).json()
+    claim = answer["claims"][0]
+    gap = "No evidence about general vector quantization."
+    answer["coverage"] = [{"requirement": "How does it work?", "claim_indices": [1], "gap": gap}]
+    app = AppTest.from_file(str(Path(__file__).parents[2] / "src/dlrag/ui/app.py"))
+    app.query_params["lang"] = language
+    app.run()
+    app.sidebar.radio[0].set_value("搜索与问答").run()
+    app.session_state["answer"] = answer
+    app.run()
+
+    assert not app.exception
+    panel = next(item for item in app.expander if item.label == title)
+    source = answer["evidence"][0]["chunk_id"]
+    assert any(claim["text"] in cell.value and "/sources/" + source in cell.value for cell in panel.markdown)
+    assert any(gap in cell.value for cell in panel.caption)

@@ -1,10 +1,11 @@
-"""Contract 1.0 single-turn QA orchestration with at most three model calls."""
+"""Contract 1.0 single-turn QA with retrieval, reranking and grounded citations."""
 import copy
 import time
 import uuid
 import re
 from pathlib import Path
 
+from .coverage import validate_coverage
 from .errors import ProjectError
 from .evidence import payload_for, public_answer, related_documents, select_evidence, validate_hits, restore_references
 from .llm_client import input_upper_bound
@@ -198,7 +199,13 @@ class QAEngine:
                         try:
                             from .semantic_reranker import rank_question_and_mechanism
                             rerank_query = question + '\n' + (plan.get('english_query') or plan['rewritten_query'])
-                            expanded = rank_question_and_mechanism(self.reranker,rerank_query,plan.get('mechanism_query'),expanded)
+                            candidates = expanded
+                            # Keep the complete set for comparisons, which need evidence for both sides.
+                            if plan["intent"] != "compare":
+                                limit = max(s["retrieval_top_k"], 2 * s["max_evidence_chunks"])
+                                candidates = expanded[:limit]
+                            expanded = rank_question_and_mechanism(
+                                self.reranker, rerank_query, plan.get("mechanism_query"), candidates)
                             diag['semantic_rerank_queries'] = 2 if plan.get('mechanism_query') else 1
                             diag['rerank_method'] = getattr(self.reranker, 'method', 'semantic_cross_encoder') + ':' + self.reranker.model
                             diag['semantic_rerank_status'] = 'ok'
@@ -230,6 +237,8 @@ class QAEngine:
             diag["context_budget_upper_bound_limit"] = s["context_budget_tokens"]
             diag["context_window_tokens"] = s["context_window_tokens"]
 
+            requirements = plan.get("answer_requirements", [])
+
             def answer():
                 validation_error = '引用或结构校验失败，请重新生成'
                 for attempt in range(s["max_answer_repairs"] + 1):
@@ -242,14 +251,12 @@ class QAEngine:
                         normalized = restore_references(generated, selected)
                         if self.reranker and isinstance(normalized,dict) and isinstance(normalized.get('claims'),list):
                             normalized.pop('sections',None)
-                            normalized.pop('coverage',None)
                             for claim in normalized['claims']:
                                 if isinstance(claim,dict):
                                     claim.pop('evidence_sentences',None)
                         validated = validate_answer(normalized, selected, require_sentence_refs=s["sentence_citations_required"] and not self.reranker)
-                        from .coverage import validate_coverage
                         if not self.reranker:
-                            validate_coverage(validated, plan.get('answer_requirements', []))
+                            validated['coverage'] = validate_coverage(validated, requirements)
                         return validated
                     except ProjectError as e:
                         if e.code != "OUTPUT_VALIDATION_FAILED" or attempt == s["max_answer_repairs"]:
@@ -272,16 +279,15 @@ class QAEngine:
                     for claim in value['claims']:
                         claim.pop('evidence_sentences',None)
                     r['limitations'].append('句子定位服务暂不可用，本次保留片段引用，可打开原文核对。')
-                if plan.get('answer_requirements'):
-                    notify('coverage_check')
+                if requirements:
                     try:
-                        from .coverage import map_coverage
-                        value['coverage'] = timed('coverage_check',lambda:map_coverage(value,plan['answer_requirements'],self.reranker))
-                        diag['coverage_check_status'] = 'ok'
+                        value['coverage'] = validate_coverage(value, requirements)
                     except ProjectError:
-                        value['coverage'] = []
-                        diag['coverage_check_status'] = 'unavailable'
-                        r['limitations'].append('问题要点的自动关联检查暂不可用，请结合原文核对回答范围。')
+                        # Optional scope metadata must not trigger an extra model call or hide a valid answer.
+                        value.pop("coverage", None)
+                        diag["coverage_check_status"] = "unavailable"
+                    else:
+                        diag["coverage_check_status"] = "ok"
             r["status"] = value["status"]
             r["limitations"].extend(value["limitations"])
             if value["status"] == "answered":
@@ -299,7 +305,7 @@ class QAEngine:
                         sections.append({'heading':'','claim_indices':group})
                 r["answer_sections"] = [{"heading": section["heading"],
                     "claim_ids": [r["claims"][i - 1]["claim_id"] for i in section["claim_indices"]]} for section in sections]
-                r['coverage'] = value.get('coverage', [])
+                r['coverage'] = value.get('coverage', []) if requirements else []
                 for row in r['coverage']:
                     if row['gap'].strip() and row['gap'] not in r['limitations']:
                         r['limitations'].append(row['gap'])
