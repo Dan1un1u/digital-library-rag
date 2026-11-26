@@ -3,6 +3,8 @@ from pathlib import Path
 import pytest
 from streamlit.testing.v1 import AppTest
 
+from qa_ui import wait_for_ui_answer
+
 
 @pytest.mark.parametrize('stage', ['planning', 'generation', 'citation_grounding'])
 def test_repeated_slow_job_stage_keeps_progress_and_renders_answer(client, imported, monkeypatch, stage):
@@ -25,6 +27,11 @@ def test_repeated_slow_job_stage_keeps_progress_and_renders_answer(client, impor
     app.text_area[0].set_value('BM25')
     next(w for w in app.button if w.label == '提交').click().run()
     assert not app.exception
+    assert not polls
+    app.run()
+    assert len(polls) == 1
+    assert any('已用时 1.0 秒' in item.value for item in app.caption)
+    wait_for_ui_answer(app)
     assert len(polls) >= 3
     assert app.session_state['answer']['claims']
     assert app.session_state['last_progress']['stage'] == 'done'

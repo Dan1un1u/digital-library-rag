@@ -88,24 +88,24 @@ class Services:
         return boundary(IndexManifest, value) if value else None
 
     def health(self):
-        with self.lock:
-            manifest = self.manifest()
-            ready = bool(self.library and self.retriever and self.qa and manifest
-                         and self.embedding_configured and self.llm_configured)
-            return {"status": "ready" if ready else "not_ready", "mode": self.settings.app_mode,
-                    "embedding_configured": self.embedding_configured,
-                    "llm_configured": self.llm_configured, "qa_available": self.qa is not None,
-                    "index_version": manifest["index_version"] if manifest else None,
-                    "manifest": manifest, "issues": self.issues,
-                    "active_models": {"embedding": manifest["embedding_model"] if manifest else (
-                        "fake-sha256-v1" if self.settings.app_mode == "mock" else self.settings.embedding_model),
-                        "llm": "D-scripted-mock" if self.settings.app_mode == "mock" else self.settings.llm_model,
-                        "semantic_reranker": getattr(getattr(self.qa, 'reranker', None), 'model', None),
-                        "qa_engine": type(self.qa).__module__ + "." + type(self.qa).__name__ if self.qa else None},
-                    "configuration": self.settings.public(),
-                    "upload_notice": "上传入口仅适用于本地可信课堂环境；仅运行一个后端进程。",
-                    "mock_notice": "模拟 embedding 与问答仅验证接口，不代表真实效果。"
-                    if self.settings.app_mode == "mock" else None}
+        # The retriever copies its index manifest under its own lock. Model work need not block health reads.
+        manifest = self.manifest()
+        ready = bool(self.library and self.retriever and self.qa and manifest
+                     and self.embedding_configured and self.llm_configured)
+        return {"status": "ready" if ready else "not_ready", "mode": self.settings.app_mode,
+                "embedding_configured": self.embedding_configured,
+                "llm_configured": self.llm_configured, "qa_available": self.qa is not None,
+                "index_version": manifest["index_version"] if manifest else None,
+                "manifest": manifest, "issues": self.issues,
+                "active_models": {"embedding": manifest["embedding_model"] if manifest else (
+                    "fake-sha256-v1" if self.settings.app_mode == "mock" else self.settings.embedding_model),
+                    "llm": "D-scripted-mock" if self.settings.app_mode == "mock" else self.settings.llm_model,
+                    "semantic_reranker": getattr(getattr(self.qa, 'reranker', None), 'model', None),
+                    "qa_engine": type(self.qa).__module__ + "." + type(self.qa).__name__ if self.qa else None},
+                "configuration": self.settings.public(),
+                "upload_notice": "上传入口仅适用于本地可信课堂环境；仅运行一个后端进程。",
+                "mock_notice": "模拟 embedding 与问答仅验证接口，不代表真实效果。"
+                if self.settings.app_mode == "mock" else None}
 
     def rebuild(self):
         from .metadata_review import recover_service_review

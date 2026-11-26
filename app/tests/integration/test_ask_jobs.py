@@ -1,3 +1,4 @@
+from concurrent.futures import ThreadPoolExecutor
 import threading
 import time
 import pytest
@@ -13,7 +14,7 @@ def wait_done(client, job_id):
     pytest.fail("job failed to finish")
 
 
-def test_progress_reads_work_while_corpus_lock_is_held(client, services, imported):
+def test_progress_and_health_reads_work_while_corpus_lock_is_held(client, services, imported):
     entered, release = threading.Event(), threading.Event()
     original = services.qa.ask
     def blocked(request, progress):
@@ -32,6 +33,14 @@ def test_progress_reads_work_while_corpus_lock_is_held(client, services, importe
         job = client.get("/ask/jobs/" + job_id).json()
         assert job["stage"] == "planning" and job["answer"] is None
         assert job["stages"] == ["queued", "waiting", "planning"]
+        with ThreadPoolExecutor(max_workers=1) as pool:
+            try:
+                health = pool.submit(client.get, "/health").result(timeout=1)
+                assert health.status_code == 200
+                assert health.json()["index_version"] == imported["index_version"]
+                assert not release.is_set()
+            finally:
+                release.set()
     finally:
         release.set()
     job = wait_done(client, job_id)
