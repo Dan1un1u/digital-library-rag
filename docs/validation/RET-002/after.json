@@ -1,0 +1,22 @@
+{
+  "sha": "db529ffaef497dff0a66ab2f620c7c04b060c22e",
+  "document_count": 175,
+  "index_version": "idx_20261020T063256_77704a846374",
+  "target": "FQ-ViT: Post-Training Quantization for Fully Quantized Vision Transformer",
+  "catalogue_topics": [
+    "Integer quantization",
+    "Post-training quantization",
+    "Vision Transformers"
+  ],
+  "search_summary_topics": [
+    "Integer quantization",
+    "Post-training quantization",
+    "Vision Transformers"
+  ],
+  "literal_title_hits": 1,
+  "literal_title_first_match": true,
+  "first_author": "Yang Lin",
+  "first_author_hits": 1,
+  "first_author_includes_target": true,
+  "original_pdf_http": 200
+}
