@@ -61,6 +61,7 @@ def test_batch_has_single_publication_and_only_new_encodes(library, tmp_path, mo
     entries = [(pdf(tmp_path, name), metadata(name)) for name in ("alpha", "beta")]
     result = send_batch(client, entries)
     assert [item["status"] for item in result["items"]] == ["ready", "ready"]
+    assert not any(item.get("already_in_catalogue") for item in result["items"])
     assert calls == [2]
     assert result["index_version"] != before
     assert len(list(Path(service.settings.index_dir).glob("idx_*"))) == 2
@@ -69,6 +70,7 @@ def test_batch_has_single_publication_and_only_new_encodes(library, tmp_path, mo
         assert any(doc["title"] == query for doc in hits)
     repeated = send_batch(client, entries)
     assert repeated["index_version"] == result["index_version"]
+    assert all(item["already_in_catalogue"] for item in repeated["items"])
     assert len(service.library.list_documents()) == 3
 
 
@@ -258,3 +260,97 @@ def test_batch_manage_page_reviews_two_pdfs_and_submits_once(library, tmp_path, 
     assert set(documents) == {"Confirmed paper 1", "Confirmed paper 2"}
     assert set(documents["Confirmed paper 1"]["topics"]) == {"自然科学", "Reviewed batch topic"}
     assert set(documents["Confirmed paper 2"]["topics"]) == {"自然科学", "BM25"}
+
+
+def open_batch_app(client, monkeypatch, paths, language):
+    from types import SimpleNamespace
+    from streamlit.testing.v1 import AppTest
+
+    monkeypatch.setattr("streamlit.file_uploader", lambda *args, **kwargs: [
+        SimpleNamespace(name=path.name, getvalue=path.read_bytes) for path in paths
+    ] if kwargs.get("accept_multiple_files") else None)
+    posts = []
+
+    def call_api(base, method, path, **kwargs):
+        if method == "POST":
+            posts.append((path, kwargs["files"]))
+        response = client.request(method, path, **kwargs)
+        data = response.json()
+        return {"_failure": data["error"]} if response.is_error else data
+
+    monkeypatch.setattr("dlrag.ui.client.call_api", call_api)
+    app = AppTest.from_file(str(Path(__file__).parents[2] / "src/dlrag/ui/app.py"), default_timeout=15)
+    app.query_params["lang"] = language
+    app.run()
+    app.sidebar.radio[0].set_value("上传与管理").run()
+    app.sidebar.radio[1].set_value("批量入库").run()
+    assert not app.exception
+    return app, posts
+
+
+@pytest.mark.parametrize(("language", "recognize", "publish", "existing", "copy", "no_files"), [
+    ("zh", "识别本批文献", "发布本批文献", "这份 PDF 已在馆藏。",
+     "与同批的 first new.pdf 内容相同。", "本批没有需要入库的文件。"),
+    ("en", "Extract metadata for this batch", "Publish batch", "This PDF is already in the collection.",
+     "Same content as first new.pdf in this batch.", "There are no files to import in this batch."),
+])
+def test_batch_skips_existing_pdfs_and_same_content_copies(library, tmp_path, monkeypatch,
+                                                         language, recognize, publish, existing, copy, no_files):
+    client, service = library
+    original = pdf(tmp_path, "stored record")
+    stored = service.ingest(str(original), metadata("Recorded title"))["document"]
+    renamed = tmp_path / "existing renamed.pdf"
+    renamed.write_bytes(original.read_bytes())
+    paths = [renamed]
+    app, posts = open_batch_app(client, monkeypatch, paths, language)
+    assert next(button for button in app.button if button.label == recognize).proto.disabled
+    assert not any(button.label == publish for button in app.button)
+    assert no_files in [item.value for item in app.info] and not posts
+    assert existing in [item.value for item in app.caption]
+    assert app.get("link_button")[0].proto.url.endswith(f"/documents/{stored['doc_id']}/file")
+
+    first, second = [pdf(tmp_path, name) for name in ("first new", "second new")]
+    duplicate = tmp_path / "first copied.pdf"
+    duplicate.write_bytes(first.read_bytes())
+    paths.extend((first, duplicate, second))
+    app.run()
+    assert {existing, copy}.issubset(item.value for item in app.caption)
+    next(button for button in app.button if button.label == recognize).click().run()
+    assert not app.exception
+    assert [item.label for item in app.expander if item.checkbox] == [first.name, second.name]
+    assert [files["file"][0] for path, files in posts if path == "/documents/metadata/jobs"] == [
+        first.name, second.name]
+    titles = [item for item in app.text_input if (item.key or "").endswith("_title")]
+    titles[0].set_value("First manually reviewed")
+    titles[1].set_value("Second manually reviewed")
+    for item in app.selectbox:
+        item.set_value("自然科学")
+    next(button for button in app.button if button.label == publish).click().run()
+    assert not app.exception
+    assert {existing, copy}.issubset(item.value for item in app.caption)
+    assert len(app.success) == 2
+    sent = [files for path, files in posts if path == "/documents/batch/jobs"]
+    assert [[upload[0] for _, upload in files] for files in sent] == [[first.name, second.name]]
+    assert client.get(f"/documents/{stored['doc_id']}").json()["document"] == stored
+    for path, title in zip((first, second), ("First manually reviewed", "Second manually reviewed")):
+        doc_id = "d_" + hashlib.sha256(path.read_bytes()).hexdigest()
+        assert service.library.get_document(doc_id)["title"] == title
+    assert service.manifest()["document_count"] == 3
+
+
+def test_batch_marks_record_added_elsewhere_during_review(library, tmp_path, monkeypatch):
+    client, service = library
+    path = pdf(tmp_path, "concurrent deposit")
+    app, posts = open_batch_app(client, monkeypatch, [path], "zh")
+    next(button for button in app.button if button.label == "识别本批文献").click().run()
+    app.selectbox[0].set_value("自然科学")
+    other = service.ingest(str(path), metadata("From another session"))["document"]
+    version = service.manifest()["index_version"]
+    next(button for button in app.button if button.label == "发布本批文献").click().run()
+    assert not app.exception
+    assert "这份 PDF 已在馆藏。" in [item.value for item in app.info]
+    assert not app.success
+    assert app.get("link_button")[0].proto.url.endswith(f"/documents/{other['doc_id']}/file")
+    assert [route for route, _ in posts] == ["/documents/metadata/jobs", "/documents/batch/jobs"]
+    assert service.manifest()["document_count"] == 1
+    assert service.manifest()["index_version"] == version
