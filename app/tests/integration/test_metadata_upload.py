@@ -3,6 +3,7 @@ from pathlib import Path
 from types import SimpleNamespace
 
 import fitz
+import pytest
 from streamlit.testing.v1 import AppTest
 
 
@@ -81,6 +82,8 @@ def test_ui_prefills_keeps_edits_and_resets_for_new_file(client, services, monke
     assert not app.exception
     assert client.get("/documents").json()["documents"][0]["title"] == "My corrected title"
     assert set(client.get("/documents").json()["documents"][0]["topics"]) == {"社会科学", "Reviewed topic"}
+    assert [item.value for item in app.success] == ["已可在馆藏中查看：My corrected title"]
+    assert next(w for w in app.button if w.label == "导入文献").proto.disabled
     assert calls.count("/documents/metadata/jobs") == 1
     next_data = paper_bytes(title="New document title", author="Bob Jones")
     selection["file"] = SimpleNamespace(name="second.pdf", getvalue=lambda: next_data)
@@ -98,3 +101,45 @@ def test_ui_prefills_keeps_edits_and_resets_for_new_file(client, services, monke
     assert app.text_area(key="upload_authors").value == ""
     assert "upload_preview" not in app.session_state
     assert "upload_fingerprint" not in app.session_state
+
+
+@pytest.mark.parametrize(("language", "notice", "recognize", "submit"), [
+    ("zh", "这份 PDF 已在馆藏。", "重新识别文献信息", "导入文献"),
+    ("en", "This PDF is already in the collection.", "Recognize again", "Import document"),
+])
+def test_ready_pdf_is_identified_before_recognition(client, services, monkeypatch, language, notice, recognize, submit):
+    payload = paper_bytes()
+    response = client.post("/documents", files={"file": ("original.pdf", payload, "application/pdf")},
+                           data={"metadata_json": json.dumps({"title": "Stored title", "topics": ["自然科学"]})})
+    assert response.status_code == 200
+    doc_id = response.json()["document"]["doc_id"]
+    before = services.manifest()
+    posts = []
+
+    def local_api(base, method, path, **kwargs):
+        if method == "POST":
+            posts.append(path)
+        response = client.request(method, path, **kwargs)
+        return {"_failure": response.json()["error"]} if response.is_error else response.json()
+
+    monkeypatch.setattr("dlrag.ui.client.call_api", local_api)
+    monkeypatch.setattr("streamlit.file_uploader", lambda *a, **k: SimpleNamespace(name="renamed.pdf", getvalue=lambda: payload))
+    app = AppTest.from_file(str(Path(__file__).parents[2] / "src/dlrag/ui/app.py"), default_timeout=20)
+    app.query_params["lang"] = language
+    app.run()
+    app.sidebar.radio[0].set_value("上传与管理").run()
+    assert not app.exception
+    assert notice in [item.value for item in app.info]
+    assert "Stored title" in [item.value for item in app.markdown]
+    assert any(item.proto.url.endswith(f"/documents/{doc_id}/file") for item in app.get("link_button"))
+    assert not any(item.label == submit for item in app.button)
+    assert not posts
+
+    next(item for item in app.button if item.label == recognize).click().run()
+    assert not app.exception
+    assert app.text_input(key="upload_title").value == "Original title"
+    assert next(item for item in app.button if item.label == submit).proto.disabled
+    assert posts == ["/documents/metadata/jobs"]
+    saved = client.get("/documents").json()["documents"]
+    assert len(saved) == 1 and saved[0]["title"] == "Stored title"
+    assert services.manifest() == before

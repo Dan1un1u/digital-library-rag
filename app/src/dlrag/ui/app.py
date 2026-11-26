@@ -468,13 +468,31 @@ else:
     retry_metadata = st.button(t('重新识别文献信息'), disabled=file is None, help=t('重新预填当前文件的信息，会替换表单中的识别字段。'), key='retry_metadata')
     if file is None and "upload_fingerprint" in st.session_state:
         reset_upload(st.session_state, keep_file=True)
+    existing_document = None
     if file is not None:
-        fingerprint = file.name + ":" + hashlib.sha256(file.getvalue()).hexdigest()
-        if retry_metadata or st.session_state.get("upload_fingerprint") != fingerprint:
+        pdf_payload = file.getvalue()
+        digest = hashlib.sha256(pdf_payload).hexdigest()
+        fingerprint = file.name + ":" + digest
+        changed_file = st.session_state.get("upload_fingerprint") != fingerprint
+        if changed_file or retry_metadata:
             reset_upload(st.session_state, keep_file=True)
             st.session_state["upload_fingerprint"] = fingerprint
+        # A missing record is expected when a new PDF is selected.
+        stored = call_api(base, "GET", f"/documents/d_{digest}").get("document", {})
+        if stored.get("status") == "ready":
+            existing_document = stored
+        completed = st.session_state.pop("upload_success", None)
+        if completed:
+            st.success(t('已可在馆藏中查看：') + completed)
+        if existing_document:
+            if not completed:
+                st.info(t('这份 PDF 已在馆藏。'))
+                st.write(existing_document["title"])
+            doc_id = existing_document["doc_id"]
+            st.link_button(t('阅读原文'), base.rstrip("/") + f"/documents/{quote(doc_id, safe='')}/file")
+        if retry_metadata or (changed_file and not existing_document):
             preview = document_with_progress("/documents/metadata/jobs",
-                files={"file": (file.name, file.getvalue(), "application/pdf")},
+                files={"file": (file.name, pdf_payload, "application/pdf")},
                 data={"use_api": str(use_metadata_api).lower(), "use_lookup": str(use_lookup and use_metadata_api).lower()})
             st.session_state["upload_preview"] = preview
             metadata = preview["metadata"] if preview else {}
@@ -485,6 +503,8 @@ else:
             for key, value in values.items():
                 st.session_state[key] = value
         preview = st.session_state.get("upload_preview")
+        if existing_document and not preview:
+            st.stop()
         if preview:
             with st.expander(t('识别结果与来源'), expanded=True):
                 classification = preview.get("discipline_classification", {})
@@ -546,8 +566,6 @@ else:
                                  + t('，出版记录为 ') + str(conflict["external"]))
                 for warning in preview["warnings"]:
                     st.caption(system_message(warning))
-    if st.session_state.get("upload_success"):
-        st.success(st.session_state.pop("upload_success"))
     if "upload_rights" not in st.session_state:
         st.session_state["upload_rights"] = "待人工确认"
     with st.form("upload", clear_on_submit=False):
@@ -560,7 +578,7 @@ else:
                                 format_func={"zh": t('中文'), "en": t('英文'), "mixed": t('中英混合'), "unknown": t('未确定')}.get)
         source = st.text_input(t('来源链接（可选）'), key="upload_source")
         rights = st.text_input(t('使用说明'), key="upload_rights")
-        if st.form_submit_button(t('导入文献')):
+        if st.form_submit_button(t('导入文献'), disabled=existing_document is not None) and not existing_document:
             if file is None:
                 st.error(t('请先选择 PDF 文件。'))
             elif domain is None:
@@ -575,10 +593,10 @@ else:
                         metadata["title"] = title.strip()
                     if source.strip():
                         metadata["source_url"] = source.strip()
-                    value = document_with_progress("/documents/jobs", files={"file": (file.name, file.getvalue(), "application/pdf")},
+                    value = document_with_progress("/documents/jobs", files={"file": (file.name, pdf_payload, "application/pdf")},
                                 data={"metadata_json": json.dumps(metadata, ensure_ascii=False)})
                     if value:
-                        st.session_state["upload_success"] = t('文献已加入馆藏：') + value["document"]["title"]
+                        st.session_state["upload_success"] = value["document"]["title"]
                         st.rerun()
                 except ValueError:
                     st.error(t('年份须为整数或留空。'))
