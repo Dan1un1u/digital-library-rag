@@ -55,10 +55,15 @@ class SiliconFlowReranker:
 
 
 def rank_question_and_mechanism(reranker, question, mechanism, hits):
-    primary = reranker.rerank(question,hits)
     if not mechanism:
-        return primary
-    technical = reranker.rerank('Find explanations of the following mechanisms: ' + mechanism,hits)
+        return reranker.rerank(question, hits)
+    technical_query = 'Find explanations of the following mechanisms: ' + mechanism
+    batch = getattr(reranker, 'rerank_many', None)
+    if callable(batch):
+        primary, technical = batch([(question, hits), (technical_query, hits)])
+    else:
+        primary = reranker.rerank(question, hits)
+        technical = reranker.rerank(technical_query, hits)
     by_id = {h['chunk']['chunk_id']:h for h in technical}
     result = []
     for hit in primary:
