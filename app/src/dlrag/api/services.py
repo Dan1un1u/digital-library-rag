@@ -11,6 +11,7 @@ from pydantic import ValidationError
 from dlrag.shared.config import Settings
 from dlrag.shared.models import AnswerResponse, Chunk, Document, IndexManifest, RetrievalHit, error_answer
 from dlrag.shared.disciplines import DisciplineError, require_discipline
+from dlrag.ingestion.errors import ProjectError as IngestionError
 
 
 class ProjectError(Exception):
@@ -105,22 +106,26 @@ class Services:
             self.issues = [i for i in self.issues if i.get("component") != "index"]
             return manifest
 
-    def ingest(self, path: str, metadata: dict, progress=None):
+    def _prepare_import(self, path, metadata):
         try:
             require_discipline(metadata)
         except DisciplineError as error:
             raise ProjectError(error.code, error.message) from None
+        store = self.require("library")
+        doc = boundary(Document, store.ingest_pdf(path, metadata, self.settings.chunking_config.model_dump()))
+        if doc["status"] == "failed":
+            raise ProjectError(doc["error_code"] or "INVALID_PDF", doc["error_message"] or "解析失败")
+        if doc["status"] not in ("indexing", "ready"):
+            raise ProjectError("INDEX_NOT_READY", "文献尚未完成解析")
+        return doc
+
+    def ingest(self, path: str, metadata: dict, progress=None):
         if progress:
             progress("waiting")
         with self.lock:
             if progress:
                 progress("document_parsing")
-            store = self.require("library")
-            doc = boundary(Document, store.ingest_pdf(path, metadata, self.settings.chunking_config.model_dump()))
-            if doc["status"] == "failed":
-                raise ProjectError(doc["error_code"] or "INVALID_PDF", doc["error_message"] or "解析失败")
-            if doc["status"] not in ("indexing", "ready"):
-                raise ProjectError("INDEX_NOT_READY", "文献尚未完成解析")
+            doc = self._prepare_import(path, metadata)
             # 同一文件已 ready 且有效索引存在时，无需再次全量构建。
             manifest = self.manifest()
             if doc["status"] != "ready" or not manifest:
@@ -129,8 +134,48 @@ class Services:
                 manifest = self.rebuild()
             if progress:
                 progress("document_saving")
-            return {"document": boundary(Document, store.get_document(doc["doc_id"])),
+            return {"document": boundary(Document, self.library.get_document(doc["doc_id"])),
                     "index_version": manifest["index_version"]}
+
+    def ingest_batch(self, entries, progress=None):
+        """Parse independent items, then publish one index for all successful items."""
+        from dlrag.ingestion.fulltext import FulltextReviewRequired
+
+        if progress:
+            progress("waiting")
+        with self.lock:
+            if progress:
+                progress("document_parsing")
+            items = []
+            for path, metadata in entries:
+                try:
+                    doc = self._prepare_import(path, metadata)
+                    items.append({"doc_id": doc["doc_id"], "status": doc["status"], "error": None})
+                except FulltextReviewRequired as exc:
+                    items.append({"doc_id": None, "status": "failed", "error": exc.public_error()})
+                except (ProjectError, IngestionError) as exc:
+                    items.append({"doc_id": None, "status": "failed",
+                                  "error": {"code": exc.code, "message": "请检查 PDF 正文及确认的元数据。"}})
+            manifest = self.manifest()
+            index_error = None
+            if any(item["status"] == "indexing" or (item["doc_id"] and not manifest) for item in items):
+                if progress:
+                    progress("document_processing")
+                try:
+                    manifest = self.rebuild()
+                except Exception:
+                    index_error = {"code": "INDEX_BUILD_FAILED",
+                                   "message": "索引生成失败。已保留旧索引，可重新提交本批。"}
+            if progress:
+                progress("document_saving")
+            for item in items:
+                if item["doc_id"]:
+                    document = self.library.get_document(item["doc_id"])
+                    item["status"] = document["status"]
+                    if item["status"] == "indexing":
+                        item["error"] = index_error
+            return {"items": items, "index_version": manifest["index_version"] if manifest else None,
+                    "index_error": index_error}
 
     def search(self, request):
         with self.lock:

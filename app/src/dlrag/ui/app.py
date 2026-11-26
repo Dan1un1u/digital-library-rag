@@ -13,6 +13,7 @@ from dlrag.ui.library import DOMAINS, STYLE, cover_card, discipline, domain_coun
 from dlrag.ui.state import reset_question, reset_upload, reset_view
 from dlrag.shared.i18n import t, labels as widget_labels, error_message, system_message
 from dlrag.ui.language import language_selector
+from dlrag.ui.batch_upload import render_batch_upload
 
 language_selector()
 st.set_page_config(page_title=t('专题数字图书馆'), page_icon="📚", layout="wide")
@@ -85,8 +86,9 @@ if page == "馆藏展示":
     section = st.sidebar.radio(t('馆藏导航'), ["馆藏文献分类", "热门电子文献资源"],
                                key="library_section", format_func=widget_labels(["馆藏文献分类", "热门电子文献资源"]), on_change=reset_view, args=(st.session_state,))
 elif page == "上传与管理":
-    section = st.sidebar.radio(t('管理导航'), ["上传文献", "文献管理", "系统设置"],
-                               key="management_section", format_func=widget_labels(["上传文献", "文献管理", "系统设置"]), on_change=reset_view, args=(st.session_state,))
+    management_sections = ["上传文献", "批量入库", "文献管理", "系统设置"]
+    section = st.sidebar.radio(t('管理导航'), management_sections,
+                               key="management_section", format_func=widget_labels(management_sections), on_change=reset_view, args=(st.session_state,))
 start_year = end_year = topics_text = ""
 if page in {"馆藏展示", "搜索与问答"}:
     with st.sidebar.expander(t('筛选文献'), expanded=False):
@@ -346,6 +348,9 @@ elif page == "搜索与问答":
             show_answer(st.session_state["answer"])
 else:
     st.subheader(t('上传与管理'))
+    if section == "批量入库":
+        render_batch_upload(document_with_progress, base, health["configuration"]["max_upload_mb"])
+        st.stop()
     if section == "系统设置":
         st.caption(t('运行模式、模型和索引信息集中在此处，供维护时查看。'))
         st.write(t('当前运行模式：'), t('真实服务（REAL）') if health["mode"] == "real" else t('演示服务（MOCK）'))

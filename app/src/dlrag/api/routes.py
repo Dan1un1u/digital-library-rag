@@ -5,6 +5,7 @@ from tempfile import TemporaryDirectory
 from typing import Annotated, Literal
 from fastapi import APIRouter, File, Form, Query, Request, UploadFile
 from fastapi.responses import FileResponse, JSONResponse, HTMLResponse, Response
+from dlrag.shared.batch_limits import MAX_BATCH_FILES, MAX_BATCH_MIB
 from dlrag.shared.models import AskRequest, Chunk, Document, Feedback, Filters, Metadata, SearchRequest
 from dlrag.shared.disciplines import DisciplineError, require_discipline
 from .services import ProjectError, boundary, http_status
@@ -98,6 +99,35 @@ def import_job(request: Request, file: Annotated[UploadFile, File()], metadata_j
             return request.app.state.document_jobs.submit(path.read_bytes(), file.filename, kind="import", metadata=metadata)
     finally:
         file.file.close()
+
+
+@router.post("/documents/batch/jobs", status_code=202)
+def batch_job(request: Request, files: Annotated[list[UploadFile], File()],
+              metadata_json: Annotated[str, Form()]):
+    service = request.app.state.services
+    try:
+        if not 1 <= len(files) <= MAX_BATCH_FILES:
+            raise ProjectError("INVALID_REQUEST", f"每批可提交 1 至 {MAX_BATCH_FILES} 份 PDF。")
+        try:
+            values = json.loads(metadata_json)
+        except (ValueError, TypeError):
+            raise ProjectError("INVALID_REQUEST", "metadata_json 必须是与文件顺序对应的数组。") from None
+        if not isinstance(values, list) or len(values) != len(files):
+            raise ProjectError("INVALID_REQUEST", "每份 PDF 需要一条对应的元数据。")
+        metadata = [Metadata.model_validate(value).model_dump(exclude_none=True) for value in values]
+        entries, size = [], 0
+        for file, fields in zip(files, metadata):
+            if "title" not in fields:
+                fields["title"] = Path(file.filename or "upload.pdf").stem + "（待核验）"
+            with temporary_pdf(file, service) as path:
+                size += path.stat().st_size
+                if size > MAX_BATCH_MIB * 1024 * 1024:
+                    raise ProjectError("UPLOAD_TOO_LARGE", f"单批 PDF 总大小不能超过 {MAX_BATCH_MIB} MiB。")
+                entries.append((path.read_bytes(), fields))
+        return request.app.state.document_jobs.submit(entries, "", kind="batch")
+    finally:
+        for file in files:
+            file.file.close()
 
 
 @router.get("/document-jobs/{job_id}")
